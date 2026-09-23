@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 from research_sync import Sync, Refused, START, END
 
@@ -241,6 +242,154 @@ class SyncTests(unittest.TestCase):
             self.assertEqual(process.returncode, 0, err.decode())
             results.append(json.loads(out))
         self.assertEqual(sum(bool(x.get('duplicate')) for x in results), 1)
+        self.assertEqual(self.git('rev-list', '--count', 'HEAD').strip(), b'2')
+
+    def test_verified_handoff_only_task_commits(self):
+        self.begin(paths=())
+        self.assertEqual(self.complete()['result'], 'committed')
+        self.assertEqual(self.git('diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD').decode().strip(), 'handoff.md')
+
+
+class PushTests(unittest.TestCase):
+    """Authorized constants are patched only inside these synthetic fixtures.
+
+    No CLI flag/config can override the compiled production URL/root guard.
+    All transport is to a temporary local bare repository, never the internet.
+    """
+    setUpFixture = SyncTests.setUp
+    git = SyncTests.git
+    write_policy = SyncTests.write_policy
+    begin = SyncTests.begin
+    complete = SyncTests.complete
+    change = SyncTests.change
+
+    def setUp(self):
+        self.setUpFixture()
+        self.git('branch', '-m', 'codex/research-setup')
+        self.remote = self.root / 'fixture-remote.git'
+        subprocess.check_call(['git', 'init', '--bare', '-q', str(self.remote)])
+        self.git('remote', 'add', 'origin', str(self.remote))
+        self.git('push', '-q', 'origin', 'HEAD:refs/heads/codex/research-setup')
+        self.policy['push'] = {'enabled': True, 'url': str(self.remote), 'branch': 'codex/research-setup'}
+        self.write_policy()
+        self.sync = Sync(self.root)
+        for key, value in [('AUTHORIZED_ROOT', self.root), ('AUTHORIZED_URL', str(self.remote))]:
+            patcher = mock.patch('research_sync.' + key, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.original_remote = self.remote_sha()
+
+    def remote_sha(self):
+        return subprocess.check_output(['git', '--git-dir', str(self.remote), 'rev-parse', 'refs/heads/codex/research-setup']).decode().strip()
+
+    def retry(self):
+        with self.sync.locked():
+            return self.sync.push_task('test')
+
+    def test_finish_push_verified_and_duplicate_no_commit(self):
+        self.begin()
+        self.change()
+        result = self.complete()
+        self.assertEqual(result['result'], 'pushed')
+        self.assertEqual(result['push_status'], 'verified')
+        self.assertEqual(result['commit'], self.remote_sha())
+        self.assertEqual(self.git('diff', 'HEAD', '--name-only'), b'')
+        self.assertEqual(self.retry()['result'], 'pushed')
+        with self.sync.locked():
+            self.assertTrue(self.sync.finish('test')['duplicate'])
+        self.assertEqual(self.git('rev-list', '--count', 'HEAD').strip(), b'2')
+
+    def test_handoff_only_task_pushes(self):
+        self.begin(paths=())
+        result = self.complete()
+        self.assertEqual(result['result'], 'pushed')
+        self.assertEqual(result['commit'], self.remote_sha())
+
+    def test_failure_recorded_retry_without_new_commit_and_begin_blocked(self):
+        self.begin()
+        self.change()
+        original = self.sync.git
+        def failing(*args, **kwargs):
+            if args[0] == 'push':
+                raise Refused('synthetic_push_failure')
+            return original(*args, **kwargs)
+        with mock.patch.object(self.sync, 'git', side_effect=failing):
+            result = self.complete()
+        self.assertEqual(result['result'], 'push_failed')
+        self.assertEqual(self.remote_sha(), self.original_remote)
+        self.assertIn('synthetic_push_failure', (self.root / 'handoff.md').read_text(encoding='utf-8'))
+        with self.sync.locked(), self.assertRaisesRegex(Refused, 'pending_task_retry_push'):
+            self.sync.begin('next', 'codex')
+        self.assertEqual(self.retry()['result'], 'pushed')
+        self.assertEqual(self.git('rev-list', '--count', 'HEAD').strip(), b'2')
+        self.assertNotIn('synthetic_push_failure', (self.root / 'handoff.md').read_text(encoding='utf-8'))
+
+    def test_remote_mismatch_prevents_unpublished_ancestor_upload(self):
+        self.change('b.md')
+        self.git('add', '--', 'b.md')
+        self.git('commit', '-qm', 'unreviewed ancestor')
+        self.begin()
+        self.change()
+        result = self.complete()
+        self.assertEqual(result['push_error'], 'push_remote_not_task_baseline')
+        self.assertEqual(self.remote_sha(), self.original_remote)
+
+    def test_changed_head_refuses_retry(self):
+        self.begin()
+        self.change()
+        with mock.patch.object(self.sync, 'remote_head', side_effect=Refused('synthetic_offline')):
+            self.complete()
+        self.change('b.md')
+        self.git('add', '--', 'b.md')
+        self.git('commit', '-qm', 'other task')
+        self.assertEqual(self.retry()['push_error'], 'push_head_or_branch_changed')
+        self.assertEqual(self.remote_sha(), self.original_remote)
+
+    def test_unsafe_destination_settings_fail_before_transport(self):
+        mutations = [('remote.origin.pushurl', str(self.remote)),
+                     ('url.https://evil.invalid/.insteadOf', str(self.remote)),
+                     ('url.https://evil.invalid/.pushInsteadOf', str(self.remote)),
+                     ('remote.origin.push', 'HEAD:refs/heads/other')]
+        with self.sync.locked():
+            for key, value in mutations:
+                self.git('config', '--add', key, value)
+                with self.subTest(key=key), self.assertRaises(Refused):
+                    self.sync.destination()
+                self.git('config', '--unset-all', key)
+            self.git('remote', 'add', 'other', str(self.remote))
+            with self.assertRaisesRegex(Refused, 'unexpected_remote_set'):
+                self.sync.destination()
+            self.git('remote', 'remove', 'other')
+            self.git('config', '--add', 'remote.origin.url', str(self.remote))
+            with self.assertRaisesRegex(Refused, 'unexpected_origin_url'):
+                self.sync.destination()
+
+    def test_policy_cannot_choose_different_destination(self):
+        self.sync.policy['push']['url'] = 'https://evil.invalid/other.git'
+        with self.sync.locked(), self.assertRaisesRegex(Refused, 'destination_not_authorized'):
+            self.sync.destination()
+
+    def test_post_push_verification_failure_is_retryable_without_resend(self):
+        self.begin()
+        self.change()
+        original = self.sync.remote_head
+        calls = 0
+        def flaky(url, ref):
+            nonlocal calls
+            calls += 1
+            if calls == 2:
+                raise Refused('synthetic_verification_offline')
+            return original(url, ref)
+        with mock.patch.object(self.sync, 'remote_head', side_effect=flaky):
+            result = self.complete()
+        self.assertEqual(result['push_status'], 'failed')
+        self.assertEqual(result['commit'], self.remote_sha())
+        original_git = self.sync.git
+        def no_second_push(*args, **kwargs):
+            self.assertNotEqual(args[0], 'push')
+            return original_git(*args, **kwargs)
+        with mock.patch.object(self.sync, 'git', side_effect=no_second_push):
+            self.assertEqual(self.retry()['push_status'], 'verified')
         self.assertEqual(self.git('rev-list', '--count', 'HEAD').strip(), b'2')
 
 

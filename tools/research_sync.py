@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local, fail-closed Research task ledger. No network or model calls.
+"""Fail-closed Research task ledger with one explicitly authorized push target.
 
 This is cooperative task attribution, not a filesystem provenance oracle. Writers
 must claim paths before edits. Unknown writers, missing starts and interrupted
@@ -25,6 +25,9 @@ from datetime import datetime, timezone
 
 START = '<!-- research-sync:begin -->'
 END = '<!-- research-sync:end -->'
+AUTHORIZED_ROOT = Path(r'D:\Research\00_박사논문_연구체계')
+AUTHORIZED_URL = 'https://github.com/daniel21c/research-workspace.git'
+AUTHORIZED_BRANCH = 'codex/research-setup'
 SAFE_EXT = {'.md', '.py', '.txt'}
 DENIED_PARTS = {'data', 'raw', 'output', 'outputs', 'cache', 'logs', '.git', '.env',
                 '_secrets', 'secrets', 'node_modules', '__pycache__', '0_raw', '1_output'}
@@ -131,11 +134,15 @@ class Sync:
 
     def git(self, *args, env=None, data=None, check=True):
         clean_env = {k: v for k, v in os.environ.items() if not k.startswith('GIT_')}
+        clean_env.update(GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='Never')
         if env:
             clean_env.update(env)
+        if any(self.empty_hooks.iterdir()):
+            raise Refused('hooks_directory_not_empty')
         proc = subprocess.run(['git', '-c', f'core.hooksPath={self.empty_hooks}',
                                '-c', 'core.fsmonitor=false', '-c', 'core.quotePath=false',
-                               '-c', 'commit.gpgSign=false', '-C', str(self.root), *args],
+                               '-c', 'commit.gpgSign=false', '-c', 'push.gpgSign=false',
+                               '-c', 'http.followRedirects=false', '-C', str(self.root), *args],
                               input=data, capture_output=True, env=clean_env, timeout=30)
         if check and proc.returncode:
             raise Refused('git_command_failed:' + args[0])
@@ -241,6 +248,10 @@ class Sync:
         existing = self.conn.execute('SELECT body FROM tasks WHERE id=?', (task_id,)).fetchone()
         if existing:
             return json.loads(existing[0])
+        for (raw,) in self.conn.execute('SELECT body FROM tasks'):
+            previous = json.loads(raw)
+            if previous.get('push_status') in {'pending', 'failed', 'unknown'}:
+                raise Refused('pending_task_retry_push:' + previous['id'])
         branch, head = self.repository()
         tracked = self.tracked()
         snapshots = {p: self.fingerprint(p) for p in sorted((self.allow & tracked) | self.new_allow | {self.handoff})}
@@ -316,8 +327,6 @@ class Sync:
             return [], 'handoff_notes_missing'
         if task['verification'] not in {'passed', 'not_required'}:
             return [], 'verification_missing_or_failed'
-        if not task['claimed']:
-            return [], 'no_explicit_path_claim'
         changed = [p for p in task['claimed'] if self.fingerprint(p) != task['baseline'][p]]
         dirty = self.dirty()
         if set(dirty) - set(task['claimed']):
@@ -335,12 +344,14 @@ class Sync:
                 return [], 'deletion_requires_manual_commit'
             if SECRET.search(data.decode('utf-8-sig')):
                 return [], 'possible_secret'
-        return changed, 'eligible' if changed else 'no_changes'
+        # A verified read-only task still has a real handoff to publish.
+        return changed, 'eligible'
 
     def finish(self, task_id, outcome='completed', dry_run=False):
         task = self.task(task_id)
         if task['status'] != 'active':
-            return {'result': task['result'], 'commit': task.get('commit'), 'duplicate': True}
+            return {'result': task['result'], 'commit': task.get('commit'),
+                    'push_status': task.get('push_status', 'disabled'), 'duplicate': True}
         paths, reason = self.plan(task, outcome)
         if dry_run:
             return {'result': reason, 'paths': paths, 'dry_run': True}
@@ -357,12 +368,109 @@ class Sync:
             try:
                 task['commit'] = self.commit(task, paths + [self.handoff])
                 task['result'] = 'committed'
+                task['push_status'] = 'pending' if self.policy.get('push', {}).get('enabled') else 'disabled'
             except Refused as error:
                 task['result'] = str(error)
                 self.save(task)
                 self.render()
             self.save(task)
-        return {'result': task['result'], 'commit': task.get('commit'), 'paths': paths}
+            self.conn.commit()
+            if task.get('push_status') == 'pending':
+                return self.push_task(task_id)
+        return {'result': task['result'], 'commit': task.get('commit'), 'paths': paths,
+                'push_status': task.get('push_status', 'disabled')}
+
+    def destination(self):
+        policy = self.policy.get('push', {})
+        if not self.meta('enabled', False) or not policy.get('enabled'):
+            raise Refused('push_paused')
+        if (self.root.resolve() != AUTHORIZED_ROOT.resolve() or
+                policy.get('url') != AUTHORIZED_URL or policy.get('branch') != AUTHORIZED_BRANCH):
+            raise Refused('push_destination_not_authorized')
+        if self.git('remote').decode().split() != ['origin']:
+            raise Refused('unexpected_remote_set')
+        urls = self.git('config', '--get-all', 'remote.origin.url').decode().splitlines()
+        if urls != [AUTHORIZED_URL]:
+            raise Refused('unexpected_origin_url')
+        for key in ('remote.origin.pushurl', 'remote.origin.push', 'remote.origin.mirror',
+                    'remote.origin.receivepack', 'remote.pushdefault'):
+            if self.git('config', '--get-all', key, check=False).returncode == 0:
+                raise Refused('unexpected_push_config')
+        rewrites = self.git('config', '--name-only', '--get-regexp', r'^url\..*\.(insteadof|pushinsteadof)$', check=False)
+        if rewrites.returncode != 1:
+            raise Refused('url_rewrite_or_config_error')
+        return AUTHORIZED_URL, 'refs/heads/' + AUTHORIZED_BRANCH
+
+    def remote_head(self, url, ref):
+        output = self.git('ls-remote', '--refs', '--exit-code', url, ref).decode().splitlines()
+        if len(output) != 1:
+            raise Refused('remote_branch_missing_or_ambiguous')
+        parts = output[0].split()
+        if len(parts) != 2 or parts[1] != ref or not re.fullmatch(r'[0-9a-f]{40,64}', parts[0]):
+            raise Refused('remote_branch_response_invalid')
+        return parts[0]
+
+    def push_task(self, task_id):
+        """Push exactly one recorded task commit; never pull, force or adopt history."""
+        task = self.task(task_id)
+        if task['status'] != 'completed' or not task.get('commit'):
+            raise Refused('task_has_no_completed_commit')
+        if task.get('push_status') not in {'pending', 'failed', 'unknown', 'verified'}:
+            raise Refused('task_created_without_push_authorization')
+        had_failure = task.get('push_status') in {'failed', 'unknown'}
+        try:
+            url, ref = self.destination()
+            branch, head = self.repository()
+            if branch != AUTHORIZED_BRANCH or head != task['commit'] or task['branch'] != branch:
+                raise Refused('push_head_or_branch_changed')
+            if self.conn.execute("SELECT 1 FROM tasks WHERE status='active' LIMIT 1").fetchone():
+                raise Refused('push_has_active_task')
+            ancestry = self.git('rev-list', '--parents', '-n', '1', head).decode().split()
+            if ancestry != [head, task['head']]:
+                raise Refused('push_unauthorized_ancestry')
+            expected_paths = set(task['changed']) | {self.handoff}
+            actual_paths = set(self.git('diff-tree', '--no-commit-id', '--name-only', '-r', '-z', head).decode().rstrip('\0').split('\0')) - {''}
+            if actual_paths != expected_paths:
+                raise Refused('push_unauthorized_paths')
+            for rel in actual_paths:
+                self.path(rel)
+                if rel not in self.allow | self.new_allow | {self.handoff}:
+                    raise Refused('push_path_no_longer_authorized')
+                data = self.git('show', f'{head}:{rel}')
+                if len(data) > self.policy.get('max_file_bytes', 1048576) or SECRET.search(data.decode('utf-8-sig')):
+                    raise Refused('push_unsafe_content')
+            remote = self.remote_head(url, ref)
+            if remote not in {task['head'], head}:
+                raise Refused('push_remote_not_task_baseline')
+            if task.get('push_status') == 'verified' and remote != head:
+                raise Refused('push_previously_verified_remote_changed')
+            if remote != head:
+                task['push_status'] = 'pending'
+                task['push_attempts'] = task.get('push_attempts', 0) + 1
+                self.save(task)
+                self.conn.commit()
+                self.destination()  # Recheck immediately before the external action.
+                self.git('push', '--porcelain', '--no-verify', '--no-follow-tags',
+                         '--recurse-submodules=no', url, f'{head}:{ref}')
+            if self.remote_head(url, ref) != head:
+                raise Refused('push_remote_verification_mismatch')
+            task.update(result='pushed', push_status='verified', remote_commit=head,
+                        push_verified_at=now(), push_error=None)
+            self.save(task)
+            self.event(task_id + ':push', task_id, 'push', 'remote_sha_verified')
+            # Fresh success leaves the preparation-time handoff clean. A retry
+            # corrects the previous failure note locally, without recursive commit.
+            if had_failure:
+                self.render()
+        except (Refused, OSError, ValueError, subprocess.TimeoutExpired) as error:
+            code = str(error) if isinstance(error, Refused) else type(error).__name__
+            if task.get('push_status') == 'verified':
+                return {'result': 'retry_refused', 'commit': task['commit'],
+                        'push_status': 'verified', 'push_error': code}
+            task.update(result='push_failed', push_status='failed', push_error=code)
+            self.save(task)
+            self.render()
+        return {k: task.get(k) for k in ('result', 'commit', 'push_status', 'push_error', 'remote_commit')}
 
     def commit(self, task, paths):
         """Build commit using immutable blobs and private indexes; preserve staging.
@@ -448,13 +556,14 @@ class Sync:
         self.unmanaged(text)
         rows = self.conn.execute('SELECT body FROM tasks ORDER BY started DESC, rowid DESC LIMIT 12').fetchall()
         lines = [START, '', '자동 기록은 에이전트가 실행한 작업 명령과 직접 입력한 인수인계입니다. 연구 완료·타당성 판정이 아닙니다.',
-                 '`eligible`은 커밋 준비 판정입니다. 실제 커밋 해시와 보류 원인은 `tools/research_sync.py status`에서 확인합니다.', '',
-                 '| UTC 시작 | 앱 | 작업 식별자 | 상태 / 로컬 커밋 판정 | 검증 | 파일 |',
+                 '`eligible`은 커밋·푸시 전 준비 판정입니다. 실제 커밋·원격 SHA와 푸시 결과는 `tools/research_sync.py status`에서 확인합니다.', '',
+                 '| UTC 시작 | 앱 | 작업 식별자 | 상태 / Git 판정 | 검증 | 파일 |',
                  '|---|---|---|---|---|---|']
         for (raw,) in rows:
             task = json.loads(raw)
             files = ', '.join(task.get('changed') or task.get('claimed') or []) or '—'
-            lines.append(f'| {task["started"]} | {task["app"]} | `{task["id"]}` | {task["status"]} / {task["result"]} | {task["verification"]} | {files} |')
+            push_note = ' / ' + task['push_error'] if task.get('push_error') else ''
+            lines.append(f'| {task["started"]} | {task["app"]} | `{task["id"]}` | {task["status"]} / {task["result"]}{push_note} | {task["verification"]} | {files} |')
         for (raw,) in rows:
             task = json.loads(raw)
             notes = task.get('notes')
@@ -479,7 +588,8 @@ class Sync:
     def status(self):
         tasks = [json.loads(r[0]) for r in self.conn.execute('SELECT body FROM tasks ORDER BY rowid DESC LIMIT 12')]
         return dict(enabled=self.meta('enabled', False), expected_root=str(self.root),
-                    tasks=[{k: t.get(k) for k in ('id', 'app', 'status', 'result', 'commit', 'claimed', 'verification')} for t in tasks],
+                    push_policy=self.policy.get('push', {'enabled': False}),
+                    tasks=[{k: t.get(k) for k in ('id', 'app', 'status', 'result', 'commit', 'claimed', 'verification', 'push_status', 'push_error', 'remote_commit', 'push_verified_at')} for t in tasks],
                     commit_journal=self.meta('commit_journal'))
 
 
@@ -507,6 +617,8 @@ def main():
     finish.add_argument('--task', required=True)
     finish.add_argument('--outcome', choices=['completed', 'interrupted', 'unknown'], default='completed')
     finish.add_argument('--dry-run', action='store_true')
+    retry = sub.add_parser('retry-push')
+    retry.add_argument('--task', required=True)
     args = parser.parse_args()
     try:
         sync = Sync(args.root)
@@ -531,6 +643,8 @@ def main():
                 result = sync.verify(args.task, args.result)
             elif args.command == 'finish':
                 result = sync.finish(args.task, args.outcome, args.dry_run)
+            elif args.command == 'retry-push':
+                result = sync.push_task(args.task)
             else:
                 result = sync.status()
         print(json.dumps(result, ensure_ascii=False))

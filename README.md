@@ -1,8 +1,8 @@
 # 박사논문 공동 작업 폴더
 
-Codex와 Antigravity는 작업을 시작할 때 [공통 작업 인수인계](공통_작업_인수인계.md)와 해당 폴더 지침을 읽습니다. [자동 기록 절차](.research-sync/README.md)에 따라 에이전트가 시작·경로 선언·검증·종료 명령을 실행하면 실제 변경·결정·근거·남은 문제·다음 단계가 인수인계서에 반영되고, 조건을 통과한 이번 작업 파일만 로컬 커밋됩니다. 두 앱의 원문 대화나 내부 추론이 동기화되는 방식은 아닙니다.
+Codex와 Antigravity는 작업을 시작할 때 [공통 작업 인수인계](공통_작업_인수인계.md)와 해당 폴더 지침을 읽습니다. [자동 기록 절차](.research-sync/README.md)에 따라 에이전트가 시작·경로 선언·검증·종료 명령을 실행하면 실제 변경·결정·근거·남은 문제·다음 단계가 인수인계서에 반영되고, 조건을 통과한 이번 작업 파일과 인수인계를 커밋하고 승인된 GitHub 브랜치까지 푸시한 뒤 원격 SHA를 확인합니다. 두 앱의 원문 대화나 내부 추론이 동기화되는 방식은 아닙니다.
 
-이 여섯 폴더는 하나의 private 저장소 [daniel21c/research-workspace](https://github.com/daniel21c/research-workspace)에 연결됩니다. 실제 Git 루트는 이 폴더이며 초기 작업 브랜치는 `codex/research-setup`입니다. `D:\Research`의 상위 Git과 기존 원격 `daniel21c/Research`는 보존합니다. 자동 커밋은 `codex/*`에서만 가능하며 자동 push/pull은 없습니다. 현재 활성 여부는 `tools/research_sync.py status`로 확인합니다.
+이 여섯 폴더는 하나의 private 저장소 [daniel21c/research-workspace](https://github.com/daniel21c/research-workspace)에 연결됩니다. 실제 Git 루트는 이 폴더이며 초기 작업 브랜치는 `codex/research-setup`입니다. `D:\Research`의 상위 Git과 기존 원격 `daniel21c/Research`는 보존합니다. 자동 푸시는 이 원격의 `codex/research-setup` 브랜치 하나에 한정됩니다. 자동 pull/rebase·강제 푸시는 없습니다. 현재 활성 여부는 `tools/research_sync.py status`로 확인합니다.
 
 | 폴더 | 역할 |
 |---|---|
@@ -21,4 +21,4 @@ Git에는 검토한 코드·문서만 넣습니다. 각 폴더의 `data/`, `outp
 
 2026-09-23 자동 로컬 커밋을 활성화했습니다. 합성 저장소 검증은 19개 통과, Windows 심볼릭 링크 생성 권한이 필요한 1개는 건너뛰었습니다. 실제 작업의 커밋 결과는 로컬 원장의 status와 Git 이력을 확인합니다.
 
-최초 GitHub 업로드는 비공개 여부와 원격 커밋 일치를 확인했습니다. 기본 브랜치는 codex/research-setup입니다. 이후 작업은 로컬 자동 커밋만 수행하며 GitHub 전송은 별도 범위 지정 후 실행합니다.
+최초 GitHub 업로드는 비공개 여부와 원격 커밋 일치를 확인했습니다. 기본 브랜치는 codex/research-setup입니다. 이후 사용자가 푸시까지 명시적으로 승인하여, 앞으로 완료된 작업은 검토된 코드·문서 범위에서 같은 원격·브랜치로 자동 커밋·푸시합니다. 전송 실패 시 커밋을 보존하고 `retry-push`로 재시도합니다.

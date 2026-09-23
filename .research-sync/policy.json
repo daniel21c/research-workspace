@@ -29,5 +29,10 @@
     "README.md",
     "공통_작업_인수인계.md"
   ],
-  "approved_new_paths": []
+  "approved_new_paths": [],
+  "push": {
+    "enabled": true,
+    "url": "https://github.com/daniel21c/research-workspace.git",
+    "branch": "codex/research-setup"
+  }
 }
