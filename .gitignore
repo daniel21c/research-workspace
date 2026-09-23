@@ -45,3 +45,7 @@
 !/03_AG_서비스접근성연계/analysis_4facilities_20260923/run_analysis.py
 !/03_AG_서비스접근성연계/analysis_4facilities_20260923/facility_audit.py
 !/03_AG_서비스접근성연계/analysis_4facilities_20260923/test_analysis.py
+
+# Reviewed research redesign and request traceability documents.
+!/05_통합_박사학위논문_패키지/RESEARCH_REPAIR_DESIGN_20260923.md
+!/05_통합_박사학위논문_패키지/REQUIREMENTS_TRACEABILITY_20260923.md
