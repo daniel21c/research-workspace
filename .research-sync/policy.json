@@ -29,7 +29,16 @@
     "README.md",
     "공통_작업_인수인계.md"
   ],
-  "approved_new_paths": [],
+  "approved_new_paths": [
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/README.md",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/METHODS.md",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/ANALYSIS_REPORT.md",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/config.json",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/requirements.txt",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/run_analysis.py",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/facility_audit.py",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/test_analysis.py"
+  ],
   "push": {
     "enabled": true,
     "url": "https://github.com/daniel21c/research-workspace.git",

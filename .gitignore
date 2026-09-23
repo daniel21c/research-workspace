@@ -35,3 +35,13 @@
 !/공통_작업_인수인계.md
 /.research-sync/state/
 **/__pycache__/
+
+# Reviewed four-facility analysis code/docs; results remain local.
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/README.md
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/METHODS.md
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/ANALYSIS_REPORT.md
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/config.json
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/requirements.txt
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/run_analysis.py
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/facility_audit.py
+!/03_AG_서비스접근성연계/analysis_4facilities_20260923/test_analysis.py
