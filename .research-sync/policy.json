@@ -33,7 +33,7 @@
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/README.md",
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/METHODS.md",
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/ANALYSIS_REPORT.md",
-    "03_AG_서비스접근성연계/analysis_4facilities_20260923/config.json",
+    "03_AG_서비스접근성연계/analysis_4facilities_20260923/config.py",
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/requirements.txt",
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/run_analysis.py",
     "03_AG_서비스접근성연계/analysis_4facilities_20260923/facility_audit.py",
