@@ -454,6 +454,9 @@ class Sync:
                          '--recurse-submodules=no', url, f'{head}:{ref}')
             if self.remote_head(url, ref) != head:
                 raise Refused('push_remote_verification_mismatch')
+            # URL-based pushes do not refresh origin's local tracking ref.
+            # Refresh only after the authorized remote SHA has been verified.
+            self.git('update-ref', 'refs/remotes/origin/' + AUTHORIZED_BRANCH, head)
             task.update(result='pushed', push_status='verified', remote_commit=head,
                         push_verified_at=now(), push_error=None)
             self.save(task)

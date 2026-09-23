@@ -293,6 +293,7 @@ class PushTests(unittest.TestCase):
         self.assertEqual(result['result'], 'pushed')
         self.assertEqual(result['push_status'], 'verified')
         self.assertEqual(result['commit'], self.remote_sha())
+        self.assertEqual(self.git('rev-parse', 'refs/remotes/origin/codex/research-setup').decode().strip(), result['commit'])
         self.assertEqual(self.git('diff', 'HEAD', '--name-only'), b'')
         self.assertEqual(self.retry()['result'], 'pushed')
         with self.sync.locked():
