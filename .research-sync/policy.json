@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "expected_root": "D:\\Research\\00_박사논문_연구체계",
+  "handoff": "공통_작업_인수인계.md",
+  "max_file_bytes": 1048576,
+  "tracked_paths": [
+    "00_공통_코어엔진/GUIDELINE_00_공통코어.md",
+    "00_공통_코어엔진/README.md",
+    "00_공통_코어엔진/scripts/boundary_metrics_engine.py",
+    "00_공통_코어엔진/scripts/common_flow_loader.py",
+    "00_공통_코어엔진/scripts/config.py",
+    "00_공통_코어엔진/scripts/leiden_community_detection.py",
+    "00_공통_코어엔진/scripts/preprocess_dong_boundaries.py",
+    "00_공통_코어엔진/scripts/run_common_engine.py",
+    "01_생활권_필요성_실증/GUIDELINE_01_필요성.md",
+    "01_생활권_필요성_실증/README.md",
+    "01_생활권_필요성_실증/scripts/simulate_spatial_units_equity.py",
+    "02_JTG_커뮤니티구획/GUIDELINE_02_JTG.md",
+    "02_JTG_커뮤니티구획/README.md",
+    "03_AG_서비스접근성연계/GUIDELINE_03_AG.md",
+    "03_AG_서비스접근성연계/README.md",
+    "03_AG_서비스접근성연계/scripts/02_simplified_ols_regression.py",
+    "04_KPA_시계열_불일치진단/GUIDELINE_04_KPA.md",
+    "04_KPA_시계열_불일치진단/README.md",
+    "04_KPA_시계열_불일치진단/scripts/02_check_facility_availability.py",
+    "05_통합_박사학위논문_패키지/GUIDELINE_05_종합.md",
+    "05_통합_박사학위논문_패키지/README.md",
+    "05_통합_박사학위논문_패키지/박사학위논문_통합목차_및_연구연계도.md",
+    "README.md",
+    "공통_작업_인수인계.md"
+  ],
+  "approved_new_paths": []
+}
