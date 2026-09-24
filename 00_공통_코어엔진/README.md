@@ -15,6 +15,8 @@
 | 3 | `scripts/s03_leiden_consensus.py` | `od_daily`, 동 정본 | `output/leiden/{y}/…` (매핑, 지표, 해상도 스캔 로그, 안정성, co-association, 경계 gpkg, 로그) | 구별 Leiden 3,000회 합의 구획. **핵심 스크립트** |
 | 4 | `scripts/s04_promote_canonical.py` | `output/leiden/{y}/` | `data/dong_to_leiden_{y}_mapping_424.csv/.xlsx`, `data/seoul_boundaries_all.gpkg`, `data/manifest.json` | 결과 검사(424동·116개·구별 개수·연속성) 후 정본으로 승격, SHA-256 기록 |
 | 5 | `scripts/s05_validate.py` | `data/` 정본, `od_daily` | `output/validation_report_{ts}.md/.json` | s03과 다른 코드로 IFR·Q·연속성·ARI를 다시 계산해 대조 |
+| 6 | `scripts/s06_sensitivity.py` | 정본·민감도 실행 결과, 스캔 로그 | `output/sensitivity/` | τ·선정 규칙 민감도 비교, 구별 개수 진단. 정본은 바꾸지 않음 |
+| — | `scripts/코드설명_프로세스.md` | — | — | **공동연구자용 설명서**: 각 단계가 무엇을 왜 하는지, 시드·합의·최빈 분할·`*` 처리·개수 고정 이유·재현 방법 |
 | — | `scripts/run_all.bat` | — | — | 1→5 순서 실행 (Windows) |
 | — | `scripts/requirements.txt` | — | — | 필요한 패키지 |
 
@@ -83,7 +85,8 @@ python s05_validate.py
 - s03은 Leiden 1회에 약 1ms → 250 해상도 × 3,000회 × 25구 ≈ 1,900만 회. 4코어 기준 **연도당 1~2시간**.
 - 빠른 점검: `python s03_leiden_consensus.py --years 2020 --ku 11010 --n-iter 30 --res-step 0.1 --tag _test` (결과는 `output/leiden/2020_test/`에 따로 저장되고 정본에 영향 없음). `s04 --tag _test`는 `data/_preview/`에 쓰고, `s05 --preview`가 그것을 검사한다.
 - s02는 파일 단위로 부분 결과를 저장하므로 중간에 끊겨도 다시 실행하면 이어서 한다.
-- 2026-09-23 현재 s01·s02는 이미 실행되어 `data/`에 결과가 있다(Cowork 셸에서 실행, 수치는 2.2 참고). s03의 3,000회 정본 실행은 아직 하지 않았다. 30회 축소 실행으로 s03→s04→s05 연결만 확인했고, 그 결과는 `output/_smoke_test_20260923/`에 있다.
+- 2026-09-24 현재 s01~s05 정본 실행 완료, `data/` 정본 확정(`../데이터_배포목록.md`). 정본 실행 base 시드 2020 = 408008338, 2025 = 1089930980. 초 단위 시드로 만든 첫 실행 결과는 `output/_archive_run_20260924_clockseed/`, 축소 점검 결과는 `output/_smoke_test_20260923/`에 보관.
+- 각 단계의 이유·시드·합의 방식·민감도 실행법은 [scripts/코드설명_프로세스.md](scripts/코드설명_프로세스.md).
 
 ## 4. 산출물이 정본이 되는 조건
 

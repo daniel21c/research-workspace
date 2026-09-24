@@ -350,13 +350,21 @@ def main():
     ap.add_argument("--n-iter", type=int, default=C.N_ITER)
     ap.add_argument("--res-step", type=float, default=C.RES_STEP)
     ap.add_argument("--stab-trials", type=int, default=C.STABILITY_TRIALS)
-    ap.add_argument("--tag", default="", help="출력 폴더 접미사 (점검 실행을 정본 실행과 분리)")
+    ap.add_argument("--tag", default="", help="출력 폴더 접미사 (점검·민감도 실행을 정본 실행과 분리)")
+    # 민감도 분석용 (코드설명_프로세스.md §7)
+    ap.add_argument("--tau", type=float, default=C.TAU, help="co-association 임계값 (정본 0.5)")
+    ap.add_argument("--primary", choices=["modularity", "ifr"], default=C.SELECTION_PRIMARY, help="선정 1차 기준 (정본 modularity)")
+    ap.add_argument("--seed", default=None,
+                    help="base 시드. 정수, 또는 'canonical' = 정본 실행(output/leiden/{year}/run_seed.json)과 같은 시드. "
+                         "같은 시드를 쓰면 Leiden 3,000회 결과가 정본과 똑같으므로 τ·선정규칙만의 효과를 볼 수 있다")
     a = ap.parse_args()
+    if a.tag == "" and (a.tau != C.TAU or a.primary != C.SELECTION_PRIMARY or a.seed is not None):
+        raise SystemExit("정본과 다른 설정은 --tag 를 붙여 따로 저장하세요 (예: --tag _tau0.4). 정본 폴더를 덮어쓰지 않기 위함.")
 
-    params = {"res_min": C.RES_MIN, "res_max": C.RES_MAX, "res_step": a.res_step, "n_iter": a.n_iter, "tau": C.TAU,
-              "self_loops": C.INCLUDE_SELF_LOOPS, "primary": C.SELECTION_PRIMARY,
-              "fine_steps": C.FINE_SCAN_STEPS, "stab_trials": a.stab_trials,
-              "stab_iter": a.n_iter if a.n_iter != C.N_ITER else C.STABILITY_ITER}
+    params0 = {"res_min": C.RES_MIN, "res_max": C.RES_MAX, "res_step": a.res_step, "n_iter": a.n_iter, "tau": a.tau,
+               "self_loops": C.INCLUDE_SELF_LOOPS, "primary": a.primary,
+               "fine_steps": C.FINE_SCAN_STEPS, "stab_trials": a.stab_trials,
+               "stab_iter": a.n_iter if a.n_iter != C.N_ITER else C.STABILITY_ITER}
 
     dong_all = gpd.read_file(C.DONG_GPKG, layer="epsg5179")
     dong_all["Dong"] = dong_all["Dong"].astype(int); dong_all["Ku"] = dong_all["Ku"].astype(int)
@@ -364,6 +372,7 @@ def main():
         raise SystemExit(f"동 정본 {len(dong_all)}개 != {C.N_DONG}. s01 을 먼저 실행하세요.")
 
     for year in a.years:
+        params = dict(params0)          # 연도마다 새로 (이전 연도의 base_seed 가 섞이지 않게)
         out = C.LEIDEN_OUT / (year + a.tag)
         for sub in ("metrics", "resolution_scan_logs", "stability", "coassoc", "boundaries"):
             (out / sub).mkdir(parents=True, exist_ok=True)
@@ -382,10 +391,20 @@ def main():
             base_seed = int(json.loads(seed_file.read_text(encoding="utf-8"))["base_seed"])
             log.info(f"[{year}] 이전 실행의 base 시드 재사용: {base_seed}")
         else:
-            base_seed = int(C.SEED) if C.SEED is not None else int.from_bytes(os.urandom(4), "little")
-            seed_file.write_text(json.dumps({"base_seed": base_seed, "source": "config.SEED" if C.SEED is not None else "os.urandom",
+            if a.seed == "canonical":
+                canon = C.LEIDEN_OUT / year / "run_seed.json"
+                if not canon.exists():
+                    raise SystemExit(f"정본 시드 파일이 없습니다: {canon}")
+                base_seed, source = int(json.loads(canon.read_text(encoding="utf-8"))["base_seed"]), f"정본 {year} 시드"
+            elif a.seed is not None:
+                base_seed, source = int(a.seed), "--seed"
+            elif C.SEED is not None:
+                base_seed, source = int(C.SEED), "config.SEED"
+            else:
+                base_seed, source = int.from_bytes(os.urandom(4), "little"), "os.urandom"
+            seed_file.write_text(json.dumps({"base_seed": base_seed, "source": source,
                                              "created": datetime.datetime.now().isoformat(timespec="seconds")}), encoding="utf-8")
-            log.info(f"[{year}] base 시드 = {base_seed} ({'config.SEED' if C.SEED is not None else '무작위'}) → run_seed.json")
+            log.info(f"[{year}] base 시드 = {base_seed} ({source}) → run_seed.json")
         params = {**params, "base_seed": base_seed}
         ku_order = sorted(C.TARGET_COMMUNITIES)
         for t in tasks:
