@@ -1,0 +1,14 @@
+# 00_공통_코어엔진 실행 환경 (Python 3.10+)
+# 설치:  pip install -r requirements.txt
+pandas>=2.0
+numpy>=1.24
+pyarrow>=12          # OD 집계표 parquet 읽기/쓰기
+geopandas>=0.13      # 경계 처리 (sindex.query(predicate="touches") 사용)
+shapely>=2.0
+pyogrio>=0.7         # GeoPackage 읽기/쓰기
+openpyxl>=3.1        # xlsx 저장·읽기
+python-igraph>=0.10  # 그래프·연결요소
+leidenalg>=0.10      # Leiden 알고리즘
+# 선택: s05 에서 Modularity 를 python-louvain 정의와 교차검증할 때만 필요
+networkx>=3.0
+python-louvain>=0.16
