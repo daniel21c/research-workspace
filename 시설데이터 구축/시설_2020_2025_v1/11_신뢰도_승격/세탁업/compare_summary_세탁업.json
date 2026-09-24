@@ -1,0 +1,66 @@
+{
+ "facility": "세탁업",
+ "scopes": {
+  "전체": {
+   "2019": {
+    "built": 4631,
+    "official": 4574,
+    "diff_pct": 1.25,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9994,
+    "gu_max_abs_diff_pct": 4.22,
+    "gu_max_abs_diff_gu": "동대문구",
+    "gu_median_abs_diff_pct": 1.03,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9957,
+    "scope_min_gu_coord_rate": 0.9691,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 3519,
+    "official": 3513,
+    "diff_pct": 0.17,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9998,
+    "gu_max_abs_diff_pct": 2.16,
+    "gu_max_abs_diff_gu": "동대문구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9972,
+    "scope_min_gu_coord_rate": 0.962,
+    "scope_n_gu_below_85": 0
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O110009_2015_공중위생업현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 4631,
+   "coord_rate_inside_seoul": 0.9957,
+   "min_gu_coord_rate": 0.9691,
+   "min_gu": "중구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 4597,
+    "unresolved": 20,
+    "geocode_kakao_exact": 14
+   }
+  },
+  "2024": {
+   "n": 3519,
+   "coord_rate_inside_seoul": 0.9972,
+   "min_gu_coord_rate": 0.962,
+   "min_gu": "중구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 3491,
+    "geocode_kakao_exact": 18,
+    "unresolved": 10
+   }
+  }
+ }
+}

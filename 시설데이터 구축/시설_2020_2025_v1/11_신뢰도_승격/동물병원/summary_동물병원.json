@@ -1,0 +1,82 @@
+{
+ "2020": {
+  "ours": 866,
+  "nts": 817,
+  "nts_suppressed_cells": 0,
+  "diff": 49,
+  "diff_pct": 6.0,
+  "ratio": 1.06,
+  "gu": {
+   "r": 0.9889,
+   "max_abs_diff": 6,
+   "max_abs_diff_gu": "중구",
+   "max_abs_pct": 83.3,
+   "gu_within5pct": 12,
+   "gu_within10pct": 18,
+   "sum_ours": 866,
+   "sum_official": 817
+  },
+  "cov": {
+   "n": 866,
+   "coord_rate": 0.9977,
+   "inside_seoul_rate": 0.9977,
+   "gu_parsed_rate": 1.0,
+   "min_gu_coord_rate": 0.975,
+   "min_gu": "노원구",
+   "n_gu_below85": 0
+  },
+  "cov_original_build": {
+   "n": 866,
+   "coord_rate": 0.9977,
+   "inside_seoul_rate": 0.9977,
+   "gu_parsed_rate": 1.0,
+   "min_gu_coord_rate": 0.975,
+   "min_gu": "노원구",
+   "n_gu_below85": 0
+  },
+  "used_file": "01_인허가 원본",
+  "flag_admin_end": 0,
+  "sens_excl_flag_admin_end": 6.0,
+  "sens_excl_current_suspended": 5.26
+ },
+ "2025": {
+  "ours": 937,
+  "nts": 915,
+  "nts_suppressed_cells": 0,
+  "diff": 22,
+  "diff_pct": 2.4,
+  "ratio": 1.024,
+  "gu": {
+   "r": 0.9956,
+   "max_abs_diff": 5,
+   "max_abs_diff_gu": "종로구",
+   "max_abs_pct": 55.6,
+   "gu_within5pct": 20,
+   "gu_within10pct": 22,
+   "sum_ours": 937,
+   "sum_official": 915
+  },
+  "cov": {
+   "n": 937,
+   "coord_rate": 0.9979,
+   "inside_seoul_rate": 0.9979,
+   "gu_parsed_rate": 1.0,
+   "min_gu_coord_rate": 0.9773,
+   "min_gu": "노원구",
+   "n_gu_below85": 0
+  },
+  "cov_original_build": {
+   "n": 937,
+   "coord_rate": 0.9979,
+   "inside_seoul_rate": 0.9979,
+   "gu_parsed_rate": 1.0,
+   "min_gu_coord_rate": 0.9773,
+   "min_gu": "노원구",
+   "n_gu_below85": 0
+  },
+  "used_file": "01_인허가 원본",
+  "flag_admin_end": 0,
+  "sens_excl_flag_admin_end": 2.4,
+  "sens_excl_current_suspended": 1.75
+ }
+}

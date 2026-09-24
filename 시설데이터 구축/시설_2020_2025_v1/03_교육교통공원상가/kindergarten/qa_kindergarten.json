@@ -1,0 +1,148 @@
+{
+ "type": "kindergarten",
+ "notes": [
+  "유치원알리미 기본현황 공시 2019-2차(20192)·2024-2차(20242)를 주 자료로 사용(A). 기준일은 공시지침상 10.1 추정(원문 미확인) → source_reference_date 2019-10-01/2024-10-01.",
+  "sz_capacity=인가총정원수, sz_children=연령별 원아수 합, sz_classes=연령별 학급수 합(특수 포함).",
+  "facility_id = KG_ + 유치원명 + 설립일(yyyymmdd): 두 시점 같은 시설 연결용(원천 고유코드 없음)."
+ ],
+ "2020_01": {
+  "rows": 814,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 814
+  },
+  "inside_seoul": 814,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "A": 814
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "사립(사인)": 437,
+   "공립(병설)": 209,
+   "사립(법인)": 138,
+   "공립(단설)": 30
+  },
+  "dup_exact_xy": 0,
+  "source_rows": 814,
+  "fixed_shifted_rows": 1,
+  "official_sen_kindergartens_excl_closed": 822,
+  "diff_vs_sen": -8,
+  "sensitivity_alt_release": {
+   "20201": 780
+  },
+  "sum_capacity": 108122,
+  "sum_children": 78138
+ },
+ "2025_01": {
+  "rows": 734,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 734
+  },
+  "inside_seoul": 734,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "A": 734
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "사립(사인)": 318,
+   "공립(병설)": 245,
+   "사립(법인)": 123,
+   "공립(단설)": 48
+  },
+  "dup_exact_xy": 0,
+  "source_rows": 734,
+  "fixed_shifted_rows": 0,
+  "official_sen_kindergartens_excl_closed": 751,
+  "diff_vs_sen": -17,
+  "sensitivity_alt_release": {
+   "20251": 715
+  },
+  "sum_capacity": 89851,
+  "sum_children": 61689
+ },
+ "panel": {
+  "common_ids": 669,
+  "only_2020": 145,
+  "only_2025": 65
+ },
+ "generated_utc": "2026-09-23T23:32:25Z",
+ "raw_files": [
+  {
+   "url": "https://e-childschoolinfo.moe.go.kr/download/getOpenData.do",
+   "method": "GET",
+   "params": {
+    "combineSidoCode": 11,
+    "timingListCode": "20192",
+    "gongsiListCode": "05",
+    "ExcelCsv": 2
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:32:19Z",
+   "http_status": 200,
+   "bytes": 236670,
+   "sha256": "f3a9a5f34dd59f656e8b61d0ad79c64e775dcb39e61940847221d360766b7d21",
+   "reference_date": "2019-10-01",
+   "note": "유치원알리미 기본현황 2019년 2차 공시(기준일은 공시 지침상 4.1/10.1 추정)",
+   "file": "kinder_basic_20192.csv"
+  },
+  {
+   "url": "https://e-childschoolinfo.moe.go.kr/download/getOpenData.do",
+   "method": "GET",
+   "params": {
+    "combineSidoCode": 11,
+    "timingListCode": "20201",
+    "gongsiListCode": "05",
+    "ExcelCsv": 2
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:32:20Z",
+   "http_status": 200,
+   "bytes": 251033,
+   "sha256": "0425fb9cd2133d5adee73d04011920a0d86596cf8527263546b89f26f936d930",
+   "reference_date": "2020-04-01",
+   "note": "유치원알리미 기본현황 2020년 1차 공시(기준일은 공시 지침상 4.1/10.1 추정)",
+   "file": "kinder_basic_20201.csv"
+  },
+  {
+   "url": "https://e-childschoolinfo.moe.go.kr/download/getOpenData.do",
+   "method": "GET",
+   "params": {
+    "combineSidoCode": 11,
+    "timingListCode": "20242",
+    "gongsiListCode": "05",
+    "ExcelCsv": 2
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:32:20Z",
+   "http_status": 200,
+   "bytes": 215546,
+   "sha256": "e5bac42908e307d634d4b3207098492576bf46b06d1e996430e339208cdf90f9",
+   "reference_date": "2024-10-01",
+   "note": "유치원알리미 기본현황 2024년 2차 공시(기준일은 공시 지침상 4.1/10.1 추정)",
+   "file": "kinder_basic_20242.csv"
+  },
+  {
+   "url": "https://e-childschoolinfo.moe.go.kr/download/getOpenData.do",
+   "method": "GET",
+   "params": {
+    "combineSidoCode": 11,
+    "timingListCode": "20251",
+    "gongsiListCode": "05",
+    "ExcelCsv": 2
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:32:20Z",
+   "http_status": 200,
+   "bytes": 231849,
+   "sha256": "8d111eabe1f6380026863bece7e81ff260056887ce9dcfce415af8b9885fb45b",
+   "reference_date": "2025-04-01",
+   "note": "유치원알리미 기본현황 2025년 1차 공시(기준일은 공시 지침상 4.1/10.1 추정)",
+   "file": "kinder_basic_20251.csv"
+  }
+ ]
+}

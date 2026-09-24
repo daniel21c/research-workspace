@@ -1,0 +1,90 @@
+{
+ "type": "공공도서관",
+ "grade": "C",
+ "note_grade": "연간 공식 명부(국가도서관통계 개별 도서관 실적)",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "libsta_공공도서관_2019실적.xlsx",
+   "source_rows_national": 1134,
+   "source_rows_seoul": 180,
+   "final_rows": 180,
+   "geocoding": {
+    "rows": 180,
+    "coord_rows": 174,
+    "coord_rate": 0.9667,
+    "coord_method": {
+     "geocode_kakao_exact": 174,
+     "unresolved": 6
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   },
+   "subtype_counts": {
+    "공공(일반)": 155,
+    "공공(어린이)": 25
+   },
+   "official_check": {
+    "chongram_public_library_seoul": 180,
+    "libsta_seoul": 180,
+    "difference": 0,
+    "chongram_rows_matched_by_name_or_address": 180,
+    "chongram_rows_unmatched": [],
+    "note": "총람(1.1 기준)과 국가도서관통계(연말 실적)는 기준일·범위(사립·작은 공공 포함 여부)가 달라 수가 다를 수 있음"
+   }
+  },
+  "2025_01": {
+   "source_file": "libsta_공공도서관_2024실적.xlsx",
+   "source_rows_national": 1296,
+   "source_rows_seoul": 212,
+   "final_rows": 212,
+   "geocoding": {
+    "rows": 212,
+    "coord_rows": 210,
+    "coord_rate": 0.9906,
+    "coord_method": {
+     "geocode_kakao_exact": 210,
+     "unresolved": 2
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 1,
+    "same_coord_rows": 2,
+    "duplicate_facility_id": 0
+   },
+   "subtype_counts": {
+    "공공(일반)": 184,
+    "공공(어린이)": 28
+   },
+   "official_check": {
+    "chongram_public_library_seoul": 212,
+    "libsta_seoul": 212,
+    "difference": 0,
+    "chongram_rows_matched_by_name_or_address": 212,
+    "chongram_rows_unmatched": [],
+    "note": "총람(1.1 기준)과 국가도서관통계(연말 실적)는 기준일·범위(사립·작은 공공 포함 여부)가 달라 수가 다를 수 있음"
+   }
+  }
+ },
+ "facility_id_rule": "1) 국가도서관통계 도서관코드 동일 → 같은 id(LIB+코드). 2) 코드가 다르면 정규화 명칭+주소키 또는 명칭 유일 일치 시 2020 id 사용.",
+ "id_matching": {
+  "same_code": 173,
+  "matched_by_name_after_code_change": 1,
+  "only_2020": 6,
+  "only_2025": 38
+ }
+}

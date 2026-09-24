@@ -1,0 +1,271 @@
+{
+ "type": "park",
+ "notes": [
+  "공원 2020_01 / 2025_01\n(1) OSM Geofabrik south-korea-200101 / -250101 .osm.pbf 에서 면(닫힌 way·multipolygon) 추출.\n    태그 규칙(facility_subtype): leisure=park | leisure=garden | leisure=nature_reserve | boundary=national_park\n    | landuse=recreation_ground. access=private/no 는 제외. 서울 포함 규칙: 폴리곤 대표점이\n    SGIS 2025 서울 경계 안이거나, 서울 안 면적이 자기 면적의 50% 이상이거나, 서울 안 면적 ≥ 0.1km²(경계를 걸친 대형 공원·국립공원).\n    면적은 서울 경계로 자른 면적(area_in_seoul_m2)도 함께 기록(면적 비교는 이 값 사용).\n    폴리곤은 parks_osm_*.gpkg(EPSG:5179), 시설표(facilities_park_*)는 중심점(centroid; 폴리곤 밖이면 대표점) 1행/객체.\n    공원 입구 대용 경계점은 만들지 않음.\n(2) 공식: 서울시 도시계획시설(공간시설) UQ153 2024.11.07판(OA-21129 seq2)에서 공원(UQT2xx)만 → parks_official_2025_01.gpkg,\n    facilities_park_official_2025_01.csv. 2025는 OSM vs 공식 개수·면적 대조(서울 경계 내).\npbf 원본은 용량 때문에 보관하지 않고 URL·sha256·md5 검증 결과만 raw/*.metadata.json에 기록, 추출물(raw/osm_areas_*.geojson)만 저장.\npbf 위치: 환경변수 OSM_PBF_DIR(없으면 raw/_pbf/에 내려받음)."
+ ],
+ "2020_01": {
+  "rows": 1567,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 1567
+  },
+  "inside_seoul": 1565,
+  "outside_seoul": 2,
+  "no_coord": 0,
+  "grade": {
+   "A": 1567
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "leisure=park": 1396,
+   "leisure=garden": 162,
+   "landuse=recreation_ground": 8,
+   "leisure=nature_reserve": 1
+  },
+  "dup_exact_xy": 0,
+  "pbf_sha256": "54eace286da3f769a2a188a44430d52c611f6a1ac5b58c74a13e5ccab24e1d85",
+  "pbf_size_match": true,
+  "bbox_candidates": 3512,
+  "excluded_private": null,
+  "by_subtype_area_km2": {
+   "landuse=recreation_ground": 0.08,
+   "leisure=garden": 0.719,
+   "leisure=nature_reserve": 37.35,
+   "leisure=park": 31.824
+  },
+  "leisure_park_count": 1396,
+  "leisure_park_union_area_in_seoul_km2": 31.348,
+  "all_tags_union_area_in_seoul_km2": 69.376,
+  "named_share": 0.546,
+  "seoul_rule": {
+   "rep_point": 1565,
+   "area_share>=50%": 2
+  },
+  "excluded_access_private_or_no": 2
+ },
+ "2025_01": {
+  "rows": 2999,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 2999
+  },
+  "inside_seoul": 2996,
+  "outside_seoul": 3,
+  "no_coord": 0,
+  "grade": {
+   "A": 2999
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "leisure=park": 2048,
+   "leisure=garden": 931,
+   "landuse=recreation_ground": 18,
+   "leisure=nature_reserve": 1,
+   "boundary=national_park": 1
+  },
+  "dup_exact_xy": 0,
+  "pbf_sha256": "9b67fc951d535639b2a12e96a0ff069943d6da4d75883e42d377e6f76c7483ab",
+  "pbf_size_match": true,
+  "bbox_candidates": 5476,
+  "excluded_private": null,
+  "by_subtype_area_km2": {
+   "boundary=national_park": 37.366,
+   "landuse=recreation_ground": 0.091,
+   "leisure=garden": 1.913,
+   "leisure=nature_reserve": 0.031,
+   "leisure=park": 39.343
+  },
+  "leisure_park_count": 2048,
+  "leisure_park_union_area_in_seoul_km2": 36.918,
+  "all_tags_union_area_in_seoul_km2": 76.153,
+  "named_share": 0.422,
+  "seoul_rule": {
+   "rep_point": 2994,
+   "area_share>=50%": 4,
+   "area_in_seoul>=0.1km2": 1
+  },
+  "excluded_access_private_or_no": 1
+ },
+ "official_2025_01": {
+  "rows": 2681,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 2681
+  },
+  "inside_seoul": 2680,
+  "outside_seoul": 1,
+  "no_coord": 0,
+  "grade": {
+   "A": 2681
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "어린이공원": 1058,
+   "소공원": 562,
+   "근린공원": 543,
+   "공원시설 기타": 319,
+   "문화공원": 103,
+   "도시자연공원": 40,
+   "역사공원": 27,
+   "수변공원": 15,
+   "체육공원": 9,
+   "묘지공원": 4,
+   "공원(세분 미상)": 1
+  },
+  "dup_exact_xy": 106,
+  "source_crs": "EPSG:5174",
+  "layer_rows": 5356,
+  "park_rows": 2681,
+  "excut_se": {
+   "EMA0009": 2676,
+   "EMA0001": 3,
+   "EMA0003": 1
+  },
+  "area_in_seoul_km2": 108.455,
+  "union_area_in_seoul_km2": 90.334,
+  "by_subtype_area_km2": {
+   "공원(세분 미상)": 0.002,
+   "공원시설 기타": 1.508,
+   "근린공원": 45.826,
+   "도시자연공원": 48.569,
+   "묘지공원": 1.824,
+   "문화공원": 1.28,
+   "소공원": 1.003,
+   "수변공원": 0.231,
+   "어린이공원": 7.325,
+   "역사공원": 0.582,
+   "체육공원": 0.304
+  }
+ },
+ "compare_2025_osm_vs_official": {
+  "osm_leisure_park_count": 2048,
+  "official_park_count": 2681,
+  "osm_leisure_park_union_km2": 36.918,
+  "osm_all_tags_union_km2": 76.153,
+  "official_union_km2": 90.334,
+  "official_area_covered_by_osm_park_km2": 17.101,
+  "official_area_covered_by_osm_all_km2": 18.251,
+  "official_area_covered_share_osm_park": 0.189,
+  "official_area_covered_share_osm_all": 0.202,
+  "official_matched_ge20pct_by_subtype": {
+   "공원(세분 미상)": {
+    "sum": 0,
+    "count": 1
+   },
+   "공원시설 기타": {
+    "sum": 80,
+    "count": 319
+   },
+   "근린공원": {
+    "sum": 309,
+    "count": 543
+   },
+   "도시자연공원": {
+    "sum": 2,
+    "count": 40
+   },
+   "묘지공원": {
+    "sum": 0,
+    "count": 4
+   },
+   "문화공원": {
+    "sum": 35,
+    "count": 103
+   },
+   "소공원": {
+    "sum": 94,
+    "count": 562
+   },
+   "수변공원": {
+    "sum": 7,
+    "count": 15
+   },
+   "어린이공원": {
+    "sum": 509,
+    "count": 1058
+   },
+   "역사공원": {
+    "sum": 17,
+    "count": 27
+   },
+   "체육공원": {
+    "sum": 6,
+    "count": 9
+   }
+  },
+  "official_matched_ge20pct_total": 1059
+ },
+ "generated_utc": "2026-09-24T00:00:59Z",
+ "raw_files": [
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-21129",
+    "seqNo": "",
+    "seq": "2",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:52:48Z",
+   "http_status": 200,
+   "bytes": 3048217,
+   "sha256": "85dfc4f3d9b0800bd93bf66988ba589ce92c8b99b558998812e9d1c0510a7df7",
+   "reference_date": "2024-11-07",
+   "note": "서울시 도시계획시설(공간시설) UQ153",
+   "file": "OA-21129_UQ153_공간시설_20241107.zip"
+  },
+  {
+   "url": null,
+   "method": "pyosmium area handler (bbox 126.70,37.38,127.25,37.75)",
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 2397065,
+   "sha256": "f2a519155df9a2b2eb7e1e58d6d740e87bd15cc78a6001f39241c32b04d9e02a",
+   "reference_date": "2020-01-01",
+   "note": null,
+   "file": "osm_areas_2020_01.geojson"
+  },
+  {
+   "url": null,
+   "method": "pyosmium area handler (bbox 126.70,37.38,127.25,37.75)",
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 4050430,
+   "sha256": "da0e28a48d1c902fafa5ce128b8b9cec9fc130e33c900bb66a97abc940c39bc2",
+   "reference_date": "2025-01-01",
+   "note": null,
+   "file": "osm_areas_2025_01.geojson"
+  },
+  {
+   "url": "https://download.geofabrik.de/asia/south-korea-200101.osm.pbf",
+   "method": "GET",
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 112027909,
+   "sha256": "54eace286da3f769a2a188a44430d52c611f6a1ac5b58c74a13e5ccab24e1d85",
+   "reference_date": "2020-01-01",
+   "note": "Geofabrik 과거 추출본은 .md5가 제공되지 않아 서버 Content-Length와 크기 대조. 원본 pbf는 용량 문제로 결과 폴더에 보관하지 않음. 추출물 raw/osm_areas_*.geojson",
+   "file": "south-korea-200101.osm.pbf"
+  },
+  {
+   "url": "https://download.geofabrik.de/asia/south-korea-250101.osm.pbf",
+   "method": "GET",
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 233753476,
+   "sha256": "9b67fc951d535639b2a12e96a0ff069943d6da4d75883e42d377e6f76c7483ab",
+   "reference_date": "2025-01-01",
+   "note": "Geofabrik 과거 추출본은 .md5가 제공되지 않아 서버 Content-Length와 크기 대조. 원본 pbf는 용량 문제로 결과 폴더에 보관하지 않음. 추출물 raw/osm_areas_*.geojson",
+   "file": "south-korea-250101.osm.pbf"
+  }
+ ]
+}

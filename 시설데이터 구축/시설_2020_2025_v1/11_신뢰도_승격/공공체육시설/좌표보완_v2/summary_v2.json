@@ -1,0 +1,89 @@
+{
+ "accuracy": {
+  "n": 50,
+  "matched": 40,
+  "match_rate": 80.0,
+  "no_result": 3,
+  "rejected": 7,
+  "no_accept_rate": 20.0,
+  "median_m": 37.8,
+  "p90_m": 477.8,
+  "mean_m": 201.0,
+  "max_m": 1816.2,
+  "share_within_100m": 65.0,
+  "share_within_250m": 80.0,
+  "n_over_250m": 8,
+  "precision": {
+   "facility": 32,
+   "host_building": 6,
+   "park_level": 2
+  },
+  "by_precision": {
+   "facility": {
+    "n": 32,
+    "median": 52.4,
+    "p90": 448.2
+   },
+   "host_building": {
+    "n": 6,
+    "median": 14.7,
+    "p90": 383.9
+   },
+   "park_level": {
+    "n": 2,
+    "median": 95.0,
+    "p90": 146.1
+   }
+  },
+  "n_gu": 25,
+  "n_type": 11,
+  "type_counts": {
+   "수영장": 9,
+   "생활체육관": 8,
+   "테니스장": 8,
+   "구기체육관": 6,
+   "축구장": 6,
+   "골프연습장": 5,
+   "빙상장": 2,
+   "야구장": 2,
+   "게이트볼장": 2,
+   "롤러스케이트장": 1,
+   "육상경기장": 1
+  },
+  "PASS": false
+ },
+ "coverage": {
+  "2020_01": {
+   "n_core": 484,
+   "strict_before": 65.5,
+   "strict_after": 65.5,
+   "incl_keyword_after": 80.0,
+   "filled": 0,
+   "n_gu_below85": 20,
+   "n_gu_below85_incl_keyword": 16,
+   "min_gu": "서대문구",
+   "min_gu_rate": 41.7,
+   "min_gu_incl_keyword": "강북구",
+   "min_gu_rate_incl_keyword": 60.0,
+   "n_unresolved": 97,
+   "n_keyword_unverified": 70,
+   "judgment_S": "중"
+  },
+  "2025_01": {
+   "n_core": 527,
+   "strict_before": 73.8,
+   "strict_after": 73.8,
+   "incl_keyword_after": 86.5,
+   "filled": 0,
+   "n_gu_below85": 18,
+   "n_gu_below85_incl_keyword": 9,
+   "min_gu": "양천구",
+   "min_gu_rate": 55.2,
+   "min_gu_incl_keyword": "양천구",
+   "min_gu_rate_incl_keyword": 72.4,
+   "n_unresolved": 71,
+   "n_keyword_unverified": 67,
+   "judgment_S": "중"
+  }
+ }
+}

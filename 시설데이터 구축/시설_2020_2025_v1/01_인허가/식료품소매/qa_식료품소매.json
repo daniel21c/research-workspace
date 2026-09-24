@@ -1,0 +1,361 @@
+{
+ "facility_type": "식료품소매",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:48:23.477188+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "livestock_retail_seoul_OA-16071.csv": {
+   "slug": "livestock_retail",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16071",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "8e8c1b6bf12f9740b55d8786e8d31053382d9b471500a5efeb6e3830081ce5ef",
+   "bytes": 17662645,
+   "download_utc": "2026-09-23T14:00:50.972757+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 42017,
+   "status": {
+    "폐업": 26755,
+    "영업/정상": 11629,
+    "취소/말소/만료/정지/중지": 2649,
+    "제외/삭제/전출": 961,
+    "휴업": 23
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 1574,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 9,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 12688,
+    "2025_01": 11882
+   },
+   "max_data_update": "2026-09-22 22:17:38",
+   "max_last_mod": "2026-09-21 15:30:21",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "other_food_retailers_seoul_OA-16080.csv": {
+   "slug": "other_food_retailers",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16080",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "f4a5c3aeb49f8fd11e1ead336cc1b5f1043f40b8c45a80bb7ff7fa3851cf57d0",
+   "bytes": 830936,
+   "download_utc": "2026-09-23T14:00:42.533756+00:00",
+   "reference_date": "2026-09-17",
+   "rows": 1962,
+   "status": {
+    "폐업": 1301,
+    "영업/정상": 661
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 0,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 749,
+    "2025_01": 681
+   },
+   "max_data_update": "2026-09-17 22:15:20",
+   "max_last_mod": "2026-09-16 09:09:33",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "instant_food_processors_seoul_OA-16085.csv": {
+   "slug": "instant_food_processors",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16085",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "7b592a0c977dbf5d6a5e7eea76ee67bbf9b39748e30663d37915c7bea0620e4c",
+   "bytes": 68382884,
+   "download_utc": "2026-09-23T14:13:03.383007+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 156244,
+   "status": {
+    "폐업": 140851,
+    "영업/정상": 15393
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 2,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 13094,
+    "2025_01": 15855
+   },
+   "max_data_update": "2026-09-22 22:46:21",
+   "max_last_mod": "2026-09-21 17:34:14",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "bakeries_seoul_OA-16084.csv": {
+   "slug": "bakeries",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16084",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "4f85c3332b2d466653241fcf45c5d80174dee921e4c787bd5613606e127d5999",
+   "bytes": 6865552,
+   "download_utc": "2026-09-23T14:00:44.830757+00:00",
+   "reference_date": "2026-08-05",
+   "rows": 16714,
+   "status": {
+    "폐업": 12486,
+    "영업/정상": 4228
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 0,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 3926,
+    "2025_01": 4039
+   },
+   "max_data_update": "2026-08-05 22:46:10",
+   "max_last_mod": "2026-08-04 16:35:59",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 423,
+  "groups": 160,
+  "adjusted_rows": 171,
+  "ambiguous_groups": 5,
+  "removed_from_active": {
+   "2020_01": 168,
+   "2025_01": 5
+  }
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 737,
+  "rows_needing": 1544,
+  "rows_no_parsable_address": 319,
+  "accepted_rows": 959,
+  "accepted_addresses": 486,
+  "by_method": {
+   "geocode_kakao_exact": 957,
+   "geocode_vworld_exact": 2
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {
+  "livestock_retail|2020-02-13": 21,
+  "livestock_retail|2020-08-05": 25,
+  "livestock_retail|2020-09-03": 53,
+  "livestock_retail|2020-12-31": 112,
+  "livestock_retail|2021-10-08": 52,
+  "livestock_retail|2021-11-19": 30,
+  "livestock_retail|2021-12-06": 78,
+  "livestock_retail|2022-06-06": 27,
+  "livestock_retail|2023-03-31": 27,
+  "livestock_retail|2023-04-20": 20,
+  "livestock_retail|2023-05-31": 61,
+  "livestock_retail|2023-07-31": 59,
+  "livestock_retail|2023-09-11": 20,
+  "livestock_retail|2023-11-08": 62,
+  "livestock_retail|2024-09-09": 33,
+  "livestock_retail|2025-04-02": 27,
+  "livestock_retail|2025-07-16": 20,
+  "livestock_retail|2025-08-22": 33,
+  "livestock_retail|2025-11-11": 67,
+  "livestock_retail|2026-05-18": 20
+ },
+ "candidates_either_snapshot": 43746,
+ "2020_01": {
+  "n_final": 30188,
+  "n_active_before_dedup": 30289,
+  "dedup_removed_exact": 101,
+  "flag_admin_end": 1297,
+  "flag_bulk_admin_end": 829,
+  "n_final_excl_bulk_admin_end": 29359,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "즉석판매제조가공업": 13073,
+   "축산판매업": 12444,
+   "제과점영업": 3922,
+   "식품판매업(기타)": 749
+  },
+  "by_current_status": {
+   "영업/정상": 16902,
+   "폐업": 11595,
+   "취소/말소/만료/정지/중지": 1297,
+   "제외/삭제/전출": 375,
+   "휴업": 19
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 29115,
+   "unresolved": 582,
+   "geocode_kakao_exact": 489,
+   "geocode_vworld_exact": 2
+  },
+  "coord_rate": 0.9807,
+  "source_coord_rate": 0.9645,
+  "outside_seoul": 2,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 909,
+  "dup_same_coord_5179": 15226,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   79,
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 26328,
+   "sz_facility_total_m2": 5885,
+   "sz_workers": 806
+  }
+ },
+ "2025_01": {
+  "n_final": 32352,
+  "n_active_before_dedup": 32452,
+  "dedup_removed_exact": 100,
+  "flag_admin_end": 390,
+  "flag_bulk_admin_end": 167,
+  "n_final_excl_bulk_admin_end": 32185,
+  "transfer_adjusted_start": 110,
+  "by_subtype": {
+   "즉석판매제조가공업": 15840,
+   "축산판매업": 11798,
+   "제과점영업": 4033,
+   "식품판매업(기타)": 681
+  },
+  "by_current_status": {
+   "영업/정상": 26774,
+   "폐업": 5151,
+   "취소/말소/만료/정지/중지": 390,
+   "휴업": 21,
+   "제외/삭제/전출": 16
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 31062,
+   "geocode_kakao_exact": 820,
+   "unresolved": 469,
+   "geocode_vworld_exact": 1
+  },
+  "coord_rate": 0.9855,
+  "source_coord_rate": 0.9601,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 1268,
+  "dup_same_coord_5179": 16037,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   19,
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 29092,
+   "sz_facility_total_m2": 7043,
+   "sz_workers": 619
+  }
+ },
+ "panel": {
+  "in_both": 18999,
+  "only_2020_01": 11189,
+  "only_2025_01": 13353
+ },
+ "official_comparison": {
+  "status": "공식 집계 대조원 없음(미대조)"
+ },
+ "notes": [
+  "식품위생 계열 원천(식품판매업(기타)·즉석판매·제과점)에는 인허가취소일·휴업일·전출 상태가 없고 영업/폐업만 있음.",
+  "즉석판매제조가공업에는 반찬·떡·정육가공 등 제조판매가 섞임(attr_business_type 참고)."
+ ],
+ "build_seconds": 21.5
+}

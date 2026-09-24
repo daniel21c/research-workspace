@@ -1,0 +1,236 @@
+{
+ "type": "subway_station",
+ "notes": [
+  "지하철·광역철도역 2020_01 / 2025_01 (서울 경계 내)\n좌표 마스터: 서울시 역사마스터 정보(OA-21232, 현재판, 수도권 노선-역 단위, GTX-A 포함) — 좌표 source.\n시점: 원천에 개통일이 없어 조사된 2020-01~2024-12 서울 내 신규 노선-역 목록으로 역산(B).\n  2020_01 = 현재 마스터 − (2020-01-01 이후 개통 노선-역) − 미개통(GTX-A 삼성)\n  2025_01 = 현재 마스터 − 2025-01-01 이후 개통(서울 내 해당 없음 확인) − 미개통(GTX-A 삼성)\n고유 역(환승역 통합): 노선-역을 이름 토큰(괄호 안 부역명 포함) 일치 & 700m 이내, 또는 150m 이내면 같은 역으로 묶음.\n  facilities_subway_station_*: 고유 역 위치(구성 노선-역 좌표 평균), subway_line_station_*.csv: 노선-역 단위.\n대조: KRIC 역사정보(도시철도, 현재판) 서울 주소 행 수, 서울교통공사 개통현황(OA-13317)."
+ ],
+ "master_rows": 784,
+ "master_rows_seoul": 401,
+ "master_rows_outside_seoul_dropped": 383,
+ "open_list_matched": 20,
+ "open_list_total": 20,
+ "open_list_unmatched": [],
+ "master_lines_seoul": {
+  "5호선": 52,
+  "2호선": 50,
+  "6호선": 39,
+  "7호선": 39,
+  "3호선": 33,
+  "4호선": 26,
+  "9호선": 25,
+  "경원선": 16,
+  "9호선(연장)": 13,
+  "우이신설선": 13,
+  "경부선": 12,
+  "분당선": 12,
+  "8호선": 12,
+  "신림선": 11,
+  "1호선": 10,
+  "경의중앙선": 9,
+  "공항철도1호선": 6,
+  "중앙선": 5,
+  "경인선": 4,
+  "신분당선": 4,
+  "수도권 광역급행철도": 4,
+  "신분당선(연장2)": 3,
+  "김포골드라인": 1,
+  "서해선": 1,
+  "경춘선": 1
+ },
+ "2020_01": {
+  "rows": 299,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 299
+  },
+  "inside_seoul": 299,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "B": 299
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "단일노선역": 232,
+   "환승역": 67
+  },
+  "dup_exact_xy": 0,
+  "line_station_rows": 380,
+  "unique_stations": 299,
+  "transfer_stations": 67,
+  "removed_open_after_ref": 20,
+  "removed_not_open": 1,
+  "by_line": {
+   "5호선": 51,
+   "2호선": 50,
+   "7호선": 39,
+   "6호선": 39,
+   "3호선": 33,
+   "4호선": 26,
+   "9호선": 25,
+   "경원선": 16,
+   "우이신설선": 13,
+   "9호선(연장)": 13,
+   "분당선": 12,
+   "경부선": 12,
+   "8호선": 11,
+   "1호선": 10,
+   "경의중앙선": 9,
+   "공항철도1호선": 6,
+   "중앙선": 5,
+   "경인선": 4,
+   "신분당선": 4,
+   "김포골드라인": 1,
+   "경춘선": 1
+  },
+  "kric_current_rows_seoul_address": 407,
+  "kric_data_date": "2026-06-18 00:00:00"
+ },
+ "2025_01": {
+  "rows": 308,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 308
+  },
+  "inside_seoul": 308,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "B": 308
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "단일노선역": 234,
+   "환승역": 74
+  },
+  "dup_exact_xy": 0,
+  "line_station_rows": 400,
+  "unique_stations": 308,
+  "transfer_stations": 74,
+  "removed_open_after_ref": 0,
+  "removed_not_open": 1,
+  "by_line": {
+   "5호선": 52,
+   "2호선": 50,
+   "6호선": 39,
+   "7호선": 39,
+   "3호선": 33,
+   "4호선": 26,
+   "9호선": 25,
+   "경원선": 16,
+   "9호선(연장)": 13,
+   "우이신설선": 13,
+   "경부선": 12,
+   "분당선": 12,
+   "8호선": 12,
+   "신림선": 11,
+   "1호선": 10,
+   "경의중앙선": 9,
+   "공항철도1호선": 6,
+   "중앙선": 5,
+   "경인선": 4,
+   "신분당선": 4,
+   "수도권 광역급행철도": 3,
+   "신분당선(연장2)": 3,
+   "김포골드라인": 1,
+   "서해선": 1,
+   "경춘선": 1
+  },
+  "kric_current_rows_seoul_address": 407,
+  "kric_data_date": "2026-06-18 00:00:00"
+ },
+ "panel": {
+  "common_ids": 299,
+  "only_2020": 0,
+  "only_2025": 9,
+  "new_unique_stations_2025": [
+   "강일",
+   "관악산(서울대)",
+   "당곡",
+   "보라매공원",
+   "보라매병원",
+   "서울대벤처타운",
+   "서울지방병무청",
+   "서원",
+   "암사역사공원"
+  ]
+ },
+ "generated_utc": "2026-09-23T23:42:05Z",
+ "raw_files": [
+  {
+   "url": "https://data.kric.go.kr/rips/dataset/download.file",
+   "method": "GET",
+   "params": {
+    "type": "filedata",
+    "id": 32,
+    "operation": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:41:38Z",
+   "http_status": 200,
+   "bytes": 313132,
+   "sha256": "cdf1d84a7e5c898b2aacd622783ba8ba9af35c40bee0561dc97d55ce8e063f94",
+   "reference_date": "현재판(데이터기준일자 열 참조)",
+   "note": "국가철도공단 레일포털 역사정보(전체 기관) 표준데이터",
+   "file": "KRIC_역사정보_id32.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-13317",
+    "seqNo": "",
+    "seq": "2",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:41:39Z",
+   "http_status": 200,
+   "bytes": 1731,
+   "sha256": "3c7b13fe4fc682e7a25e12d31e6b6f620f01acf569481d61bd7f55d7280be827",
+   "reference_date": "2020-03",
+   "note": "서울교통공사 개통 현황 2020.3판",
+   "file": "OA-13317_개통현황_202003.csv"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-13317",
+    "seqNo": "",
+    "seq": "4",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:41:39Z",
+   "http_status": 200,
+   "bytes": 1263,
+   "sha256": "a045c00dced1ab674bc3b7d56eb6b5e066f1a0f6ad11008676291210802157b3",
+   "reference_date": "2025-08-13",
+   "note": "서울교통공사 개통 현황",
+   "file": "OA-13317_개통현황_20250813.csv"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "srvType": "S",
+    "infId": "OA-21232",
+    "serviceKind": 1,
+    "pageNo": 1,
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "download_utc": "2026-09-23T23:41:38Z",
+   "http_status": 200,
+   "bytes": 40334,
+   "sha256": "bd20809626417942cf8c76c81818fdec221336067ad3a38c30f04c914cbc3afb",
+   "reference_date": "다운로드 시점 현재",
+   "note": "서울시 역사마스터 정보",
+   "file": "OA-21232_역사마스터.csv"
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "facility_type": "주유소",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:47:40.148220+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "oil_retailers_seoul_OA-16110.csv": {
+   "slug": "oil_retailers",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16110",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "989174fe3c249c98aaa77dcd047a599f9688a5b874a274354b071693fa006062",
+   "bytes": 689506,
+   "download_utc": "2026-09-23T14:01:00.905758+00:00",
+   "reference_date": "2026-09-18",
+   "rows": 1913,
+   "status": {
+    "폐업": 1297,
+    "영업/정상": 554,
+    "취소/말소/만료/정지/중지": 40,
+    "휴업": 22
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 551,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 26,
+    "2025_01": 6
+   },
+   "active": {
+    "2020_01": 738,
+    "2025_01": 619
+   },
+   "max_data_update": "2026-09-18 23:02:43",
+   "max_last_mod": "2026-09-17 09:26:14",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 0,
+  "groups": 0,
+  "adjusted_rows": 0,
+  "ambiguous_groups": 0,
+  "removed_from_active": {}
+ },
+ "filter": {
+  "desc": "업태구분명 == 주유소 (일반판매소·용제판매소·항공유판매소 제외)",
+  "candidates_before": 748,
+  "candidates_after": 524,
+  "active_before": {
+   "2020_01": 738,
+   "2025_01": 619
+  },
+  "active_after": {
+   "2020_01": 520,
+   "2025_01": 450
+  }
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 12,
+  "rows_needing": 14,
+  "rows_no_parsable_address": 2,
+  "accepted_rows": 9,
+  "accepted_addresses": 9,
+  "by_method": {
+   "geocode_kakao_exact": 9
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {},
+ "candidates_either_snapshot": 524,
+ "2020_01": {
+  "n_final": 519,
+  "n_active_before_dedup": 520,
+  "dedup_removed_exact": 1,
+  "flag_admin_end": 0,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 519,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "주유소": 519
+  },
+  "by_current_status": {
+   "영업/정상": 396,
+   "폐업": 101,
+   "휴업": 22
+  },
+  "closed_nodate_substituted": 18,
+  "coord_method": {
+   "source": 505,
+   "geocode_kakao_exact": 9,
+   "unresolved": 5
+  },
+  "coord_rate": 0.9904,
+  "source_coord_rate": 0.973,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 2,
+  "dup_same_coord_5179": 8,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 492
+  }
+ },
+ "2025_01": {
+  "n_final": 449,
+  "n_active_before_dedup": 450,
+  "dedup_removed_exact": 1,
+  "flag_admin_end": 0,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 449,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "주유소": 449
+  },
+  "by_current_status": {
+   "영업/정상": 399,
+   "폐업": 28,
+   "휴업": 22
+  },
+  "closed_nodate_substituted": 3,
+  "coord_method": {
+   "source": 439,
+   "geocode_kakao_exact": 8,
+   "unresolved": 2
+  },
+  "coord_rate": 0.9955,
+  "source_coord_rate": 0.9777,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 2,
+  "dup_same_coord_5179": 6,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 425
+  }
+ },
+ "panel": {
+  "in_both": 445,
+  "only_2020_01": 74,
+  "only_2025_01": 4
+ },
+ "official_comparison": {
+  "status": "한국석유공사 Opinet 주유소 현황 대조 미실시"
+ },
+ "notes": [
+  "LPG 충전소는 석유판매업이 아니라 포함되지 않음."
+ ],
+ "build_seconds": 0.7
+}

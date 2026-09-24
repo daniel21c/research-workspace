@@ -1,0 +1,119 @@
+{
+ "2020_01": {
+  "이용시설": {
+   "built": 215,
+   "official": 215,
+   "coord_rate_before": 0.9023,
+   "coord_rate_after": 0.9628,
+   "located_outside_seoul": 2,
+   "min_gu_rate": 0.7222,
+   "min_gu": "송파구",
+   "gu_below_85": [
+    "송파구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 13,
+   "still_missing": 8,
+   "gu_col_missing": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "이용시설_직업재활": {
+   "built": 133,
+   "official": 133,
+   "coord_rate_before": 0.9173,
+   "coord_rate_after": 0.9549,
+   "located_outside_seoul": 8,
+   "min_gu_rate": 0.6667,
+   "min_gu": "종로구",
+   "gu_below_85": [
+    "종로구",
+    "중랑구",
+    "양천구",
+    "강동구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 5,
+   "still_missing": 6,
+   "gu_col_missing": 1,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "거주시설": {
+   "built": 281,
+   "official": 281,
+   "coord_rate_before": 0.9039,
+   "coord_rate_after": 0.9573,
+   "located_outside_seoul": 19,
+   "min_gu_rate": 0.5,
+   "min_gu": "중구",
+   "gu_below_85": [
+    "중구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 15,
+   "still_missing": 12,
+   "gu_col_missing": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  }
+ },
+ "2025_01": {
+  "이용시설": {
+   "built": 220,
+   "official": 220,
+   "coord_rate_before": 0.9591,
+   "coord_rate_after": 0.9818,
+   "located_outside_seoul": 2,
+   "min_gu_rate": 0.6667,
+   "min_gu": "동작구",
+   "gu_below_85": [
+    "동작구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 5,
+   "still_missing": 4,
+   "gu_col_missing": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "이용시설_직업재활": {
+   "built": 136,
+   "official": 136,
+   "coord_rate_before": 0.9485,
+   "coord_rate_after": 0.9559,
+   "located_outside_seoul": 7,
+   "min_gu_rate": 0.6667,
+   "min_gu": "서대문구",
+   "gu_below_85": [
+    "동대문구",
+    "서대문구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 1,
+   "still_missing": 6,
+   "gu_col_missing": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "거주시설": {
+   "built": 248,
+   "official": 248,
+   "coord_rate_before": 0.9677,
+   "coord_rate_after": 0.9839,
+   "located_outside_seoul": 15,
+   "min_gu_rate": 0.75,
+   "min_gu": "영등포구",
+   "gu_below_85": [
+    "영등포구",
+    "관악구"
+   ],
+   "gu_with_zero_rows": [],
+   "filled": 4,
+   "still_missing": 4,
+   "gu_col_missing": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  }
+ }
+}

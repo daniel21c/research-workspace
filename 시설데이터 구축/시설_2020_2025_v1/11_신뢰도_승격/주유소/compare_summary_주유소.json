@@ -1,0 +1,99 @@
+{
+ "multi_date": [
+  {
+   "year_end": "2018",
+   "built": 529,
+   "built_excl_current_hyueop": 507,
+   "official": 508,
+   "official_source": "에너지신문 2023-03(한국석유관리원): 2022년 444개 = 2018 대비 -12.6% → 역산 ≈508 (추정)",
+   "diff_pct": 4.13,
+   "diff_pct_excl_hyueop": -0.2
+  },
+  {
+   "year_end": "2019",
+   "built": 519,
+   "built_excl_current_hyueop": 497,
+   "official": null,
+   "official_source": "",
+   "diff_pct": null,
+   "diff_pct_excl_hyueop": null
+  },
+  {
+   "year_end": "2020",
+   "built": 513,
+   "built_excl_current_hyueop": 492,
+   "official": null,
+   "official_source": "",
+   "diff_pct": null,
+   "diff_pct_excl_hyueop": null
+  },
+  {
+   "year_end": "2021",
+   "built": 494,
+   "built_excl_current_hyueop": 473,
+   "official": 470,
+   "official_source": "에너지신문 2023-03 기사(한국석유관리원 영업 주유소 현황): 2021년 470개",
+   "diff_pct": 5.11,
+   "diff_pct_excl_hyueop": 0.64
+  },
+  {
+   "year_end": "2022",
+   "built": 467,
+   "built_excl_current_hyueop": 446,
+   "official": 444,
+   "official_source": "에너지신문 2023-03 기사(한국석유관리원): 2022년 말 444개",
+   "diff_pct": 5.18,
+   "diff_pct_excl_hyueop": 0.45
+  },
+  {
+   "year_end": "2023",
+   "built": 458,
+   "built_excl_current_hyueop": 438,
+   "official": 436,
+   "official_source": "데이터솜 2024-01 기사(한국석유관리원 2019~2023 영업 주유소 현황): 2023-12-31 436개",
+   "diff_pct": 5.05,
+   "diff_pct_excl_hyueop": 0.46
+  },
+  {
+   "year_end": "2024",
+   "built": 449,
+   "built_excl_current_hyueop": 427,
+   "official": null,
+   "official_source": "",
+   "diff_pct": null,
+   "diff_pct_excl_hyueop": null
+  },
+  {
+   "year_end": "2025",
+   "built": 432,
+   "built_excl_current_hyueop": 412,
+   "official": 412,
+   "official_source": "한국석유공사_지역별 주유소 수_20251231 (data.go.kr 15038480, 파일 기준일 2025-12-31)",
+   "diff_pct": 4.85,
+   "diff_pct_excl_hyueop": 0.0
+  }
+ ],
+ "gu_ref_OA22251": {
+  "2021": {
+   "built_excl_hyueop": 473,
+   "ref_total": 473,
+   "gu_r": 0.9849,
+   "gu_max_abs_diff": 4,
+   "gu_max_abs_diff_gu": "노원구"
+  },
+  "2022": {
+   "built_excl_hyueop": 446,
+   "ref_total": 473,
+   "gu_r": 0.9766,
+   "gu_max_abs_diff": 4,
+   "gu_max_abs_diff_gu": "광진구"
+  },
+  "2023": {
+   "built_excl_hyueop": 438,
+   "ref_total": 473,
+   "gu_r": 0.9753,
+   "gu_max_abs_diff": 5,
+   "gu_max_abs_diff_gu": "강남구"
+  }
+ }
+}

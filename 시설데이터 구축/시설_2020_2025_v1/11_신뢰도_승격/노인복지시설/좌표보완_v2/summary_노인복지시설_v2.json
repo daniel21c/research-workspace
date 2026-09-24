@@ -1,0 +1,94 @@
+{
+ "2020_01": {
+  "입소시설": {
+   "n": 535,
+   "coord_before": 513,
+   "coord_after": 524,
+   "rate_before": 0.9589,
+   "rate_after": 0.9794,
+   "n_seoul_located": 534,
+   "rate_after_seoul_located": 0.9794,
+   "rate_before_seoul_located": 0.9607,
+   "min_gu": "노원구",
+   "min_gu_rate": 0.8824,
+   "gu_below_85": [],
+   "filled_v2": 11,
+   "still_missing": 11,
+   "still_missing_ids": [
+    "ELD00137",
+    "ELD00252",
+    "ELD00257",
+    "ELD00319",
+    "ELD00324",
+    "ELD00377",
+    "ELD00378",
+    "ELD00379",
+    "ELD00380",
+    "ELD00405",
+    "ELD00438"
+   ]
+  },
+  "이용시설": {
+   "n": 510,
+   "coord_before": 494,
+   "coord_after": 499,
+   "rate_before": 0.9686,
+   "rate_after": 0.9784,
+   "n_seoul_located": 510,
+   "rate_after_seoul_located": 0.9784,
+   "rate_before_seoul_located": 0.9686,
+   "min_gu": "성북구",
+   "min_gu_rate": 0.8636,
+   "gu_below_85": [],
+   "filled_v2": 5,
+   "still_missing": 11,
+   "still_missing_ids": [
+    "ELD00556",
+    "ELD00564",
+    "ELD00603",
+    "ELD00910",
+    "ELD00912",
+    "ELD00938",
+    "ELD00997",
+    "ELD01007",
+    "ELD01171",
+    "ELD01206",
+    "ELD01219"
+   ]
+  }
+ },
+ "2025_01": {
+  "입소시설": {
+   "n": 499,
+   "coord_before": 498,
+   "coord_after": 499,
+   "rate_before": 0.998,
+   "rate_after": 1.0,
+   "n_seoul_located": 494,
+   "rate_after_seoul_located": 1.0,
+   "rate_before_seoul_located": 0.998,
+   "min_gu": "종로구",
+   "min_gu_rate": 1.0,
+   "gu_below_85": [],
+   "filled_v2": 1,
+   "still_missing": 0,
+   "still_missing_ids": []
+  },
+  "이용시설": {
+   "n": 582,
+   "coord_before": 581,
+   "coord_after": 582,
+   "rate_before": 0.9983,
+   "rate_after": 1.0,
+   "n_seoul_located": 582,
+   "rate_after_seoul_located": 1.0,
+   "rate_before_seoul_located": 0.9983,
+   "min_gu": "종로구",
+   "min_gu_rate": 1.0,
+   "gu_below_85": [],
+   "filled_v2": 1,
+   "still_missing": 0,
+   "still_missing_ids": []
+  }
+ }
+}

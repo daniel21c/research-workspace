@@ -1,0 +1,463 @@
+{
+ "type": "childcare",
+ "notes": [
+  "어린이집 2020_01 / 2025_01 — 서울시 어린이집 정보(OA-20300, 폐지 포함 전체 이력) 역산(B)\n규칙: 인가일자 ≤ D 그리고 (폐지일자 없음 또는 > D). 운영현황=폐지인데 폐지일자 없으면 행의 데이터기준일자(최종 갱신일)를\n폐지일로 대체(temporal_reason 표시). 인가일자 결측·1900-01-01 등 더미는 unknown → 제외.\n휴지는 시작·종료일이 모두 있고 시작 ≤ D ≤ 종료일 때만 제외.\n정원·현원은 현재값(폐지 시설은 폐지 직전값) → sz_capacity_current, sz_enrolled_current (시점값 아님).\n대조: 서울시 보육통계 OA-15457 (연말 자치구×유형 시설수)."
+ ],
+ "source_rows": 9494,
+ "source_status": {
+  "폐지": 5504,
+  "정상": 3844,
+  "재개": 75,
+  "휴지": 68
+ },
+ "auth_date_unknown": 17,
+ "closed_without_date_substituted": 42,
+ "2020_01": {
+  "rows": 5877,
+  "coord_rate": 0.9951,
+  "coord_method": {
+   "source": 5815,
+   "geocode_kakao_exact": 33,
+   "unresolved": 29
+  },
+  "inside_seoul": 5847,
+  "outside_seoul": 1,
+  "no_coord": 29,
+  "grade": {
+   "B": 5877
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "가정": 2308,
+   "국공립": 1665,
+   "민간": 1473,
+   "직장": 263,
+   "법인·단체등": 107,
+   "협동": 33,
+   "사회복지법인": 28
+  },
+  "dup_exact_xy": 567,
+  "excluded_suspended": 2,
+  "alive_candidates": 5879,
+  "official_total": 5698,
+  "diff_total_pct": 3.14,
+  "by_type_vs_official": {
+   "국공립": {
+    "built": 1665,
+    "official": 1661,
+    "diff_pct": 0.2
+   },
+   "사회복지법인": {
+    "built": 28,
+    "official": 28,
+    "diff_pct": 0.0
+   },
+   "법인·단체등": {
+    "built": 107,
+    "official": 101,
+    "diff_pct": 5.9
+   },
+   "민간": {
+    "built": 1473,
+    "official": 1512,
+    "diff_pct": -2.6
+   },
+   "가정": {
+    "built": 2308,
+    "official": 2098,
+    "diff_pct": 10.0
+   },
+   "협동": {
+    "built": 33,
+    "official": 33,
+    "diff_pct": 0.0
+   },
+   "직장": {
+    "built": 263,
+    "official": 265,
+    "diff_pct": -0.8
+   }
+  },
+  "by_gu_vs_official": [
+   {
+    "gu": "마포구",
+    "built": 209,
+    "official": 209
+   },
+   {
+    "gu": "강동구",
+    "built": 268,
+    "official": 260
+   },
+   {
+    "gu": "송파구",
+    "built": 409,
+    "official": 395
+   },
+   {
+    "gu": "강남구",
+    "built": 203,
+    "official": 201
+   },
+   {
+    "gu": "서초구",
+    "built": 192,
+    "official": 189
+   },
+   {
+    "gu": "관악구",
+    "built": 257,
+    "official": 251
+   },
+   {
+    "gu": "동작구",
+    "built": 228,
+    "official": 219
+   },
+   {
+    "gu": "영등포구",
+    "built": 254,
+    "official": 248
+   },
+   {
+    "gu": "금천구",
+    "built": 163,
+    "official": 157
+   },
+   {
+    "gu": "구로구",
+    "built": 349,
+    "official": 318
+   },
+   {
+    "gu": "강서구",
+    "built": 423,
+    "official": 409
+   },
+   {
+    "gu": "양천구",
+    "built": 300,
+    "official": 299
+   },
+   {
+    "gu": "서대문구",
+    "built": 152,
+    "official": 149
+   },
+   {
+    "gu": "은평구",
+    "built": 271,
+    "official": 263
+   },
+   {
+    "gu": "노원구",
+    "built": 422,
+    "official": 405
+   },
+   {
+    "gu": "도봉구",
+    "built": 245,
+    "official": 229
+   },
+   {
+    "gu": "강북구",
+    "built": 157,
+    "official": 153
+   },
+   {
+    "gu": "성북구",
+    "built": 272,
+    "official": 267
+   },
+   {
+    "gu": "중랑구",
+    "built": 229,
+    "official": 230
+   },
+   {
+    "gu": "동대문구",
+    "built": 218,
+    "official": 215
+   },
+   {
+    "gu": "광진구",
+    "built": 209,
+    "official": 188
+   },
+   {
+    "gu": "성동구",
+    "built": 182,
+    "official": 179
+   },
+   {
+    "gu": "용산구",
+    "built": 119,
+    "official": 119
+   },
+   {
+    "gu": "중구",
+    "built": 70,
+    "official": 69
+   },
+   {
+    "gu": "종로구",
+    "built": 76,
+    "official": 77
+   }
+  ],
+  "official_source": "OA-15457 통계연도 2019 (12월말)",
+  "closed_sub_included": 42,
+  "sum_capacity_current": 244317
+ },
+ "2025_01": {
+  "rows": 4319,
+  "coord_rate": 0.9949,
+  "coord_method": {
+   "source": 4271,
+   "geocode_kakao_exact": 26,
+   "unresolved": 22
+  },
+  "inside_seoul": 4296,
+  "outside_seoul": 1,
+  "no_coord": 22,
+  "grade": {
+   "B": 4319
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "국공립": 1865,
+   "가정": 1211,
+   "민간": 829,
+   "직장": 301,
+   "법인·단체등": 73,
+   "협동": 23,
+   "사회복지법인": 17
+  },
+  "dup_exact_xy": 244,
+  "excluded_suspended": 3,
+  "alive_candidates": 4322,
+  "official_total": 4212,
+  "diff_total_pct": 2.54,
+  "by_type_vs_official": {
+   "국공립": {
+    "built": 1865,
+    "official": 1855,
+    "diff_pct": 0.5
+   },
+   "사회복지법인": {
+    "built": 17,
+    "official": 17,
+    "diff_pct": 0.0
+   },
+   "법인·단체등": {
+    "built": 73,
+    "official": 68,
+    "diff_pct": 7.4
+   },
+   "민간": {
+    "built": 829,
+    "official": 809,
+    "diff_pct": 2.5
+   },
+   "가정": {
+    "built": 1211,
+    "official": 1138,
+    "diff_pct": 6.4
+   },
+   "협동": {
+    "built": 23,
+    "official": 22,
+    "diff_pct": 4.5
+   },
+   "직장": {
+    "built": 301,
+    "official": 303,
+    "diff_pct": -0.7
+   }
+  },
+  "by_gu_vs_official": [
+   {
+    "gu": "종로구",
+    "built": 63,
+    "official": 66
+   },
+   {
+    "gu": "강동구",
+    "built": 235,
+    "official": 232
+   },
+   {
+    "gu": "송파구",
+    "built": 296,
+    "official": 296
+   },
+   {
+    "gu": "강남구",
+    "built": 174,
+    "official": 174
+   },
+   {
+    "gu": "서초구",
+    "built": 158,
+    "official": 157
+   },
+   {
+    "gu": "관악구",
+    "built": 158,
+    "official": 158
+   },
+   {
+    "gu": "동작구",
+    "built": 157,
+    "official": 155
+   },
+   {
+    "gu": "영등포구",
+    "built": 205,
+    "official": 202
+   },
+   {
+    "gu": "금천구",
+    "built": 109,
+    "official": 109
+   },
+   {
+    "gu": "구로구",
+    "built": 259,
+    "official": 233
+   },
+   {
+    "gu": "강서구",
+    "built": 289,
+    "official": 277
+   },
+   {
+    "gu": "양천구",
+    "built": 202,
+    "official": 200
+   },
+   {
+    "gu": "마포구",
+    "built": 174,
+    "official": 173
+   },
+   {
+    "gu": "서대문구",
+    "built": 125,
+    "official": 126
+   },
+   {
+    "gu": "은평구",
+    "built": 204,
+    "official": 194
+   },
+   {
+    "gu": "노원구",
+    "built": 287,
+    "official": 268
+   },
+   {
+    "gu": "도봉구",
+    "built": 162,
+    "official": 145
+   },
+   {
+    "gu": "강북구",
+    "built": 109,
+    "official": 106
+   },
+   {
+    "gu": "성북구",
+    "built": 180,
+    "official": 176
+   },
+   {
+    "gu": "중랑구",
+    "built": 167,
+    "official": 164
+   },
+   {
+    "gu": "동대문구",
+    "built": 172,
+    "official": 175
+   },
+   {
+    "gu": "광진구",
+    "built": 126,
+    "official": 126
+   },
+   {
+    "gu": "성동구",
+    "built": 144,
+    "official": 141
+   },
+   {
+    "gu": "용산구",
+    "built": 97,
+    "official": 94
+   },
+   {
+    "gu": "중구",
+    "built": 67,
+    "official": 65
+   }
+  ],
+  "official_source": "OA-15457 통계연도 2024 (12월말)",
+  "closed_sub_included": 42,
+  "sum_capacity_current": 202922
+ },
+ "panel": {
+  "common_ids": 3892,
+  "only_2020": 1985,
+  "only_2025": 427
+ },
+ "generated_utc": "2026-09-23T23:33:32Z",
+ "raw_files": [
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "srvType": "S",
+    "infId": "OA-15457",
+    "serviceKind": 1,
+    "pageNo": 1,
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "download_utc": "2026-09-23T23:33:24Z",
+   "http_status": 200,
+   "bytes": 18986,
+   "sha256": "5916c640dd7110678e5466c5691a89475e18e6e8e683e3dbfd2396735e392dc0",
+   "reference_date": "연도별 12월말",
+   "note": "서울시 보육통계 어린이집 현황(자치구,유형별)",
+   "file": "OA-15457_보육통계_자치구유형별.csv"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "srvType": "S",
+    "infId": "OA-20300",
+    "serviceKind": 1,
+    "pageNo": 1,
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "download_utc": "2026-09-23T23:33:22Z",
+   "http_status": 200,
+   "bytes": 4127169,
+   "sha256": "b326862d3451f22eaa1656aca9ea89b98e619bf73c9aa04f976b6722aed9c6b3",
+   "reference_date": "다운로드 시점 현재(폐지 이력 포함)",
+   "note": "서울시 어린이집 정보(표준 데이터) 시트 CSV",
+   "file": "OA-20300_어린이집정보.csv"
+  }
+ ]
+}

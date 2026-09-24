@@ -1,0 +1,76 @@
+{
+ "2020_01|A_전체": {
+  "n": 1007,
+  "coord_rate": 86.59,
+  "min_gu": "동작구",
+  "min_gu_rate": 65.0,
+  "n_gu_below85": 4,
+  "gu_below85": {
+   "동작구": 0.65,
+   "용산구": 0.824,
+   "은평구": 0.742,
+   "중구": 0.848
+  },
+  "gu_missing": 2,
+  "gu_r": 0.313,
+  "coord_stage": {
+   "source": 865,
+   "unresolved": 135,
+   "geocode_exact_build": 6,
+   "geocode_exact_retry_parcel": 1
+  }
+ },
+ "2020_01|D_인허가중 명부매칭행": {
+  "n": 330,
+  "coord_rate": 99.39,
+  "min_gu": "강동구",
+  "min_gu_rate": 50.0,
+  "n_gu_below85": 1,
+  "gu_below85": {
+   "강동구": 0.5
+  },
+  "gu_missing": 0,
+  "gu_r": 0.999,
+  "coord_stage": {
+   "source": 326,
+   "geocode_exact_build": 2,
+   "unresolved": 2
+  }
+ },
+ "2025_01|A_전체": {
+  "n": 853,
+  "coord_rate": 90.27,
+  "min_gu": "동작구",
+  "min_gu_rate": 65.0,
+  "n_gu_below85": 3,
+  "gu_below85": {
+   "동작구": 0.65,
+   "용산구": 0.812,
+   "중구": 0.848
+  },
+  "gu_missing": 0,
+  "gu_r": 0.537,
+  "coord_stage": {
+   "source": 766,
+   "unresolved": 83,
+   "geocode_exact_build": 4
+  }
+ },
+ "2025_01|D_인허가중 명부매칭행": {
+  "n": 434,
+  "coord_rate": 99.54,
+  "min_gu": "강동구",
+  "min_gu_rate": 66.7,
+  "n_gu_below85": 1,
+  "gu_below85": {
+   "강동구": 0.667
+  },
+  "gu_missing": 0,
+  "gu_r": 1.0,
+  "coord_stage": {
+   "source": 430,
+   "geocode_exact_build": 2,
+   "unresolved": 2
+  }
+ }
+}

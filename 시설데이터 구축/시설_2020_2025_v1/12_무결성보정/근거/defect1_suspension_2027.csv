@@ -1,0 +1,7 @@
+﻿10_folder,year_snapshot,facility_id,name,휴업시작일자_raw,휴업종료일자_raw,영업상태명_raw,end_ge_2027,source_raw_file,source_row_id
+의원,2025_01,LIC-clinics-3010000-PHMA120103010033041100031,의료법인 풍성치과의원,2020-01-14,2027-02-17,휴업,True,01_인허가/의원/raw/clinics_seoul_OA-16480.csv,5692:PHMA120103010033041100031
+의원,2025_01,LIC-clinics-3080000-PHMA119993080033041100013,사회복지법인 상록재단 금강산의원,2024-07-15,2027-10-03,휴업,True,01_인허가/의원/raw/clinics_seoul_OA-16480.csv,6200:PHMA119993080033041100013
+의원,2025_01,LIC-clinics-3080000-PHMA120093080033041100025,금강산한의원,2024-10-04,2027-10-03,휴업,True,01_인허가/의원/raw/clinics_seoul_OA-16480.csv,6496:PHMA120093080033041100025
+체육시설업_조건부,2025_01,LIC-martial_arts_dojo-3170000-CDFH3301022020000001,CIA태권도,2022-12-08,2030-12-31,휴업,True,01_인허가/체육시설업/raw/martial_arts_dojo_seoul_OA-16141.csv,269:CDFH3301022020000001
+체육시설업_조건부,2025_01,LIC-swimming_pools-3210000-CDFH3301012002000002,서울특별시교육청 교육연수원,2022-01-01,2027-02-28,휴업,True,01_인허가/체육시설업/raw/swimming_pools_seoul_OA-16137.csv,38:CDFH3301012002000002
+대규모점포_주요4업태,2025_01,LIC-large_scale_retail_stores-3190000-2021319021607500001,태평백화점,2021-10-31,2028-04-30,휴업,True,01_인허가/대규모점포/raw/large_scale_retail_stores_seoul_OA-16096.csv,154:2021319021607500001

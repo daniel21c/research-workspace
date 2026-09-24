@@ -1,0 +1,158 @@
+{
+ "rows": 1533,
+ "coord_stage": {
+  "1_recon_2101_inst_le_20191231": 1478,
+  "2_ed2101_inst_after_ref": 31,
+  "4_unresolved": 19,
+  "2_ed2101_inst_after_ref+coord_ed2106": 5
+ },
+ "coord_rate": 0.9876,
+ "inside_seoul": 1512,
+ "outside_seoul": 2,
+ "no_coord": 19,
+ "min_gu_coord_rate": 0.9516,
+ "min_gu": "광진구",
+ "gu_lt85": 0,
+ "dup_facility_id": 0,
+ "excluded_center_ids_lt100": [
+  7,
+  10,
+  11
+ ],
+ "log_rows_20191231_all": 1536,
+ "unresolved": [
+  {
+   "sid": "110",
+   "gu": "마포구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "216",
+   "gu": "영등포구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "315",
+   "gu": "중구",
+   "gu_infer_share": 0.67,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "330",
+   "gu": "종로구",
+   "gu_infer_share": 0.67,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "386",
+   "gu": "중구",
+   "gu_infer_share": 0.67,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "504",
+   "gu": "광진구",
+   "gu_infer_share": 0.5,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "580",
+   "gu": "성동구",
+   "gu_infer_share": 0.83,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "651",
+   "gu": "동대문구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "926",
+   "gu": "은평구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "951",
+   "gu": "은평구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "1309",
+   "gu": "성북구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "1603",
+   "gu": "노원구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "1623",
+   "gu": "노원구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "1687",
+   "gu": "노원구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "2160",
+   "gu": "관악구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "2180",
+   "gu": "관악구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "2290",
+   "gu": "서초구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "3519",
+   "gu": "광진구",
+   "gu_infer_share": 1.0,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  },
+  {
+   "sid": "3522",
+   "gu": "광진구",
+   "gu_infer_share": 0.83,
+   "coord_stage": "4_unresolved",
+   "src": "OA-22223 목록만(좌표·이름 없음)"
+  }
+ ]
+}

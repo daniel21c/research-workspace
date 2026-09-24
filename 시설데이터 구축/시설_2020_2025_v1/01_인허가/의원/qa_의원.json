@@ -1,0 +1,304 @@
+{
+ "facility_type": "의원",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:46:51.924237+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "clinics_seoul_OA-16480.csv": {
+   "slug": "clinics",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16480",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "2acc12adc4fb4023b2a5c6197df69e9e6924164c769ea7cc5faf3ff07b380647",
+   "bytes": 17864357,
+   "download_utc": "2026-09-23T14:00:20.104755+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 37669,
+   "status": {
+    "영업/정상": 19263,
+    "폐업": 17375,
+    "제외/삭제/전출": 800,
+    "취소/말소/만료/정지/중지": 181,
+    "휴업": 50
+   },
+   "lic_unknown": 178,
+   "lic_dummy_1900_0001": 178,
+   "lic_unknown_not_closed_pre2020": 5,
+   "closed_nodate": 1635,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 6,
+    "2025_01": 11
+   },
+   "substituted": {
+    "2020_01": 522,
+    "2025_01": 151
+   },
+   "active": {
+    "2020_01": 17662,
+    "2025_01": 18838
+   },
+   "max_data_update": "2026-09-22 22:30:11",
+   "max_last_mod": "2026-09-21 18:13:25",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 569,
+  "groups": 289,
+  "adjusted_rows": 306,
+  "ambiguous_groups": 1,
+  "removed_from_active": {
+   "2020_01": 278,
+   "2025_01": 82
+  }
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 301,
+  "rows_needing": 423,
+  "rows_no_parsable_address": 2,
+  "accepted_rows": 408,
+  "accepted_addresses": 290,
+  "by_method": {
+   "geocode_kakao_exact": 408
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {},
+ "candidates_either_snapshot": 21472,
+ "2020_01": {
+  "n_final": 17373,
+  "n_active_before_dedup": 17384,
+  "dedup_removed_exact": 11,
+  "flag_admin_end": 22,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 17373,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "의원": 8769,
+   "치과의원": 4865,
+   "한의원": 3706,
+   "보건소": 20,
+   "보건지소": 10,
+   "조산원": 3
+  },
+  "by_current_status": {
+   "영업/정상": 13980,
+   "폐업": 2824,
+   "제외/삭제/전출": 500,
+   "휴업": 47,
+   "취소/말소/만료/정지/중지": 22
+  },
+  "closed_nodate_substituted": 500,
+  "coord_method": {
+   "source": 17090,
+   "geocode_kakao_exact": 270,
+   "unresolved": 13
+  },
+  "coord_rate": 0.9993,
+  "source_coord_rate": 0.9837,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 0,
+  "dup_same_coord_5179": 11157,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_medical_staff": 17334,
+   "sz_beds": 1184,
+   "sz_inpatient_rooms": 1180,
+   "sz_floor_area_m2": 16806
+  }
+ },
+ "2025_01": {
+  "n_final": 18744,
+  "n_active_before_dedup": 18756,
+  "dedup_removed_exact": 12,
+  "flag_admin_end": 10,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 18744,
+  "transfer_adjusted_start": 201,
+  "by_subtype": {
+   "의원": 10151,
+   "치과의원": 4880,
+   "한의원": 3677,
+   "보건소": 20,
+   "보건지소": 13,
+   "조산원": 3
+  },
+  "by_current_status": {
+   "영업/정상": 17726,
+   "폐업": 814,
+   "제외/삭제/전출": 151,
+   "휴업": 43,
+   "취소/말소/만료/정지/중지": 10
+  },
+  "closed_nodate_substituted": 151,
+  "coord_method": {
+   "source": 18344,
+   "geocode_kakao_exact": 389,
+   "unresolved": 11
+  },
+  "coord_rate": 0.9994,
+  "source_coord_rate": 0.9787,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 6,
+  "dup_same_coord_5179": 12653,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_medical_staff": 18704,
+   "sz_beds": 1386,
+   "sz_inpatient_rooms": 1383,
+   "sz_floor_area_m2": 18311
+  }
+ },
+ "panel": {
+  "in_both": 14763,
+  "only_2020_01": 2610,
+  "only_2025_01": 3981
+ },
+ "official_comparison": {
+  "2025_01_vs_HIRA_20241231": {
+   "source": "raw/../의원/raw/hira_establishments_20241231.csv (data.go.kr 15051057 FILE_000000003181518)",
+   "note": "상급종합병원은 종합병원에 합산. 매칭 = 같은 구+정규화 기관명 또는 같은 도로명주소·건물번호+종별.",
+   "by_kind": {
+    "의원": {
+     "hira": 10059,
+     "ours": 10151,
+     "diff_ours_minus_hira": 92,
+     "ratio_ours_to_hira": 1.0091,
+     "ours_matched_in_hira_name_or_addr": 0.9926,
+     "hira_matched_in_ours_name_or_addr": 0.9936
+    },
+    "치과의원": {
+     "hira": 4862,
+     "ours": 4880,
+     "diff_ours_minus_hira": 18,
+     "ratio_ours_to_hira": 1.0037,
+     "ours_matched_in_hira_name_or_addr": 0.9918,
+     "hira_matched_in_ours_name_or_addr": 0.9934
+    },
+    "한의원": {
+     "hira": 3635,
+     "ours": 3677,
+     "diff_ours_minus_hira": 42,
+     "ratio_ours_to_hira": 1.0116,
+     "ours_matched_in_hira_name_or_addr": 0.9856,
+     "hira_matched_in_ours_name_or_addr": 0.9956
+    },
+    "보건소": {
+     "hira": 25,
+     "ours": 20,
+     "diff_ours_minus_hira": -5,
+     "ratio_ours_to_hira": 0.8,
+     "ours_matched_in_hira_name_or_addr": 1.0,
+     "hira_matched_in_ours_name_or_addr": 0.8
+    },
+    "보건지소": {
+     "hira": 11,
+     "ours": 13,
+     "diff_ours_minus_hira": 2,
+     "ratio_ours_to_hira": 1.1818,
+     "ours_matched_in_hira_name_or_addr": 0.8462,
+     "hira_matched_in_ours_name_or_addr": 1.0
+    },
+    "조산원": {
+     "hira": 3,
+     "ours": 3,
+     "diff_ours_minus_hira": 0,
+     "ratio_ours_to_hira": 1.0,
+     "ours_matched_in_hira_name_or_addr": 1.0,
+     "hira_matched_in_ours_name_or_addr": 1.0
+    }
+   }
+  },
+  "2020_01_vs_HIRA_20211231_open_le_20191231": {
+   "source": "의원/raw/hira_establishments_20211231.csv (FILE_000000002512937)",
+   "note": "2021.12판 개설중 기관 중 개설일자≤2019-12-31 → 2020~2021 폐업기관이 빠진 하한값(역산 수는 이보다 커야 정상). 2021년 이후 주소 이전 기관은 주소 매칭 실패 가능.",
+   "by_kind": {
+    "의원": {
+     "hira": 8108,
+     "ours": 8769,
+     "diff_ours_minus_hira": 661,
+     "ratio_ours_to_hira": 1.0815,
+     "ours_matched_in_hira_name_or_addr": 0.952,
+     "hira_matched_in_ours_name_or_addr": 0.989
+    },
+    "치과의원": {
+     "hira": 4629,
+     "ours": 4865,
+     "diff_ours_minus_hira": 236,
+     "ratio_ours_to_hira": 1.051,
+     "ours_matched_in_hira_name_or_addr": 0.9496,
+     "hira_matched_in_ours_name_or_addr": 0.9855
+    },
+    "한의원": {
+     "hira": 3353,
+     "ours": 3706,
+     "diff_ours_minus_hira": 353,
+     "ratio_ours_to_hira": 1.1053,
+     "ours_matched_in_hira_name_or_addr": 0.9069,
+     "hira_matched_in_ours_name_or_addr": 0.989
+    },
+    "보건소": {
+     "hira": 25,
+     "ours": 20,
+     "diff_ours_minus_hira": -5,
+     "ratio_ours_to_hira": 0.8,
+     "ours_matched_in_hira_name_or_addr": 1.0,
+     "hira_matched_in_ours_name_or_addr": 0.8
+    },
+    "보건지소": {
+     "hira": 8,
+     "ours": 10,
+     "diff_ours_minus_hira": 2,
+     "ratio_ours_to_hira": 1.25,
+     "ours_matched_in_hira_name_or_addr": 0.8,
+     "hira_matched_in_ours_name_or_addr": 1.0
+    },
+    "조산원": {
+     "hira": 3,
+     "ours": 3,
+     "diff_ours_minus_hira": 0,
+     "ratio_ours_to_hira": 1.0,
+     "ours_matched_in_hira_name_or_addr": 1.0,
+     "hira_matched_in_ours_name_or_addr": 1.0
+    }
+   }
+  }
+ },
+ "notes": [
+  "sz_*·dept_current_* 는 현재(원천 기준일) 기록값이며 과거 시점 값이 아님.",
+  "보건소·보건지소·조산원은 subtype 으로 분리(분석 시 의원 3종만 사용 권장)."
+ ],
+ "build_seconds": 9.4
+}

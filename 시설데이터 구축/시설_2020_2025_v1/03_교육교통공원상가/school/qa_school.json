@@ -1,0 +1,531 @@
+{
+ "type": "school",
+ "notes": [
+  "명부 A: 서울교육통계 학교별 일람표(교육기본통계, 조사기준일 2019-10-01 / 2024-10-01). 폐교·휴교·유치원 제외. 방송통신중·고는 하반기 조사 대상이 아니라 없음.",
+  "학급수 기준: 2019하는 인가학급, 2021년부터 편성학급(2024하). sz_class_basis 열에 기록 — 두 시점 학급수 직접 비교 주의.",
+  "좌표: 학구도안내서비스 초중고 학교 위치(운영 본교만, 특수·각종 미수록)를 학교명(공백·가운뎃점 제거)+자치구로 매칭 → source. 미매칭은 주소 지오코딩(카카오→브이월드, 번지 일치만).",
+  "2019하 일람표는 주소가 없어 2020상(2020-04-01) 일람표의 주소를 학교명+행정구로 연결(없으면 2024하 주소)."
+ ],
+ "2020_01": {
+  "rows": 1357,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 1306,
+   "geocode_kakao_exact": 51
+  },
+  "inside_seoul": 1357,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "A": 1357
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "초등학교|공립": 562,
+   "중학교|공립": 274,
+   "고등학교|사립": 200,
+   "고등학교|공립": 117,
+   "중학교|사립": 109,
+   "초등학교|사립": 39,
+   "특수학교|사립": 18,
+   "특수학교|공립": 10,
+   "각종학교|공립": 8,
+   "각종학교|사립": 6,
+   "고등학교|국립": 3,
+   "특수학교|국립": 3,
+   "중학교|국립": 2,
+   "초등학교|국립": 2,
+   "고등기술학교|사립": 2,
+   "각종학교|국립": 2
+  },
+  "dup_exact_xy": 115,
+  "source_rows_levels": 1363,
+  "source_status": {
+   "기존(원)교": 1355,
+   "휴(원)교": 5,
+   "신설(원)교": 2,
+   "폐(원)교": 1
+  },
+  "final": 1357,
+  "pos_rows_seoul": 1308,
+  "matched_to_zone_pos": 1306,
+  "zone_pos_unmatched": [
+   "B000011324",
+   "B000011352"
+  ],
+  "by_level": {
+   "초등학교": 603,
+   "중학교": 385,
+   "고등학교": 320,
+   "특수학교": 31,
+   "각종학교": 16,
+   "고등기술학교": 2
+  },
+  "unresolved_names": [],
+  "geocoded_names": [
+   "선정국제관광고등학교",
+   "영락의료과학고등학교",
+   "서울농학교",
+   "서울맹학교",
+   "수도사랑의학교",
+   "서울경운학교",
+   "서울광진학교",
+   "서울다원학교",
+   "서울애화학교",
+   "서울정인학교",
+   "한빛맹학교",
+   "서울효정학교",
+   "서울도솔학교",
+   "서울동천학교",
+   "서울정민학교",
+   "은평대영학교",
+   "연세대학교재활학교",
+   "한국우진학교",
+   "교남학교",
+   "서울정진학교",
+   "성베드로학교",
+   "누리학교",
+   "서울삼성학교",
+   "서울새롬학교",
+   "서울정문학교",
+   "다니엘학교",
+   "서울나래학교",
+   "밀알학교",
+   "서울정애학교",
+   "광성하늘빛학교",
+   "한국육영학교",
+   "주몽학교",
+   "한국구화학교",
+   "청암예술학교",
+   "한국제과학교",
+   "지구촌학교",
+   "예원학교",
+   "선화예술중학교",
+   "한국삼육중학교",
+   "국립전통예술중학교",
+   "국립국악중학교",
+   "서울다솜관광고등학교",
+   "오디세이학교",
+   "종로산업정보학교",
+   "서울실용음악고등학교",
+   "여명학교",
+   "은평문화예술정보학교",
+   "아현산업정보학교",
+   "금천문화예술정보학교",
+   "서울산업정보학교",
+   "서초문화예술정보학교"
+  ],
+  "sum_students": 868674,
+  "sum_classes": 38028,
+  "sum_teachers": 69528,
+  "official_count_sen_excl_closed": 1362,
+  "excluded_suspended_휴교": 5
+ },
+ "2025_01": {
+  "rows": 1359,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 1305,
+   "geocode_kakao_exact": 54
+  },
+  "inside_seoul": 1359,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "A": 1359
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "초등학교|공립": 565,
+   "중학교|공립": 276,
+   "고등학교|사립": 200,
+   "고등학교|공립": 115,
+   "중학교|사립": 109,
+   "초등학교|사립": 38,
+   "특수학교|사립": 18,
+   "특수학교|공립": 11,
+   "각종학교|공립": 8,
+   "각종학교|사립": 6,
+   "고등학교|국립": 3,
+   "특수학교|국립": 3,
+   "초등학교|국립": 2,
+   "각종학교|국립": 2,
+   "중학교|국립": 2,
+   "고등기술학교|사립": 1
+  },
+  "dup_exact_xy": 125,
+  "source_rows_levels": 1367,
+  "source_status": {
+   "기존(원)교": 1359,
+   "휴(원)교": 7,
+   "폐(원)교": 1
+  },
+  "final": 1359,
+  "pos_rows_seoul": 1309,
+  "matched_to_zone_pos": 1305,
+  "zone_pos_unmatched": [
+   "B000011304",
+   "B000011319",
+   "B000011353",
+   "B000011803"
+  ],
+  "by_level": {
+   "초등학교": 605,
+   "중학교": 387,
+   "고등학교": 318,
+   "특수학교": 32,
+   "각종학교": 16,
+   "고등기술학교": 1
+  },
+  "unresolved_names": [],
+  "geocoded_names": [
+   "덕수고등학교",
+   "서울웹툰애니메이션고등학교",
+   "서울반도체고등학교",
+   "미림마이스터고등학교",
+   "염광메디텍고등학교",
+   "서울맹학교",
+   "서울효정학교",
+   "서울농학교",
+   "서울삼성학교",
+   "서울애화학교",
+   "한국구화학교",
+   "한국우진학교",
+   "서울정문학교",
+   "서울정진학교",
+   "서울정애학교",
+   "서울정민학교",
+   "서울정인학교",
+   "서울다원학교",
+   "서울경운학교",
+   "서울광진학교",
+   "교남학교",
+   "누리학교",
+   "다니엘학교",
+   "밀알학교",
+   "서울새롬학교",
+   "서울동천학교",
+   "한빛맹학교",
+   "성베드로학교",
+   "은평대영학교",
+   "주몽학교",
+   "한국육영학교",
+   "수도사랑의학교",
+   "서울도솔학교",
+   "서울나래학교",
+   "연세대학교재활학교",
+   "광성하늘빛학교",
+   "서울서진학교",
+   "한국제과학교",
+   "서울산업정보학교",
+   "아현산업정보학교",
+   "종로산업정보학교",
+   "서울다솜관광고등학교",
+   "서울실용음악고등학교",
+   "서초문화예술정보학교",
+   "은평문화예술정보학교",
+   "금천문화예술정보학교",
+   "오디세이학교",
+   "지구촌학교",
+   "여명학교",
+   "국립전통예술중학교",
+   "한국삼육중학교",
+   "예원학교",
+   "국립국악중학교",
+   "선화예술중학교"
+  ],
+  "sum_students": 768839,
+  "sum_classes": 35525,
+  "sum_teachers": 66224,
+  "official_count_sen_excl_closed": 1366,
+  "excluded_suspended_휴교": 7
+ },
+ "panel": {
+  "common_ids": 1336,
+  "only_2020": 21,
+  "only_2025": 23
+ },
+ "zones": {
+  "es_2020_01": {
+   "polygons": 616,
+   "by_gb": {
+    "0": 564,
+    "1": 52
+   },
+   "base_dt": [
+    "2019-09-16"
+   ]
+  },
+  "es_2025_01": {
+   "polygons": 622,
+   "by_gb": {
+    "0": 564,
+    "1": 58
+   },
+   "base_dt": [
+    "2024-09-20"
+   ]
+  },
+  "ms_2020_01": {
+   "polygons": 46,
+   "by_gb": {
+    "0": 46
+   },
+   "base_dt": [
+    "2019-09-16"
+   ]
+  },
+  "ms_2025_01": {
+   "polygons": 46,
+   "by_gb": {
+    "0": 46
+   },
+   "base_dt": [
+    "2024-09-20"
+   ]
+  },
+  "link_2020_01": 1261,
+  "link_2025_01": 1275
+ },
+ "generated_utc": "2026-09-23T23:31:35Z",
+ "raw_files": [
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2837,
+    "atchFileId": "FILE_000000100002303",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:02Z",
+   "http_status": 200,
+   "bytes": 34807309,
+   "sha256": "64a3d1f59c6e673e8628f47a9e12ca4ca047f3ae1a0d7af00bade0dfbb03fb04",
+   "reference_date": "2019-09-16",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_es_20190916.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2927,
+    "atchFileId": "FILE_000000100002703",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:12Z",
+   "http_status": 200,
+   "bytes": 35080173,
+   "sha256": "0bc1aed11b669fba629f271f896316544cce76554f79172f6b3c930792f55255",
+   "reference_date": "2024-09-20",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_es_20240920.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2832,
+    "atchFileId": "FILE_000000100002295",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:34Z",
+   "http_status": 200,
+   "bytes": 7512979,
+   "sha256": "b0872f7a02e32440409bac8a7b701fd543497d760effbe184611a79b9de11ead",
+   "reference_date": "2019-09-16",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_link_20190916.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2922,
+    "atchFileId": "FILE_000000100002702",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:36Z",
+   "http_status": 200,
+   "bytes": 213179,
+   "sha256": "e28b26f50d64b77571750f0fa1ade8a025026bd13973f27aef924759b66fbda1",
+   "reference_date": "2024-09-20",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_link_20240920.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2836,
+    "atchFileId": "FILE_000000100002299",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:22Z",
+   "http_status": 200,
+   "bytes": 22354171,
+   "sha256": "f31c812aab76c59b2fe03205d2ef8c4bff4b4c814abdfc1e92bcaefe93bddfbe",
+   "reference_date": "2019-09-16",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_ms_20190916.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2926,
+    "atchFileId": "FILE_000000100002698",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:28Z",
+   "http_status": 200,
+   "bytes": 22954680,
+   "sha256": "7d608bc9beec4166e2bc77cf4e529c658bb9359d887cbb1c380db6c7cccd0e43",
+   "reference_date": "2024-09-20",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_ms_20240920.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2838,
+    "atchFileId": "FILE_000000100002301",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:29:59Z",
+   "http_status": 200,
+   "bytes": 1179827,
+   "sha256": "194712092bc879cedf95da4007f90f2e5d5e59421aacaa9ec8bf1b0de8de05c0",
+   "reference_date": "2019-09-16",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_pos_20190916.zip"
+  },
+  {
+   "url": "https://schoolzone.emac.kr/publicData/publicDataFileDownload.do",
+   "method": "GET",
+   "params": {
+    "nttId": 2928,
+    "atchFileId": "FILE_000000100002699",
+    "fileSn": 0
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:30:01Z",
+   "http_status": 200,
+   "bytes": 685638,
+   "sha256": "b577d6c3be323dc70ab2b4bab8d4f2dbb752b0f982fed3abd3ed503c31ad8e24",
+   "reference_date": "2024-09-20",
+   "note": "학구도안내서비스 반기 배포본",
+   "file": "schoolzone_pos_20240920.zip"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/download",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "group": "202402211544170733",
+    "number": 35,
+    "filename": "하반기 학교교육통계 학교 현황_2019.xlsx"
+   },
+   "download_utc": "2026-09-23T23:29:58Z",
+   "http_status": 200,
+   "bytes": 273395,
+   "sha256": "3a26fa130fdd8b3f9316b53b580a3d1b4f699631f016206ef589d91743776acb",
+   "reference_date": "2019-10-01",
+   "note": "2019년 하반기 학교별 일람표(2019.10.1일 기준)",
+   "file": "sen_2019하_학교현황.xlsx"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/download",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "group": "202402211544410048",
+    "number": 206,
+    "filename": "2020년 상반기 학교별 일람표.xlsx"
+   },
+   "download_utc": "2026-09-23T23:29:58Z",
+   "http_status": 200,
+   "bytes": 1700232,
+   "sha256": "802bfa59b694ab3e933a43203e3f7ea41acc875fb9fa1aeffe12e08f444c5312",
+   "reference_date": "2020-04-01",
+   "note": "2020년 상반기 학교별 일람표(2020.4.1일 기준)",
+   "file": "sen_2020상_학교별일람표.xlsx"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/download",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "group": "202501130946010832",
+    "number": 183,
+    "filename": "2024년 하반기 교육통계 학교별 일람표.xlsx"
+   },
+   "download_utc": "2026-09-23T23:29:59Z",
+   "http_status": 200,
+   "bytes": 1436332,
+   "sha256": "18c6eb7f14cb43dd4e5dae3244d158befc476d3ffa331ab73f1fe2a8bff9ad8b",
+   "reference_date": "2024-10-01",
+   "note": "2024년 하반기 학교별 일람표(2024.10.1일 기준)",
+   "file": "sen_2024하_학교별일람표.xlsx"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/read",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "site_id": "public",
+    "board_group_idx": 7,
+    "board_idx": 106
+   },
+   "download_utc": "2026-09-23T23:29:59Z",
+   "http_status": 200,
+   "bytes": 1515,
+   "sha256": "ca4163f783ee723eeac33b7a201855e3d4264a2d0bd0c5fe50fe5a59f1147621",
+   "reference_date": "",
+   "note": "게시글 메타(attach_files)",
+   "file": "sen_board106.json"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/read",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "site_id": "public",
+    "board_group_idx": 7,
+    "board_idx": 47
+   },
+   "download_utc": "2026-09-23T23:29:58Z",
+   "http_status": 200,
+   "bytes": 1059,
+   "sha256": "bd36a08dfdc1c1427fc8a944fedd538e17d22a063b0e747bd58fde0b69817a75",
+   "reference_date": "",
+   "note": "게시글 메타(attach_files)",
+   "file": "sen_board47.json"
+  },
+  {
+   "url": "https://data.sen.go.kr/public/board/read",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "site_id": "public",
+    "board_group_idx": 7,
+    "board_idx": 48
+   },
+   "download_utc": "2026-09-23T23:29:58Z",
+   "http_status": 200,
+   "bytes": 1019,
+   "sha256": "89592d29eb2e8efcb53fcbb310ba6c9f0c1de8bc72c57ef959c8e3ad8d5e67c7",
+   "reference_date": "",
+   "note": "게시글 메타(attach_files)",
+   "file": "sen_board48.json"
+  }
+ ]
+}

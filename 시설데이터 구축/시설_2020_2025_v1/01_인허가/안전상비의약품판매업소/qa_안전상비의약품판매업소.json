@@ -1,0 +1,171 @@
+{
+ "facility_type": "안전상비의약품판매업소",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:47:20.608929+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "over_the_counter_medicine_stores_seoul_OA-16483.csv": {
+   "slug": "over_the_counter_medicine_stores",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16483",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "014d0f7e6c5e535c764662f6a19fb1bb7141fba676cfe1deee3a45ea2ff16728",
+   "bytes": 6624851,
+   "download_utc": "2026-09-23T14:00:17.445755+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 18054,
+   "status": {
+    "폐업": 10948,
+    "영업/정상": 6867,
+    "취소/말소/만료/정지/중지": 230,
+    "휴업": 9
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 3,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 2,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 1,
+    "2025_01": 3
+   },
+   "active": {
+    "2020_01": 7069,
+    "2025_01": 7169
+   },
+   "max_data_update": "2026-09-22 22:00:41",
+   "max_last_mod": "2026-09-21 13:47:11",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 0,
+  "groups": 0,
+  "adjusted_rows": 0,
+  "ambiguous_groups": 0,
+  "removed_from_active": {}
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 79,
+  "rows_needing": 92,
+  "rows_no_parsable_address": 0,
+  "accepted_rows": 84,
+  "accepted_addresses": 71,
+  "by_method": {
+   "geocode_kakao_exact": 84
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {},
+ "candidates_either_snapshot": 10453,
+ "2020_01": {
+  "n_final": 7069,
+  "n_active_before_dedup": 7069,
+  "dedup_removed_exact": 0,
+  "flag_admin_end": 114,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 7069,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "안전상비의약품판매업소": 7069
+  },
+  "by_current_status": {
+   "폐업": 3664,
+   "영업/정상": 3284,
+   "취소/말소/만료/정지/중지": 114,
+   "휴업": 7
+  },
+  "closed_nodate_substituted": 1,
+  "coord_method": {
+   "source": 7015,
+   "geocode_kakao_exact": 46,
+   "unresolved": 8
+  },
+  "coord_rate": 0.9989,
+  "source_coord_rate": 0.9924,
+  "outside_seoul": 0,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 6,
+  "dup_same_coord_5179": 327,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 2456
+  }
+ },
+ "2025_01": {
+  "n_final": 7169,
+  "n_active_before_dedup": 7169,
+  "dedup_removed_exact": 0,
+  "flag_admin_end": 47,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 7169,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "안전상비의약품판매업소": 7169
+  },
+  "by_current_status": {
+   "영업/정상": 6034,
+   "폐업": 1079,
+   "취소/말소/만료/정지/중지": 47,
+   "휴업": 9
+  },
+  "closed_nodate_substituted": 3,
+  "coord_method": {
+   "source": 7101,
+   "geocode_kakao_exact": 67,
+   "unresolved": 1
+  },
+  "coord_rate": 0.9999,
+  "source_coord_rate": 0.9905,
+  "outside_seoul": 0,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 12,
+  "dup_same_coord_5179": 338,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 2499
+  }
+ },
+ "panel": {
+  "in_both": 3785,
+  "only_2020_01": 3284,
+  "only_2025_01": 3384
+ },
+ "official_comparison": {
+  "status": "보건복지부 안전상비의약품 판매업소 현황 대조 미실시(원자료 미확보)"
+ },
+ "build_seconds": 3.7
+}

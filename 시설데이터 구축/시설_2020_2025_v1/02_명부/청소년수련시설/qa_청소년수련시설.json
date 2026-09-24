@@ -1,0 +1,107 @@
+{
+ "type": "청소년수련시설",
+ "grade": "C",
+ "note_grade": "연간 공식 명부(여성가족부 청소년수련시설 세부현황, 12.31 기준)",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "mogef_청소년수련시설_세부현황_20191231.xlsx",
+   "source_rows_seoul": 66,
+   "final_rows": 66,
+   "subtype_counts": {
+    "수련관": 32,
+    "문화의집": 19,
+    "특화시설": 8,
+    "유스호스텔": 4,
+    "수련원": 3
+   },
+   "geocoding": {
+    "rows": 66,
+    "coord_rows": 64,
+    "coord_rate": 0.9697,
+    "coord_method": {
+     "geocode_kakao_exact": 64,
+     "unresolved": 2
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 3,
+    "same_coord_rows": 7,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "총괄표_서울": {
+     "총계": 66,
+     "청소년수련관": 32,
+     "청소년문화의집": 19,
+     "청소년수련원": 3,
+     "청소년야영장": 0,
+     "유스호스텔": 4,
+     "청소년특화시설": 8
+    },
+    "total_official": 66,
+    "parsed": 66
+   }
+  },
+  "2025_01": {
+   "source_file": "mogef_청소년수련시설_세부현황_20241231.xlsx",
+   "source_rows_seoul": 76,
+   "final_rows": 76,
+   "subtype_counts": {
+    "수련관": 32,
+    "문화의집": 29,
+    "특화시설": 8,
+    "유스호스텔": 4,
+    "수련원": 3
+   },
+   "geocoding": {
+    "rows": 76,
+    "coord_rows": 76,
+    "coord_rate": 1.0,
+    "coord_method": {
+     "geocode_kakao_exact": 76
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 2,
+    "same_coord_rows": 5,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "총괄표_서울": {
+     "총계": 76,
+     "청소년수련관": 32,
+     "청소년문화의집": 29,
+     "청소년수련원": 3,
+     "청소년야영장": 0,
+     "유스호스텔": 4,
+     "청소년특화시설": 8
+    },
+    "total_official": 76,
+    "parsed": 76
+   }
+  }
+ },
+ "facility_id_rule": "mb.assign_ids(0 명칭+주소키+subtype, 1 명칭+주소키, 2 명칭 유일, 3 주소키+subtype 유일, 4 좌표 50m+명칭 앞4자)",
+ "id_matching": {
+  "matched": 64,
+  "by_rule": {
+   "name+addr+subtype": 46,
+   "addr+subtype": 15,
+   "name": 3
+  },
+  "only_2020": 2,
+  "only_2025": 12
+ }
+}

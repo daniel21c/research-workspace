@@ -1,0 +1,108 @@
+{
+ "2020_01": {
+  "이용시설": {
+   "gu_compare": {
+    "label": "2020_01_이용시설",
+    "built_total": 510,
+    "official_total": 510,
+    "diff_pct": 0.0,
+    "corr": 1.0,
+    "max_abs_diff": 0,
+    "max_abs_gu": "종로구"
+   },
+   "coord_rate_before": 0.9686,
+   "coord_rate_after": 0.9686,
+   "located_outside_seoul": 0,
+   "coord_rate_after_seoul_located": 0.9686,
+   "min_gu_rate": 0.8636,
+   "min_gu": "성북구",
+   "gu_below_85": [],
+   "filled": 0,
+   "still_missing": 16,
+   "outside_seoul": 0,
+   "gu_col_missing": 0,
+   "gu_col_not_seoul": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "입소시설": {
+   "gu_compare": {
+    "label": "2020_01_입소시설",
+    "built_total": 535,
+    "official_total": 535,
+    "diff_pct": 0.0,
+    "corr": 0.9998,
+    "max_abs_diff": 1,
+    "max_abs_gu": "구로구"
+   },
+   "coord_rate_before": 0.9514,
+   "coord_rate_after": 0.9589,
+   "located_outside_seoul": 1,
+   "coord_rate_after_seoul_located": 0.9607,
+   "min_gu_rate": 0.8529,
+   "min_gu": "노원구",
+   "gu_below_85": [],
+   "filled": 4,
+   "still_missing": 22,
+   "outside_seoul": 0,
+   "gu_col_missing": 0,
+   "gu_col_not_seoul": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  }
+ },
+ "2025_01": {
+  "이용시설": {
+   "gu_compare": {
+    "label": "2025_01_이용시설",
+    "built_total": 582,
+    "official_total": 582,
+    "diff_pct": 0.0,
+    "corr": 1.0,
+    "max_abs_diff": 0,
+    "max_abs_gu": "종로구"
+   },
+   "coord_rate_before": 0.9948,
+   "coord_rate_after": 0.9983,
+   "located_outside_seoul": 0,
+   "coord_rate_after_seoul_located": 0.9983,
+   "min_gu_rate": 0.9565,
+   "min_gu": "성동구",
+   "gu_below_85": [],
+   "filled": 2,
+   "still_missing": 1,
+   "outside_seoul": 0,
+   "gu_col_missing": 0,
+   "gu_col_not_seoul": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  },
+  "입소시설": {
+   "gu_compare": {
+    "label": "2025_01_입소시설",
+    "built_total": 499,
+    "official_total": 499,
+    "diff_pct": 0.0,
+    "corr": 1.0,
+    "max_abs_diff": 0,
+    "max_abs_gu": "종로구"
+   },
+   "coord_rate_before": 0.996,
+   "coord_rate_after": 0.998,
+   "located_outside_seoul": 5,
+   "coord_rate_after_seoul_located": 0.998,
+   "min_gu_rate": 0.75,
+   "min_gu": "마포구",
+   "gu_below_85": [
+    "마포구"
+   ],
+   "filled": 1,
+   "still_missing": 1,
+   "outside_seoul": 5,
+   "gu_col_missing": 0,
+   "gu_col_not_seoul": 0,
+   "gu_col_vs_addr_mismatch": 0,
+   "gu_col_vs_point_mismatch": 0
+  }
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "type": "fire_station",
+ "notes": [
+  "소방서·119안전센터·구조대 2020_01 / 2025_01 — 서울시 소방서 안전센터 구조대 위치정보(OA-21072) 연도판(C)\n2020_01: _2020판, 2025_01: _2024판(민감도: _2025판 행수 qa 기록). 연도판은 기준월 미표기(변경 시 업로드) → reference_month_delta 미상.\n좌표 X/Y는 EPSG:5186(GRS80 중부원점, 가산 600000) — 서울 경계 포함 여부로 검증.\nfacility_subtype: 이름으로 분류(…소방서 / …119안전센터 / …구조대 / 기타)."
+ ],
+ "2020_01": {
+  "rows": 178,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 178
+  },
+  "inside_seoul": 178,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "C": 178
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "119안전센터": 120,
+   "구조대": 32,
+   "소방서": 24,
+   "기타(본부·현장대응단 등)": 2
+  },
+  "dup_exact_xy": 0,
+  "source_rows": 178
+ },
+ "2025_01": {
+  "rows": 180,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 180
+  },
+  "inside_seoul": 180,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "C": 180
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "119안전센터": 120,
+   "구조대": 33,
+   "소방서": 25,
+   "기타(본부·현장대응단 등)": 2
+  },
+  "dup_exact_xy": 0,
+  "source_rows": 180
+ },
+ "sensitivity_2025_release_rows": 180,
+ "panel": {
+  "common_ids": 176,
+  "only_2020": [
+   "FIRE_1119105",
+   "FIRE_1119106"
+  ],
+  "only_2025": [
+   "FIRE_1128000",
+   "FIRE_1128102",
+   "FIRE_1128401",
+   "FIRE_1128402"
+  ]
+ },
+ "official_compare": "서울 경찰·소방관서 통계(data.go.kr 15046592) 대조 미실시(보류)",
+ "generated_utc": "2026-09-23T23:44:31Z",
+ "raw_files": [
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-21072",
+    "seqNo": "",
+    "seq": "2",
+    "infSeq": "3"
+   },
+   "download_utc": "2026-09-23T23:44:28Z",
+   "http_status": 200,
+   "bytes": 21121,
+   "sha256": "2913094c8eb7e17c7d62531af71f45dd75873e7cd95cd491bff8f5642665cad7",
+   "reference_date": "2020년판(월 미표기)",
+   "note": "",
+   "file": "OA-21072_소방위치_2020.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-21072",
+    "seqNo": "",
+    "seq": "4",
+    "infSeq": "3"
+   },
+   "download_utc": "2026-09-23T23:44:28Z",
+   "http_status": 200,
+   "bytes": 21235,
+   "sha256": "c63eafd6bb4f79db84cd59a9fdcaace4d0e62cb20a109dc13a95f89646ca01fe",
+   "reference_date": "2024년판(월 미표기)",
+   "note": "",
+   "file": "OA-21072_소방위치_2024.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-21072",
+    "seqNo": "",
+    "seq": "5",
+    "infSeq": "3"
+   },
+   "download_utc": "2026-09-23T23:44:28Z",
+   "http_status": 200,
+   "bytes": 20538,
+   "sha256": "b3a04c7c2e137ba53249b3c507ac293e1049b20533e00b65dae935a2c03158bc",
+   "reference_date": "2025년판(월 미표기)",
+   "note": "",
+   "file": "OA-21072_소방위치_2025.xlsx"
+  }
+ ]
+}

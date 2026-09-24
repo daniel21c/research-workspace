@@ -1,0 +1,530 @@
+{
+ "facility_type": "체육시설업",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:47:29.267553+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "fitness_centers_seoul_OA-16142.csv": {
+   "slug": "fitness_centers",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16142",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "4770fe0fa0b58b0e65471250349c8a571ac5f5c761c0c543e8e23875a2dffd26",
+   "bytes": 3004496,
+   "download_utc": "2026-09-23T14:00:37.165756+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 7332,
+   "status": {
+    "영업/정상": 4461,
+    "폐업": 2452,
+    "취소/말소/만료/정지/중지": 398,
+    "제외/삭제/전출": 14,
+    "휴업": 7
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 12,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 2,
+    "2025_01": 1
+   },
+   "substituted": {
+    "2020_01": 2,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 2661,
+    "2025_01": 4062
+   },
+   "max_data_update": "2026-09-22 22:56:06",
+   "max_last_mod": "2026-09-21 19:00:00",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "martial_arts_dojo_seoul_OA-16141.csv": {
+   "slug": "martial_arts_dojo",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16141",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "8400444971dd7e603703d97855b023346e0e9420a1fc3de078310842a6a35111",
+   "bytes": 2291581,
+   "download_utc": "2026-09-23T14:00:37.061756+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 5721,
+   "status": {
+    "영업/정상": 2650,
+    "폐업": 2606,
+    "취소/말소/만료/정지/중지": 443,
+    "제외/삭제/전출": 16,
+    "휴업": 6
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 13,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 1,
+    "2025_01": 1
+   },
+   "substituted": {
+    "2020_01": 2,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 2552,
+    "2025_01": 2578
+   },
+   "max_data_update": "2026-09-22 22:25:55",
+   "max_last_mod": "2026-09-21 18:14:05",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "swimming_pools_seoul_OA-16137.csv": {
+   "slug": "swimming_pools",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16137",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "875354d9f90ea766cf9f2f5a05e357e823185bac60cbdaa826d237bc6a403956",
+   "bytes": 105460,
+   "download_utc": "2026-09-23T14:00:36.023756+00:00",
+   "reference_date": "2026-09-15",
+   "rows": 264,
+   "status": {
+    "영업/정상": 146,
+    "폐업": 104,
+    "취소/말소/만료/정지/중지": 12,
+    "휴업": 2
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 0,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 137,
+    "2025_01": 141
+   },
+   "max_data_update": "2026-09-15 22:25:00",
+   "max_last_mod": "2026-09-14 17:50:41",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "golf_practice_ranges_seoul_OA-16131.csv": {
+   "slug": "golf_practice_ranges",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16131",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "a5de972e504a1f725d0987e8464fbf6cc3fef14a8016cb3e791c3686a20b5873",
+   "bytes": 1455285,
+   "download_utc": "2026-09-23T14:00:34.835756+00:00",
+   "reference_date": "2026-09-18",
+   "rows": 3618,
+   "status": {
+    "폐업": 1886,
+    "영업/정상": 1390,
+    "취소/말소/만료/정지/중지": 331,
+    "휴업": 11
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 26,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 3,
+    "2025_01": 1
+   },
+   "substituted": {
+    "2020_01": 9,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 2009,
+    "2025_01": 1533
+   },
+   "max_data_update": "2026-09-18 22:54:01",
+   "max_last_mod": "2026-09-17 16:38:14",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "billiard_halls_seoul_OA-16133.csv": {
+   "slug": "billiard_halls",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16133",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "4b3c0a4983d8bd9199802c8847561e92c9c46cd515a00e11cc05cc71d06bbe08",
+   "bytes": 5269014,
+   "download_utc": "2026-09-23T14:00:36.178756+00:00",
+   "reference_date": "2026-09-18",
+   "rows": 14038,
+   "status": {
+    "폐업": 10038,
+    "영업/정상": 2606,
+    "취소/말소/만료/정지/중지": 1382,
+    "휴업": 7,
+    "제외/삭제/전출": 5
+   },
+   "lic_unknown": 1,
+   "lic_dummy_1900_0001": 1,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 30,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 1,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 4308,
+    "2025_01": 2737
+   },
+   "max_data_update": "2026-09-18 22:27:49",
+   "max_last_mod": "2026-09-17 15:03:22",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "comprehensive_sports_facilities_seoul_OA-16138.csv": {
+   "slug": "comprehensive_sports_facilities",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16138",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "27aa292fe1eef9904035cae6b8796945bcce13bfe2bad30c8b379650651461e3",
+   "bytes": 81073,
+   "download_utc": "2026-09-23T14:00:36.340756+00:00",
+   "reference_date": "2026-09-17",
+   "rows": 225,
+   "status": {
+    "폐업": 106,
+    "영업/정상": 105,
+    "취소/말소/만료/정지/중지": 11,
+    "휴업": 3
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 5,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 1
+   },
+   "substituted": {
+    "2020_01": 1,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 110,
+    "2025_01": 109
+   },
+   "max_data_update": "2026-09-17 22:25:21",
+   "max_last_mod": "2026-09-16 09:21:17",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  },
+  "ice_rinks_seoul_OA-16136.csv": {
+   "slug": "ice_rinks",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16136",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "71081701b03b79d6bfda6568bd5877ed446cd3b5014889387805d8122d3faa00",
+   "bytes": 29681,
+   "download_utc": "2026-09-23T14:00:35.866756+00:00",
+   "reference_date": "2026-07-31",
+   "rows": 75,
+   "status": {
+    "폐업": 50,
+    "영업/정상": 24,
+    "취소/말소/만료/정지/중지": 1
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 0,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 18,
+    "2025_01": 23
+   },
+   "max_data_update": "2026-07-31 22:24:46",
+   "max_last_mod": "2026-07-30 10:32:38",
+   "n_org_codes": 17,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 22,
+  "groups": 9,
+  "adjusted_rows": 9,
+  "ambiguous_groups": 0,
+  "removed_from_active": {
+   "2020_01": 5,
+   "2025_01": 5
+  }
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 214,
+  "rows_needing": 266,
+  "rows_no_parsable_address": 13,
+  "accepted_rows": 109,
+  "accepted_addresses": 76,
+  "by_method": {
+   "geocode_kakao_exact": 108,
+   "geocode_vworld_exact": 1
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {
+  "billiard_halls|2020-02-07": 38,
+  "billiard_halls|2020-06-01": 83,
+  "billiard_halls|2020-07-22": 60,
+  "billiard_halls|2020-11-06": 63,
+  "billiard_halls|2021-01-08": 24,
+  "billiard_halls|2021-07-02": 91,
+  "billiard_halls|2021-12-15": 77,
+  "billiard_halls|2022-06-27": 39,
+  "billiard_halls|2023-03-23": 23,
+  "billiard_halls|2023-03-29": 20,
+  "billiard_halls|2023-03-30": 30,
+  "billiard_halls|2024-12-26": 36,
+  "billiard_halls|2025-07-25": 47,
+  "fitness_centers|2021-01-08": 25,
+  "fitness_centers|2021-12-15": 30,
+  "fitness_centers|2023-07-07": 31,
+  "golf_practice_ranges|2021-01-08": 31,
+  "golf_practice_ranges|2021-12-15": 35,
+  "martial_arts_dojo|2020-02-07": 23,
+  "martial_arts_dojo|2020-06-18": 22,
+  "martial_arts_dojo|2020-07-22": 23,
+  "martial_arts_dojo|2021-01-08": 21,
+  "martial_arts_dojo|2021-12-15": 29,
+  "martial_arts_dojo|2025-07-25": 22
+ },
+ "candidates_either_snapshot": 14917,
+ "2020_01": {
+  "n_final": 11787,
+  "n_active_before_dedup": 11790,
+  "dedup_removed_exact": 3,
+  "flag_admin_end": 1494,
+  "flag_bulk_admin_end": 919,
+  "n_final_excl_bulk_admin_end": 10868,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "당구장": 4306,
+   "체력단련장": 2659,
+   "체육도장": 2548,
+   "골프연습장": 2009,
+   "수영장": 137,
+   "종합체육시설": 110,
+   "빙상장": 18
+  },
+  "by_current_status": {
+   "영업/정상": 7437,
+   "폐업": 2810,
+   "취소/말소/만료/정지/중지": 1494,
+   "휴업": 28,
+   "제외/삭제/전출": 18
+  },
+  "closed_nodate_substituted": 14,
+  "coord_method": {
+   "source": 11554,
+   "unresolved": 157,
+   "geocode_kakao_exact": 75,
+   "geocode_vworld_exact": 1
+  },
+  "coord_rate": 0.9867,
+  "source_coord_rate": 0.9802,
+  "outside_seoul": 2,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 168,
+  "dup_same_coord_5179": 3943,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   78,
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 2067,
+   "sz_building_floor_area_m2": 3769,
+   "sz_instructors": 2285,
+   "sz_members": 88
+  }
+ },
+ "2025_01": {
+  "n_final": 11176,
+  "n_active_before_dedup": 11178,
+  "dedup_removed_exact": 2,
+  "flag_admin_end": 167,
+  "flag_bulk_admin_end": 69,
+  "n_final_excl_bulk_admin_end": 11107,
+  "transfer_adjusted_start": 4,
+  "by_subtype": {
+   "체력단련장": 4060,
+   "당구장": 2737,
+   "체육도장": 2573,
+   "골프연습장": 1533,
+   "수영장": 141,
+   "종합체육시설": 109,
+   "빙상장": 23
+  },
+  "by_current_status": {
+   "영업/정상": 10341,
+   "폐업": 631,
+   "취소/말소/만료/정지/중지": 167,
+   "휴업": 32,
+   "제외/삭제/전출": 5
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 11034,
+   "geocode_kakao_exact": 89,
+   "unresolved": 52,
+   "geocode_vworld_exact": 1
+  },
+  "coord_rate": 0.9953,
+  "source_coord_rate": 0.9873,
+  "outside_seoul": 0,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 120,
+  "dup_same_coord_5179": 3547,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   18,
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 3566,
+   "sz_building_floor_area_m2": 3935,
+   "sz_instructors": 3438,
+   "sz_members": 68
+  }
+ },
+ "panel": {
+  "in_both": 8054,
+  "only_2020_01": 3733,
+  "only_2025_01": 3122
+ },
+ "official_comparison": {
+  "status": "공식 집계 대조원 없음(미대조)"
+ },
+ "notes": [
+  "sz_area_m2(소재지면적)는 체력단련장 원천에만 있음. 규모는 현재 기록값.",
+  "체육도장 업태(태권도·유도 등)는 attr_business_type."
+ ],
+ "build_seconds": 7.2
+}

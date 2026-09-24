@@ -1,0 +1,66 @@
+{
+ "facility": "일반음식점",
+ "scopes": {
+  "전체": {
+   "2019": {
+    "built": 122137,
+    "official": 121975,
+    "diff_pct": 0.13,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9986,
+    "gu_max_abs_diff_pct": 13.87,
+    "gu_max_abs_diff_gu": "은평구",
+    "gu_median_abs_diff_pct": 0.97,
+    "gu_n_within_5pct": 24,
+    "gu_n_within_10pct": 24,
+    "scope_coord_rate": 0.9903,
+    "scope_min_gu_coord_rate": 0.9559,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 124255,
+    "official": 121853,
+    "diff_pct": 1.97,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9978,
+    "gu_max_abs_diff_pct": 8.22,
+    "gu_max_abs_diff_gu": "강남구",
+    "gu_median_abs_diff_pct": 0.36,
+    "gu_n_within_5pct": 23,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9948,
+    "scope_min_gu_coord_rate": 0.9679,
+    "scope_n_gu_below_85": 0
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O110008_식품위생업현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 122137,
+   "coord_rate_inside_seoul": 0.9903,
+   "min_gu_coord_rate": 0.9559,
+   "min_gu": "종로구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 111691,
+    "geocode_11": 9263,
+    "unresolved": 1183
+   }
+  },
+  "2024": {
+   "n": 124255,
+   "coord_rate_inside_seoul": 0.9948,
+   "min_gu_coord_rate": 0.9679,
+   "min_gu": "종로구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 113254,
+    "geocode_11": 10353,
+    "unresolved": 648
+   }
+  }
+ }
+}

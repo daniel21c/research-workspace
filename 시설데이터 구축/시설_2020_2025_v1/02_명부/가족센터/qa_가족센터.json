@@ -1,0 +1,135 @@
+{
+ "type": "가족센터",
+ "grade": "A",
+ "note_grade": "기준일 배포본(2019-09-03 / 2025-01-01 현재)",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "datagokr_3077162_건강가정지원센터_20190903.csv",
+   "source_rows_seoul": 27,
+   "final_rows": 27,
+   "subtype_counts": {
+    "건강·다문화가족지원센터(통합)": 25,
+    "건강가정지원센터": 2
+   },
+   "geocoding": {
+    "rows": 27,
+    "coord_rows": 26,
+    "coord_rate": 0.963,
+    "coord_method": {
+     "geocode_kakao_exact": 26,
+     "unresolved": 1
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   }
+  },
+  "2025_01": {
+   "source_file": "mogef_가족센터_주소록_2025.hwp",
+   "source_rows_seoul": "주소록 서울 26개 자치구·광역 행 → 지점 분리 41행",
+   "official_seoul_family_centers": 26,
+   "main_site_rows": 26,
+   "site_rows": 41,
+   "skipped_annex_spaces": [
+    {
+     "gu": "관악구",
+     "label": "공동육아나눔터은천점",
+     "address": "서울시 관악구 은천로9 길20, 2층"
+    },
+    {
+     "gu": "광진구",
+     "label": "공동육아나눔터(구의)",
+     "address": "서울시 광진구 천호대로 136길 55 구의2동 복합청사 3층"
+    },
+    {
+     "gu": "광진구",
+     "label": "공동육아나눔터(자양)",
+     "address": "서울시 광진구 자양로 15길 60 평생할습센터 1층"
+    },
+    {
+     "gu": "서초구",
+     "label": "서초엄마힐링센터",
+     "address": "서울시 서초구 청계산로9길 70내곡 SH플라자 301-1호"
+    },
+    {
+     "gu": "성동구",
+     "label": "공동육아나눔터",
+     "address": "서울시 성동구 난계로6 아이사랑복합문화센터 2층"
+    },
+    {
+     "gu": "성동구",
+     "label": "교류소통공간",
+     "address": "서울시 성동구 행당로82 행당한진아파트 3층 다문화어린이작은책마루이음) 서울시 성동구 왕십리로24 나길10, 202호"
+    },
+    {
+     "gu": "송파구",
+     "label": "1인가구지원센터",
+     "address": "1) 서울시 송파구 양산로8길 11-10엘리트하우스 1층 2) 송파구 거마로 8길 20, 송파커뮤니티센터 3층"
+    },
+    {
+     "gu": "은평구",
+     "label": "공동육아나눔터2호점",
+     "address": "서울시 은평구 서오릉로114-16"
+    },
+    {
+     "gu": "은평구",
+     "label": "1인가구지원센터",
+     "address": "은평구 통일로767(대조동, 베르디움stay1) 101동 지하 1층 B15~B16호"
+    }
+   ],
+   "final_rows": 41,
+   "subtype_counts": {
+    "가족센터": 26,
+    "가족센터(지점)": 15
+   },
+   "geocoding": {
+    "rows": 41,
+    "coord_rows": 40,
+    "coord_rate": 0.9756,
+    "coord_method": {
+     "geocode_kakao_exact": 40,
+     "unresolved": 1
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   }
+  }
+ },
+ "facility_id_rule": "mb.assign_ids(명칭+주소키 등, subtype 대신 자치구 사용) 후, 매칭 안 된 2025 자치구 본점은 같은 자치구 2020 센터 id를 부여(같은 자치구 센터 = 같은 시설로 간주, 이전 여부는 주소로 확인 가능)",
+ "id_matching": {
+  "matched": 21,
+  "by_rule": {
+   "addr+subtype": 21
+  },
+  "only_2020": 6,
+  "only_2025": 20,
+  "reassigned_same_gu_main": 4
+ },
+ "official_check": {
+  "2025_01": {
+   "official_seoul_가족센터": 26,
+   "parsed_main_sites": 26
+  },
+  "2020_01": {
+   "parsed_rows": 27,
+   "note": "data.go.kr 파일 자체가 공식 명부(별도 시도 집계 없음). 서울 광역센터 포함 27행"
+  }
+ }
+}

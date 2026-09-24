@@ -1,0 +1,216 @@
+{
+ "facility_type": "일반음식점",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:49:28.135274+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "general_restaurants_seoul_OA-16094.csv": {
+   "slug": "general_restaurants",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16094",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "b4c88410eb36b48db42185f53e33747ed4ee39dd54908afeb6929251ac4dff62",
+   "bytes": 223593250,
+   "download_utc": "2026-09-23T14:12:30.238004+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 537978,
+   "status": {
+    "폐업": 417794,
+    "영업/정상": 120184
+   },
+   "lic_unknown": 3,
+   "lic_dummy_1900_0001": 3,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 27,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 122181,
+    "2025_01": 124272
+   },
+   "max_data_update": "2026-09-22 22:47:51",
+   "max_last_mod": "2026-09-21 18:12:20",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 0,
+  "groups": 0,
+  "adjusted_rows": 0,
+  "ambiguous_groups": 0,
+  "removed_from_active": {}
+ },
+ "geocoding": {
+  "enabled": false,
+  "attempted_addresses": 0
+ },
+ "bulk_admin_end_dates": {},
+ "candidates_either_snapshot": 169567,
+ "2020_01": {
+  "n_final": 122137,
+  "n_active_before_dedup": 122181,
+  "dedup_removed_exact": 44,
+  "flag_admin_end": 0,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 122137,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "한식": 53044,
+   "기타": 14820,
+   "호프/통닭": 11104,
+   "분식": 9671,
+   "경양식": 9004,
+   "일식": 5785,
+   "중국식": 4494,
+   "통닭(치킨)": 2930,
+   "정종/대포집/소주방": 2652,
+   "까페": 2636,
+   "식육(숯불구이)": 1241,
+   "외국음식전문점(인도,태국등)": 1022,
+   "패스트푸드": 841,
+   "횟집": 612,
+   "김밥(도시락)": 595,
+   "뷔페식": 542,
+   "감성주점": 237,
+   "탕류(보신용)": 186,
+   "라이브카페": 173,
+   "패밀리레스트랑": 121,
+   "출장조리": 108,
+   "냉면집": 103,
+   "전통찻집": 71,
+   "키즈카페": 68,
+   "복어취급": 54,
+   "업태미상": 9,
+   "이동조리": 8,
+   "커피숍": 2,
+   "기타 휴게음식점": 2,
+   "식품등 수입판매업": 1,
+   "일반조리판매": 1
+  },
+  "by_current_status": {
+   "영업/정상": 66774,
+   "폐업": 55363
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 111691,
+   "unresolved": 10446
+  },
+  "coord_rate": 0.9145,
+  "source_coord_rate": 0.9145,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 152,
+  "dup_same_coord_5179": 67357,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 121436,
+   "sz_facility_total_m2": 121773,
+   "sz_workers": 12420
+  }
+ },
+ "2025_01": {
+  "n_final": 124255,
+  "n_active_before_dedup": 124272,
+  "dedup_removed_exact": 17,
+  "flag_admin_end": 0,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 124255,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "한식": 52275,
+   "기타": 21349,
+   "호프/통닭": 9472,
+   "경양식": 9126,
+   "분식": 8115,
+   "일식": 6790,
+   "중국식": 4851,
+   "정종/대포집/소주방": 1935,
+   "외국음식전문점(인도,태국등)": 1924,
+   "통닭(치킨)": 1845,
+   "식육(숯불구이)": 1539,
+   "까페": 1503,
+   "횟집": 597,
+   "김밥(도시락)": 537,
+   "패스트푸드": 522,
+   "뷔페식": 466,
+   "감성주점": 373,
+   "냉면집": 232,
+   "패밀리레스트랑": 213,
+   "라이브카페": 198,
+   "탕류(보신용)": 146,
+   "출장조리": 102,
+   "복어취급": 51,
+   "전통찻집": 46,
+   "키즈카페": 38,
+   "업태미상": 5,
+   "이동조리": 3,
+   "커피숍": 2
+  },
+  "by_current_status": {
+   "영업/정상": 103170,
+   "폐업": 21085
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 113254,
+   "unresolved": 11001
+  },
+  "coord_rate": 0.9115,
+  "source_coord_rate": 0.9115,
+  "outside_seoul": 1,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 148,
+  "dup_same_coord_5179": 68828,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 123727,
+   "sz_facility_total_m2": 124001,
+   "sz_workers": 8943
+  }
+ },
+ "panel": {
+  "in_both": 76869,
+  "only_2020_01": 45268,
+  "only_2025_01": 47386
+ },
+ "official_comparison": {
+  "status": "공식 집계 대조원 없음(미대조)"
+ },
+ "notes": [
+  "facility_subtype=업태구분명. 대용량 업종이라 좌표 없는 행은 지오코딩하지 않고 unresolved 로 둠."
+ ],
+ "build_seconds": 48.4
+}

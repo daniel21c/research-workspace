@@ -1,0 +1,23 @@
+﻿facility_id,name,휴업시작일자_raw,휴업종료일자_raw,인허가일자_raw,폐업일자_raw,영업상태명_raw,excluded_in_2020_01,excluded_in_2025_01,spec_active_2020_01,spec_suspended_at_D_2020_01,spec_active_2025_01,spec_suspended_at_D_2025_01
+LIC-oil_retailers-3040000-1976304007301500007,대성산업(주) 구의주유소,2025-10-21,2026-10-21,1976-05-18,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3040000-1992304007301500021,강평주유소,,,1992-12-04,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3040000-1993304007301500028,에이치디현대오일뱅크(주) 직영 중곡현대주유소,2026-07-01,2026-12-31,1993-12-27,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3070000-1983307009901500001,에이치디현대오일뱅크(주)직영 고대셀프주유소,2026-07-01,2026-12-31,1983-12-10,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3090000-2009309010501500952,오복주유소,2026-05-07,2027-05-06,2009-01-30,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3110000-1992311008801500021,삼융주유소,2020-06-01,2023-12-31,1992-05-09,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3120000-2004312009301500014,지에스칼텍스(주)홍제동주유소,2026-07-01,2027-06-30,1975-03-15,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3140000-1992314007001500022,씨앤에스유통(주)양천드림주유소,2023-07-01,2024-07-01,1992-04-14,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3140000-1992314007001500024,SK에너지(주)경인주유소,2026-09-22,2027-09-21,1992-04-14,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3140000-1992314007001500027,주식회사 타이거오일 신정주유소,2017-09-06,2017-11-29,1992-12-03,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3140000-1997314007001500042,에이치디현대오일뱅크(주)직영 양천현대셀프주유소,2026-07-01,2027-07-01,1997-09-27,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3150000-2004315010001500960,지에스칼텍스(주)경인고속주유소,2026-04-27,2027-04-26,2004-10-12,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3160000-1973316007101500003,에이치디현대오일뱅크(주) 직영 구로셀프주유소,2026-07-01,2026-12-31,1973-09-28,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3160000-1985316007101500008,에이치디현대오일뱅크(주) 직영 신구로주유소,2026-07-01,2026-12-31,1985-08-26,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3160000-1986316007101500009,SK네트웍스(주) 고척주유소,2011-04-12,2011-06-11,1986-09-13,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3180000-1976318007601500014,씨앤에스유통(주) 한성주유소,2024-04-02,2024-05-31,1976-05-24,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3190000-1994319007201500003,지에스칼텍스(주) 대방주유소,2026-04-27,2027-04-26,1994-06-20,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3200000-1992320008001501815,(주)선진 문성주유소,2026-06-01,2026-12-30,1992-02-14,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3220000-2001322008301200013,지에스칼텍스(주)개포주유소,2026-01-01,2026-12-31,1984-10-15,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3220000-2002322008301500083,(주)은마석유 도매주유소,2026-01-01,2026-06-30,2002-07-10,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3240000-1999324007301500002,방아다리주유소,2025-03-24,2026-12-31,1999-05-28,,휴업,True,True,True,False,True,False
+LIC-oil_retailers-3240000-2001324007301500001,신월주유소,2026-07-01,2027-07-01,1976-05-03,,휴업,True,True,True,False,True,False

@@ -1,0 +1,35 @@
+{
+ "facility": "일반음식점",
+ "candidates_unique_facilities": 14921,
+ "accepted_unique_facilities": 13735,
+ "by_key_type": {
+  "key_road": 13364,
+  "key_parcel": 233,
+  "key_addr": 138
+ },
+ "by_method": {
+  "geocode_kakao_exact": 13731,
+  "geocode_vworld_exact": 4
+ },
+ "no_parsable_key": 11,
+ "2020_01": {
+  "n": 122137,
+  "coord_rate_before": 0.9145,
+  "coord_rate_after": 0.9903,
+  "inside_seoul_coord_rate_after": 0.9903,
+  "filled_rows": 9263,
+  "unresolved_after": 1183,
+  "outside_seoul": 1,
+  "gu_coord_mismatch_among_filled": 12
+ },
+ "2025_01": {
+  "n": 124255,
+  "coord_rate_before": 0.9115,
+  "coord_rate_after": 0.9948,
+  "inside_seoul_coord_rate_after": 0.9948,
+  "filled_rows": 10353,
+  "unresolved_after": 648,
+  "outside_seoul": 1,
+  "gu_coord_mismatch_among_filled": 16
+ }
+}

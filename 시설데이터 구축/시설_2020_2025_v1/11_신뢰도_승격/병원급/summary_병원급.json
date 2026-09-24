@@ -1,0 +1,57 @@
+{
+ "gu_2025": {
+  "r": 0.9993,
+  "max_abs_diff": 1,
+  "max_abs_pct": 10.0,
+  "n_gu": 25,
+  "total_ours": 548,
+  "total_off": 545,
+  "gu_within5pct": 24,
+  "gu_within_2": 25
+ },
+ "gu_2020_survivor": {
+  "r": 0.9994,
+  "max_abs_diff": 1,
+  "max_abs_pct": 9.1,
+  "n_gu": 25,
+  "total_ours": 493,
+  "total_off": 496,
+  "gu_within5pct": 23,
+  "gu_within_2": 25
+ },
+ "coverage": {
+  "2020": {
+   "coord_rate": 1.0,
+   "inside": 1.0,
+   "min_gu_coord_rate": 1.0
+  },
+  "2025": {
+   "coord_rate": 1.0,
+   "inside": 1.0,
+   "min_gu_coord_rate": 1.0
+  }
+ },
+ "n_surv_2020": 493,
+ "kind_2020_survivor": {
+  "ours_surv": {
+   "병원": 215,
+   "요양병원": 99,
+   "치과병원": 58,
+   "종합병원": 57,
+   "한방병원": 50,
+   "정신병원": 14
+  },
+  "hira21_open_le2019": {
+   "병원": 209,
+   "요양병원": 111,
+   "치과병원": 58,
+   "종합병원": 56,
+   "한방병원": 50,
+   "정신병원": 12
+  }
+ },
+ "flag_admin_end": {
+  "2020": 3,
+  "2025": 2
+ }
+}

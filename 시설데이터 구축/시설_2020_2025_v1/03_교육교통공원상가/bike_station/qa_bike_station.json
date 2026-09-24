@@ -1,0 +1,103 @@
+{
+ "type": "bike_station",
+ "notes": [
+  "공공자전거(따릉이) 대여소 2020_01 / 2025_01 — 서울시 공공자전거 대여소 정보(OA-13252)\n2020: 가장 이른 공개판(21.01.31 기준)에서 설치시기 ≤ 2019-12-31 행을 역산(B). 2020년 중 철거·이전된 대여소는 누락되고,\n      재설치로 설치시기가 갱신된 대여소(예: 304 광화문역 2번출구 앞 2021-01-26)도 누락될 수 있음.\n2025: 24.12월 기준판(A, 허용창 내).\nsz_racks = LCD+QR 거치대수(판 시점 값)."
+ ],
+ "2020_01": {
+  "rows": 1483,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 1483
+  },
+  "inside_seoul": 1481,
+  "outside_seoul": 2,
+  "no_coord": 0,
+  "grade": {
+   "B": 1483
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "LCD": 1480,
+   "QR": 3
+  },
+  "dup_exact_xy": 2,
+  "source_rows": 2154,
+  "installed_after_ref_excluded": 669,
+  "install_date_missing": 2,
+  "install_year_dist": {
+   "2015.0": 132,
+   "2016.0": 281,
+   "2017.0": 736,
+   "2018.0": 313,
+   "2019.0": 21,
+   "2020.0": 664,
+   "2021.0": 5
+  }
+ },
+ "2025_01": {
+  "rows": 2766,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 2766
+  },
+  "inside_seoul": 2762,
+  "outside_seoul": 4,
+  "no_coord": 0,
+  "grade": {
+   "A": 2766
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "QR": 1682,
+   "LCD": 1078,
+   "LCD,QR": 6
+  },
+  "dup_exact_xy": 0,
+  "source_rows": 2766
+ },
+ "panel": {
+  "common_ids": 1382,
+  "only_2020": 101,
+  "only_2025": 1384
+ },
+ "official_compare": "공식 연말 대여소 수 대조 미실시(보류) — 2019-12 대여이력(OA-15182 등)의 대여소 ID로 검증 권장",
+ "generated_utc": "2026-09-23T23:43:18Z",
+ "raw_files": [
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-13252",
+    "seqNo": "",
+    "seq": "11",
+    "infSeq": "2"
+   },
+   "download_utc": "2026-09-23T23:43:00Z",
+   "http_status": 200,
+   "bytes": 206960,
+   "sha256": "4adc277768ba0c4ddbf6eaa80784a48e3ed43a6e2d199b1e27e22416043314b5",
+   "reference_date": "2021-01-31",
+   "note": "",
+   "file": "OA-13252_대여소정보_210131.csv"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-13252",
+    "seqNo": "",
+    "seq": "21",
+    "infSeq": "2"
+   },
+   "download_utc": "2026-09-23T23:43:00Z",
+   "http_status": 200,
+   "bytes": 290390,
+   "sha256": "d6d50a6ba16bd26654e6dfe05b0c31316c94d7cde37f4d0501a40c6c58e1a650",
+   "reference_date": "2024-12월 기준(2025-01-16 게시)",
+   "note": "",
+   "file": "OA-13252_대여소정보_2412.xlsx"
+  }
+ ]
+}

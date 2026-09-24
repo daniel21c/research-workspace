@@ -1,0 +1,14 @@
+{
+ "n_geocoded_unique": 13735,
+ "n_with_same_address_source_rows": 7846,
+ "median_m": 10.8,
+ "p90_m": 124.7,
+ "share_within_50m": 0.7692,
+ "share_within_100m": 0.859,
+ "baseline_source_vs_source": {
+  "n": 110047,
+  "median_m": 0.0,
+  "p90_m": 0.0,
+  "share_within_50m": 0.9974
+ }
+}

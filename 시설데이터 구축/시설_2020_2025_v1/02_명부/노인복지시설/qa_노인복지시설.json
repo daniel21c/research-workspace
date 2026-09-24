@@ -1,0 +1,332 @@
+{
+ "type": "노인복지시설",
+ "grade": "C",
+ "note_grade": "연간 공식 명부(보건복지부 노인복지시설 현황, 12.31 기준)",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "mohw_노인복지시설현황_2020_통계본문.hwp",
+   "source_rows_seoul": 1441,
+   "official_table_total_rows": {
+    "양로시설": 12.0,
+    "노인공동생활가정": 3.0,
+    "노인복지주택": 11.0,
+    "노인요양시설": 205.0,
+    "노인요양공동생활가정": 304.0,
+    "노인복지관": 85.0,
+    "방문요양": 206.0,
+    "주야간보호": 395.0,
+    "단기보호": 30.0,
+    "방문목욕": 163.0,
+    "방문간호": 7.0,
+    "재가노인지원": 20.0
+   },
+   "book_serial_check": {
+    "노인요양공동생활가정": {
+     "max_serial": 304,
+     "duplicated_serials": [],
+     "missing_serials": [
+      207
+     ]
+    },
+    "노인요양시설": {
+     "max_serial": 205,
+     "duplicated_serials": [
+      175
+     ],
+     "missing_serials": []
+    }
+   },
+   "book_serial_note": "책자 일련번호 중복·누락은 원본 표기 그대로(행은 모두 유지). 합계 개소와 행수 차이의 원인.",
+   "final_rows": 1441,
+   "subtype_counts": {
+    "주야간보호": 395,
+    "노인요양공동생활가정": 303,
+    "노인요양시설": 206,
+    "방문요양": 206,
+    "방문목욕": 163,
+    "노인복지관": 85,
+    "단기보호": 30,
+    "재가노인지원": 20,
+    "양로시설": 12,
+    "노인복지주택": 11,
+    "방문간호": 7,
+    "노인공동생활가정": 3
+   },
+   "geocoding": {
+    "rows": 1441,
+    "coord_rows": 1377,
+    "coord_rate": 0.9556,
+    "coord_method": {
+     "geocode_kakao_exact": 1377,
+     "unresolved": 64
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 179,
+    "norm_dup_name_addr": 244,
+    "norm_dup_name_addr_same_subtype": 6,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 367,
+    "same_coord_rows": 917,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "노인공동생활가정": 1.0,
+    "노인복지관": 0.9647,
+    "노인복지주택": 1.0,
+    "노인요양공동생활가정": 0.9472,
+    "노인요양시설": 0.9563,
+    "단기보호": 0.9667,
+    "방문간호": 1.0,
+    "방문목욕": 0.9387,
+    "방문요양": 0.9515,
+    "양로시설": 0.9167,
+    "재가노인지원": 0.9,
+    "주야간보호": 0.9696
+   },
+   "official_check": {
+    "양로시설": {
+     "book_table_total": 12.0,
+     "parsed": 12,
+     "diff": 0.0
+    },
+    "노인공동생활가정": {
+     "book_table_total": 3.0,
+     "parsed": 3,
+     "diff": 0.0
+    },
+    "노인복지주택": {
+     "book_table_total": 11.0,
+     "parsed": 11,
+     "diff": 0.0
+    },
+    "노인요양시설": {
+     "book_table_total": 205.0,
+     "parsed": 206,
+     "diff": 1.0
+    },
+    "노인요양공동생활가정": {
+     "book_table_total": 304.0,
+     "parsed": 303,
+     "diff": -1.0
+    },
+    "노인복지관": {
+     "book_table_total": 85.0,
+     "parsed": 85,
+     "diff": 0.0
+    },
+    "방문요양": {
+     "book_table_total": 206.0,
+     "parsed": 206,
+     "diff": 0.0
+    },
+    "주야간보호": {
+     "book_table_total": 395.0,
+     "parsed": 395,
+     "diff": 0.0
+    },
+    "단기보호": {
+     "book_table_total": 30.0,
+     "parsed": 30,
+     "diff": 0.0
+    },
+    "방문목욕": {
+     "book_table_total": 163.0,
+     "parsed": 163,
+     "diff": 0.0
+    },
+    "방문간호": {
+     "book_table_total": 7.0,
+     "parsed": 7,
+     "diff": 0.0
+    },
+    "재가노인지원": {
+     "book_table_total": 20.0,
+     "parsed": 20,
+     "diff": 0.0
+    }
+   },
+   "official_check_xlsx_시도총괄표": {
+    "양로시설": 12,
+    "노인공동생활가정": 3,
+    "노인복지주택": 11,
+    "노인요양시설": 205,
+    "노인요양공동생활가정": 304,
+    "노인복지관": 85,
+    "경로당(참고)": 3466,
+    "재가노인복지시설_합계": 821,
+    "방문요양": 206,
+    "주야간보호": 395,
+    "단기보호": 30,
+    "방문목욕": 163,
+    "방문간호": 7,
+    "복지용구지원": 0
+   }
+  },
+  "2025_01": {
+   "source_file": "mohw_노인복지시설현황_2025.hwpx",
+   "source_rows_seoul": 3108,
+   "official_table_total_rows": {
+    "양로시설": 9.0,
+    "노인공동생활가정": 3.0,
+    "노인복지주택": 12.0,
+    "노인요양시설": 237.0,
+    "노인요양공동생활가정": 238.0,
+    "노인복지관": 91.0,
+    "방문요양": 1133.0,
+    "주야간보호": 473.0,
+    "단기보호": 18.0,
+    "방문목욕": 741.0,
+    "방문간호": 49.0,
+    "복지용구지원": 78.0,
+    "재가노인지원": 26.0
+   },
+   "book_serial_check": {},
+   "book_serial_note": "책자 일련번호 중복·누락은 원본 표기 그대로(행은 모두 유지). 합계 개소와 행수 차이의 원인.",
+   "final_rows": 3108,
+   "subtype_counts": {
+    "방문요양": 1133,
+    "방문목욕": 741,
+    "주야간보호": 473,
+    "노인요양공동생활가정": 238,
+    "노인요양시설": 237,
+    "노인복지관": 91,
+    "복지용구지원": 78,
+    "방문간호": 49,
+    "재가노인지원": 26,
+    "단기보호": 18,
+    "노인복지주택": 12,
+    "양로시설": 9,
+    "노인공동생활가정": 3
+   },
+   "geocoding": {
+    "rows": 3108,
+    "coord_rows": 3096,
+    "coord_rate": 0.9961,
+    "coord_method": {
+     "geocode_kakao_exact": 3094,
+     "unresolved": 12,
+     "geocode_vworld_exact": 2
+    },
+    "outside_seoul": 5,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 860,
+    "norm_dup_name_addr": 908,
+    "norm_dup_name_addr_same_subtype": 6,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 992,
+    "same_coord_rows": 2252,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "노인공동생활가정": 1.0,
+    "노인복지관": 0.978,
+    "노인복지주택": 0.9167,
+    "노인요양공동생활가정": 1.0,
+    "노인요양시설": 0.9958,
+    "단기보호": 1.0,
+    "방문간호": 0.9796,
+    "방문목욕": 0.9973,
+    "방문요양": 0.9965,
+    "복지용구지원": 1.0,
+    "양로시설": 1.0,
+    "재가노인지원": 1.0,
+    "주야간보호": 0.9979
+   },
+   "official_check": {
+    "양로시설": {
+     "book_table_total": 9.0,
+     "parsed": 9,
+     "diff": 0.0
+    },
+    "노인공동생활가정": {
+     "book_table_total": 3.0,
+     "parsed": 3,
+     "diff": 0.0
+    },
+    "노인복지주택": {
+     "book_table_total": 12.0,
+     "parsed": 12,
+     "diff": 0.0
+    },
+    "노인요양시설": {
+     "book_table_total": 237.0,
+     "parsed": 237,
+     "diff": 0.0
+    },
+    "노인요양공동생활가정": {
+     "book_table_total": 238.0,
+     "parsed": 238,
+     "diff": 0.0
+    },
+    "노인복지관": {
+     "book_table_total": 91.0,
+     "parsed": 91,
+     "diff": 0.0
+    },
+    "방문요양": {
+     "book_table_total": 1133.0,
+     "parsed": 1133,
+     "diff": 0.0
+    },
+    "주야간보호": {
+     "book_table_total": 473.0,
+     "parsed": 473,
+     "diff": 0.0
+    },
+    "단기보호": {
+     "book_table_total": 18.0,
+     "parsed": 18,
+     "diff": 0.0
+    },
+    "방문목욕": {
+     "book_table_total": 741.0,
+     "parsed": 741,
+     "diff": 0.0
+    },
+    "방문간호": {
+     "book_table_total": 49.0,
+     "parsed": 49,
+     "diff": 0.0
+    },
+    "복지용구지원": {
+     "book_table_total": 78.0,
+     "parsed": 78,
+     "diff": 0.0
+    },
+    "재가노인지원": {
+     "book_table_total": 26.0,
+     "parsed": 26,
+     "diff": 0.0
+    }
+   }
+  }
+ },
+ "excluded": [
+  "경로당·노인교실(개별 명부 없음)",
+  "노인보호전문기관",
+  "노인일자리지원기관",
+  "치매전담실/치매전담형(하위 단위)",
+  "부록 재가장기요양기관"
+ ],
+ "facility_id_rule": "mb.assign_ids(0 명칭+주소키+subtype, 1 명칭+주소키, 2 명칭 유일, 3 주소키+subtype 유일, 4 좌표 50m 이내+명칭 앞4자). 정규화=괄호·법인격·기호 제거, 주소키=도로명+건물번호(없으면 동+번지) subtype이 달라도(요양시설↔공동생활가정 전환 등) 1·2 규칙으로 같은 id",
+ "id_matching": {
+  "matched": 1012,
+  "by_rule": {
+   "name+addr+subtype": 833,
+   "addr+subtype": 145,
+   "name": 30,
+   "name+addr": 4
+  },
+  "only_2020": 429,
+  "only_2025": 2096
+ },
+ "notes": [
+  "방문요양·방문목욕 등 방문형 서비스는 정원이 0으로 기재됨(이용 현원·연간 실인원 사용).",
+  "2025판 방문요양(1,133)·방문목욕(741)은 2020판(206·163)보다 크게 늘었는데, 재가노인복지시설로 신고한 장기요양기관 범위 변화 영향이므로 두 시점 비교 시 주의."
+ ]
+}

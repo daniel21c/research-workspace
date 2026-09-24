@@ -1,0 +1,49 @@
+{
+ "2020_01": {
+  "n": 379,
+  "coord_rate": 99.21,
+  "outside_seoul": 0,
+  "min_gu": "강남구",
+  "min_gu_rate": 97.1,
+  "gu_below85": {},
+  "n_gu": 24,
+  "coord_method": {
+   "borrowed_lic_same_addrkey": 357,
+   "geocode_kakao_exact": 19,
+   "unresolved": 3
+  },
+  "unresolved": [
+   [
+    "강남구",
+    "역삼1문화센터 대강당",
+    "서울특별시 강남구 역삼로 7-16, 3층 (역삼동)"
+   ],
+   [
+    "종로구",
+    "대학로 티오엠1관",
+    "서울특별시 종로구 동숭동 1-75번지 대학로문화공간 "
+   ],
+   [
+    "종로구",
+    "대학로 티오엠2관",
+    "서울특별시 종로구 동숭동 1-75번지 대학로문화공간 지하3층 "
+   ]
+  ],
+  "geocode_sec": 0.6
+ },
+ "2025_01": {
+  "n": 452,
+  "coord_rate": 100.0,
+  "outside_seoul": 0,
+  "min_gu": "강남구",
+  "min_gu_rate": 100.0,
+  "gu_below85": {},
+  "n_gu": 25,
+  "coord_method": {
+   "borrowed_lic_same_addrkey": 436,
+   "geocode_kakao_exact": 16
+  },
+  "unresolved": [],
+  "geocode_sec": 0.5
+ }
+}

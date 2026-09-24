@@ -1,0 +1,112 @@
+{
+ "type": "응급의료기관",
+ "grade": "A",
+ "note_grade": "월별 기준일 배포본(1월 31일 추출)",
+ "snapshots": {
+  "2020_01": {
+   "source_files": [
+    "egen_응급의료기관현황_20200131.xlsx",
+    "egen_응급의료시설_20200131.xlsx"
+   ],
+   "source_rows_seoul": 68,
+   "final_rows": 68,
+   "subtype_counts": {
+    "지역응급의료센터": 26,
+    "지역응급의료기관": 19,
+    "응급의료시설(응급의료기관 외)": 17,
+    "권역응급의료센터": 5,
+    "그밖의응급의료시설": 1
+   },
+   "geocoding": {
+    "rows": 68,
+    "coord_rows": 68,
+    "coord_rate": 1.0,
+    "coord_method": {
+     "geocode_kakao_exact": 68
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "data_go_kr_15044540_seoul": {
+     "중앙응급의료센터": 1,
+     "권역응급의료센터": 5,
+     "전문응급의료센터": 0,
+     "지역응급의료센터": 24,
+     "지역응급의료기관": 20,
+     "계": 50
+    },
+    "year": "2019",
+    "parsed_emergency_institutions": 51,
+    "note": "공식 수는 연말 기준, 명부는 다음 해 1월 31일 추출이라 1월 중 지정 변동이 있으면 차이 날 수 있음"
+   }
+  },
+  "2025_01": {
+   "source_files": [
+    "egen_응급의료기관현황_20250131.xlsx",
+    "egen_응급의료시설_20250131.xlsx"
+   ],
+   "source_rows_seoul": 71,
+   "final_rows": 71,
+   "subtype_counts": {
+    "지역응급의료센터": 24,
+    "응급의료시설(응급의료기관 외)": 22,
+    "지역응급의료기관": 18,
+    "권역응급의료센터": 7
+   },
+   "geocoding": {
+    "rows": 71,
+    "coord_rows": 71,
+    "coord_rate": 1.0,
+    "coord_method": {
+     "geocode_kakao_exact": 71
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 1,
+    "same_coord_rows": 2,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "data_go_kr_15044540_seoul": {
+     "중앙응급의료센터": 0,
+     "권역응급의료센터": 7,
+     "전문응급의료센터": 3,
+     "지역응급의료센터": 24,
+     "지역응급의료기관": 18,
+     "계": 52
+    },
+    "year": "2024",
+    "parsed_emergency_institutions": 49,
+    "note": "공식 수는 연말 기준, 명부는 다음 해 1월 31일 추출이라 1월 중 지정 변동이 있으면 차이 날 수 있음"
+   }
+  }
+ },
+ "facility_id_rule": "mb.assign_ids(명칭+주소키+group, 명칭+주소키, 명칭 유일, 주소키+group 유일, 좌표 50m+명칭 앞4자). 등급(권역/지역) 변경은 같은 id",
+ "id_matching": {
+  "matched": 64,
+  "by_rule": {
+   "name+addr+subtype": 58,
+   "addr+subtype": 4,
+   "name+addr": 1,
+   "name": 1
+  },
+  "only_2020": 4,
+  "only_2025": 7
+ }
+}

@@ -1,0 +1,22 @@
+# 시설데이터 구축: 데이터는 Git에 넣지 않는다(경로·버전·해시는 ../데이터_배포목록.md).
+# 추적 대상 = 코드(.py), 문서(.md), 작은 기록표(아래 예외), qa/summary json.
+**/raw/
+**/work/
+*.csv
+*.npy
+*.geojson
+*.gpkg-journal
+*.sbn
+*.sbx
+*.xml
+*.html
+*.png
+# 작은 기록표는 추적
+!**/_승격_채택목록.csv
+!**/manifest_sha256.csv
+!**/official_compare_*.csv
+!**/coord_by_gu_*.csv
+!시설_2020_2025_v1/통합_인벤토리.csv
+!시설_2020_2025_v1/20_분석용/_요약_시설별_수_좌표.csv
+!시설_2020_2025_v1/12_무결성보정/*.csv
+!시설_2020_2025_v1/12_무결성보정/근거/*.csv

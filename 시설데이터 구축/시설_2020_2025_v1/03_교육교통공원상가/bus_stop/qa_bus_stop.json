@@ -1,0 +1,145 @@
+{
+ "type": "bus_stop",
+ "notes": [
+  "버스정류소 2020_01 / 2025_01\n2020: 서울시 연도별 정류장 현황(OA-22193) '2019년 12월 31일 기준' 시트(목록 A, 좌표 없음)\n      + 서울시 버스정류소 위치정보(OA-15067) 2019.07.10판 좌표를 ARS-ID로 조인, 없으면 2020.12.31판 좌표.\n2025: OA-15067 20241209판(A, 좌표 포함).\n정류소유형(중앙차로/가로변/마을버스/가상정류장 등)은 facility_subtype. 2020 유형은 2020.12.31판에서 가져옴(없으면 미상)."
+ ],
+ "2020_01": {
+  "rows": 11260,
+  "coord_rate": 0.9997,
+  "coord_method": {
+   "source": 11257,
+   "unresolved": 3
+  },
+  "inside_seoul": 11242,
+  "outside_seoul": 15,
+  "no_coord": 3,
+  "grade": {
+   "A": 11260
+  },
+  "dup_facility_id": 1,
+  "subtype": {
+   "일반차로": 5842,
+   "마을버스": 4189,
+   "미상": 447,
+   "중앙차로": 387,
+   "가로변시간": 253,
+   "가로변전일": 142
+  },
+  "dup_exact_xy": 28,
+  "list_rows": 11260,
+  "coord_from": {
+   "OA-15067 20190710": 11149,
+   "OA-15067 20201231": 108,
+   "null": 3
+  },
+  "dup_ars_in_list": 1,
+  "osm_note": "OSM 비교는 transport_base 조사(서울 bbox bus_stop 노드 2020: 8,809) 참고용"
+ },
+ "2025_01": {
+  "rows": 11262,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 11262
+  },
+  "inside_seoul": 11247,
+  "outside_seoul": 15,
+  "no_coord": 0,
+  "grade": {
+   "A": 11262
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "일반차로": 6172,
+   "마을버스": 4172,
+   "중앙차로": 403,
+   "가로변시간": 272,
+   "가로변전일": 152,
+   "가상정류장": 91
+  },
+  "dup_exact_xy": 5,
+  "source_rows": 11262,
+  "virtual_stops": 91,
+  "official_compare": "OA-22193 연말 목록 2023-12-04 시트와 비교 가능(2024 시트 없음)",
+  "oa22193_2023_12_04_rows": 11198
+ },
+ "panel": {
+  "common_ids": 10793,
+  "only_2020": 466,
+  "only_2025": 469
+ },
+ "generated_utc": "2026-09-23T23:34:31Z",
+ "raw_files": [
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-15067",
+    "seqNo": "",
+    "seq": "2",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:34:21Z",
+   "http_status": 200,
+   "bytes": 705619,
+   "sha256": "ac95324e888b8c02139c43f8ba0295ba0528662f039f3dac10b5d0bf9ced05d3",
+   "reference_date": "2019-07-10",
+   "note": "",
+   "file": "OA-15067_버스정류소위치_20190710.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-15067",
+    "seqNo": "",
+    "seq": "3",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:34:22Z",
+   "http_status": 200,
+   "bytes": 694448,
+   "sha256": "914ad97e07fec862f7d61b7f927cc3d61b278bfbfac923e538f51a702186e6e6",
+   "reference_date": "2020-12-31",
+   "note": "",
+   "file": "OA-15067_버스정류소위치_20201231.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-15067",
+    "seqNo": "",
+    "seq": "37",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:34:22Z",
+   "http_status": 200,
+   "bytes": 742919,
+   "sha256": "5ae361afa5526b83cf59a05b14859883ee1074df1b4d76723ceef4dff12543d2",
+   "reference_date": "2024-12-09",
+   "note": "",
+   "file": "OA-15067_버스정류소위치_20241209.xlsx"
+  },
+  {
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/inf/nio_download.do?&useCache=false",
+   "method": "POST",
+   "params": null,
+   "data": {
+    "infId": "OA-22193",
+    "seqNo": "",
+    "seq": "1",
+    "infSeq": "1"
+   },
+   "download_utc": "2026-09-23T23:34:21Z",
+   "http_status": 200,
+   "bytes": 1573844,
+   "sha256": "cb8f67d4b9c1387dc2b55f98c46bb78623c5ea240cc2a621d63a814819846438",
+   "reference_date": "2019-12-31 등 연말 시트",
+   "note": "서울시 연도별 정류장 현황",
+   "file": "OA-22193_정류소현황_2019_2023.xlsx"
+  }
+ ]
+}

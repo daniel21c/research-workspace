@@ -1,0 +1,182 @@
+{
+ "facility_type": "공연장",
+ "grade": "B",
+ "built_utc": "2026-09-23T23:46:49.714875+00:00",
+ "rule": "B: 인허가일 ≤ D, 종료일(폐업일, 없으면 인허가취소일) 없음 또는 > D. 폐업·취소·말소·제외 등 상태인데 날짜 없으면 최종수정일자로 대체. 1900/0001 등 더미·결측 인허가일은 unknown(제외). 휴업은 시작·종료일이 모두 있고 D가 그 사이일 때만 제외. 영업/휴업 상태 행의 폐업/취소일은 무시.",
+ "snapshot_dates": {
+  "2020_01": "2019-12-31",
+  "2025_01": "2024-12-31"
+ },
+ "sources": {
+  "performance_halls_seoul_OA-16021.csv": {
+   "slug": "performance_halls",
+   "url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+   "params": {
+    "srvType": "S",
+    "infId": "OA-16021",
+    "serviceKind": "1",
+    "pageNo": "1",
+    "ssUserId": "SAMPLE_VIEW",
+    "strWhere": "",
+    "strOrderby": "",
+    "filterCol": "",
+    "txtFilter": ""
+   },
+   "sha256": "81e9dca7b3c46662405d785455bef46f80d06c0d64281ef6c670d993a1c24e88",
+   "bytes": 570252,
+   "download_utc": "2026-09-23T14:00:22.296755+00:00",
+   "reference_date": "2026-09-22",
+   "rows": 1417,
+   "status": {
+    "영업/정상": 885,
+    "폐업": 300,
+    "취소/말소/만료/정지/중지": 228,
+    "휴업": 4
+   },
+   "lic_unknown": 0,
+   "lic_dummy_1900_0001": 0,
+   "lic_unknown_not_closed_pre2020": 0,
+   "closed_nodate": 20,
+   "closed_nodate_no_lastmod": 0,
+   "active_status_with_end_date": 0,
+   "end_before_lic": 0,
+   "suspended_excluded": {
+    "2020_01": 0,
+    "2025_01": 0
+   },
+   "substituted": {
+    "2020_01": 1,
+    "2025_01": 0
+   },
+   "active": {
+    "2020_01": 1017,
+    "2025_01": 854
+   },
+   "max_data_update": "2026-09-22 22:35:20",
+   "max_last_mod": "2026-09-21 15:59:46",
+   "n_org_codes": 25,
+   "all_org_codes_seoul": true,
+   "encoding": "cp949"
+  }
+ },
+ "transfer_fix": {
+  "transfer_out_rows_in_candidates": 0,
+  "groups": 0,
+  "adjusted_rows": 0,
+  "ambiguous_groups": 0,
+  "removed_from_active": {}
+ },
+ "geocoding": {
+  "enabled": true,
+  "attempted_addresses": 125,
+  "rows_needing": 144,
+  "rows_no_parsable_address": 2,
+  "accepted_rows": 6,
+  "accepted_addresses": 6,
+  "by_method": {
+   "geocode_kakao_exact": 5,
+   "geocode_vworld_exact": 1
+  },
+  "secrets_found": {
+   "KAKAO_REST_API_KEY": true,
+   "VWORLD_API_KEY": true
+  }
+ },
+ "bulk_admin_end_dates": {
+  "performance_halls|2022-04-13": 203
+ },
+ "candidates_either_snapshot": 1136,
+ "2020_01": {
+  "n_final": 1007,
+  "n_active_before_dedup": 1017,
+  "dedup_removed_exact": 10,
+  "flag_admin_end": 199,
+  "flag_bulk_admin_end": 194,
+  "n_final_excl_bulk_admin_end": 813,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "공연장": 1007
+  },
+  "by_current_status": {
+   "영업/정상": 725,
+   "취소/말소/만료/정지/중지": 199,
+   "폐업": 79,
+   "휴업": 4
+  },
+  "closed_nodate_substituted": 1,
+  "coord_method": {
+   "source": 865,
+   "unresolved": 136,
+   "geocode_kakao_exact": 5,
+   "geocode_vworld_exact": 1
+  },
+  "coord_rate": 0.8649,
+  "source_coord_rate": 0.859,
+  "outside_seoul": 0,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 10,
+  "dup_same_coord_5179": 310,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   80
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 26,
+   "sz_scale_raw": 26,
+   "sz_floors_total": 144
+  }
+ },
+ "2025_01": {
+  "n_final": 853,
+  "n_active_before_dedup": 854,
+  "dedup_removed_exact": 1,
+  "flag_admin_end": 0,
+  "flag_bulk_admin_end": 0,
+  "n_final_excl_bulk_admin_end": 853,
+  "transfer_adjusted_start": 0,
+  "by_subtype": {
+   "공연장": 853
+  },
+  "by_current_status": {
+   "영업/정상": 840,
+   "폐업": 9,
+   "휴업": 4
+  },
+  "closed_nodate_substituted": 0,
+  "coord_method": {
+   "source": 766,
+   "unresolved": 83,
+   "geocode_kakao_exact": 3,
+   "geocode_vworld_exact": 1
+  },
+  "coord_rate": 0.9027,
+  "source_coord_rate": 0.898,
+  "outside_seoul": 0,
+  "no_dong_among_inside": 0,
+  "no_oa_among_inside": 0,
+  "dup_same_name_address": 2,
+  "dup_same_coord_5179": 299,
+  "facility_id_unique": true,
+  "reference_month_delta": [
+   20
+  ],
+  "size_nonnull_gt0": {
+   "sz_area_m2": 26,
+   "sz_scale_raw": 26,
+   "sz_floors_total": 144
+  }
+ },
+ "panel": {
+  "in_both": 734,
+  "only_2020_01": 273,
+  "only_2025_01": 119
+ },
+ "official_comparison": {
+  "status": "문화체육관광부 전국 문화기반시설 총람(공연장) 대조 미실시"
+ },
+ "notes": [
+  "sz_scale_raw(시설규모)는 대부분 0이고 단위 불명(원자료 그대로)."
+ ],
+ "build_seconds": 1.0
+}

@@ -1,0 +1,82 @@
+{
+ "2020": {
+  "ours": 2337,
+  "nts": 2060,
+  "nts_suppressed_cells": 0,
+  "diff": 277,
+  "diff_pct": 13.45,
+  "ratio": 1.1345,
+  "gu": {
+   "r": 0.9927,
+   "max_abs_diff": 40,
+   "max_abs_diff_gu": "중구",
+   "max_abs_pct": 25.4,
+   "gu_within5pct": 5,
+   "gu_within10pct": 10,
+   "sum_ours": 2335,
+   "sum_official": 2060
+  },
+  "cov": {
+   "n": 2337,
+   "coord_rate": 0.9987,
+   "inside_seoul_rate": 0.9983,
+   "gu_parsed_rate": 0.9991,
+   "min_gu_coord_rate": 0.9903,
+   "min_gu": "강서구",
+   "n_gu_below85": 0
+  },
+  "cov_original_build": {
+   "n": 2337,
+   "coord_rate": 0.9876,
+   "inside_seoul_rate": 0.9872,
+   "gu_parsed_rate": 0.9991,
+   "min_gu_coord_rate": 0.732,
+   "min_gu": "강동구",
+   "n_gu_below85": 1
+  },
+  "used_file": "facilities_안경업_2020_01.parquet",
+  "flag_admin_end": 12,
+  "sens_excl_flag_admin_end": 12.86,
+  "sens_excl_current_suspended": 13.4
+ },
+ "2025": {
+  "ours": 2281,
+  "nts": 2021,
+  "nts_suppressed_cells": 0,
+  "diff": 260,
+  "diff_pct": 12.86,
+  "ratio": 1.1286,
+  "gu": {
+   "r": 0.9926,
+   "max_abs_diff": 39,
+   "max_abs_diff_gu": "중구",
+   "max_abs_pct": 24.8,
+   "gu_within5pct": 1,
+   "gu_within10pct": 8,
+   "sum_ours": 2279,
+   "sum_official": 2021
+  },
+  "cov": {
+   "n": 2281,
+   "coord_rate": 0.9991,
+   "inside_seoul_rate": 0.9987,
+   "gu_parsed_rate": 0.9991,
+   "min_gu_coord_rate": 0.9949,
+   "min_gu": "중구",
+   "n_gu_below85": 0
+  },
+  "cov_original_build": {
+   "n": 2281,
+   "coord_rate": 0.9912,
+   "inside_seoul_rate": 0.9908,
+   "gu_parsed_rate": 0.9991,
+   "min_gu_coord_rate": 0.8,
+   "min_gu": "강동구",
+   "n_gu_below85": 1
+  },
+  "used_file": "facilities_안경업_2025_01.parquet",
+  "flag_admin_end": 2,
+  "sens_excl_flag_admin_end": 12.77,
+  "sens_excl_current_suspended": 12.77
+ }
+}

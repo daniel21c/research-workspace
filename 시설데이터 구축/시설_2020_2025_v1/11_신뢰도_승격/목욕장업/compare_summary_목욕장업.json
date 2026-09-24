@@ -1,0 +1,65 @@
+{
+ "facility": "목욕장업",
+ "scopes": {
+  "전체": {
+   "2019": {
+    "built": 890,
+    "official": 891,
+    "diff_pct": -0.11,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9997,
+    "gu_max_abs_diff_pct": 3.33,
+    "gu_max_abs_diff_gu": "노원구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9978,
+    "scope_min_gu_coord_rate": 0.9688,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 676,
+    "official": 677,
+    "diff_pct": -0.15,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9999,
+    "gu_max_abs_diff_pct": 3.7,
+    "gu_max_abs_diff_gu": "은평구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O110009_2015_공중위생업현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 890,
+   "coord_rate_inside_seoul": 0.9978,
+   "min_gu_coord_rate": 0.9688,
+   "min_gu": "종로구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 886,
+    "unresolved": 2,
+    "geocode_kakao_exact": 2
+   }
+  },
+  "2024": {
+   "n": 676,
+   "coord_rate_inside_seoul": 1.0,
+   "min_gu_coord_rate": 1.0,
+   "min_gu": "강남구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 673,
+    "geocode_kakao_exact": 3
+   }
+  }
+ }
+}

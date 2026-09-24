@@ -1,0 +1,64 @@
+{
+ "facility": "미용업",
+ "scopes": {
+  "전체": {
+   "2019": {
+    "built": 27946,
+    "official": 26906,
+    "diff_pct": 3.87,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9995,
+    "gu_max_abs_diff_pct": 6.66,
+    "gu_max_abs_diff_gu": "서초구",
+    "gu_median_abs_diff_pct": 3.79,
+    "gu_n_within_5pct": 23,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9925,
+    "scope_min_gu_coord_rate": 0.9621,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 32349,
+    "official": 31856,
+    "diff_pct": 1.55,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9999,
+    "gu_max_abs_diff_pct": 2.55,
+    "gu_max_abs_diff_gu": "서초구",
+    "gu_median_abs_diff_pct": 1.31,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9882,
+    "scope_min_gu_coord_rate": 0.9332,
+    "scope_n_gu_below_85": 0
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O110009_2015_공중위생업현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 27946,
+   "coord_rate_inside_seoul": 0.9925,
+   "min_gu_coord_rate": 0.9621,
+   "min_gu": "송파구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 27737,
+    "unresolved": 209
+   }
+  },
+  "2024": {
+   "n": 32349,
+   "coord_rate_inside_seoul": 0.9882,
+   "min_gu_coord_rate": 0.9332,
+   "min_gu": "송파구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 1,
+   "coord_stage": {
+    "source": 31966,
+    "unresolved": 383
+   }
+  }
+ }
+}

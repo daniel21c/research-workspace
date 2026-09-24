@@ -1,0 +1,67 @@
+{
+ "facility": "이용업",
+ "scopes": {
+  "전체": {
+   "2019": {
+    "built": 2685,
+    "official": 2647,
+    "diff_pct": 1.44,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9969,
+    "gu_max_abs_diff_pct": 5.26,
+    "gu_max_abs_diff_gu": "서초구",
+    "gu_median_abs_diff_pct": 1.48,
+    "gu_n_within_5pct": 24,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.994,
+    "scope_min_gu_coord_rate": 0.939,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 2430,
+    "official": 2425,
+    "diff_pct": 0.21,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9989,
+    "gu_max_abs_diff_pct": 4.05,
+    "gu_max_abs_diff_gu": "성동구",
+    "gu_median_abs_diff_pct": 0.83,
+    "gu_n_within_5pct": 25,
+    "gu_n_within_10pct": 25,
+    "scope_coord_rate": 0.9959,
+    "scope_min_gu_coord_rate": 0.9571,
+    "scope_n_gu_below_85": 0
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O110009_2015_공중위생업현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 2685,
+   "coord_rate_inside_seoul": 0.994,
+   "min_gu_coord_rate": 0.939,
+   "min_gu": "중구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 1,
+   "coord_stage": {
+    "source": 2659,
+    "unresolved": 16,
+    "geocode_kakao_exact": 9,
+    "geocode_vworld_exact": 1
+   }
+  },
+  "2024": {
+   "n": 2430,
+   "coord_rate_inside_seoul": 0.9959,
+   "min_gu_coord_rate": 0.9571,
+   "min_gu": "중구",
+   "n_gu_below_85": 0,
+   "n_gu_below_95": 0,
+   "coord_stage": {
+    "source": 2408,
+    "geocode_kakao_exact": 12,
+    "unresolved": 10
+   }
+  }
+ }
+}

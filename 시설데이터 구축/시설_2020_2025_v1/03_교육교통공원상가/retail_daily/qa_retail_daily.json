@@ -1,0 +1,377 @@
+{
+ "type": "retail_daily",
+ "notes": [
+  "일상소매(상가업소 기준) 2020_01 / 2025_01 — 소상공인시장진흥공단 상가(상권)정보 서울\n대상 소분류: G20404 슈퍼마켓, G20405 편의점, G20499 그 외 기타 종합 소매업, G20501 곡물/곡분, G20503 정육점,\n            G20504 건어물/젓갈, G20505 수산물, G20506 채소/과일, G20509 반찬/식료품.\n2020_01 주: 2019.12판(20191231) — 2025-11 재작성본(신분류·2022-08 이후 부여 상가업소번호) → grade B.\n   플래그: flag_id_issued_after_ref = 번호 발급월(상가업소번호 7~12자리 YYYYMM) > 판 기준월,\n          flag_nonbulk_id = 발급월이 일괄 재부여월(202208, 202410)이 아님(재작성 때 개별 추가된 번호 의심).\n2020_01 민감도: 2020.03판(20200331, 같은 재작성본) → facilities_retail_daily_2020_01_sens202003.*\n2025_01: 2024.12판(20241231, A).\n원본 zip(전국)은 raw/에 보관, 서울 CSV에서 대상 업종(+비교용 의원·병원 Q101·Q102)만 raw/sbiz_seoul_extract_*.csv로 추출.\n대조: 국세청 100대 생활업종 사업자 수(서울, 2020-01 = 202101판 전년동월, 2024-12 = 202412판 당월).\n사용: python build_retail_daily.py extract 201912 202003 202412 → python build_retail_daily.py"
+ ],
+ "2020_01": {
+  "rows": 26494,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 26494
+  },
+  "inside_seoul": 26494,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "B": 26494
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "G20405 편의점": 9409,
+   "G20404 슈퍼마켓": 7971,
+   "G20503 정육점": 2369,
+   "G20509 반찬/식료품 소매업": 2196,
+   "G20506 채소/과일 소매업": 1948,
+   "G20505 수산물 소매업": 1068,
+   "G20499 그 외 기타 종합 소매업": 629,
+   "G20504 건어물/젓갈 소매업": 605,
+   "G20501 곡물/곡분 소매업": 299
+  },
+  "dup_exact_xy": 5971,
+  "seoul_rows_in_release": 473267,
+  "extract_rows": 41544,
+  "flag_id_issued_after_ref": 26494,
+  "flag_nonbulk_id": 1440,
+  "id_issue_ym_top": {
+   "202208": 21193,
+   "202410": 3861,
+   "202201": 297,
+   "202408": 260,
+   "202409": 209,
+   "202406": 137,
+   "202301": 75,
+   "202411": 68
+  },
+  "dup_name_addr": 292
+ },
+ "2020_01_sens202003": {
+  "rows": 26720,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 26720
+  },
+  "inside_seoul": 26720,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "B": 26720
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "G20405 편의점": 9498,
+   "G20404 슈퍼마켓": 7939,
+   "G20503 정육점": 2406,
+   "G20509 반찬/식료품 소매업": 2197,
+   "G20506 채소/과일 소매업": 2030,
+   "G20505 수산물 소매업": 1112,
+   "G20499 그 외 기타 종합 소매업": 626,
+   "G20504 건어물/젓갈 소매업": 610,
+   "G20501 곡물/곡분 소매업": 302
+  },
+  "dup_exact_xy": 6120,
+  "seoul_rows_in_release": 479384,
+  "extract_rows": 42061,
+  "flag_id_issued_after_ref": 26720,
+  "flag_nonbulk_id": 1496,
+  "id_issue_ym_top": {
+   "202208": 21363,
+   "202410": 3861,
+   "202201": 343,
+   "202408": 260,
+   "202409": 209,
+   "202406": 138,
+   "202301": 75,
+   "202411": 68
+  },
+  "dup_name_addr": 302
+ },
+ "2025_01": {
+  "rows": 29063,
+  "coord_rate": 1.0,
+  "coord_method": {
+   "source": 29063
+  },
+  "inside_seoul": 29063,
+  "outside_seoul": 0,
+  "no_coord": 0,
+  "grade": {
+   "A": 29063
+  },
+  "dup_facility_id": 0,
+  "subtype": {
+   "G20405 편의점": 9680,
+   "G20404 슈퍼마켓": 8127,
+   "G20503 정육점": 2953,
+   "G20506 채소/과일 소매업": 2735,
+   "G20509 반찬/식료품 소매업": 2326,
+   "G20505 수산물 소매업": 1371,
+   "G20499 그 외 기타 종합 소매업": 869,
+   "G20504 건어물/젓갈 소매업": 676,
+   "G20501 곡물/곡분 소매업": 326
+  },
+  "dup_exact_xy": 6987,
+  "seoul_rows_in_release": 553535,
+  "extract_rows": 47120,
+  "flag_id_issued_after_ref": 0,
+  "flag_nonbulk_id": 7168,
+  "id_issue_ym_top": {
+   "202208": 15981,
+   "202410": 5914,
+   "202406": 1867,
+   "202409": 785,
+   "202411": 528,
+   "202305": 504,
+   "202301": 338,
+   "202211": 282
+  },
+  "dup_name_addr": 324
+ },
+ "official_compare_nts100": {
+  "G20404 슈퍼마켓": {
+   "nts_items": [
+    "슈퍼마켓"
+   ],
+   "sbiz_201912": 7971,
+   "sbiz_202003": 7939,
+   "sbiz_202412": 8127,
+   "nts_2020_01": 4067,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 3435,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20405 편의점": {
+   "nts_items": [
+    "편의점"
+   ],
+   "sbiz_201912": 9409,
+   "sbiz_202003": 9498,
+   "sbiz_202412": 9680,
+   "nts_2020_01": 7803,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 8542,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20501 곡물/곡분 소매업": {
+   "nts_items": [
+    "곡물가게"
+   ],
+   "sbiz_201912": 299,
+   "sbiz_202003": 302,
+   "sbiz_202412": 326,
+   "nts_2020_01": 668,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 573,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20503 정육점": {
+   "nts_items": [
+    "정육점"
+   ],
+   "sbiz_201912": 2369,
+   "sbiz_202003": 2406,
+   "sbiz_202412": 2953,
+   "nts_2020_01": 2790,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 2768,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20504 건어물/젓갈 소매업": {
+   "nts_items": [
+    "건어물가게"
+   ],
+   "sbiz_201912": 605,
+   "sbiz_202003": 610,
+   "sbiz_202412": 676,
+   "nts_2020_01": 752,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 739,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20505 수산물 소매업": {
+   "nts_items": [
+    "생선가게"
+   ],
+   "sbiz_201912": 1068,
+   "sbiz_202003": 1112,
+   "sbiz_202412": 1371,
+   "nts_2020_01": 1497,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 1386,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20506 채소/과일 소매업": {
+   "nts_items": [
+    "채소가게",
+    "과일가게"
+   ],
+   "sbiz_201912": 1948,
+   "sbiz_202003": 2030,
+   "sbiz_202412": 2735,
+   "nts_2020_01": 2740,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 3168,
+   "nts_2024_12_masked_gu": 0
+  },
+  "G20509 반찬/식료품 소매업": {
+   "nts_items": [
+    "식료품가게"
+   ],
+   "sbiz_201912": 2196,
+   "sbiz_202003": 2197,
+   "sbiz_202412": 2326,
+   "nts_2020_01": 5718,
+   "nts_2020_01_masked_gu": 0,
+   "nts_2024_12": 5126,
+   "nts_2024_12_masked_gu": 0
+  }
+ },
+ "panel": {
+  "common_ids": 15036,
+  "only_2020": 11458,
+  "only_2025": 14027,
+  "note": "2019.12 재작성본 번호는 2022-08 이후 체계라 2024.12판과 같은 번호 체계"
+ },
+ "sens_201912_vs_202003": {
+  "common": 25738,
+  "only_201912": 756,
+  "only_202003": 982
+ },
+ "generated_utc": "2026-09-23T23:59:17Z",
+ "raw_files": [
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000002490954",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:56:31Z",
+   "http_status": 200,
+   "bytes": 912616,
+   "sha256": "d6ed8450f3b021566f88e47942ed07f72cb6c7d5807d31566f116a7df58f7d3c",
+   "reference_date": "202101",
+   "note": "국세청_사업자현황_100대 생활업종(data.go.kr 15061118). 202101판의 전년동월 열=2020-01",
+   "file": "nts_100대생활업종_202101.csv"
+  },
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000003104676",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:56:31Z",
+   "http_status": 200,
+   "bytes": 937160,
+   "sha256": "be74d38e8cf4e07419b0a3cdd0574fdcabf0ad66266294a01fe6da2f18465602",
+   "reference_date": "202412",
+   "note": "국세청_사업자현황_100대 생활업종(data.go.kr 15061118). 202101판의 전년동월 열=2020-01",
+   "file": "nts_100대생활업종_202412.csv"
+  },
+  {
+   "url": null,
+   "method": null,
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 10753828,
+   "sha256": "0fb1be8702521187f2fcdcaab69e6cfcdc744f96a8df20e3a5f8545e7edcca5c",
+   "reference_date": null,
+   "note": null,
+   "file": "sbiz_seoul_extract_201912.csv"
+  },
+  {
+   "url": null,
+   "method": null,
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 10890852,
+   "sha256": "a774d366d7f35f18853104a723285044362a8541d10a1ce442812393a28b30b1",
+   "reference_date": null,
+   "note": null,
+   "file": "sbiz_seoul_extract_202003.csv"
+  },
+  {
+   "url": null,
+   "method": null,
+   "params": null,
+   "data": null,
+   "download_utc": null,
+   "http_status": null,
+   "bytes": 12270450,
+   "sha256": "cf86b65526adbd7568bb49b3567152f494819c179434e5456e9353fbd091346c",
+   "reference_date": null,
+   "note": null,
+   "file": "sbiz_seoul_extract_202412.csv"
+  },
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000003547804",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:53:07Z",
+   "http_status": 200,
+   "bytes": 293466529,
+   "sha256": "3aaac1b08fd21eaf42fbdfd3e78163c9b82fb026f351a19db06c43a2fb42d21f",
+   "reference_date": "2019-12-31",
+   "note": "소상공인시장진흥공단_상가(상권)정보 (data.go.kr 15083033) 과거판. 2019·2020판은 2025-11 재작성본(신분류, 2022-08 이후 부여 번호)",
+   "file": "sbiz_상가상권정보_20191231.zip"
+  },
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000003547855",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:53:45Z",
+   "http_status": 200,
+   "bytes": 297946200,
+   "sha256": "f0136e3886de9d6269d560567a5f62fd262b08a7c723248dfb131ddf7d57a6c4",
+   "reference_date": "2020-03-31",
+   "note": "소상공인시장진흥공단_상가(상권)정보 (data.go.kr 15083033) 과거판. 2019·2020판은 2025-11 재작성본(신분류, 2022-08 이후 부여 번호)",
+   "file": "sbiz_상가상권정보_20200331.zip"
+  },
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000003676580",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:54:25Z",
+   "http_status": 200,
+   "bytes": 331029189,
+   "sha256": "143be21bf7aee3958b6c4e6c4ed3fc6b0f8ac8380a6d47d0bfcfd4745763bf1a",
+   "reference_date": "2024-12-31",
+   "note": "소상공인시장진흥공단_상가(상권)정보 (data.go.kr 15083033) 과거판. 2019·2020판은 2025-11 재작성본(신분류, 2022-08 이후 부여 번호)",
+   "file": "sbiz_상가상권정보_20241231.zip"
+  },
+  {
+   "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+   "method": "GET",
+   "params": {
+    "atchFileId": "FILE_000000003676583",
+    "fileDetailSn": 1
+   },
+   "data": null,
+   "download_utc": "2026-09-23T23:55:04Z",
+   "http_status": 200,
+   "bytes": 334864830,
+   "sha256": "658d0f55addc54c34a147703dd332a0013c4843a560ab3c54fda94c678da95af",
+   "reference_date": "2025-03-31",
+   "note": "소상공인시장진흥공단_상가(상권)정보 (data.go.kr 15083033) 과거판. 2019·2020판은 2025-11 재작성본(신분류, 2022-08 이후 부여 번호)",
+   "file": "sbiz_상가상권정보_20250331.zip"
+  }
+ ]
+}

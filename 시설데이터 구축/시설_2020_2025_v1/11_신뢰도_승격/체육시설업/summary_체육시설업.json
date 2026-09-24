@@ -1,0 +1,34 @@
+{
+ "2020_01|전체": {
+  "n": 11787,
+  "coord_rate": 98.65,
+  "min_gu": "중구",
+  "min_gu_rate": 93.8,
+  "n_gu_below85": 0,
+  "gu_missing": 2
+ },
+ "2020_01|C포함": {
+  "n": 10293,
+  "coord_rate": 99.17,
+  "min_gu": "중구",
+  "min_gu_rate": 93.8,
+  "n_gu_below85": 0,
+  "gu_missing": 2
+ },
+ "2025_01|전체": {
+  "n": 11176,
+  "coord_rate": 99.53,
+  "min_gu": "중구",
+  "min_gu_rate": 94.3,
+  "n_gu_below85": 0,
+  "gu_missing": 0
+ },
+ "2025_01|C포함": {
+  "n": 11009,
+  "coord_rate": 99.53,
+  "min_gu": "중구",
+  "min_gu_rate": 94.3,
+  "n_gu_below85": 0,
+  "gu_missing": 0
+ }
+}

@@ -1,0 +1,324 @@
+{
+ "facility": "대규모점포",
+ "scopes": {
+  "점포구분=대규모점포": {
+   "2019": {
+    "built": 414,
+    "official": 467,
+    "diff_pct": -11.35,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9258,
+    "gu_max_abs_diff_pct": 60.0,
+    "gu_max_abs_diff_gu": "양천구",
+    "gu_median_abs_diff_pct": 8.33,
+    "gu_n_within_5pct": 7,
+    "gu_n_within_10pct": 15,
+    "scope_coord_rate": 0.9855,
+    "scope_min_gu_coord_rate": 0.75,
+    "scope_n_gu_below_85": 1
+   },
+   "2024": {
+    "built": 419,
+    "official": 425,
+    "diff_pct": -1.41,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8931,
+    "gu_max_abs_diff_pct": 69.23,
+    "gu_max_abs_diff_gu": "동대문구",
+    "gu_median_abs_diff_pct": 27.27,
+    "gu_n_within_5pct": 5,
+    "gu_n_within_10pct": 9,
+    "scope_coord_rate": 0.9881,
+    "scope_min_gu_coord_rate": 0.8,
+    "scope_n_gu_below_85": 1
+   }
+  },
+  "점포구분=대규모점포+점포구분미상": {
+   "2019": {
+    "built": 559,
+    "official": 467,
+    "diff_pct": 19.7,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8813,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "강동구",
+    "gu_median_abs_diff_pct": 23.81,
+    "gu_n_within_5pct": 6,
+    "gu_n_within_10pct": 7,
+    "scope_coord_rate": 0.9249,
+    "scope_min_gu_coord_rate": 0.6364,
+    "scope_n_gu_below_85": 5
+   },
+   "2024": {
+    "built": 563,
+    "official": 425,
+    "diff_pct": 32.47,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8364,
+    "gu_max_abs_diff_pct": 127.27,
+    "gu_max_abs_diff_gu": "강동구",
+    "gu_median_abs_diff_pct": 35.71,
+    "gu_n_within_5pct": 4,
+    "gu_n_within_10pct": 5,
+    "scope_coord_rate": 0.929,
+    "scope_min_gu_coord_rate": 0.6364,
+    "scope_n_gu_below_85": 4
+   }
+  },
+  "대형마트": {
+   "2019": {
+    "built": 56,
+    "official": 59,
+    "diff_pct": -5.08,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8902,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "성북구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 15,
+    "gu_n_within_10pct": 15,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 51,
+    "official": 55,
+    "diff_pct": -7.27,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8489,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "용산구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 13,
+    "gu_n_within_10pct": 13,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "백화점": {
+   "2019": {
+    "built": 27,
+    "official": 29,
+    "diff_pct": -6.9,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9504,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "강북구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 14,
+    "gu_n_within_10pct": 14,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 28,
+    "official": 31,
+    "diff_pct": -9.68,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9445,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "강북구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 13,
+    "gu_n_within_10pct": 13,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "쇼핑센터": {
+   "2019": {
+    "built": 41,
+    "official": 38,
+    "diff_pct": 7.89,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9579,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "노원구",
+    "gu_median_abs_diff_pct": 14.58,
+    "gu_n_within_5pct": 6,
+    "gu_n_within_10pct": 6,
+    "scope_coord_rate": 0.9756,
+    "scope_min_gu_coord_rate": 0.8889,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 42,
+    "official": 39,
+    "diff_pct": 7.69,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9326,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "노원구",
+    "gu_median_abs_diff_pct": 50.0,
+    "gu_n_within_5pct": 5,
+    "gu_n_within_10pct": 5,
+    "scope_coord_rate": 0.9762,
+    "scope_min_gu_coord_rate": 0.9,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "전문점": {
+   "2019": {
+    "built": 21,
+    "official": 22,
+    "diff_pct": -4.55,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9947,
+    "gu_max_abs_diff_pct": 16.67,
+    "gu_max_abs_diff_gu": "용산구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 8,
+    "gu_n_within_10pct": 8,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 25,
+    "official": 24,
+    "diff_pct": 4.17,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9983,
+    "gu_max_abs_diff_pct": 12.5,
+    "gu_max_abs_diff_gu": "용산구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 8,
+    "gu_n_within_10pct": 8,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "복합쇼핑몰": {
+   "2019": {
+    "built": 30,
+    "official": 10,
+    "diff_pct": 200.0,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.2182,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "중랑구",
+    "gu_median_abs_diff_pct": 100.0,
+    "gu_n_within_5pct": 2,
+    "gu_n_within_10pct": 2,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 32,
+    "official": 9,
+    "diff_pct": 255.56,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.1821,
+    "gu_max_abs_diff_pct": 100.0,
+    "gu_max_abs_diff_gu": "중랑구",
+    "gu_median_abs_diff_pct": 33.33,
+    "gu_n_within_5pct": 3,
+    "gu_n_within_10pct": 3,
+    "scope_coord_rate": 1.0,
+    "scope_min_gu_coord_rate": 1.0,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "주요4업태(대형마트·백화점·쇼핑센터·전문점, 범위제한)": {
+   "2019": {
+    "built": 145,
+    "official": 148,
+    "diff_pct": -2.03,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9356,
+    "gu_max_abs_diff_pct": 75.0,
+    "gu_max_abs_diff_gu": "성북구",
+    "gu_median_abs_diff_pct": 0.0,
+    "gu_n_within_5pct": 13,
+    "gu_n_within_10pct": 14,
+    "scope_coord_rate": 0.9931,
+    "scope_min_gu_coord_rate": 0.9333,
+    "scope_n_gu_below_85": 0
+   },
+   "2024": {
+    "built": 146,
+    "official": 149,
+    "diff_pct": -2.01,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.9488,
+    "gu_max_abs_diff_pct": 75.0,
+    "gu_max_abs_diff_gu": "성북구",
+    "gu_median_abs_diff_pct": 11.11,
+    "gu_n_within_5pct": 10,
+    "gu_n_within_10pct": 12,
+    "scope_coord_rate": 0.9932,
+    "scope_min_gu_coord_rate": 0.9375,
+    "scope_n_gu_below_85": 0
+   }
+  },
+  "그밖의(시장·구분없음 포함)": {
+   "2019": {
+    "built": 239,
+    "official": 309,
+    "diff_pct": -22.65,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8453,
+    "gu_max_abs_diff_pct": 300.0,
+    "gu_max_abs_diff_gu": "용산구",
+    "gu_median_abs_diff_pct": 33.33,
+    "gu_n_within_5pct": 2,
+    "gu_n_within_10pct": 6,
+    "scope_coord_rate": 0.9791,
+    "scope_min_gu_coord_rate": 0.6667,
+    "scope_n_gu_below_85": 2
+   },
+   "2024": {
+    "built": 241,
+    "official": 267,
+    "diff_pct": -9.74,
+    "unassigned_gu_rows": 0,
+    "gu_pearson_r": 0.8052,
+    "gu_max_abs_diff_pct": 200.0,
+    "gu_max_abs_diff_gu": "용산구",
+    "gu_median_abs_diff_pct": 50.0,
+    "gu_n_within_5pct": 3,
+    "gu_n_within_10pct": 3,
+    "scope_coord_rate": 0.9834,
+    "scope_min_gu_coord_rate": 0.75,
+    "scope_n_gu_below_85": 1
+   }
+  }
+ },
+ "official_file": "kosis_DT_201004_O080001_유통업체현황_구별_2019_2024.csv",
+ "coord": {
+  "2019": {
+   "n": 757,
+   "coord_rate_inside_seoul": 0.9445,
+   "min_gu_coord_rate": 0.7143,
+   "min_gu": "은평구",
+   "n_gu_below_85": 3,
+   "n_gu_below_95": 8,
+   "coord_stage": {
+    "source": 690,
+    "unresolved": 42,
+    "geocode_11": 13,
+    "geocode_build": 12
+   }
+  },
+  "2024": {
+   "n": 778,
+   "coord_rate_inside_seoul": 0.9486,
+   "min_gu_coord_rate": 0.7143,
+   "min_gu": "은평구",
+   "n_gu_below_85": 3,
+   "n_gu_below_95": 7,
+   "coord_stage": {
+    "source": 709,
+    "unresolved": 40,
+    "geocode_build": 16,
+    "geocode_11": 13
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "facility": "대규모점포",
+ "candidates_unique_facilities": 55,
+ "accepted_unique_facilities": 13,
+ "by_key_type": {
+  "key_parcel2": 13
+ },
+ "by_method": {
+  "geocode_kakao_exact": 13
+ },
+ "no_parsable_key": 5,
+ "2020_01": {
+  "n": 757,
+  "coord_rate_before": 0.9273,
+  "coord_rate_after": 0.9445,
+  "inside_seoul_coord_rate_after": 0.9445,
+  "filled_rows": 13,
+  "unresolved_after": 42,
+  "outside_seoul": 0,
+  "gu_coord_mismatch_among_filled": 0
+ },
+ "2025_01": {
+  "n": 778,
+  "coord_rate_before": 0.9319,
+  "coord_rate_after": 0.9486,
+  "inside_seoul_coord_rate_after": 0.9486,
+  "filled_rows": 13,
+  "unresolved_after": 40,
+  "outside_seoul": 0,
+  "gu_coord_mismatch_among_filled": 0
+ }
+}

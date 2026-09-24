@@ -1,0 +1,58 @@
+{
+ "2020_01": {
+  "gu_compare": {
+   "label": "2020_01",
+   "built_total": 5877,
+   "official_total": 5698,
+   "diff_pct": 3.14,
+   "corr": 0.9977,
+   "max_abs_diff": 31,
+   "max_abs_gu": "구로구"
+  },
+  "gu_compare_sens": {
+   "label": "2020_01_sens",
+   "built_total": 5568,
+   "official_total": 5698,
+   "diff_pct": -2.28,
+   "corr": 0.9964,
+   "max_abs_diff": 17,
+   "max_abs_gu": "강서구"
+  },
+  "coord_rate_before": 0.9951,
+  "coord_rate_after": 0.9954,
+  "min_gu_rate": 0.9592,
+  "min_gu": "도봉구",
+  "filled": 2,
+  "still_missing": 27,
+  "sens_excluded": 309,
+  "outside_seoul": 1
+ },
+ "2025_01": {
+  "gu_compare": {
+   "label": "2025_01",
+   "built_total": 4319,
+   "official_total": 4212,
+   "diff_pct": 2.54,
+   "corr": 0.9951,
+   "max_abs_diff": 26,
+   "max_abs_gu": "구로구"
+  },
+  "gu_compare_sens": {
+   "label": "2025_01_sens",
+   "built_total": 4127,
+   "official_total": 4212,
+   "diff_pct": -2.02,
+   "corr": 0.9917,
+   "max_abs_diff": 17,
+   "max_abs_gu": "동대문구"
+  },
+  "coord_rate_before": 0.9949,
+  "coord_rate_after": 0.9949,
+  "min_gu_rate": 0.9506,
+  "min_gu": "도봉구",
+  "filled": 0,
+  "still_missing": 22,
+  "sens_excluded": 192,
+  "outside_seoul": 1
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "type": "보건소",
+ "grade": "C",
+ "note_grade": "연간 공식 명부",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "datagokr_3072692_지역보건의료기관_20191231.csv",
+   "source_rows_seoul": 50,
+   "final_rows": 50,
+   "subtype_counts": {
+    "보건소": 25,
+    "일반보건지소": 25
+   },
+   "geocoding": {
+    "rows": 50,
+    "coord_rows": 50,
+    "coord_rate": 1.0,
+    "coord_method": {
+     "geocode_kakao_exact": 50
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "data_go_kr_15127903_seoul": {
+     "보건소": 25,
+     "보건지소": 25,
+     "보건진료소": 0,
+     "건강생활지원센터": 0
+    },
+    "official_year": "2019",
+    "parsed": {
+     "보건소": 25,
+     "일반보건지소": 25
+    }
+   }
+  },
+  "2025_01": {
+   "source_file": "datagokr_3072692_지역보건의료기관_20251231.csv",
+   "source_rows_seoul": 63,
+   "final_rows": 63,
+   "subtype_counts": {
+    "일반보건지소": 38,
+    "보건소": 25
+   },
+   "geocoding": {
+    "rows": 63,
+    "coord_rows": 63,
+    "coord_rate": 1.0,
+    "coord_method": {
+     "geocode_kakao_exact": 63
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 0,
+    "same_coord_rows": 0,
+    "duplicate_facility_id": 0
+   },
+   "official_check": {
+    "data_go_kr_15127903_seoul": {
+     "보건소": 25,
+     "보건지소": 38,
+     "보건진료소": 0,
+     "건강생활지원센터": 0
+    },
+    "official_year": "2024",
+    "parsed": {
+     "일반보건지소": 38,
+     "보건소": 25
+    }
+   },
+   "rows_not_in_2022_edition": [
+    {
+     "name": "송정보건지소",
+     "facility_subtype": "일반보건지소"
+    },
+    {
+     "name": "삼각산보건지소",
+     "facility_subtype": "일반보건지소"
+    },
+    {
+     "name": "수유보건지소",
+     "facility_subtype": "일반보건지소"
+    },
+    {
+     "name": "불광보건지소",
+     "facility_subtype": "일반보건지소"
+    },
+    {
+     "name": "독산보건지소",
+     "facility_subtype": "일반보건지소"
+    }
+   ]
+  }
+ },
+ "facility_id_rule": "mb.assign_ids(0 명칭+주소키+subtype, 1 명칭+주소키, 2 명칭 유일, 3 주소키+subtype 유일, 4 좌표 50m+명칭 앞4자)",
+ "id_matching": {
+  "matched": 50,
+  "by_rule": {
+   "name+addr+subtype": 43,
+   "addr+subtype": 4,
+   "name": 3
+  },
+  "only_2020": 0,
+  "only_2025": 13
+ }
+}

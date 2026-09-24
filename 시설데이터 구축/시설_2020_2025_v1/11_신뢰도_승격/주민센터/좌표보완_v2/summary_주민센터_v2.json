@@ -1,0 +1,46 @@
+{
+ "2020_01": {
+  "all": {
+   "n": 424,
+   "coord_before": 402,
+   "coord_after": 417,
+   "rate_before": 0.9481,
+   "rate_after": 0.9835,
+   "n_seoul_located": 424,
+   "rate_after_seoul_located": 0.9835,
+   "rate_before_seoul_located": 0.9481,
+   "min_gu": "금천구",
+   "min_gu_rate": 0.9,
+   "gu_below_85": [],
+   "filled_v2": 15,
+   "still_missing": 7,
+   "still_missing_ids": [
+    "CMC_중랑구_중화2동",
+    "CMC_서대문구_신촌동",
+    "CMC_양천구_신월6동",
+    "CMC_구로구_오류1동",
+    "CMC_금천구_시흥5동",
+    "CMC_영등포구_신길6동",
+    "CMC_송파구_잠실6동"
+   ]
+  }
+ },
+ "2025_01": {
+  "all": {
+   "n": 426,
+   "coord_before": 421,
+   "coord_after": 426,
+   "rate_before": 0.9883,
+   "rate_after": 1.0,
+   "n_seoul_located": 426,
+   "rate_after_seoul_located": 1.0,
+   "rate_before_seoul_located": 0.9883,
+   "min_gu": "종로구",
+   "min_gu_rate": 1.0,
+   "gu_below_85": [],
+   "filled_v2": 5,
+   "still_missing": 0,
+   "still_missing_ids": []
+  }
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "type": "문화기반시설",
+ "grade": "A",
+ "note_grade": "기준일(1.1) 배포본",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "mcst_총람_2020_20200101.xlsx",
+   "sheets_in_file": [
+    "국립도서관",
+    "공공도서관",
+    "박물관",
+    "미술관",
+    "생활문화센터",
+    "문예회관",
+    "지방문화원",
+    "문화의집",
+    "(부록)지역문화재단"
+   ],
+   "source_rows_seoul_by_sheet": {
+    "국립도서관": 2,
+    "공공도서관": 180,
+    "박물관": 128,
+    "미술관": 48,
+    "생활문화센터": 3,
+    "문예회관": 21,
+    "지방문화원": 25,
+    "문화의집": 5
+   },
+   "source_rows_seoul": 412,
+   "final_rows": 412,
+   "subtype_counts": {
+    "공공도서관": 180,
+    "박물관": 128,
+    "미술관": 48,
+    "지방문화원": 25,
+    "문예회관": 21,
+    "문화의집": 5,
+    "생활문화센터": 3,
+    "국립도서관": 2
+   },
+   "geocoding": {
+    "rows": 412,
+    "coord_rows": 400,
+    "coord_rate": 0.9709,
+    "coord_method": {
+     "geocode_kakao_exact": 400,
+     "unresolved": 12
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 0,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 25,
+    "same_coord_rows": 55,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "공공도서관": 0.9778,
+    "국립도서관": 1.0,
+    "문예회관": 1.0,
+    "문화의집": 0.8,
+    "미술관": 0.9792,
+    "박물관": 0.9688,
+    "생활문화센터": 0.6667,
+    "지방문화원": 0.96
+   }
+  },
+  "2025_01": {
+   "source_file": "mcst_총람_2025_20250101.xlsx",
+   "sheets_in_file": [
+    "국립도서관",
+    "공공도서관",
+    "박물관",
+    "미술관",
+    "생활문화센터",
+    "문예회관",
+    "지방문화원",
+    "문화의집",
+    "문학관",
+    "(부록)지역문화재단"
+   ],
+   "source_rows_seoul_by_sheet": {
+    "국립도서관": 3,
+    "공공도서관": 212,
+    "박물관": 138,
+    "미술관": 46,
+    "생활문화센터": 19,
+    "문예회관": 29,
+    "지방문화원": 25,
+    "문화의집": 4
+   },
+   "source_rows_seoul": 476,
+   "final_rows": 476,
+   "subtype_counts": {
+    "공공도서관": 212,
+    "박물관": 138,
+    "미술관": 46,
+    "문예회관": 29,
+    "지방문화원": 25,
+    "생활문화센터": 19,
+    "문화의집": 4,
+    "국립도서관": 3
+   },
+   "geocoding": {
+    "rows": 476,
+    "coord_rows": 470,
+    "coord_rate": 0.9874,
+    "coord_method": {
+     "geocode_kakao_exact": 469,
+     "unresolved": 6,
+     "geocode_vworld_exact": 1
+    },
+    "outside_seoul": 0,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 0,
+    "norm_dup_name_addr": 1,
+    "norm_dup_name_addr_same_subtype": 0,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 29,
+    "same_coord_rows": 64,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "공공도서관": 0.9906,
+    "국립도서관": 1.0,
+    "문예회관": 1.0,
+    "문화의집": 1.0,
+    "미술관": 1.0,
+    "박물관": 0.9783,
+    "생활문화센터": 0.9474,
+    "지방문화원": 1.0
+   }
+  }
+ },
+ "excluded_sheets": [
+  "문학관",
+  "(부록)지역문화재단"
+ ],
+ "facility_id_rule": "mb.assign_ids(0 명칭+주소키+subtype, 1 명칭+주소키, 2 명칭 유일, 3 주소키+subtype 유일, 4 좌표 50m 이내+명칭 앞4자). 정규화=괄호·법인격·기호 제거, 주소키=도로명+건물번호(없으면 동+번지)",
+ "id_matching": {
+  "matched": 388,
+  "by_rule": {
+   "name+addr+subtype": 316,
+   "addr+subtype": 36,
+   "name": 32,
+   "coord50m+name4": 3,
+   "name+addr": 1
+  },
+  "only_2020": 24,
+  "only_2025": 88
+ },
+ "official_check": {
+  "2020_01": {
+   "chongram_public_library": 180,
+   "libsta_public_library": 180
+  },
+  "2025_01": {
+   "chongram_public_library": 212,
+   "libsta_public_library": 212
+  }
+ },
+ "official_check_note": "총람 xlsx에는 시도별 집계표가 없어 시트 행수가 곧 공식 수. 공공도서관은 국가도서관통계 명부 행수와 대조."
+}

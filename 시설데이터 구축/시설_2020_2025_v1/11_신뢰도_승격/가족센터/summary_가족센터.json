@@ -1,0 +1,68 @@
+{
+ "2020_01": {
+  "rows": 27,
+  "by_scope": {
+   "자치구본소": 25,
+   "광역·중앙": 2
+  },
+  "main_gu_n": 25,
+  "main_gu_missing": [],
+  "main_dup_gu": [],
+  "coord_rate_before": 0.963,
+  "coord_rate_after": 0.963,
+  "coord_rate_main": 0.96,
+  "filled": [],
+  "still_missing": [
+   {
+    "name": "강동구 건강가정지원센터",
+    "address": "서울특별시 강동구 양재대로138길 41 2층"
+   }
+  ]
+ },
+ "2025_01": {
+  "rows": 41,
+  "by_scope": {
+   "자치구본소": 25,
+   "지점": 15,
+   "광역·중앙": 1
+  },
+  "main_gu_n": 25,
+  "main_gu_missing": [],
+  "main_dup_gu": [],
+  "coord_rate_before": 0.9756,
+  "coord_rate_after": 0.9756,
+  "coord_rate_main": 1.0,
+  "filled": [],
+  "still_missing": [
+   {
+    "name": "성북구 가족센터 2센터",
+    "address": "서울특별시 성북구 정릉로61-6 성북온가족행복지원센터"
+   }
+  ]
+ },
+ "continuity": {
+  "same_address": 20,
+  "moved": [
+   {
+    "gu": "광진구",
+    "moved_m": 1192.0
+   },
+   {
+    "gu": "양천구",
+    "moved_m": 1304.0
+   },
+   {
+    "gu": "동작구",
+    "moved_m": 3124.0
+   },
+   {
+    "gu": "서초구",
+    "moved_m": 3269.0
+   },
+   {
+    "gu": "강동구",
+    "moved_m": NaN
+   }
+  ]
+ }
+}

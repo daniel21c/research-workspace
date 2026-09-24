@@ -1,0 +1,577 @@
+{
+ "type": "공공체육시설",
+ "grade": "C",
+ "note_grade": "연간 공식 명부(연말 기준)",
+ "snapshots": {
+  "2020_01": {
+   "source_file": "mcst_공공체육시설_2019말_총괄.xlsx",
+   "source_rows_seoul_by_sheet": {
+    "육상경기장": 3,
+    "축구장": 74,
+    "하키장": 1,
+    "야구장": 19,
+    "싸이클경기장": 1,
+    "테니스장": 66,
+    "씨름장": 0,
+    "구기체육관": 44,
+    "투기체육관": 2,
+    "생활체육관": 100,
+    "게이트볼장": 22,
+    "수영장": 95,
+    "롤러스케이트장": 16,
+    "사격장": 0,
+    "국궁장": 8,
+    "양궁장": 0,
+    "승마장": 0,
+    "골프연습장": 35,
+    "조정카누장": 0,
+    "요트장": 0,
+    "빙상장": 3,
+    "스키점프경기장": 0,
+    "바이애슬론경기장": 0,
+    "크로스컨트리경기장": 0,
+    "봅슬레이,루지,스켈레톤경기장": 0,
+    "기타체육시설": 40
+   },
+   "source_rows_seoul": 529,
+   "rows_without_address": 310,
+   "coords_borrowed_from_other_snapshot": 18,
+   "final_rows": 529,
+   "subtype_counts": {
+    "생활체육관": 100,
+    "수영장": 95,
+    "축구장": 74,
+    "테니스장": 66,
+    "구기체육관": 44,
+    "기타체육시설": 40,
+    "골프연습장": 35,
+    "게이트볼장": 22,
+    "야구장": 19,
+    "롤러스케이트장": 16,
+    "국궁장": 8,
+    "육상경기장": 3,
+    "빙상장": 3,
+    "투기체육관": 2,
+    "싸이클경기장": 1,
+    "하키장": 1
+   },
+   "geocoding": {
+    "rows": 529,
+    "coord_rows": 415,
+    "coord_rate": 0.7845,
+    "coord_method": {
+     "geocode_kakao_exact": 207,
+     "borrowed_official_list_name_gu": 130,
+     "unresolved": 114,
+     "kakao_place_name_gu": 78
+    },
+    "outside_seoul": 3,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 6,
+    "norm_dup_name_addr": 7,
+    "norm_dup_name_addr_same_subtype": 6,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 70,
+    "same_coord_rows": 186,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "게이트볼장": 0.5455,
+    "골프연습장": 0.6857,
+    "구기체육관": 0.8636,
+    "국궁장": 0.875,
+    "기타체육시설": 0.825,
+    "롤러스케이트장": 0.5625,
+    "빙상장": 1.0,
+    "생활체육관": 0.76,
+    "수영장": 0.8421,
+    "싸이클경기장": 0.0,
+    "야구장": 0.6842,
+    "육상경기장": 1.0,
+    "축구장": 0.7838,
+    "테니스장": 0.8939,
+    "투기체육관": 0.0,
+    "하키장": 0.0
+   },
+   "coord_fill": {
+    "stage_counts": {
+     "before": 187,
+     "stage1": 2,
+     "stage2a_OA1115": 0,
+     "stage2b_OA21779": 130,
+     "stage3_kakao_place": 78
+    },
+    "by_stage": {
+     "0_source_address": 187,
+     "2b_OA-21779_name_gu": 130,
+     "unresolved": 114,
+     "3_kakao_place": 78,
+     "borrow_other_snapshot_same_id": 18,
+     "1_address_normalized": 2
+    },
+    "by_method": {
+     "geocode_kakao_exact": 207,
+     "borrowed_official_list_name_gu": 130,
+     "unresolved": 114,
+     "kakao_place_name_gu": 78
+    },
+    "final_coord_rate": 0.7845,
+    "reject_reasons": {
+     "2a_OA-1115_address_geocode_fail": 30,
+     "2b_no_name_gu_match": 179,
+     "2b_borrowed_address_geocode_fail": 11,
+     "2b_type_incompatible": 2,
+     "3_no_result": 92,
+     "3_gu_unknown": 2,
+     "3_no_candidate_gu_or_keyword": 10,
+     "3_ambiguous_multiple": 7,
+     "3_single_low_similarity": 3
+    },
+    "note": "1단계 정확 일치 재조회, 2단계 OA-1115 주소/OA-21779 명칭+자치구+종목(좌표 열 없어 그 주소를 정확 지오코딩), 3단계 Kakao 키워드(자치구 일치+종목어, 유일 또는 유사도 확실 1위). 2·3단계 좌표는 명칭 대응에 기댄 것이라 오차 가능"
+   },
+   "official_check": {
+    "육상경기장": {
+     "official_seoul_count": 3,
+     "parsed_rows": 3,
+     "diff": 0
+    },
+    "축구장": {
+     "official_seoul_count": 74,
+     "parsed_rows": 74,
+     "diff": 0
+    },
+    "하키장": {
+     "official_seoul_count": 1,
+     "parsed_rows": 1,
+     "diff": 0
+    },
+    "야구장": {
+     "official_seoul_count": 19,
+     "parsed_rows": 19,
+     "diff": 0
+    },
+    "싸이클경기장": {
+     "official_seoul_count": 1,
+     "parsed_rows": 1,
+     "diff": 0
+    },
+    "테니스장": {
+     "official_seoul_count": 66,
+     "parsed_rows": 66,
+     "diff": 0
+    },
+    "씨름장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "체육관": {
+     "official_seoul_count": 146,
+     "parsed_rows": 146,
+     "diff": 0
+    },
+    "구기체육관": {
+     "official_seoul_count": 44,
+     "parsed_rows": 44,
+     "diff": 0
+    },
+    "투기체육관": {
+     "official_seoul_count": 2,
+     "parsed_rows": 2,
+     "diff": 0
+    },
+    "생활체육관": {
+     "official_seoul_count": 100,
+     "parsed_rows": 100,
+     "diff": 0
+    },
+    "전천후게이트볼장": {
+     "official_seoul_count": 22,
+     "parsed_rows": 22,
+     "diff": 0
+    },
+    "수영장": {
+     "official_seoul_count": 95,
+     "parsed_rows": 95,
+     "diff": 0
+    },
+    "롤러스케이트장": {
+     "official_seoul_count": 16,
+     "parsed_rows": 16,
+     "diff": 0
+    },
+    "사격장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "국궁장": {
+     "official_seoul_count": 8,
+     "parsed_rows": 8,
+     "diff": 0
+    },
+    "양궁장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "승마장": {
+     "official_seoul_count": 0,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "골프연습장": {
+     "official_seoul_count": 35,
+     "parsed_rows": 35,
+     "diff": 0
+    },
+    "조정카누장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "요트장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "빙상장": {
+     "official_seoul_count": 3,
+     "parsed_rows": 3,
+     "diff": 0
+    },
+    "설상경기장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "기타시설": {
+     "official_seoul_count": 40,
+     "parsed_rows": 40,
+     "diff": 0
+    }
+   },
+   "official_total": {
+    "official_total_incl_village": 3005,
+    "official_village": 2476,
+    "official_individual": 529,
+    "parsed_individual": 529,
+    "note": "체육관 소계는 구기+투기+생활, 기타시설은 풋살장+그외(2024)로 합산 비교"
+   },
+   "village_table": {
+    "file": "간이운동장_구별_2020_01.csv",
+    "rows_gu": 25,
+    "sum_시설수": 2476.0,
+    "sum_유형합": 2476.0,
+    "계_row": [
+     2476.0
+    ],
+    "source": "mcst_공공체육시설_2019말_마을체육시설.xlsx!서울"
+   }
+  },
+  "2025_01": {
+   "source_file": "mcst_공공체육시설_2024말_종합본.xlsx",
+   "source_rows_seoul_by_sheet": {
+    "육상경기장": 3,
+    "축구장": 74,
+    "하키장": 1,
+    "야구장": 23,
+    "싸이클경기장": 1,
+    "테니스장": 76,
+    "씨름장": 0,
+    "구기체육관": 51,
+    "투기체육관": 1,
+    "생활체육관": 114,
+    "게이트볼장": 31,
+    "수영장": 99,
+    "롤러스케이트장": 14,
+    "사격장": 0,
+    "국궁장": 8,
+    "양궁장": 0,
+    "승마장": 0,
+    "골프연습장": 33,
+    "조정카누장": 0,
+    "요트장": 0,
+    "빙상장": 3,
+    "스키점프경기장": 0,
+    "바이애슬론경기장": 0,
+    "크로스컨트리경기장": 0,
+    "봅슬레이,루지,스켈레톤경기장": 0,
+    "파크골프장": 23,
+    "기타체육시설(풋살장)": 34,
+    "기타체육시설(그외)": 127
+   },
+   "source_rows_seoul": 716,
+   "rows_without_address": 362,
+   "coords_borrowed_from_other_snapshot": 0,
+   "final_rows": 716,
+   "subtype_counts": {
+    "기타체육시설(그외)": 127,
+    "생활체육관": 114,
+    "수영장": 99,
+    "테니스장": 76,
+    "축구장": 74,
+    "구기체육관": 51,
+    "기타체육시설(풋살장)": 34,
+    "골프연습장": 33,
+    "게이트볼장": 31,
+    "파크골프장": 23,
+    "야구장": 23,
+    "롤러스케이트장": 14,
+    "국궁장": 8,
+    "육상경기장": 3,
+    "빙상장": 3,
+    "투기체육관": 1,
+    "하키장": 1,
+    "싸이클경기장": 1
+   },
+   "geocoding": {
+    "rows": 716,
+    "coord_rows": 579,
+    "coord_rate": 0.8087,
+    "coord_method": {
+     "geocode_kakao_exact": 311,
+     "borrowed_official_list_name_gu": 176,
+     "unresolved": 137,
+     "kakao_place_name_gu": 90,
+     "geocode_vworld_exact": 2
+    },
+    "outside_seoul": 4,
+    "note": "명부에 좌표가 없어 과거 명부 주소를 현재(2026-09) 지오코더(Kakao 우선, VWorld 보조)로 좌표화함. 건물번호/번지 일치만 채택."
+   },
+   "duplicates": {
+    "exact_dup_name_addr": 8,
+    "norm_dup_name_addr": 15,
+    "norm_dup_name_addr_same_subtype": 10,
+    "note": "같은 기관이 여러 subtype(예: 방문요양+방문목욕)으로 올라 있으면 명칭+주소 중복으로 셈. 같은 subtype 안 중복은 별도 열",
+    "same_coord_groups": 108,
+    "same_coord_rows": 287,
+    "duplicate_facility_id": 0
+   },
+   "geocoding_by_subtype": {
+    "게이트볼장": 0.4839,
+    "골프연습장": 0.7879,
+    "구기체육관": 0.902,
+    "국궁장": 0.875,
+    "기타체육시설(그외)": 0.6063,
+    "기타체육시설(풋살장)": 0.8235,
+    "롤러스케이트장": 0.6429,
+    "빙상장": 1.0,
+    "생활체육관": 0.9386,
+    "수영장": 0.9596,
+    "싸이클경기장": 0.0,
+    "야구장": 0.7391,
+    "육상경기장": 1.0,
+    "축구장": 0.8108,
+    "테니스장": 0.8289,
+    "투기체육관": 0.0,
+    "파크골프장": 1.0,
+    "하키장": 0.0
+   },
+   "coord_fill": {
+    "stage_counts": {
+     "before": 311,
+     "stage1": 2,
+     "stage2a_OA1115": 0,
+     "stage2b_OA21779": 176,
+     "stage3_kakao_place": 90
+    },
+    "by_stage": {
+     "0_source_address": 311,
+     "2b_OA-21779_name_gu": 176,
+     "unresolved": 137,
+     "3_kakao_place": 90,
+     "1_address_normalized": 2
+    },
+    "by_method": {
+     "geocode_kakao_exact": 311,
+     "borrowed_official_list_name_gu": 176,
+     "unresolved": 137,
+     "kakao_place_name_gu": 90,
+     "geocode_vworld_exact": 2
+    },
+    "final_coord_rate": 0.8087,
+    "reject_reasons": {
+     "2b_no_name_gu_match": 209,
+     "2b_borrowed_address_geocode_fail": 10,
+     "2b_type_incompatible": 7,
+     "2b_multiple_candidates": 1,
+     "3_no_result": 116,
+     "3_ambiguous_multiple": 9,
+     "3_gu_unknown": 2,
+     "3_no_candidate_gu_or_keyword": 6,
+     "3_single_low_similarity": 4
+    },
+    "note": "1단계 정확 일치 재조회, 2단계 OA-1115 주소/OA-21779 명칭+자치구+종목(좌표 열 없어 그 주소를 정확 지오코딩), 3단계 Kakao 키워드(자치구 일치+종목어, 유일 또는 유사도 확실 1위). 2·3단계 좌표는 명칭 대응에 기댄 것이라 오차 가능"
+   },
+   "official_check": {
+    "육상경기장": {
+     "official_seoul_count": 3,
+     "parsed_rows": 3,
+     "diff": 0
+    },
+    "축구장": {
+     "official_seoul_count": 74,
+     "parsed_rows": 74,
+     "diff": 0
+    },
+    "하키장": {
+     "official_seoul_count": 1,
+     "parsed_rows": 1,
+     "diff": 0
+    },
+    "야구장": {
+     "official_seoul_count": 23,
+     "parsed_rows": 23,
+     "diff": 0
+    },
+    "싸이클경기장": {
+     "official_seoul_count": 1,
+     "parsed_rows": 1,
+     "diff": 0
+    },
+    "테니스장": {
+     "official_seoul_count": 76,
+     "parsed_rows": 76,
+     "diff": 0
+    },
+    "씨름장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "체육관": {
+     "official_seoul_count": 166,
+     "parsed_rows": 166,
+     "diff": 0
+    },
+    "구기체육관": {
+     "official_seoul_count": 51,
+     "parsed_rows": 51,
+     "diff": 0
+    },
+    "투기체육관": {
+     "official_seoul_count": 1,
+     "parsed_rows": 1,
+     "diff": 0
+    },
+    "생활체육관": {
+     "official_seoul_count": 114,
+     "parsed_rows": 114,
+     "diff": 0
+    },
+    "전천후게이트볼장": {
+     "official_seoul_count": 31,
+     "parsed_rows": 31,
+     "diff": 0
+    },
+    "수영장": {
+     "official_seoul_count": 99,
+     "parsed_rows": 99,
+     "diff": 0
+    },
+    "롤러스케이트장": {
+     "official_seoul_count": 14,
+     "parsed_rows": 14,
+     "diff": 0
+    },
+    "사격장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "국궁장": {
+     "official_seoul_count": 8,
+     "parsed_rows": 8,
+     "diff": 0
+    },
+    "양궁장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "승마장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "골프연습장": {
+     "official_seoul_count": 33,
+     "parsed_rows": 33,
+     "diff": 0
+    },
+    "조정카누장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "요트장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "빙상장": {
+     "official_seoul_count": 3,
+     "parsed_rows": 3,
+     "diff": 0
+    },
+    "설상경기장": {
+     "official_seoul_count": null,
+     "parsed_rows": 0,
+     "diff": 0
+    },
+    "파크골프장": {
+     "official_seoul_count": 23,
+     "parsed_rows": 23,
+     "diff": 0
+    },
+    "기타시설": {
+     "official_seoul_count": 161,
+     "parsed_rows": 161,
+     "diff": 0
+    },
+    "풋살장": {
+     "official_seoul_count": 34,
+     "parsed_rows": 34,
+     "diff": 0
+    },
+    "그외": {
+     "official_seoul_count": 127,
+     "parsed_rows": 127,
+     "diff": 0
+    }
+   },
+   "official_total": {
+    "official_total_incl_village": 3254,
+    "official_village": 2538,
+    "official_individual": 716,
+    "parsed_individual": 716,
+    "note": "체육관 소계는 구기+투기+생활, 기타시설은 풋살장+그외(2024)로 합산 비교"
+   },
+   "village_table": {
+    "file": "간이운동장_구별_2025_01.csv",
+    "rows_gu": 25,
+    "sum_시설수": 2538.0,
+    "sum_유형합": 2538.0,
+    "계_row": [
+     2538.0
+    ],
+    "source": "mcst_공공체육시설_2024말_종합본.xlsx!01서울"
+   }
+  }
+ },
+ "facility_id_rule": "mb.assign_ids(0 명칭+주소키+subtype, 1 명칭+주소키, 2 명칭 유일, 3 주소키+subtype 유일, 4 좌표 50m 이내+명칭 앞4자). 정규화=괄호·법인격·기호 제거, 주소키=도로명+건물번호(없으면 동+번지) 같은 명칭이 여러 종목 시트에 있으면 명칭+주소+종목 규칙이 먼저 적용됨",
+ "id_matching": {
+  "matched": 430,
+  "by_rule": {
+   "name+addr+subtype": 355,
+   "name+addr": 32,
+   "name": 25,
+   "addr+subtype": 18
+  },
+  "only_2020": 99,
+  "only_2025": 286
+ }
+}
