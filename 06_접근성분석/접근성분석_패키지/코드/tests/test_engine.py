@@ -296,6 +296,42 @@ def _duckdb_check(e, year, grid, ku, T):
     print(f'  DuckDB SQL 독립 구현 대조: {len(m):,}행 모두 일치')
 
 
+def test_dmai_common_categories():
+    """ΔMAI 종합 = 두 경계 모두 값이 있는 카테고리의 Δ 평균 (지표정의_확정.md 3.3). 종합 MAI 끼리 빼면 0 이 되는 예."""
+    import a06c_delta as D
+    rows = [  # 동 1: LZ 는 A=2·B=3 (종합 2.5), LD 는 A=2.5 만 (종합 2.5) → 공통 A 의 Δ = +0.5
+        (1, 'lz116', 'A', 2.0), (1, 'lz116', 'B', 3.0), (1, 'lz116', '종합', 2.5),
+        (1, 'ld', 'A', 2.5), (1, 'ld', 'B', np.nan), (1, 'ld', '종합', 2.5),
+        # 동 2: 공통 카테고리 없음 → 정의 안 됨
+        (2, 'lz116', 'A', 1.0), (2, 'lz116', 'B', np.nan), (2, 'lz116', '종합', 1.0),
+        (2, 'ld', 'A', np.nan), (2, 'ld', 'B', 2.0), (2, 'ld', '종합', 2.0)]
+    u = pd.DataFrame(rows, columns=['unit_id', 'b', 'cat', 'MAI']).assign(unit_level='dong424', year=2025)
+    d = D.dong_delta(u, 'MAI'); n = D.dmai_common_n(u)
+    assert _close(d.loc[1], 0.5, TOL) and pd.isna(d.loc[2]), d
+    assert n.loc[1] == 1 and n.loc[2] == 0, n
+
+
+def test_supply_dedup_real():
+    """2SFCA 공급 중복 제거(실자료 2025): 시설 항목은 (이름·좌표) 중복 없음, 카테고리 공급 ≤ 소속 시설 항목 합,
+    문화 카테고리는 문화기반시설의 공공도서관만큼 이상 작다."""
+    gm = pd.read_parquet(C.DATA / 'grid' / 'grid100_master.parquet', columns=['grid_cd'])
+    gm = gm.reset_index(drop=True); gm['gi'] = np.arange(len(gm))
+    items, S, dd = E.build_supply(2025, 100, 'with', gm)
+    tot = {k: S[:, j].sum() for j, (t, k) in enumerate(items)}
+    typ = {k: t for t, k in items}
+    for cat, facs in C.CAT_A.items():
+        s_fac = sum(tot[f] for f in facs if f in tot)
+        assert tot[cat] <= s_fac, (cat, tot[cat], s_fac)
+    assert tot['문화'] <= tot['공공도서관'] + tot['문화기반시설'] + tot['등록공연장'] - dd['category_library_removed']
+    assert dd['category_library_removed'] > 0 and dd['facility_dup_removed'] > 0, dd
+    f = pd.read_parquet(C.UNITS_PARQUET, columns=['year', '시설', '분석가능', 'role', 'cat_A', 'grid100_cd', 'name', 'x_5179', 'y_5179'])
+    f = f[(f.year == 2025) & f['분석가능'].astype(bool) & (f.role.astype(str) != 'control') & f.cat_A.isin(list(C.CAT_A)) & f.grid100_cd.isin(gm.grid_cd)]
+    for fac in ['공공도서관', '어린이집', '일반음식점']:
+        x = f[f['시설'] == fac]
+        assert tot[fac] == len(x.drop_duplicates(['name', 'x_5179', 'y_5179'])), fac
+    print(f'  공급 중복 제거: {dd}')
+
+
 if __name__ == '__main__':
     tests = [v for k, v in sorted(globals().items()) if k.startswith('test_') and callable(v)]
     fails = 0

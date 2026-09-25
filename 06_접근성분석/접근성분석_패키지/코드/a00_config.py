@@ -75,3 +75,26 @@ CAT_B = [
 BOUNDARY_CONDS = ['none','dong','lz','ld','ku']
 # 2SFCA 보고 우선 항목(공공시설 단일 종, 지표정의_확정.md 3.4)
 SFCA_PUBLIC = ['공공도서관', '주민센터', '보건소·보건지소', '어린이집', '유치원', '학교', '노인 이용시설']
+# 2SFCA 카테고리 공급에서 빼는 행: 다른 종과 같은 시설(문화기반시설의 공공도서관 = 공공도서관 종). 시설 항목에서는 빼지 않는다.
+SUPPLY_CAT_EXCLUDE = {'문화기반시설': ['공공도서관']}
+
+# 시설–경계 연결표(a02 산출)가 만들어진 원본의 해시 기록 — a02가 쓰고 a06·a10이 읽는다
+UNITS_PARQUET = DATA / 'facility' / 'facility_2020_2025_units.parquet'
+UNITS_SOURCE_JSON = DATA / 'facility' / 'facility_2020_2025_units.source.json'
+
+
+def units_source_sha256():
+    """연결표를 만든 시설 원본의 SHA-256 (기록이 없으면 None)."""
+    import json
+    try:
+        return json.loads(UNITS_SOURCE_JSON.read_text(encoding='utf-8'))['source_sha256']
+    except (OSError, KeyError, ValueError):
+        return None
+
+
+def runtime_env():
+    """실행 환경(파이썬·핵심 라이브러리 판). 결과 재현 조건으로 run_meta에 남긴다."""
+    import platform, sys
+    import numpy, pandas, pyarrow
+    return dict(python=sys.version.split()[0], platform=platform.platform(), numpy=numpy.__version__,
+                pandas=pandas.__version__, pyarrow=pyarrow.__version__)

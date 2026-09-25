@@ -1,4 +1,6 @@
-# 06_accessibility scripts (a01-a09). Python 3.10+
+# 06_accessibility package scripts (a00-a10, a99). Python 3.10+
+# Final results (access-engine-v3, 2026-09-25) were produced with: Python 3.12.10, numpy 2.4.4, pandas 3.0.2, pyarrow 23.0.1
+# (each run_meta_*.json records the exact versions under "env").
 numpy>=1.24
 pandas>=2.0
 pyarrow>=14
@@ -7,5 +9,7 @@ shapely>=2.0
 geopandas>=0.14
 pyogrio>=0.7
 pyproj>=3.5
-osmium>=3.6      # pyosmium, only for a04_network.py (OSM pbf extraction)
+tabulate>=0.9     # a02_facility_boundary.py (DataFrame.to_markdown in the build record)
+osmium>=3.6       # pyosmium, only for a04_network.py (OSM pbf extraction)
 matplotlib>=3.7   # a07_study3_outputs.py (T5/F3 figures; Korean font Malgun Gothic on Windows)
+duckdb>=0.10      # optional: tests/test_engine.py SQL cross-check (skipped when missing)

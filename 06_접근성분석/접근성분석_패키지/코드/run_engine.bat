@@ -1,8 +1,8 @@
 @echo off
-REM run_engine.bat - access engine v2 (a06: travel time, Coverage, MAI, 2SFCA) for all runs,
+REM run_engine.bat - access engine v3 (a06: travel time, Coverage, MAI, 2SFCA) for all runs,
 REM summaries (a06b), study-3 tables/figures (a07), district table (a08), unit tests and verification (a10).
 REM Run from any folder; paths are relative to this file. Needs Python 3.10+ with numpy, pandas, pyarrow.
-REM Usage:  run_engine.bat          (all runs, about 6 minutes; then summaries, tables, figures)
+REM Usage:  run_engine.bat          (all runs + summaries, tables, figures, verification: about 8 minutes)
 REM         run_engine.bat test     (one district test only: Jongno-gu 11010, 2025, 100 m; output in %TEMP%)
 REM         run_engine.bat facility (first rebuild the facility-boundary table a02, then all runs)
 REM Outputs: the package folder data\results (see a00_config.OUT).

@@ -19,6 +19,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import a00_config as C  # noqa: E402
 import a99_manifest as M  # noqa: E402
+import a06c_delta as D  # noqa: E402
 
 TAB = C.OUT / 'tables'; FIG = C.OUT / 'figures'
 CATS = list(C.CAT_A) + ['종합']
@@ -33,6 +34,10 @@ def dong_delta_all(year):
     p = p.reset_index().rename(columns={'unit_id': 'dong424'})
     p['dCOV'] = p['COV_ld'] - p['COV_lz116']
     p['dMAI'] = p['MAI_ld'] - p['MAI_lz116']
+    # 종합 ΔMAI 는 두 경계 모두 값이 있는 카테고리의 Δ 평균(a06c_delta, 지표정의_확정.md 3.3) — 종합 MAI 끼리 빼지 않는다
+    comp = p['cat'] == '종합'
+    p.loc[comp, 'dMAI'] = p.loc[comp, 'dong424'].map(D.dong_delta(u, 'MAI')).values
+    p['n_cat_dMAI'] = np.where(comp, p['dong424'].map(D.dmai_common_n(u)), np.where(p['dMAI'].notna(), 1, 0))
     p['year'] = year
     return p
 
@@ -136,7 +141,7 @@ def f3():
     ld = gpd.read_file(gp, layer='leiden_2025_116')
     ku = dong.dissolve('Ku')
     p = dong_delta_all(2025)
-    comp = p[p.cat == '종합'][['dong424', 'COV_lz116', 'COV_ld', 'dCOV', 'MAI_lz116', 'MAI_ld', 'dMAI']]
+    comp = p[p.cat == '종합'][['dong424', 'COV_lz116', 'COV_ld', 'dCOV', 'MAI_lz116', 'MAI_ld', 'dMAI', 'n_cat_dMAI']]
     g = dong.merge(comp, left_on='Dong', right_on='dong424', how='left')
     assert g['dCOV'].notna().sum() == 424, '동 경계와 결과의 동 코드가 424개 모두 맞지 않음'
     out = g.drop(columns='geometry').drop(columns='dong424').rename(columns={'Dong': 'dong424', 'Ku': 'ku', 'ADM_NM': 'dong_name'})

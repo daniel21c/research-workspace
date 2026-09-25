@@ -13,6 +13,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import a00_config as C  # noqa: E402
+import a06c_delta as D  # noqa: E402
 
 BL = {'none': '없음', 'dong424': '동424', 'lz116': '공식 LZ116', 'ld': 'Leiden LD116', 'ku': '구25'}
 TAGS = {'main': '본 분석 (A 8개, T=15분, 4.0 km/h, 100m, 일상소매 포함)',
@@ -59,9 +60,8 @@ def seoul_comp(u):
 
 
 def dong_delta(u, year, col):
-    d = u[(u.unit_level == 'dong424') & (u.cat == '종합') & (u.year == year)]
-    p = d.pivot_table(index='unit_id', columns='b', values=col, observed=True)
-    return p['ld'] - p['lz116']
+    """동 종합 Δ(LD − LZ); MAI 는 공통 카테고리 평균(a06c_delta, 지표정의_확정.md 3.3)."""
+    return D.dong_delta(u, col, year)
 
 
 def summary_tag(tag):

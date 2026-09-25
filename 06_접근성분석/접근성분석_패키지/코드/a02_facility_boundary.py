@@ -146,6 +146,10 @@ def main():
     # ---------- 저장 ----------
     OUT_PQ.parent.mkdir(parents=True, exist_ok=True)
     fac.to_parquet(OUT_PQ, index=False)
+    import json
+    C.UNITS_SOURCE_JSON.write_text(json.dumps(dict(source=str(C.FACILITY_PARQUET.relative_to(C.BASE)).replace('\\', '/'),
+                                                   source_sha256=sha256(C.FACILITY_PARQUET), units_sha256=sha256(OUT_PQ)),
+                                              ensure_ascii=False, indent=1), encoding='utf-8', newline='\n')
     P(f'\n## 4. 출력\n- `{OUT_PQ.relative_to(C.ROOT)}` {len(fac):,}행 × {fac.shape[1]}열 (2026-09-25부터 csv 사본은 만들지 않음)')
     P('- 추가 열: dong424, dong424_name, ku, ku_name, lz116, ld2020, ld2025, dong424_method, cat_A, cat_A4, cat_B, tau_B_min, role, grid250_cd')
 

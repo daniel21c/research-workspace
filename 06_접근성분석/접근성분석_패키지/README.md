@@ -1,4 +1,4 @@
-# 서울 시설 접근성 패키지 2020 · 2025 (access-engine-v2)
+# 서울 시설 접근성 패키지 2020 · 2025 (access-engine-v3)
 
 서울 33종 시설(facility-v1.2) × 100 m 격자 인구 × OSM 보행망으로 **네 가지 접근성 지표**(도달시간·Coverage·MAI·2SFCA)를 두 시점, 다섯 경계 조건에서 계산한 결과와, 그것을 만든 입력·코드·정의·검증 문서를 한 폴더에 모은 패키지다. **다른 연구 코드는 이 패키지의 `데이터/결과/`만 참조한다.**
 
@@ -84,7 +84,7 @@ lib = s[(s.unit_level == 'dong424') & (s.b == 'none') & (s.item == '공공도서
 ## 5. 다시 만들기 (`코드/`)
 ```
 pip install -r 코드/requirements.txt                 # numpy, pandas, pyarrow, scipy, geopandas, matplotlib 등
-코드/run_engine.bat                                   # 시험 → 전 실행 세트 → 요약·표·그림 → 검증(a10). 이 PC 약 8분
+코드/run_engine.bat                                   # 시험 → 전 실행 세트 → 요약·표·그림 → 검증(a10). 이 PC 약 8분 (facility 옵션 포함 약 9분)
 코드/run_engine.bat facility                          # 시설 자료가 바뀌었을 때: a02(시설–경계 연결)부터
 python 코드/a10_verify.py --check-only                # 받은 파일의 해시만 확인(계산 없음)
 ```
@@ -97,5 +97,6 @@ python 코드/a10_verify.py --check-only                # 받은 파일의 해�
 | access-engine-v1 | 2026-09-24 | 도달시간·Coverage·MAI, 8개 실행 세트, facility-v1 |
 | (v1 재계산) | 2026-09-25 | facility-v1.1, 네트워크 고정 민감도(sens_net2025) 추가 |
 | access-engine-v2 | 2026-09-25 | **2SFCA 추가(네 번째 지표)**, facility-v1.2로 전 세트 재계산, 06 폴더를 이 패키지 하나로 정리, 무결성·신뢰성 검증 스크립트(a10) |
+| **access-engine-v3** | 2026-09-26 | 코드 점검(중복·누락·호환성) 반영 후 전 세트 재계산(**확정본**): 2SFCA 공급 중복 제거(문화기반시설의 공공도서관, 같은 이름·좌표 행), 연구3 ΔMAI 종합 = 두 경계 공통 카테고리의 Δ 평균(`코드/a06c_delta.py`), 시설–경계 연결표의 원본 해시 기록·검증(`데이터/입력/facility/facility_2020_2025_units.source.json`), `run_meta`에 실행 환경(파이썬·numpy·pandas·pyarrow 판) 기록, 단위시험 16개. 도달시간·Coverage·MAI 값은 v2와 모든 행이 같다(`문서/검증보고서.md` 3절). |
 
-정리하면서 뺀 것(facility-v1.1 기준 결과, 옛 공유패키지, 옛 _archive, 355 MB 시설 csv 사본, 종로구 시험 산출물, a09)은 `D:\Research\_archive\접근성분석_정리_20260925\`에 있다.
+정리하면서 뺀 코드·문서(옛 공유패키지 문서, 옛 _archive 기록, a09)는 `D:\Research\_archive\접근성분석_정리_20260925\`에 있다. 이전 판 결과 추출본(access-engine-v1·v1.1·v2 결과, 시설 csv 사본)은 v3 확정과 함께 삭제했다(2026-09-26 사용자 결정; 이력은 `문서/작업기록.md`·`데이터_배포목록.md`의 해시).

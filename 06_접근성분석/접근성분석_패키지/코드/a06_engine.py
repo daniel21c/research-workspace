@@ -36,7 +36,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import a00_config as C  # noqa: E402
 
-ENGINE_VERSION = 'access-engine-v2'   # v2 (2026-09-25): 2SFCA 추가, facility-v1.2
+ENGINE_VERSION = 'access-engine-v3'   # v2 (2026-09-25): 2SFCA 추가, facility-v1.2 / v3 (2026-09-25): 2SFCA 공급 중복 제거, 실행 환경·입력 해시 기록
 BOUNDS = ['none', 'dong424', 'lz116', 'ld', 'ku']          # 경계 조건 b (ld = 해당 연도 Leiden)
 UNIT_LEVELS = ['dong424', 'lz116', 'ld', 'ku', 'seoul']     # 집계 단위 u
 CAT_B_ORDER = ['교육', '돌봄', '의료', '체육', '편의']
@@ -248,23 +248,35 @@ def load_inputs(year: int, grid: int, catset: str, retail: str):
     return gm, CAT_B_ORDER, None, groups, info
 
 
+SUPPLY_KEY = ['name', 'x_5179', 'y_5179']      # 같은 시설 판정: 이름·좌표가 모두 같으면 한 곳(지표정의_확정.md 3.4)
+
+
 def build_supply(year: int, grid: int, retail: str, gm: pd.DataFrame):
-    """2SFCA 공급 행렬: 항목 = 기능 카테고리 8개 + 시설 28종, 값 = 격자별 분석가능 시설 개수(같은 격자 중복도 하나씩)."""
+    """2SFCA 공급 행렬: 항목 = 기능 카테고리 8개 + 시설 28종, 값 = 격자별 분석가능 시설 개수.
+    중복 제거(v3): 시설 항목은 (시설, 이름, 좌표)가 같은 행을 한 곳으로, 카테고리 항목은 문화기반시설 중 공공도서관 행
+    (공공도서관 종과 같은 시설)을 빼고 (카테고리, 이름, 좌표)가 같은 행을 한 곳으로 센다. Coverage·MAI 는 격자 비트라 영향 없음."""
     gcol = 'grid100_cd' if grid == 100 else 'grid250_cd'
-    f = pd.read_parquet(C.DATA / 'facility' / 'facility_2020_2025_units.parquet', columns=['year', '시설', '분석가능', 'cat_A', 'role', gcol])
+    f = pd.read_parquet(C.DATA / 'facility' / 'facility_2020_2025_units.parquet',
+                        columns=['year', '시설', '시설_세부', '분석가능', 'cat_A', 'role', gcol] + SUPPLY_KEY)
     f = f[(f['year'] == year) & f['분석가능'].astype(bool) & (f['role'].astype(str) != 'control') & f['cat_A'].isin(list(C.CAT_A))]
     if retail == 'without':
         f = f[f['시설'] != '일상소매']
     idx = pd.Series(gm['gi'].values, index=gm['grid_cd'].values)
     gi = f[gcol].map(idx)
     f = f[gi.notna()].assign(gi=gi[gi.notna()].astype(np.int64))
+    n0 = len(f)
+    fac = f.drop_duplicates(['시설'] + SUPPLY_KEY)
+    lib = (fac['시설'] == '문화기반시설') & fac['시설_세부'].isin(C.SUPPLY_CAT_EXCLUDE['문화기반시설'])
+    cat = fac[~lib].drop_duplicates(['cat_A'] + SUPPLY_KEY)
+    dedup = dict(rows_in=int(n0), facility_dup_removed=int(n0 - len(fac)), category_library_removed=int(lib.sum()),
+                 category_cross_type_removed=int((~lib).sum() - len(cat)))
     items = [('category', c) for c in C.CAT_A] + [('facility', s) for fs in C.CAT_A.values() for s in fs]
-    items = [(t, k) for t, k in items if (f['cat_A' if t == 'category' else '시설'] == k).any()]
+    items = [(t, k) for t, k in items if (fac['cat_A' if t == 'category' else '시설'] == k).any()]
     S = np.zeros((len(gm), len(items)), np.float64)
     for j, (t, k) in enumerate(items):
-        s = f[f['cat_A' if t == 'category' else '시설'] == k]
+        s = cat[cat['cat_A'] == k] if t == 'category' else fac[fac['시설'] == k]
         np.add.at(S[:, j], s['gi'].values, 1.0)
-    return items, S
+    return items, S, dedup
 
 
 def ttm_partitions(year: int, grid: int, ku: int | None, net_year: int | None = None):
@@ -391,7 +403,8 @@ def run(args):
     outdir = (Path(args.out_root) if args.out_root else C.OUT) / args.tag
     outdir.mkdir(parents=True, exist_ok=True)
     meta = dict(engine=ENGINE_VERSION, year=year, grid_m=grid, T_sec=T, speed_kmh=speed, catset=args.catset,
-                retail=args.retail, union=bool(args.union), tag=args.tag, ku=args.ku, ttm_rows=int(n_rows), **info)
+                retail=args.retail, union=bool(args.union), tag=args.tag, ku=args.ku, ttm_rows=int(n_rows), **info,
+                env=C.runtime_env(), facility_units_source_sha256=C.units_source_sha256())
     if net != year:                                   # 네트워크 고정 민감도일 때만 기록(기본 실행의 run_meta 는 그대로)
         meta['net_year'] = net
         meta['ttm_dirs'] = [f'데이터/입력/ttm/ttm{grid}_{net}'] + ([f'데이터/입력/ttm/ttm{grid}_{net}_for{year}']
@@ -490,10 +503,10 @@ def run(args):
         chk['r_b_le_r_none'] = bool(all((piv[b] <= piv['none']).all() for b in BOUNDS[1:]))
         chk['r_ku_ge_r_dong'] = bool((piv['dong424'] <= piv['ku']).all())   # 동 ⊂ 구
         if do_sfca:
-            items, S = build_supply(year, grid, args.retail, gm)
+            items, S, dedup = build_supply(year, grid, args.retail, gm)
             sres = sfca_access(np.concatenate(wo), np.concatenate(wd), popv, S, unit_codes)
             f_s, c_s, m_s = sfca_outputs(gm, items, S, sres, pos_cells, year, grid, T, speed, args.retail, outdir, suffix, args.save_sfca_grid)
-            files += f_s; chk.update(c_s); meta['sfca'] = m_s
+            files += f_s; chk.update(c_s); meta['sfca'] = {**m_s, 'supply_dedup': dedup}
         meta['checks'] = chk
     meta['files'] = [dict(file=(str(p.relative_to(C.ROOT)) if p.is_relative_to(C.ROOT) else str(p)).replace('\\', '/'),
                           sha256=sha256(p), bytes=p.stat().st_size) for p in files]
