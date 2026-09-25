@@ -1,0 +1,11 @@
+# 06_accessibility scripts (a01-a09). Python 3.10+
+numpy>=1.24
+pandas>=2.0
+pyarrow>=14
+scipy>=1.10
+shapely>=2.0
+geopandas>=0.14
+pyogrio>=0.7
+pyproj>=3.5
+osmium>=3.6      # pyosmium, only for a04_network.py (OSM pbf extraction)
+matplotlib>=3.7   # a07_study3_outputs.py (T5/F3 figures; Korean font Malgun Gothic on Windows)

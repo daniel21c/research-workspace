@@ -1,0 +1,11 @@
+# 06_접근성분석: 입력 자료·결과·공유 패키지 복사본은 Git에 넣지 않는다(저장소 README 규칙 3).
+# 해시는 04_구축기록/manifest_sha256.csv, 확정본 경로는 ../데이터_배포목록.md.
+01_data/
+03_output/
+05_공유패키지/*
+!05_공유패키지/README.md
+_archive/**/01_data/
+_archive/*_공유패키지_옛파일/
+# 2026-09-25 facility-v1 기준 결과 보관 사본(데이터)은 README만 추적
+_archive/2026-09-25_facility-v1_결과/*
+!_archive/2026-09-25_facility-v1_결과/README.md
