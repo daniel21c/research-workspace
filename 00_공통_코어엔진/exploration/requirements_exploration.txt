@@ -1,0 +1,5 @@
+# 탐색(x1~x14) 실행 환경. 먼저 정본 환경을 설치한다:  pip install -r ..\scripts\requirements.txt
+# 그 위에 추가로 필요한 것:  pip install -r requirements_exploration.txt
+matplotlib>=3.7      # x13 지도(output/proposal/maps/)
+# x7 은 spopt 대신 max-p 구성 단계를 직접 구현했다 (spopt 는 구에 따라 한 번에 수 분 이상 걸림) → spopt 불필요.
+# x5 (SBM) 만 graph-tool 필요 — Windows pip 설치 불가(conda-forge/WSL). 결과는 클라우드 실행본을 output\exploration\x5\ 에 동봉.

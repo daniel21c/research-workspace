@@ -132,7 +132,7 @@ def main():
     # 같은 이름의 정본은 이 스크립트가 다시 만든다 (이전 판은 data/_archive_* 에 보관)
     C.save_gpkg_layers(C.DONG_GPKG, {"epsg5179": dong, "epsg4326": dong.to_crs(C.CRS_GEOGRAPHIC)})
     C.save_gpkg_layers(C.LZ_GPKG, {"epsg5179": lz, "epsg4326": lz.to_crs(C.CRS_GEOGRAPHIC)})
-    m.to_csv(C.DONG_LZ_MAP, index=False, encoding="utf-8-sig")
+    m.to_csv(C.DONG_LZ_MAP, index=False, encoding="utf-8-sig", lineterminator="\n")   # LF 고정: 운영체제와 무관하게 같은 해시
     with pd.ExcelWriter(C.DONG_LZ_MAP.with_suffix(".xlsx")) as w:
         m.to_excel(w, sheet_name=f"mapping_{C.N_DONG}", index=False)
         (m.groupby(["Ku", "ku_name"]).agg(n_dongs=("Dong", "count"), n_living_zones=("life_zone_id", "nunique"))

@@ -17,8 +17,11 @@
 | 5 | `scripts/s05_validate.py` | `data/` 정본, `od_daily` | `output/validation_report_{ts}.md/.json` | s03과 다른 코드로 IFR·Q·연속성·ARI를 다시 계산해 대조 |
 | 6 | `scripts/s06_sensitivity.py` | 정본·민감도 실행 결과, 스캔 로그 | `output/sensitivity/` | τ·선정 규칙 민감도 비교, 구별 개수 진단. 정본은 바꾸지 않음 |
 | — | `scripts/코드설명_프로세스.md` | — | — | **공동연구자용 설명서**: 각 단계가 무엇을 왜 하는지, 시드·합의·최빈 분할·`*` 처리·개수 고정 이유·재현 방법 |
-| — | `scripts/run_all.bat` | — | — | 1→5 순서 실행 (Windows) |
+| — | `scripts/run_all.bat` | — | — | 1→5 순서 실행 (Windows). 영문 ASCII + CRLF (한글·LF면 cmd가 줄을 잘못 읽음) |
 | — | `scripts/requirements.txt` | — | — | 필요한 패키지 |
+| — | `exploration/` (x1~x14, bat 4개) | 정본 (읽기만) | `output/exploration/`, `output/proposal/`, `output/leiden/{y}_{태그}/` | 개수(k) 탐색·민감도·최적화 검증·이중 목표 제안 경계. **정본을 바꾸지 않는 탐색**. 안내 [exploration/README.md](exploration/README.md), 정리 [exploration/k최적화_작업정리.md](exploration/k최적화_작업정리.md) |
+| — | `audit/` (a1~a4) | 원자료·정본 (읽기만) | `output/audit_20260925/` | s01~s06과 다른 코드로 한 전수 검증(원자료 재집계, 경계 재현, Leiden 3,000회 재실행 대조). 안내 [audit/README.md](audit/README.md), 판정 결정기록 §17 |
+| — | [비교산출_사양.md](비교산출_사양.md) | 정본 | (예정) `output/compare/` | 공식 116 vs Leiden IoU·생활권별 IFR·지도 사양. 공통 정의표 7절 확정 후 `s07_compare_official.py`로 작성 |
 
 `data/`, `output/`은 Git에 들어가지 않는다. 정본의 해시는 `data/manifest.json`과 [../데이터_배포목록.md](../데이터_배포목록.md)에 적는다.
 
@@ -51,10 +54,10 @@
 |---|---|
 | 그래프 | `od_daily`에서 출발·도착이 모두 이 구인 행을 가져와 동 i–j 간선 가중치 = f_ij + f_ji (무방향). 동 안에서 끝나는 통행 f_ii는 **자기 루프로 포함** (결정 §4) |
 | 해상도 스캔 | γ = 0.01, 0.02, …, 2.50 (250개) 마다 아래 "합의"를 1회 수행. 결과를 모두 `resolution_scan_logs/`에 남긴다 |
-| 합의 ① (정본) | Leiden(RBConfiguration, 가중치, seed 없음)을 **3,000번** 실행. 동 쌍 (i,j)가 같은 커뮤니티였던 비율 P_ij (co-association). P_ij ≥ 0.5인 쌍을 이어 연결요소를 만든 것이 합의 분할. 라벨 번호를 쓰지 않으므로 **라벨 스위칭 문제가 없다** |
+| 합의 ① (정본) | Leiden(RBConfiguration, 가중치)을 **3,000번** 실행. 반복마다 다른 시드(구 base + 해상도×3,000 + 반복 번호, base는 실행마다 무작위로 뽑아 `run_seed.json`에 기록 — 결정기록 §3). 동 쌍 (i,j)가 같은 커뮤니티였던 비율 P_ij (co-association). P_ij ≥ 0.5인 쌍을 이어 연결요소를 만든 것이 합의 분할. 라벨 번호를 쓰지 않으므로 **라벨 스위칭 문제가 없다** |
 | 합의 ② (기록) | 같은 3,000개 결과를 번호 정규화(동코드 순으로 처음 나오는 묶음부터 0,1,2…)해 **가장 자주 나온 분할과 빈도**를 세고, ①과 같은 분할인지 기록. "3,000번 중 n번"이라는 숫자로 합의를 설명하기 위한 것 |
 | 평가 | 커뮤니티 수, Modularity Q (자기 루프 포함, python-louvain과 같은 정의), IFR = (출발이 이 구 & 출발·도착이 같은 커뮤니티인 통행량) / (출발이 이 구인 서울 내 모든 통행량) |
-| 선정 | 커뮤니티 수 == 구 목표 개수(공식 생활권 수)인 해상도 중 **Q 최대**, 동점이면 IFR 최대. 없으면 목표 아래/위 가장 가까운 해상도 사이를 100등분해 다시 스캔 |
+| 선정 | 커뮤니티 수 == 구 목표 개수(공식 생활권 수)인 해상도 중 **Q 최대**, 동점이면 IFR 최대, 그래도 같으면 가장 작은 γ(같은 분할이 여러 γ에서 나오므로 기록된 γ는 평탄 구간의 왼쪽 끝이다). 없으면 목표 아래/위 가장 가까운 해상도 사이를 100등분해 다시 스캔(정본·민감도 실행에서는 한 번도 쓰이지 않음) |
 | 안정성 | 확정 해상도에서 합의를 **10번 독립 반복**해 확정 분할과의 ARI(평균·최소), 한 번이라도 묶음이 바뀐 동 목록을 기록. 교수님 질문 "랜덤성 때문에 얼마나 달라지나"에 대한 답 |
 | 번호·확률 | 커뮤니티 번호는 총 출발통행량 내림차순 0,1,2… (번호에 의미 없음). 동별 `membership_prob` = 확정 묶음의 다른 동들과 같은 방이었던 평균 확률 |
 | 연속성 | 커뮤니티마다 공간 연결요소 수를 세어 끊어진 곳이 있으면 기록 |
@@ -67,7 +70,7 @@ s03 결과는 "실행 결과", 다른 연구가 읽는 것은 `data/`의 "정본
 
 ### 2.5 독립 교차검증 (s05)
 
-s03 코드를 쓰지 않고 정본 매핑 + `od_daily`만으로 IFR(커뮤니티·구·서울, 공식 생활권도 같은 식), Q(python-louvain 정의와 대조), 연속성, ARI(2020 vs 2025, vs 공식 생활권, vs 2025-10 보관본)를 다시 계산해 보고서로 남긴다. 구별 IFR과 Q가 s03 값과 다르면 문제로 표시한다.
+s03의 실행 결과(지표)를 쓰지 않고 정본 매핑 + `od_daily`만으로 IFR(커뮤니티·구·서울, 공식 생활권도 같은 식), Q(python-louvain 정의와 대조), 연속성, ARI(2020 vs 2025, vs 공식 생활권, vs 2025-10 보관본)를 다시 계산해 보고서로 남긴다. 구별 IFR과 Q가 s03 값과 다르면 문제로 표시한다. 단, `ari`·`modularity_q`·`contiguity` 함수는 s03 것을 가져다 쓴다(Q는 python-louvain으로 따로 대조). s03과 완전히 다른 코드로 한 전수 검증은 2026-09-25 감사(결정기록 §17).
 
 ## 3. 실행 순서 (Windows PC)
 
@@ -86,6 +89,10 @@ python s05_validate.py
 - 빠른 점검: `python s03_leiden_consensus.py --years 2020 --ku 11010 --n-iter 30 --res-step 0.1 --tag _test` (결과는 `output/leiden/2020_test/`에 따로 저장되고 정본에 영향 없음). `s04 --tag _test`는 `data/_preview/`에 쓰고, `s05 --preview`가 그것을 검사한다.
 - s02는 파일 단위로 부분 결과를 저장하므로 중간에 끊겨도 다시 실행하면 이어서 한다.
 - 2026-09-24 현재 s01~s05 정본 실행 완료, `data/` 정본 확정(`../데이터_배포목록.md`). 정본 실행 base 시드 2020 = 408008338, 2025 = 1089930980. 초 단위 시드로 만든 첫 실행 결과는 `output/_archive_run_20260924_clockseed/`, 축소 점검 결과는 `output/_smoke_test_20260923/`에 보관.
+- 2026-09-25 PC 점검: 위 빠른 점검(종로, 30회)이 정상 실행되고, s05를 PC에서 다시 돌린 보고서(`output/validation_report_20260925_005836.md`)가 2026-09-24 보고서와 경로·시각 외에 같다("문제 없음").
+- 민감도(s06): τ 0.4·0.6, IFR 우선 선정(§7.1), 목표 개수(§7.1a) 모두 실행 완료 → `output/sensitivity/`. 정본 유지.
+- 같은 폴더에 `run_seed.json`이 있으면 s03은 그 base 시드를 다시 쓴다(중단 후 이어서 실행용). 다른 `--seed`를 주면 멈춘다. 완전히 새 무작위 실행을 원하면 새 `--tag`로 돌린다. `_partial/`(구별 결과)은 파라미터·시드·입력 파일·코드·목표 개수가 모두 같을 때만 재사용되고, 실행 중 입력이 바뀌면 저장하지 않는다.
+- s04는 `data/`에 두 해를 함께만 올린다. s03이 지금의 입력 파일과 정본 설정으로 돈 결과인지 먼저 확인하고, 모든 연도를 검사한 뒤 한꺼번에 쓴다. 공동연구자가 정본을 건드리지 않고 재현을 확인하려면 `python s04_promote_canonical.py --out-dir <빈 폴더>` → 매핑 CSV 해시가 `data/manifest.json`과 같으면 된다(gpkg는 파일 안의 작성 시각 때문에 해시가 달라지므로 `python audit/a5_compare_gpkg.py data/seoul_boundaries_all.gpkg <빈 폴더>/seoul_boundaries_all.gpkg`로 내용을 대조).
 - 각 단계의 이유·시드·합의 방식·민감도 실행법은 [scripts/코드설명_프로세스.md](scripts/코드설명_프로세스.md).
 
 ## 4. 산출물이 정본이 되는 조건
@@ -97,4 +104,5 @@ python s05_validate.py
 ## 5. 아직 정해지지 않은 것 (연구2·4 대화가 정하면 반영)
 
 - Modularity Q, IoU의 최종 정의(공통 정의표 7절). 이 폴더의 Q는 "자기 루프 포함, python-louvain 정의"로 계산했다.
-- IFR·IoU 산출과 공식 생활권 비교표는 이전 판 `scripts/_legacy_20260922/boundary_metrics_engine.py`, `run_common_engine.py`에 있었으나 423동·pkl 입력이라 그대로 쓸 수 없다. 정의가 확정되면 `od_daily`와 424 정본을 입력으로 다시 쓴다.
+- IFR·IoU 산출과 공식 생활권 비교표는 이전 판 `scripts/_legacy_20260922/boundary_metrics_engine.py`, `run_common_engine.py`에 있었으나 423동·pkl 입력이라 그대로 쓸 수 없다. 정의가 확정되면 `od_daily`와 424 정본을 입력으로 다시 쓴다 → 입력·출력·검증 사양은 [비교산출_사양.md](비교산출_사양.md). 연구2가 확정안(IoU = 동 기준 1:1 배정, Σ∩/Σ∪)을 냈고 허브 반영을 기다리는 중(2026-09-25).
+- 제안 경계(`output/proposal/proposal_boundary_{연도}.gpkg`)의 인구 하한·판정 규칙·배포 여부 → [작업기록.md](작업기록.md) 2026-09-25 "사용자가 정할 것" Q1~Q5.

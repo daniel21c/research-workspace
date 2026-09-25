@@ -90,7 +90,8 @@ YEARS                = ("2020", "2025")
 RES_MIN, RES_MAX, RES_STEP = 0.01, 2.50, 0.01   # 해상도 전수 스캔 (250단계)
 N_ITER               = 3000        # 해상도마다 Leiden 반복 횟수 (co-association 누적)
 TAU                  = 0.5         # co-association 임계값
-SEED                 = None        # None = 실행마다 다른 난수 (결정기록 §3). 정수를 주면 i번째 실행 seed = SEED + i
+SEED                 = None        # 실행 base 시드. None = 실행마다 os.urandom 으로 뽑아 run_seed.json 에 기록 (결정기록 §3).
+                                   # 정수를 주면 그 값이 base. 구 i 의 해상도 j, k번째 Leiden 시드 = base + i×10^7 + j×N_ITER + k
 INCLUDE_SELF_LOOPS   = True        # 동 내부 통행(자기 루프)을 그래프에 포함 (결정기록 §4)
 SELECTION_PRIMARY    = "modularity"  # 목표 개수 일치 해상도 중 1차 기준 ('modularity' | 'ifr')
 FINE_SCAN_STEPS      = 100         # 전수 스캔에서 목표 개수 미달 시 세밀 스캔 단계 수

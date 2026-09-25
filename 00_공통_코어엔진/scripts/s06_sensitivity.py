@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
+r"""
 s06_sensitivity.py — 정본 경계의 민감도 점검 (정본을 바꾸지 않는다)
 =====================================================================
 두 가지를 한다. 결과는 output/sensitivity/ 에만 쓴다.
@@ -10,6 +10,9 @@ A. 설정 민감도 (--compare)
      python s03_leiden_consensus.py --years 2020 2025 --workers 8 --tau 0.6 --seed canonical --tag _tau0.6
      python s03_leiden_consensus.py --years 2020 2025 --workers 8 --primary ifr --seed canonical --tag _ifr
      python s06_sensitivity.py --compare _tau0.4 _tau0.6 _ifr
+   개수 민감도(목표 개수만 바꿈): exploration\x10_k_targets.py 가 만든 목표 개수 파일을 --targets 로 준다.
+     python s03_leiden_consensus.py --years 2020 2025 --workers 8 --seed canonical --targets ..\output\exploration\k_targets_kmob_lo.csv --tag _kmob_lo
+     python s06_sensitivity.py --compare _kmob_lo _kmob_hi
    --seed canonical 이면 해상도마다 Leiden 3,000회 원시 결과가 정본과 완전히 같다. 그래서 차이는 오직 τ(합의 임계값)
    또는 선정 규칙에서만 나온다.
 
@@ -89,9 +92,13 @@ def compare(tags):
             city = ari(m0.set_index("Dong")["global_community_id"].values,
                        m1.set_index("Dong").loc[m0["Dong"], "global_community_id"].values)
             n_same = int((df["ARI"] == 1).sum())
+            seoul = lambda met: met["internal_flow"].sum() / met["total_outflow"].sum()   # 분자합/분모합
             summary.append({"tag": tag, "year": year, "same_seed": same_seed, "tau": p1["tau"], "primary": p1["primary"],
                             "구_동일": n_same, "구_다름": 25 - n_same, "서울ARI": round(city, 4),
-                            "바뀐동_합": int(df["바뀐동수"].sum())})
+                            "바뀐동_합": int(df["바뀐동수"].sum()),
+                            "k합_정본": int(met0["n_communities"].sum()), "k합_변경": int(met1["n_communities"].sum()),
+                            "서울IFR_정본": round(seoul(met0), 4), "서울IFR_변경": round(seoul(met1), 4),
+                            "평균Q_정본": round(met0["modularity"].mean(), 4), "평균Q_변경": round(met1["modularity"].mean(), 4)})
             lines += [f"## {tag} · {year}  (τ={p1['tau']}, 선정={p1['primary']}, 시드 정본과 {'같음' if same_seed else '다름'})", "",
                       f"- 정본과 동일한 구 {n_same}/25, 서울 전체 ARI {city:.4f}", ""]
             diff = df[df["ARI"] < 1]
@@ -103,8 +110,17 @@ def compare(tags):
                 lines.append("")
     if summary:
         s = pd.DataFrame(summary)
-        s.to_csv(OUT / "compare_summary.csv", index=False, encoding="utf-8-sig")
-        lines = lines[:4] + ["## 요약", "", md_table(s), ""] + lines[4:]
+        s.to_csv(OUT / f"compare_summary{'_'.join([''] + [t.strip('_') for t in tags])}.csv", index=False, encoding="utf-8-sig")
+        trend = []   # 두 해 사이 변화가 정본과 같은 방향인가 (연도 비교 결론의 민감도)
+        for tag in tags:
+            x = s[s["tag"] == tag].set_index("year")
+            if {"2020", "2025"} <= set(map(str, x.index)):
+                x.index = x.index.map(str)
+                trend.append(f"- {tag}: 서울 IFR 2020→2025 정본 {x.loc['2020','서울IFR_정본']:.4f}→{x.loc['2025','서울IFR_정본']:.4f} "
+                             f"({x.loc['2025','서울IFR_정본'] - x.loc['2020','서울IFR_정본']:+.4f}), "
+                             f"변경 {x.loc['2020','서울IFR_변경']:.4f}→{x.loc['2025','서울IFR_변경']:.4f} "
+                             f"({x.loc['2025','서울IFR_변경'] - x.loc['2020','서울IFR_변경']:+.4f})")
+        lines = lines[:4] + ["## 요약", "", md_table(s), ""] + (["## 연도 변화", ""] + trend + [""] if trend else []) + lines[4:]
     path = OUT / f"sensitivity_compare_{datetime.datetime.now():%Y%m%d_%H%M%S}.md"
     path.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines)); print(f"\n→ {path}")

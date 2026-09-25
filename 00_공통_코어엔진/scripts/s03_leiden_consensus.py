@@ -9,7 +9,7 @@ s03_leiden_consensus.py — 자치구별 Leiden 합의 구획 (2020 / 2025)
   [그래프]  일상통행 OD(od_daily)에서 출발·도착이 모두 이 구인 행을 가져와
             동 i–j 가중치 = f_ij + f_ji (무방향), 동 내부 통행 f_ii 는 자기 루프로 포함(config.INCLUDE_SELF_LOOPS).
   [스캔]    해상도 γ = 0.01, 0.02, …, 2.50 (250개) 마다 아래 [합의]를 한 번씩 수행하고 결과를 모두 기록.
-  [합의]    Leiden(RBConfiguration, weight, seed=None)을 N_ITER(3,000)번 실행.
+  [합의]    Leiden(RBConfiguration, weight)을 N_ITER(3,000)번 실행. 반복마다 다른 시드(구 base + j×N_ITER + k, 결정기록 §3).
             ① co-association: 동 쌍 (i,j)가 같은 커뮤니티였던 횟수 / N_ITER → 확률 행렬 P.
                P_ij ≥ τ(0.5)인 쌍을 이어 연결요소 = 합의 분할 (정본). 라벨 번호를 쓰지 않으므로 라벨 스위칭과 무관.
             ② 같은 3,000개 결과를 라벨 정규화(동코드 오름차순으로 처음 나오는 묶음부터 0,1,2…)해
@@ -32,7 +32,7 @@ s03_leiden_consensus.py — 자치구별 Leiden 합의 구획 (2020 / 2025)
   run_info.json, leiden_run_{ts}.log
 
 실행:  python s03_leiden_consensus.py --years 2020 2025 --workers 4
-       python s03_leiden_consensus.py --years 2020 --ku 11010 --n-iter 30 --res-step 0.1   (빠른 점검)
+       python s03_leiden_consensus.py --years 2020 --ku 11010 --n-iter 30 --res-step 0.1 --tag _test   (빠른 점검, 정본 폴더와 분리)
 """
 import sys, os, json, time, argparse, logging, datetime
 from collections import Counter
@@ -157,7 +157,7 @@ def run_ku(task: dict) -> dict:
     nodes = task["nodes"]                       # 동 코드 오름차순 (n,)
     n = len(nodes)
     idx = {d: i for i, d in enumerate(nodes)}
-    target = C.TARGET_COMMUNITIES[ku]
+    target = int(task.get("target", C.TARGET_COMMUNITIES[ku]))   # --targets 로 바꾼 민감도 실행이 아니면 공식 생활권 수
     p = task["params"]
     msgs = []
 
@@ -245,10 +245,15 @@ def run_ku(task: dict) -> dict:
         below = [r for r in scan if r["n_communities"] < target]
         above = [r for r in scan if r["n_communities"] > target]
         if below and above:
-            r_lo = max(below, key=lambda r: r["n_communities"])["resolution"]
-            r_hi = min(above, key=lambda r: r["n_communities"])["resolution"]
+            # 목표에 가장 가까운 개수 중, 전환점에 가장 가까운 해상도 (아래쪽은 가장 큰 γ, 위쪽은 가장 작은 γ)
+            r_lo = max(below, key=lambda r: (r["n_communities"], r["resolution"]))["resolution"]
+            r_hi = min(above, key=lambda r: (r["n_communities"], -r["resolution"]))["resolution"]
             msgs.append(f"목표 {target} 미달 → 세밀 스캔 {r_lo}~{r_hi}")
-            for i, res in enumerate(np.linspace(min(r_lo, r_hi), max(r_lo, r_hi), p["fine_steps"])):
+            # 2026-09-25: 양 끝점(이미 격자에서 돈 해상도)은 빼고, 이미 돈 해상도는 다시 돌리지 않는다.
+            # 같은 γ 를 다른 시드로 다시 돌리면 cache 가 덮여 지표와 매핑이 서로 다른 분할을 가리킬 수 있었다(대체 선정 경로).
+            for i, res in enumerate(np.linspace(min(r_lo, r_hi), max(r_lo, r_hi), p["fine_steps"] + 2)[1:-1]):
+                if round(float(res), 6) in cache:
+                    continue
                 scan_one(round(float(res), 6), "fine")
                 if (i + 1) % 5 == 0:
                     progress("세밀 스캔", i + 1, p["fine_steps"])
@@ -354,17 +359,32 @@ def main():
     # 민감도 분석용 (코드설명_프로세스.md §7)
     ap.add_argument("--tau", type=float, default=C.TAU, help="co-association 임계값 (정본 0.5)")
     ap.add_argument("--primary", choices=["modularity", "ifr"], default=C.SELECTION_PRIMARY, help="선정 1차 기준 (정본 modularity)")
+    ap.add_argument("--targets", default=None,
+                    help="구별 목표 개수 CSV (열: year, ku_code, target). 개수 민감도 실행용, --tag 필수. 없는 구·연도는 공식 개수")
     ap.add_argument("--seed", default=None,
                     help="base 시드. 정수, 또는 'canonical' = 정본 실행(output/leiden/{year}/run_seed.json)과 같은 시드. "
                          "같은 시드를 쓰면 Leiden 3,000회 결과가 정본과 똑같으므로 τ·선정규칙만의 효과를 볼 수 있다")
     a = ap.parse_args()
-    if a.tag == "" and (a.tau != C.TAU or a.primary != C.SELECTION_PRIMARY or a.seed is not None):
-        raise SystemExit("정본과 다른 설정은 --tag 를 붙여 따로 저장하세요 (예: --tag _tau0.4). 정본 폴더를 덮어쓰지 않기 위함.")
+    # 2026-09-25: 일부 구(--ku)·반복 수·해상도 간격·안정성 반복 수를 바꾼 점검 실행도 정본 폴더를 덮어쓸 수 있어 --tag 를 요구한다.
+    if a.tag == "" and (a.tau != C.TAU or a.primary != C.SELECTION_PRIMARY or a.seed is not None or a.targets
+                        or a.ku or a.n_iter != C.N_ITER or a.res_step != C.RES_STEP or a.stab_trials != C.STABILITY_TRIALS):
+        raise SystemExit("정본과 다른 설정(--ku, --n-iter, --res-step, --stab-trials, --tau, --primary, --seed, --targets)은 "
+                         "--tag 를 붙여 따로 저장하세요 (예: --tag _test). 정본 폴더를 덮어쓰지 않기 위함.")
 
     params0 = {"res_min": C.RES_MIN, "res_max": C.RES_MAX, "res_step": a.res_step, "n_iter": a.n_iter, "tau": a.tau,
                "self_loops": C.INCLUDE_SELF_LOOPS, "primary": a.primary,
                "fine_steps": C.FINE_SCAN_STEPS, "stab_trials": a.stab_trials,
                "stab_iter": a.n_iter if a.n_iter != C.N_ITER else C.STABILITY_ITER}
+
+    tmap = {}
+    if a.targets:
+        tdf = pd.read_csv(a.targets, encoding="utf-8-sig")
+        for r in tdf.itertuples():
+            tmap.setdefault(str(r.year), {})[int(r.ku_code)] = int(r.target)
+        bad = [k for y in tmap for k in tmap[y] if k not in C.TARGET_COMMUNITIES]
+        if bad:
+            raise SystemExit(f"--targets 에 모르는 구 코드: {bad}")
+        params0["targets_file"] = str(Path(a.targets).resolve())
 
     dong_all = gpd.read_file(C.DONG_GPKG, layer="epsg5179")
     dong_all["Dong"] = dong_all["Dong"].astype(int); dong_all["Ku"] = dong_all["Ku"].astype(int)
@@ -380,6 +400,9 @@ def main():
         logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S",
                             handlers=[logging.FileHandler(out / f"leiden_run_{ts}.log", encoding="utf-8"), logging.StreamHandler(sys.stdout)], force=True)
         t_year = time.time()
+        # 이 실행이 실제로 쓴 입력·코드의 해시 (run_info 기록과 _partial 재사용 판정에 쓴다, 2026-09-25)
+        inputs = {"input_od": C.sha256_of(C.od_daily_path(year)), "input_dong": C.sha256_of(C.DONG_GPKG),
+                  "code_s03": C.sha256_of(Path(__file__).resolve()), "code_config": C.sha256_of(Path(C.__file__).resolve())}
         od = pd.read_parquet(C.od_daily_path(year))
         log.info(f"[{year}] od_daily {len(od):,}행, 통행량 {od['flow'].sum():,.0f} | params={params}")
         tasks = build_tasks(year, dong_all, od, params, set(a.ku) if a.ku else None)
@@ -387,44 +410,61 @@ def main():
         # 실행 base 시드: config.SEED 가 None 이면 실행마다 무작위로 뽑아 run_seed.json 에 기록 (이어서 실행하면 같은 값을 다시 쓴다).
         # 구 i 는 base + i*10^7 부터 연속 구간을 쓴다 (해상도 350개 × 3,000 + 안정성 10 × 3,000 < 10^7).
         seed_file = out / "run_seed.json"
+        # 요청된 시드 (없으면 None = 무작위)
+        if a.seed == "canonical":
+            canon = C.LEIDEN_OUT / year / "run_seed.json"
+            if not canon.exists():
+                raise SystemExit(f"정본 시드 파일이 없습니다: {canon}")
+            want, source = int(json.loads(canon.read_text(encoding="utf-8"))["base_seed"]), f"정본 {year} 시드"
+        elif a.seed is not None:
+            want, source = int(a.seed), "--seed"
+        elif C.SEED is not None:
+            want, source = int(C.SEED), "config.SEED"
+        else:
+            want, source = None, "os.urandom"
         if seed_file.exists():
+            # 같은 폴더를 이어서 실행: 기록된 base 를 다시 쓴다. 요청 시드와 다르면 섞이지 않게 멈춘다.
             base_seed = int(json.loads(seed_file.read_text(encoding="utf-8"))["base_seed"])
+            if want is not None and want != base_seed:
+                raise SystemExit(f"{seed_file} 의 base 시드 {base_seed} 와 요청한 시드 {want}({source}) 가 다릅니다. "
+                                 f"새 --tag 로 돌리거나, 이 폴더를 처음부터 다시 만들려면 run_seed.json 과 _partial/ 을 지우세요.")
             log.info(f"[{year}] 이전 실행의 base 시드 재사용: {base_seed}")
         else:
-            if a.seed == "canonical":
-                canon = C.LEIDEN_OUT / year / "run_seed.json"
-                if not canon.exists():
-                    raise SystemExit(f"정본 시드 파일이 없습니다: {canon}")
-                base_seed, source = int(json.loads(canon.read_text(encoding="utf-8"))["base_seed"]), f"정본 {year} 시드"
-            elif a.seed is not None:
-                base_seed, source = int(a.seed), "--seed"
-            elif C.SEED is not None:
-                base_seed, source = int(C.SEED), "config.SEED"
-            else:
-                base_seed, source = int.from_bytes(os.urandom(4), "little"), "os.urandom"
+            base_seed = want if want is not None else int.from_bytes(os.urandom(4), "little")
             seed_file.write_text(json.dumps({"base_seed": base_seed, "source": source,
                                              "created": datetime.datetime.now().isoformat(timespec="seconds")}), encoding="utf-8")
             log.info(f"[{year}] base 시드 = {base_seed} ({source}) → run_seed.json")
         params = {**params, "base_seed": base_seed}
         ku_order = sorted(C.TARGET_COMMUNITIES)
         for t in tasks:
+            t["target"] = tmap.get(str(year), {}).get(t["ku"], C.TARGET_COMMUNITIES[t["ku"]])
+        if tmap:
+            params["target_total"] = int(sum(t["target"] for t in tasks))
+            log.info(f"[{year}] 목표 개수 파일 {a.targets}: 합계 {params['target_total']} (공식 {C.N_LZ})")
+        for t in tasks:
             t["params"] = params
             t["seed_base"] = base_seed + ku_order.index(t["ku"]) * 10_000_000
 
-        # 이어서 실행: 구별 결과를 _partial/ 에 저장해 두고, 이미 끝난 구는 건너뛴다 (중단 후 재실행 대비)
+        # 이어서 실행: 구별 결과를 _partial/ 에 저장해 두고, 이미 끝난 구는 건너뛴다 (중단 후 재실행 대비).
+        # 재사용 조건 (2026-09-25 강화): 파라미터·시드뿐 아니라 입력 파일(od_daily, 동 정본)·코드(s03, config) 해시,
+        # 그 구의 목표 개수·동 목록까지 모두 같아야 한다. 하나라도 다르면 그 구를 처음부터 다시 계산한다.
         import pickle
         part_dir = out / "_partial"
         part_dir.mkdir(exist_ok=True)
+        def resume_key(t):
+            return {"params": params, "inputs": inputs, "target": int(t["target"]), "nodes": [int(x) for x in t["nodes"]]}
         results = []
         for t in list(tasks):
             pf = part_dir / f"{t['ku']}.pkl"
             if pf.exists():
                 with open(pf, "rb") as fh:
                     saved = pickle.load(fh)
-                if saved.get("params") == params:
+                if saved.get("key") == resume_key(t):
                     results.append(saved["result"])
                     tasks.remove(t)
                     log.info(f"[{year}] {C.KU_NAME[t['ku']]}: 이전 실행 결과 재사용 ({pf.name})")
+                else:
+                    log.info(f"[{year}] {C.KU_NAME[t['ku']]}: 이전 부분 결과가 현재 파라미터·입력·코드와 달라 다시 계산 ({pf.name})")
         prog_dir = out / "progress"
         prog_dir.mkdir(exist_ok=True)
         for t in tasks:
@@ -468,11 +508,15 @@ def main():
                              f"(min {m['stability_ari_min']:.3f}), 비연속 {m['n_noncontiguous_communities']}, {m['seconds']}s {m['notes']}")
                     results.append(r)
                     with open(part_dir / f"{r['ku']}.pkl", "wb") as fh:
-                        pickle.dump({"params": params, "result": r}, fh)
+                        pickle.dump({"key": resume_key(next(t for t in tasks if t["ku"] == r["ku"])), "result": r}, fh)
                 if pending and time.time() - last_report >= 60:
                     log.info(progress_summary(done_kus))
                     last_report = time.time()
         results.sort(key=lambda r: r["ku"])
+        # 실행 중에 입력 파일이 바뀌지 않았는지 (바뀌었으면 결과가 기록된 입력과 어긋나므로 저장하지 않고 멈춘다)
+        if C.sha256_of(C.od_daily_path(year)) != inputs["input_od"] or C.sha256_of(C.DONG_GPKG) != inputs["input_dong"]:
+            raise SystemExit(f"[{year}] 실행 중에 입력 파일(od_daily 또는 동 정본)이 바뀌었습니다. 결과를 저장하지 않았습니다. "
+                             f"다시 실행하면 바뀐 입력으로 처음부터 계산합니다(이번 부분 결과는 입력 해시가 달라 재사용되지 않음).")
 
         # 저장
         mapping = pd.concat([r["mapping"] for r in results], ignore_index=True)
@@ -504,8 +548,7 @@ def main():
                 "seed_rule": "구 i(코드 오름차순)의 시드 구간 시작 = base_seed + i*1e7; 해상도 j의 k번째 Leiden 시드 = 구간시작 + j*n_iter + k; 안정성 반복은 그 뒤 연속",
                 "n_ku": len(results),
                 "n_communities_total": int(mapping["global_community_id"].nunique()), "n_dongs": int(len(mapping)),
-                "seconds": round(time.time() - t_year, 1), "input_od": C.sha256_of(C.od_daily_path(year)),
-                "input_dong": C.sha256_of(C.DONG_GPKG), "log": f"leiden_run_{ts}.log"}
+                "seconds": round(time.time() - t_year, 1), **inputs, "log": f"leiden_run_{ts}.log"}
         (out / "run_info.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
         log.info(f"[{year}] 완료: 커뮤니티 {info['n_communities_total']}개, 동 {info['n_dongs']}개, {info['seconds']}s → {out}")
 

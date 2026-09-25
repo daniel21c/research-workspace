@@ -1,28 +1,29 @@
 @echo off
-REM 00_공통_코어엔진 전체 실행 (Windows). 이 파일이 있는 scripts\ 폴더에서 실행한다.
-REM 단계별로 따로 실행하려면 아래 줄을 하나씩 명령창에 입력하면 된다.
-REM 예상 시간(4코어 기준): s01 1분 / s02 연도당 5~10분 / s03 연도당 1~2시간 / s04·s05 각 1분
+REM 00_common_core_engine: boundary pipeline, steps 1-5 (Windows). Run this file from the scripts\ folder.
+REM To run one step at a time, type the matching python line below.
+REM Time on 4 cores: s01 1 min / s02 5-10 min per year / s03 1-2 h per year / s04, s05 1 min each.
+REM This file is ASCII with CRLF line endings on purpose: Korean text or LF endings make cmd misread lines.
 chcp 65001 >nul
 cd /d %~dp0
 
-echo [1/5] 동 경계 정본 424 + 공식 생활권 116 + 동-생활권 매핑
+echo [1/5] s01 dong boundaries 424 + official living zones 116 + dong-to-zone mapping
 python s01_build_dong_boundaries.py || goto :err
 
-echo [2/5] 원자료 CSV -> OD 집계표 (2020, 2025)
+echo [2/5] s02 raw CSV to OD tables (2020, 2025)
 python s02_build_od_tables.py --years 2020 2025 || goto :err
 
-echo [3/5] Leiden 합의 구획 (해상도 250개 x 3,000회, 구 25개, 2개 연도)
+echo [3/5] s03 Leiden consensus (250 resolutions x 3,000 runs, 25 ku, 2 years)
 python s03_leiden_consensus.py --years 2020 2025 --workers 4 || goto :err
 
-echo [4/5] 결과 검사 후 data\ 정본 승격 + manifest.json
+echo [4/5] s04 checks, then promote to data\ + manifest.json
 python s04_promote_canonical.py --years 2020 2025 || goto :err
 
-echo [5/5] 독립 교차검증 보고서 (output\validation_report_*.md)
+echo [5/5] s05 independent cross-check (output\validation_report_*.md)
 python s05_validate.py || goto :err
 
-echo 완료. output\validation_report_*.md 와 data\manifest.json 을 확인한 뒤 데이터_배포목록.md 에 등록한다.
+echo Done. Check output\validation_report_*.md and data\manifest.json, then register the hashes in the data release list (data_release_list .md at repo root)
 goto :eof
 
 :err
-echo 오류로 중단됨 (위 메시지 확인). 고친 뒤 실패한 단계부터 다시 실행한다.
+echo Stopped on error (see the message above). Fix it, then rerun from the failed step.
 exit /b 1
