@@ -41,7 +41,7 @@ FIXED_TTM = {'ttm100_2020': 'e7f81258424a490697ab9df1268b0f4a9db037962fb10194572
              'ttm250_2020': '2e2ef3cf4c00f9f6491edb5fd7dbf1ff7aca08ef0b179cf4a113095c7c9ded50',
              'ttm250_2025': '66860eb29ee99076370ff90834feb564076c50fc33d1521e74798a32234e0fb5',
              'ttm100_2025_for2020': '0f14f78b14eb62eb7fa8c1f789a1bd8e7e415d5f16bf326e1e745a593126d498'}
-SENS = [('sens_T600', 100), ('sens_speed36', 100), ('sens_grid250', 250), ('sens_retail_without', 100), ('sens_union', 100)]
+SENS = [('sens_T600', 100), ('sens_speed36', 100), ('sens_grid250', 250), ('sens_retail_without', 100), ('sens_union', 100), ('sens_snap', 100)]
 RES = {}
 
 

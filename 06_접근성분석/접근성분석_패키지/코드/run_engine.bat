@@ -39,6 +39,8 @@ for %%Y in (2020 2025) do (
   if errorlevel 1 goto :fail
   python a06_engine.py --year %%Y --grid 100 --union --tag sens_union
   if errorlevel 1 goto :fail
+  python a06_engine.py --year %%Y --grid 100 --snap --tag sens_snap
+  if errorlevel 1 goto :fail
   python a06_engine.py --year %%Y --grid 100 --catset B --tag natstd_B
   if errorlevel 1 goto :fail
 )

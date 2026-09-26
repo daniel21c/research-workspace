@@ -195,15 +195,27 @@ def build_cmask(cells: np.ndarray, bits: np.ndarray, n_grid: int) -> np.ndarray:
     return Cm
 
 
-def read_ttm_ku(dset, k: int, code: pd.Series, popv: np.ndarray, factor: float):
-    """한 구(출발 구 k) 분할을 읽어 (o, d, t 환산초, 원래 행 수) 반환. 인구>0 출발만 남긴다."""
+def read_ttm_ku(dset, k: int, code: pd.Series, popv: np.ndarray, factor: float, snap_sec: np.ndarray | None = None):
+    """한 구(출발 구 k) 분할을 읽어 (o, d, t 환산초, 원래 행 수) 반환. 인구>0 출발만 남긴다.
+    snap_sec 가 있으면(스냅 거리 민감도) o ≠ d 쌍에 양끝 격자 중심 → 노드 보행 시간을 더한다(같은 격자 쌍은 0 유지)."""
     tt = dset.to_table(filter=(pads.field('ku') == k), columns=['o_grid', 'd_grid', 't_sec']).to_pandas()
     o = tt['o_grid'].map(code).values; d = tt['d_grid'].map(code).values
     ok = ~(pd.isna(o) | pd.isna(d))
     o = o[ok].astype(np.int64); d = d[ok].astype(np.int64)
     t = tt['t_sec'].values[ok].astype(np.float64) * factor
+    if snap_sec is not None:
+        t = t + np.where(o != d, snap_sec[o] + snap_sec[d], 0.0)
     is_o = popv[o] > 0
     return o[is_o], d[is_o], t[is_o], len(tt)
+
+
+def load_snap_sec(grid: int, net: int, gm: pd.DataFrame, speed: float):
+    """격자 중심 → 가장 가까운 보행망 노드 거리(a05 스냅 파일, 보행망 시점 net)를 속도로 나눈 초. 격자 번호(gi) 순."""
+    s = pd.read_parquet(C.DATA / 'ttm' / f'snap{grid}_{net}.parquet', columns=['grid_cd', 'snap_m'])
+    m = gm['grid_cd'].map(s.set_index('grid_cd')['snap_m'])
+    info = dict(snap_file=f'데이터/입력/ttm/snap{grid}_{net}.parquet', snap_missing_cells=int(m.isna().sum()),
+                snap_m_popweighted=float((m.fillna(0) * gm['pop']).sum() / gm['pop'].sum()))
+    return m.fillna(0.0).values.astype(np.float64) * 3.6 / speed, info
 
 
 # ---------------------------------------------------------------- 입력
@@ -375,12 +387,16 @@ def run(args):
         unit_codes[b] = gm[b].astype(np.int64).values
     net = year if args.net_year is None else args.net_year
     dset, kus = ttm_partitions(year, grid, args.ku, net)
+    snap_sec = None
+    if args.snap:
+        snap_sec, snap_info = load_snap_sec(grid, net, gm, speed)
+        info = {**info, **snap_info}
     parts, parts_b = [], []
     n_rows = 0
     do_sfca = args.catset == 'A' and args.ku is None     # 2SFCA 는 집수역이 구를 넘으므로 서울 전체 실행에서만
     wo, wd = [], []
     for k in kus:
-        o, d, t, nr = read_ttm_ku(dset, k, code, popv, factor)
+        o, d, t, nr = read_ttm_ku(dset, k, code, popv, factor, snap_sec)
         n_rows += nr
         if args.catset == 'B':
             uo, rg, rc = natstd_access(o, d, t, groups, len(gm))
@@ -530,6 +546,7 @@ def main(argv=None):
     ap.add_argument('--ku', type=int, default=None, help='한 구만 시험 계산(출발 구 코드, 예 11010)')
     ap.add_argument('--net-year', type=int, choices=[2020, 2025], default=None,
                     help='소요시간표(보행망) 시점. 기본 = --year. 다르면 네트워크 고정 민감도(예: --year 2020 --net-year 2025)')
+    ap.add_argument('--snap', action='store_true', help='스냅 거리 민감도: o≠d 쌍에 양끝 격자 중심→노드 보행 시간을 더함(sens_snap)')
     ap.add_argument('--out-root', default=None, help='출력 상위 폴더(기본 데이터/결과). 재현 점검용')
     ap.add_argument('--save-sfca-grid', action='store_true', help='2SFCA 격자 값(grid_sfca_*.parquet)도 저장(본 분석용, 약 5백만 행)')
     a = ap.parse_args(argv)

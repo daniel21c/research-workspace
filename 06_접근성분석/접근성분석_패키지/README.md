@@ -61,7 +61,7 @@
 
 ## 4. 결과 파일
 
-실행 세트(tag): `main`(본 분석) · `sens_T600`(10분) · `sens_speed36`(3.6 km/h) · `sens_grid250`(250 m) · `sens_A4`(카테고리 4개) · `sens_retail_without`(일상소매 제외) · `sens_union`(합집합 카테고리 수) · `sens_net2025`(2020 시설·인구 + 2025 보행망) · `natstd_B`(국가 최저기준 충족률).
+실행 세트(tag): `main`(본 분석) · `sens_T600`(10분) · `sens_speed36`(3.6 km/h) · `sens_grid250`(250 m) · `sens_A4`(카테고리 4개) · `sens_retail_without`(일상소매 제외) · `sens_union`(합집합 카테고리 수) · `sens_net2025`(2020 시설·인구 + 2025 보행망) · `sens_snap`(스냅 거리 포함, 2026-09-26 추가) · `natstd_B`(국가 최저기준 충족률).
 
 | 파일 | 열 |
 |---|---|
