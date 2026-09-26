@@ -4,8 +4,8 @@ import json
 import numpy as np, pandas as pd, geopandas as gpd, pyogrio
 from pathlib import Path
 
-RAW = Path(r"D:\Research\0_RAW")
-CORE = Path(r"D:\Research\00_박사논문_연구체계\00_공통_코어엔진")
+CORE = Path(__file__).resolve().parents[1]          # 00_공통_코어엔진 (허브 안 상대경로)
+RAW = CORE / "원자료"
 D = CORE / "data"
 R = {}
 
@@ -13,7 +13,7 @@ TARGET = {11010: 4, 11020: 3, 11030: 4, 11040: 4, 11050: 4, 11060: 4, 11070: 3, 
           11130: 4, 11140: 5, 11150: 5, 11160: 6, 11170: 4, 11180: 3, 11190: 5, 11200: 5, 11210: 5, 11220: 4, 11230: 6, 11240: 7, 11250: 5}
 
 # 1) 원자료 동 SHP → 독립 dissolve
-raw = gpd.read_file(RAW / "BND_ADM_DONG_PG_SHP/BND_ADM_DONG_PG.shp", encoding="cp949")
+raw = gpd.read_file(RAW / "행정동경계_BND_ADM_DONG_PG_20230701/BND_ADM_DONG_PG.shp", encoding="cp949")
 raw = raw[raw.ADM_CD.astype(str).str.startswith("11")].copy()
 R["raw_seoul_polys"] = len(raw)
 raw["Dong"] = raw.ADM_CD.astype(str).str[:7].astype(int)
@@ -23,7 +23,7 @@ mine = raw.to_crs(5179).dissolve("Dong").reset_index()
 R["my_n_dong"] = len(mine)
 
 # 코드표
-ct = pd.read_excel(RAW / "2401-2406_SEOUL_MOVING_CSV/서울생활이동데이터_행정동코드_20210907.xlsx")
+ct = pd.read_excel(RAW / "생활이동_코드표/서울생활이동데이터_행정동코드_20210907.xlsx")
 ct_seoul = set(ct.loc[ct["시도"] == 11000, "읍면동"].astype(int))
 R["codetable_seoul"] = len(ct_seoul)
 R["mine_eq_codetable"] = set(mine.Dong) == ct_seoul
@@ -46,7 +46,7 @@ R["dong4326_vs_5179_centroid_shift_m_max"] = float(g4326.to_crs(5179).set_index(
                                                   .distance(can.set_index(dcol).geometry.centroid).max())
 
 # 2) 공식 생활권
-lzr = gpd.read_file(RAW / "UPIS_SHP_ZON100/seoul_living_zone.shp")
+lzr = gpd.read_file(RAW / "공식생활권_UPIS_SHP_ZON100/seoul_living_zone.shp")
 R["lz_raw_n"] = len(lzr); R["lz_raw_crs"] = str(lzr.crs)
 lz = lzr.to_crs(5179)
 # EPSG:5174 변환이 맞는지: 생활권 합집합 vs 동 합집합(서울 경계) 겹침, 생활권 ↔ 배정 동 합집합 IoU

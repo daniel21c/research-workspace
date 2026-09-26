@@ -12,7 +12,7 @@ s01~s06 과 **다른 코드**로 원자료부터 정본까지 다시 계산해 �
 | `a3_leiden.py [태그]` | 구마다: 저장 시드로 확정 해상도 3,000회 재실행 → 원시 라벨 일치, co-association·τ 연결요소 재계산, Q(networkx)·IFR(자체), 선정 규칙, 격자 250개, 시드 구간, 안정성, 공간 연속성, 매핑 사본 일치. 태그 실행(`_tau0.4` 등)은 run_info 의 τ·선정 규칙으로 검사 | 태그당 1~2분 |
 
 ```powershell
-cd D:\Research\00_박사논문_연구체계\00_공통_코어엔진\audit
+cd 00_공통_코어엔진\audit
 python a1_raw_recount.py 2020; python a1_raw_recount.py 2025; python a4_compare_od.py
 python a2_boundaries.py
 python a3_leiden.py; foreach ($t in "_tau0.4","_tau0.6","_ifr","_kmob_lo","_kmob_hi","_qmax") { python a3_leiden.py $t }

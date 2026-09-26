@@ -3,7 +3,7 @@
 config.py — 00_공통_코어엔진 경로·상수 단일 정의
 =====================================================
 모든 스크립트는 이 파일만 import 한다. 경로는 이 파일의 위치에서 상대적으로
-계산하므로 Windows(D:\\Research\\...)와 Cowork 셸($HOME/mnt/Research/...) 어디서나 같다.
+계산하므로 00_박사논문_연구체계 폴더를 어디에 두어도 같다(폴더 밖 경로는 쓰지 않는다).
 
 결정 근거는 ../결정기록.md 를 본다. 여기 있는 숫자를 바꾸면 결정기록도 같이 바꾼다.
 """
@@ -20,20 +20,23 @@ for _s in (sys.stdout, sys.stderr):
 # ── 경로 ────────────────────────────────────────────────────────────────────
 SCRIPT_DIR    = Path(__file__).resolve().parent            # .../00_공통_코어엔진/scripts
 CORE_DIR      = SCRIPT_DIR.parent                          # .../00_공통_코어엔진
-THESIS_ROOT   = CORE_DIR.parent                            # .../00_박사논문_연구체계
-RESEARCH_ROOT = THESIS_ROOT.parent                         # D:\Research
+THESIS_ROOT   = CORE_DIR.parent                            # .../00_박사논문_연구체계 (모든 경로는 이 폴더 안)
 
 DATA_DIR      = CORE_DIR / "data"                          # 정본 (Git 제외)
 OUTPUT_DIR    = CORE_DIR / "output"                        # 실행 산출물 (Git 제외)
 OD_DIR        = DATA_DIR / "od"                            # OD 집계표
 LEIDEN_OUT    = OUTPUT_DIR / "leiden"                      # Leiden 실행 결과 (연도별 하위 폴더)
 
-# 원자료 (읽기 전용)
-RAW_DIR       = RESEARCH_ROOT / "0_RAW"
-RAW_DONG_SHP  = RAW_DIR / "BND_ADM_DONG_PG_SHP" / "BND_ADM_DONG_PG.shp"     # 통계청 행정동 경계 (BASE_DATE 20230701)
-RAW_LZ_SHP    = RAW_DIR / "UPIS_SHP_ZON100" / "seoul_living_zone.shp"        # 서울 2030 생활권계획 지역생활권 116
-RAW_FLOW_DIR  = RAW_DIR / "2401-2406_SEOUL_MOVING_CSV"                       # 서울 생활이동 CSV 상위 폴더
-RAW_DONG_CODE_XLSX = RAW_FLOW_DIR / "서울생활이동데이터_행정동코드_20210907.xlsx"
+# 원자료 (읽기 전용) — 허브 안 `원자료/`에 사본을 둔다(2026-09-26, 공동연구자 공유용 자기완결 구성)
+RAW_DIR       = CORE_DIR / "원자료"
+RAW_DONG_SHP  = RAW_DIR / "행정동경계_BND_ADM_DONG_PG_20230701" / "BND_ADM_DONG_PG.shp"   # 통계청 행정동 경계 (BASE_DATE 20230701)
+RAW_LZ_SHP    = RAW_DIR / "공식생활권_UPIS_SHP_ZON100" / "seoul_living_zone.shp"          # 서울 2030 생활권계획 지역생활권 116
+RAW_DONG_CODE_XLSX = RAW_DIR / "생활이동_코드표" / "서울생활이동데이터_행정동코드_20210907.xlsx"
+# 서울 생활이동 CSV(2020-01·2025-01, 약 11 GB)는 크기 때문에 허브에 넣지 않는다. s02(OD 집계)·audit/a1 을 원자료부터 다시 돌릴 때만
+# 필요하며, 내려받은 상위 폴더를 환경변수 SEOUL_FLOW_RAW_DIR 로 지정하거나 `원자료/생활이동_CSV/` 아래에 둔다(README 참고).
+# 그 밖의 단계(s01·s03~s06)는 허브 안 집계표 data/od/*.parquet 로 재현된다.
+import os as _os
+RAW_FLOW_DIR  = Path(_os.environ.get("SEOUL_FLOW_RAW_DIR", RAW_DIR / "생활이동_CSV"))
 
 def raw_flow_folder(year: str) -> Path:
     """연도(예 '2020') → 해당 1월 시간대별 CSV 24개가 있는 폴더"""

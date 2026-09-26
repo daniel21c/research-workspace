@@ -13,7 +13,7 @@ from scipy.sparse.csgraph import connected_components
 from scipy.sparse import csr_matrix
 from sklearn.metrics import adjusted_rand_score as ARI
 
-CORE = Path(r"D:\Research\00_박사논문_연구체계\00_공통_코어엔진")
+CORE = Path(__file__).resolve().parents[1]          # 00_공통_코어엔진 (허브 안 상대경로)
 sys.path.insert(0, str(CORE / "scripts"))
 import s03_leiden_consensus as S3   # (1) 재현성 확인에만 consensus_once 사용
 

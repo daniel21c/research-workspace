@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np, pandas as pd
 
 A = Path(__file__).resolve().parents[1] / "output" / "audit_20260925" / "recount"
-D = Path(r"D:\Research\00_박사논문_연구체계\00_공통_코어엔진\data\od")
+D = Path(__file__).resolve().parents[1] / "data" / "od"
 K = ["wd", "arr", "typ", "O", "D"]
 for year in ("2020", "2025"):
     st = [json.loads((A / f"{year}_{i:02d}.json").read_text(encoding="utf-8")) for i in range(24)]

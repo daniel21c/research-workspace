@@ -5,7 +5,9 @@ from pathlib import Path
 import numpy as np, pandas as pd
 import pyarrow as pa, pyarrow.csv as pacsv, pyarrow.compute as pc
 
-RAW = Path(r"D:\Research\0_RAW\2401-2406_SEOUL_MOVING_CSV")
+import os
+# 생활이동 CSV 상위 폴더(허브에 없음, 약 11 GB): 환경변수 SEOUL_FLOW_RAW_DIR 또는 00_공통_코어엔진/원자료/생활이동_CSV/
+RAW = Path(os.environ.get("SEOUL_FLOW_RAW_DIR", Path(__file__).resolve().parents[1] / "원자료" / "생활이동_CSV"))
 OUT = Path(__file__).resolve().parents[1] / "output" / "audit_20260925" / "recount"   # 원자료 재집계 (약 5GB → 수백 MB)
 OUT.mkdir(exist_ok=True)
 year = sys.argv[1]

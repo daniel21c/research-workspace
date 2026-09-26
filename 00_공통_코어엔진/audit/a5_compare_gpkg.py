@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """GeoPackage 두 개의 내용 비교 (레이어·행·속성·기하). gpkg 는 파일 안에 작성 시각을 저장해 같은 내용이어도 해시가 다르다.
 사용: python a5_compare_gpkg.py <기준.gpkg> <비교.gpkg>
-예:   python ..\\scripts\\s04_promote_canonical.py --out-dir C:\\temp\\repro
-      python a5_compare_gpkg.py ..\\data\\seoul_boundaries_all.gpkg C:\\temp\\repro\\seoul_boundaries_all.gpkg
+예:   python ..\\scripts\\s04_promote_canonical.py --out-dir %TEMP%\\repro
+      python a5_compare_gpkg.py ..\\data\\seoul_boundaries_all.gpkg %TEMP%\\repro\\seoul_boundaries_all.gpkg
 """
 import sys
 import geopandas as gpd, pyogrio
