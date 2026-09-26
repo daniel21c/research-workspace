@@ -191,9 +191,8 @@ _KEYS = None
 def keys():
     global _KEYS
     if _KEYS is None:
-        cands = [os.environ.get('FACILITY_API_ENV', ''), WORK.parent / '_secrets' / 'facility_api.env',
-                 WORK.parents[1] / '_secrets' / 'facility_api.env', Path('D:/Research/_secrets/facility_api.env'),
-                 Path.home() / 'mnt' / '_secrets' / 'facility_api.env']
+        # API 키: 환경변수 FACILITY_API_ENV 또는 00_박사논문_연구체계/_secrets/facility_api.env (공유본에 없음)
+        cands = [os.environ.get('FACILITY_API_ENV', ''), next(p for p in Path(__file__).resolve().parents if (p / '시설데이터 구축').is_dir()) / '_secrets' / 'facility_api.env']
         _KEYS = {}
         for c in cands:
             if c and Path(c).exists():

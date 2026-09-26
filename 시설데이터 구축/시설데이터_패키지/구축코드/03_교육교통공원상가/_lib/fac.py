@@ -233,8 +233,8 @@ def dump_qa(tdir, typ, qa):
 
 # ---------------- 지오코딩 ----------------
 def _env():
-    for p in [os.environ.get('FACILITY_API_ENV', ''), BASE.parent / '_secrets' / 'facility_api.env',
-              Path.home() / 'mnt' / '_secrets' / 'facility_api.env', Path('D:/Research/_secrets/facility_api.env')]:
+    # API 키: 환경변수 FACILITY_API_ENV 또는 00_박사논문_연구체계/_secrets/facility_api.env (공유본에 없음)
+    for p in [os.environ.get('FACILITY_API_ENV', ''), next(q for q in Path(__file__).resolve().parents if (q / '시설데이터 구축').is_dir()) / '_secrets' / 'facility_api.env']:
         if p and Path(p).exists():
             e = {}
             for l in open(p, encoding='utf-8'):

@@ -120,8 +120,8 @@ def spatial_attach(df: pd.DataFrame) -> pd.DataFrame:
 
 # ---------------------------------------------------------------- 지오코딩 (Kakao → VWorld, 건물번호/번지 일치만 채택)
 def load_keys():
-    cands = [os.environ.get('FACILITY_API_ENV', ''), str(BASE.parent / '_secrets/facility_api.env'),
-             os.path.expanduser('~/mnt/_secrets/facility_api.env'), r'D:\Research\_secrets\facility_api.env']
+    # API 키: 환경변수 FACILITY_API_ENV 또는 00_박사논문_연구체계/_secrets/facility_api.env (공유본에 없음, 받은 쪽은 자기 키를 넣는다)
+    cands = [os.environ.get('FACILITY_API_ENV', ''), str(next(p for p in Path(__file__).resolve().parents if (p / '시설데이터 구축').is_dir()) / '_secrets' / 'facility_api.env')]
     for c in cands:
         if c and Path(c).exists():
             out = {}

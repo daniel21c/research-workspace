@@ -9,8 +9,8 @@ CACHE = HERE.parent / 'cache'
 _K = {}
 def keys():
     if not _K:
-        cands = [Path(os.environ.get('FACILITY_API_ENV', '') or '_none_'), Path.home() / 'mnt' / '_secrets' / 'facility_api.env',
-                 Path('D:/Research/_secrets/facility_api.env')]   # 2026-09-25: Windows 경로 대안 추가(키 값은 읽기만)
+        # API 키: 환경변수 FACILITY_API_ENV 또는 00_박사논문_연구체계/_secrets/facility_api.env (공유본에 없음, 키 값은 읽기만)
+        cands = [Path(os.environ.get('FACILITY_API_ENV', '') or '_none_'), next(q for q in Path(__file__).resolve().parents if (q / '시설데이터 구축').is_dir()) / '_secrets' / 'facility_api.env']
         envp = next(c for c in cands if c.exists())
         for line in envp.read_text(encoding='utf-8').splitlines():
             if '=' in line and not line.strip().startswith('#'):

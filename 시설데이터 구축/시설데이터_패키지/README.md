@@ -106,7 +106,7 @@ python 구축코드/build_분석용.py
 python 구축코드/12_무결성보정/03_verify_package.py    # → 데이터/검증결과.json
 ```
 - 필요 패키지: pandas, pyarrow, geopandas, pyproj, requests, openpyxl.
-- API 키(Kakao·VWorld)는 `D:\Research\_secrets\facility_api.env`에서만 읽는다(코드·로그·파일에 값 없음). 지오코딩 응답은 각 폴더 캐시(`raw/geocoding/`, `cache/`)에 있어 다시 호출하지 않는다.
+- API 키(Kakao·VWorld)는 환경변수 `FACILITY_API_ENV`가 가리키는 파일 또는 `00_박사논문_연구체계/_secrets/facility_api.env`에서만 읽는다(공유본에 없음, 코드·로그·파일에 값 없음). 지오코딩을 새로 호출할 때만 필요하다. 지오코딩 응답은 각 폴더 캐시(`raw/geocoding/`, `cache/`)에 있어 다시 호출하지 않는다.
 - 공원 원본(`구축코드/03_교육교통공원상가/park/raw/`의 OSM 스냅샷)은 시설 자료에는 안 쓰지만 06 보행 네트워크의 입력이라 남겨 두었다.
 
 ## 6. 변경 이력
@@ -116,4 +116,4 @@ python 구축코드/12_무결성보정/03_verify_package.py    # → 데이터/�
 | facility-v1.1 | 2026-09-25 | 어린이집 좌표 20행 교정, 2025 휴업 중 6행 제외 → 606,066행 |
 | facility-v1.2 | 2026-09-25 | 휴게음식점·미용업의 원천 좌표 결측 1,453행 주소 정확일치 지오코딩(분석가능 99.25 → 99.49%). 패키지 폴더로 정리 |
 
-정리하면서 뺀 것(비교용·탈락 시설, 옛 설계 문서, 시범 분석, 통합본 csv 사본)은 `D:\Research\_archive\시설데이터구축_정리_20260925\`에 있다.
+정리하면서 뺀 것(비교용·탈락 시설, 옛 설계 문서, 시범 분석, 통합본 csv 사본)은 공유본에 포함하지 않는 이전 판(원 작성자 보관)이다.
