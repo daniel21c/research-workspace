@@ -37,5 +37,5 @@
 - 브랜치: 설계 단계에는 `main` 하나를 쓴다. 폴더별 담당으로 충돌을 막는다. 분석 코드 단계에 들어가면 파트별 브랜치·작업폴더 도입을 다시 검토한다.
 - 커밋: PC(Windows)의 Git에서 하거나 허브 대화가 한다. 메시지는 `[폴더명] 요약` 형식이다. 예: `[01_생활권_필요성] 모의실험 설계 초안`.
 - 커밋할 때는 자기 폴더만 지정한다: `git add <폴더>` 후 `git commit -m "..." -- <폴더>`. `git add .`는 쓰지 않는다.
-- **Cowork(Claude) 세션은 Git 쓰기 명령(add, commit, checkout, switch 등)을 실행하지 않는다.** 연결 방식 때문에 잠금 파일(`.git/index.lock`)이 남아 다른 작업을 막을 수 있다. 조회만 할 때는 `GIT_OPTIONAL_LOCKS=0 git -c safe.directory='*' status` 처럼 잠금을 만들지 않는 방식으로 한다. `.git/index.lock`을 발견하면 지우지 말고 사용자에게 알린다.
+- **Claude 세션(Cowork와 Windows의 Claude Code 모두)은 Git 쓰기 명령(add, commit, checkout, switch 등)을 실행하지 않는다.** 연결 방식 때문에 잠금 파일(`.git/index.lock`)이 남아 다른 작업을 막을 수 있다. 조회만 할 때는 `GIT_OPTIONAL_LOCKS=0 git -c safe.directory='*' status` 처럼 잠금을 만들지 않는 방식으로 한다. `.git/index.lock`을 발견하면 지우지 말고 사용자에게 알린다.
 - 원격: `https://github.com/daniel21c/research-workspace.git`. 푸시는 사용자가 PC에서 한다(`git push -u origin main`). 강제 푸시와 이력 재작성은 하지 않는다.
