@@ -6,24 +6,19 @@ import os
 HERE = Path(__file__).resolve().parent          # 06_접근성분석/접근성분석_패키지/코드
 ROOT = HERE.parent                                # 06_접근성분석/접근성분석_패키지
 BASE = ROOT.parent.parent                         # 00_박사논문_연구체계
-# 로컬 VM(Cowork)에서는 mnt 경로, Windows PC에서는 D:\Research
-_MNT = Path.home() / 'mnt'
-def _pick(*cands):
-    for c in cands:
-        if c and Path(c).exists():
-            return Path(c)
-    return Path(cands[0])
-CORE   = _pick(BASE / '00_공통_코어엔진', _MNT / '00_공통_코어엔진')
+# 모든 경로는 00_박사논문_연구체계(BASE) 안의 상대경로다(2026-09-26, 공동연구자 공유용 자기완결 구성).
+CORE   = BASE / '00_공통_코어엔진'
 # 2026-09-25: 시설데이터는 패키지 하나로 정리됨 → 시설데이터 구축/시설데이터_패키지/ (데이터·문서·구축코드·SGIS)
-FACPKG = _pick(BASE / '시설데이터 구축' / '시설데이터_패키지', _MNT / '시설데이터 구축' / '시설데이터_패키지')
+FACPKG = BASE / '시설데이터 구축' / '시설데이터_패키지'
 FACDIR = FACPKG / '구축코드'
 SGIS   = FACPKG / 'SGIS_인구경계_2019_2024'
-GRID250_SRC = _pick(Path('D:/Research/1_OUTPUT/community_detection/OD 데이터(승훈이데이터)/종하_row_data/3. row_data/서울_격자_250_5179_clean.gpkg'),
-                    _MNT / '1_OUTPUT/community_detection/OD 데이터(승훈이데이터)/종하_row_data/3. row_data/서울_격자_250_5179_clean.gpkg')
-SECRETS = _pick(Path('D:/Research/_secrets/facility_api.env'), _MNT / '_secrets' / 'facility_api.env')
+# API 키(지오코딩 재호출 때만 필요, 공유본에 없음): 환경변수 FACILITY_API_ENV 또는 00_박사논문_연구체계/_secrets/facility_api.env
+SECRETS = Path(os.environ.get('FACILITY_API_ENV', BASE / '_secrets' / 'facility_api.env'))
 
 # 2026-09-25: 06 폴더를 패키지 하나로 정리 — 문서/(정의·구축기록), 코드/, 데이터/입력/(격자·시설·경계·보행망·소요시간표), 데이터/결과/
 DATA = ROOT / '데이터' / '입력'; OUT = ROOT / '데이터' / '결과'; REC = ROOT / '문서'
+# 250m 국가격자 기하(기하·gid만 사용; 원 출처는 김승훈 외 AG 자료의 서울 250m 격자, 2026-09-26 패키지 안으로 복사)
+GRID250_SRC = DATA / 'grid' / 'source' / '서울_격자_250_5179_clean.gpkg'
 MANIFEST = ROOT / '데이터' / 'manifest_sha256.csv'
 for p in [DATA/'grid', DATA/'facility', DATA/'boundary', DATA/'network', DATA/'ttm', OUT, REC]:
     p.mkdir(parents=True, exist_ok=True)

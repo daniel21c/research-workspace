@@ -28,7 +28,7 @@ import a99_manifest as M  # noqa: E402
 import a06c_delta as D   # noqa: E402
 
 DEPLOY = C.BASE / '데이터_배포목록.md'
-PREV_OUT = Path(os.environ.get('ACCESS_PREV_OUT', 'D:/Research/_archive/접근성분석_v2_결과_비교용'))   # 판 변경 검증용 이전 판 결과(없으면 3번 생략)
+PREV_OUT = Path(os.environ.get('ACCESS_PREV_OUT', C.ROOT / '데이터' / '_이전판_결과'))   # 판 변경 검증용 이전 판 결과 폴더(없으면 3번 생략; 판을 바꿀 때 기존 결과/를 여기 복사해 두고 실행)
 # 2026-09-24 확정 해시(배포목록 pop-grid·grid-master·network-walk·ttm-walk 행; ttm 은 a05 결합 해시, 옛 경로 01_data/ 기준)
 FIXED = {
     'grid/grid100_master.parquet': 'f96efa65a36827f2d2cf892e01d9177daacc96665b1383f6a3890fedb1d38312',
