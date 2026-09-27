@@ -168,8 +168,12 @@ def fig5(sel, g):
     if not picks:
         return
     n = len(picks)
-    fig, axes = plt.subplots(n, 3, figsize=(9.5, 2.9 * n))
-    axes = np.atleast_2d(axes)
+    nrow = (n + 1) // 2                                  # 구 2개를 한 줄에(각 3패널) → 8개 구면 4줄 × 6열: 폭 13 cm에서 한 쪽에 들어가는 높이
+    fig, axes_all = plt.subplots(nrow, 6, figsize=(12.5, 2.7 * nrow))
+    axes_all = np.atleast_2d(axes_all)
+    for ax in axes_all.ravel(): ax.set_axis_off()
+    axes = np.array([[axes_all[i // 2, (i % 2) * 3 + j] for j in range(3)] for i in range(n)])
+    NAME = getattr(C, "KU_NAME", C.KU_NAME_EN)
     cmap = plt.get_cmap("Set2")
     for i, k in enumerate(picks):
         gk = g[g["Ku"] == k].set_index("Dong")
@@ -186,9 +190,8 @@ def fig5(sel, g):
             if j > 0 and chg:
                 gk.loc[chg].boundary.plot(ax=ax, color="#C0392B", linewidth=1.8, linestyle="--")
             ax.set_axis_off()
-            ax.set_title(f"{C.KU_NAME_EN[k]} — {lab}", fontsize=8, loc="left")
-        axes[i, 2].set_title(f"{C.KU_NAME_EN[k]} — LD {Y1}   (ARI vs LD {Y0} = {ari.loc[k,'ari_ld20_ld25']:.2f}, "
-                             f"소속 변경 동 {len(chg)}개: 붉은 점선)", fontsize=7.5, loc="left")
+            ax.set_title(f"{NAME[k]} — {lab}", fontsize=7.5, loc="left")
+        axes[i, 2].set_title(f"{NAME[k]} — LD {Y1} (ARI {ari.loc[k,'ari_ld20_ld25']:.2f}, 변경 {len(chg)}동)", fontsize=7.5, loc="left")
     save(fig, "F4-4-5_selected_gu_boundaries")
 
 
@@ -219,7 +222,7 @@ def fig7():
                         s=34, edgecolor=COL_INK, linewidth=0.5, zorder=3)
         for k, r in iou.iterrows():
             if r[f"D_{y}"] >= 0.12 or r[f"IoU_{y}"] <= 0.45:
-                ax.annotate(C.KU_NAME_EN[k], (r[f"IoU_{y}"], r[f"D_{y}"]), fontsize=6.5, xytext=(4, 3),
+                ax.annotate(C.KU_NAME[k], (r[f"IoU_{y}"], r[f"D_{y}"]), fontsize=6.5, xytext=(4, 3),
                             textcoords="offset points", color="#444")
         rD = tst[f"IoU_vs_D_{y}"]["spearman"]; rG = tst[f"IoU_vs_G_{y}"]["spearman"]
         ax.set_title(f"{y}   ρ(IoU, D) = {rD:+.2f},  ρ(IoU, G) = {rG:+.2f}", loc="left", fontsize=8.5)

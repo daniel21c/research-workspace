@@ -42,7 +42,10 @@ def main():
     shutil.copy2(C.CORE / "scripts" / "config.py", pkg / "data" / "core_config.py")
     shutil.copytree(C.OUT / "tables", pkg / "tables", dirs_exist_ok=True)
     shutil.copytree(C.OUT / "figures", pkg / "figures", dirs_exist_ok=True)
+    for old in (pkg / "manuscript").glob("*"):          # 이전 실행의 찌꺼기(임시 렌더·중간 파일)를 남기지 않는다
+        old.unlink()
     for f in MK.glob("*"):
+        if f.name.startswith("_") or f.suffix in (".doc", ".png", ".rtf", ".htm"): continue
         shutil.copy2(f, pkg / "manuscript" / f.name)
     for f in (C.OUT / "manuscript").glob("4-4절_*.md"):
         shutil.copy2(f, pkg / "manuscript" / ("참고_학위논문_" + f.name))

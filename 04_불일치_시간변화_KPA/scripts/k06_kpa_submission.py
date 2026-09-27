@@ -217,7 +217,7 @@ FIGS = {
     "F2": ("2. 자치구별 내부통행비율의 변화(2020→2025)", "2. Change in Internal-Flow Ratios by District, 2020–2025", "F4-4-1_ifr_dumbbell.png", 15.5, "왼쪽 점 2020년, 오른쪽 점 2025년. 두 경계 모두 모든 구에서 상승."),
     "F3": ("3. 격차의 방향(G) 사분면도(점 크기 = |ΔD|)", "3. Quadrant Plot of the Directional Gap G (marker size = |ΔD|)", "F4-4-3_quadrant_G.png", 11.5, "가로축 G 2020, 세로축 G 2025. 1사분면은 두 해 모두 LD가 더 많이 담는 구."),
     "F4": ("4. 총 판정차의 변화(ΔD)와 선별된 자치구", "4. Change in Total Mismatch (ΔD) and Selected Districts", "F4-4-4_map_dD_selection.png", 14.0, "선별 8개 구. 기호는 대응 유형(경계 재검토 / 권역 내 운영 검토)."),
-    "F5": ("5. 선별된 자치구의 공식 생활권과 두 해의 이동 기반 경계", "5. Official Living Zones and Mobility-Based Boundaries in Selected Districts", "F4-4-5_selected_gu_boundaries.png", 15.5, "굵은 선 공식 생활권, 색 면 LD. 소속이 바뀐 동을 강조."),
+    "F5": ("5. 선별된 자치구의 공식 생활권과 두 해의 이동 기반 경계", "5. Official Living Zones and Mobility-Based Boundaries in Selected Districts", "F4-4-5_selected_gu_boundaries.png", 13.0, "구마다 왼쪽부터 공식 생활권(LZ), LD 2020, LD 2025. 굵은 검은 선은 권역 경계, 붉은 점선은 두 해 사이 LD 소속(같이 묶인 동의 집합)이 바뀐 동. ARI는 두 해 LD 분할의 조정 랜드 지수."),
     "F6": ("6. 경계 모양의 일치도(IoU)와 판정 불일치의 크기(D)", "6. Boundary Overlap (IoU) and Total Mismatch (D)", "F4-4-7_iou_vs_D.png", 11.5, "색은 G. IoU와 D는 강한 음의 상관(ρ = −0.92, −0.87), IoU와 G는 약함."),
     "FA1": ("A1. 두 경계의 ΔIFR과 귀무 분할의 ΔIFR 분포", "A1. ΔIFR of the Two Boundaries against Null-Partition Distributions", "F4-4-6_null_partition_dIFR.png", 15.5, "회색 상자는 귀무 분할 1,000개의 5~95% 구간."),
 }
