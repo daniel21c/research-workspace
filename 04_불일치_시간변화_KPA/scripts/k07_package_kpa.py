@@ -51,6 +51,8 @@ def main():
         shutil.copy2(f, pkg / "manuscript" / ("참고_학위논문_" + f.name))
     for f in (C.HERE.parent / "연구설계.md", C.HERE.parent / "투고설계_국토계획_20260926.md"):
         if f.exists(): shutil.copy2(f, pkg / "design" / f.name)
+    x = C.HERE.parent.parent / "07_시계열_종합탐색" / "탐색보고서.md"
+    if x.exists(): shutil.copy2(x, pkg / "design" / "시계열_종합탐색_보고서.md")
 
     res = json.loads((C.TAB / "results.json").read_text(encoding="utf-8"))
     tst = json.loads((C.TAB / "t06_tests.json").read_text(encoding="utf-8"))
@@ -67,10 +69,10 @@ def main():
 접근성은 이 논문에 넣지 않는다(설계 근거: design/투고설계_국토계획_20260926.md 7절 이후, 07_시계열_종합탐색 보고서).
 
 ## 1. 읽는 순서
-1. `manuscript/{md}` — 투고 초본(본문). 같은 이름의 `.docx`가 국토계획 서식판(1단), `_2단.docx`·`.hwp`는 학회 2단 편집 확인용.
-2. `manuscript/투고전_체크리스트.md` — 저자가 채울 것·확인할 것.
+1. `manuscript/{md}` — 투고 초본(본문). 같은 이름의 `.docx`·`.hwp`가 서식판(1단), `_2단편집.docx/.pdf`는 학회 2단 편집 확인용. `.pdf`(Word)·`_한글출력.pdf`(한글)는 읽기용. 쪽수는 `쪽수_기록.json`.
+2. `manuscript/투고전_체크리스트.md` — 저자가 채울 것·확인할 것. `manuscript/수치대조_기록.json` — 본문 수치 44개와 결과 파일의 자동 대조 결과(k10).
 3. `tables/results.json`, `t06_tests.json` — 핵심 수치와 검정.
-4. `design/연구설계.md` — 가설·지표·검증 계획·예상 반론(8절). `design/투고설계_…md` — 접근성 축을 뺀 이유.
+4. `design/연구설계.md` — 가설·지표·검증 계획·예상 반론(8절). `design/투고설계_…md` — 접근성 축을 뺀 이유. `design/시계열_종합탐색_보고서.md` — 접근성·시설·인구를 겹쳐 본 탐색 결과(참고, 탐색용 수치).
 5. `scripts/` — 아래 재현 순서.
 
 ## 2. 재현 순서
@@ -85,6 +87,7 @@ python k04_manuscript.py          # 학위논문 4.4 원고(참고)
 python k06_kpa_submission.py      # 투고 초본 docx (manuscript_kpa/)
 python k08_hwp_pages.py           # Word PDF·쪽수 (Windows)
 python k09_hwp_build.py           # 한글 자동화로 .hwp 생성 (Windows + 한글 2022 + pyhwpx)
+python k10_claims_check.py        # 본문 수치·인용 자동 대조
 ```
 `scripts/config.py`의 `CORE_DATA`를 이 패키지의 `data/`로 바꾸면 코어엔진 없이 실행된다(k02의 대안 구획 읽기는 건너뛰며 `t07_robustness.csv`가 이미 있음).
 
@@ -125,7 +128,7 @@ T = 구 출발 서울 내 전체 통행(두 경계 공통 분모). a = LD만 내
 4. 인용문헌 서지(특히 Halás 2024, INSEE 2022, OMB 2021)의 원문 대조.
 
 ## 8. 점검한 것
-손계산 예제 4개 테스트 통과. 항등식 N_LD − N_LZ = a − b, |G| ≤ D, 생활권 합산 = 구 = 서울, 분해 두 순서의 합 = ΔX. 코어엔진 s05 독립 검증과 구별 IFR 일치(최대 오차 5e-7).
+손계산 예제 테스트 7/7 통과. 본문 수치 44개 자동 대조 전부 일치(manuscript/수치대조_기록.json). k01·k02 재실행 결과가 이 패키지의 표와 수치 완전 일치(2026-09-27). 항등식 N_LD − N_LZ = a − b, |G| ≤ D, 생활권 합산 = 구 = 서울, 분해 두 순서의 합 = ΔX. 코어엔진 s05 독립 검증과 구별 IFR 일치(최대 오차 5e-7).
 Git에는 데이터가 없다. 이 패키지의 `manifest.json`이 모든 파일의 SHA-256이다.
 
 문의: 박종하 (daniel21c@hanyang.ac.kr)
