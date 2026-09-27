@@ -62,6 +62,7 @@ chk("LD2020 고정 시 G 커진 구 13, 작아진 구 8", (dGf > 1e-9).sum() == 
 chk("D 재도출 효과 양 8·음 7·0 10", (decD.boundary_effect_mean > 1e-9).sum() == 8 and (decD.boundary_effect_mean < -1e-9).sum() == 7 and (decD.boundary_effect_mean.abs() <= 1e-9).sum() == 10)
 chk("대안 규칙: 사분면 16, 상위25% 7, B⊂A, B∩C 5", int(sel.selected_A_quadrant.sum()) == 16 and int(sel.selected_C_top25.sum()) == 7 and bool((sel.selected_B <= sel.selected_A_quadrant).all()) and sorted(sel[sel.selected_B & sel.selected_C_top25].ku_name) == sorted(["광진구", "도봉구", "은평구", "양천구", "강동구"]))
 chk("양천 G_2025 −0.05%p", r2(sel.loc[11150, "G_2025"]) == -0.05)
+chk("ΔD ≥ 1%p 5개 = 성동·강동·성북·동작·양천", sorted(sel[sel.dD >= 0.01].ku_name) == sorted(["성동구", "강동구", "성북구", "동작구", "양천구"]))
 chk("통행량 269.0/286.0백만, 비공개 22.9/22.4%", [round(x / 1e6, 1) for x in t01.flow_daily_seoul] == [269.0, 286.0] and [r1(x) for x in t01.masked_row_share_daily] == [22.9, 22.4])
 # 인용 ↔ 참고문헌
 body, refs = md.split("# 인용문헌")[0], md.split("# 인용문헌")[1].split("# 부록")[0]
