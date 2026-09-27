@@ -29,7 +29,8 @@ def read_map(fn, col):
 
 def table3():
     import pandas as pd
-    return pd.read_csv(C.TAB / "t02_gu_metrics_long.csv", encoding="utf-8-sig")
+    d = pd.read_csv(C.TAB / "t02_gu_metrics_long.csv", encoding="utf-8-sig")
+    return d[d.ku_code.astype(str) != "SEOUL"]
 
 
 # ---------- 1a 순수 파이썬 ----------
@@ -45,7 +46,7 @@ for y in C.YEARS:
         a[0] += f; a[1] += f * inlz; a[2] += f * inld; a[3] += f * (inld and not inlz); a[4] += f * (inlz and not inld)
     pure[y] = acc
     for k, (T, Nlz, Nld, a, b) in acc.items():
-        r = long[(long.ku_code == k) & (long.year == y)].iloc[0]
+        r = long[(long.ku_code.astype(str) == str(k)) & (long.year.astype(int) == int(y))].iloc[0]
         for mine, ref in [(T, r["T"]), (a, r["a"]), (b, r["b"]), (Nlz / T, r["IFR_lz"]), (Nld / T, r["IFR_ld"]), ((a - b) / T, r["G"]), ((a + b) / T, r["D"])]:
             worst = max(worst, abs(mine - ref) / max(abs(ref), 1e-12))
 rec["1a_순수파이썬_vs_표3_최대상대오차"] = worst
@@ -67,7 +68,8 @@ try:
           join read_csv_auto('{(CORE / f"dong_to_leiden_{y}_mapping_424.csv").as_posix()}') lo on lo.Dong=f.dong_O
           join read_csv_auto('{(CORE / f"dong_to_leiden_{y}_mapping_424.csv").as_posix()}') ldd on ldd.Dong=f.dong_D
           group by o.Ku order by o.Ku"""
-        df = duckdb.query(q).df().merge(long[long.year == y][["ku_code", "T", "a", "b", "IFR_lz", "IFR_ld"]], left_on="ku", right_on="ku_code")
+        sub = long[long.year.astype(int) == int(y)].copy(); sub["ku_code"] = sub.ku_code.astype(int)
+        df = duckdb.query(q).df().merge(sub[["ku_code", "T", "a", "b", "IFR_lz", "IFR_ld"]], left_on="ku", right_on="ku_code")
         for c1, c2 in [("T_x", "T_y"), ("a_x", "a_y"), ("b_x", "b_y")]:
             w2 = max(w2, ((df[c1] - df[c2]).abs() / df[c2].clip(lower=1)).max())
         w2 = max(w2, (df.N_lz / df.T_x - df.IFR_lz).abs().max(), (df.N_ld / df.T_x - df.IFR_ld).abs().max())
