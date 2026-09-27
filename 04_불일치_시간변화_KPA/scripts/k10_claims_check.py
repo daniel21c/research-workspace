@@ -55,6 +55,13 @@ chk("합의 변동 폭 0", bool(tst["band_all_zero"]))
 for nm, v in [("성북구_정릉", 11.4), ("성북구_길음", 11.2), ("양천구_목동", 13.0), ("강동구_길동둔촌", 9.9), ("강동구_암사", 9.7), ("마포구_용강생활권", 7.1), ("은평구_연신내생활", 5.4), ("은평구_수색생활권", 5.1)]:
     m = [i for i in lz.index if str(i) == nm or (str(i).startswith(nm) and nm != "양천구_목동")]
     chk(f"생활권 {nm} ΔD +{v}", bool(m) and r1(lz.loc[m[0], "dD"]) == v, str([(i, r1(lz.loc[i, "dD"])) for i in m]))
+
+dg = res["decomposition_seoul"]["G"]; chk("ΔG 분해 통행 +0.44, 경계 +0.39", r2(dg["flow_effect_mean"]) == 0.44 and r2(dg["boundary_effect_mean"]) == 0.39)
+fx = rc("t04b_fixed_ld2020_on_2025.csv").set_index("ku_code"); dGf = fx.G_ld20on25 - sel.G_2020
+chk("LD2020 고정 시 G 커진 구 13, 작아진 구 8", (dGf > 1e-9).sum() == 13 and (dGf < -1e-9).sum() == 8)
+chk("D 재도출 효과 양 8·음 7·0 10", (decD.boundary_effect_mean > 1e-9).sum() == 8 and (decD.boundary_effect_mean < -1e-9).sum() == 7 and (decD.boundary_effect_mean.abs() <= 1e-9).sum() == 10)
+chk("대안 규칙: 사분면 16, 상위25% 7, B⊂A, B∩C 5", int(sel.selected_A_quadrant.sum()) == 16 and int(sel.selected_C_top25.sum()) == 7 and bool((sel.selected_B <= sel.selected_A_quadrant).all()) and sorted(sel[sel.selected_B & sel.selected_C_top25].ku_name) == sorted(["광진구", "도봉구", "은평구", "양천구", "강동구"]))
+chk("양천 G_2025 −0.05%p", r2(sel.loc[11150, "G_2025"]) == -0.05)
 chk("통행량 269.0/286.0백만, 비공개 22.9/22.4%", [round(x / 1e6, 1) for x in t01.flow_daily_seoul] == [269.0, 286.0] and [r1(x) for x in t01.masked_row_share_daily] == [22.9, 22.4])
 # 인용 ↔ 참고문헌
 body, refs = md.split("# 인용문헌")[0], md.split("# 인용문헌")[1].split("# 부록")[0]
