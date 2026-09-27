@@ -1,0 +1,5 @@
+# 데이터·대용량 산출물은 Git에 넣지 않는다 (저장소 README 규칙 3)
+output/package_*/
+output/*.zip
+output/tables/t05_null_partitions.csv
+scripts/__pycache__/
