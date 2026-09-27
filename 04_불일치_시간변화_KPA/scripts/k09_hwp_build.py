@@ -103,7 +103,11 @@ def build(md_path: Path):
         m = re.match(r"^%([A-Z_]+):\s*(.*)$", line)
         if m: meta[m.group(1)] = m.group(2).strip()
         else: body.append(line)
-    tables = build_tables(); draw_framework()
+    if "_v2_" in md_path.name:                      # v2(경계 동 진단) 원고는 k18의 표·그림 사양을 쓴다
+        from k18_v2_results import build_tables_v2, FIGS_V2
+        tables, figs = build_tables_v2(), FIGS_V2
+    else:
+        tables, figs = build_tables(), FIGS; draw_framework()
     d = HwpDoc()
     d.para(meta["TITLE_KO"], HEAD, 14, True, "Center", 130, after=2)
     d.para("- " + meta["SUBTITLE_KO"] + " -", HEAD, 11, False, "Center", 130, after=6)
@@ -128,7 +132,7 @@ def build(md_path: Path):
             d.para("주: " + t["note"], BODY, 7.5, False, "Justify", 115, after=8); continue
         m = re.match(r"^\[\[FIG:(\w+)\]\]$", s)
         if m:
-            ko, en, fn, w, nt = FIGS[m.group(1)]
+            ko, en, fn, w, nt = figs[m.group(1)]
             d.picture(FIG / fn, w)
             d.para(f"그림 {ko} / Figure {en}", BODY, 8.5, True, "Center", 110, after=3)
             d.para("주: " + nt, BODY, 7.5, False, "Justify", 115, after=8); continue

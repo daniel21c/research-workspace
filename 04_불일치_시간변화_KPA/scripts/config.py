@@ -16,11 +16,20 @@ REPO = ROOT.parent                                # .../00_박사논문_연구�
 CORE = REPO / "00_공통_코어엔진"
 CORE_DATA = CORE / "data"
 CORE_OUT = CORE / "output"
+# 접근성 엔진 결과·입력(원인 탐색 k15~k17에서만 읽음)
+ACC_DATA = REPO / "06_접근성분석" / "접근성분석_패키지" / "데이터"
+
+# 공동연구자 패키지 모드: 패키지 폴더(scripts/의 부모)에 data/core_config.py가 있으면 저장소 대신 패키지 안 자료를 쓴다.
+PKG_MODE = (ROOT / "data" / "core_config.py").exists()
+if PKG_MODE:
+    CORE_DATA = ROOT / "data"
+    CORE_OUT = ROOT / "data" / "_core_output_absent"      # 대안 구획(τ 0.4/0.6)은 패키지에 없음 → k02가 건너뜀(결과 표는 포함)
+    ACC_DATA = ROOT / "data" / "access"
 
 # 코어엔진 config의 구 이름·목표 개수를 그대로 쓴다(숫자를 두 곳에 적지 않기 위해).
 # 파일 이름이 같아 import 로 부르면 자기 자신을 부르므로, 경로로 직접 읽는다.
 import importlib.util as _ilu  # noqa: E402
-_spec = _ilu.spec_from_file_location("core_config", CORE / "scripts" / "config.py")
+_spec = _ilu.spec_from_file_location("core_config", (ROOT / "data" / "core_config.py") if PKG_MODE else (CORE / "scripts" / "config.py"))
 _core = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_core)
 KU_NAME, KU_NAME_EN, TARGET_COMMUNITIES = _core.KU_NAME, _core.KU_NAME_EN, _core.TARGET_COMMUNITIES
 

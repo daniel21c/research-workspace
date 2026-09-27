@@ -96,13 +96,19 @@ rec["2_손대조_동대문구_2025"] = {"T": round(T), "a": round(a), "b": round
 print("2 동대문구 2025: T", round(T), "a", round(a), "b", round(b), "D%", round((a + b) / T * 100, 2), "G%p", round((a - b) / T * 100, 2))
 
 # ---------- 3 docx·hwp 표 대조 ----------
-sys.path.insert(0, str(C.HERE)); import k06_kpa_submission as k6
-tabs = k6.build_tables(); keys = ["T1", "T2", "T3", "T4", "T5", "TA1"]
-exp = {kk: [tabs[kk]["headers"]] + [[str(x) for x in r] for r in tabs[kk]["rows"]] for kk in keys}
+sys.path.insert(0, str(C.HERE))
 from docx import Document
 docx = sorted(p for p in MK.glob("국토계획_투고초본_v*.docx") if "2단" not in p.stem)[-1]
+if "_v2_" in docx.name:
+    from k18_v2_results import build_tables_v2
+    tabs = build_tables_v2(); keys = ["T1", "T2", "T3", "T4", "T5", "T6", "TA1"]
+else:
+    import k06_kpa_submission as k6
+    tabs = k6.build_tables(); keys = ["T1", "T2", "T3", "T4", "T5", "TA1"]
+exp = {kk: [tabs[kk]["headers"]] + [[str(x) for x in r] for r in tabs[kk]["rows"]] for kk in keys}
+rec["3_대조_원고"] = docx.name
 d = Document(str(docx)); mism = [kk for t, kk in zip(d.tables, keys) if [[c.text for c in r.cells] for r in t.rows] != exp[kk]]
-rec["3_docx_표_불일치"] = mism; print("3 docx 표 6개 대조: 불일치", mism)
+rec["3_docx_표_불일치"] = mism; print(f"3 docx 표 {len(keys)}개 대조: 불일치", mism)
 try:
     from pyhwpx import Hwp
     os.system("taskkill /F /IM Hwp.exe >nul 2>&1")
@@ -111,7 +117,7 @@ try:
         hwp.get_into_nth_table(i); df = hwp.table_to_df()
         got = [list(map(str, df.columns))] + [[str(x) for x in r] for r in df.values.tolist()]
         if got != exp[kk]: mism_h.append(kk)
-    hwp.quit(); rec["3_hwp_표_불일치"] = mism_h; print("3 hwp 표 6개 대조: 불일치", mism_h)
+    hwp.quit(); rec["3_hwp_표_불일치"] = mism_h; print(f"3 hwp 표 {len(keys)}개 대조: 불일치", mism_h)
 except Exception as e:
     rec["3_hwp"] = f"미실행: {e!r}"[:120]; print("3 hwp 미실행:", repr(e)[:80])
 
