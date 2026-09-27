@@ -153,9 +153,9 @@ def build_tables():
     tables["T1"] = dict(
         ko="1. 분석 자료", en="1. Data Used in the Analysis",
         headers=["자료", "시점·범위", "처리", "역할"],
-        rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09~20시, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·G·D 계산"],
+        rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09:00~20:59, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·G·D 계산"],
               ["행정동 경계", "424개(두 해 공통 정본)", "2021년 코드표 기준 통일", "집계·탐지 단위"],
-              ["공식 지역생활권(LZ)", "116개(2030 서울생활권계획)", "행정동→생활권 대응(면적 최대 중첩)", "평가 대상 경계"],
+              ["공식 지역생활권(LZ)", "116개(2030 서울생활권계획)", "행정동→생활권 대응(면적 최대 중첩, 최솟값 0.51)", "평가 대상 경계"],
               ["이동 기반 경계(LD)", "연도별 116개", "자치구 내 Leiden 합의(3,000회, τ = 0.5)", "비교 기준점"],
               ["필터 후 통행량", f"{t01.loc['2020','flow_daily_seoul']/1e6:,.1f}백만 / {t01.loc['2025','flow_daily_seoul']/1e6:,.1f}백만", f"비공개 행 비율 {t01.loc['2020','masked_row_share_daily']*100:.1f}% / {t01.loc['2025','masked_row_share_daily']*100:.1f}%", "분모 T의 합"]],
         widths=[3.2, 3.6, 6.4, 3.0], note="생활이동 자료는 서울시·KT의 추정 이동량이며, 3명 미만 셀은 비공개 처리되어 0으로 두었다.")
@@ -300,6 +300,7 @@ def build(md_path: Path):
         if in_refs:
             para(doc, s, "KPA Reference"); continue
         para(doc, s, "Normal")
+    cp = doc.core_properties; cp.author = ""; cp.last_modified_by = ""; cp.title = ""; cp.comments = ""   # 익명심사: 문서 속성 비움
     out = MK / (md_path.stem + ".docx"); doc.save(out)
     out2 = two_column(out, out.with_name(out.stem + "_2단편집.docx"))
     return out, out2

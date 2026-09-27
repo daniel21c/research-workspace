@@ -38,7 +38,7 @@ def main():
     for f in FIG.glob("F*.p*"): shutil.copy2(f, out / "05_그림_원본" / f.name)
     for n in ("t01_data_summary.csv", "t02_gu_metrics_long.csv", "t03_gu_change.csv", "t04_decomposition.csv", "t04b_fixed_ld2020_on_2025.csv", "t05_null_summary.csv", "t06_selection.csv", "t07_robustness.csv", "t08b_lz116_change.csv", "t09_ari_ld20_ld25.csv", "t10_iou_vs_gap.csv", "results.json", "t06_tests.json"):
         shutil.copy2(T / n, out / "06_표_원본" / n)
-    for n in ("수치대조_기록.json", "독립재계산_기록.json", "쪽수_기록.json", "공동연구자_확인결과_20260927.md"):
+    for n in ("수치대조_기록.json", "독립재계산_기록.json", "쪽수_기록.json", "공동연구자_확인결과_20260927.md", "전수검수_보고서_20260927.md"):
         if (MK / n).exists(): shutil.copy2(MK / n, out / "09_수치·재현_점검기록" / n)
     pages = json.loads((MK / "쪽수_기록.json").read_text(encoding="utf-8"))
     (out / "07_저자작성항목.md").write_text(f"""# 저자 작성 항목과 제출 직전 확인 순서 ({stamp})
@@ -98,6 +98,22 @@ def main():
 
 제출 전 남은 것은 07의 A(저자 정보 등)·B(학회 양식 이식)·C(교수님 확인 2건)이다.
 """, encoding="utf-8")
+    # 익명 검사: 제출 파일 안에 사용자명·저자명이 남아 있지 않은지
+    import getpass, fitz
+    from docx import Document
+    names = [getpass.getuser(), "박종하", "daniel21c", "hanyang"]
+    found = []
+    b = (out / "01_투고본_익명_한글.hwp").read_bytes()
+    for nm in names:
+        for enc in ("utf-16le", "utf-8", "cp949"):
+            if nm.encode(enc) in b: found.append(f"hwp:{nm}")
+    m = fitz.open(str(out / "02_투고본_익명_확인용.pdf")).metadata
+    for k in ("author", "creator", "producer"):
+        if m.get(k): found.append(f"pdf:{k}={m[k]}")
+    cp = Document(str(out / "03_투고본_익명_Word.docx")).core_properties
+    if cp.author or cp.last_modified_by: found.append(f"docx:author={cp.author!r}")
+    (out / "09_수치·재현_점검기록" / "익명검사.json").write_text(json.dumps({"검사 문자열": names, "발견": found, "판정": "통과" if not found else "실패"}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print("익명 검사:", "통과" if not found else found)
     print("제출본:", out, "| 파일", sum(1 for p in out.rglob("*") if p.is_file()))
 
 

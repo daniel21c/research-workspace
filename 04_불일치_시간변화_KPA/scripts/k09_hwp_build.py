@@ -76,7 +76,25 @@ class HwpDoc:
     def save(self, out: Path):
         ok = self.h.save_as(str(out)); n = int(self.h.PageCount)
         pdf = out.with_name(out.stem + "_한글출력.pdf"); self.h.save_as(str(pdf), "PDF")
-        self.h.quit(); return ok, n, pdf
+        self.h.quit()
+        anonymize(out, pdf)
+        return ok, n, pdf
+
+
+def anonymize(hwp_path: Path, pdf_path: Path):
+    """익명심사: 한글이 문서 속성에 넣는 Windows 사용자명을 같은 길이의 공백으로 치환(구조 유지), PDF 메타데이터 비움."""
+    import getpass
+    user = getpass.getuser()
+    data = hwp_path.read_bytes(); n = 0
+    for enc in ("utf-16le", "utf-8", "cp949"):
+        needle = user.encode(enc)
+        if needle and needle in data:
+            n += data.count(needle); data = data.replace(needle, " ".encode(enc) * len(user))
+    if n: hwp_path.write_bytes(data)
+    import fitz
+    d = fitz.open(str(pdf_path)); d.set_metadata({"author": "", "creator": "", "producer": "", "title": "", "subject": "", "keywords": ""})
+    tmp = pdf_path.with_suffix(".tmp.pdf"); d.save(str(tmp), garbage=1); d.close(); tmp.replace(pdf_path)
+    print(f"익명화: hwp 사용자명 치환 {n}곳, pdf 메타데이터 제거")
 
 
 def build(md_path: Path):
