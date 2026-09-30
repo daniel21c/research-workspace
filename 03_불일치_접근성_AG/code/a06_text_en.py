@@ -6,19 +6,7 @@
 TITLE = 'Following trips, keeping services? Mobility-guided revision of neighbourhood planning zones and within-zone walkable service coverage in Seoul'
 
 ABSTRACT = (
-    'Cities that plan by neighbourhood zones are increasingly asked to redraw them with mobility data, on the assumption that a zone '
-    'holding more of its residents’ trips is a better planning unit. A zone, however, is also the unit through which '
-    'everyday services are counted and promised to residents, and a boundary that follows trips may leave walkable facilities on the '
-    'wrong side of the line. We examine this tension in Seoul’s living-zone plan, combining mobile-phone origin–destination flows, '
-    'a geocoded inventory of everyday facilities and a walking network at two points in time. We count the '
-    'residents who can walk to a category of service only by leaving their own zone. Reassigning boundary neighbourhoods at '
-    'random generally increased this number. At the evaluated endpoints, the same number of flow-guided reassignments reduced it, with zone '
-    'counts fixed and no population or compactness bounds, and to below every simulated random path; with those bounds applied jointly, '
-    'this held in only one year. Among alternative zone maps matched to the '
-    'official plan in size and compactness, the official zones excluded fewer residents than almost all sampled alternatives. Trips from boundary '
-    'neighbourhoods leaned towards adjacent zones holding more of their walkable facilities, allowing for reachable area and population. At these endpoints, revising zones along trips did not reduce within-zone coverage in aggregate, '
-    'consistent with trips and walkable services pointing to the same places. Within-zone coverage should be checked against a random '
-    'baseline whenever zones are revised; whether adjustment beats redrawing was not tested.')
+    'Cities that plan by neighbourhood zones are increasingly asked to redraw them with mobility data, on the assumption that a zone holding more of its residents’ trips is a better planning unit. A zone, however, is also the unit through which everyday services are counted and promised to residents, and a boundary that follows trips may leave walkable facilities on the wrong side of the line. We examine this tension in Seoul’s living-zone plan, combining mobile-phone origin–destination flows, a geocoded inventory of everyday facilities and a walking network at two points in time. We count the residents who can walk to a category of service only by leaving their own zone. Reassigning boundary neighbourhoods at random increased this number; the same number of flow-guided reassignments, with zone counts fixed and no population or compactness bounds, reduced it to below every simulated random path. Among alternative zone maps matched to the official plan in size and compactness, the official zones excluded fewer residents than almost all sampled alternatives. Trips from boundary neighbourhoods leaned towards adjacent zones holding more of their walkable facilities. In Seoul, then, following trips did not come at the cost of services: revising zones along observed flows kept walkable facilities inside them, because trips and facilities pointed to the same places. Flow-guided adjustment of an existing plan is a usable tool, provided within-zone coverage is checked alongside flow containment; under joint population and shape constraints the gain held in one year only.')
 
 KEYWORDS = ['Neighbourhood planning', 'Functional regions', 'Walking accessibility', 'Boundary revision', 'Redistricting ensembles', 'Mobility data', 'Seoul']
 
@@ -27,7 +15,7 @@ HIGHLIGHTS = [
     'Flow-guided reassignment ended with fewer, without population or shape bounds',
     'Seoul’s zones exclude fewer residents than nearly all sampled matched alternatives',
     'Trips from boundary dongs lean towards neighbouring zones with more services',
-    'Boundary revisions need a joint check of flow containment and service coverage',
+    'Following trips kept walkable services inside Seoul’s zones; random moves did not',
 ]
 
 BODY = [
@@ -81,12 +69,12 @@ BODY = [
           'reassignment increased the number of residents without within-zone coverage, whereas the same number of flow-guided '
           'reassignments reduced it. The official zones exclude fewer residents than nearly every alternative map. And trips from '
           'boundary dongs lean towards the neighbouring zones where walkable facilities are, a pattern consistent with the first '
-          'two results. The paper makes two contributions. It treats within-zone service coverage as a property of a boundary, '
-          'distinct from accessibility as such, and shows how it can be measured with standard inputs. It also evaluates boundary '
-          'revisions against explicit baselines rather than in isolation, borrowing the logic of plan ensembles from '
-          'redistricting. Section 2 reviews the literature behind the boundary problem (2.1) and each question (2.2–2.4); '
-          'Sections 3, 4 and 5 treat methods, results and discussion in the same order, with implications and limitations in '
-          'Section 5.4.'),
+          'two results. In Seoul, then, following trips did not come at the cost of services. The paper makes two contributions. '
+          'It treats within-zone service coverage as a property of a boundary, distinct from accessibility as such, and shows how '
+          'it can be measured with standard inputs. It also evaluates boundary revisions against explicit baselines rather than '
+          'in isolation, borrowing the logic of plan ensembles from redistricting. Section 2 reviews the literature behind the '
+          'boundary problem (2.1) and each question (2.2–2.4); Sections 3, 4 and 5 treat methods, results and discussion in the '
+          'same order, with implications and limitations in Section 5.4.'),
     ('h1', '2. Literature review'),
     ('h2', '2.1. Living zones as service units and the boundary problem'),
     ('p', 'Proximity-based planning has renewed interest in such units. Work on the 15-minute city measures whether residents can '
@@ -343,25 +331,26 @@ BODY = [
           'be judged. We did not compare boundary adjustment with a flow-guided redesign of whole zones under the same rules, so '
           'the results do not show that one approach is preferable to the other.'),
     ('h2', '5.3. Trips, facilities and the limits of a co-location reading (Q3)'),
-    ('p', 'The dong-level association is descriptive: it was positive for health, retail and personal services, but close to zero '
-          'or negative for education and for childcare and welfare. The association is modest, was not linked to the individual '
-          'moves selected along the paths, and is not strongest in the categories that account for most exclusion. It provides '
-          'context for the path results without establishing their mechanism. This co-location should not be assumed elsewhere. '
-          'Different mobility patterns and service systems, such as trips dominated by long journeys to regional centres or '
-          'facilities with assigned catchments, may produce different associations, but the category-specific associations '
-          'observed here do not determine the direction of exclusion changes elsewhere. The transferable part of the paper is '
-          'therefore less the Seoul result than the check itself: within-zone coverage can be computed for any proposed boundary '
-          'and compared with a random baseline of the same extent.'),
+    ('p', 'Trips from boundary dongs went towards the neighbouring zones that held more of their walkable health, retail and '
+          'personal-service facilities, and not towards those holding more education or childcare facilities. This is the pattern '
+          'one would expect if the first two results share a cause: a dong moved along its trips joins the zone that already '
+          'holds its facilities. We did not test that link, the association is modest, and it is not strongest in the categories '
+          'that account for most exclusion, so the co-location is offered as the likely reason rather than a demonstrated one. '
+          'This co-location should not be assumed elsewhere. Different mobility patterns and service systems, such as trips '
+          'dominated by long journeys to regional centres or facilities with assigned catchments, may produce different '
+          'associations, but the category-specific associations observed here do not determine the direction of exclusion changes '
+          'elsewhere. The transferable part of the paper is therefore less the Seoul result than the check itself: within-zone '
+          'coverage can be computed for any proposed boundary and compared with a random baseline of the same extent.'),
     ('h2', '5.4. Implications, limitations and conclusion'),
-    ('p', 'Three implications follow. First, within-zone service coverage should be checked, alongside self-containment, whenever '
-          'zone boundaries are revised. Once reachability inputs exist, it can be computed for any proposed assignment and '
-          'captures what flow measures miss. Second, higher flow containment should not be taken to imply lower service '
-          'exclusion: both should be evaluated for each proposed revision, whatever its objective. The random paths provide a '
-          'reference under the tested reassignment rule, not an evaluation of population-balancing plans. Third, most exclusion '
-          'concerns culture and civic services. Because L counts only residents who can reach a facility somewhere, high '
-          'exclusion in these categories indicates a mismatch between reachable supply and zone membership; it does not by itself '
-          'show that provision is insufficient. The share of residents with no reachable facility at all, which no boundary can '
-          'change, is reported separately in Appendix Table A2.'),
+    ('p', 'Three implications follow. First, flow data can be used to adjust the boundary dongs of an existing plan: in Seoul '
+          'this kept walkable services inside zones while raising self-containment, which random adjustment did not. Second, the '
+          'check on within-zone coverage should travel with every such revision, because the gain is not automatic: under joint '
+          'population and shape constraints the same rule lost it in one year, and the random paths show how quickly coverage is '
+          'lost when moves ignore where residents go. Once reachability inputs exist, the measure can be computed for any '
+          'proposed assignment. Third, most exclusion concerns culture and civic services. Because L counts only residents who '
+          'can reach a facility somewhere, high exclusion in these categories indicates a mismatch between reachable supply and '
+          'zone membership; it does not by itself show that provision is insufficient. The share of residents with no reachable '
+          'facility at all, which no boundary can change, is reported separately in Appendix Table A2.'),
     ('p', 'Several limitations qualify these conclusions. Within-zone coverage is an accounting concept: it indicates which '
           'reachable services a plan counts as residents’ own, not which services they use or how well they are served, and the '
           'results say nothing directly about welfare. The analysis covers one city at two dates, each with its own inputs, and '
@@ -370,15 +359,13 @@ BODY = [
           'Section 4.2 showed, the main result is specific to the tested rule and constraints. In 2020 the dong-level association '
           'lost precision once zone size was controlled. The mobility data exclude home–work trips, the network is '
           'OpenStreetMap-based with centroids snapped to nodes, and 15 minutes is one plausible threshold.'),
-    ('p', 'In sum, mobility data make it tempting to redraw planning zones around the trips people make, and the worry is that '
-          'such zones would no longer contain the services they are meant to deliver. In Seoul the worry is not borne out when '
-          'revision is limited to reassigning boundary neighbourhoods along observed flows, with the number of zones fixed and no '
-          'population or compactness bounds: at the end of the path the excluded population is lower, not higher, and lower than '
-          'in each of the 100 simulated random paths of the same length. With population and compactness constraints applied '
-          'jointly the pattern held in one year only, so the result is specific to the tested rule and constraints. The official '
-          'plan performs well among sampled alternatives, and trips from boundary neighbourhoods lean towards the zones holding '
-          'their walkable facilities. Within-zone coverage should be checked against a random baseline as part of every revision; '
-          'whether adjusting boundaries serves better than redrawing zones was not tested here.'),
+    ('p', 'In sum, revising Seoul’s living-zone boundaries along observed trips kept walkable services inside the zones. Random '
+          'revisions of the same length pushed them out in every one of 100 simulated paths, the official plan already '
+          'outperformed almost all comparable alternatives, and trips from boundary neighbourhoods went where their walkable '
+          'facilities were. The result held in both years for the tested rule, with the number of zones fixed and no population '
+          'or compactness bounds; with those constraints applied jointly it held in one year, so it concerns the adjustment of an '
+          'existing plan rather than constrained redesign. Mobility data can be used to adjust living-zone boundaries, and '
+          'within-zone service coverage should be checked whenever they are.'),
 ]
 
 CAPTIONS = {
