@@ -115,7 +115,7 @@ def main():
        f'GitHub 폴더: {REPO}/tree/{COMMIT}/03_%EB%B6%88%EC%9D%BC%EC%B9%98_%EC%A0%91%EA%B7%BC%EC%84%B1_AG',
        f'GitHub 커밋: {REPO}/commit/{COMMIT}',
        '먼저 보실 순서: 한국어 원고 PDF → 이 메모 4절 표 → 영문 익명본 PDF → docs/연구설계_AG확정본.md'])
-    out = MS / 'AG_교수님보고_20260930.docx'; d.save(out); print(out)
+    out = AG / '보고_20260930' / 'AG_교수님보고_20260930.docx'; out.parent.mkdir(exist_ok=True); d.save(out); print(out)
 
 
 if __name__ == '__main__':
