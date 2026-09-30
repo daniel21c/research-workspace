@@ -12,7 +12,7 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
 AG = Path(__file__).resolve().parents[1]; RES = AG / 'results'; MS = AG / 'manuscript'; FIG = MS / 'figures'
-COMMIT = '0dbd028'; REPO = 'https://github.com/daniel21c/research-workspace'
+COMMIT = '9328d33'; REPO = 'https://github.com/daniel21c/research-workspace'
 
 
 def n0(x):
