@@ -40,16 +40,16 @@ BODY = [
           'neighbourhood unit, sized by the walking catchment of an elementary school and furnished with shops, open space and '
           'community facilities, to the neighbourhood planning guidelines reviewed by Park and Rogers (2015), and to Talen’s '
           '(2003) treatment of neighbourhoods as service providers whose walkable supply can be measured.'),
-    ('p', 'Units of this kind are being adopted or revived in large cities worldwide, usually with an explicit service or welfare '
-          'mandate. Berlin divides its twelve boroughs into several hundred lifeworld-oriented spaces that serve as the reference '
-          'geography for social planning and neighbourhood budgets (Berlin Senate Department for Urban Development, Building and '
-          'Housing, 2021). London monitors housing, transport and infrastructure targets through five sub-regions set out in its '
-          'statutory plan (Greater London Authority, 2016), and Greater Sydney organises its metropolitan strategy around three '
-          'cities and five districts so that most residents can reach jobs and services within thirty minutes (Greater Sydney '
-          'Commission, 2018). Seoul’s living-zone plan belongs to this family. Adopted as part of the city’s 2030 planning '
-          'framework, it divides the city into five regional and 116 local living zones and uses the local zones as the units for '
-          'diagnosing service shortfalls and setting local priorities (Seoul Metropolitan Government, 2018). In each case the '
-          'zone is the territory over which a public body promises, counts and reports everyday services.'),
+    ('p', 'Cities use territorial units for planning and monitoring at different scales. Berlin’s lifeworld-oriented spaces '
+          'provide a spatial reference for social planning and demographic monitoring (Berlin Senate Department for Urban '
+          'Development, Building and Housing, 2021). The 2016 London Plan used sub-regions for statutory monitoring and '
+          'cross-borough coordination (Greater London Authority, 2016), and Greater Sydney’s 2018 strategy organised three cities '
+          'and five districts around a thirty-minute access aspiration (Greater Sydney Commission, 2018). These units differ in '
+          'scale and institutional function. Seoul’s living-zone plan, adopted as part of the city’s 2030 planning framework, '
+          'comprises five regional and 116 local living zones and uses the local zones to diagnose service shortfalls and set '
+          'local priorities (Seoul Metropolitan Government, 2018). These examples illustrate territorial planning at several '
+          'scales, not a common guarantee of everyday services within each boundary; it is the local living zone, with its '
+          'service-diagnosis role, that this paper examines.'),
     ('p', 'Most such zones were drawn from administrative boundaries, local knowledge and negotiation rather than from data on '
           'how residents move. Now that large mobility datasets are routinely available, a new question is being put to such '
           'plans: do the official zones match the territories that people’s trips actually form? Studies of Seoul and of other '
@@ -84,10 +84,9 @@ BODY = [
           'two results. The paper makes two contributions. It treats within-zone service coverage as a property of a boundary, '
           'distinct from accessibility as such, and shows how it can be measured with standard inputs. It also evaluates boundary '
           'revisions against explicit baselines rather than in isolation, borrowing the logic of plan ensembles from '
-          'redistricting. The paper is organised so that each question can be followed through: Section 2 reviews the literature '
-          'behind the boundary problem (2.1) and behind each question (2.2–2.4), and Sections 3, 4 and 5 treat data and '
-          'indicators, methods, results and discussion in the same order, with implications and limitations gathered in Section '
-          '5.4.'),
+          'redistricting. Section 2 reviews the literature behind the boundary problem (2.1) and each question (2.2–2.4); '
+          'Sections 3, 4 and 5 treat methods, results and discussion in the same order, with implications and limitations in '
+          'Section 5.4.'),
     ('h1', '2. Literature review'),
     ('h2', '2.1. Living zones as service units and the boundary problem'),
     ('p', 'Proximity-based planning has renewed interest in such units. Work on the 15-minute city measures whether residents can '
@@ -151,14 +150,15 @@ BODY = [
           'random baseline of Section 3.2; and a plan should be judged against the plans it could have been, which is our second '
           'question.'),
     ('h2', '2.4. Trips and the location of everyday services'),
-    ('p', 'The third question asks whether the two objects compared so far, trips and walkable facilities, tend to point to the '
-          'same places. There are reasons to expect so. Accessibility has long been understood to shape where activity locates '
-          '(Hansen, 1959), and a large share of the daytime trips recorded in mobile-phone data are trips to shops, clinics, '
-          'schools and other services rather than to work (Alexander et al., 2015). Graells-Garrido et al. (2021) found that '
-          'local accessibility to everyday amenities shapes the mobility of Barcelona’s neighbourhoods: where more can be reached '
-          'nearby, trips stay nearer. If trips tend to go where services are, a boundary drawn around trips may keep services '
-          'inside zones rather than push them out. Whether this holds at the boundaries of an existing plan, and for which '
-          'services, has not been examined.'),
+    ('p', 'The third question asks whether trips and walkable facilities tend to point to the same places. Accessibility has long '
+          'been related to the location of activity (Hansen, 1959). Alexander et al. (2015) inferred trips by broad purpose and '
+          'time of day from mobile-phone data, distinguishing home-based work, home-based other and non-home-based trips. In '
+          'Barcelona, Graells-Garrido et al. (2021) found that visits were associated with greater destination accessibility to '
+          'education and retail, with local variation in sign and magnitude. These studies motivate examining the spatial '
+          'association between trips and reachable services, but do not imply that mobility-guided boundary changes reduce '
+          'exclusion. If trips tend to go where services are, a boundary drawn around trips may keep services inside zones rather '
+          'than push them out; whether this holds at the boundaries of an existing plan, and for which services, has not been '
+          'examined.'),
     ('h2', '2.5. Gaps and research questions'),
     ('p', 'Three gaps follow from this review: flow-based revision is judged by containment alone, a single plan’s coverage is '
           'rarely judged against the plans it could have been, and the spatial relation between trips and walkable services at '
@@ -342,16 +342,15 @@ BODY = [
           'be judged. We did not compare boundary adjustment with a flow-guided redesign of whole zones under the same rules, so '
           'the results do not show that one approach is preferable to the other.'),
     ('h2', '5.3. Trips, facilities and the limits of a co-location reading (Q3)'),
-    ('p', 'The dong-level association is descriptive. Trips from boundary dongs lean towards the neighbouring zones that hold '
-          'more of their walkable health, retail and personal-service facilities, and not towards those holding more schools or '
-          'childcare, whose users are assigned or enrolled. The association is modest, it was not linked to the individual moves '
-          'selected along the paths, and the categories that account for most exclusion are not those where it is strongest. It '
-          'describes where trips and facilities coincide, consistent with the first two results; it is not the mechanism behind '
-          'them. This co-location should not be assumed elsewhere. Different mobility patterns and service systems, such as trips '
-          'dominated by long journeys to regional centres or facilities with assigned catchments, may produce different '
-          'associations, but the category-specific associations observed here do not determine the direction of exclusion changes '
-          'elsewhere. The transferable part of the paper is therefore less the Seoul result than the check itself: within-zone '
-          'coverage can be computed for any proposed boundary and compared with a random baseline of the same extent.'),
+    ('p', 'The dong-level association is descriptive: it was positive for health, retail and personal services, but close to zero '
+          'or negative for education and for childcare and welfare. The association is modest, was not linked to the individual '
+          'moves selected along the paths, and is not strongest in the categories that account for most exclusion. It provides '
+          'context for the path results without establishing their mechanism. This co-location should not be assumed elsewhere. '
+          'Different mobility patterns and service systems, such as trips dominated by long journeys to regional centres or '
+          'facilities with assigned catchments, may produce different associations, but the category-specific associations '
+          'observed here do not determine the direction of exclusion changes elsewhere. The transferable part of the paper is '
+          'therefore less the Seoul result than the check itself: within-zone coverage can be computed for any proposed boundary '
+          'and compared with a random baseline of the same extent.'),
     ('h2', '5.4. Implications, limitations and conclusion'),
     ('p', 'Three implications follow. First, within-zone service coverage should be checked, alongside self-containment, whenever '
           'zone boundaries are revised. Once reachability inputs exist, it can be computed for any proposed assignment and '
@@ -369,8 +368,7 @@ BODY = [
           'without Metropolis correction and are not a uniform sample, and in four gu the rules left very few alternatives. As '
           'Section 4.2 showed, the main result is specific to the tested rule and constraints. In 2020 the dong-level association '
           'lost precision once zone size was controlled. The mobility data exclude home–work trips, the network is '
-          'OpenStreetMap-based with centroids snapped to nodes, and 15 minutes is one plausible threshold. Finally, the design '
-          'was settled after earlier designs had been explored, and the tests are reported as post hoc.'),
+          'OpenStreetMap-based with centroids snapped to nodes, and 15 minutes is one plausible threshold.'),
     ('p', 'In sum, mobility data make it tempting to redraw planning zones around the trips people make, and the worry is that '
           'such zones would no longer contain the services they are meant to deliver. In Seoul the worry is not borne out when '
           'revision is limited to reassigning boundary neighbourhoods along observed flows, with the number of zones fixed and no '

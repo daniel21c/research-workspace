@@ -403,7 +403,7 @@ def main():
     render(EN.BODY, V, TB, EN.CAPTIONS, d)
     heading(d, 'Declaration of generative AI and AI-assisted technologies in the manuscript preparation process', 1)
     para(d, AI_DECLARATION, indent=False)
-    heading(d, 'Data availability', 1); para(d, 'This study uses publicly accessible datasets obtained from third-party providers (mobile-phone origin–destination flows, population grid, administrative boundaries, public facility registers and OpenStreetMap). The facility inventory, derived results and analysis code are available in a public repository; the link is given on the title page.', indent=False)
+    heading(d, 'Data availability', 1); para(d, 'All input datasets are publicly available from their providers. The facility inventory, derived results and analysis code are available in a public repository; the link is given on the title page.', indent=False)
     heading(d, 'References', 1)
     for r in REFS:
         p = para(d, r, indent=False); p.paragraph_format.left_indent = Cm(0.75); p.paragraph_format.first_line_indent = Cm(-0.75)
