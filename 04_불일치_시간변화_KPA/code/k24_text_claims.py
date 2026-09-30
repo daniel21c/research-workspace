@@ -100,6 +100,14 @@ def values() -> dict:
     for y in ("2020", "2025"):
         alt = S4[f"{y}_대안분모_같은구_자기동제외"]
         V[f"alt_lz_{y}"], V[f"alt_ld_{y}"], V[f"alt_re_{y}"] = f1(alt["서울IFR_공식"]), f1(alt["서울IFR_가상경계"]), f1(alt["서울IFR_재배정"])
+    from scipy.stats import linregress                       # D·G ~ IoU 선형 R²(t10_iou_vs_gap, k01) — Ⅲ.1 3)
+    t10 = rc(C.TAB / "t10_iou_vs_gap.csv"); t10 = t10[t10.ku_code.astype(str).str.isdigit()]
+    r2 = lambda x, y: linregress(x, y).rvalue ** 2
+    for y in ("2020", "2025"):
+        same = t10[f"D_{y}"] == 0
+        V[f"iou_d_{y}"] = f"{r2(t10[f'IoU_{y}'], t10[f'D_{y}']):.2f}"
+        V[f"iou_d_ex_{y}"] = f"{r2(t10.loc[~same, f'IoU_{y}'], t10.loc[~same, f'D_{y}']):.2f}"
+    V["iou_g_max"] = f"{max(r2(t10[f'IoU_{y}'], t10[f'G_{y}']) for y in ('2020', '2025')):.2f}"
     return V
 
 
@@ -108,6 +116,7 @@ def spec(v: dict) -> list[tuple[str, str, str]]:
     return [
         # Ⅲ 자료
         ("m_flow", "Ⅲ.1", "필터를 적용한 서울 내부 통행량은 2020년 2억 6,904만, 2025년 2억 8,596만이다"),
+        ("m_iou", "Ⅲ.1", f"(2020년 R² = {v['iou_d_2020']}, 2025년 R² = {v['iou_d_2025']}, p < 0.001; 두 경계가 같은 구를 제외해도 {v['iou_d_ex_2020']}, {v['iou_d_ex_2025']}), G는 거의 설명하지 못하였다(R² ≤ {v['iou_g_max']})"),
         # Ⅳ.1 내부통행률 수준 / Ⅳ.2 상승의 판별(구성 변경 2026-09-30: 절 번호는 새 목차 기준)
         ("r1_ifr", "Ⅳ.1", f"기존 생활권이 {v['ifr_lz_2020']}%에서 {v['ifr_lz_2025']}%로, 데이터 기반 커뮤니티가 {v['ifr_ld_2020']}%에서 {v['ifr_ld_2025']}%로"),
         ("r1_all", "Ⅳ.2", f"두 경계 모두 {v['up_lz']}개 자치구 전부에서 나타났다(부호검정 p {v['up_p']})" if v['up_lz'] == v['up_ld'] == "25" else "상승 구 수 확인"),

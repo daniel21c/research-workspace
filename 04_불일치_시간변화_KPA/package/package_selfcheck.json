@@ -14,7 +14,7 @@
   {
    "cmd": "k01_compute.py",
    "rc": 0,
-   "tail": "25,\n  \"quadrant\": {\n   \"I (+,+)\": 14,\n   \"III (-,-)\": 8,\n   \"II (-,+)\": 2,\n   \"IV (+,-)\": 1\n  }\n }\n}\n완료 4.7s → D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\package\\package_kpa_final_20260930\\output\\tables"
+   "tail": "25,\n  \"quadrant\": {\n   \"I (+,+)\": 14,\n   \"III (-,-)\": 8,\n   \"II (-,+)\": 2,\n   \"IV (+,-)\": 1\n  }\n }\n}\n완료 4.7s → D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\package\\package_kpa_final_20261001\\output\\tables"
   },
   {
    "cmd": "k25_change_story.py",
