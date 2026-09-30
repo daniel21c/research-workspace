@@ -1,0 +1,170 @@
+{
+  "scope": "Follow-up verification of structure-audit A/B/C; ancillary release consistency, not a new full scientific or submission audit",
+  "commit": "73be0232017fb4c89d92cb10e67f90925202b0c1",
+  "zip": {
+    "path": "/mnt/data/AG_확정본_공동연구자패키지_20260930_73be023.zip",
+    "bytes": 22903560,
+    "sha256": "a80744e39bcfb6e2f913a9e3ee0c3bd5b0643b938185e2f44280eeca35853809",
+    "git_blob_sha1": "2ee997c229e5e9253120e680271c082fc0edbf9d",
+    "github_blob_sha1": "2ee997c229e5e9253120e680271c082fc0edbf9d",
+    "matches_github_blob": true
+  },
+  "source": {
+    "sha256": "83be948f2a993e74fe9b25f5cf754c1b5f0244d65e64c2a5572f7d3b7b8868fd",
+    "git_blob_sha1": "8aad15c916f7c0ff09093116327c16a1ff0638b5",
+    "github_blob_sha1": "0c6b85938ec9689791435fdb8b6301abe9b48830",
+    "matches_github_blob": false,
+    "lf_normalized_git_blob_sha1": "0c6b85938ec9689791435fdb8b6301abe9b48830",
+    "matches_github_after_line_ending_normalization": true,
+    "line_ending_note": "ZIP source uses CRLF; Git blob uses LF. Normalizing CRLF to LF matches the exact Git blob."
+  },
+  "manifest": {
+    "rows": 85,
+    "mismatches": []
+  },
+  "paragraphs": {
+    "A": "Cities use territorial units for planning and monitoring at different scales. Berlin’s lifeworld-oriented spaces provide a spatial reference for social planning and demographic monitoring (Berlin Senate Department for Urban Development, Building and Housing, 2021). The 2016 London Plan used sub-regions for statutory monitoring and cross-borough coordination (Greater London Authority, 2016), and Greater Sydney’s 2018 strategy organised three cities and five districts around a thirty-minute access aspiration (Greater Sydney Commission, 2018). These units differ in scale and institutional function. Seoul’s living-zone plan, adopted as part of the city’s 2030 planning framework, comprises five regional and 116 local living zones and uses the local zones to diagnose service shortfalls and set local priorities (Seoul Metropolitan Government, 2018). These examples illustrate territorial planning at several scales, not a common guarantee of everyday services within each boundary; it is the local living zone, with its service-diagnosis role, that this paper examines.",
+    "B": "The third question asks whether trips and walkable facilities tend to point to the same places. Accessibility has long been related to the location of activity (Hansen, 1959). Alexander et al. (2015) inferred trips by broad purpose and time of day from mobile-phone data, distinguishing home-based work, home-based other and non-home-based trips. In Barcelona, Graells-Garrido et al. (2021) found that visits were associated with greater destination accessibility to education and retail, with local variation in sign and magnitude. These studies motivate examining the spatial association between trips and reachable services, but do not imply that mobility-guided boundary changes reduce exclusion. If trips tend to go where services are, a boundary drawn around trips may keep services inside zones rather than push them out; whether this holds at the boundaries of an existing plan, and for which services, has not been examined.",
+    "C": "The dong-level association is descriptive: it was positive for health, retail and personal services, but close to zero or negative for education and for childcare and welfare. The association is modest, was not linked to the individual moves selected along the paths, and is not strongest in the categories that account for most exclusion. It provides context for the path results without establishing their mechanism. This co-location should not be assumed elsewhere. Different mobility patterns and service systems, such as trips dominated by long journeys to regional centres or facilities with assigned catchments, may produce different associations, but the category-specific associations observed here do not determine the direction of exclusion changes elsewhere. The transferable part of the paper is therefore less the Seoul result than the check itself: within-zone coverage can be computed for any proposed boundary and compared with a random baseline of the same extent."
+  },
+  "locations": {
+    "A": {
+      "source_lines": [
+        43,
+        52
+      ]
+    },
+    "B": {
+      "source_lines": [
+        153,
+        161
+      ]
+    },
+    "C": {
+      "source_lines": [
+        345,
+        353
+      ]
+    }
+  },
+  "docx_text_checks": {
+    "source_blocks_checked": 70,
+    "missing": [],
+    "abstract_matches": true,
+    "highlights_match": true,
+    "highlights_comparison_note": "Compared after removing display bullet prefix from DOCX paragraphs."
+  },
+  "against_68178a4": {
+    "result_files_compared": 37,
+    "changed_result_files": [],
+    "values_used_byte_identical": true,
+    "table_cell_text_identical": true,
+    "figures_compared": 19,
+    "changed_figures": [],
+    "abstract_identical": true,
+    "highlights_identical": true
+  },
+  "fresh_a07": {
+    "exit_code": 0,
+    "stdout": "{\"n_checks\": 136, \"n_fail\": 0, \"fails\": []}\n",
+    "stderr": "",
+    "n_checks": 136,
+    "n_fail": 0,
+    "n_recomputed_values": 56,
+    "n_other_checks": 80,
+    "classification_note": "Counted by check role, not JSON numeric type: two numpy-derived integer values are serialized as strings by the supplied checker."
+  },
+  "counts": {
+    "reported": {
+      "abstract": 249,
+      "body_incl_headings": 5710,
+      "figure_captions": 146,
+      "tables": 437,
+      "references": 1320,
+      "n_references": 51,
+      "ai_declaration": 50,
+      "total_AG_count(abstract+body+tables+captions+declaration+references)": 7912
+    },
+    "recomputed_all_docx_paragraph_and_table_cell_whitespace_words": 7990,
+    "recomputed_abstract": 249,
+    "highlight_lengths": [
+      72,
+      77,
+      82,
+      76,
+      78
+    ],
+    "ref_list_count": 51
+  },
+  "attachment_pdf_identity": {
+    "english": {
+      "path": "AG_manuscript_anonymised(1).pdf",
+      "inzip": "manuscript/AG_manuscript_anonymised.pdf",
+      "identical": true
+    },
+    "korean": {
+      "path": "AG_한국어_원고.pdf",
+      "inzip": "manuscript/AG_한국어_원고.pdf",
+      "identical": true
+    }
+  },
+  "ancillary_targeted_checks": {
+    "korean_5_2": [
+      "공식 생활권은 같은 규모·모양 규칙을 따르는, 표본으로 뽑은 거의 모든 대안 지도보다 생활권 보행 서비스 밖에 놓인 주민이 적었다. 이동 자료 없이 그어졌으므로, 이는 간선도로, 지역 중심, 기존 시설의 위치 같은 계획 당시의 지식을 반영한 것으로 보인다. 서울 공식 생활권과 이동 공동체가 주로 가장자리에서 어긋난다는 근거와도 맞는다(Park et al., 2026). 조정의 관점에서 보면 기존 계획은 변경안을 평가할 좋은 출발점이다. 다만 같은 규칙 아래 통행 기반 전면 재설계와 경계 조정을 직접 비교하지는 않았으므로, 어느 쪽이 나은지는 이 결과로 말할 수 없다."
+    ],
+    "report_contains_7912": true,
+    "report_contains_51_references": true,
+    "report_contains_old_prescription": false,
+    "report_contains_old_why": false,
+    "report_contains_73be023": true
+  },
+  "not_performed": [
+    "Raw-input a01-a04 rerun",
+    "Full PDF layout review",
+    "Full bibliography audit",
+    "Data redistribution-rights verification",
+    "Author approval confirmation"
+  ],
+  "ABC_decisions": {
+    "A": "Resolved: historical planning roles and scales distinguished; no common within-boundary service guarantee asserted.",
+    "B": "Resolved: Alexander 2015 §2.5 broad HBW/HBO/NHB categories; Graells-Garrido 2021 abstract and Results destination accessibility associations plus spatial variation.",
+    "C": "Resolved: descriptive category associations; no causal mechanism inferred or ruled out; transfer limits maintained."
+  },
+  "primary_source_verification": {
+    "Berlin": {
+      "url": "https://www.berlin.de/sen/stadt/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/",
+      "basis": "Official LOR page, paragraphs describing demographic/social planning, prediction and observation; directly opened."
+    },
+    "London": {
+      "url": "https://www.london.gov.uk/programmes-strategies/planning/london-plan/past-versions-and-alterations-london-plan/london-plan-2016/london-plan-chapter-two-londons-places/policy-25",
+      "basis": "Official Policy 2.5 indexed extract, paragraph 2.24: statutory monitoring and sub-regional coordination. Full page returned 403; not described as a full-document reread."
+    },
+    "Sydney": {
+      "url": "https://www.yoursay.randwick.nsw.gov.au/Vision2040/background-to-vision-2040",
+      "basis": "Official Randwick Council implementation explanation, three cities/30-minute vision and five district plans final in March 2018. Original 13 MB NSW PDF exceeded web size limit; government explanation used instead."
+    },
+    "Alexander2015": {
+      "url": "https://www.researchgate.net/publication/273480107_Origin-destination_trips_by_purpose_and_time_of_day_inferred_from_mobile_phone_data",
+      "basis": "Coauthor-uploaded original article full text, §2.3 and §2.5; publisher page unavailable."
+    },
+    "GraellsGarrido2021": {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250080",
+      "basis": "Primary published article, Abstract and Results around destination-origin accessibility variables and local variation."
+    }
+  },
+  "visual_check": {
+    "pages_rendered": [
+      2,
+      3,
+      8,
+      20
+    ],
+    "pages_visually_inspected": [
+      2,
+      8,
+      20
+    ],
+    "scope": "Targeted text locations only; not whole-PDF layout approval."
+  },
+  "decision": "구성 변경 검수 종결 — A/B/C 세 문단에 추가 수정 요구 없음. 전체 제출 승인과는 별도."
+}
