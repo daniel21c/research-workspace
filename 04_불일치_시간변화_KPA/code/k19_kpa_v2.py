@@ -2,7 +2,7 @@
 """
 k19 — 국토계획 투고 초본 v2(경계 동 진단·재배정) docx 생성과 본문 수치 자동 대조
 
-원고: manuscript/국토계획_투고초본_v2_<날짜>.md
+원고: manuscript/국토계획_원고_<날짜>.md
 표·그림: k18_v2_results.build_tables_v2(), FIGS_V2 (결과 파일에서 직접)
 서식 도우미: k06_kpa_submission(국토계획 서식 — A4, HCR Batang 9.5pt, Ⅰ.1.1), 2단 편집본도 생성
 수치 대조: 본문에 쓴 주장을 결과 파일과 대조해 manuscript/수치대조_기록_v2.json
@@ -89,7 +89,7 @@ def build(md_path: Path):
             continue
         K6.para(doc, s, "Normal")
     cp = doc.core_properties; cp.author = ""; cp.last_modified_by = ""; cp.title = ""; cp.comments = ""
-    out = MK / (md_path.stem + ".docx"); doc.save(out)
+    out = C.DOCX / (md_path.stem + ".docx"); doc.save(out)
     K6.WIDE_CAPTIONS = WIDE_V2
     out2 = K6.two_column(out, out.with_name(out.stem + "_2단편집.docx"))
     return out, out2
@@ -106,11 +106,11 @@ def claims(md_text: str):
     tabs = build_tables_v2()
     ck("재배정 분할 검증(권역 수·연속·요약값)", ver["판정"] == "통과", json.dumps(ver, ensure_ascii=False)[:200])
     ck("표 A1 행 수 = 원래→최종 생활권이 두 해 같은 동 수", len(tabs["TA1"]["rows"]) == S4["두해모두_권고_이동"])
-    gj = gs[(gs.year == 2025) & (gs.ku_name == "광진구")].iloc[0]; ck("광진 재배정 후 가상경계와 거의 같음(D_after < 0.5%)", gj.D_after < 0.005, f"D_after={gj.D_after:.4f}")
+    gj = gs[(gs.year == 2025) & (gs.ku_name == "광진구")].iloc[0]; ck("광진 재배정 후 커뮤니티와 거의 같음(D_after < 0.5%)", gj.D_after < 0.005, f"D_after={gj.D_after:.4f}")
     t3 = tabs["T3"]; S9 = b("b9_change_story.json")
     ck("표 3 유형 내 효과 비중 > 50%(사전 기준 C1) = 본문", S9["유형분해"]["유형내_비중"] > 0.5 and S9["유형분해"]["판정(유형내>50%)"] == "통과")
     ck("주말 국지화(사전 기준 C3) 통과", S9["평일주말"]["판정"] == "통과")
-    ck("표 4 행 = 판정 불일치·격차·분해 4행", len(tabs["T4"]["rows"]) == 4)
+    ck("표 4 행 = 불일치·격차·분해 4행", len(tabs["T4"]["rows"]) == 4)
     ab = {k: re.search(rf"^%{k}: (.*)$", md_text, flags=re.M).group(1) for k in ("ABSTRACT_EN", "ABSTRACT_KO")}
     nums = {k: [x for x in re.findall(r"\d+(?:[.,]\d+)?", t) if x not in ("2020", "2025")] for k, t in ab.items()}
     ck("초록에 구체적 수치 없음(연도만 허용)", not any(nums.values()), json.dumps(nums, ensure_ascii=False))
@@ -143,8 +143,8 @@ def claims(md_text: str):
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    mds = sorted(MK.glob("국토계획_투고초본_v2_*.md"))
-    if not mds: raise SystemExit(f"원고 md가 없다: {MK}/국토계획_투고초본_v2_<날짜>.md (패키지는 manuscript/ 폴더)")
+    mds = sorted(MK.glob("국토계획_원고_*.md"))
+    if not mds: raise SystemExit(f"원고 md가 없다: {MK}/국토계획_원고_<날짜>.md (패키지는 manuscript/ 폴더)")
     md = mds[-1]
     draw_all()
     o1, o2 = build(md); print("docx:", o1.name, "|", o2.name)

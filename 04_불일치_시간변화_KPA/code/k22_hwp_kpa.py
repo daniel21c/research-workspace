@@ -10,7 +10,7 @@ k22 — 국토계획 학회 샘플(sample_20260122ver.hwp) 위에 투고본 .hwp
 - 심사용(anon): 저자명·소속·저자 각주·짝수쪽 머리말 저자명을 넣지 않는다(제19조②9). 저자정보본(author): 넣는다.
 - 인용문헌은 번호를 붙이고 국문 문헌 아래 줄에 영문을 병기한다(샘플 형식).
 
-입력: manuscript/국토계획_투고초본_v2_<날짜>.md, 표·그림은 k18 결과, 샘플은 TEMPLATE
+입력: manuscript/국토계획_원고_<날짜>.md, 표·그림은 k18 결과, 샘플은 TEMPLATE
 출력: manuscript/국토계획_투고본_{심사용|저자정보}_<날짜>.hwp·.pdf, 쪽수는 쪽수_기록.json
 실행: python k22_hwp_kpa.py [anon|author|both]   (k18·k19 먼저. Windows + 한글 2022 + pyhwpx)
 """
@@ -25,7 +25,7 @@ from k18_v2_results import build_tables_v2, FIGS_V2
 MK = C.MK; FIG = C.FIG
 TEMPLATE = C.ROOT / "templates" / "kpa_sample_20260122ver.hwp"     # 학회 홈페이지 '국문샘플'(2026-01-22판) 사본
 WORK = C.WORK                                             # 중간 파일(HWPML)
-DATE = "20260929"
+DATE = "20260930"
 TEXT_W_MM = 210 - 20 - 18                # 편집규정 제20조: 좌 20, 우 18 → 본문 폭 172 mm
 PAGEDEF = {"위쪽": 19.0, "아래쪽": 11.0, "왼쪽": 20.0, "오른쪽": 18.0, "머리말": 7.8, "꼬리말": 7.0, "제본여백": 0}
 ALIGN = {"Left": "ParagraphShapeAlignLeft", "Center": "ParagraphShapeAlignCenter", "Justify": "ParagraphShapeAlignJustify"}
@@ -42,7 +42,7 @@ AUTHORS = [
     {"ko": "엄선용", "en": "Eom, Sunyong", "pos": "Associate Professor", "aff": "Graduate School of Urban Studies, Hanyang University",
      "role": "Corresponding Author", "email": "sunyongeom@hanyang.ac.kr"},
 ]
-SHORT_TITLE = "서울시 생활권의 자족성 상승과 경계 불일치"
+SHORT_TITLE = "서울시 생활권의 내부통행률 상승과 경계 불일치"
 DOT = "・"                                 # 샘플의 저자 구분 기호
 
 
@@ -411,7 +411,7 @@ def build(md: Path, mode: str, breaks: dict | None = None):
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     which = sys.argv[1] if len(sys.argv) > 1 else "both"
-    md = sorted(MK.glob("국토계획_투고초본_v2_*.md"))[-1]
+    md = sorted(MK.glob("국토계획_원고_*.md"))[-1]
     try:
         for mode in (["anon", "author"] if which == "both" else [which]):
             breaks = {}

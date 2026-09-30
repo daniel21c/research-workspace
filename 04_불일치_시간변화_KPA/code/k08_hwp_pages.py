@@ -52,7 +52,7 @@ def hwp_convert(docx: Path) -> tuple[Path, int]:
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    one = sorted(p for p in MK.glob("국토계획_투고초본_v*.docx") if not p.stem.endswith("_2단편집"))[-1]
+    one = sorted(p for p in C.DOCX.glob("국토계획_원고_*.docx") if not p.stem.endswith("_2단편집"))[-1]
     two = one.with_name(one.stem + "_2단편집.docx")
     rec = {"생성": time.strftime("%Y-%m-%d %H:%M:%S"), "원고": one.name}
     pdf1, n1 = word_pdf(one); rec["1단_pdf"] = pdf1.name; rec["1단_쪽수(Word)"] = n1

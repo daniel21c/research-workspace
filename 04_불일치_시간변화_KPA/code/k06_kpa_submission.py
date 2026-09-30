@@ -155,7 +155,7 @@ def build_tables():
         headers=["자료", "시점·범위", "처리", "역할"],
         rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09:00~20:59, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·G·D 계산"],
               ["행정동 경계", "424개(두 해 공통 정본)", "2021년 코드표 기준 통일", "집계·탐지 단위"],
-              ["공식 지역생활권(LZ)", "116개(2030 서울생활권계획)", "행정동→생활권 대응(면적 최대 중첩, 최솟값 0.51)", "평가 대상 경계"],
+              ["기존 지역생활권(LZ)", "116개(2030 서울생활권계획)", "행정동→생활권 대응(면적 최대 중첩, 최솟값 0.51)", "평가 대상 경계"],
               ["이동 기반 경계(LD)", "연도별 116개", "자치구 내 Leiden 합의(3,000회, τ = 0.5)", "비교 기준점"],
               ["필터 후 통행량", f"{t01.loc['2020','flow_daily_seoul']/1e6:,.1f}백만 / {t01.loc['2025','flow_daily_seoul']/1e6:,.1f}백만", f"비공개 행 비율 {t01.loc['2020','masked_row_share_daily']*100:.1f}% / {t01.loc['2025','masked_row_share_daily']*100:.1f}%", "분모 T의 합"]],
         widths=[3.2, 3.6, 6.4, 3.0], note="생활이동 자료는 서울시·KT의 추정 이동량이며, 3명 미만 셀은 비공개 처리되어 0으로 두었다.")
@@ -164,7 +164,7 @@ def build_tables():
         ko="2. 지표의 정의", en="2. Definitions of the Measures",
         headers=["지표", "정의", "해석"],
         rows=[["T", "구 K에서 출발한 서울 내 전체 통행량", "두 경계 공통 분모(경계와 무관)"],
-              ["IFR^B", "N^B / T, N^B = 경계 B에서 출발·도착이 같은 권역인 통행량", "경계 B의 내부통행비율"],
+              ["IFR^B", "N^B / T, N^B = 경계 B에서 출발·도착이 같은 권역인 통행량", "경계 B의 내부통행률"],
               ["a, b", "LD에서만 내부인 통행량, LZ에서만 내부인 통행량", "N^LD − N^LZ = a − b"],
               ["G", "(a − b) / T = IFR^LD − IFR^LZ", "격차의 방향(양: LD가 더 담음)"],
               ["D", "(a + b) / T", "격차의 크기(판정이 다른 통행의 비율), 0 ≤ |G| ≤ D"],
@@ -177,7 +177,7 @@ def build_tables():
         a = long[(long.ku_code == k) & (long.year == 2020)].iloc[0]; b = long[(long.ku_code == k) & (long.year == 2025)].iloc[0]
         rows.append([a.ku_name, pct(a.IFR_lz), pct(a.IFR_ld), pp(a.G), pct(a.D, 2), pct(b.IFR_lz), pct(b.IFR_ld), pp(b.G), pct(b.D, 2)])
     rows.append(["서울 전체", pct(S["2020"]["IFR_lz"]), pct(S["2020"]["IFR_ld"]), pp(S["2020"]["G"]), pct(S["2020"]["D"], 2), pct(S["2025"]["IFR_lz"]), pct(S["2025"]["IFR_ld"]), pp(S["2025"]["G"]), pct(S["2025"]["D"], 2)])
-    tables["T3"] = dict(ko="3. 자치구별 내부통행비율과 판정 불일치의 방향(G)·크기(D)", en="3. Internal-Flow Ratios and Directional (G) and Total (D) Mismatch by District",
+    tables["T3"] = dict(ko="3. 자치구별 내부통행률과 불일치의 방향(G)·크기(D)", en="3. Internal-Flow Ratios and Directional (G) and Total (D) Mismatch by District",
                         headers=["구", "IFR LZ 2020(%)", "IFR LD 2020(%)", "G 2020(%p)", "D 2020(%)", "IFR LZ 2025(%)", "IFR LD 2025(%)", "G 2025(%p)", "D 2025(%)"],
                         rows=rows, widths=[2.0] + [1.75] * 8, bold_last=True, note="G = 0, D = 0인 구는 두 경계가 완전히 같은 구다. 서울 전체는 분자합/분모합.")
     # T4 변화·분해
@@ -208,17 +208,17 @@ def build_tables():
     tables["TA1"] = dict(ko="A1. 자치구별 ΔIFR과 귀무 분할의 5~95% 구간", en="A1. ΔIFR by District and the 5–95% Range of Null Partitions",
                          headers=["구", "귀무 5%(%p)", "귀무 중앙(%p)", "귀무 95%(%p)", "ΔIFR LZ(%p)", "ΔIFR LD(%p)", "LZ 구간 내", "LD 구간 내"],
                          rows=rows, widths=[2.0, 1.8, 1.8, 1.8, 1.8, 1.8, 1.6, 1.6],
-                         note=f"구마다 공식 생활권과 같은 개수의 무작위 인접 분할 {res['null']['n_per_gu']:,}개(시드 {res['null']['seed']})를 두 해 통행에 적용.")
+                         note=f"구마다 기존 생활권과 같은 개수의 무작위 인접 분할 {res['null']['n_per_gu']:,}개(시드 {res['null']['seed']})를 두 해 통행에 적용.")
     return tables
 
 
 FIGS = {
-    "F1": ("1. 분석의 흐름", "1. Analytical Framework", "F_kpa_framework.png", 13.5, "LD는 공식 생활권의 대체안이 아니라 같은 해의 이동 네트워크에서 도출한 비교 기준점이다."),
-    "F2": ("2. 자치구별 내부통행비율의 변화(2020→2025)", "2. Change in Internal-Flow Ratios by District, 2020–2025", "F4-4-1_ifr_dumbbell.png", 15.5, "왼쪽 점 2020년, 오른쪽 점 2025년. 두 경계 모두 모든 구에서 상승."),
+    "F1": ("1. 분석의 흐름", "1. Analytical Framework", "F_kpa_framework.png", 13.5, "LD는 기존 생활권의 대체안이 아니라 같은 해의 이동 네트워크에서 도출한 비교 기준점이다."),
+    "F2": ("2. 자치구별 내부통행률의 변화(2020→2025)", "2. Change in Internal-Flow Ratios by District, 2020–2025", "F4-4-1_ifr_dumbbell.png", 15.5, "왼쪽 점 2020년, 오른쪽 점 2025년. 두 경계 모두 모든 구에서 상승."),
     "F3": ("4. 격차의 방향(G) 사분면도(점 크기 = |ΔD|)", "4. Quadrant Plot of the Directional Gap G (marker size = |ΔD|)", "F4-4-3_quadrant_G.png", 11.5, "가로축 G 2020, 세로축 G 2025. 1사분면은 두 해 모두 LD가 더 많이 담는 구."),
     "F4": ("5. 총 판정차의 변화(ΔD)와 선별된 자치구", "5. Change in Total Mismatch (ΔD) and Selected Districts", "F4-4-4_map_dD_selection.png", 14.0, "선별 8개 구. 기호는 대응 유형(경계 재검토 / 권역 내 운영 검토)."),
-    "F5": ("6. 선별된 자치구의 공식 생활권과 두 해의 이동 기반 경계", "6. Official Living Zones and Mobility-Based Boundaries in Selected Districts", "F4-4-5_selected_gu_boundaries.png", 13.0, "구마다 왼쪽부터 공식 생활권(LZ), LD 2020, LD 2025. 굵은 검은 선은 권역 경계, 붉은 점선은 두 해 사이 LD 소속(같이 묶인 동의 집합)이 바뀐 동. ARI는 두 해 LD 분할의 조정 랜드 지수."),
-    "F6": ("3. 경계 모양의 일치도(IoU)와 판정 불일치의 크기(D)", "3. Boundary Overlap (IoU) and Total Mismatch (D)", "F4-4-7_iou_vs_D.png", 11.5, "색은 G. IoU와 D는 강한 음의 상관(ρ = −0.92, −0.87), IoU와 G는 약함."),
+    "F5": ("6. 선별된 자치구의 기존 생활권과 두 해의 이동 기반 경계", "6. Official Living Zones and Mobility-Based Boundaries in Selected Districts", "F4-4-5_selected_gu_boundaries.png", 13.0, "구마다 왼쪽부터 기존 생활권(LZ), LD 2020, LD 2025. 굵은 검은 선은 권역 경계, 붉은 점선은 두 해 사이 LD 소속(같이 묶인 동의 집합)이 바뀐 동. ARI는 두 해 LD 분할의 조정 랜드 지수."),
+    "F6": ("3. 경계 모양의 일치도(IoU)와 불일치의 크기(D)", "3. Boundary Overlap (IoU) and Total Mismatch (D)", "F4-4-7_iou_vs_D.png", 11.5, "색은 G. IoU와 D는 강한 음의 상관(ρ = −0.92, −0.87), IoU와 G는 약함."),
     "FA1": ("A1. 두 경계의 ΔIFR과 귀무 분할의 ΔIFR 분포", "A1. ΔIFR of the Two Boundaries against Null-Partition Distributions", "F4-4-6_null_partition_dIFR.png", 15.5, "회색 상자는 귀무 분할 1,000개의 5~95% 구간."),
 }
 
@@ -229,8 +229,8 @@ def draw_framework():
     from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
     plt.rcParams["font.family"] = "Malgun Gothic"; plt.rcParams["axes.unicode_minus"] = False
     fig, ax = plt.subplots(figsize=(9.5, 3.6)); ax.set_xlim(0, 10); ax.set_ylim(0, 4); ax.axis("off")
-    boxes = [(0.2, 2.3, "① 자료\n생활이동 OD\n2020·2025년 1월\n행정동 424"), (2.3, 2.3, "② 두 경계\n공식 생활권 LZ(고정 116)\n이동 기반 LD_t(연도별 116)"),
-             (4.4, 2.3, "③ 판정 불일치\na, b → G(방향), D(크기)\n같은 분모 T"), (6.5, 2.3, "④ 변화\nΔG, ΔD\n통행 변화 / 경계 재도출 분해"),
+    boxes = [(0.2, 2.3, "① 자료\n생활이동 OD\n2020·2025년 1월\n행정동 424"), (2.3, 2.3, "② 두 경계\n기존 생활권 LZ(고정 116)\n이동 기반 LD_t(연도별 116)"),
+             (4.4, 2.3, "③ 불일치\na, b → G(방향), D(크기)\n같은 분모 T"), (6.5, 2.3, "④ 변화\nΔG, ΔD\n통행 변화 / 경계 재도출 분해"),
              (8.6, 2.3, "⑤ 선별\n사전 규칙\n대응 유형(G 부호)")]
     for x, y, s in boxes:
         ax.add_patch(FancyBboxPatch((x, y), 1.9, 1.5, boxstyle="round,pad=0.05", fc="#f2f2f2", ec="black", lw=0.8)); ax.text(x + 0.95, y + 0.75, s, ha="center", va="center", fontsize=8.2)

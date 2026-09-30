@@ -70,10 +70,10 @@ ALT_RUNS = {
 # 산출물 위치(2026-09-30, AG 폴더와 같은 구성). 저장소: results/ 표, manuscript/ 원고·그림, package/ zip·자체 점검.
 # 공동연구자 패키지(PKG_MODE)는 기존 배치(output/tables, output/figures, manuscript/)를 그대로 쓴다.
 if PKG_MODE:
-    OUT = ROOT / "output"; TAB = OUT / "tables"; FIG = OUT / "figures"; MK = ROOT / "manuscript"; PKG = OUT; WORK = OUT / "_hwp_work"
+    OUT = ROOT / "output"; TAB = OUT / "tables"; FIG = OUT / "figures"; MK = ROOT / "manuscript"; PKG = OUT; WORK = OUT / "_hwp_work"; DOCX = MK
 else:
-    TAB = ROOT / "results"; FIG = ROOT / "manuscript" / "figures"; MK = ROOT / "manuscript"; PKG = ROOT / "package"; WORK = TAB / "_hwp_work"; OUT = PKG
-for _p in (TAB, FIG, MK, PKG):
+    TAB = ROOT / "results"; FIG = ROOT / "manuscript" / "figures"; MK = ROOT / "manuscript"; PKG = ROOT / "package"; WORK = TAB / "_hwp_work"; OUT = PKG; DOCX = TAB / "_docx"   # 검토용 docx·1단/2단 pdf(중간 산출)
+for _p in (TAB, FIG, MK, PKG, DOCX):
     _p.mkdir(parents=True, exist_ok=True)
 
 # ---- 분석 상수 (연구설계 9절 권장안) -------------------------------------------

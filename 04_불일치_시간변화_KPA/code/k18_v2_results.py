@@ -5,8 +5,8 @@ k18 — KPA v2(경계 동 진단·재배정) 원고용 표·그림 사양과 재
 1) 검증: k14 탐욕 재배정의 최종 분할을 이동 기록으로 다시 만들어
    (a) 권역 수 유지 (b) 모든 권역 공간 연속 (c) IFR·Q·D가 b4_gu_summary와 같은지 확인 → benchmark/b8_verify.json
 2) 그림: Fv2_1 분석 틀, Fv2_2 크기 편향(구별 백분위 N0 vs N1), Fv2_3 동 진단 지도(2025),
-         Fv2_4 구별 재배정 전후 IFR(2025), Fv2_5 사례 구(광진구) 공식/재배정/가상경계 지도,
-         Fv2_A1 부록 ΔIFR vs 무작위 비교경계
+         Fv2_4 구별 재배정 전후 IFR(2025), Fv2_5 사례 구(광진구) 공식/재배정/커뮤니티 지도,
+         Fv2_A1 부록 ΔIFR vs 무작위 경계
 3) 표 사양 build_tables_v2(), 그림 사양 FIGS_V2 — k19(docx)·k09(hwp)가 가져다 쓴다.
 """
 from __future__ import annotations
@@ -79,16 +79,16 @@ def _plt():
 def fig_framework():
     plt = _plt(); from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
     fig, ax = plt.subplots(figsize=(10, 3.4)); ax.set_xlim(0, 10); ax.set_ylim(0.1, 4.3); ax.axis("off")
-    top = [(0.15, "공식 생활권 116\n(평가 대상)"), (3.55, "무작위 비교경계\n자치구마다 1,000번 추출\n(바닥 기준선)"), (6.95, "빅데이터 기반 가상경계\n같은 해 생활이동으로 도출\n(비교 기준)")]
+    top = [(0.15, "기존 생활권 116\n(평가 대상)"), (3.55, "무작위 경계\n자치구마다 1,000번 추출\n(바닥 기준선)"), (6.95, "데이터 기반 커뮤니티\n같은 해 생활이동으로 도출\n(비교 기준)")]
     for x, t in top:
         ax.add_patch(FancyBboxPatch((x, 3.1), 2.9, 1.05, boxstyle="round,pad=0.04", fc="#eef2f7", ec="black", lw=0.8)); ax.text(x + 1.45, 3.62, t, ha="center", va="center", fontsize=9)
-    steps = ["① 자족성 상승의 판별\n무작위 경계 대비 ΔIFR\n이동 유형·평일/주말 분해", "② 불일치의 추적\n판정 불일치 D·격차 G\nG 변화의 분해", "③ 전반적 적합성\n크기를 맞춘\n무작위 대비 백분위",
-             "④ 경계 동 진단\n한 동씩 옮기기\nIFR·모듈성 동시 개선", "⑤ 재배정과 지속성\n순차 재배정·두 해 비교\n2020 경계의 2025 적용"]
+    steps = ["① 내부통행률 상승의 판별\n무작위 경계 대비 ΔIFR\n이동 유형·평일/주말 분해", "② 불일치의 추적\n불일치 D·격차 G\nG 변화의 분해", "③ 전반적 적합성\n크기를 맞춘\n무작위 대비 백분위",
+             "④ 경계 동 진단\n한 동씩 옮기기\nIFR·모듈러리티 동시 개선", "⑤ 재배정과 지속성\n순차 재배정·두 해 비교\n2020 경계의 2025 적용"]
     for k, t in enumerate(steps):
         x = 0.1 + k * 1.98
         ax.add_patch(FancyBboxPatch((x, 0.8), 1.8, 1.45, boxstyle="round,pad=0.04", fc="white", ec="black", lw=0.8)); ax.text(x + 0.9, 1.52, t, ha="center", va="center", fontsize=8)
         if k < 4: ax.add_patch(FancyArrowPatch((x + 1.82, 1.52), (x + 1.96, 1.52), arrowstyle="-|>", mutation_scale=8, lw=0.8))
-    ax.text(5, 0.35, "자료: 서울 생활이동 OD 2020년 1월·2025년 1월(행정동 424) · 공식 생활권 116 · 행정동 인접 관계", ha="center", fontsize=7.6)
+    ax.text(5, 0.35, "자료: 서울 생활이동 OD 2020년 1월·2025년 1월(행정동 424) · 기존 생활권 116 · 행정동 인접 관계", ha="center", fontsize=7.6)
     for x in (1.6, 5.0, 8.4): ax.add_patch(FancyArrowPatch((x, 3.08), (x, 2.28), arrowstyle="-|>", mutation_scale=8, lw=0.6, ls="--"))
     fig.tight_layout(); fig.savefig(FIG / "Fv2_1_framework.png", dpi=220); plt.close()
 
@@ -100,7 +100,7 @@ def fig_size_bias():
     ax.scatter(g.pct_N0 * 100, y, s=26, facecolor="white", edgecolor="#555", label="크기 제약 없는 무작위(N0) 대비", zorder=3)
     ax.scatter(g.pct_N1 * 100, y, s=30, color="#1f4e79", label="동 수를 맞춘 무작위(N1) 대비", zorder=3)
     ax.axvline(50, color="#c0392b", ls="--", lw=0.8); ax.text(50.5, len(g) - 0.6, "무작위와 같음", color="#c0392b", fontsize=7.5)
-    ax.set_yticks(y); ax.set_yticklabels(g.ku_name, fontsize=8); ax.set_xlabel("공식 생활권 IFR의 백분위(무작위 비교경계 중 몇 %보다 높은가, 2025)")
+    ax.set_yticks(y); ax.set_yticklabels(g.ku_name, fontsize=8); ax.set_xlabel("기존 생활권 IFR의 백분위(무작위 경계 중 몇 %보다 높은가, 2025)")
     ax.set_xlim(0, 101); ax.legend(loc="lower right", fontsize=8, frameon=False); ax.grid(axis="x", alpha=0.3)
     fig.tight_layout(); fig.savefig(FIG / "Fv2_2_size_bias.png", dpi=220); plt.close()
 
@@ -132,9 +132,9 @@ def fig_dong_map():
 def fig_gu_bars():
     plt = _plt(); s = pd.read_csv(B / "b4_gu_summary.csv", encoding="utf-8-sig"); s = s[s.year == int(C.Y1)].sort_values("dIFR_pp")
     fig, ax = plt.subplots(figsize=(7.2, 6.6)); y = np.arange(len(s))
-    ax.scatter(s.IFR_before * 100, y, s=24, facecolor="white", edgecolor="#555", label="공식 생활권", zorder=3)
+    ax.scatter(s.IFR_before * 100, y, s=24, facecolor="white", edgecolor="#555", label="기존 생활권", zorder=3)
     ax.scatter(s.IFR_after * 100, y, s=26, color="#c0392b", label="경계 동 재배정 후", zorder=3)
-    ax.scatter(s.IFR_LD * 100, y, marker="|", s=110, color="#1f4e79", label="빅데이터 기반 가상경계", zorder=4)
+    ax.scatter(s.IFR_LD * 100, y, marker="|", s=110, color="#1f4e79", label="데이터 기반 커뮤니티", zorder=4)
     ax.hlines(y, s.IFR_before * 100, s.IFR_after * 100, color="#dddddd", lw=1.2)
     ax.set_yticks(y); ax.set_yticklabels([f"{r.ku_name} ({int(r.n_moved)})" for r in s.itertuples()], fontsize=8)
     ax.set_xlabel("구 IFR (%) — 괄호는 옮긴 동 수, 2025"); ax.legend(loc="lower right", fontsize=8, frameon=False); ax.grid(axis="x", alpha=0.3)
@@ -149,7 +149,7 @@ def fig_case():
     gk["LZ"] = gk.Dong.map(lz.life_zone_name); gk["RE"] = gk.Dong.map(fin); gk["LD"] = gk.Dong.map(ld)
     names = dict(zip(lz.index, lz.ADM_NM))
     fig, axes = plt.subplots(1, 3, figsize=(11, 4.2)); cmap = plt.get_cmap("Set2")
-    for ax, col, t in zip(axes, ("LZ", "RE", "LD"), ("공식 생활권", f"경계 동 재배정 후({len(gm)}개 동)", "빅데이터 기반 가상경계")):
+    for ax, col, t in zip(axes, ("LZ", "RE", "LD"), ("기존 생활권", f"경계 동 재배정 후({len(gm)}개 동)", "데이터 기반 커뮤니티")):
         codes = pd.factorize(gk[col])[0]; gk.assign(c=codes).plot(column="c", cmap=cmap, categorical=True, edgecolor="white", linewidth=0.6, ax=ax)
         gk.dissolve(col).boundary.plot(ax=ax, color="#222", linewidth=1.1)
         if col == "RE": gk[gk.Dong.isin(gm.dong)].boundary.plot(ax=ax, color="#c0392b", linewidth=1.8, linestyle="--")
@@ -161,14 +161,14 @@ def fig_case():
 
 
 def fig_null_dIFR():
-    """부록 그림 A1: 구별 두 경계의 ΔIFR과 무작위 비교경계(N0, 구마다 1,000번 추출) ΔIFR의 5~95% 구간(k01 결과 t05_null_summary)."""
+    """부록 그림 A1: 구별 두 경계의 ΔIFR과 무작위 경계(N0, 구마다 1,000번 추출) ΔIFR의 5~95% 구간(k01 결과 t05_null_summary)."""
     plt = _plt(); import matplotlib.ticker as mt
     d = pd.read_csv(C.TAB / "t05_null_summary.csv", encoding="utf-8-sig").sort_values("null_dIFR_med"); y = np.arange(len(d))
     fig, ax = plt.subplots(figsize=(6.8, 7.4))
-    ax.hlines(y, d.null_dIFR_p05, d.null_dIFR_p95, color="#d0d0d0", lw=6, label="무작위 비교경계 ΔIFR 5~95% (구마다 1,000번 추출)")
-    ax.scatter(d.null_dIFR_med, y, marker="|", s=120, color="#666", label="무작위 비교경계 중앙값", zorder=3)
-    ax.scatter(d.dIFR_lz, y, s=26, color="#1f4e79", zorder=4, label="공식 생활권")
-    ax.scatter(d.dIFR_ld, y, s=26, color="#c0392b", zorder=4, label="빅데이터 기반 가상경계")
+    ax.hlines(y, d.null_dIFR_p05, d.null_dIFR_p95, color="#d0d0d0", lw=6, label="무작위 경계 ΔIFR 5~95% (구마다 1,000번 추출)")
+    ax.scatter(d.null_dIFR_med, y, marker="|", s=120, color="#666", label="무작위 경계 중앙값", zorder=3)
+    ax.scatter(d.dIFR_lz, y, s=26, color="#1f4e79", zorder=4, label="기존 생활권")
+    ax.scatter(d.dIFR_ld, y, s=26, color="#c0392b", zorder=4, label="데이터 기반 커뮤니티")
     ax.set_yticks(y); ax.set_yticklabels(d.ku_name, fontsize=8); ax.axvline(0, color="#999", lw=0.8)
     ax.xaxis.set_major_formatter(mt.PercentFormatter(1.0, decimals=0))
     ax.set_xlabel(f"ΔIFR = IFR {C.Y1} - IFR {C.Y0}"); ax.legend(frameon=False, fontsize=7.5, loc="lower right"); ax.grid(axis="x", alpha=0.3)
@@ -180,16 +180,16 @@ p1 = lambda x: f"{x * 100:.1f}"; p0 = lambda x: f"{x * 100:.0f}"
 
 
 def _null_note():
-    """표 2 주: 무작위 비교경계의 실제 표본(추출 횟수, 서로 다른 분할 수, N2 표본 수·허용치)을 b_null_meta에서 적는다."""
+    """표 2 주: 무작위 경계의 실제 표본(추출 횟수, 서로 다른 분할 수, N2 표본 수·허용치)을 b_null_meta에서 적는다."""
     mt = pd.read_csv(B / "b_null_meta.csv", encoding="utf-8-sig"); lz = mt[mt.boundary == "LZ"]
     n2_small = lz[lz.N2_n < 1000].sort_values("N2_n")
     relax = mt[mt.N2_tol > 0.05]
     txt = ("구마다 N0·N1은 1,000번 뽑는다(중복 허용; 1,000은 동 수가 아니라 추출 횟수). "
-           f"공식 생활권 기준 서로 다른 분할은 N1 {int(lz.N1_distinct.min())}~{int(lz.N1_distinct.max())}개(구가 작으면 가능한 분할 자체가 적다). "
-           f"N2는 N1 후보 중 조건을 만족하는 최대 1,000개로, 공식 생활권은 {len(n2_small)}개 구에서 1,000개 미만"
+           f"기존 생활권 기준 서로 다른 분할은 N1 {int(lz.N1_distinct.min())}~{int(lz.N1_distinct.max())}개(구가 작으면 가능한 분할 자체가 적다). "
+           f"N2는 N1 후보 중 조건을 만족하는 최대 1,000개로, 기존 생활권은 {len(n2_small)}개 구에서 1,000개 미만"
            + (f"(최소 {n2_small.ku_name.iat[0]} {int(n2_small.N2_n.iat[0])}개)" if len(n2_small) else "") + ", 허용치는 모두 0.05. "
            f"N2의 서로 다른 분할은 {int(lz.N2_distinct.min())}~{int(lz.N2_distinct.max())}개(최소 {lz.sort_values('N2_distinct').ku_name.iat[0]})로 같은 분할이 반복 추출된 구가 있어 N2는 보조 분석으로만 쓴다. ")
-    if len(relax): txt += "가상경계는 " + ", ".join(f"{r.ku_name} {r.boundary} {r.N2_tol:g}({int(r.N2_n)}개)" for r in relax.itertuples()) + "에서 허용치를 완화했다."
+    if len(relax): txt += "커뮤니티는 " + ", ".join(f"{r.ku_name} {r.boundary} {r.N2_tol:g}({int(r.N2_n)}개)" for r in relax.itertuples()) + "에서 허용치를 완화했다."
     return txt
 
 
@@ -200,60 +200,60 @@ def build_tables_v2():
     S9 = json.loads((B / "b9_change_story.json").read_text(encoding="utf-8")); t9 = pd.read_csv(B / "b9_type_decomp.csv", encoding="utf-8-sig")
     T = {}
     T["T1"] = dict(ko="1. 분석 자료", en="1. Data", headers=["자료", "시점·범위", "처리", "역할"], widths=[3.2, 3.6, 6.4, 3.0],
-                   rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09:00~20:59, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·모듈성 계산"],
+                   rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09:00~20:59, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·모듈러리티 계산"],
                          ["행정동 경계·인접", "424개(두 해 공통 정본)", "2021년 코드표 기준 통일, 경계 공유로 인접 판정", "집계·재배정 단위"],
-                         ["공식 지역생활권", "116개(2030 서울생활권계획)", "행정동→생활권 면적 최대 중첩(최솟값 0.51)", "평가 대상"],
-                         ["빅데이터 기반 가상경계", "연도별 116개", "자치구 내 Leiden 합의(3,000회, τ = 0.5), 개수 = 공식 생활권", "이동 기반 비교 기준"],
+                         ["기존 지역생활권", "116개(2030 서울생활권계획)", "행정동→생활권 면적 최대 중첩(최솟값 0.51)", "평가 대상"],
+                         ["데이터 기반 커뮤니티", "연도별 116개", "자치구 내 Leiden 합의(3,000회, τ = 0.5), 개수 = 기존 생활권", "이동 기반 비교 기준"],
                          ["필터 후 통행량", f"{t01.loc['2020','flow_daily_seoul']/1e6:,.1f}백만 / {t01.loc['2025','flow_daily_seoul']/1e6:,.1f}백만", f"비공개 행 {t01.loc['2020','masked_row_share_daily']*100:.1f}% / {t01.loc['2025','masked_row_share_daily']*100:.1f}%", "—"]],
                    note="생활이동 자료는 서울시·KT의 추정 이동량이며 3명 미만 셀은 비공개 처리되어 0으로 두었다.")
-    T["T2"] = dict(ko="2. 무작위 비교경계와 평가 지표", en="2. Random Comparison Boundaries and Measures", headers=["구분", "정의", "용도"], widths=[3.0, 9.4, 3.8],
-                   rows=[["무작위 비교경계 N0", "같은 구 안에서 인접한 동끼리 무작위로 묶은 경계, 권역 수 = 비교 대상, 크기 제약 없음", "크기 편향 확인"],
-                         ["무작위 비교경계 N1", "N0 + 권역별 동 수를 비교 대상과 똑같이", "주 기준"],
-                         ["무작위 비교경계 N2", "N1 표본 중 권역별 출발 통행량 비중(두 해 평균)이 비슷한 것만 남김(통행량으로 조건화): 정렬 비중의 최대 차 ≤ 0.05, 만족 표본이 200개 미만이면 0.08·0.12로 완화", "강건성"],
+    T["T2"] = dict(ko="2. 무작위 경계와 평가 지표", en="2. Random Boundaries and Measures", headers=["구분", "정의", "용도"], widths=[3.0, 9.4, 3.8],
+                   rows=[["무작위 경계 N0", "같은 구 안에서 인접한 동끼리 무작위로 묶은 경계, 권역 수 = 비교 대상, 크기 제약 없음", "크기 편향 확인"],
+                         ["무작위 경계 N1", "N0 + 권역별 동 수를 비교 대상과 똑같이", "주 기준"],
+                         ["무작위 경계 N2", "N1 표본 중 권역별 출발 통행량 비중(두 해 평균)이 비슷한 것만 남김(통행량으로 조건화): 정렬 비중의 최대 차 ≤ 0.05, 만족 표본이 200개 미만이면 0.08·0.12로 완화", "강건성"],
                          ["IFR", "동에서 출발한 서울 내부 통행(동 내부통행 포함) 중 같은 권역 안에서 끝나는 비율. 구를 넘는 통행은 분모에만 들어감(구 단위 분자합/분모합)", "착시·전체 평가"],
-                         ["백분위", "무작위 비교경계 표본 중 IFR이 더 낮은 비율(같으면 절반). 50% = 무작위 수준", "전체 평가"],
-                         ["모듈성 Q", "구 안 무방향 통행망에서 동의 통행 규모로 기대되는 몫을 뺀 권역 내부 통행. 기대 내부연결량을 보정(크기 효과를 완전히 없애지는 않음)", "동 진단·재배정"],
-                         ["자족성 격차 G", "가상경계의 IFR − 공식 생활권의 IFR", "불일치 추적"],
-                         ["판정 불일치 D", "공식 생활권과 가상경계가 권역 안/밖을 다르게 판정한 통행의 비율", "불일치 추적·재배정 검증"]],
+                         ["백분위", "무작위 경계 표본 중 IFR이 더 낮은 비율(같으면 절반). 50% = 무작위 수준", "전체 평가"],
+                         ["모듈러리티 Q", "구 안 무방향 통행망에서 동의 통행 규모로 기대되는 몫을 뺀 권역 내부 통행. 기대 내부연결량을 보정(크기 효과를 완전히 없애지는 않음)", "동 진단·재배정"],
+                         ["내부통행률 격차 G", "커뮤니티의 IFR − 기존 생활권의 IFR", "불일치 추적"],
+                         ["불일치 D", "기존 생활권과 커뮤니티가 권역 안/밖을 다르게 판정한 통행의 비율", "불일치 추적·재배정 검증"]],
                    note=_null_note())
     rows = []
     for r in g[g.boundary == "LZ"].pivot(index="ku_name", columns="year", values=["pct_N0", "pct_N1", "pct_N2"]).sort_values(("pct_N1", int(C.Y1))).itertuples():
         rows.append([r.Index, p0(r[1]), p0(r[2]), p0(r[3]), p0(r[4]), p0(r[5]), p0(r[6])])
     ld = g[g.boundary == "LD"].groupby("year")[["pct_N0", "pct_N1", "pct_N2"]].median(); lzmed = g[g.boundary == "LZ"].groupby("year")[["pct_N0", "pct_N1", "pct_N2"]].median()
-    rows.append(["중앙값(공식 생활권)", p0(lzmed.loc[int(C.Y0), "pct_N0"]), p0(lzmed.loc[int(C.Y1), "pct_N0"]), p0(lzmed.loc[int(C.Y0), "pct_N1"]), p0(lzmed.loc[int(C.Y1), "pct_N1"]), p0(lzmed.loc[int(C.Y0), "pct_N2"]), p0(lzmed.loc[int(C.Y1), "pct_N2"])])
-    rows.append(["중앙값(가상경계)", p0(ld.loc[int(C.Y0), "pct_N0"]), p0(ld.loc[int(C.Y1), "pct_N0"]), p0(ld.loc[int(C.Y0), "pct_N1"]), p0(ld.loc[int(C.Y1), "pct_N1"]), p0(ld.loc[int(C.Y0), "pct_N2"]), p0(ld.loc[int(C.Y1), "pct_N2"])])
-    T["TA2"] = dict(ko="A2. 공식 생활권 IFR의 무작위 비교경계 대비 백분위", en="A2. Percentile of Official Living-Zone IFR against Random Comparison Boundaries",
+    rows.append(["중앙값(기존 생활권)", p0(lzmed.loc[int(C.Y0), "pct_N0"]), p0(lzmed.loc[int(C.Y1), "pct_N0"]), p0(lzmed.loc[int(C.Y0), "pct_N1"]), p0(lzmed.loc[int(C.Y1), "pct_N1"]), p0(lzmed.loc[int(C.Y0), "pct_N2"]), p0(lzmed.loc[int(C.Y1), "pct_N2"])])
+    rows.append(["중앙값(커뮤니티)", p0(ld.loc[int(C.Y0), "pct_N0"]), p0(ld.loc[int(C.Y1), "pct_N0"]), p0(ld.loc[int(C.Y0), "pct_N1"]), p0(ld.loc[int(C.Y1), "pct_N1"]), p0(ld.loc[int(C.Y0), "pct_N2"]), p0(ld.loc[int(C.Y1), "pct_N2"])])
+    T["TA2"] = dict(ko="A2. 기존 생활권 IFR의 무작위 경계 대비 백분위", en="A2. Percentile of Official Living-Zone IFR against Random Boundaries",
                    headers=["구", "N0 2020", "N0 2025", "N1 2020", "N1 2025", "N2 2020", "N2 2025"], widths=[3.2] + [2.0] * 6, rows=rows, bold_last=True,
-                   note="가상경계는 자기 권역 크기에 맞춘 무작위 비교경계와 비교했다. 50%는 무작위 수준.")
+                   note="커뮤니티는 자기 권역 크기에 맞춘 무작위 경계와 비교했다. 50%는 무작위 수준.")
     k = lambda y, n: s[f"{y}_{n}"]
-    T["T5"] = dict(ko="5. 경계 동 한 개씩 옮기기 시험", en="5. Single-Dong Move Test", headers=["집단", "연도", "동 수", "IFR 개선", "모듈성 개선", "둘 다 개선", "IFR만 개선(크기 효과)"], widths=[4.4, 1.3, 1.5, 1.8, 2.0, 1.9, 2.8],
+    T["T5"] = dict(ko="5. 경계 동 한 개씩 옮기기 시험", en="5. Single-Dong Move Test", headers=["집단", "연도", "동 수", "IFR 개선", "모듈러리티 개선", "둘 다 개선", "IFR만 개선(크기 효과)"], widths=[4.4, 1.3, 1.5, 1.8, 2.0, 1.9, 2.8],
                    rows=[["옆 생활권 지향 동", y, k(y, "옆생활권지향동")["n"], k(y, "옆생활권지향동")["ΔIFR>0"], k(y, "옆생활권지향동")["ΔQ>0"], k(y, "옆생활권지향동")["둘다>0"], k(y, "옆생활권지향동")["ΔIFR>0_ΔQ≤0(크기효과)"]] for y in (C.Y0, C.Y1)] +
                         [["그 밖의 경계 동", y, k(y, "그밖의_경계동")["n"], k(y, "그밖의_경계동")["ΔIFR>0"], k(y, "그밖의_경계동")["ΔQ>0"], k(y, "그밖의_경계동")["둘다>0"], k(y, "그밖의_경계동")["ΔIFR>0_ΔQ≤0(크기효과)"]] for y in (C.Y0, C.Y1)],
-                   note=f"옆 생활권 지향 동 = 자기 동 내부통행을 빼고 옆 생활권으로 더 많이 보내는 동. 동마다 모듈성이 가장 많이 오르는 이동 하나(재배정과 같은 기준)로 셌다. 가능한 이동 중 하나라도 두 지표가 함께 오르는 동으로 세면 옆 생활권 지향 동 {k(C.Y0, '옆생활권지향동')['둘다>0_아무이동']}·{k(C.Y1, '옆생활권지향동')['둘다>0_아무이동']}개, 그 밖의 경계 동 {k(C.Y0, '그밖의_경계동')['둘다>0_아무이동']}·{k(C.Y1, '그밖의_경계동')['둘다>0_아무이동']}개. 옮긴 뒤에도 권역 수 유지·공간 연속.")
+                   note=f"옆 생활권 지향 동 = 자기 동 내부통행을 빼고 옆 생활권으로 더 많이 보내는 동. 동마다 모듈러리티이 가장 많이 오르는 이동 하나(재배정과 같은 기준)로 셌다. 가능한 이동 중 하나라도 두 지표가 함께 오르는 동으로 세면 옆 생활권 지향 동 {k(C.Y0, '옆생활권지향동')['둘다>0_아무이동']}·{k(C.Y1, '옆생활권지향동')['둘다>0_아무이동']}개, 그 밖의 경계 동 {k(C.Y0, '그밖의_경계동')['둘다>0_아무이동']}·{k(C.Y1, '그밖의_경계동')['둘다>0_아무이동']}개. 옮긴 뒤에도 권역 수 유지·공간 연속.")
     rows = []
     for y in (C.Y0, C.Y1):
         q = k(y, "탐욕재배정"); rows.append([y, q["옮긴_동"], q["옮긴_구"], f"{q['서울IFR_전']:.1f}", f"{q['서울IFR_후']:.1f}", f"{q['서울IFR_가상경계']:.1f}", f"{q['서울D_전']:.1f}", f"{q['서울D_후']:.1f}", f"{q['Q_전_중앙']:.3f}", f"{q['Q_후_중앙']:.3f}", f"{q['Q_가상경계_중앙']:.3f}"])
-    T["T6"] = dict(ko="6. 경계 동 순차 재배정 결과", en="6. Results of Sequential Boundary-Dong Reassignment", headers=["연도", "옮긴 동", "해당 구", "IFR 전(%)", "IFR 후(%)", "IFR 가상경계(%)", "D 전(%)", "D 후(%)", "Q 전", "Q 후", "Q 가상경계"],
+    T["T6"] = dict(ko="6. 경계 동 순차 재배정 결과", en="6. Results of Sequential Boundary-Dong Reassignment", headers=["연도", "옮긴 동", "해당 구", "IFR 전(%)", "IFR 후(%)", "IFR 커뮤니티(%)", "D 전(%)", "D 후(%)", "Q 전", "Q 후", "Q 커뮤니티"],
                    widths=[1.2, 1.4, 1.4, 1.5, 1.5, 1.9, 1.3, 1.3, 1.3, 1.3, 1.7], rows=rows,
-                   note=f"모듈성이 가장 많이 오르는 이동부터 하나씩 적용하고 더 오르는 이동이 없을 때 멈췄다. 옮긴 동 = 최종 소속이 바뀐 동(이동 횟수 {k(C.Y0, '탐욕재배정')['이동_횟수']}·{k(C.Y1, '탐욕재배정')['이동_횟수']}회). IFR·D는 서울 전체(분자합/분모합), Q는 구 중앙값. 두 해 모두 소속이 바뀌고 원래 → 최종 생활권 조합까지 같은 동 {s['두해모두_권고_이동']}개(2020만 {s['2020만']}, 2025만 {s['2025만']}). 2020 재배정 경계를 2025 통행에 적용하면 {S9['고정경계_부호검정']['n']}개 구 중 Q 개선 {S9['고정경계_부호검정']['Q개선']}, D 감소 {S9['고정경계_부호검정']['D감소']}.")
+                   note=f"모듈러리티이 가장 많이 오르는 이동부터 하나씩 적용하고 더 오르는 이동이 없을 때 멈췄다. 옮긴 동 = 최종 소속이 바뀐 동(이동 횟수 {k(C.Y0, '탐욕재배정')['이동_횟수']}·{k(C.Y1, '탐욕재배정')['이동_횟수']}회). IFR·D는 서울 전체(분자합/분모합), Q는 구 중앙값. 두 해 모두 소속이 바뀌고 원래 → 최종 생활권 조합까지 같은 동 {s['두해모두_권고_이동']}개(2020만 {s['2020만']}, 2025만 {s['2025만']}). 2020 재배정 경계를 2025 통행에 적용하면 {S9['고정경계_부호검정']['n']}개 구 중 Q 개선 {S9['고정경계_부호검정']['Q개선']}, D 감소 {S9['고정경계_부호검정']['D감소']}.")
     f1 = lambda x: f"{x * 100:.1f}"; f2 = lambda x: f"{x * 100:.2f}"
     rows = [[r.유형, f1(r.비중2020), f1(r.비중2025), f1(r.IFR2020), f1(r.IFR2025), f1(r.ΔIFR), f1(r.유형내기여), f1(r.구성기여)] for r in t9.itertuples()]
     W = S9["평일주말"]; U = S9["유형분해"]
     rows += [["평일 통행", "—", "—", f1(W["IFR2020_평일"]), f1(W["IFR2025_평일"]), f1(W["ΔIFR_평일"]), "—", "—"],
              ["주말 통행", "—", "—", f1(W["IFR2020_주말"]), f1(W["IFR2025_주말"]), f1(W["ΔIFR_주말"]), "—", "—"],
              ["전체", "100.0", "100.0", f1(U["IFR2020"]), f1(U["IFR2025"]), f1(U["ΔIFR"]), f1(U["유형내효과"]), f1(U["구성효과"])]]
-    T["T3"] = dict(ko="3. 공식 생활권 IFR 변화의 이동 유형별 분해", en="3. Decomposition of the Change in Official Living-Zone IFR by Trip Type",
+    T["T3"] = dict(ko="3. 기존 생활권 IFR 변화의 이동 유형별 분해", en="3. Decomposition of the Change in Official Living-Zone IFR by Trip Type",
                    headers=["이동 유형", "비중 2020(%)", "비중 2025(%)", "IFR 2020(%)", "IFR 2025(%)", "ΔIFR(%p)", "유형 내 기여(%p)", "구성 기여(%p)"],
                    widths=[2.6, 1.8, 1.8, 1.8, 1.8, 1.8, 2.2, 2.0], rows=rows, bold_last=True,
                    note=(f"서울 전체(분자합/분모합). 유형 내 기여 = 두 해 평균 비중 × 유형별 ΔIFR, 구성 기여 = 비중 변화 × 두 해 평균 IFR(대칭 분해). "
                          f"유형 내 효과가 ΔIFR의 {U['유형내_비중'] * 100:.0f}%. 주말 ΔIFR이 평일보다 큰 구 {W['구수_주말>평일']}/{W['n']}(부호검정 p {'< 0.001' if W['p_양측'] < 0.001 else '= ' + format(W['p_양측'], '.3f')}). 집↔직장 통근(HW·WH)은 분석 필터에서 제외."))
     Dv, Gv = S9["D변화"], S9["G확대"]; Sd = json.loads((C.TAB / "results.json").read_text(encoding="utf-8"))["seoul"]
-    T["T4"] = dict(ko="4. 공식 생활권과 가상경계의 불일치 변화", en="4. Change in Mismatch between Official Living Zones and Virtual Boundaries",
+    T["T4"] = dict(ko="4. 기존 생활권과 커뮤니티의 불일치 변화", en="4. Change in Mismatch between Official Living Zones and Virtual Boundaries",
                    headers=["지표", "서울 2020", "서울 2025", "변화", "구: 증가 / 감소 / 같음", "부호검정 p"], widths=[4.6, 1.9, 1.9, 1.8, 3.2, 2.0],
-                   rows=[["판정 불일치 D(%)", f1(Sd["2020"]["D"]), f1(Sd["2025"]["D"]), f"{(Sd['2025']['D'] - Sd['2020']['D']) * 100:+.1f}", f"{Dv['증가']} / {Dv['감소']} / {Dv['변화없음']}", f"{Dv['p_부호_양측']:.2f}"],
-                         ["자족성 격차 G(%p)", f2(Gv["G2020"]), f2(Gv["G2025"]), f"{Gv['ΔG'] * 100:+.2f}", f"{Gv['구_증가']} / {Gv['구_감소']} / {Gv['구_변화없음']}", f"{Gv['p_부호_양측']:.3f}"],
+                   rows=[["불일치 D(%)", f1(Sd["2020"]["D"]), f1(Sd["2025"]["D"]), f"{(Sd['2025']['D'] - Sd['2020']['D']) * 100:+.1f}", f"{Dv['증가']} / {Dv['감소']} / {Dv['변화없음']}", f"{Dv['p_부호_양측']:.2f}"],
+                         ["내부통행률 격차 G(%p)", f2(Gv["G2020"]), f2(Gv["G2025"]), f"{Gv['ΔG'] * 100:+.2f}", f"{Gv['구_증가']} / {Gv['구_감소']} / {Gv['구_변화없음']}", f"{Gv['p_부호_양측']:.3f}"],
                          ["  G 변화 중 통행 변화 몫(%p)", "—", "—", f"{Gv['통행_평균'] * 100:+.2f}", f"{Gv['구_통행몫양수']} / {Gv['구_통행몫음수']} / {25 - Gv['구_통행몫양수'] - Gv['구_통행몫음수']}", f"{Gv['p_통행몫_양측']:.3f}"],
-                         ["  G 변화 중 가상경계 재도출 몫(%p)", "—", "—", f"{Gv['재도출_평균'] * 100:+.2f}", "—", "—"]],
+                         ["  G 변화 중 커뮤니티 재도출 몫(%p)", "—", "—", f"{Gv['재도출_평균'] * 100:+.2f}", "—", "—"]],
                    note=(f"서울 값은 분자합/분모합. '같음'은 두 해 모두 두 경계가 같은 구(D·G 변화 없음). 부호검정은 같음을 뺀 증가:감소(양측). "
                          f"G 변화의 분해는 통행을 먼저 바꾸는 순서와 경계를 먼저 바꾸는 순서의 평균이며, 통행 변화 몫은 순서에 따라 {Gv['통행몫_순서1'] * 100:.0f}~{Gv['통행몫_순서2'] * 100:.0f}%(평균 {Gv['통행몫_평균'] * 100:.0f}%)."))
     from k14_reassign import final_changes
@@ -265,12 +265,12 @@ def build_tables_v2():
 
 
 FIGS_V2 = {
-    "F1": ("1. 분석의 틀", "1. Analytical Framework", "Fv2_1_framework.png", 15.0, "무작위 비교경계는 바닥 기준선, 빅데이터 기반 가상경계는 같은 자료로 만든 비교 기준으로 쓴다."),
-    "F2": ("2. 크기 편향: 공식 생활권 IFR의 무작위 비교경계 대비 백분위(2025)", "2. Size Bias: Percentile of Official-Zone IFR against Random Boundaries, 2025", "Fv2_2_size_bias.png", 12.0, "빈 점은 크기 제약 없는 무작위, 찬 점은 동 수를 맞춘 무작위 대비. 붉은 선은 무작위 수준(50%)."),
-    "F3": ("3. 동 진단 결과(2025)", "3. Dong-Level Diagnosis, 2025", "Fv2_3_dong_diagnosis_map.png", 14.0, "가는 선은 공식 생활권, 굵은 선은 자치구 경계. 괄호는 동 수."),
-    "F4": ("4. 구별 경계 동 재배정 전후 IFR(2025)", "4. District IFR before and after Boundary-Dong Reassignment, 2025", "Fv2_4_gu_reassign_ifr.png", 12.0, "세로 막대는 빅데이터 기반 가상경계의 IFR."),
-    "F5": ("5. 사례: 광진구의 공식 생활권·재배정 후·가상경계(2025)", "5. Case: Gwangjin-gu, 2025", "Fv2_5_case_gwangjin.png", 15.5, "붉은 점선은 옮겨진 동."),
-    "FA1": ("A1. 두 경계의 ΔIFR과 무작위 비교경계의 ΔIFR 분포", "A1. ΔIFR of the Two Boundaries against Random Comparison Boundaries", "Fv2_A1_null_dIFR.png", 13.0, "회색 상자는 무작위 비교경계 1,000번 추출의 5~95% 구간."),
+    "F1": ("1. 분석의 틀", "1. Analytical Framework", "Fv2_1_framework.png", 15.0, "무작위 경계는 바닥 기준선, 데이터 기반 커뮤니티는 같은 자료로 만든 비교 기준으로 쓴다."),
+    "F2": ("2. 크기 편향: 기존 생활권 IFR의 무작위 경계 대비 백분위(2025)", "2. Size Bias: Percentile of Official-Zone IFR against Random Boundaries, 2025", "Fv2_2_size_bias.png", 12.0, "빈 점은 크기 제약 없는 무작위, 찬 점은 동 수를 맞춘 무작위 대비. 붉은 선은 무작위 수준(50%)."),
+    "F3": ("3. 동 진단 결과(2025)", "3. Dong-Level Diagnosis, 2025", "Fv2_3_dong_diagnosis_map.png", 14.0, "가는 선은 기존 생활권, 굵은 선은 자치구 경계. 괄호는 동 수."),
+    "F4": ("4. 구별 경계 동 재배정 전후 IFR(2025)", "4. District IFR before and after Boundary-Dong Reassignment, 2025", "Fv2_4_gu_reassign_ifr.png", 12.0, "세로 막대는 데이터 기반 커뮤니티의 IFR."),
+    "F5": ("5. 사례: 광진구의 기존 생활권·재배정 후·커뮤니티(2025)", "5. Case: Gwangjin-gu, 2025", "Fv2_5_case_gwangjin.png", 15.5, "붉은 점선은 옮겨진 동."),
+    "FA1": ("A1. 두 경계의 ΔIFR과 무작위 경계의 ΔIFR 분포", "A1. ΔIFR of the Two Boundaries against Random Boundaries", "Fv2_A1_null_dIFR.png", 13.0, "회색 상자는 무작위 경계 1,000번 추출의 5~95% 구간."),
 }
 
 

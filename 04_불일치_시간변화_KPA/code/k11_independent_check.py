@@ -98,13 +98,9 @@ print("2 동대문구 2025: T", round(T), "a", round(a), "b", round(b), "D%", ro
 # ---------- 3 docx·hwp 표 대조 ----------
 sys.path.insert(0, str(C.HERE))
 from docx import Document
-docx = sorted(p for p in MK.glob("국토계획_투고초본_v*.docx") if "2단" not in p.stem)[-1]
-if "_v2_" in docx.name:
-    from k18_v2_results import build_tables_v2
-    tabs = build_tables_v2(); keys = ["T1", "T2", "T3", "T4", "T5", "T6", "TA2", "TA1"]   # 원고 등장 순서(부록: A2 → A1)
-else:
-    import k06_kpa_submission as k6
-    tabs = k6.build_tables(); keys = ["T1", "T2", "T3", "T4", "T5", "TA1"]
+docx = sorted(p for p in C.DOCX.glob("국토계획_원고_*.docx") if "2단" not in p.stem)[-1]
+from k18_v2_results import build_tables_v2                          # 확정본 표(k18). 이전 판 k06 표는 쓰지 않는다(2026-09-30 파일 이름 변경 뒤 정리)
+tabs = build_tables_v2(); keys = ["T1", "T2", "T3", "T4", "T5", "T6", "TA2", "TA1"]   # 원고 등장 순서(부록: A2 → A1)
 exp = {kk: [tabs[kk]["headers"]] + [[str(x) for x in r] for r in tabs[kk]["rows"]] for kk in keys}
 rec["3_대조_원고"] = docx.name
 d = Document(str(docx)); mism = [kk for t, kk in zip(d.tables, keys) if [[c.text for c in r.cells] for r in t.rows] != exp[kk]]
@@ -128,7 +124,7 @@ def _hwp_tables(path):
         got.append(rows)
     return got
 for nm in ("심사용", "저자정보"):
-    hp = MK / f"국토계획_투고본_{nm}_20260929.hwp"
+    hp = MK / f"국토계획_투고본_{nm}_{__import__('k22_hwp_kpa').DATE}.hwp"   # k22의 DATE와 같은 파일
     try:
         got = _hwp_tables(hp); mism_h = [kk for kk in keys if exp[kk] not in got]
         rec[f"3_hwp_{nm}_표_불일치"] = mism_h; rec[f"3_hwp_{nm}_읽은_표"] = len(got); print(f"3 hwp({nm}) 표 {len(keys)}개 대조: 불일치", mism_h, f"(읽은 표 {len(got)}개)")

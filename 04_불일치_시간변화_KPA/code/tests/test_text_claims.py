@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config as C
 import k24_text_claims as K
 
-_mds = sorted(C.MK.glob("국토계획_투고초본_v2_*.md"))
+_mds = sorted(C.MK.glob("국토계획_원고_*.md"))
 assert _mds, f"원고 md가 없다: {C.MK}"
 MD = _mds[-1].read_text(encoding="utf-8")
 V = K.values()
