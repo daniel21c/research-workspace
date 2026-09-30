@@ -204,11 +204,11 @@ def appendix_tables(V, T, lang='en'):
     r = [[k('Analysis', '분석'), '2020', '2025', k('Condition tested and reading', '시험 조건과 해석')],
          [k('Modularity reassignment under the ±20% population and compactness rules (end of path)', '±20% 인구·형상 조밀도 규칙 아래 모듈성 재배정(경로 끝)')] +
          [f"k = {od[y]['MOD_end']['k']}; ΔL {sgn(od[y]['MOD_end']['dL_unique'])} ({n0(od[y]['MOD_end']['new_excl'])} / {n0(od[y]['MOD_end']['resolved'])})" for y in Y] +
-         [k('Population and compactness rules of Section 4.3 applied to each move; summarised in Section 5.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '4.3절의 인구·형상 조밀도 규칙을 매 이동에 적용. 5.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
+         [k('Population and compactness rules of Section 3.3 applied to each move; summarised in Section 4.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '3.3절의 인구·형상 조밀도 규칙을 매 이동에 적용. 4.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
          [k('Greedy reassignment maximising IFR (dong moved at most once)', 'IFR 최대화 탐욕 재배정(동당 1회)')] +
          [f"k = {od[y]['IFR_end']['k']}; ΔL {sgn(od[y]['IFR_end']['dL_unique'])}" for y in Y] + [k('Same rules as above, objective IFR instead of modularity, each dong moved at most once. Raising IFR directly raised exclusion in both years.', '위와 같은 규칙, 목적함수는 모듈성 대신 IFR, 동당 최대 1회 이동. IFR을 직접 올리면 두 해 모두 누락 증가.')],
          [k('Plan-level Spearman ρ(IFR, L) across alternative maps, controlling for shape', '대안 지도 전체의 계획 단위 Spearman ρ(IFR, L), 모양 통제')] +
-         [f"{f2(pla[str(y)]['L7|shape']['rho'])} {ci(*pla[str(y)]['L7|shape']['ci95'], f=f2)}" for y in Y] + [k('Rank correlation over the 1,000 alternative maps of Section 4.3, controlling for shape. Small; reported for completeness.', '4.3절 대안 지도 1,000장에 대한 순위상관, 모양 통제. 작음. 기록용.')],
+         [f"{f2(pla[str(y)]['L7|shape']['rho'])} {ci(*pla[str(y)]['L7|shape']['ci95'], f=f2)}" for y in Y] + [k('Rank correlation over the 1,000 alternative maps of Section 3.3, controlling for shape. Small; reported for completeness.', '3.3절 대안 지도 1,000장에 대한 순위상관, 모양 통제. 작음. 기록용.')],
          [k('Paired differences ΔIFR ~ Δaccess between official and flow-based boundaries', '공식–통행 기반 경계의 쌍 차분 ΔIFR ~ Δ접근성')] + ['—', '—'] +
          [k('Earlier design, not pursued: almost all random plans produced the same sign, so the test could not discriminate between plans.', '초기 설계, 미채택: 무작위 계획 거의 전부가 같은 부호를 내어 계획 간 판별력이 없음.')]]
     from study import TYPES
@@ -310,6 +310,9 @@ def render(blocks, V, TB, caps, d):
 
 
 REFS = [
+    'Alexander, L., Jiang, S., Murga, M., & González, M. C. (2015). Origin–destination trips by purpose and time of day inferred from mobile phone data. Transportation Research Part C: Emerging Technologies, 58, 240–250. https://doi.org/10.1016/j.trc.2015.02.018',
+    'Allam, Z., Nieuwenhuijsen, M., Chabaud, D., & Moreno, C. (2022). The 15-minute city offers a new framework for sustainability, liveability, and health. The Lancet Planetary Health, 6(3), e181–e183. https://doi.org/10.1016/S2542-5196(22)00014-6',
+    'Berlin Senate Department for Urban Development, Building and Housing. (2021). Lebensweltlich orientierte Räume (LOR): Spatial reference system for Berlin. https://gdi.berlin.de/',
     'Boyne, G., & Powell, M. (1991). Territorial justice: A review of theory and evidence. Political Geography Quarterly, 10(3), 263–281. https://doi.org/10.1016/0260-9827(91)90038-V',
     'Chen, J., & Rodden, J. (2013). Unintentional gerrymandering: Political geography and electoral bias in legislatures. Quarterly Journal of Political Science, 8(3), 239–269. https://doi.org/10.1561/100.00012033',
     'Coombes, M., & Bond, S. (2008). Travel-to-work areas: The 2007 review. Office for National Statistics.',
@@ -321,6 +324,8 @@ REFS = [
     'Geurs, K. T., & van Wee, B. (2004). Accessibility evaluation of land-use and transport strategies: Review and research directions. Journal of Transport Geography, 12(2), 127–140. https://doi.org/10.1016/j.jtrangeo.2003.10.005',
     'Geyer, C. J. (1992). Practical Markov chain Monte Carlo. Statistical Science, 7(4), 473–483. https://doi.org/10.1214/ss/1177011137',
     'Graells-Garrido, E., Serra-Burriel, F., Rowe, F., Cucchietti, F. M., & Reyes, P. (2021). A city of cities: Measuring how 15-minutes urban accessibility shapes human mobility in Barcelona. PLoS ONE, 16(5), Article e0250080. https://doi.org/10.1371/journal.pone.0250080',
+    'Greater London Authority. (2016). The London Plan: The spatial development strategy for London consolidated with alterations since 2011 (Policy 2.5, Sub-regions). Greater London Authority. https://www.london.gov.uk/',
+    'Greater Sydney Commission. (2018). Greater Sydney Region Plan: A metropolis of three cities. Government of New South Wales. https://www.planning.nsw.gov.au/',
     'Halás, M., Klapka, P., Tonev, P., & Bednář, M. (2015). An alternative definition and use for the constraint function for rule-based methods of functional regionalisation. Environment and Planning A, 47(5), 1175–1191. https://doi.org/10.1177/0308518X15592306',
     'Handy, S. L., & Niemeier, D. A. (1997). Measuring accessibility: An exploration of issues and alternatives. Environment and Planning A, 29(7), 1175–1194. https://doi.org/10.1068/a291175',
     'Hansen, W. G. (1959). How accessibility shapes land use. Journal of the American Institute of Planners, 25(2), 73–76. https://doi.org/10.1080/01944365908978307',
@@ -371,7 +376,7 @@ def check_citations(text):
     cites = set(re.findall(r'([A-Z][A-Za-zÀ-ſ\-]+)(?: et al\.| and [A-Z][A-Za-zÀ-ſ\-]+| & [A-Z][A-Za-zÀ-ſ\- ]+?)?,? \(?(\d{4})\)?', text))
     keys = ref_keys(); missing_in_refs = []; unused = []
     for first, yr, r in keys:
-        if not re.search(re.escape(first.split(' ')[0]) + r'[^()]{0,60}?\(?' + yr, text):
+        if not re.search(re.escape(first.split(' ')[0]) + r'[^()]{0,90}?\(?' + yr, text):
             unused.append(r[:60])
     return unused
 
