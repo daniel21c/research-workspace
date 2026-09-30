@@ -287,10 +287,13 @@ class Writer:
         return n, pdf
 
 
-def layout_check(pdf: Path) -> dict:
-    """출력 PDF 배치 점검: 글자 줄이 서로 겹친 쪽, 국문·영문 제목 줄이 다른 쪽으로 갈라진 표·그림 번호."""
+def layout_check(pdf: Path, h2s=()) -> dict:
+    """출력 PDF 배치 점검: 글자 줄이 서로 겹친 쪽, 국문·영문 제목 줄이 다른 쪽으로 갈라진 표·그림 번호,
+    쪽·단 끝에 홀로 남은 절 제목(h2s = 원고의 ## 제목 목록; 한글은 표 뒤·단 끝에서 '다음 문단과 함께'를 지키지 않을 때가 있음)."""
     import fitz
-    d = fitz.open(str(pdf)); over, split = [], []
+    d = fitz.open(str(pdf)); over, split, stranded = [], [], []
+    norm = lambda x: re.sub(r"\s+", "", x)
+    h2n = {norm(h): h for h in h2s}
     loc = {}
     for i, pg in enumerate(d):
         rects = [fitz.Rect(l["bbox"]) for b in pg.get_text("dict")["blocks"] for l in b.get("lines", []) if "".join(s["text"] for s in l["spans"]).strip()]
@@ -298,12 +301,21 @@ def layout_check(pdf: Path) -> dict:
         t = pg.get_text()
         for m in re.findall(r"(?:표|그림) (A?\d+)\. ", t): loc.setdefault(("ko", m), i + 1)
         for m in re.findall(r"(?:Table|Fig\.) (A?\d+)\. ", t): loc.setdefault(("en", m), i + 1)
+        Wd = pg.rect.width; blocks = [b for b in pg.get_text("blocks") if b[4].strip()]
+        for c in (0, 1):
+            col = [b for b in blocks if (0 if (b[0] + b[2]) / 2 < Wd / 2 else 1) == c]
+            if not col: continue
+            last = norm(max(col, key=lambda b: b[3])[4])
+            hit = [h for k, h in h2n.items() if last.startswith(k[:12])]
+            if hit and len(last) <= len(norm(hit[0])) + 2: stranded.append({"제목": hit[0], "쪽": i + 1, "단": c})
     for (lang, num), pgno in loc.items():
         if lang == "ko" and loc.get(("en", num)) not in (pgno, None): split.append(num)
-    return {"쪽수": len(d), "겹친_쪽": over, "제목_갈라진_번호": sorted(set(split))}
+    return {"쪽수": len(d), "겹친_쪽": over, "제목_갈라진_번호": sorted(set(split)), "홀로_남은_절제목": stranded}
 
 
-def build(md: Path, mode: str):
+def build(md: Path, mode: str, breaks: dict | None = None):
+    """breaks: {절 제목: "page"|"column"} — 그 제목 앞에서 쪽(오른쪽 단 끝 고립) 또는 단(왼쪽 단 끝 고립)을 나눈다. __main__이 배치 점검 결과로 채워 다시 만든다."""
+    breaks = breaks or {}
     meta, body = read_md(md)
     tables, figs = build_tables_v2(), FIGS_V2
     WORK.mkdir(parents=True, exist_ok=True)
@@ -330,8 +342,10 @@ def build(md: Path, mode: str):
 
     def h2(v):
         # 절 제목 뒤 빈 문단을 두면 한글이 빈 문단에는 '다음 문단과 함께'를 지키지 않아 제목이 쪽 끝에 홀로 남는다(외부 검토 2026-09-30, 6쪽·13쪽)
-        # → 빈 문단 대신 문단 아래 간격으로 띄운다.
-        W.para(v, "개요2", bold_all=True, keep=True, newpara=False); W.h.set_para(KeepWithNext=1, NextSpacing=10); W.h.BreakPara()
+        # → 빈 문단 대신 문단 아래 간격으로 띄운다. 그래도 남으면(표 뒤 등) 배치 점검 결과(breaks)에 따라 제목 앞에서 단/쪽을 나눈다.
+        if breaks.get(v) == "column": W.h.HAction.Run("BreakColumn")
+        W.para(v, "개요2", bold_all=True, keep=True, newpara=False)
+        W.h.set_para(KeepWithNext=1, NextSpacing=10, PagebreakBefore=1 if breaks.get(v) == "page" else 0); W.h.BreakPara()
 
     while i < len(blocks):
         kind, v = blocks[i]
@@ -376,8 +390,8 @@ def build(md: Path, mode: str):
     n, pdf = W.save(out)
     rec_p = MK / "쪽수_기록.json"
     rec = json.loads(rec_p.read_text(encoding="utf-8")) if rec_p.exists() else {}
-    lay = layout_check(pdf)
-    if lay["겹친_쪽"] or lay["제목_갈라진_번호"]: print("배치 경고:", lay)
+    lay = layout_check(pdf, [v for kind, v in blocks if kind == "h2"]); lay["제목_앞_나눔"] = breaks
+    if lay["겹친_쪽"] or lay["제목_갈라진_번호"] or lay["홀로_남은_절제목"]: print("배치 경고:", lay)
     for k in ("hwp", "hwp_생성", "hwp_쪽수(한글, 1단)", "hwp_pdf", "hwp_방법", "hwp_error"): rec.pop(k, None)   # 이전 k09(1단) 기록
     rec[f"hwp_{name}"] = {"파일": out.name, "쪽수(한글)": n, "pdf": pdf.name, "생성": time.strftime("%Y-%m-%d %H:%M:%S"),
                           "방법": "k22 학회 샘플(2026-01-22판) 위 조립, 본문 2단·표/그림 본문 폭", "배치_점검": lay}
@@ -391,7 +405,13 @@ if __name__ == "__main__":
     md = sorted(MK.glob("국토계획_투고초본_v2_*.md"))[-1]
     try:
         for mode in (["anon", "author"] if which == "both" else [which]):
-            out, n, pdf = build(md, mode)
-            print(f"{mode}: {out.name} | {n}쪽 | {pdf.name}")
+            breaks = {}
+            for attempt in range(3):   # 홀로 남은 절 제목이 있으면 그 제목 앞에서 단/쪽을 나눠 다시 만든다(최대 2회)
+                out, n, pdf = build(md, mode, breaks)
+                st = json.loads((MK / "쪽수_기록.json").read_text(encoding="utf-8"))[f"hwp_{ {"anon": "심사용", "author": "저자정보"}[mode] }"]["배치_점검"]["홀로_남은_절제목"]
+                if not st or attempt == 2: break
+                for h in st: breaks[h["제목"]] = "column" if h["단"] == 0 else "page"
+                print(f"{mode}: 홀로 남은 절 제목 {[h['제목'] for h in st]} → 제목 앞 나눔 후 재생성")
+            print(f"{mode}: {out.name} | {n}쪽 | {pdf.name} | 제목 앞 나눔 {breaks or '없음'}")
     finally:
         cleanup_own_hwp()
