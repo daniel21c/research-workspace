@@ -121,7 +121,7 @@ BODY = [
           'systematic mismatches with lower cohesion and self-containment. What all of this work evaluates is the fit between a '
           'partition and its flows; a region is judged by how much of its own interaction it holds. What happens to the services a '
           'planning zone is expected to contain when its boundary moves along the flows has not, to our knowledge, been examined, '
-          'and no study compares such a flow-guided revision with revisions of the same extent made without flow information. That '
+          'and no study compares such flow-guided reassignment with reassignment of the same extent made without flow information. That '
           'comparison is our first question.'),
     ('h2', '2.3. Judging a plan against its alternatives'),
     ('p', 'A single plan’s coverage value says little on its own. The redistricting literature met the same problem and solved it '

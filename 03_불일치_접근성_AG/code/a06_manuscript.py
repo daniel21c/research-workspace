@@ -144,8 +144,8 @@ def tables(V, T, lang='en'):
          [k('Partial ρ(W, F | A, P)', '편 ρ(W, F | A, P)')] + [f"{f3(mm[y]['partial_W_F_given_AP']['est'])} {ci(*mm[y]['partial_W_F_given_AP']['ci95'])}" for y in Y],
          [k('Partial ρ(W, F | A, P, zone population, zone jobs)', '편 ρ(W, F | A, P, 생활권 인구·종사자)')] + [f"{f3(mm[y]['partial_W_F_given_AP_Zpop_Zemp']['est'])} {ci(*mm[y]['partial_W_F_given_AP_Zpop_Zemp']['ci95'])}" for y in Y],
          [k('Dong fixed effects: standardised coefficient on F', '동 고정효과: F의 표준화 계수')] + [f"{f3(mm[y]['dongFE_std_beta']['F']['est'])} {ci(*mm[y]['dongFE_std_beta']['F']['ci95'])}" for y in Y]]
-    out['T4'] = (k('Table 4. Trip shares and walkable facility shares of neighbouring zones.', '표 4. 인접 생활권의 통행 비율과 보행 시설 비율.'), r,
-                 k('W: share of a boundary dong’s out-of-dong trips ending in the neighbouring zone; F: share of its walkable facility cells located there (mean of seven categories); A, P: shares of reachable cells and reachable population. Brackets: 95% dong-cluster bootstrap intervals.',
+    out['T4'] = (k('Table 4. Trip shares and walkable facility shares of adjacent zones.', '표 4. 인접 생활권의 통행 비율과 보행 시설 비율.'), r,
+                 k('W: share of a boundary dong’s out-of-dong trips ending in the adjacent zone; F: share of its walkable facility cells located there (mean of seven categories); A, P: shares of reachable cells and reachable population. Brackets: 95% dong-cluster bootstrap intervals.',
                    'W: 경계 동의 동 밖 통행 중 인접 생활권에서 끝나는 비율, F: 보행 시설 격자 중 그 생활권에 있는 비율(7범주 평균), A·P: 닿는 격자·인구 비율. 괄호는 동 군집 부트스트랩 95% 구간.'))
     return out
 
