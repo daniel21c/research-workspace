@@ -5,7 +5,7 @@
 - **원고**: `manuscript/AG_manuscript_anonymised.docx`(익명 본문) · `AG_title_page.docx` · `AG_highlights.docx` · `AG_supplementary_appendix.docx` · `AG_cover_letter.docx` · 한국어 전문 `AG_한국어_원고.docx` · 그림 `manuscript/figures/`
 - **공동연구자 패키지**: `package/AG_확정본_공동연구자패키지_20260930.zip` (안내 `package/README_패키지.md`, 새 폴더에 풀어 실행한 자체 점검 `package/package_selfcheck.json`)
 - **외부 검수 대응**: [검수의견_대응표_20260930.md](검수의견_대응표_20260930.md) — 반영한 것과 반영하지 않은 것의 이유
-- **최종 보고**: `보고_20260930/` (교수님 보고 메모 docx·pdf, Teams 보고글). 검수 종결 원문: `검수기록/`. 서식 대조: `AG_투고서식_체크리스트_20260930.md`, 구성 변경 대조: `구성변경_대조표_20260930.md`
+- **최종 보고**: `보고_20260930/` (교수님 보고 메모 docx·pdf, Teams 보고글, 한·영 원고 PDF, 패키지 zip 사본, 그래픽 초록 — 팀즈 첨부는 여기서). Downloads 임시 사본은 정리함. 검수 종결 원문: `검수기록/`. 서식 대조: `AG_투고서식_체크리스트_20260930.md`, 구성 변경 대조: `구성변경_대조표_20260930.md`
 - 코드: `code/` (순서 a01 → a02(연도당 시드 2개) → a03 → a04 → a05 → a06 → a07 → a08 → a09 보고 메모, 설명은 연구설계 5절). 결과: `results/{2020,2025,appendix}` (`results/_cache`는 실행 시 재생성되는 격자 캐시라 보관 폴더로 옮김)
 - 폴더 구성(2026-09-30 정리 후): 문서 6개(README·연구설계·작업기록·대응표·대조표·체크리스트) + `code/` `results/` `manuscript/` `package/` `검수기록/` `보고_20260930/`. 그 밖의 옛 판·중간 산출은 모두 `D:\Research\_archive_AG_확정전_정리_20260930\`
 - 입력(읽기 전용): `00_공통_코어엔진/data`, `06_접근성분석/접근성분석_패키지/데이터/입력`, `시설데이터 구축/시설데이터_패키지`
