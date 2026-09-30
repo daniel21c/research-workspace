@@ -270,6 +270,7 @@ def main():
                                                    "core_engine_inputs": core["files"], "files": files}, ensure_ascii=False, indent=1), encoding="utf-8")
     zipdir(pkg, C.OUT / f"KPA_확정본_공동연구자패키지_{stamp}.zip")
     out, found = bundle(stamp, stem); zipdir(out, C.OUT / f"KPA_확정본_제출본_{stamp}.zip")
+    shutil.rmtree(pkg, ignore_errors=True); shutil.rmtree(out, ignore_errors=True)   # zip과 같은 내용의 폴더는 남기지 않는다(중복 산출물 정리, 2026-09-30)
     print(json.dumps({"패키지": pkg.name, "파일": len(files), "자체시험": st, "제출본": out.name, "익명": found or "통과"}, ensure_ascii=False, indent=1))
 
 
