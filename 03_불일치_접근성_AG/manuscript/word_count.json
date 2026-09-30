@@ -3,8 +3,8 @@
  "body_incl_headings": 5503,
  "figure_captions": 146,
  "tables": 437,
- "references": 1182,
+ "references": 1194,
  "n_references": 46,
  "ai_declaration": 50,
- "total_AG_count(abstract+body+tables+captions+declaration+references)": 7567
+ "total_AG_count(abstract+body+tables+captions+declaration+references)": 7579
 }

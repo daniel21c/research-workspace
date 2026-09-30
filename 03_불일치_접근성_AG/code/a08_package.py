@@ -34,6 +34,10 @@ def build():
     for f in ('AG_manuscript_anonymised', 'AG_한국어_원고', 'AG_supplementary_appendix'):
         pdf(MS / f'{f}.docx', OUT / 'manuscript' / f'{f}.pdf')
     shutil.copytree(MS / 'figures', OUT / 'manuscript' / 'figures')
+    sub = OUT / 'manuscript' / 'submission_figures'; sub.mkdir()  # AG 규정: 그림은 Figure_1… 이름의 별도 파일로 제출
+    for i in range(1, 5):
+        for ext in ('png', 'pdf'):
+            shutil.copy2(MS / 'figures' / f'Fig{i}.{ext}', sub / f'Figure_{i}.{ext}')
     for y in ('2020', '2025', 'appendix'):
         shutil.copytree(RES / y, OUT / 'results' / y)
     for f in ('claims_check.json', '_check_a01_vs_previous.json', 'a02_reproduction_check.json'):

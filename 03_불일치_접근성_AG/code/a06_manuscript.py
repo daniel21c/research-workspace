@@ -317,45 +317,45 @@ REFS = [
     'DeFord, D., Duchin, M., & Solomon, J. (2021). Recombination: A family of Markov chains for redistricting. Harvard Data Science Review, 3(1). https://doi.org/10.1162/99608f92.eb30390f',
     'Farmer, C. J. Q., & Fotheringham, A. S. (2011). Network-based functional regions. Environment and Planning A, 43(11), 2723–2741. https://doi.org/10.1068/a44136',
     'Fotheringham, A. S., & Wong, D. W. S. (1991). The modifiable areal unit problem in multivariate statistical analysis. Environment and Planning A, 23(7), 1025–1044. https://doi.org/10.1068/a231025',
-    'Gao, F., Kihal, W., Le Meur, N., Souris, M., & Deguen, S. (2017). Does the edge effect impact on the measure of spatial accessibility to healthcare providers? International Journal of Health Geographics, 16, 46. https://doi.org/10.1186/s12942-017-0119-3',
+    'Gao, F., Kihal, W., Le Meur, N., Souris, M., & Deguen, S. (2017). Does the edge effect impact on the measure of spatial accessibility to healthcare providers? International Journal of Health Geographics, 16, Article 46. https://doi.org/10.1186/s12942-017-0119-3',
     'Geurs, K. T., & van Wee, B. (2004). Accessibility evaluation of land-use and transport strategies: Review and research directions. Journal of Transport Geography, 12(2), 127–140. https://doi.org/10.1016/j.jtrangeo.2003.10.005',
     'Geyer, C. J. (1992). Practical Markov chain Monte Carlo. Statistical Science, 7(4), 473–483. https://doi.org/10.1214/ss/1177011137',
-    'Graells-Garrido, E., Serra-Burriel, F., Rowe, F., Cucchietti, F. M., & Reyes, P. (2021). A city of cities: Measuring how 15-minutes urban accessibility shapes human mobility in Barcelona. PLoS ONE, 16(5), e0250080. https://doi.org/10.1371/journal.pone.0250080',
+    'Graells-Garrido, E., Serra-Burriel, F., Rowe, F., Cucchietti, F. M., & Reyes, P. (2021). A city of cities: Measuring how 15-minutes urban accessibility shapes human mobility in Barcelona. PLoS ONE, 16(5), Article e0250080. https://doi.org/10.1371/journal.pone.0250080',
     'Halás, M., Klapka, P., Tonev, P., & Bednář, M. (2015). An alternative definition and use for the constraint function for rule-based methods of functional regionalisation. Environment and Planning A, 47(5), 1175–1191. https://doi.org/10.1177/0308518X15592306',
     'Handy, S. L., & Niemeier, D. A. (1997). Measuring accessibility: An exploration of issues and alternatives. Environment and Planning A, 29(7), 1175–1194. https://doi.org/10.1068/a291175',
     'Hansen, W. G. (1959). How accessibility shapes land use. Journal of the American Institute of Planners, 25(2), 73–76. https://doi.org/10.1080/01944365908978307',
-    'He, M., Glasser, J., Pritchard, N., Bhamidi, S., & Kaza, N. (2020). Demarcating geographic regions using community detection in commuting networks with significant self-loops. PLoS ONE, 15(4), e0230941. https://doi.org/10.1371/journal.pone.0230941',
+    'He, M., Glasser, J., Pritchard, N., Bhamidi, S., & Kaza, N. (2020). Demarcating geographic regions using community detection in commuting networks with significant self-loops. PLoS ONE, 15(4), Article e0230941. https://doi.org/10.1371/journal.pone.0230941',
     'Herschlag, G., Kang, H. S., Luo, J., Graves, C. V., Bangia, S., Ravier, R., & Mattingly, J. C. (2020). Quantifying gerrymandering in North Carolina. Statistics and Public Policy, 7(1), 30–38. https://doi.org/10.1080/2330443X.2020.1796400',
     'Hillsman, E. L., & Rhoda, R. (1978). Errors in measuring distances from populations to service centers. The Annals of Regional Science, 12(3), 74–88. https://doi.org/10.1007/BF01286124',
     'Kalcsics, J., Nickel, S., & Schröder, M. (2005). Towards a unified territorial design approach: Applications, algorithms and GIS integration. TOP, 13(1), 1–56. https://doi.org/10.1007/BF02578982',
     'Karlsson, C., & Olsson, M. (2006). The identification of functional regions: Theory, methods, and applications. The Annals of Regional Science, 40(1), 1–18. https://doi.org/10.1007/s00168-005-0019-5',
-    'Klapka, P., Kraft, S., & Halás, M. (2020). Network based definition of functional regions: A graph theory approach for spatial distribution of traffic flows. Journal of Transport Geography, 88, 102855. https://doi.org/10.1016/j.jtrangeo.2020.102855',
+    'Klapka, P., Kraft, S., & Halás, M. (2020). Network based definition of functional regions: A graph theory approach for spatial distribution of traffic flows. Journal of Transport Geography, 88, Article 102855. https://doi.org/10.1016/j.jtrangeo.2020.102855',
     'Kwan, M.-P. (2012). The uncertain geographic context problem. Annals of the Association of American Geographers, 102(5), 958–968. https://doi.org/10.1080/00045608.2012.687349',
-    'Logan, T. M., Hobbs, M. H., Conrow, L. C., Reid, N. L., Young, R. A., & Anderson, M. J. (2022). The x-minute city: Measuring the 10, 15, 20-minute city and an evaluation of its use for sustainable urban design. Cities, 131, 103924. https://doi.org/10.1016/j.cities.2022.103924',
+    'Logan, T. M., Hobbs, M. H., Conrow, L. C., Reid, N. L., Young, R. A., & Anderson, M. J. (2022). The x-minute city: Measuring the 10, 15, 20-minute city and an evaluation of its use for sustainable urban design. Cities, 131, Article 103924. https://doi.org/10.1016/j.cities.2022.103924',
     'Martínez-Bernabéu, L., & Casado-Díaz, J. M. (2021). Standard modularity is unsuitable for functional regionalization of spatial interaction data. Papers in Regional Science, 100(5), 1323–1331. https://doi.org/10.1111/pirs.12617',
     'Moreno, C., Allam, Z., Chabaud, D., Gall, C., & Pratlong, F. (2021). Introducing the “15-minute city”: Sustainability, resilience and place identity in future post-pandemic cities. Smart Cities, 4(1), 93–111. https://doi.org/10.3390/smartcities4010006',
-    'Mouratidis, K. (2024). Time to challenge the 15-minute city: Seven pitfalls for sustainability, equity, livability, and spatial analysis. Cities, 153, 105274. https://doi.org/10.1016/j.cities.2024.105274',
+    'Mouratidis, K. (2024). Time to challenge the 15-minute city: Seven pitfalls for sustainability, equity, livability, and spatial analysis. Cities, 153, Article 105274. https://doi.org/10.1016/j.cities.2024.105274',
     'Newman, M. E. J. (2006). Modularity and community structure in networks. Proceedings of the National Academy of Sciences, 103(23), 8577–8582. https://doi.org/10.1073/pnas.0601602103',
     'Olson, M. (1969). The principle of “fiscal equivalence”: The division of responsibilities among different levels of government. American Economic Review, 59(2), 479–487.',
     'Openshaw, S. (1984). The modifiable areal unit problem. Concepts and Techniques in Modern Geography 38. Geo Books.',
     'Openshaw, S., & Rao, L. (1995). Algorithms for reengineering 1991 census geography. Environment and Planning A, 27(3), 425–446. https://doi.org/10.1068/a270425',
     'Páez, A., Scott, D. M., & Morency, C. (2012). Measuring accessibility: Positive and normative implementations of various accessibility indicators. Journal of Transport Geography, 25, 141–153. https://doi.org/10.1016/j.jtrangeo.2012.03.016',
-    'Park, J., Eom, S., & Lee, M.-H. (2026). Benchmarking living-zone plans with mobility community detection: Evidence from Seoul’s mobile-phone-based mobility data. Journal of Transport Geography, 135, 104753. https://doi.org/10.1016/j.jtrangeo.2026.104753',
+    'Park, J., Eom, S., & Lee, M.-H. (2026). Benchmarking living-zone plans with mobility community detection: Evidence from Seoul’s mobile-phone-based mobility data. Journal of Transport Geography, 135, Article 104753. https://doi.org/10.1016/j.jtrangeo.2026.104753',
     'Park, Y., & Rogers, G. O. (2015). Neighborhood planning theory, guidelines, and research: Can area, population, and boundary guide conceptual framing? Journal of Planning Literature, 30(1), 18–36. https://doi.org/10.1177/0885412214549422',
     'Perry, C. A. (1929). The neighborhood unit. In Regional survey of New York and its environs, Vol. VII: Neighborhood and community planning. Regional Plan of New York and Its Environs.',
     'Polsby, D. D., & Popper, R. D. (1991). The third criterion: Compactness as a procedural safeguard against partisan gerrymandering. Yale Law & Policy Review, 9(2), 301–353.',
-    'Ratti, C., Sobolevsky, S., Calabrese, F., Andris, C., Reades, J., Martino, M., Claxton, R., & Strogatz, S. H. (2010). Redrawing the map of Great Britain from a network of human interactions. PLoS ONE, 5(12), e14248. https://doi.org/10.1371/journal.pone.0014248',
+    'Ratti, C., Sobolevsky, S., Calabrese, F., Andris, C., Reades, J., Martino, M., Claxton, R., & Strogatz, S. H. (2010). Redrawing the map of Great Britain from a network of human interactions. PLoS ONE, 5(12), Article e14248. https://doi.org/10.1371/journal.pone.0014248',
     'Seoul Metropolitan Government. (2018). 2030 Seoul living-zone plan [in Korean]. Seoul Urban Planning Portal. https://urban.seoul.go.kr/view/html/PMNU3040000001',
     'Shen, Y., & Batty, M. (2019). Delineating the perceived functional regions of London from commuting flows. Environment and Planning A: Economy and Space, 51(3), 547–550. https://doi.org/10.1177/0308518X18786253',
     'Smart, M. W. (1974). Labour market areas: Uses and definition. Progress in Planning, 2, 239–353. https://doi.org/10.1016/0305-9006(74)90008-7',
-    'Staricco, L. (2022). 15-, 10- or 5-minute city? A focus on accessibility to services in Turin, Italy. Journal of Urban Mobility, 2, 100030. https://doi.org/10.1016/j.urbmob.2022.100030',
+    'Staricco, L. (2022). 15-, 10- or 5-minute city? A focus on accessibility to services in Turin, Italy. Journal of Urban Mobility, 2, Article 100030. https://doi.org/10.1016/j.urbmob.2022.100030',
     'Talen, E. (2003). Neighborhoods as service providers: A methodology for evaluating pedestrian access. Environment and Planning B: Planning and Design, 30(2), 181–200. https://doi.org/10.1068/b12977',
     'Talen, E., & Anselin, L. (1998). Assessing spatial equity: An evaluation of measures of accessibility to public playgrounds. Environment and Planning A, 30(4), 595–613. https://doi.org/10.1068/a300595',
-    'Tao, Z., Cheng, Y., Zheng, Q., & Li, G. (2018). Measuring spatial accessibility to healthcare services with constraint of administrative boundary: A case study of Yanqing District, Beijing, China. International Journal for Equity in Health, 17, 7. https://doi.org/10.1186/s12939-018-0720-5',
-    'Traag, V. A., Waltman, L., & van Eck, N. J. (2019). From Louvain to Leiden: Guaranteeing well-connected communities. Scientific Reports, 9, 5233. https://doi.org/10.1038/s41598-019-41695-z',
+    'Tao, Z., Cheng, Y., Zheng, Q., & Li, G. (2018). Measuring spatial accessibility to healthcare services with constraint of administrative boundary: A case study of Yanqing District, Beijing, China. International Journal for Equity in Health, 17, Article 7. https://doi.org/10.1186/s12939-018-0720-5',
+    'Traag, V. A., Waltman, L., & van Eck, N. J. (2019). From Louvain to Leiden: Guaranteeing well-connected communities. Scientific Reports, 9, Article 5233. https://doi.org/10.1038/s41598-019-41695-z',
     'Wang, C., Wang, F., & Onega, T. (2021). Network optimization approach to delineating health care service areas: Spatially constrained Louvain and Leiden algorithms. Transactions in GIS, 25(2), 1065–1081. https://doi.org/10.1111/tgis.12722',
     'Weng, M., Ding, N., Li, J., Jin, X., Xiao, H., He, Z., & Su, S. (2019). The 15-minute walkable neighborhoods: Measurement, social inequalities and implications for building healthy communities in urban China. Journal of Transport & Health, 13, 259–273. https://doi.org/10.1016/j.jth.2019.05.005',
-    'Willberg, E., Fink, C., & Toivonen, T. (2023). The 15-minute city for all? – Measuring individual and temporal variations in walking accessibility. Journal of Transport Geography, 106, 103521. https://doi.org/10.1016/j.jtrangeo.2022.103521',
+    'Willberg, E., Fink, C., & Toivonen, T. (2023). The 15-minute city for all? – Measuring individual and temporal variations in walking accessibility. Journal of Transport Geography, 106, Article 103521. https://doi.org/10.1016/j.jtrangeo.2022.103521',
 ]
 
 
@@ -396,7 +396,7 @@ def main():
     heading(d, 'Abstract', 1); para(d, EN.ABSTRACT, indent=False)
     para(d, 'Keywords: ' + '; '.join(EN.KEYWORDS), indent=False, space_before=6)
     render(EN.BODY, V, TB, EN.CAPTIONS, d)
-    heading(d, 'Declaration of generative AI and AI-assisted technologies in the writing process', 1)
+    heading(d, 'Declaration of generative AI and AI-assisted technologies in the manuscript preparation process', 1)
     para(d, AI_DECLARATION, indent=False)
     heading(d, 'Data availability', 1); para(d, 'This study uses publicly accessible datasets obtained from third-party providers (mobile-phone origin–destination flows, population grid, administrative boundaries, public facility registers and OpenStreetMap). The facility inventory, derived results and analysis code are available in a public repository; the link is given on the title page.', indent=False)
     heading(d, 'References', 1)
