@@ -334,6 +334,7 @@ def build(md: Path, mode: str, breaks: dict | None = None):
             t = s[2:].strip()
             if first_h1: first_h1 = False; continue          # 'Ⅰ. 서론'은 샘플 문단에 있음
             in_refs = t.startswith("인용문헌"); blocks.append(("h1", t)); continue
+        if s.startswith("### "): blocks.append(("h3", s[4:])); continue      # 1) 2) 3) 소절(편집규정 제19조⑤ 셋째 수준)
         if s.startswith("## "): blocks.append(("h2", s[3:])); continue
         m = re.match(r"^\[\[(TABLE|FIG):(\w+)\]\]$", s)
         if m: blocks.append(("float", m.groups())); continue
@@ -376,6 +377,8 @@ def build(md: Path, mode: str, breaks: dict | None = None):
                 W.para(v, "개요1", bold_all=True, keep=True)
         elif kind == "h2":
             h2(v)
+        elif kind == "h3":
+            W.para(v, "본문", bold_all=True, keep=True)
         elif kind == "ref":
             ref_no += 1; parts = v.split(" // ")
             h = W.h; h.set_style(ST["인용본문"]); h.set_font(Height=9, Bold=False)     # 샘플 인용문헌 9pt(앞 'References' 12pt가 이어지지 않게)
