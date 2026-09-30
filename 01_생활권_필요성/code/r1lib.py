@@ -9,7 +9,7 @@ PKG = ROOT / "06_접근성분석" / "접근성분석_패키지" / "데이터"
 sys.path.insert(0, str(ROOT / "00_공통_코어엔진" / "exploration"))
 import xcommon as X  # noqa
 
-OUT = Path(__file__).parent.parent / "output"; OUT.mkdir(exist_ok=True)
+OUT = Path(__file__).parent.parent / "results"; OUT.mkdir(exist_ok=True)   # 2026-10-02: output/ → results/ (AG 폴더 구성과 통일)
 POPY = {"2020": "2019", "2025": "2024"}
 LDCOL = {"2020": "ld2020", "2025": "ld2025"}
 # 시설 집합: (이름, 선택 함수, 임계 초)
