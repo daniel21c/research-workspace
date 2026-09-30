@@ -398,19 +398,23 @@ def main():
     render(EN.BODY, V, TB, EN.CAPTIONS, d)
     heading(d, 'Declaration of generative AI and AI-assisted technologies in the writing process', 1)
     para(d, AI_DECLARATION, indent=False)
-    heading(d, 'Data availability', 1); para(d, 'The mobility, population, boundary and OpenStreetMap data are publicly available from their providers. The facility inventory, derived results and code will be made available on publication.', indent=False)
+    heading(d, 'Data availability', 1); para(d, 'This study uses publicly accessible datasets obtained from third-party providers (mobile-phone origin–destination flows, population grid, administrative boundaries, public facility registers and OpenStreetMap). The facility inventory, derived results and analysis code are available in a public repository; the link is given on the title page.', indent=False)
     heading(d, 'References', 1)
     for r in REFS:
         p = para(d, r, indent=False); p.paragraph_format.left_indent = Cm(0.75); p.paragraph_format.first_line_indent = Cm(-0.75)
     d.save(MS / 'AG_manuscript_anonymised.docx')
     # 제목 면
     d = base_doc(lines=False); para(d, EN.TITLE, bold=True, indent=False, size=14); d.add_paragraph()
-    for s in ['Jongha Park a,*  [co-authors and order to be confirmed by the authors]', 'a Graduate School of Urban Studies, Hanyang University, Seoul, Republic of Korea',
-              '* Corresponding author. E-mail: daniel21c@hanyang.ac.kr']:
+    for s in ['Jongha Park a (ORCID 0009-0004-8411-6509), daniel21c@hanyang.ac.kr', 'Sunyong Eom a,* (ORCID 0000-0002-8164-7097), sunyongeom@hanyang.ac.kr',
+              'a Graduate School of Urban Studies, Hanyang University, 222 Wangsimni-ro, Seongdong-gu, Seoul 04763, Republic of Korea',
+              '* Corresponding author. E-mail: sunyongeom@hanyang.ac.kr']:
         para(d, s, indent=False)
     heading(d, 'Declaration of competing interest', 1); para(d, 'The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.', indent=False)
-    heading(d, 'Funding', 1); para(d, '[To be completed by the authors.]', indent=False)
-    heading(d, 'CRediT authorship contribution statement', 1); para(d, '[To be completed by the authors.]', indent=False)
+    heading(d, 'Funding', 1); para(d, 'This work was supported by the research fund of Hanyang University (HY-202400000003290).', indent=False)
+    heading(d, 'Acknowledgements', 1); para(d, 'None.', indent=False)
+    heading(d, 'CRediT authorship contribution statement', 1)
+    para(d, 'Jongha Park: Conceptualization, Methodology, Software, Data curation, Formal analysis, Investigation, Validation, Visualization, Writing – original draft, Writing – review & editing. Sunyong Eom: Conceptualization, Methodology, Supervision, Funding acquisition, Writing – review & editing.', indent=False)
+    heading(d, 'Data and code availability', 1); para(d, 'Facility inventory, derived results and analysis code: https://github.com/daniel21c/research-workspace (folder 03_불일치_접근성_AG).', indent=False)
     heading(d, 'Declaration of generative AI', 1); para(d, 'See the declaration section at the end of the main text (before the references).', indent=False)
     d.save(MS / 'AG_title_page.docx')
     d = base_doc(lines=False); heading(d, 'Highlights', 1)
@@ -430,7 +434,7 @@ def main():
               f'We submit the manuscript “{EN.TITLE}” for consideration as a research article in Applied Geography.',
               'Cities that plan by neighbourhood zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary neighbourhoods with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary neighbourhoods go where walkable facilities are. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
               'The manuscript has not been published and is not under consideration elsewhere. A companion paper in preparation for a Korean planning journal uses the same mobility data to study how the mismatch between official zones and trips changed between 2020 and 2025; it does not examine facilities or accessibility, and its questions and results do not overlap with this submission. We have not cited it to preserve anonymity and because it has not yet been submitted.',
-              'All authors have approved the manuscript and agree with its submission. There are no competing interests.', '', 'Sincerely,', 'Jongha Park, on behalf of the authors', 'Graduate School of Urban Studies, Hanyang University']:
+              'Both authors have approved the manuscript and agree with its submission. There are no competing interests.', '', 'Sincerely,', 'Jongha Park and Sunyong Eom (corresponding author, sunyongeom@hanyang.ac.kr)', 'Graduate School of Urban Studies, Hanyang University']:
         para(d, s, indent=False)
     d.save(MS / 'AG_cover_letter.docx')
     # 한국어 전문

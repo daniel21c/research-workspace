@@ -13,7 +13,7 @@
 | `manuscript/AG_manuscript_anonymised.docx` (.pdf) | 투고용 익명 본문(초록·본문·표 4·그림 4·참고문헌 46편) |
 | `manuscript/AG_한국어_원고.docx` (.pdf) | 같은 내용의 한국어 전문(검토용, 서식 무관) |
 | `manuscript/AG_supplementary_appendix.docx` (.pdf) | 부록 A: 시설 유형, 범주별 누락, 민감도·초기 분석(A3), 시설 원천 자료(A4) |
-| `manuscript/AG_title_page.docx`, `AG_highlights.docx`, `AG_cover_letter.docx` | 제목 면(저자·선언, 공저자 확정 필요), 하이라이트 5개, 투고 편지 |
+| `manuscript/AG_title_page.docx`, `AG_highlights.docx`, `AG_cover_letter.docx` | 제목 면(저자 2인·ORCID·연구비·CRediT·저장소 링크), 하이라이트 5개, 투고 편지 |
 | `docs/연구설계_AG확정본.md` | 확정 설계: 질문·네 가지 답·분석의 틀·뺀 것과 한계·재현 순서 |
 | `docs/검수의견_대응표_20260930.md` | 투고 직전 외부 검수 지적 항목별 반영 여부와 이유 |
 
@@ -45,7 +45,7 @@
 
 ## 6. 공동연구자에게 확인 요청
 
-- 공저자 명단·순서, 연구비, CRediT(제목 면 `[ ]` 표시). 투고 편지의 "All authors have approved"는 실제 승인 뒤에 확정.
+- 저자: 박종하(1저자, daniel21c@hanyang.ac.kr), 엄선용(교신, sunyongeom@hanyang.ac.kr). 연구비: 한양대 HY-202400000003290(JTG와 동일). CRediT 기재 완료. 투고 편지의 "Both authors have approved"는 엄 교수님이 최종판을 승인한 뒤에 그대로 두면 됨.
 - 생성형 AI 사용 고지: 본문 끝(참고문헌 앞)에 'Claude (Anthropic)로 코드 작성·점검과 본문 초안·수정'으로 적었고, 방법 4.4에도 한 문장 넣었다. 실제 사용 범위에 맞는지 확인.
 - 투고 편지의 동반 논문(KPA) 언급 방식.
 
