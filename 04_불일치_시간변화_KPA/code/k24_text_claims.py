@@ -182,7 +182,7 @@ def mutation_test(md: str, v: dict | None = None) -> dict:
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    md = sorted((C.OUT / "manuscript_kpa").glob("국토계획_투고초본_v2_*.md"))[-1].read_text(encoding="utf-8")
+    md = sorted((C.MK).glob("국토계획_투고초본_v2_*.md"))[-1].read_text(encoding="utf-8")
     r = check(md); bad = [c for c in r if not c["일치"]]
     for c in bad: print("불일치", c["ID"], c["절"], "|", c["기대"])
     print(f"원고 수치 대조 {len(r) - len(bad)}/{len(r)}"); print("변조 시험", mutation_test(md))

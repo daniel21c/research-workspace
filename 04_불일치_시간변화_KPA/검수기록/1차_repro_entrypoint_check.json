@@ -1,0 +1,12 @@
+{
+  "k19_kpa_v2.py": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/mnt/data/kpa_audit/repro_work/scripts/k19_kpa_v2.py\", line 142, in <module>\n    md = sorted(MK.glob(\"국토계획_투고초본_v2_*.md\"))[-1]\n         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^\nIndexError: list index out of range\n"
+  },
+  "tests/test_text_claims.py": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/mnt/data/kpa_audit/repro_work/scripts/tests/test_text_claims.py\", line 9, in <module>\n    MD = sorted((C.OUT / \"manuscript_kpa\").glob(\"국토계획_투고초본_v2_*.md\"))[-1].read_text(encoding=\"utf-8\")\n         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^\nIndexError: list index out of range\n"
+  }
+}

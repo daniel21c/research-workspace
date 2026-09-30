@@ -1,5 +1,9 @@
-# 데이터·대용량 산출물은 Git에 넣지 않는다 (저장소 README 규칙 3)
-output/package_*/
-output/*.zip
-output/tables/t05_null_partitions.csv
-scripts/__pycache__/
+# 데이터·대용량 산출물은 Git에 넣지 않는다 (저장소 README 규칙 3). results/·*.hwp·*.pdf·*.docx·*.zip은 저장소 루트 규칙으로 제외된다.
+results/t05_null_partitions.csv
+results/_hwp_work/
+package/package_kpa_final_*/
+package/제출본_final_*/
+code/__pycache__/
+code/tests/__pycache__/
+# 2026-09-30 사용자 결정(AG와 동일): 공동연구자 패키지 zip은 연구 연계용으로 저장소에 포함
+!package/KPA_확정본_공동연구자패키지_20260930.zip

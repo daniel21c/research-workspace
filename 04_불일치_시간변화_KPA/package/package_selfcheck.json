@@ -1,0 +1,31 @@
+{
+ "재실행_재현성": "동일(csv 바이트·json 정규화)",
+ "실행": [
+  {
+   "cmd": "tests/test_examples.py",
+   "rc": 0,
+   "tail": "tity\nok test_example_b_signed_gap_trap\nok test_example_c_decomposition_identity\nok test_example_d_aggregation_is_ratio_of_sums\nok test_ari_basic\nok test_random_partition_is_contiguous_and_has_k_labels"
+  },
+  {
+   "cmd": "tests/test_benchmark.py",
+   "rc": 0,
+   "tail": "_grow_exact_sizes_contiguous\nok test_grow_free_k_labels_contiguous\nok test_random_zone_connected_size\nok test_pct_definition\nok test_pct_no_double_count\nok test_n_distinct\nok test_determinism\n12/12 통과"
+  },
+  {
+   "cmd": "k01_compute.py",
+   "rc": 0,
+   "tail": "25,\n  \"quadrant\": {\n   \"I (+,+)\": 14,\n   \"III (-,-)\": 8,\n   \"II (-,+)\": 2,\n   \"IV (+,-)\": 1\n  }\n }\n}\n완료 4.8s → D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\package\\package_kpa_final_20260930\\output\\tables"
+  },
+  {
+   "cmd": "k25_change_story.py",
+   "rc": 0,
+   "tail": "58618164062,\n  \"D감소\": 18,\n  \"p_D\": 0.004343509674072266\n },\n \"N1_무작위보다나은구\": {\n  \"2020\": 24,\n  \"2025\": 24\n },\n \"N1_무작위보다나은구_p\": {\n  \"2020\": 1.5497207641601562e-06,\n  \"2025\": 1.5497207641601562e-06\n }\n}"
+  },
+  {
+   "cmd": "tests/test_text_claims.py",
+   "rc": 0,
+   "tail": "ok test_current_manuscript_passes\nok test_changed_number_fails\nok test_every_claim_detects_mutation_and_deletion\nok test_claim_is_context_bound\n4/4 통과"
+  }
+ ],
+ "패키지_자체재현": "통과 (k01 표 4종 최대차 0.0e+00, k25 최대차 0.0e+00, 원고 수치 대조 통과)"
+}

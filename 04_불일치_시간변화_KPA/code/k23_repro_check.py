@@ -2,9 +2,9 @@
 """
 k23 — 확정본 분석(k13·k14·k25·k18) 재실행 재현성 확인
 
-현재 output/tables/benchmark/의 결과를 기록해 두고 k13·k14·k25·k18을 다시 실행한 뒤 파일별로 비교한다.
+현재 results/benchmark/의 결과를 기록해 두고 k13·k14·k25·k18을 다시 실행한 뒤 파일별로 비교한다.
 csv는 바이트 단위, json은 실행 시간('seconds') 항목을 빼고 키를 정렬해 비교한다(정규화 비교).
-출력: output/_repro_result_benchmark.json  {"비교파일": n, "달라진파일": [...]}
+출력: results/_repro_result_benchmark.json  {"비교파일": n, "달라진파일": [...]}
 실행: python k23_repro_check.py   (약 30분)
 """
 import hashlib, json, subprocess, sys, time, os
@@ -35,7 +35,7 @@ def main():
     after = {p.name: digest(p) for p in sorted(B.glob("*.*"))}
     diff = sorted(k for k in set(before) | set(after) if before.get(k) != after.get(k))
     R = {"생성": time.strftime("%Y-%m-%d %H:%M:%S"), "비교파일": len(after), "달라진파일": diff, "초": round(time.time() - t0)}
-    (C.OUT / "_repro_result_benchmark.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
+    (C.TAB / "_repro_result_benchmark.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(R, ensure_ascii=False))
 
 

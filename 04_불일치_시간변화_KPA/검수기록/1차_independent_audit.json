@@ -1,0 +1,298 @@
+{
+  "manifest": {
+    "checked": 88,
+    "mismatches": []
+  },
+  "package_equal": {
+    "국토계획_투고본_심사용_20260929.hwp": true,
+    "국토계획_투고본_심사용_20260929.pdf": true,
+    "국토계획_투고초본_v2_20260929.docx": true
+  },
+  "mapping": {
+    "rows": 424,
+    "official_zones": 116,
+    "gu": 25,
+    "columns": [
+      "Ku",
+      "ku_name",
+      "ADM_NM",
+      "life_zone_id",
+      "life_zone_name",
+      "overlap_ratio"
+    ]
+  },
+  "metrics": {
+    "2020": {
+      "all": {
+        "T": 269040521.58000004,
+        "IFR_lz": 0.34122940752886416,
+        "IFR_ld": 0.3478870763791952,
+        "D": 0.08548919822533448,
+        "G": 0.006657668850331062
+      },
+      "samegu_noself": {
+        "T": 103951461.44999999,
+        "IFR_lz": 0.40565704870135816,
+        "IFR_ld": 0.42288800125378134,
+        "D": 0.2212576731406791,
+        "G": 0.017230952552423164
+      },
+      "all_noself": {
+        "T": 219404626.85999998,
+        "IFR_lz": 0.1921957784732927,
+        "IFR_ld": 0.20035961132237357,
+        "D": 0.10482941407920317,
+        "G": 0.008163832849080855
+      },
+      "SR": 0.18449226320445045,
+      "OD_rows": 179313,
+      "duplicate_OD": 0,
+      "negative_flows": 0,
+      "missing_map": 0,
+      "max_abs_metric_error": 9.313225746154785e-10,
+      "type_aggregate_max_abs_error": 2.998858690261841e-06
+    },
+    "2025": {
+      "all": {
+        "T": 285964110.5,
+        "IFR_lz": 0.37858705349670096,
+        "IFR_ld": 0.3935773751230926,
+        "D": 0.08333726189741561,
+        "G": 0.014990321626391677
+      },
+      "samegu_noself": {
+        "T": 113386319.2,
+        "IFR_lz": 0.4223774929630134,
+        "IFR_ld": 0.4601835882683808,
+        "D": 0.21017937735472408,
+        "G": 0.0378060953053674
+      },
+      "all_noself": {
+        "T": 225593629.74,
+        "IFR_lz": 0.21229247162340548,
+        "IFR_ld": 0.23129431132490985,
+        "D": 0.10563891364071812,
+        "G": 0.01900183970150437
+      },
+      "SR": 0.21111208904657286,
+      "OD_rows": 179387,
+      "duplicate_OD": 0,
+      "negative_flows": 0,
+      "missing_map": 0,
+      "max_abs_metric_error": 4.656612873077393e-10,
+      "type_aggregate_max_abs_error": 4.000961780548096e-06
+    }
+  },
+  "type_decomp": {
+    "within": 0.036650383361311704,
+    "composition": 0.0007072626065278802,
+    "within_share": 0.9810677951406054,
+    "all_types_rise": true
+  },
+  "sign_tests": {
+    "IFR_lz": {
+      "up": 25,
+      "down": 0,
+      "zero": 0,
+      "p_two_sided": 5.960464477539063e-08
+    },
+    "IFR_ld": {
+      "up": 25,
+      "down": 0,
+      "zero": 0,
+      "p_two_sided": 5.960464477539063e-08
+    },
+    "G": {
+      "up": 16,
+      "down": 5,
+      "zero": 4,
+      "p_two_sided": 0.02660369873046875
+    },
+    "D": {
+      "up": 13,
+      "down": 8,
+      "zero": 4,
+      "p_two_sided": 0.38331031799316406
+    }
+  },
+  "reassign": {
+    "2020": {
+      "events": 66,
+      "changed_final": 65,
+      "IFR": 0.3528996496602762,
+      "D": 0.03660469178458541,
+      "seq_errors": [],
+      "n_IFR_negative_steps": 19
+    },
+    "2025": {
+      "events": 65,
+      "changed_final": 65,
+      "IFR": 0.3961655790368841,
+      "D": 0.032489635967797435,
+      "seq_errors": [],
+      "n_IFR_negative_steps": 18
+    },
+    "common_final_moves": 48,
+    "fixed_2020_on_2025": {
+      "IFR": 0.3930476711342419,
+      "D": 0.051042239826805114
+    }
+  },
+  "diagnostics": {
+    "2020": {
+      "joint_improvement_bestQ": 35,
+      "sequential_overlap": 26,
+      "diagnostic_not_reassigned": 9,
+      "reassigned_not_diagnostic": 39
+    },
+    "2025": {
+      "joint_improvement_bestQ": 40,
+      "sequential_overlap": 31,
+      "diagnostic_not_reassigned": 9,
+      "reassigned_not_diagnostic": 34
+    }
+  },
+  "null_metadata": {
+    "N1_n": {
+      "min": 1000.0,
+      "max": 1000.0
+    },
+    "N2_n": {
+      "min": 244.0,
+      "max": 1000.0
+    },
+    "N0_distinct": {
+      "min": 169.0,
+      "max": 1000.0
+    },
+    "N1_distinct": {
+      "min": 36.0,
+      "max": 1000.0
+    },
+    "N2_distinct": {
+      "min": 1.0,
+      "max": 1000.0
+    },
+    "N2_tol": {
+      "min": 0.05,
+      "max": 0.12
+    },
+    "smallest": [
+      {
+        "ku_name": "금천구",
+        "boundary": "LD2025",
+        "N1_distinct": 36,
+        "N2_distinct": 1,
+        "N2_n": 402
+      },
+      {
+        "ku_name": "금천구",
+        "boundary": "LZ",
+        "N1_distinct": 36,
+        "N2_distinct": 1,
+        "N2_n": 383
+      },
+      {
+        "ku_name": "금천구",
+        "boundary": "LD2020",
+        "N1_distinct": 36,
+        "N2_distinct": 1,
+        "N2_n": 403
+      },
+      {
+        "ku_name": "중구",
+        "boundary": "LD2025",
+        "N1_distinct": 81,
+        "N2_distinct": 9,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "중구",
+        "boundary": "LD2020",
+        "N1_distinct": 81,
+        "N2_distinct": 9,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "중구",
+        "boundary": "LZ",
+        "N1_distinct": 82,
+        "N2_distinct": 9,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "강북구",
+        "boundary": "LZ",
+        "N1_distinct": 85,
+        "N2_distinct": 20,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "강북구",
+        "boundary": "LD2025",
+        "N1_distinct": 85,
+        "N2_distinct": 20,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "동대문구",
+        "boundary": "LD2020",
+        "N1_distinct": 164,
+        "N2_distinct": 33,
+        "N2_n": 1000
+      },
+      {
+        "ku_name": "동대문구",
+        "boundary": "LD2025",
+        "N1_distinct": 165,
+        "N2_distinct": 33,
+        "N2_n": 1000
+      }
+    ]
+  },
+  "raw_D_counts": {
+    "2020": 23000058.479999997,
+    "2025": 23831465.97
+  },
+  "connectivity": {
+    "official": {
+      "zones": 116,
+      "noncontiguous": []
+    },
+    "ld2020": {
+      "zones": 116,
+      "noncontiguous": []
+    },
+    "ld2025": {
+      "zones": 116,
+      "noncontiguous": []
+    },
+    "final2020": {
+      "zones": 116,
+      "noncontiguous": []
+    },
+    "final2025": {
+      "zones": 116,
+      "noncontiguous": []
+    },
+    "gu_disconnected": []
+  },
+  "iou_columns": [
+    "ku_code",
+    "ku_name",
+    "IoU_2020",
+    "IoU_2025",
+    "dIoU",
+    "G_2020",
+    "D_2020",
+    "IFR_lz_2020",
+    "IFR_ld_2020",
+    "G_2025",
+    "D_2025",
+    "IFR_lz_2025",
+    "IFR_ld_2025",
+    "dG",
+    "dD"
+  ],
+  "upstream_leiden_script_present": false
+}

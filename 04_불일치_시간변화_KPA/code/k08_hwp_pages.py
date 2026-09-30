@@ -4,7 +4,7 @@ k08 — 투고 초본의 PDF 변환·쪽수 기록·HWP 변환 (Windows, MS Word
 
 1) Word COM: 1단 docx → pdf, 2단 docx → pdf, 쪽수 기록
 2) 한글 COM: 2단 docx → .hwp 저장, 한글 기준 쪽수 기록
-결과: output/manuscript_kpa/쪽수_기록.json
+결과: manuscript/쪽수_기록.json
 실행: python k08_hwp_pages.py   (k06 먼저)
 """
 from __future__ import annotations

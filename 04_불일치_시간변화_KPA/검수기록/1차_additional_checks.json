@@ -1,0 +1,66 @@
+{
+  "text_claims": {
+    "passed": 39,
+    "total": 39,
+    "mutation_test": {
+      "숫자변조": 39,
+      "숫자변조_감지": 39,
+      "삭제": 39,
+      "삭제_감지": 39,
+      "감지못함": []
+    }
+  },
+  "docx_tables": {
+    "count": 8,
+    "expected_count": 8,
+    "matched": {
+      "T1": true,
+      "T2": true,
+      "TA2": true,
+      "T5": true,
+      "T6": true,
+      "T3": true,
+      "T4": true,
+      "TA1": true
+    }
+  },
+  "english_abstract_words": 211,
+  "docx_author_metadata": {
+    "author": "",
+    "last_modified_by": "",
+    "title": "",
+    "comments": ""
+  },
+  "docx_comments_or_tracked_changes": {
+    "comments_part": false,
+    "tracked_inserts": 0,
+    "tracked_deletes": 0
+  },
+  "iou_check": {
+    "2020": {
+      "spearman": -0.9237011402179154,
+      "p_descriptive": 4.617667798366481e-11,
+      "n": 25
+    },
+    "2025": {
+      "spearman": -0.8716557460221167,
+      "p_descriptive": 1.4047457422248915e-08,
+      "n": 25
+    }
+  },
+  "N2_without_Geumcheon": {
+    "2020": {
+      "all_median": 0.9735,
+      "without_Geumcheon_median": 0.97375
+    },
+    "2025": {
+      "all_median": 0.977,
+      "without_Geumcheon_median": 0.97775
+    }
+  },
+  "workflow_flags": {
+    "k19_md_packaging_path_mismatch": true,
+    "k22_force_kills_all_Hwp_exe": true,
+    "k11_force_kills_all_Hwp_exe": true
+  }
+}

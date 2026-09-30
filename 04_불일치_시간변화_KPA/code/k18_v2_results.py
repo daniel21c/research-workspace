@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import config as C
 
-B = C.TAB / "benchmark"; FIG = C.OUT / "figures"
+B = C.TAB / "benchmark"; FIG = C.FIG
 CASE_KU = "광진구"
 
 

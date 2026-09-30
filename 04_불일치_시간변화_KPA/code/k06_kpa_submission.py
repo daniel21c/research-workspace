@@ -2,14 +2,14 @@
 """
 k06 — 국토계획(KPA) 투고 초본 docx 생성
 
-원고 본문은 output/manuscript_kpa/국토계획_투고초본_v1_<날짜>.md 에서 읽고,
-표의 숫자는 output/tables/ 의 결과 파일에서 읽어 넣는다(본문 문장의 수치는 k04 생성 원고에서 옮긴 것으로,
+원고 본문은 manuscript/국토계획_투고초본_v1_<날짜>.md 에서 읽고,
+표의 숫자는 results/ 의 결과 파일에서 읽어 넣는다(본문 문장의 수치는 k04 생성 원고에서 옮긴 것으로,
 같은 표 파일에서 나온 값이다). 그림은 output/figures/ 의 파일을 넣고, 그림 1(분석 틀)은 여기서 그린다.
 
 서식: 국토계획 국문논문 익명심사용 투고본(v12, 2026-09-02)과 같은 서식을 따른다.
   A4, 여백 상 1.9 / 하 1.1 / 좌 2.0 / 우 1.8 cm, 본문 HCR Batang 9.5pt 양쪽 정렬 줄간격 1.6,
   장 제목 Ⅰ. 1. 1) 체계(Malgun Gothic), 표·그림 제목 국문/영문 병기, 주는 "주:" 로 시작, 영문 초록·주제어 앞머리.
-저자 정보는 넣지 않는다(익명심사). 저자가 채울 항목은 output/manuscript_kpa/투고전_체크리스트.md 에 있다.
+저자 정보는 넣지 않는다(익명심사). 저자가 채울 항목은 manuscript/투고전_체크리스트.md 에 있다.
 
 실행: python k06_kpa_submission.py [md 파일 경로]
 """
@@ -26,9 +26,9 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 import config as C
 
-MK = C.OUT / "manuscript_kpa"
+MK = C.MK
 MK.mkdir(parents=True, exist_ok=True)
-T = C.TAB; FIG = C.OUT / "figures"
+T = C.TAB; FIG = C.FIG
 BODY_FONT, HEAD_FONT, EN_FONT = "HCR Batang", "Malgun Gothic", "Times New Roman"
 
 

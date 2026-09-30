@@ -2,10 +2,10 @@
 """
 k19 — 국토계획 투고 초본 v2(경계 동 진단·재배정) docx 생성과 본문 수치 자동 대조
 
-원고: output/manuscript_kpa/국토계획_투고초본_v2_<날짜>.md
+원고: manuscript/국토계획_투고초본_v2_<날짜>.md
 표·그림: k18_v2_results.build_tables_v2(), FIGS_V2 (결과 파일에서 직접)
 서식 도우미: k06_kpa_submission(국토계획 서식 — A4, HCR Batang 9.5pt, Ⅰ.1.1), 2단 편집본도 생성
-수치 대조: 본문에 쓴 주장을 결과 파일과 대조해 output/manuscript_kpa/수치대조_기록_v2.json
+수치 대조: 본문에 쓴 주장을 결과 파일과 대조해 manuscript/수치대조_기록_v2.json
 실행: python k19_kpa_v2.py   (k13~k18 먼저)
 """
 from __future__ import annotations
@@ -19,7 +19,7 @@ import config as C
 import k06_kpa_submission as K6
 from k18_v2_results import build_tables_v2, FIGS_V2, draw_all, fig_framework
 
-MK = C.MK; FIG = C.OUT / "figures"; B = C.TAB / "benchmark"
+MK = C.MK; FIG = C.FIG; B = C.TAB / "benchmark"
 WIDE_V2 = ("그림 1.", "그림 3.", "그림 5.", "표 1.", "표 2.", "표 3.", "표 4.", "표 5.", "표 6.", "표 A1.", "표 A2.", "그림 A1.")
 
 

@@ -3,7 +3,7 @@
 k01 — 지표 계산 (연구설계 4.4 ①~⑥)
 
 입력: 코어엔진 확정 배포본 (od_daily 2020/2025, 공식 생활권 매핑, Leiden 매핑 2020/2025, 동 경계)
-출력: output/tables/
+출력: results/
   t01_data_summary.csv        자료 요약 (연도별 통행량, * 비율, 동·권역 수)
   t02_gu_metrics_{year}.csv   구별 T, N, a, b, IFR_lz, IFR_ld, G, D, SR
   t02_gu_metrics_long.csv     두 해를 한 표로

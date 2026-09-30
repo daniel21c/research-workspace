@@ -1,25 +1,15 @@
 # 연구4 — 서울시 생활권의 자족성 상승과 경계 불일치의 지속 (KPA 확정본)
 
-- **확정 설계**: [연구설계_KPA확정본.md](연구설계_KPA확정본.md) (2026-09-29 확정)
-- 원고 원문: `output/manuscript_kpa/국토계획_투고초본_v2_20260929.md` (검토용 docx·pdf 같은 이름)
-- **투고본(학회 샘플 양식 hwp)**: `output/manuscript_kpa/국토계획_투고본_심사용_20260929.hwp`(익명, 업로드용) · `…_저자정보_…hwp`(저자·소속·이메일 포함)
-- 투고 전 확인 사항: `output/manuscript_kpa/투고전_체크리스트_v2.md`
-- 외부 검토(2026-09-30) 대응표: `output/manuscript_kpa/외부검토_대응표_20260930.md` (반영 13건·미반영 12건과 이유)
-- 공동연구자 패키지: `output/KPA_확정본_공동연구자패키지_<날짜>.zip` · 제출본: `output/KPA_확정본_제출본_<날짜>.zip` (코드 `scripts/k20_package_v2.py`)
-- 학회 규정·샘플 사본: `templates/` (편집규정·AI 가이드라인 2026-06-05, 국문샘플 2026-01-22판)
-- 입력(읽기 전용): 코어 경계·OD `00_공통_코어엔진/data`, 원자료 무결성 확인용 `0_RAW/2401-2406_SEOUL_MOVING_CSV/생활이동_행정동_{202001,202501}`
-- 코드 순서: k21(원자료 무결성) → k01 → k13 → k14 → k25 → k18 → k19(k24 원고 수치 대조 포함) → k08 → k22 → k11 → k23(재현성) → k20. 단위시험 `scripts/tests/`, 전체 재생성 `scripts/run_submission.bat`
-- 확정본에 쓰지 않는 이전 설계·코드·탐색·이전 판 원고와 패키지는 `D:\Research\_archive\04_KPA_확정전_정리_20260930\`로 모두 옮겼다(작업기록 18차).
-- `output/`에는 zip 두 개(공동연구자 패키지·제출본)와 원고·표·그림만 둔다. zip과 같은 내용의 압축 해제 폴더와 한글 작업 파일은 `D:\Research\_archive\04_KPA_중간산출물_20260930\`로 옮겼고, k20은 zip을 만든 뒤 폴더를 남기지 않는다.
+- 논문 위치: 국토계획(대한국토·도시계획학회지) 투고
+- **확정 설계**: [연구설계.md](연구설계.md) (2026-09-29 확정, 09-30 구성 정렬·문장 방향 확정)
+- **원고**: `manuscript/국토계획_투고본_심사용_20260929.hwp`(익명, 업로드용) · `국토계획_투고본_저자정보_20260929.hwp` · 원문 `국토계획_투고초본_v2_20260929.md`(검토용 docx·pdf 같은 이름) · 그림 `manuscript/figures/` · 점검 기록 `manuscript/*.json`
+- **공동연구자 패키지**: `package/KPA_확정본_공동연구자패키지_20260930.zip` (안내 `package/README_패키지.md`, 자체 점검 `package/package_selfcheck.json`) · 제출본 `package/KPA_확정본_제출본_20260930.zip`(투고 시스템에는 01 심사용 hwp + 04 입력 내용만 올림)
+- **외부 검수 대응**: [검수의견_대응표_20260930.md](검수의견_대응표_20260930.md) — AI 대조 점검 1~5차의 반영·미반영과 이유, 6차 저자 결정(문장 방향). 검수 원문: `검수기록/`
+- **최종 보고**: `보고_20260930/` (Teams 보고글, 교수님 보고 메모, 심사용·저자정보 PDF, 패키지 zip 사본 — 팀즈 첨부는 여기서). 서식 대조: `KPA_투고서식_체크리스트_20260930.md`, 구성 변경 대조: `구성변경_대조표_20260930.md`
+- 코드: `code/` (순서 k21 원자료 무결성 → k01 → k13 → k14 → k25 → k18 → k19(k24 원고 수치 대조) → k08 → k22 hwp → k11 → k23 재현성 → k20 패키지; `run_submission.bat`로 일괄). 결과: `results/` (표·benchmark·integrity, 재현성 기록). 학회 규정·샘플 사본: `templates/`
+- 폴더 구성(2026-09-30 정리 후, AG와 동일): 문서 6개(README·연구설계·작업기록·대응표·대조표·체크리스트) + `code/` `manuscript/` `results/` `package/` `검수기록/` `보고_20260930/` `templates/`. 옛 판·중간 산출은 `D:\Research\_archive\04_KPA_*\`(삭제 없음, 이동대장.json)
+- 입력(읽기 전용): `00_공통_코어엔진/data`, 원자료 무결성 확인용 `0_RAW/2401-2406_SEOUL_MOVING_CSV/생활이동_행정동_{202001,202501}`
+- 검증: 원고 수치 대조 39/39(변조 감지 39/39, `manuscript/수치대조_기록_v2.json`), 구조 점검 15/15, 표 8개 docx·hwp 대조(`manuscript/독립재계산_기록.json`), 재실행 재현성 16/16(`results/_repro_result_benchmark.json`), 패키지 자체 재현·익명 통과(`package/package_selfcheck.json`)
+- 저장소 규칙으로 `results/`·hwp·pdf·docx는 Git 제외. 공동연구자 패키지 zip은 사용자 결정(AG와 동일)으로 포함.
 
 이 폴더 밖의 파일은 수정하지 않는다. 규칙은 [저장소 README](../README.md)를 따른다.
-
-## 폴더 구성(확정본만 남김, 2026-09-30)
-- `README.md` · `연구설계_KPA확정본.md` · `작업기록.md`
-- `scripts/` — 확정 파이프라인 16개 + `tests/` 3개 + `run_submission.bat` + `requirements.txt`
-- `templates/` — 학회 편집규정·AI 가이드라인·국문샘플 사본
-- `output/manuscript_kpa/` — 원고 md·docx·pdf, 투고본 hwp·pdf(심사용·저자정보), 체크리스트, 대응표(1~6차), 구성변경 대조표, 점검 기록 json
-- `output/tables/`, `output/tables/benchmark/`, `output/tables/integrity/`, `output/figures/` — 결과 표·그림(모두 코드로 재생성)
-- `output/KPA_확정본_공동연구자패키지_20260930.zip` — **공동연구자에게 보낼 것**(원고·코드·자료·결과·문서, 자기완결)
-- `output/KPA_확정본_제출본_20260930.zip` — 투고 시스템 업로드용(01 심사용 hwp + 04 시스템 입력 내용만 올림)
-- 그 밖의 중간 산출물(한글 작업 파일, 압축 해제 폴더, 이전 설계·탐색 코드)은 `D:\Research\_archive_KPA_*\`에 있다. 필요 없으면 그 폴더를 지우면 된다.

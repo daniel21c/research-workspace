@@ -18,7 +18,7 @@ k13 — 무작위 비교경계 대비 평가: 구 → 생활권 → 동 세 단�
       + "이웃 권역이 더 많이 담는 동": 자기 동 내부통행을 빼고, 같은 구 안에서 가장 많이 가는 권역이 자기 권역이 아닌 동
 백분위 = (무작위 값 < 경계 값인 비율) + 0.5 × (같은 비율). 0.5 = 무작위와 같음, 1 = 무작위보다 항상 나음.
 
-출력: output/tables/benchmark/b1_gu.csv, b2_zone.csv, b3_dong.csv, b3_dong_misassigned.csv, b_summary.json, b_null_meta.csv
+출력: results/benchmark/b1_gu.csv, b2_zone.csv, b3_dong.csv, b3_dong_misassigned.csv, b_summary.json, b_null_meta.csv
 실행: python k13_benchmark.py
 """
 from __future__ import annotations

@@ -16,7 +16,7 @@ k13에서 공식 생활권 동의 약 30%가 자기 생활권보다 옆 생활�
   (1) 한 동씩 옮기기: 공식 생활권의 모든 경계 동 × 인접 권역에 대해 ΔIFR·ΔQ·Δ(가상경계와의 판정차 D)
   (2) 탐욕적 재배정: ΔQ가 가장 큰 이동부터 하나씩 적용, 더 이상 ΔQ > 0인 이동이 없을 때까지
       → 몇 개 동을 옮기면 되는지, IFR·Q·D가 얼마나 바뀌는지, 두 해 모두 권고되는 이동은 무엇인지
-출력: output/tables/benchmark/b4_single_moves.csv, b4_greedy_moves.csv, b4_gu_summary.csv, b4_summary.json
+출력: results/benchmark/b4_single_moves.csv, b4_greedy_moves.csv, b4_gu_summary.csv, b4_summary.json
 """
 from __future__ import annotations
 import json, sys

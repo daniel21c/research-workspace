@@ -10,7 +10,7 @@ k25 — 자족성 상승의 실체와 불일치의 지속 (KPA 확정본 Ⅳ.1·
 판정 기준은 계산 전에 정했다: 2026-09-29 사전 등록(C1: 유형 내 효과 > 50%, C3: 주말 > 평일 구별 부호검정 p < 0.05),
 V0 규칙(부호검정은 두 해 모두 G = 0인 구를 뺀 증가:감소).
 입력: od_full_{2020,2025}01.parquet(요일·도착시간·이동유형), od_daily, 경계 대응표, k01 t03, k14 b4
-출력: output/tables/benchmark/b9_change_story.json, b9_type_decomp.csv, b9_gap_gu.csv
+출력: results/benchmark/b9_change_story.json, b9_type_decomp.csv, b9_gap_gu.csv
 """
 from __future__ import annotations
 import json, sys

@@ -2,7 +2,7 @@
 """
 k20 — KPA 확정본 공동연구자 패키지 + 제출본 묶음 + 패키지 자체 재현 시험
 
-A. output/package_kpa_final_<날짜>/   공동연구자용(자기완결): README · manuscript · tables · figures · scripts · data · docs · manifest
+A. package/package_kpa_final_<날짜>/   공동연구자용(자기완결): README · manuscript · tables · figures · scripts · data · docs · manifest
 B. output/제출본_final_<날짜>/        투고 시스템에 올릴 것과 저자 확인 항목·예상 심사 질문·점검 기록
 C. 패키지 자체 재현 시험: 패키지 폴더에서 단위시험, k01, k25, 원고 수치 대조를 실행해(저장소 경로 없이) 저장소 결과와 같은지 확인
 실행: python k20_package_v2.py   (k13·k14·k25·k18·k19·k08·k22·k11·k23 먼저)
@@ -13,13 +13,15 @@ from pathlib import Path
 import pandas as pd
 import config as C
 
-MK = C.MK; FIG = C.OUT / "figures"; B = C.TAB / "benchmark"
+MK = C.MK; FIG = C.FIG; B = C.TAB / "benchmark"
 KEEP_SCRIPTS = ["config.py", "kpa_metrics.py", "k01_compute.py", "k06_kpa_submission.py", "k08_hwp_pages.py", "k11_independent_check.py",
                 "k13_benchmark.py", "k14_reassign.py", "k18_v2_results.py", "k19_kpa_v2.py", "k20_package_v2.py", "k21_raw_integrity.py",
                 "k22_hwp_kpa.py", "k23_repro_check.py", "k24_text_claims.py", "k25_change_story.py", "run_submission.bat", "requirements.txt"]
 DATE = "20260929"
 SUB = "국토계획_투고본_{}_" + DATE          # k22 출력(심사용·저자정보)
-DESIGN = C.ROOT / "연구설계_KPA확정본.md"
+DESIGN = C.ROOT / "연구설계.md"
+DOCS = {"투고전_체크리스트_v2.md": C.ROOT / "KPA_투고서식_체크리스트_20260930.md", "외부검토_대응표_20260930.md": C.ROOT / "검수의견_대응표_20260930.md",
+        "구성변경_대조표_20260930.md": C.ROOT / "구성변경_대조표_20260930.md"}   # 패키지 안 이름 → 저장소 최상위 문서(2026-09-30 폴더 정리 뒤)
 
 
 def sha(p: Path) -> str:
@@ -36,7 +38,7 @@ def zipdir(src: Path, z: Path):
 
 
 def package(stamp):
-    pkg = C.OUT / f"package_kpa_final_{stamp}"
+    pkg = C.PKG / f"package_kpa_final_{stamp}"
     if pkg.exists(): shutil.rmtree(pkg)
     for d in ("manuscript", "templates", "tables/integrity", "tables/benchmark", "figures", "scripts/tests", "data/od", "docs"):
         (pkg / d).mkdir(parents=True, exist_ok=True)
@@ -58,8 +60,10 @@ def package(stamp):
             if f.exists(): shutil.copy2(f, pkg / "manuscript" / f.name)
     stem = sorted(MK.glob("국토계획_투고초본_v2_*.md"))[-1].stem
     for f in MK.glob(f"{stem}*"): shutil.copy2(f, pkg / "manuscript" / f.name)
-    for n in ("수치대조_기록_v2.json", "독립재계산_기록.json", "쪽수_기록.json", "투고전_체크리스트_v2.md", "외부검토_대응표_20260930.md", "구성변경_대조표_20260930.md"):
+    for n in ("수치대조_기록_v2.json", "독립재계산_기록.json", "쪽수_기록.json"):
         if (MK / n).exists(): shutil.copy2(MK / n, pkg / "manuscript" / n)
+    for n, src in DOCS.items():
+        if src.exists(): shutil.copy2(src, pkg / "manuscript" / n)
     shutil.copy2(DESIGN, pkg / "docs" / DESIGN.name); (pkg / "docs" / "예상심사질문_답변.md").write_text(QNA, encoding="utf-8")
     return pkg, stem
 
@@ -104,7 +108,7 @@ pip install -r scripts/requirements.txt
 cd scripts
 python tests/test_examples.py      # 지표 손계산 예제
 python tests/test_benchmark.py     # 무작위 비교경계·재배정·백분위 함수
-python k01_compute.py              # IFR·G·D·무작위 비교경계(N0) ΔIFR·G 분해     → output/tables/
+python k01_compute.py              # IFR·G·D·무작위 비교경계(N0) ΔIFR·G 분해     → results/
 python k13_benchmark.py            # 무작위 비교경계 N0·N1·N2 대비 평가(구·생활권·동)   ~30분
 python k14_reassign.py             # 한 동씩 옮기기·순차 재배정·고정경계 평가·대안 분모
 python k25_change_story.py         # 자족성 상승의 유형 분해·주말 비교, D·G 변화 검정과 G 분해
@@ -175,7 +179,7 @@ QNA = """# 예상 심사 질문과 답변 요지 (확정본)
 
 
 def bundle(stamp, stem):
-    out = C.OUT / f"제출본_final_{stamp}"
+    out = C.PKG / f"제출본_final_{stamp}"
     if out.exists(): shutil.rmtree(out)
     for d in ("05_그림_원본", "06_표_원본", "09_점검기록", "10_저자정보포함본_심사업로드금지"): (out / d).mkdir(parents=True)
     shutil.copy2(MK / (SUB.format("심사용") + ".hwp"), out / "01_투고본_심사용_익명.hwp"); shutil.copy2(MK / (SUB.format("심사용") + ".pdf"), out / "02_투고본_심사용_익명_확인용.pdf")
@@ -190,12 +194,14 @@ def bundle(stamp, stem):
     (out / "04_투고시스템_입력내용.txt").write_text(txt, encoding="utf-8")
     for f in FIG.glob("Fv2_*"): shutil.copy2(f, out / "05_그림_원본" / f.name)
     for f in B.glob("*.*"): shutil.copy2(f, out / "06_표_원본" / f.name)
-    for n in ("수치대조_기록_v2.json", "독립재계산_기록.json", "쪽수_기록.json", "외부검토_대응표_20260930.md", "구성변경_대조표_20260930.md"):
+    for n in ("수치대조_기록_v2.json", "독립재계산_기록.json", "쪽수_기록.json"):
         if (MK / n).exists(): shutil.copy2(MK / n, out / "09_점검기록" / n)
+    for n in ("외부검토_대응표_20260930.md", "구성변경_대조표_20260930.md"):
+        if DOCS[n].exists(): shutil.copy2(DOCS[n], out / "09_점검기록" / n)
     shutil.copy2(C.TAB / "integrity" / "raw_integrity.json", out / "09_점검기록" / "원자료_무결성.json")
-    for n in ("_repro_result_benchmark.json", "_package_selftest.json"):
-        if (C.OUT / n).exists(): shutil.copy2(C.OUT / n, out / "09_점검기록" / n.lstrip("_"))
-    shutil.copy2(MK / "투고전_체크리스트_v2.md", out / "07_저자확인항목.md")
+    for src in (C.TAB / "_repro_result_benchmark.json", C.PKG / "package_selfcheck.json"):
+        if src.exists(): shutil.copy2(src, out / "09_점검기록" / src.name.lstrip("_"))
+    shutil.copy2(DOCS["투고전_체크리스트_v2.md"], out / "07_저자확인항목.md")
     (out / "08_예상심사질문_답변.md").write_text(QNA, encoding="utf-8")
     import getpass, fitz
     from docx import Document
@@ -219,7 +225,7 @@ def bundle(stamp, stem):
 
 def selftest(pkg):
     R = {}
-    rr = C.OUT / "_repro_result_benchmark.json"
+    rr = C.TAB / "_repro_result_benchmark.json"
     if rr.exists():
         d = json.loads(rr.read_text(encoding="utf-8")); R["재실행_재현성"] = "동일(csv 바이트·json 정규화)" if not d["달라진파일"] else f"달라짐: {d['달라진파일']}"
     else: R["재실행_재현성"] = "미실행"
@@ -254,7 +260,7 @@ def selftest(pkg):
     R["패키지_자체재현"] = ("통과" if ok else "실패") + f" (k01 표 4종 최대차 {max(diffs):.1e}, k25 최대차 {dk:.1e}, 원고 수치 대조 {'통과' if runs[-1]['rc'] == 0 else '실패'})"
     shutil.rmtree(pkg / "output", ignore_errors=True)                     # 시험 산출물은 패키지에 남기지 않는다
     for pyc in pkg.rglob("__pycache__"): shutil.rmtree(pyc, ignore_errors=True)
-    (C.OUT / "_package_selftest.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
+    (C.PKG / "package_selfcheck.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
     return R
 
 
@@ -269,8 +275,8 @@ def main():
     core = json.loads(C.MANIFEST.read_text(encoding="utf-8"))
     (pkg / "manifest.json").write_text(json.dumps({"created": time.strftime("%Y-%m-%d %H:%M:%S"), "python": sys.version.split()[0], "platform": platform.platform(),
                                                    "core_engine_inputs": core["files"], "files": files}, ensure_ascii=False, indent=1), encoding="utf-8")
-    zipdir(pkg, C.OUT / f"KPA_확정본_공동연구자패키지_{stamp}.zip")
-    out, found = bundle(stamp, stem); zipdir(out, C.OUT / f"KPA_확정본_제출본_{stamp}.zip")
+    zipdir(pkg, C.PKG / f"KPA_확정본_공동연구자패키지_{stamp}.zip")
+    out, found = bundle(stamp, stem); zipdir(out, C.PKG / f"KPA_확정본_제출본_{stamp}.zip")
     shutil.rmtree(pkg, ignore_errors=True); shutil.rmtree(out, ignore_errors=True)   # zip과 같은 내용의 폴더는 남기지 않는다(중복 산출물 정리, 2026-09-30)
     print(json.dumps({"패키지": pkg.name, "파일": len(files), "자체시험": st, "제출본": out.name, "익명": found or "통과"}, ensure_ascii=False, indent=1))
 

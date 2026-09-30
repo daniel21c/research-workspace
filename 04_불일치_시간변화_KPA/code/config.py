@@ -67,12 +67,13 @@ ALT_RUNS = {
 }
 
 # ---- 출력 ---------------------------------------------------------------------
-OUT = ROOT / "output"
-TAB = OUT / "tables"
-FIG = OUT / "figures"
-# 원고(md·docx·hwp·점검 기록) 폴더: 저장소는 output/manuscript_kpa, 공동연구자 패키지는 manuscript/ (k19·k22·k08·k11·시험이 모두 이 값을 쓴다)
-MK = ROOT / "manuscript" if PKG_MODE else OUT / "manuscript_kpa"
-for _p in (OUT, TAB, FIG, MK):
+# 산출물 위치(2026-09-30, AG 폴더와 같은 구성). 저장소: results/ 표, manuscript/ 원고·그림, package/ zip·자체 점검.
+# 공동연구자 패키지(PKG_MODE)는 기존 배치(output/tables, output/figures, manuscript/)를 그대로 쓴다.
+if PKG_MODE:
+    OUT = ROOT / "output"; TAB = OUT / "tables"; FIG = OUT / "figures"; MK = ROOT / "manuscript"; PKG = OUT; WORK = OUT / "_hwp_work"
+else:
+    TAB = ROOT / "results"; FIG = ROOT / "manuscript" / "figures"; MK = ROOT / "manuscript"; PKG = ROOT / "package"; WORK = TAB / "_hwp_work"; OUT = PKG
+for _p in (TAB, FIG, MK, PKG):
     _p.mkdir(parents=True, exist_ok=True)
 
 # ---- 분석 상수 (연구설계 9절 권장안) -------------------------------------------

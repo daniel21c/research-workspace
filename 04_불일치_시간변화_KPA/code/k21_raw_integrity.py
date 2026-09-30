@@ -6,7 +6,7 @@ k21 — 원자료 무결성 전수 검증 (원자료 CSV → 배포 OD)
 2. 배포 OD(od_full·od_daily parquet)의 SHA-256을 od_summary 기록과, 코어 배포본 전체를 manifest.json과 대조한다.
 3. 코어엔진 s02(pandas)와 다른 방식(DuckDB SQL, 열 위치로 읽기)으로 원자료에서 od_daily를 처음부터 다시 만들고
    배포본과 행 단위로 비교한다(통행량·행 수·'*' 행 수).
-결과: output/tables/integrity/raw_integrity.json. 원자료가 없는 환경(공동연구자 패키지)에서는 1·3을 건너뛴다.
+결과: results/integrity/raw_integrity.json. 원자료가 없는 환경(공동연구자 패키지)에서는 1·3을 건너뛴다.
 
 원자료 위치: 환경변수 SEOUL_FLOW_RAW_DIR 또는 D:\\Research\\0_RAW\\2401-2406_SEOUL_MOVING_CSV
 """

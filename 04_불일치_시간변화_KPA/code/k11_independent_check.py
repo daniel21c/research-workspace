@@ -6,7 +6,7 @@ k11 — 공동연구자 확인 항목의 독립 재계산 (README 7절)
    - 순수 파이썬 루프(pyarrow로 읽기만), - DuckDB SQL (설치돼 있으면)
 2) 손대조 예시: 동 수가 적고 D>0인 동대문구 2025의 권역 구성과 a·b 기여 동 쌍
 3) docx·hwp에 들어간 표 6개의 셀을 결과 파일에서 만든 표와 대조(hwp는 한글 2022 자동화가 있을 때만)
-출력: output/manuscript_kpa/독립재계산_기록.json
+출력: manuscript/독립재계산_기록.json
 실행: python k11_independent_check.py
 """
 from __future__ import annotations
@@ -114,7 +114,7 @@ def _hwp_tables(path):
     """hwp를 HWPML(XML)로 내보내 모든 표의 셀 글자를 행·열 순서로 읽는다(한글 자동화의 표 읽기 기능은 서버 예외가 나서 쓰지 않음)."""
     import xml.etree.ElementTree as ET
     from pyhwpx import Hwp
-    hml = C.OUT / "_hwp_work" / (path.stem + "_check.hml"); hml.parent.mkdir(parents=True, exist_ok=True)
+    hml = C.WORK / (path.stem + "_check.hml"); hml.parent.mkdir(parents=True, exist_ok=True)
     from k22_hwp_kpa import new_hwp, cleanup_own_hwp
     hwp = new_hwp()
     try: hwp.open(str(path)); hwp.save_as(str(hml), "HWPML2X"); hwp.quit()
