@@ -60,8 +60,8 @@ if __name__ == "__main__":
         pdf2, n2 = word_pdf(two); rec["2단_pdf"] = pdf2.name; rec["2단_쪽수(Word)"] = n2
     # .hwp는 k09_hwp_build.py가 한글 자동화로 직접 만든다(docx 경유 변환은 한글이 한워드로 넘겨 실패 — hwp_convert는 기록용으로만 남김)
     old = json.loads((MK / "쪽수_기록.json").read_text(encoding="utf-8")) if (MK / "쪽수_기록.json").exists() else {}
-    for k in ("hwp", "hwp_생성", "hwp_쪽수(한글, 1단)", "hwp_pdf", "hwp_방법"):
-        if k in old: rec[k] = old[k]
+    for k in old:                       # k22가 적은 hwp_심사용·hwp_저자정보(쪽수·배치 점검) 기록은 그대로 둔다
+        if k.startswith("hwp_"): rec[k] = old[k]
     rec["비고"] = "학회 최종 편집(2단, 학회 양식 글꼴)과 쪽수가 다를 수 있음. 25쪽 한도 참고용."
     (MK / "쪽수_기록.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(rec, ensure_ascii=False, indent=1))
