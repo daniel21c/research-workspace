@@ -439,7 +439,7 @@ def main():
     heading(d, '초록', 1); para(d, KO.ABSTRACT, indent=False); para(d, '주제어: ' + ', '.join(KO.KEYWORDS), indent=False, space_before=6)
     heading(d, '연구 하이라이트(영문 원고용 번역)', 1)
     for h in ['경계 동을 무작위로 옮기면 걸어서 닿는 서비스가 주민의 생활권 밖으로 밀려난다', '같은 횟수의 재배정을 실제 통행을 따라 하면 오히려 누락이 줄어든다',
-              '서울 공식 생활권은 규모·모양을 맞춘 대안 지도보다 누락 주민이 적다', '경계 동의 통행은 시설이 더 많은 인접 생활권으로 기운다', '이동 자료는 생활권을 새로 긋기보다 기존 생활권을 다듬는 데 알맞다']:
+              '서울 공식 생활권은 표본으로 뽑은 규모·모양 조건 대안 지도 거의 전부보다 누락 주민이 적다', '경계 동의 통행은 시설이 더 많은 인접 생활권으로 기운다', '경계를 고칠 때는 통행 포착과 서비스 포착을 함께 점검해야 한다']:
         para(d, '• ' + h, indent=False)
     d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d)
     heading(d, '부록 A', 1)

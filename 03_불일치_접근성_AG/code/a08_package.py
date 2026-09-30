@@ -71,8 +71,11 @@ def selfcheck(z):
 def main():
     z, n = build(); sc = selfcheck(z)
     out = {'files': n, 'zip_bytes': z.stat().st_size, 'zip': str(z), 'selfcheck_in_fresh_extract': sc}
-    (AG / 'package' / 'package_selfcheck.json').write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8'); print(json.dumps(out, ensure_ascii=False))
     assert sc['exit_code'] == 0, '패키지 안에서 a07이 실행되지 않음'
+    txt = json.dumps(out, ensure_ascii=False, indent=1); (AG / 'package' / 'package_selfcheck.json').write_text(txt, encoding='utf-8')
+    with zipfile.ZipFile(z, 'a', zipfile.ZIP_DEFLATED) as zf:  # 자체 점검 결과를 zip 안에도 남김(MANIFEST에는 없음)
+        zf.writestr(f'{NAME}/results/package_selfcheck.json', txt)
+    out['zip_bytes'] = z.stat().st_size; print(json.dumps(out, ensure_ascii=False))
 
 
 if __name__ == '__main__':
