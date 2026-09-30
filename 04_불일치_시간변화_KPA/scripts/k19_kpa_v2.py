@@ -115,8 +115,8 @@ def claims(md_text: str):
     nums = {k: [x for x in re.findall(r"\d+(?:[.,]\d+)?", t) if x not in ("2020", "2025")] for k, t in ab.items()}
     ck("초록에 구체적 수치 없음(연도만 허용)", not any(nums.values()), json.dumps(nums, ensure_ascii=False))
     ck("원고에 원인 탐색·시설 접근성 표(구 표 6) 없음", "[[TABLE:T6]]" in md_text and "Coverage" not in md_text)
-    bad = [w for w in ("가까운 곳에서 이루어", "가까운 곳으로 몰린", "이들 동만", "공간적으로 연결된 커뮤니티", "크기 효과를 통제", "only those dongs", "불일치는 줄지 않았") if w in md_text]
-    ck("계산이 뒷받침하지 않는 표현 없음(외부 검토 2026-09-30: 거리 단축·진단 동만 재배정·Leiden 공간 연결·크기 통제·D 불변)", not bad, str(bad))
+    bad = [w for w in ("가까운 곳에서 이루어", "가까운 곳으로 몰린", "이들 동만", "공간적으로 연결된 커뮤니티", "크기 효과를 통제", "only those dongs", "불일치는 줄지 않았", "따라가지 못하", "집중되어 있", "쓸모없는 경계", "대체로 잘 설정", "Claude", "ChatGPT", "박사") if w in md_text]
+    ck("계산이 뒷받침하지 않는 표현 없음(외부 검토 2026-09-30: 거리 단축·진단 동만 재배정·Leiden 공간 연결·크기 통제·D 불변; 2차 09-30: 집중·따라가지 못함·전면 재설정·도구명·박사논문)", not bad, str(bad))
     words = len(re.search(r"^%ABSTRACT_EN: (.*)$", md_text, flags=re.M).group(1).split())
     ck("영문 초록 200단어 내외(편집규정 제19조③)", 180 <= words <= 230, f"{words}단어")
     ck("원고 본문 수치 대조(k24) 전부 일치", all(c["일치"] for c in text), str([c["ID"] for c in text if not c["일치"]]))

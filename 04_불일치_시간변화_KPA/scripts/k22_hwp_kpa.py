@@ -37,7 +37,7 @@ ST = {"본문": 10, "개요1": 11, "개요2": 12, "표주석": 14, "표본문": 
 # 저자 정보: JTG 게재본(Park, Eom, Lee, 2026; Graduate School of Urban Studies, Hanyang University)과 같게.
 # 직위는 연구진 확인표(2026-08) 기준 — 투고 전 저자 확인(체크리스트).
 AUTHORS = [
-    {"ko": "박종하", "en": "Park, Jongha", "pos": "Doctorate Candidate", "aff": "Graduate School of Urban Studies, Hanyang University",
+    {"ko": "박종하", "en": "Park, Jongha", "pos": "Ph.D. Student", "aff": "Graduate School of Urban Studies, Hanyang University",
      "role": "First Author", "email": "daniel21c@hanyang.ac.kr"},
     {"ko": "엄선용", "en": "Eom, Sunyong", "pos": "Associate Professor", "aff": "Graduate School of Urban Studies, Hanyang University",
      "role": "Corresponding Author", "email": "sunyongeom@hanyang.ac.kr"},
