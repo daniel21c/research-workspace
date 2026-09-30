@@ -12,18 +12,19 @@ ABSTRACT = (
     'wrong side of the line. We examine this tension in Seoul’s living-zone plan, combining mobile-phone origin–destination flows, '
     'a geocoded inventory of everyday facilities and a walking network at two points in time. We count the '
     'residents who can walk to a category of service only by leaving their own zone. Reassigning boundary neighbourhoods at '
-    'random generally increased this number. The same number of reassignments made along observed trips, with the number of zones fixed '
-    'and no population or compactness bounds, reduced it, and beyond the first few moves did so more than every random path. Among alternative zone maps matched to the '
+    'random generally increased this number. At the evaluated endpoints, the same number of flow-guided reassignments reduced it, with zone '
+    'counts fixed and no population or compactness bounds, and to below every simulated random path; with those bounds applied jointly, '
+    'this held in only one year. Among alternative zone maps matched to the '
     'official plan in size and compactness, the official zones excluded fewer residents than almost all sampled alternatives. Trips from boundary '
-    'neighbourhoods leaned towards adjacent zones holding more of their walkable facilities, allowing for reachable area and population. In Seoul, revising zones along trips did not reduce within-zone service coverage in aggregate, a result '
+    'neighbourhoods leaned towards adjacent zones holding more of their walkable facilities, allowing for reachable area and population. At these endpoints, revising zones along trips did not reduce within-zone coverage in aggregate, '
     'consistent with trips and walkable services pointing to the same places. Within-zone coverage should be checked against a random '
     'baseline whenever zones are revised; whether adjustment beats redrawing was not tested.')
 
 KEYWORDS = ['Neighbourhood planning', 'Functional regions', 'Walking accessibility', 'Boundary revision', 'Redistricting ensembles', 'Mobility data', 'Seoul']
 
 HIGHLIGHTS = [
-    'Random moves of boundary dongs push walkable services outside residents’ zones',
-    'The same number of reassignments along observed trips lowers exclusion instead',
+    'Random reassignment of boundary dongs ended with more residents excluded',
+    'Flow-guided reassignment ended with fewer, without population or shape bounds',
     'Seoul’s zones exclude fewer residents than nearly all sampled matched alternatives',
     'Trips from boundary dongs lean towards neighbouring zones with more services',
     'Boundary revisions need a joint check of flow containment and service coverage',
@@ -63,8 +64,8 @@ BODY = [
           'that obey the same size and shape rules, generated with the ensemble methods developed for electoral redistricting (DeFord et al., '
           '2021)? Third, do trips from boundary dongs go towards the neighbouring zones that hold more of the facilities their residents can '
           'walk to?'),
-    ('p', 'The answers are consistent across both years. Random reassignment generally increases the number of residents without within-zone '
-          'coverage, whereas the same number of flow-guided reassignments decreases it. The official zones exclude fewer residents '
+    ('p', 'At the end of the main paths, without population or compactness bounds, the answers agree in both years: random reassignment '
+          'increased the number of residents without within-zone coverage, whereas the same number of flow-guided reassignments reduced it. The official zones exclude fewer residents '
           'than nearly every alternative map. And trips from boundary dongs lean towards the neighbouring zones where walkable facilities '
           'are, a pattern consistent with the first two results. The paper makes two contributions. It treats '
           'within-zone service coverage as a property of a boundary, distinct from accessibility as such, and shows how it can be measured '
@@ -230,7 +231,7 @@ BODY = [
           'For each pair we compute W_iz, the share of trips leaving i for other Seoul dongs that end in z; F_iz, the share of the facility '
           'cells reachable on foot from i’s residents that lie in z, weighted by origin-cell population and averaged over the seven '
           'categories; A_iz, the share of all reachable cells that lie in z; and P_iz, the share of the population of reachable cells that '
-          'lives in z. A and P absorb the plain fact that trips go to large, close and populous zones. We estimate the partial Spearman '
+          'lives in z. A and P adjust for measured differences in the shares of reachable area and population across neighbouring zones. We estimate the partial Spearman '
           'correlation between W and F controlling for A and P, and in a second specification also for the logarithms of zone population and '
           'employment. Confidence intervals come from a bootstrap that resamples dongs (2,000 replicates). As a further check we regress '
           'standardised W on F and the controls with dong fixed effects, so that each dong’s neighbouring zones are compared only with one '
@@ -249,15 +250,14 @@ BODY = [
     ('h2', '5.2. Flow-guided versus random reassignment'),
     ('p', 'Random reassignment raised the excluded population almost linearly with the number of dongs moved (Fig. 2). After {nm25} moves in '
           '2025 the median random path had added {rm25} excluded residents (central 95% of paths, {rlo25} to {rhi25}); after {nm20} moves in '
-          '2020 it had added {rm20} ({rlo20} to {rhi20}), and every random path ended above the official value. Moving boundary dongs without '
-          'regard to flows pushes walkable facilities out of residents’ zones.'),
+          '2020 it had added {rm20} ({rlo20} to {rhi20}), and every random path ended above the official value.'),
     ('fig', 'Fig2'),
     ('p', 'The flow-guided path behaved differently. Its first few moves raised exclusion slightly, after which it turned down and stayed '
           'below zero. At its lowest it had reduced exclusion by {fmin25} residents (k = {fk25}) in 2025 and by {fmin20} (k = {fk20}) in '
           '2020, and it ended at {fe25} and {fe20}. From k = {k25} in 2025 and k = {k20} in 2020 onwards, the flow-guided path lay below every '
           'one of the 100 random paths at every step. Before that point some random paths were lower; at k = 10, for example, {s10_25}% of '
           'random paths in 2025 and {s10_20}% in 2020 had less exclusion.'),
-    ('p', 'The difference is not because the flow-guided path moved fewer people. By the end of the path, the dongs it had moved held {fp25} '
+    ('p', 'The endpoint comparison involved similar totals of residents in the reassigned dongs: the dongs moved by the flow-guided path held {fp25} '
           'residents in 2025, close to the random median of {rp25} (Table 2). What differs is the balance of gains and losses. The flow-guided '
           'path newly excluded {fn25} residents and resolved exclusion for {fr25}, whereas the median random path newly excluded {rn25} and '
           'resolved {rr25}. The flow-guided path also raised the IFR, from {ifr25}% to {fifr25}% in 2025, while random paths lowered it '
@@ -306,10 +306,9 @@ BODY = [
           'can walk to, and a move into that zone brings those facilities inside the boundary. Whether the selected moves reduced exclusion '
           'for this reason was not tested. What the paths do show is that moves of both kinds newly excluded and resolved large numbers of '
           'residents, and that the balance was favourable only along the flow-guided path.'),
-    ('p', 'This co-location should not be assumed elsewhere. It depends on how much recorded mobility is service-related and on how dense '
-          'everyday facilities are. Where trips are dominated by long journeys to regional centres, or where the relevant facilities have '
-          'assigned catchments, a flow-guided boundary could reduce coverage; the weak or negative associations for education and childcare in '
-          'our data point that way. The transferable part of the paper is therefore less the Seoul result than the check itself: within-zone '
+    ('p', 'This co-location should not be assumed elsewhere. Different mobility patterns and service systems, such as trips dominated by '
+          'long journeys to regional centres or facilities with assigned catchments, may produce different associations, but the '
+          'category-specific associations observed here do not determine the direction of exclusion changes elsewhere. The transferable part of the paper is therefore less the Seoul result than the check itself: within-zone '
           'coverage can be computed for any proposed boundary and compared with a random baseline of the same extent.'),
     ('h2', '6.2. How well drawn is the official plan?'),
     ('p', 'The official zones placed fewer residents outside their zone’s walkable services than almost all sampled alternative maps '
@@ -320,10 +319,10 @@ BODY = [
           'of whole zones under the same rules, so the results do not show that one approach is preferable to the other.'),
     ('h2', '6.3. Implications for planning'),
     ('p', 'Three implications follow. First, within-zone service coverage should be checked, alongside self-containment, whenever zone '
-          'boundaries are revised. It is cheap to compute from standard inputs and captures a consequence of boundary change that flow '
-          'measures miss. Second, revisions guided by flows can serve both aims at once, but revisions made for other reasons, such as '
-          'equalising population, come with no such assurance; the random baseline shows how quickly coverage is lost when boundary changes '
-          'are unrelated to where residents go. Third, most exclusion concerns culture and civic services. Because L counts only residents '
+          'boundaries are revised. Once the reachability inputs are available, the measure can be computed for any proposed zone assignment, and '
+          'it captures a consequence of boundary change that flow measures miss. Second, higher flow containment should not be taken to imply '
+          'lower service exclusion: both should be evaluated for each proposed revision, whatever its objective. The random paths provide a '
+          'reference under the tested reassignment rule, not an evaluation of population-balancing plans. Third, most exclusion concerns culture and civic services. Because L counts only residents '
           'who can reach a facility somewhere, high exclusion in these categories indicates a mismatch between reachable supply and zone '
           'membership; it does not by itself show that provision is insufficient. The share of residents with no reachable facility at '
           'all, which no boundary can change, is reported separately in Appendix Table A2.'),

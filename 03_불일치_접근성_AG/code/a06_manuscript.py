@@ -136,7 +136,7 @@ def tables(V, T, lang='en'):
             r.append([f'{y} / {j}', f"{len(Es)} ({Es.hash.nunique()})", f"{v['r_greater']:.3f}", f"{n0(v['L_median'])} [{n0(v['L_p2.5'])}, {n0(v['L_p97.5'])}]", n0(v['L_min']), f"{v['L_ESS']:.0f}"])
     out['T3'] = (k('Table 3. The official plan among alternative maps.', '표 3. 대안 지도 속의 공식 생활권.'), r,
                  k(f"Official L: {V['L20']} (2020), {V['L25']} (2025). Maps are ReCom samples under the SIZE20 and compactness rules; they are not a uniform sample. ESS: effective sample size of L (Geyer, 1992).",
-                   f"공식 L: 2020년 {V['L20']}, 2025년 {V['L25']}. ReCom 표본(±20% 인구·밀집도 규칙)이며 균등 표본이 아님. 유효표본수는 Geyer(1992)."))
+                   f"공식 L: 2020년 {V['L20']}, 2025년 {V['L25']}. ReCom 표본(±20% 인구·형상 조밀도 규칙)이며 균등 표본이 아님. 유효표본수는 Geyer(1992)."))
     mm = {y: T[y]['m'] for y in Y}
     r = [[k('Estimate', '추정'), '2020', '2025'],
          [k('Pairs (boundary dongs)', '쌍(경계 동)')] + [f"{mm[y]['n_pairs']} ({mm[y]['n_dongs']})" for y in Y],
@@ -202,9 +202,9 @@ def appendix_tables(V, T, lang='en'):
     out['A2'] = (k('Table A2. Walkable reach and exclusion by category under the official plan.', '표 A2. 공식 생활권의 범주별 보행 도달과 누락.'), r, k('A resident is excluded for a category if it is reachable within 15 minutes but not within the resident’s own zone.', '범주가 15분 안에 닿지만 자기 생활권 안에서는 닿지 않으면 그 범주에서 누락.'))
     od = {y: T[y]['od'] for y in Y}; pla = json.load(open(RES / 'appendix' / 'plan_level_association.json', encoding='utf-8'))
     r = [[k('Analysis', '분석'), '2020', '2025', k('Condition tested and reading', '시험 조건과 해석')],
-         [k('Modularity reassignment under the ±20% population and compactness rules (end of path)', '±20% 인구·밀집도 규칙 아래 모듈성 재배정(경로 끝)')] +
+         [k('Modularity reassignment under the ±20% population and compactness rules (end of path)', '±20% 인구·형상 조밀도 규칙 아래 모듈성 재배정(경로 끝)')] +
          [f"k = {od[y]['MOD_end']['k']}; ΔL {sgn(od[y]['MOD_end']['dL_unique'])} ({n0(od[y]['MOD_end']['new_excl'])} / {n0(od[y]['MOD_end']['resolved'])})" for y in Y] +
-         [k('Population and compactness rules of Section 4.3 applied to each move; summarised in Section 5.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '4.3절의 인구·밀집도 규칙을 매 이동에 적용. 5.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
+         [k('Population and compactness rules of Section 4.3 applied to each move; summarised in Section 5.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '4.3절의 인구·형상 조밀도 규칙을 매 이동에 적용. 5.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
          [k('Greedy reassignment maximising IFR (dong moved at most once)', 'IFR 최대화 탐욕 재배정(동당 1회)')] +
          [f"k = {od[y]['IFR_end']['k']}; ΔL {sgn(od[y]['IFR_end']['dL_unique'])}" for y in Y] + [k('Same rules as above, objective IFR instead of modularity, each dong moved at most once. Raising IFR directly raised exclusion in both years.', '위와 같은 규칙, 목적함수는 모듈성 대신 IFR, 동당 최대 1회 이동. IFR을 직접 올리면 두 해 모두 누락 증가.')],
          [k('Plan-level Spearman ρ(IFR, L) across alternative maps, controlling for shape', '대안 지도 전체의 계획 단위 Spearman ρ(IFR, L), 모양 통제')] +
@@ -438,7 +438,7 @@ def main():
     para(d, KO.TITLE, bold=True, indent=False, align=WD_ALIGN_PARAGRAPH.CENTER, size=14); d.add_paragraph()
     heading(d, '초록', 1); para(d, KO.ABSTRACT, indent=False); para(d, '주제어: ' + ', '.join(KO.KEYWORDS), indent=False, space_before=6)
     heading(d, '연구 하이라이트(영문 원고용 번역)', 1)
-    for h in ['경계 동을 무작위로 옮기면 걸어서 닿는 서비스가 주민의 생활권 밖으로 밀려난다', '같은 횟수의 재배정을 실제 통행을 따라 하면 오히려 누락이 줄어든다',
+    for h in ['경계 동의 무작위 재배정은 경로 끝에서 누락 주민을 늘렸다', '통행 기준 재배정은 인구·형상 조밀도 제약 없이 경로 끝에서 누락을 줄였다',
               '서울 공식 생활권은 표본으로 뽑은 규모·모양 조건 대안 지도 거의 전부보다 누락 주민이 적다', '경계 동의 통행은 시설이 더 많은 인접 생활권으로 기운다', '경계를 고칠 때는 통행 포착과 서비스 포착을 함께 점검해야 한다']:
         para(d, '• ' + h, indent=False)
     d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d)
