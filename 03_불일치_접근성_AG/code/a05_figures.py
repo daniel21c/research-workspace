@@ -87,7 +87,41 @@ def fig4():
     save(fig, 'Fig4')
 
 
+def fig_ga():
+    """그래픽 초록(엘스비어 권장 규격: 최소 531×1328 px, 5×13 cm 비율 근사). 2025년 재배정 경로 요약 + 세 문장."""
+    import matplotlib.gridspec as gridspec
+    y = 2025; s = json.load(open(RES / str(y) / 'a01_summary.json', encoding='utf-8')); C = pd.DataFrame(s['curve']); R = pd.read_csv(RES / str(y) / 'a01_states.csv')
+    rd = R[R.strategy == 'RAND']; k0 = pd.DataFrame({'k': [0], 'flow_dL': [0.0], 'rand_median': [0.0], 'rand_p2.5': [0.0], 'rand_p97.5': [0.0]}); C = pd.concat([k0, C], ignore_index=True)
+    fig = plt.figure(figsize=(13 / 2.54 * 2, 5 / 2.54 * 2)); gs = gridspec.GridSpec(1, 2, width_ratios=[1.15, 1], wspace=0.35)
+    ax = fig.add_subplot(gs[0])
+    for _, g in rd.groupby('rep'):
+        ax.plot(g.k, g.dL / 1e3, color='#9bb7d4', lw=.3, alpha=.35)
+    ax.fill_between(C.k, C['rand_p2.5'] / 1e3, C['rand_p97.5'] / 1e3, color='#4f7cac', alpha=.18, lw=0)
+    ax.plot(C.k, C.rand_median / 1e3, color='#1f4e79', lw=1.4, label='Random reassignment (100 paths)')
+    ax.plot(C.k, C.flow_dL / 1e3, color='#c0392b', lw=1.8, label='Flow-guided reassignment')
+    ax.axhline(0, color='black', lw=.5); ax.set_xlim(0, C.k.max()); ax.set_xlabel('Boundary dongs reassigned (Seoul, 2025)', fontsize=8)
+    ax.set_ylabel('Residents newly excluded from\nwithin-zone walkable services (thousand)', fontsize=8); ax.legend(frameon=False, fontsize=7, loc='upper left'); ax.tick_params(labelsize=7)
+    tx = fig.add_subplot(gs[1]); tx.set_axis_off()
+    lines = [('Following trips, keeping services?', 10.5, 'bold'),
+             ('Do walkable facilities stay inside planning zones when zone boundaries are revised with mobility data?', 8, 'normal'),
+             ('\u2022 Random moves of boundary dongs pushed services out of residents\u2019 zones.', 8, 'normal'),
+             ('\u2022 The same number of flow-guided moves ended with fewer residents excluded (no population or shape bounds).', 8, 'normal'),
+             ('\u2022 Seoul\u2019s official zones beat almost all of 1,000 size- and shape-matched alternative maps.', 8, 'normal'),
+             ('\u2022 Trips from boundary dongs lean towards neighbouring zones holding more of their walkable facilities.', 8, 'normal'),
+             ('Check flow containment and within-zone service coverage together whenever zones are revised.', 8, 'italic')]
+    yy = 0.98
+    for t, fs, w in lines:
+        tx.text(0, yy, '\n'.join(_wrap(t, 52)), fontsize=fs, fontweight='bold' if w == 'bold' else 'normal', fontstyle='italic' if w == 'italic' else 'normal', va='top', ha='left', transform=tx.transAxes)
+        yy -= 0.075 + 0.075 * (len(_wrap(t, 52)) - 1) + (0.02 if w == 'bold' else 0)
+    save(fig, 'GraphicalAbstract')
+
+
+def _wrap(t, n):
+    import textwrap
+    return textwrap.wrap(t, n)
+
+
 if __name__ == '__main__':
-    which = sys.argv[1:] or ['1', '2', '3', '4']
+    which = sys.argv[1:] or ['1', '2', '3', '4', 'ga']
     for w in which:
-        globals()[f'fig{w}']()
+        globals()[f'fig_{w}' if w == 'ga' else f'fig{w}']()

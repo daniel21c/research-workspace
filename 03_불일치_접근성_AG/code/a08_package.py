@@ -38,6 +38,7 @@ def build():
     for i in range(1, 5):
         for ext in ('png', 'pdf'):
             shutil.copy2(MS / 'figures' / f'Fig{i}.{ext}', sub / f'Figure_{i}.{ext}')
+    shutil.copy2(MS / 'figures' / 'GraphicalAbstract.png', sub / 'Graphical_Abstract.png')  # 권장 사항, 5x13 cm 비율
     for y in ('2020', '2025', 'appendix'):
         shutil.copytree(RES / y, OUT / 'results' / y)
     for f in ('claims_check.json', '_check_a01_vs_previous.json', 'a02_reproduction_check.json'):
