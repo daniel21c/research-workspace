@@ -301,13 +301,15 @@ def layout_check(pdf: Path, h2s=()) -> dict:
         t = pg.get_text()
         for m in re.findall(r"(?:표|그림) (A?\d+)\. ", t): loc.setdefault(("ko", m), i + 1)
         for m in re.findall(r"(?:Table|Fig\.) (A?\d+)\. ", t): loc.setdefault(("en", m), i + 1)
-        Wd = pg.rect.width; blocks = [b for b in pg.get_text("blocks") if b[4].strip()]
+        Wd, Hd = pg.rect.width, pg.rect.height
+        blocks = [b for b in pg.get_text("blocks") if b[4].strip() and b[1] > 65 and b[3] < Hd - 40]   # 머리말·꼬리말 제외(꼬리말이 마지막 블록이 되어 그 위의 제목을 놓치던 문제)
         for c in (0, 1):
             col = [b for b in blocks if (0 if (b[0] + b[2]) / 2 < Wd / 2 else 1) == c]
             if not col: continue
-            last = norm(max(col, key=lambda b: b[3])[4])
-            hit = [h for k, h in h2n.items() if last.startswith(k[:12])]
-            if hit and len(last) <= len(norm(hit[0])) + 2: stranded.append({"제목": hit[0], "쪽": i + 1, "단": c})
+            col.sort(key=lambda b: b[3]); last = norm(col[-1][4]); tail2 = norm(col[-2][4] + col[-1][4]) if len(col) > 1 else last
+            for cand in (last, tail2):   # 제목이 두 줄로 꺾이면 마지막 블록은 뒷줄만이므로 앞 블록과 이어 붙여서도 본다
+                hit = [h for k, h in h2n.items() if cand.startswith(k[:12]) and len(cand) <= len(k) + 2]
+                if hit: stranded.append({"제목": hit[0], "쪽": i + 1, "단": c}); break
     for (lang, num), pgno in loc.items():
         if lang == "ko" and loc.get(("en", num)) not in (pgno, None): split.append(num)
     return {"쪽수": len(d), "겹친_쪽": over, "제목_갈라진_번호": sorted(set(split)), "홀로_남은_절제목": stranded}
@@ -345,8 +347,9 @@ def build(md: Path, mode: str, breaks: dict | None = None):
         # 절 제목 뒤 빈 문단을 두면 한글이 빈 문단에는 '다음 문단과 함께'를 지키지 않아 제목이 쪽 끝에 홀로 남는다(외부 검토 2026-09-30, 6쪽·13쪽)
         # → 빈 문단 대신 문단 아래 간격으로 띄운다. 그래도 남으면(표 뒤 등) 배치 점검 결과(breaks)에 따라 제목 앞에서 단/쪽을 나눈다.
         if breaks.get(v) == "column": W.h.HAction.Run("BreakColumn")
+        if breaks.get(v) == "page": W.h.HAction.Run("BreakPage")     # 문단 속성 '쪽 나눔 전'은 단 정의가 든 문단에서 무시되므로 실제 쪽 나눔을 넣는다
         W.para(v, "개요2", bold_all=True, keep=True, newpara=False)
-        W.h.set_para(KeepWithNext=1, NextSpacing=10, PagebreakBefore=1 if breaks.get(v) == "page" else 0); W.h.BreakPara()
+        W.h.set_para(KeepWithNext=1, NextSpacing=10); W.h.BreakPara()
 
     while i < len(blocks):
         kind, v = blocks[i]
@@ -368,6 +371,9 @@ def build(md: Path, mode: str, breaks: dict | None = None):
                     W.two_line(f"그림 {ko}", f"Fig. {en}", "표본문", "Center", size=8.5)
                     W.para("주: " + nt, "표주석", align="Left")
                 i += 1
+            # 다음 블록이 '제목 앞 쪽 나눔' 대상 절 제목이면 2단으로 돌아가기 전에(1단 구역에서) 쪽을 나눈다.
+            # 2단 구역 첫 문단에 넣은 쪽 나눔은 한글이 단 나눔으로 처리해 제목이 오른쪽 단 끝에 남았다(5차 점검, 7쪽).
+            if i < len(blocks) and blocks[i][0] == "h2" and breaks.get(blocks[i][1]) == "page": W.h.HAction.Run("BreakPage"); breaks[blocks[i][1]] = "page_done"
             W.columns(2); one_col = False
             continue
         if kind == "h1":
