@@ -5,7 +5,7 @@
 | `Teams_보고글_20260930.md` | 팀즈에 붙이는 본문(JTG·KPA 용어, 발견 우선) |
 | `AG_교수님보고_20260930.pdf` (.docx) | 보고 메모 4쪽(요약·논지·분석의 틀·핵심 결과·설계 변경 경위·검수 상태) — `code/a09_report_memo.py`로 생성 |
 | `AG_한국어_원고.pdf` | 한국어 전문(문체 개정본) |
-| `AG_manuscript_anonymised.pdf` | 영문 익명 투고본(문체 개정본, 7,923단어) |
+| `AG_manuscript_anonymised.pdf` | 영문 익명 투고본(문체 개정본, 7,922단어) |
 | `AG_supplementary_appendix.pdf` | 부록 A(시설 유형·범주별 누락·민감도·시설 출처) |
 | `AG_확정본_공동연구자패키지_20260930_c6d4d73.zip` | 공동연구자 패키지(= `../package/` zip 사본, SHA-256 동일) |
 | `GraphicalAbstract.png` | 그래픽 초록 |
