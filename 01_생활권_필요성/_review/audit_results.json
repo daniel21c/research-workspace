@@ -1,0 +1,1241 @@
+{
+  "syntax_ok": [
+    "exp8_case_gu.py",
+    "exp4_equity_defs.py",
+    "exp11_bundle.py",
+    "exp2_concealment.py",
+    "exp16_bundle_milp.py",
+    "fig_AB.py",
+    "exp17_centers.py",
+    "fig_window.py",
+    "exp10_extra.py",
+    "milp_facility.py",
+    "exp19_holdout_sens.py",
+    "exp9_multi_facility.py",
+    "r1lib.py",
+    "exp13_bundle_defs.py",
+    "exp3_size_boundary.py",
+    "exp1_matrix.py",
+    "bundlelib.py",
+    "exp6_sensitivity.py",
+    "exp14_bundle_place.py",
+    "exp15_usage.py",
+    "milp_check.py",
+    "fig_bundle.py",
+    "exp5_7_admin_actual.py",
+    "exp18_service_vs_common.py"
+  ],
+  "lazy_greedy_counterexample": {
+    "description": "Synthetic only; does not estimate Seoul result impact. Two categories, one placement per category, three populated origins, three distinct candidate sites.",
+    "population": [
+      10.0,
+      2.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "R0": [
+      [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ]
+    ],
+    "covers": {
+      "3": [
+        0,
+        2
+      ],
+      "4": [
+        0
+      ],
+      "5": [
+        1
+      ]
+    },
+    "lazy": {
+      "placed": {
+        "A": [
+          3
+        ],
+        "B": [
+          5
+        ]
+      },
+      "objective": 5.625,
+      "completion_rate": 0.3333333333333333
+    },
+    "full_rescore": {
+      "placed": {
+        "A": [
+          3
+        ],
+        "B": [
+          4
+        ]
+      },
+      "objective": 13.125,
+      "completion_rate": 0.8666666666666667
+    },
+    "trace": [
+      {
+        "gains": [
+          [
+            3.4375,
+            3,
+            [
+              "A"
+            ]
+          ],
+          [
+            0.625,
+            4,
+            [
+              "B"
+            ]
+          ],
+          [
+            1.875,
+            5,
+            [
+              "B"
+            ]
+          ]
+        ],
+        "pick": 3
+      },
+      {
+        "gains": [
+          [
+            9.375,
+            4,
+            [
+              "B"
+            ]
+          ],
+          [
+            1.875,
+            5,
+            [
+              "B"
+            ]
+          ]
+        ],
+        "pick": 4
+      }
+    ]
+  },
+  "exp14_same_counterexample": {
+    "placed": {
+      "A": [
+        3
+      ],
+      "B": [
+        5
+      ]
+    },
+    "objective": 5.625,
+    "completion_rate": 0.3333333333333333
+  },
+  "addon_metadata_only": [
+    {
+      "file": "부가층_공공체육_2020_01.parquet",
+      "row_count": 387,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 387
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 384
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 12
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 271
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 291
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 291
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 387,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_공공체육_2025_01.parquet",
+      "row_count": 456,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 456
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 452
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 12
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 317
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 336
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 336
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 456,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_공원_2020_01.parquet",
+      "row_count": 21863,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1886
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1583
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 10
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 17936
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 328
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 297
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_공원_2025_01.parquet",
+      "row_count": 21863,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1886
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1583
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 10
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 17936
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 328
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 297
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 21863,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_공원_UPIS2024_2025_01.parquet",
+      "row_count": 23798,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 2678
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 922
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 11
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 17840
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 340
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 292
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 23798,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_지역아동센터_2020_01.parquet",
+      "row_count": 307,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 307
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 298
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 4
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 303
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 305
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 305
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    },
+    {
+      "file": "부가층_지역아동센터_2025_01.parquet",
+      "row_count": 307,
+      "row_group_count": 1,
+      "columns": [
+        {
+          "name": "layer",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "year_snapshot",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        },
+        {
+          "name": "facility_id",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 307
+        },
+        {
+          "name": "name",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 298
+        },
+        {
+          "name": "subtype",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 4
+        },
+        {
+          "name": "grid100_cd",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 303
+        },
+        {
+          "name": "x_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 305
+        },
+        {
+          "name": "y_5179",
+          "physical_type": 5,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 305
+        },
+        {
+          "name": "strict",
+          "physical_type": 0,
+          "encoding_codes": [
+            3,
+            0
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null
+        },
+        {
+          "name": "source",
+          "physical_type": 6,
+          "encoding_codes": [
+            0,
+            3,
+            8
+          ],
+          "codec": 1,
+          "num_values": 307,
+          "null_count_footer": 0,
+          "distinct_count_footer": null,
+          "dictionary_distinct_entries": 1
+        }
+      ],
+      "scope": "Footer and dictionary page-header metadata only; data values/duplicates/geometry not decoded."
+    }
+  ],
+  "addon_full_row_read_status": "NOT_COMPLETED: pyarrow/fastparquet unavailable; package installation failed due network DNS. Footer + dictionary header metadata examined instead.",
+  "poor20_population": [
+    {
+      "year": "2020",
+      "count_cutoff": 3,
+      "actual_population_share": 0.47494919752099246
+    },
+    {
+      "year": "2025",
+      "count_cutoff": 3,
+      "actual_population_share": 0.4464094385398833
+    }
+  ],
+  "numerical": [
+    {
+      "year": "2020",
+      "baseline_complete": 0.03674361761772105,
+      "IND": 0.1458482805769527,
+      "COL": 0.1927382893985488,
+      "FLOOR_official": 0.1891560327334523,
+      "FLOOR_LD": 0.1897124383675753,
+      "FLOOR_random_median": 0.1891560327334523,
+      "floor_cost_pp": 0.35822566650965115,
+      "logan7_one_missing": 0.8595324931254666,
+      "T15_one_missing_conditional": 0.4667904343732295,
+      "T15_multi_missing_conditional": 0.5332095656267706
+    },
+    {
+      "year": "2025",
+      "baseline_complete": 0.05265967614722178,
+      "IND": 0.1563995487200795,
+      "COL": 0.2059633418059871,
+      "FLOOR_official": 0.2004104783899137,
+      "FLOOR_LD": 0.2028381159116866,
+      "FLOOR_random_median": 0.2030774634727243,
+      "floor_cost_pp": 0.5552863416073417,
+      "logan7_one_missing": 0.8439481714726038,
+      "T15_one_missing_conditional": 0.4995133936264893,
+      "T15_multi_missing_conditional": 0.5004866063735107
+    }
+  ],
+  "T15_effect": [
+    {
+      "year": 2020,
+      "IND": 0.5134079756936298,
+      "COL": 0.4991617098339951,
+      "difference_pp": -1.4246265859634732,
+      "relative_gain_percent": -2.774843113877923
+    },
+    {
+      "year": 2025,
+      "IND": 0.5466595487093705,
+      "COL": 0.5338389795976284,
+      "difference_pp": -1.282056911174212,
+      "relative_gain_percent": -2.3452565937996828
+    }
+  ],
+  "placement_count_checks": {
+    "rows": 120,
+    "failed": []
+  },
+  "manifest_omissions": [
+    "GPTPro_검토프롬프트_20261001.md",
+    "검토본_목록.csv"
+  ]
+}

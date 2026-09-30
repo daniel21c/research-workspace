@@ -1,0 +1,22 @@
+{
+  "scope": "Synthetic, not Seoul rerun; exact submitted constraint-building lines 46-79",
+  "continuous_z_objective": 13.0,
+  "independent_reach_evaluation": 13.0,
+  "enumeration_optimum": 13.0,
+  "status": 0,
+  "gap": 0.0,
+  "picks": {
+    "A": [
+      3
+    ],
+    "B": [
+      4
+    ]
+  },
+  "IND_candidate_pruning_counterexample": {
+    "description": "A candidate covers 10 people who already have category B; B candidate covers 20 people who can never obtain category B. Both lack category A. Type A budget=1. Pruning to potentially completable origins removes the second candidate although it is the independent type-A optimum.",
+    "full_candidate_max_type_A_gain": 20,
+    "pruned_candidate_max_type_A_gain": 10,
+    "scope": "Logical counterexample; not a Seoul effect estimate and no asserted bias direction for completed-bundle ratio."
+  }
+}
