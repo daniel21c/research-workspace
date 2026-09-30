@@ -1,0 +1,677 @@
+[
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\README.md",
+    "bytes": 656,
+    "sha256": "7bbaacaf19913dee8502eae7cbca7a76e3508b87797c93e4db1dca97a3e7f235"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\설정근거_20260927.md",
+    "bytes": 11669,
+    "sha256": "003af34fa7886d46375240b85cb4153f36d802fabe5b3516ac21a3ebacb7baef"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\실증설계_확정안_20260924.md",
+    "bytes": 26142,
+    "sha256": "e42eff1e3f2382c6406ec2dc0a3068e83cf02868dcda105f393cf076470588ff"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\실험프롬프트_20260927.md",
+    "bytes": 10276,
+    "sha256": "fb256b7db113eb3581c0527432f69dbf69c6022b470e4e28856639380ae499d8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\연구설계.md",
+    "bytes": 15071,
+    "sha256": "eb5b9a9a9a492eb8fe76c85d77ef577ea61f0ebaa658acc0805ac70a080a078a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\연구설계_fable.md",
+    "bytes": 65408,
+    "sha256": "39308d961d86541d578e30c72c5e6375c205542cfa74ef55cd6c183a62e7c4b8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\작업기록.md",
+    "bytes": 27324,
+    "sha256": "3399362d2bb93ce33dcc741729d872ab4a9990eee28126d7ea1e841e79a5689a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp1_matrix.py",
+    "bytes": 6262,
+    "sha256": "dfa4a18ded5d72aa54814e81035f36a7edf088a33aa5d88c7cd26d2aa2f3fead"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp2_concealment.py",
+    "bytes": 4034,
+    "sha256": "ec708228c888581fe47b0b88a98b482fbcee2ee3e4eb11b76273bf1d9eb6c1b4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp3_size_boundary.py",
+    "bytes": 6468,
+    "sha256": "af155f3eaef1fee8a6003d3391580790a07a5e17eb836f9d22267599bbc0aef5"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp4_equity_defs.py",
+    "bytes": 9766,
+    "sha256": "f5aa85c63320712d07565fc10997ed80c9dbeaa7629ee7657a83db44a93b680c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp5_7_admin_actual.py",
+    "bytes": 6049,
+    "sha256": "7d85a1a30e2dd84ee38ace0e04f53daebf8d1fb455d93630ae2af608284799fb"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp6_sensitivity.py",
+    "bytes": 3525,
+    "sha256": "219f21d34d905bbf931c9b7ff4849206db820f91115d889436ba90dd61958de1"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp8_case_gu.py",
+    "bytes": 5020,
+    "sha256": "bfbff15bb258a5c51dbfa07574bb560858afd962ed50133d97af859ab952c2a3"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\exp9_multi_facility.py",
+    "bytes": 7470,
+    "sha256": "053a7cb08dc29618f233b18d777024d0e332870bef9c5b0460f1f8c935f16222"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\fig_AB.py",
+    "bytes": 5293,
+    "sha256": "49e696646b48e8d922fc24b6358fca93ec734172540a7063d026d061588de047"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\fig_window.py",
+    "bytes": 3719,
+    "sha256": "4d12806bd6ff35657a16195d40533b1be5254f9b2761f9827307a19323c340c2"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\milp_check.py",
+    "bytes": 4039,
+    "sha256": "bd092beca10035b73da6c9617a7832d203842342cfd58ed10e97db1e2ac5865a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\milp_facility.py",
+    "bytes": 3213,
+    "sha256": "ca7e47973a6303f56a9abb69a95611a9f157b98c0f9b56cb70edca926b95bd39"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\r1lib.py",
+    "bytes": 12797,
+    "sha256": "105b8e89ce552bbbc2cb67240b36ce77431bd1ba7bc8dc489c254800b546095f"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp2.log",
+    "bytes": 5645,
+    "sha256": "4b596424b2af2ef7a40640a846b5874d0078d5773b3c5a0a50a18713934a836c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp3.log",
+    "bytes": 9072,
+    "sha256": "9f3e276c76e52592e9ba77e27fb4aa571aac39536ad6c3c2424c332946859901"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp4_2020.log",
+    "bytes": 4244,
+    "sha256": "beb969187a766ca6c3eaf801e097f073d35fcfbae041a64af8ce6998a76f2935"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp4_2025.log",
+    "bytes": 4250,
+    "sha256": "c4d0f02e05ba4110a0b12040e91153cbff7ca572432cb09cb6c29b071844640a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp5_7.log",
+    "bytes": 4089,
+    "sha256": "f153f800fe3931e1df995084f500a5f1c0873b96c8892128a46a3670b1ee0831"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp5_picks.json",
+    "bytes": 2338,
+    "sha256": "e3c2e29ad55e0089cb5d6bca117e7348e4cf177133ee34483edd3c8204a03571"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp6_2020.log",
+    "bytes": 2731,
+    "sha256": "8fefe9ab0a2912c987657e99bd2969e8ba9ad402157bf8ee6ba1bea444fc5e7c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp6_2025.log",
+    "bytes": 2737,
+    "sha256": "6e50010ba05840b4e21d5fc63585ff9c708d89bf2aed95ea7e4e073f6226d749"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2020.log",
+    "bytes": 4069,
+    "sha256": "1042b44f59bea7848fb0b23b39f93927df71bbb695a53f3dd45c6e835cecf941"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2020_mean.log",
+    "bytes": 4077,
+    "sha256": "f43c151d3f8cb81dfadddd15fedcc8816bf394f358391517515b374d7e8f1b3b"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2020_r40.log",
+    "bytes": 4073,
+    "sha256": "14708e68de72794cab9d151d366b665562b4cff85e456bf1b5ffa9aa2240f495"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2025.log",
+    "bytes": 2203,
+    "sha256": "6b51f3c29715728318e88504d3c3aaca9a454619483f24b13b1c495d65dbbe61"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2025_mean.log",
+    "bytes": 2213,
+    "sha256": "f6d5626ec74c690d7d6a2bacf36983fe4dfc6b70aa426674e7f993ced91947df"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\exp9_2025_r40.log",
+    "bytes": 2208,
+    "sha256": "59339955c496cf6e27e96131697d47b51d2a73acf1ebbf7fb723c9248ff90aa4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_2020.log",
+    "bytes": 1844,
+    "sha256": "2e6345e1bab9a776a4d6a459cfced69b1358df2082eb6a83d861e416d186dec3"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_2020_dong.log",
+    "bytes": 479,
+    "sha256": "97e4d16075bf8ead55f18d907ff6bc79df071f1f604e55155bee6afb018e2b89"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_2025.log",
+    "bytes": 1884,
+    "sha256": "0eade8692bade6aa2b9f659853f138965fc282e7dcc6dfbdc095663c79fc3845"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_2025_dong.log",
+    "bytes": 479,
+    "sha256": "47c02694552003b19689205ead8034694eae419bed3d716fb64d88b4c6293a2f"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_fac_2020.log",
+    "bytes": 6989,
+    "sha256": "7206c3536592b47d8a7ae05b5ab60810de3464a91ab4f7abe26b8515122f3459"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_fac_2020_mean.log",
+    "bytes": 7616,
+    "sha256": "a335a4f0a8992514c545a6ca0eb41c58eeab0c0fd28b687b83a98db428be415f"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\milp_fac_2025.log",
+    "bytes": 7400,
+    "sha256": "4b91317171cce82f95e3d3d2b879211b54c4d37354fbcd4ed657ab1b6cca4707"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\결과_관찰.md",
+    "bytes": 20192,
+    "sha256": "1edf82d8c21da02a5656767247e2fe5f9b3f48d8eb0db609d9a31238333ed249"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\교수님_보고_제시방법_20260928.md",
+    "bytes": 3635,
+    "sha256": "ee5dddafb37d96b0169886281f1f6c547d44aeff80c98b4399de419db501b909"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\교수님_보고문장_20260927.md",
+    "bytes": 4735,
+    "sha256": "b6e2f1ca0c1bacfd258dc12e9eb36206da74794cf33712d22ae0215d6b304093"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\교수님_보고문장_20260928.md",
+    "bytes": 5227,
+    "sha256": "83156256cdf3139be17b13e7fe141b86c2dcd8006fc20f8a0a018628f1ce5ff4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-2_은폐지도_2020_도서관.png",
+    "bytes": 445839,
+    "sha256": "d0909b06d2b6d53dffd7b2f254e01b231f86f0db776735731c8e3c4dea790955"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-A_크기축_2020.png",
+    "bytes": 286962,
+    "sha256": "c9da2b6ae3f67ddf81dd3dec6f245c9518a2944390d571e06453eee51d060016"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-A_크기축_2025.png",
+    "bytes": 284831,
+    "sha256": "815ae73fb82b86e9b32c755bf607d0dcccafdd619ea8211baa7659f8fbb3c4d9"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-B_효율형평평면_2020.png",
+    "bytes": 98313,
+    "sha256": "4f5cbd93230d1eb70d66c85ffe9ea9441d88e14e23a0154887a438e9fa38aca1"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-B_효율형평평면_2025.png",
+    "bytes": 88422,
+    "sha256": "a0116ce5c28314472626856337dd055263e1112e647b04768bd33875b2b6cfc4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-C_자치구사례_2020.png",
+    "bytes": 416072,
+    "sha256": "1e9cd163fd8710b43877403fcf63319bb51e1312b9875e85053ee1187f02ab5b"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-D_시설별_보장가능창.png",
+    "bytes": 155614,
+    "sha256": "20748fab7f505b7d8616e69f14604ac75adb6d6b32ef0cf3db9f69ab8154c897"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\그림4.1-D_시설별_보장가능창_평균60%.png",
+    "bytes": 154827,
+    "sha256": "3d42a4b6a04b9718d27c2b7d1f3769065260559743d37817094d2dfcddf09fae"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\부록_IFR_접근성_상관.csv",
+    "bytes": 4114,
+    "sha256": "23165bad13bb41bfdbb9fbb5855d4c22f691c39e208d6152c8aad5fc7d9abebd"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_2020.csv",
+    "bytes": 612,
+    "sha256": "cd7c48a8cf5c94c5b3ed11845e66bbfcd0728626413e6f673adc5034b7c38a35"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_2020_동_TL3600.csv",
+    "bytes": 152,
+    "sha256": "8d01e86832b4aad1e1822afd616bdd0ec68cc487077078eace5daf82c2ff746c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_2025.csv",
+    "bytes": 628,
+    "sha256": "e9ae44e8261ff1c0d780e6b177500327b08b0b698f15eb3d405b925018b9c155"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_2025_동_TL3600.csv",
+    "bytes": 152,
+    "sha256": "8b93d60d728673623482f3a9655ff1ef80c4e93665bd5f4f769eeed540220511"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_시설별_2020_중위60%.csv",
+    "bytes": 2304,
+    "sha256": "8495ff16e27f1dac1c233182e52f46110a1d7ea9708e7da92c4d7f8077e50a5d"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_시설별_2020_평균60%.csv",
+    "bytes": 2416,
+    "sha256": "e1557ae1b69b4747770428123fb6168dbcde21c4c330a2c5469bac0e9f6af5e6"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\정수해대조_시설별_2025_중위60%.csv",
+    "bytes": 2347,
+    "sha256": "4db0cd08d0215daaba974d49fa2f18588463e8cda022505a316446905732d39a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2020_도서관.csv",
+    "bytes": 4252,
+    "sha256": "313af5525f9240ad5502da960abd3b2b14a7a171b99d598a4d8b9009dca14280"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2020_도서관.md",
+    "bytes": 5968,
+    "sha256": "10a0a95fe4d3b080b1da8c25d334f4f120f32d7a88e48fa93cff69fb9da53bb9"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2020_도서관_meta.json",
+    "bytes": 666,
+    "sha256": "a370fdcd75f20657bbbd2350b35fa37431dab0954de0f42843866e4342c446ae"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2025_도서관.csv",
+    "bytes": 3793,
+    "sha256": "cfe5be51a39298977fa03430b0dde3946c0b43c92b251a698548b25274e83f06"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2025_도서관.md",
+    "bytes": 5406,
+    "sha256": "bfb44817a5f01bd9fde843fe880b1113cd8d6222059df50ad20198b38a638212"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-1_4단위비교행렬_2025_도서관_meta.json",
+    "bytes": 666,
+    "sha256": "be5b4a121d7289faf06005b6c6ef45c7f218a6aa4cd3ce3f417fd5daa51b529e"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-2_은폐_H.csv",
+    "bytes": 6272,
+    "sha256": "365d33c9aaac49456417e00db586a02b371ae642cc12696a3a3879a8c13ed320"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-2_은폐_H.md",
+    "bytes": 4902,
+    "sha256": "97a49765efcb30ea6461c91a8aa54a32962d08f08f814554e1ebe2e2c2de4fad"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-2_은폐_H곡선.csv",
+    "bytes": 30777,
+    "sha256": "8c7100a62c2348c233fdd2f2016cdbbdd99c748204bdb7ca52b6956c1920eabc"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-3_크기축_구획별.csv",
+    "bytes": 347891,
+    "sha256": "364fbc441d4f850faf5d24d874f0e63a6a4e17f7f6bbeec56a5f09a731b57e17"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-3_크기축_요약.md",
+    "bytes": 8329,
+    "sha256": "94553d1c1a24aac35bc55446a10745ad0191cec2b4d17715d619ddb0127917fa"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-4_형평정의_2020.csv",
+    "bytes": 5596,
+    "sha256": "c89b344d721c8e15115ef9ec3a31e843b91406545081399669b6714bf3bc1de8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-4_형평정의_2020.md",
+    "bytes": 3974,
+    "sha256": "c2444e3fb8b45909c5fe69ba97c81eacd5b43e260693143f3e249e2fe13a2139"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-4_형평정의_2025.csv",
+    "bytes": 5685,
+    "sha256": "529979850cfbcfe7b2fd240df586122db48531bf62de510312bd228cccdc6048"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-4_형평정의_2025.md",
+    "bytes": 3982,
+    "sha256": "282377d5cde2ba79686dcaf915eec989896c8da12805b3e6c062f02ec2504172"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-5_7_요약.md",
+    "bytes": 4058,
+    "sha256": "db89354108f76d1c9252f256e2ea9e059e68b0df07a771abdc4ec48be0a67998"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-5_안정성.csv",
+    "bytes": 198,
+    "sha256": "60ca9f087c823b89b101095de13f620b2403cd952ca027ea73e990fd6ed2d918"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-5_행정대리지표.csv",
+    "bytes": 1835,
+    "sha256": "b0017b7030fcf16b716afa443a86096fd55f421f7dcb5aa6370a966ffb3c5f02"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-6_민감도_2020.csv",
+    "bytes": 3679,
+    "sha256": "ae6c7c0456a56d2bf2d2a0fde9e911f3fc2e0996468854bce9fe58a71fbff4e6"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-6_민감도_2020.md",
+    "bytes": 2527,
+    "sha256": "34e7b93a7cb0a4d6473a7d85b6ba1c27f64bb6ae3f70ee1d6d6c7e3b4f2e967a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-6_민감도_2025.csv",
+    "bytes": 3650,
+    "sha256": "9b99d6dd92d1d4be1ec1ff5e44459e531f6dc4e6a4300af4bc1e1b191580ffb1"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-6_민감도_2025.md",
+    "bytes": 2533,
+    "sha256": "36d83155637089615bca73802450439fce4ef968f60adf28d4f08e51805ed348"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-7_실제배치대조.csv",
+    "bytes": 1542,
+    "sha256": "0c1f2aca59e9dfdc8fa9bebb9388e16f8e729478738b422a3f40342c9abdeb63"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-8_자치구사례_2020.csv",
+    "bytes": 174,
+    "sha256": "d3a96c0b6c9a4aeb6c1616888d5388d164db9c540ed185ec000adda8a5081b46"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_반사실_2020.csv",
+    "bytes": 2050,
+    "sha256": "30b7776db76a8f12ed8d55e6b0a32c54d7e092cb3e4cbac1dfda9bd3c30b52df"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_반사실_2020_평균60%.csv",
+    "bytes": 2087,
+    "sha256": "ca521d528e7c5bca2c02fe6ac051e9ec2bb8778c835b74f9f32067499f7a84f4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2020.csv",
+    "bytes": 259645,
+    "sha256": "d900cfc1c75e31f80149d2df2a527067d7ba2b3b5d0b136a4db2a3298ce3f4a8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2020.md",
+    "bytes": 3561,
+    "sha256": "6f61f5e519fc53828ac5e8127e8f50be6a15d0a019d5721daeeb1a04f9bb7c92"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2020_평균60%.csv",
+    "bytes": 257083,
+    "sha256": "fb384489ba4f401d46f2e70300a09560a58f1469540be29c3bad1017998b3597"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2020_평균60%.md",
+    "bytes": 3565,
+    "sha256": "ae110cfbf9c807849f7118c4e9c0ba825c2ceb29d08189f58d85b4abf03ff374"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2025.csv",
+    "bytes": 258772,
+    "sha256": "f8b83d02a306b1707b569f0024a776b878e815b1e28f568837ad601908559288"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2025.md",
+    "bytes": 1696,
+    "sha256": "394f97731122af5a8a20dff53b013576c16d1abd250868831b6303243aaacba8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2025_평균60%.csv",
+    "bytes": 256308,
+    "sha256": "380c4abbcfce8fc0f0e85d8c7c4be04003148ae030d1b1e51f8b46a6c05f58b2"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\output\\표4.1-9_시설별_창_2025_평균60%.md",
+    "bytes": 1701,
+    "sha256": "a9f513d79bda233f7f9570c54b5bddb754d7e3712c307ac5b560f71d56e39daa"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_archive_docs\\연구설계_20260923_초안.md",
+    "bytes": 50883,
+    "sha256": "4d2c66d25434f8dddfbb2e869875443bd5b0f181289c810e3962f7530b18661b"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_archive_docs\\연구설계_fable_20260923.md",
+    "bytes": 65408,
+    "sha256": "39308d961d86541d578e30c72c5e6375c205542cfa74ef55cd6c183a62e7c4b8"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_a.py",
+    "bytes": 4483,
+    "sha256": "b4ea16207a36406bd6b0a694b7fdf8dad1518de76a964fb2505113934f02f674"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_b.py",
+    "bytes": 3274,
+    "sha256": "927392bc7518a0b5af67294d58b8d6bb4008ce1ea181e254225b22ceead493f6"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_c.py",
+    "bytes": 3113,
+    "sha256": "87ba276b287a2a02282fefadfe9865ca58b66df344568087299430704b4612a7"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_d.py",
+    "bytes": 3937,
+    "sha256": "8bd3783c1bbdee839743eca7be37577eb7dcbbc23af43ed3dbb573aac568713e"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_e.py",
+    "bytes": 4521,
+    "sha256": "ed27fd4034426b80ec1ba8dab4ee65797857418e96ed6444ed43e351562b2002"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\exp_f.py",
+    "bytes": 3929,
+    "sha256": "05be41f94c24874389276df0851fdb5a676849767e2d9c90aaf218b68124bb4c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\pilot1.py",
+    "bytes": 12685,
+    "sha256": "bf585441ba1eade8afc3d5afa0cfbced821fc023b876689dd3ced393624964c4"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\pilot2.py",
+    "bytes": 12399,
+    "sha256": "eaab8ec51914fb0d6f682a26606f517e1e73612c355739d15ca306553c6f0d75"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\r1lib.py",
+    "bytes": 10897,
+    "sha256": "536f5c0b720522567b715683f05b339d33aa2baece65d946ef5c8a7ab7ff0c1c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\code\\synth.py",
+    "bytes": 3553,
+    "sha256": "9110d95fad7e27b1fca0dcc337133838e09537656fa9d38514f6f9dadc3d65be"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_a_meta.json",
+    "bytes": 639,
+    "sha256": "f21d95a9663a7af8f8b2dcba511565542daa84a125012ff1de655016116ba9b1"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_a_partitions.csv",
+    "bytes": 423741,
+    "sha256": "20337ef082f20d3b79e2e58eea5012720dd55579dc8e028cc04586bc9fb3d31f"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_b_actual.csv",
+    "bytes": 349,
+    "sha256": "e431b3d66b1349adc3c64e6242b293f57ce6f683587b65c1e124fa84734fb923"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_b_kcurve.csv",
+    "bytes": 109113,
+    "sha256": "c34c47aba3840cde1705dccd49e2acce120391b54ef608059f5be7ff19f3bc9d"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_b_tau.csv",
+    "bytes": 8899,
+    "sha256": "2fda671059a5daa0e9f231c96e24ccee1b50f94bf86afc815df09bc1bd729b32"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_c_p2.csv",
+    "bytes": 6540,
+    "sha256": "e11d963190f52281d82855c1aad4877efe5960fd30703bc891639ac448bb688d"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_c_summary.md",
+    "bytes": 2562,
+    "sha256": "d4f799db60fd8c5f7eb466ce985f0900661fcf8d3f0c284295dc26fc549566c2"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_d_maximin.csv",
+    "bytes": 626,
+    "sha256": "f8b636c7e6607c2dcdbd64d3371a9305a0a4d1b6a3545b33d23129f031640751"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_d_profile.csv",
+    "bytes": 726,
+    "sha256": "a2bbef512c7e517bf76813cb6a8c56f5978a98a8dfb841aa0ee3132745a85d0c"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_d_summary.md",
+    "bytes": 1849,
+    "sha256": "149e6246ab7815712de6be892d24782ec16d2ecc74fa160c2036056b3290a56a"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_e_summary.md",
+    "bytes": 1290,
+    "sha256": "e1785b391288beac15c89a7b737bbaa867b5a01534516ecb256add5ffe97b53d"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_e_time.csv",
+    "bytes": 966,
+    "sha256": "c5a9c5863bfe11808dc8f602dc7e065082fcf95070047a4069197491221b96ab"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_f_ku.csv",
+    "bytes": 4095776,
+    "sha256": "d8189c8b4124f985a132c4d8f707d29875d9bdef3000b2c148a569468e5f0f14"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\exp_f_null.csv",
+    "bytes": 116768,
+    "sha256": "5106c7bcc78b8b275a65cd8a859c8b8ee341887de5563f8f8296f1178fe59693"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\synth.md",
+    "bytes": 15910,
+    "sha256": "6e5a9a743833a0cbbc93640d2390a6f673c21cba47cd8438dc2ad78044b2abde"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\연구1_실험종합_20260926.md",
+    "bytes": 6466,
+    "sha256": "8fb86c7d29cfd80d06ea16adad948a39b436ca2f434957a36ea94571a689a615"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_a.log",
+    "bytes": 1156,
+    "sha256": "45cf010793b12aa65ed4bf55a5bbf84aba027937f8da4bff522e353e83fb95b0"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_b.log",
+    "bytes": 185,
+    "sha256": "8b98051f9ec472199d370810be661346419146c44f83310977bf7d28ba8fd534"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_c.log",
+    "bytes": 2874,
+    "sha256": "d43752493acdeafed358ae80044101cb1e2b817e72a0c29a6b90cddb9e84e672"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_d.log",
+    "bytes": 1978,
+    "sha256": "6f12a51029a9d1687b104357ad98567acaac8f2c121826c9c98ecef51fe5c84d"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_e.log",
+    "bytes": 1460,
+    "sha256": "9e787000323d8f9b68bc3420436e908be01f8336791f87e4061f6ae3615a5dae"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\logs\\exp_f.log",
+    "bytes": 1116,
+    "sha256": "7202a6444dfd598dec81f33b5647b79a1067536423057db335238fb3acf6a335"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\exp1_H.csv",
+    "bytes": 1244,
+    "sha256": "f72bfa9089487ee571d16ff774879d9e570753bb38462ea31cbe064817944226"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\exp2_library.csv",
+    "bytes": 1261,
+    "sha256": "bcd3d2c51003331f40ffcc3db5e2610431883032443a1491d512232510ee71e7"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\exp2_random_null.csv",
+    "bytes": 10483,
+    "sha256": "fca941053b820b95736fc13209665001ccecf5ae3a86c10cd70f66e05c88e87b"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\pilot2_log.md",
+    "bytes": 4483,
+    "sha256": "b8095d9146e015bcfdb87f4469caf3f1d5b188b41f02f3198a7b4dd5b84cd1a5"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\pilot_log.md",
+    "bytes": 6532,
+    "sha256": "0cb4a7c88bf3150e6d68d3accec008e5a266b209450d4fbb89df6c28db7a33a7"
+  },
+  {
+    "path": "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\_pilot_20260926\\results\\pilot_out\\random_baseline.csv",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  }
+]

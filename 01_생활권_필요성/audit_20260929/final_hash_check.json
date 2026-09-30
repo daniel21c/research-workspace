@@ -1,0 +1,18 @@
+{
+  "owned": {
+    "count_before": 135,
+    "count_after": 135,
+    "changed": []
+  },
+  "inputs": {
+    "count_before": 396,
+    "count_after": 396,
+    "changed": []
+  },
+  "session": {
+    "path": "C:\\Users\\cyion\\.claude\\projects\\C--Users-cyion\\699e0cef-003f-4543-bb89-3764cfec73e2.jsonl",
+    "bytes": 8357382,
+    "mtime_ns": 1790508179711430800,
+    "sha256": "516cebb251113bab52d50ebb724e19b07ec51803948c2c87d395118cc6974250"
+  }
+}
