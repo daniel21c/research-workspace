@@ -203,16 +203,17 @@ BODY = [
           'be reached and lies in the same zone as o under plan b. The walking route may pass through other zones; only the '
           'location of the destination matters. The population of cell o is excluded under b if at least one category is '
           'reachable but not within the zone:'),
-    ('eq', 'L(b) = Σ_o p_o · 1[ ∃c : r_oc = 1 and r_oc^b = 0 ]                                        (1)'),
+    ('eq', 'EQ1'),
     ('p', 'Each resident is counted once, however many categories are affected. A category that a resident cannot reach at all '
           'does not count towards L, since that is a lack of access no boundary can repair; such a resident may still enter L '
           'through another category. L therefore measures how much of the walkable supply a plan places outside residents’ zones. '
           'For a revised plan b relative to the official plan b_0, the change ΔL = N − R separates residents newly excluded (N) '
           'from those whose exclusion is resolved (R). The separation matters because large gains and losses can cancel.'),
-    ('p', 'We also report the internal flow ratio, IFR(b) = Σ_ij f_ij 1[b(i) = b(j)] / Σ_ij f_ij, the share of trips between '
-          'Seoul dongs that begin and end in the same zone. L is an accounting quantity. It records which reachable services a '
-          'plan counts as lying inside a resident’s zone, not which services residents use or whether they are prevented from '
-          'using those outside.'),
+    ('p', 'We also report the internal flow ratio, the share of trips between Seoul dongs that begin and end in the same zone:'),
+    ('eq', 'EQ3'),
+    ('pc', 'where f_ij is the number of trips from dong i to dong j. L is an accounting quantity. It records which reachable '
+          'services a plan counts as lying inside a resident’s zone, not which services residents use or whether they are '
+          'prevented from using those outside.'),
     ('h2', '3.2. Flow-guided and random reassignment of boundary dongs (Q1)'),
     ('p', 'The first question is answered by comparing two kinds of reassignment path. A reassignment moves one dong to an '
           'adjacent zone in the same gu, where two dongs are adjacent if their polygons touch (queen contiguity). A move is '
@@ -221,8 +222,8 @@ BODY = [
     ('p', 'The flow-guided revision chooses moves by modularity. Within each gu, trips between dongs form an undirected weighted '
           'network with w_ij = f_ij + f_ji and self-loops w_ii = f_ii. At each step the move that most increases modularity Q '
           '(resolution 1; Newman, 2006) is applied. For moving dong v from zone a to zone z,'),
-    ('eq', 'ΔQ = (k_vz − k_va)/m − [(d_a − d_v)² + (d_z + d_v)² − d_a² − d_z²] / (4m²)                (2)'),
-    ('p', 'where k_vz is the weight between v and zone z excluding the self-loop, d is the weighted degree with self-loops '
+    ('eq', 'EQ2'),
+    ('pc', 'where k_vz is the weight between v and zone z excluding the self-loop, d is the weighted degree with self-loops '
           'counted twice, and m is the total weight in the gu. A gu stops when no move raises Q, and a dong may be moved more '
           'than once. The district sequences are merged into one citywide sequence by repeatedly taking, among the gu, the next '
           'move with the largest ΔQ. The resulting path has {nm25} moves in {ngu25} gu in 2025 and {nm20} moves in {ngu20} gu in '

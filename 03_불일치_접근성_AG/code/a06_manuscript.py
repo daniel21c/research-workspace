@@ -23,6 +23,7 @@ HERE = Path(__file__).resolve().parent; AG = HERE.parent; RES = AG / 'results'; 
 sys.path.insert(0, str(HERE))
 import a06_text_en as EN  # noqa: E402
 import a06_text_ko as KO  # noqa: E402
+import a06_math as MATH  # noqa: E402
 
 CAT = ['교육', '보육·복지', '의료', '문화', '행정·안전', '소매', '생활서비스']
 CAT_EN = dict(zip(CAT, ['Education', 'Childcare and welfare', 'Health', 'Culture', 'Civic and safety', 'Retail', 'Personal services']))
@@ -293,16 +294,25 @@ def figure(d, key, cap, width=15.5):
     q = para(d, cap, indent=False, size=10); q.paragraph_format.line_spacing = 1.0; d.add_paragraph()
 
 
-def render(blocks, V, TB, caps, d):
+def math_para(d, text, lang='en', indent=True):
+    p = d.add_paragraph()
+    if indent:
+        p.paragraph_format.first_line_indent = Cm(0.75)
+    return MATH.math_paragraph(p, text, lang)
+
+
+def render(blocks, V, TB, caps, d, lang='en'):
     for kind, x in blocks:
         if kind == 'h1':
             heading(d, x, 1)
         elif kind == 'h2':
             heading(d, x, 2)
         elif kind == 'p':
-            para(d, x.format_map(V))
+            math_para(d, x.format_map(V), lang)
+        elif kind == 'pc':
+            math_para(d, x.format_map(V), lang, indent=False)
         elif kind == 'eq':
-            p = para(d, x, indent=False, align=WD_ALIGN_PARAGRAPH.CENTER); p.runs[0].italic = False
+            MATH.display_equation(d, x, lang)
         elif kind == 'table':
             table(d, *TB[x])
         elif kind == 'fig':
@@ -382,7 +392,7 @@ def check_citations(text):
 
 
 def body_text(blocks, V):
-    return ' '.join(x.format_map(V) if k == 'p' else x for k, x in blocks if k in ('p', 'h1', 'h2', 'eq'))
+    return ' '.join(x.format_map(V) if k in ('p', 'pc') else x for k, x in blocks if k in ('p', 'pc', 'h1', 'h2', 'eq'))
 
 
 def words(s):
@@ -450,7 +460,7 @@ def main():
     for h in ['경계 동의 무작위 재배정은 경로 끝에서 누락 주민을 늘렸다', '통행 기준 재배정은 인구·형상 조밀도 제약 없이 경로 끝에서 누락을 줄였다',
               '서울 공식 생활권은 표본으로 뽑은 규모·모양 조건 대안 지도 거의 전부보다 누락 주민이 적다', '경계 동의 통행은 시설이 더 많은 인접 생활권으로 기운다', '경계를 고칠 때는 통행 포착과 서비스 포착을 함께 점검해야 한다']:
         para(d, '• ' + h, indent=False)
-    d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d)
+    d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d, lang='ko')
     heading(d, '부록 A', 1)
     for key in ('A1', 'A2', 'A3', 'A4'):
         table(d, *APk[key])
