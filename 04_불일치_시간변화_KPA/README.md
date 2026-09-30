@@ -13,3 +13,13 @@
 - `output/`에는 zip 두 개(공동연구자 패키지·제출본)와 원고·표·그림만 둔다. zip과 같은 내용의 압축 해제 폴더와 한글 작업 파일은 `D:\Research\_archive\04_KPA_중간산출물_20260930\`로 옮겼고, k20은 zip을 만든 뒤 폴더를 남기지 않는다.
 
 이 폴더 밖의 파일은 수정하지 않는다. 규칙은 [저장소 README](../README.md)를 따른다.
+
+## 폴더 구성(확정본만 남김, 2026-09-30)
+- `README.md` · `연구설계_KPA확정본.md` · `작업기록.md`
+- `scripts/` — 확정 파이프라인 16개 + `tests/` 3개 + `run_submission.bat` + `requirements.txt`
+- `templates/` — 학회 편집규정·AI 가이드라인·국문샘플 사본
+- `output/manuscript_kpa/` — 원고 md·docx·pdf, 투고본 hwp·pdf(심사용·저자정보), 체크리스트, 대응표(1~6차), 구성변경 대조표, 점검 기록 json
+- `output/tables/`, `output/tables/benchmark/`, `output/tables/integrity/`, `output/figures/` — 결과 표·그림(모두 코드로 재생성)
+- `output/KPA_확정본_공동연구자패키지_20260930.zip` — **공동연구자에게 보낼 것**(원고·코드·자료·결과·문서, 자기완결)
+- `output/KPA_확정본_제출본_20260930.zip` — 투고 시스템 업로드용(01 심사용 hwp + 04 시스템 입력 내용만 올림)
+- 그 밖의 중간 산출물(한글 작업 파일, 압축 해제 폴더, 이전 설계·탐색 코드)은 `D:\Research\_archive_KPA_*\`에 있다. 필요 없으면 그 폴더를 지우면 된다.
