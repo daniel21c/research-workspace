@@ -447,7 +447,7 @@ def main():
     d = base_doc(lines=False, spacing=1.15)
     for s in ['Dear Editor,', '',
               f'We submit the manuscript “{EN.TITLE}” for consideration as a research article in Applied Geography.',
-              'Cities that plan by neighbourhood zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary neighbourhoods with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary neighbourhoods go where walkable facilities are. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
+              'Cities that plan by living zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary dongs with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary dongs go where walkable facilities are. In Seoul, following trips kept walkable services inside the zones while raising self-containment; random moves of the same extent pushed them out every time. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
               'The manuscript has not been published and is not under consideration elsewhere. A companion paper in preparation for a Korean planning journal uses the same mobility data to study how the mismatch between official zones and trips changed between 2020 and 2025; it does not examine facilities or accessibility, and its questions and results do not overlap with this submission. We have not cited it to preserve anonymity and because it has not yet been submitted.',
               'Both authors have approved the manuscript and agree with its submission. There are no competing interests.', '', 'Sincerely,', 'Jongha Park and Sunyong Eom (corresponding author, sunyongeom@hanyang.ac.kr)', 'Graduate School of Urban Studies, Hanyang University']:
         para(d, s, indent=False)
@@ -457,8 +457,8 @@ def main():
     para(d, KO.TITLE, bold=True, indent=False, align=WD_ALIGN_PARAGRAPH.CENTER, size=14); d.add_paragraph()
     heading(d, '초록', 1); para(d, KO.ABSTRACT, indent=False); para(d, '주제어: ' + ', '.join(KO.KEYWORDS), indent=False, space_before=6)
     heading(d, '연구 하이라이트(영문 원고용 번역)', 1)
-    for h in ['경계 동의 무작위 재배정은 경로 끝에서 누락 주민을 늘렸다', '통행 기준 재배정은 인구·형상 조밀도 제약 없이 경로 끝에서 누락을 줄였다',
-              '서울 공식 생활권은 표본으로 뽑은 규모·모양 조건 대안 지도 거의 전부보다 누락 주민이 적다', '경계 동의 통행은 시설이 더 많은 인접 생활권으로 기운다', '경계를 고칠 때는 통행 포착과 서비스 포착을 함께 점검해야 한다']:
+    for h in ['경계 동을 통행을 따라 재배정하면 걸어서 닿는 서비스가 서울 생활권 안에 남았다', '같은 규모의 무작위 재배정은 모의 경로 전부에서 서비스를 밖으로 밀어냈다',
+              '자족성과 경계 내 서비스 포착이 함께 좋아졌다', '서울 공식 생활권은 규모·형상을 맞춘 대안 지도 거의 전부보다 낫다', '경계 동의 통행은 걸어서 닿는 의료·소매·생활서비스가 있는 곳으로 간다']:
         para(d, '• ' + h, indent=False)
     d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d, lang='ko')
     heading(d, '부록 A', 1)

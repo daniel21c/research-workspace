@@ -1,10 +1,10 @@
 {
- "abstract": 244,
- "body_incl_headings": 5692,
- "figure_captions": 146,
+ "abstract": 246,
+ "body_incl_headings": 5723,
+ "figure_captions": 147,
  "tables": 437,
  "references": 1320,
  "n_references": 51,
  "ai_declaration": 50,
- "total_AG_count(abstract+body+tables+captions+declaration+references)": 7889
+ "total_AG_count(abstract+body+tables+captions+declaration+references)": 7923
 }
