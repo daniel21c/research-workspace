@@ -15,7 +15,7 @@ from pathlib import Path
 import pyarrow.parquet as pq
 import config as C
 sys.stdout.reconfigure(encoding="utf-8")
-MK = C.OUT / "manuscript_kpa"; CORE = C.CORE_DATA
+MK = C.MK; CORE = C.CORE_DATA
 rec = {"생성": time.strftime("%Y-%m-%d %H:%M:%S")}
 
 
@@ -101,7 +101,7 @@ from docx import Document
 docx = sorted(p for p in MK.glob("국토계획_투고초본_v*.docx") if "2단" not in p.stem)[-1]
 if "_v2_" in docx.name:
     from k18_v2_results import build_tables_v2
-    tabs = build_tables_v2(); keys = ["T1", "T2", "T3", "T4", "T5", "T6", "TA1"]
+    tabs = build_tables_v2(); keys = ["T1", "T2", "T3", "T4", "T5", "T6", "TA2", "TA1"]   # 원고 등장 순서(부록: A2 → A1)
 else:
     import k06_kpa_submission as k6
     tabs = k6.build_tables(); keys = ["T1", "T2", "T3", "T4", "T5", "TA1"]
@@ -109,17 +109,32 @@ exp = {kk: [tabs[kk]["headers"]] + [[str(x) for x in r] for r in tabs[kk]["rows"
 rec["3_대조_원고"] = docx.name
 d = Document(str(docx)); mism = [kk for t, kk in zip(d.tables, keys) if [[c.text for c in r.cells] for r in t.rows] != exp[kk]]
 rec["3_docx_표_불일치"] = mism; print(f"3 docx 표 {len(keys)}개 대조: 불일치", mism)
-try:
+# hwp: k22 투고본(학회 샘플 위 조립, 심사용·저자정보) — 앞부분 제목 상자·저자 각주 표가 있으므로 모든 표를 읽어 결과 표가 들어 있는지 대조
+def _hwp_tables(path):
+    """hwp를 HWPML(XML)로 내보내 모든 표의 셀 글자를 행·열 순서로 읽는다(한글 자동화의 표 읽기 기능은 서버 예외가 나서 쓰지 않음)."""
+    import xml.etree.ElementTree as ET
     from pyhwpx import Hwp
-    os.system("taskkill /F /IM Hwp.exe >nul 2>&1")
-    hwp = Hwp(visible=False); hwp.open(str(docx.with_suffix(".hwp"))); mism_h = []
-    for i, kk in enumerate(keys):
-        hwp.get_into_nth_table(i); df = hwp.table_to_df()
-        got = [list(map(str, df.columns))] + [[str(x) for x in r] for r in df.values.tolist()]
-        if got != exp[kk]: mism_h.append(kk)
-    hwp.quit(); rec["3_hwp_표_불일치"] = mism_h; print(f"3 hwp 표 {len(keys)}개 대조: 불일치", mism_h)
-except Exception as e:
-    rec["3_hwp"] = f"미실행: {e!r}"[:120]; print("3 hwp 미실행:", repr(e)[:80])
+    hml = C.OUT / "_hwp_work" / (path.stem + "_check.hml"); hml.parent.mkdir(parents=True, exist_ok=True)
+    from k22_hwp_kpa import new_hwp, cleanup_own_hwp
+    hwp = new_hwp()
+    try: hwp.open(str(path)); hwp.save_as(str(hml), "HWPML2X"); hwp.quit()
+    finally: cleanup_own_hwp()
+    root = ET.fromstring(hml.read_bytes().lstrip(bytes([0xEF, 0xBB, 0xBF]))); got = []
+    for t in root.iter("TABLE"):
+        rows = []
+        for r in t.findall("ROW"):
+            cells = sorted(r.findall("CELL"), key=lambda c: int(c.get("ColAddr")))
+            rows.append(["".join(ch.text or "" for ch in c.iter("CHAR")) for c in cells])
+        got.append(rows)
+    return got
+for nm in ("심사용", "저자정보"):
+    hp = MK / f"국토계획_투고본_{nm}_20260929.hwp"
+    try:
+        got = _hwp_tables(hp); mism_h = [kk for kk in keys if exp[kk] not in got]
+        rec[f"3_hwp_{nm}_표_불일치"] = mism_h; rec[f"3_hwp_{nm}_읽은_표"] = len(got); print(f"3 hwp({nm}) 표 {len(keys)}개 대조: 불일치", mism_h, f"(읽은 표 {len(got)}개)")
+    except Exception as e:
+        rec[f"3_hwp_{nm}"] = f"미실행: {e!r}"[:120]; print(f"3 hwp({nm}) 미실행:", repr(e)[:80])
+rec["3_hwp_표_불일치"] = sorted(set(rec.get("3_hwp_심사용_표_불일치", ["미실행"])) | set(rec.get("3_hwp_저자정보_표_불일치", ["미실행"])))
 
 (MK / "독립재계산_기록.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
 print("기록:", MK / "독립재계산_기록.json")

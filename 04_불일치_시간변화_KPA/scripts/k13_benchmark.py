@@ -34,9 +34,25 @@ N_NULL = 1000; SEED = 20260927; N2_TOL = (0.05, 0.08, 0.12); N2_MAX_TRY = 40000
 rng = np.random.default_rng(SEED)
 
 
+TIE_ATOL = 1e-12      # 동률 판정 절대허용오차: 같은 구성원 권역을 다른 합산 순서로 계산할 때의 부동소수 오차(~1e-16)만 동률로 본다
+
+
 def pct(v, arr):
+    """백분위 = (v보다 작은 비교값 수 + 0.5 × 동률 수) / 비교값 수. '작음'과 '동률'은 겹치지 않는다(2026-09-28 수정:
+    이전 식은 arr<v 이면서 isclose인 값을 1.5번 세었다)."""
     arr = np.asarray(arr, float)
-    return float(((arr < v).sum() + 0.5 * (np.isclose(arr, v)).sum()) / len(arr)) if len(arr) else np.nan
+    if not len(arr): return np.nan
+    eq = np.abs(arr - v) <= TIE_ATOL
+    lower = (arr < v) & ~eq
+    return float((lower.sum() + 0.5 * eq.sum()) / len(arr))
+
+
+def n_distinct(parts):
+    """분할 목록 중 서로 다른 분할 수(권역 번호를 첫 등장 순으로 다시 매겨 비교)."""
+    seen = set()
+    for p in parts:
+        m = {}; seen.add(tuple(m.setdefault(x, len(m)) for x in p))
+    return len(seen)
 
 
 def grow(nodes, adj, sizes, rng, max_attempt=400):
@@ -143,7 +159,8 @@ def main():
                 if len(acc) >= 200: break
             nulls[f"N2_{b}"] = acc[:N_NULL]
             meta.append({"ku": K, "ku_name": name, "boundary": b, "n_dong": n, "k": kk, "sizes": "-".join(map(str, sorted(sizes, reverse=True))),
-                         "N1_n": len(nulls[f"N1_{b}"]), "N1_pool": len(pool), "N2_n": len(acc[:N_NULL]), "N2_tol": tol_used})
+                         "N1_n": len(nulls[f"N1_{b}"]), "N1_pool": len(pool), "N2_n": len(acc[:N_NULL]), "N2_tol": tol_used,
+                         "N0_distinct": n_distinct(nulls["N0"]), "N1_distinct": n_distinct(nulls[f"N1_{b}"]), "N2_distinct": n_distinct(nulls[f"N2_{b}"])})
         # (1) 구 단위
         for y in C.YEARS:
             for b in ("LZ", f"LD{y}"):
@@ -202,6 +219,11 @@ def main():
     for (y, b), dd in d.groupby(["year", "boundary"]):
         S[f"동_{b}_{y}"] = {"n": len(dd), "포착률_중앙": round(float(dd.capture.median()), 3), "동내부비중_중앙": round(float(dd.self_share.median()), 3), "pct_N1_중앙": round(float(dd.pct_N1.median()), 3), "pct_N1<0.25_동수": int((dd.pct_N1 < 0.25).sum()), "이웃권역이_더_담는_동수": int(dd.misassigned.sum())}
     S["N2_허용치_사용"] = mt.groupby("boundary").N2_tol.value_counts().to_dict().__repr__()
+    lzm_ = mt[mt.boundary == "LZ"]
+    S["무작위_비교경계_표본"] = {"추출": "구마다 N0 1,000번, N1 1,000번(중복 허용), N2는 N1 후보 풀(최대 10,000개)에서 통행량 비중 조건을 만족하는 것 최대 1,000개",
+                          "N0_고유분할_최소": int(mt.N0_distinct.min()), "N1_고유분할_최소(공식)": int(lzm_.N1_distinct.min()),
+                          "N2_표본_1000미만_구(공식)": {r.ku_name: int(r.N2_n) for r in lzm_.itertuples() if r.N2_n < N_NULL},
+                          "N2_허용치_완화(0.05초과)": [f"{r.ku_name} {r.boundary} {r.N2_tol} ({int(r.N2_n)}개)" for r in mt.itertuples() if r.N2_tol > 0.05]}
     S["seconds"] = round(time.time() - t0)
     (OUT / "b_summary.json").write_text(json.dumps(S, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(S, ensure_ascii=False, indent=1))

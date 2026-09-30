@@ -90,6 +90,24 @@ def test_pct_definition():
     assert pct(5, [1, 2, 3, 4]) == 1.0 and pct(0, [1, 2]) == 0.0 and pct(2, [1, 2, 3]) == 0.5
 
 
+def test_pct_no_double_count():
+    """'작음'과 '동률'이 겹치지 않는다(2026-09-28 외부 점검 지적: 0.35 vs [0.349999]가 1.5를 반환하던 오류)."""
+    assert pct(0.35, [0.349999]) == 1.0                      # 분명히 작은 값 → 1
+    assert pct(0.35, [0.35 - 1e-16]) == 0.5                  # 합산 순서 오차 수준 → 동률
+    assert pct(0.35, [0.35, 0.35, 0.35]) == 0.5              # 전부 동률 → 0.5
+    assert pct(0.35, [0.35 + 1e-9]) == 0.0                   # 분명히 큰 값 → 0
+    rng = np.random.default_rng(1)
+    for _ in range(200):
+        a = rng.choice([0.1, 0.2, 0.3], size=7) + rng.choice([0, 1e-17, 1e-9], size=7); v = rng.choice([0.1, 0.2, 0.3])
+        assert 0.0 <= pct(v, a) <= 1.0
+    assert np.isnan(pct(0.3, []))
+
+
+def test_n_distinct():
+    from k13_benchmark import n_distinct
+    assert n_distinct([np.array([0, 0, 1]), np.array([1, 1, 0]), np.array([0, 1, 1])]) == 2   # 번호만 다른 같은 분할은 하나
+
+
 def test_determinism():
     a = [grow(NODES, GRID, np.array([5, 4, 3]), np.random.default_rng(7)) for _ in range(3)]
     b = [grow(NODES, GRID, np.array([5, 4, 3]), np.random.default_rng(7)) for _ in range(3)]

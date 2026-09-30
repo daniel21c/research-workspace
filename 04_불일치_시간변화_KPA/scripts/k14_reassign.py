@@ -56,6 +56,21 @@ def dmis(W, Tsum, lz, ld):
     return float((W * (sz ^ sd)).sum() / Tsum)
 
 
+def alt_metrics(W, lz, ld):
+    """대안 분모(기존 KPA 정본 기준): 같은 구 안 통행 중 자기 동 내부통행을 뺀 통행 T*. IFR* = 같은 권역 안(자기 동 제외) / T*, D* = 판정 차 통행 / T*."""
+    Ts = float(W.sum() - np.trace(W))
+    sz = lz[:, None] == lz[None, :]; sd = ld[:, None] == ld[None, :]
+    return Ts, float(((W * sz).sum() - np.trace(W)) / Ts), float((W * (sz ^ sd)).sum() / Ts)
+
+
+def final_changes(greedy: pd.DataFrame, lzm: pd.DataFrame, year: int) -> set:
+    """이동 기록을 공식 생활권에 차례로 적용한 뒤 최종 소속이 달라진 동의 (동, 원래 생활권, 최종 생활권) 집합."""
+    labf = lzm.life_zone_name.copy()
+    for r in greedy[greedy.year == year].sort_values(["ku_name", "step"]).itertuples(): labf[r.dong] = r.to_zone
+    ch = labf[labf != lzm.life_zone_name]
+    return {(d, lzm.life_zone_name[d], z) for d, z in ch.items()}
+
+
 def main():
     adj, _ = build_adjacency()
     lzm = pd.read_csv(C.LZ_MAP, encoding="utf-8-sig").set_index("Dong")
@@ -69,6 +84,7 @@ def main():
         zname = grp.loc[nodes, "life_zone_name"].values
         lz0 = pd.factorize(grp.loc[nodes, "life_zone_id"])[0]; zlabel = {int(l): zname[i] for i, l in enumerate(lz0)}
         name = grp["ku_name"].iat[0]
+        lab_prev = None                                   # 2020 재배정 결과 경계(2025 통행에 재최적화 없이 적용하는 보류 검증용)
         for y in C.YEARS:
             o = od[y][od[y].dong_O.isin(pos)]; Tsum = float(o.flow.sum())
             w = o[o.dong_D.isin(pos)]; W = np.zeros((n, n))
@@ -108,9 +124,17 @@ def main():
                                "dIFR_pp": (ifr(W, Tsum, new) - ifr(W, Tsum, lab)) * 100})
                 lab = new; Qc = modularity(A, lab)
             I1, Q1, D1 = ifr(W, Tsum, lab), Qc, dmis(W, Tsum, lab, ld)
-            gsum.append({"year": int(y), "ku_name": name, "n_dong": n, "k": int(lz0.max() + 1), "n_moved": step,
+            # n_moved = 최종 소속이 공식 생활권과 달라진 동 수, n_move_events = 이동 횟수(같은 동이 두 번 옮겨질 수 있음, 2026-09-28 구분)
+            gsum.append({"year": int(y), "ku_name": name, "n_dong": n, "k": int(lz0.max() + 1), "n_moved": int((lab != lz0).sum()), "n_move_events": step,
                          "IFR_before": I0, "IFR_after": I1, "dIFR_pp": (I1 - I0) * 100, "Q_before": Q0, "Q_after": Q1,
-                         "Q_LD": modularity(A, ld), "IFR_LD": ifr(W, Tsum, ld), "D_before": D0, "D_after": D1, "T": Tsum})
+                         "Q_LD": modularity(A, ld), "IFR_LD": ifr(W, Tsum, ld), "D_before": D0, "D_after": D1, "T": Tsum,
+                         # 보류 검증: 2020 자료로 정한 재배정 경계를 2025 통행에 그대로 적용(2025에서는 다시 최적화하지 않음)
+                         "IFR_fixed_prev": ifr(W, Tsum, lab_prev) if lab_prev is not None else np.nan,
+                         "Q_fixed_prev": modularity(A, lab_prev) if lab_prev is not None else np.nan,
+                         "D_fixed_prev": dmis(W, Tsum, lab_prev, ld) if lab_prev is not None else np.nan})
+            Ts, I0s, D0s = alt_metrics(W, lz0, ld); _, I1s, D1s = alt_metrics(W, lab, ld); _, ILs, _ = alt_metrics(W, ld, ld)
+            gsum[-1].update({"T_samegu_noself": Ts, "IFRs_before": I0s, "IFRs_after": I1s, "IFRs_LD": ILs, "Ds_before": D0s, "Ds_after": D1s})
+            if y == C.Y0: lab_prev = lab.copy()
         print(name, "완료", flush=True)
     s = pd.DataFrame(single); g = pd.DataFrame(greedy); gs = pd.DataFrame(gsum)
     s.to_csv(OUT / "b4_single_moves.csv", index=False, encoding="utf-8-sig"); g.to_csv(OUT / "b4_greedy_moves.csv", index=False, encoding="utf-8-sig"); gs.to_csv(OUT / "b4_gu_summary.csv", index=False, encoding="utf-8-sig")
@@ -118,20 +142,41 @@ def main():
     for y in (int(C.Y0), int(C.Y1)):
         sy = s[s.year == y]
         best_per_dong = sy.sort_values("dQ", ascending=False).drop_duplicates("dong")
+        # 판정 기준: 동마다 모듈성 증가가 가장 큰 이동 하나(탐욕 재배정과 같은 기준)를 골라 그 이동의 IFR·Q 변화를 본다.
+        # 민감도: 가능한 이동 중 하나라도 IFR·Q가 함께 오르는 동의 수(둘다>0_아무이동)도 함께 기록한다.
+        anyboth = sy.assign(both=(sy.dIFR_pp > 0) & (sy.dQ > 0)).groupby("dong").both.any()
         for flag, lab_ in ((True, "옆생활권지향동"), (False, "그밖의_경계동")):
             b = best_per_dong[best_per_dong.misassigned_k13 == flag]
             R[f"{y}_{lab_}"] = {"n": len(b), "ΔIFR>0": int((b.dIFR_pp > 0).sum()), "ΔQ>0": int((b.dQ > 0).sum()), "둘다>0": int(((b.dIFR_pp > 0) & (b.dQ > 0)).sum()),
-                                "ΔIFR>0_ΔQ≤0(크기효과)": int(((b.dIFR_pp > 0) & (b.dQ <= 0)).sum())}
+                                "ΔIFR>0_ΔQ≤0(크기효과)": int(((b.dIFR_pp > 0) & (b.dQ <= 0)).sum()),
+                                "둘다>0_아무이동": int(anyboth.reindex(b.dong).sum()),
+                                "둘다>0_아무이동_추가동": sorted(set(sy[sy.dong.isin(anyboth[anyboth].index) & sy.dong.isin(b.dong)].dong_name) - set(b[(b.dIFR_pp > 0) & (b.dQ > 0)].dong_name))}
+        R[f"{y}_경계동_수"] = int(best_per_dong.dong.nunique())
         gy = gs[gs.year == y]; TT = gy["T"].sum()
-        R[f"{y}_탐욕재배정"] = {"옮긴_동": int(gy.n_moved.sum()), "옮긴_구": int((gy.n_moved > 0).sum()),
-                            "서울IFR_전": round(float((gy.IFR_before * gy["T"]).sum() / TT * 100), 2), "서울IFR_후": round(float((gy.IFR_after * gy["T"]).sum() / TT * 100), 2),
-                            "서울IFR_가상경계": round(float((gy.IFR_LD * gy["T"]).sum() / TT * 100), 2),
-                            "서울D_전": round(float((gy.D_before * gy["T"]).sum() / TT * 100), 2), "서울D_후": round(float((gy.D_after * gy["T"]).sum() / TT * 100), 2),
-                            "Q_전_중앙": round(float(gy.Q_before.median()), 4), "Q_후_중앙": round(float(gy.Q_after.median()), 4), "Q_가상경계_중앙": round(float(gy.Q_LD.median()), 4)}
-    g20 = set(g[g.year == int(C.Y0)][["dong", "to_zone"]].itertuples(index=False, name=None)); g25 = set(g[g.year == int(C.Y1)][["dong", "to_zone"]].itertuples(index=False, name=None))
-    R["두해모두_권고_이동"] = len(g20 & g25); R["2020만"] = len(g20 - g25); R["2025만"] = len(g25 - g20)
-    both = g[(g.year == int(C.Y1)) & g.apply(lambda r: (r.dong, r.to_zone) in g20, axis=1)]
-    R["두해모두_권고_목록"] = [f"{r.ku_name} {r.dong_name}: {r.from_zone} → {r.to_zone}" for r in both.itertuples()]
+        R[f"{y}_탐욕재배정"] = {"옮긴_동": int(gy.n_moved.sum()), "이동_횟수": int(gy.n_move_events.sum()), "옮긴_구": int((gy.n_moved > 0).sum()),
+                            "서울IFR_전": float((gy.IFR_before * gy["T"]).sum() / TT * 100), "서울IFR_후": float((gy.IFR_after * gy["T"]).sum() / TT * 100),
+                            "서울IFR_가상경계": float((gy.IFR_LD * gy["T"]).sum() / TT * 100),
+                            "서울D_전": float((gy.D_before * gy["T"]).sum() / TT * 100), "서울D_후": float((gy.D_after * gy["T"]).sum() / TT * 100),
+                            "Q_전_중앙": float(gy.Q_before.median()), "Q_후_중앙": float(gy.Q_after.median()), "Q_가상경계_중앙": float(gy.Q_LD.median())}
+    for y in (int(C.Y0), int(C.Y1)):
+        gy = gs[gs.year == y]; w = gy.T_samegu_noself; W_ = w.sum()
+        R[f"{y}_대안분모_같은구_자기동제외"] = {"설명": "분모 = 같은 구 안 통행 중 자기 동 내부통행 제외(기존 KPA 정본 기준). 본 분석 분모는 동 내부통행 포함 서울 내부 출발 통행 전체",
+                                        "서울IFR_공식": float((gy.IFRs_before * w).sum() / W_ * 100), "서울IFR_재배정": float((gy.IFRs_after * w).sum() / W_ * 100),
+                                        "서울IFR_가상경계": float((gy.IFRs_LD * w).sum() / W_ * 100), "서울D_공식": float((gy.Ds_before * w).sum() / W_ * 100), "서울D_재배정": float((gy.Ds_after * w).sum() / W_ * 100)}
+    gy = gs[gs.year == int(C.Y1)]; TT = gy["T"].sum()
+    R["보류검증_2020경계를_2025에"] = {"설명": "고정경계 평가(사후 추가): 2020 통행으로 정한 재배정 경계를 2025 통행에 재최적화 없이 적용. D의 비교 기준은 2025 통행으로 도출한 가상경계",
+                                  "서울IFR_공식": float((gy.IFR_before * gy["T"]).sum() / TT * 100), "서울IFR_2020재배정경계": float((gy.IFR_fixed_prev * gy["T"]).sum() / TT * 100),
+                                  "서울IFR_2025재배정": float((gy.IFR_after * gy["T"]).sum() / TT * 100), "서울IFR_가상경계2025": float((gy.IFR_LD * gy["T"]).sum() / TT * 100),
+                                  "서울D_공식": float((gy.D_before * gy["T"]).sum() / TT * 100), "서울D_2020재배정경계": float((gy.D_fixed_prev * gy["T"]).sum() / TT * 100),
+                                  "Q_공식_중앙": float(gy.Q_before.median()), "Q_2020재배정경계_중앙": float(gy.Q_fixed_prev.median()),
+                                  "구_IFR_개선": int((gy.IFR_fixed_prev > gy.IFR_before + 1e-12).sum()), "구_Q_개선": int((gy.Q_fixed_prev > gy.Q_before + 1e-12).sum()),
+                                  "구_D_감소": int((gy.D_fixed_prev < gy.D_before - 1e-12).sum()), "재배정있는_구": int((gs[gs.year == int(C.Y0)].n_moved > 0).sum())}
+    # 두 해 공통: 이동 기록의 중간 단계가 아니라 '원래 공식 생활권 → 최종 생활권'이 같은 동(2026-09-28 수정, 이전에는 중간 이동까지 세어 49)
+    lzm = pd.read_csv(C.LZ_MAP, encoding="utf-8-sig").set_index("Dong")
+    f20, f25 = final_changes(g, lzm, int(C.Y0)), final_changes(g, lzm, int(C.Y1))
+    R["두해모두_권고_이동"] = len(f20 & f25); R["2020만"] = len(f20 - f25); R["2025만"] = len(f25 - f20)
+    R["두해모두_기준"] = "동별 원래 공식 생활권 → 재배정 후 최종 생활권이 두 해 모두 같음"
+    R["두해모두_권고_목록"] = [f"{lzm.ku_name[d]} {lzm.ADM_NM[d]}: {a} → {z}" for d, a, z in sorted(f20 & f25, key=lambda t: (lzm.ku_name[t[0]], lzm.ADM_NM[t[0]]))]
     (OUT / "b4_summary.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(R, ensure_ascii=False, indent=1))
 

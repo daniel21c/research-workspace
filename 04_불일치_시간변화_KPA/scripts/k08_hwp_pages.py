@@ -12,7 +12,7 @@ import json, sys, time
 from pathlib import Path
 import config as C
 
-MK = C.OUT / "manuscript_kpa"
+MK = C.MK
 
 
 def word_pdf(docx: Path, also_doc=False) -> tuple[Path, int]:

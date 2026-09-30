@@ -71,7 +71,9 @@ OUT = ROOT / "output"
 TAB = OUT / "tables"
 FIG = OUT / "figures"
 MAN = OUT / "manuscript"
-for _p in (OUT, TAB, FIG, MAN):
+# 원고(md·docx·hwp·점검 기록) 폴더: 저장소는 output/manuscript_kpa, 공동연구자 패키지는 manuscript/ (k19·k22·k08·k11·시험이 모두 이 값을 쓴다)
+MK = ROOT / "manuscript" if PKG_MODE else OUT / "manuscript_kpa"
+for _p in (OUT, TAB, FIG, MAN, MK):
     _p.mkdir(parents=True, exist_ok=True)
 
 # ---- 분석 상수 (연구설계 9절 권장안) -------------------------------------------
