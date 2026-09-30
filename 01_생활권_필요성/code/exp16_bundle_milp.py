@@ -7,7 +7,7 @@
 IND 정확해: 유형별 MCLP(자기 범주 미도달 인구 최대화)를 각각 정수계획으로 풀고 묶음 완결률로 평가.
    F03 교정: 이전에는 묶음용으로 축약한 후보(완결 가능 격자에 닿는 후보)만 IND 에 넘겼다. 이제 유형별 전체 후보(SUBS)를 쓴다.
 보고: 현재해·상계·갭·solver 상태(F11: 갭 0 이면 "최적", 아니면 "근최적(구간)"), 선택 입지를 저장하고 도달 행렬을 독립 재구성해 완결률을 대조(F22).
-사용: python exp16_bundle_milp.py <seoul|logan7> <연도> [MIP 시간제한초=3600] [nolp] [gap=0] [T900: 서울 묶음 15분 변형]"""
+사용: python exp16_bundle_milp.py <seoul|logan7> <연도> [MIP 시간제한초=3600] [nolp] [gap=0] [T720|T900: 서울 묶음 12·15분 변형]"""
 import sys, time, json
 import numpy as np, pandas as pd
 from scipy import sparse
@@ -21,9 +21,9 @@ pop = Yr.pop; n = len(Yr.M); popped = Yr.popped
 def gidx(sel): return np.unique(Yr.gix.reindex(Yr.F[sel(Yr.F)].grid100_cd.dropna().unique()).dropna().astype(int).to_numpy())
 def growth(name):
     k = len(Y25.fac[name][0]) - len(Y20.fac[name][0]); return k if k >= 3 else max(3, int(round(0.1 * len(Y20.fac[name][0]))))
-VAR = "T900" if "T900" in sys.argv[4:] else ""
+VAR = "T900" if "T900" in sys.argv[4:] else ("T720" if "T720" in sys.argv[4:] else "")
 if bundle == "seoul":
-    T = 900 if VAR else 600
+    T = {"T900": 900, "T720": 720}.get(VAR, 600)
     CATS = [("공원", Yr.fac["공원"][0], []), ("도서관", Yr.fac["도서관"][0], [("도서관", growth("도서관"))]),
             ("노인여가", Yr.fac["노인이용시설"][0], [("노인이용시설", growth("노인이용시설"))]),
             ("청소년아동", np.union1d(Yr.fac["청소년수련시설"][0], Yr.fac["지역아동센터"][0]), [("청소년수련시설", growth("청소년수련시설"))]),
@@ -110,7 +110,7 @@ for s, k, K, cand in SUBS:
     print(f"IND MCLP {s}: 후보 {nx:,} 선택 {len(pick)}/{K} 갭 {g_} {rr.message[:40]} ({time.time()-t2:.0f}s)", flush=True)
 ind_exact = completion_of(ind_picks); ind_all_opt = all(np.isfinite(v["갭"]) and v["갭"] <= 1e-9 for v in ind_stats.values())
 if VAR:
-    g = pd.read_csv(OUT / "표4.1-22_시간외표본_추가수_민감도_seoul.csv"); g = g[(g.실험 == "C5_T900") & (g.year.astype(str) == year)]; col_g = g[g.방식 == "COL"].완결률.iloc[0] * tot; ind_g = g[g.방식 == "IND"].완결률.iloc[0] * tot
+    g = pd.read_csv(OUT / "표4.1-22_시간외표본_추가수_민감도_seoul.csv"); g = g[(g.실험 == f"C5_{VAR}") & (g.year.astype(str) == year)]; col_g = g[g.방식 == "COL"].완결률.iloc[0] * tot; ind_g = g[g.방식 == "IND"].완결률.iloc[0] * tot
 else:
     g = pd.read_csv(OUT / f"표4.1-18_묶음배치_{bundle}_{year}.csv"); col_g = g[g.방식 == "COL_조정_무경계"].완결률.iloc[0] * tot; ind_g = g[g.방식 == "IND_유형별독립"].완결률.iloc[0] * tot
 res = {"bundle": bundle + VAR, "year": year, "T": T, "기준_완결": base / tot, "IND_탐욕": ind_g / tot, "IND_정확(유형별MCLP·전체후보)": ind_exact / tot, "IND_정확_전유형최적": ind_all_opt, "COL_탐욕": col_g / tot,
