@@ -164,6 +164,10 @@ def make_front(meta: dict, mode: str, out_hml: Path, sample_hml: Path):
         if not chars: continue
         if hd.get("ApplyPageType") == "Odd": chars[0].text = SHORT_TITLE
         elif hd.get("ApplyPageType") == "Even": chars[0].text = DOT.join(a["ko"] for a in AUTHORS) if mode == "author" else ""
+    # 쪽 아래 꼬리말: 샘플의 홀·짝 꼬리말에는 게재호 값(제53권 제1호 (2018))이 남아 있어 1쪽 자리표시(제00권 제0호 (2000))와 다르다 → 투고본은 자리표시로 통일(2026-10-02 재확인 지적)
+    for c in root.iter("CHAR"):
+        if c.text and ("제53권 제1호 (2018)" in c.text or "Vol.53, No.1 (2018)" in c.text):
+            c.text = c.text.replace("제53권 제1호 (2018)", "제00권 제0호 (2000)").replace("Vol.53, No.1 (2018)", "Vol.00, No.0 (2000)")
     # 첫 장 제목
     own = [t for t in ps[0] if t.tag == "TEXT"]
     for t in own:
