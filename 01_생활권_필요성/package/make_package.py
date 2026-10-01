@@ -9,7 +9,7 @@ def add_tree(d, skip_dirs=()):
         rel = dp.replace("\\", "/")
         dns[:] = [x for x in dns if x != "__pycache__" and not any((rel + "/" + x).startswith(s) for s in skip_dirs)]
         for f in fns:
-            if f.endswith((".pyc", ".pdf")): continue
+            if f.endswith((".pyc", ".pdf", ".zip", ".docx")): continue
             files.append(os.path.join(dp, f).replace("\\", "/"))
 # 01 루트 md 전부(README·연구설계·작업기록·대응표·대조표)
 for f in os.listdir(R1):
