@@ -52,6 +52,7 @@ chk("mip_gap0", [M19[y].MIP_갭 for y in Y], [0, 0], 0, note="격자 정수계�
 chk("mip_hours", [M19[y].초 / 3600 for y in Y] + [pd.read_csv(RES / f"표4.1-19_묶음정수계획_seoul{t}_2025.csv").iloc[0].초 / 3600 for t in ("T720", "T900")], [1.26, 1.36, 0.78, 0.31], 0.05, "in 0.3–1.4 hours", "0.3~1.4시간에", note="풀이 시간 0.3~1.4시간")
 L20 = pd.read_csv(RES / "표4.1-19_정확해_하위20.csv")
 def low(b, y, h): r = L20[(L20.묶음 == b) & (L20.year == int(y)) & (L20.해 == h)]; return float(r.하위20_완결률.iloc[0])
+def low_c(b, y, h): r = L20[(L20.묶음 == b) & (L20.year == int(y)) & (L20.해 == h)]; return float(r.완결률.iloc[0])
 chk("mip_bottom20", [P(low("seoul", y, "정수계획")) for y in Y], [0.1, 0.2], 0.05, "reaches only 0.1% and 0.2% of the bottom-20 group", "하위 20%의 0.1%·0.2%에만")
 T720 = pd.read_csv(RES / "표4.1-19_묶음정수계획_seoulT720_2025.csv").iloc[0]; T900 = pd.read_csv(RES / "표4.1-19_묶음정수계획_seoulT900_2025.csv").iloc[0]
 chk("t720_t900_base", [P(T720.기준_완결), P(T900.기준_완결)], [11.8, 27.4], 0.05, "raises completion before placement to 11.8% and 27.4% (2025)", "11.8%와 27.4%(2025)로")
@@ -198,7 +199,7 @@ HUB = R1.parent; ADD = pd.read_csv(HUB / "시설데이터 구축/시설데이터
 a = lambda l, y, c: int(ADD[(ADD.layer == l) & (ADD.year == y)][c].iloc[0])
 chk("addon_counts", [a("공공체육", "2020_01", "facilities"), a("공공체육", "2025_01", "facilities"), a("지역아동센터", "2025_01", "facilities"), a("공원", "2025_01", "facilities"), a("공원", "2025_01", "grid_cells")], [387, 456, 307, 1886, 17936], 0, "(387 and 456 facilities)", "(387·456곳)")
 FAC_ALL = pd.read_parquet(HUB / "시설데이터 구축/시설데이터_패키지/데이터/서울시설_2020_2025_분석용.parquet", columns=["시설"])
-chk("facility_records", [len(FAC_ALL), FAC_ALL.시설.nunique()], [584766, 32], 0, "An inventory of 32 facility types", "32개 유형의 시설 목록(584,766건)")
+chk("facility_records", [len(FAC_ALL), FAC_ALL.시설.nunique()], [584766, 32], 0, "An inventory of 32 facility types", "32개 유형의 시설 목록(584,766건")
 
 # ---------------- 10. 개정판(10-02 검토 반영)에서 더한 수치 ----------------
 RC = json.load(open(RES / "재집계_0명생활권_인구_문턱_20261002.json", encoding="utf-8"))
@@ -243,6 +244,19 @@ chk("proof_recount", [RC[y]["LZ5_hard"][k] for y in Y for k in ("zero", "below5"
 ST = json.load(open(RES / "재집계_공공체육엄격_20261002.json", encoding="utf-8"))
 chk("strict_sports_zero", [ST[y][r]["zero"] for r in ("before", "MIP", "LZ5") for y in Y], [55, 41, 21, 15, 5, 2], 0,
     "number 55 and 41 before placement, 21 and 15 after grid bundle maximisation and 5 and 2 under the 5% living-zone minimum", "배치 전 55개와 41개, 격자 묶음 최대화 뒤 21개와 15개, 생활권 5% 최저선 뒤 5개와 2개")
+# 표 4b 격자 3행(그림 6 기준값과 같은 원천): 원고 표 CSV가 결과 파일 값과 같은지(검증 S3-5)
+T4B = pd.read_csv(SRC / "tables" / "Table4b_bundle_report_cards.csv").set_index("Rule")
+def p2row(y): d = B18[y]; return d[d.방식 == "COL_조정_무경계"].iloc[0]
+src4 = {"Grid: facility-by-facility (exact)": {y: (low_c("seoul", y, "IND_정확해"), low("seoul", y, "IND_정확해"), RC[y]["IND"]["zero"]) for y in Y},
+        "Grid: bundle maximisation (exact)": {y: (low_c("seoul", y, "정수계획"), low("seoul", y, "정수계획"), RC[y]["MIP"]["zero"]) for y in Y},
+        "Grid: coordinated (P=2)": {y: (p2row(y).완결률, p2row(y).하위20_완결률, RC[y]["P2"]["zero"]) for y in Y}}
+rec4, man4 = [], []
+for rule, d in src4.items():
+    for y in Y:
+        rec4 += [round(P(d[y][0]), 1), round(P(d[y][1]), 1), d[y][2]]
+        man4 += [float(T4B.loc[rule, f"{y} completion (%)"]), float(T4B.loc[rule, f"{y} bottom-20 (%)"]), int(T4B.loc[rule, f"{y} zero-completion zones"])]
+chk("table4b_grid", rec4, man4, 0, note="표 4b 격자 3행·그림 6 기준값 = 표4.1-19_정확해_하위20, 표4.1-18 p2, 저장 입지 재집계")
+chk("fig6_before_zero", [RC[y]["before"]["zero"] for y in Y], [50, 38], 0, note="그림 6 배치 전 막대")
 # 부록 표 A.1: 원고 표의 값이 표4.1-23과 같은지
 A1 = [l for l in EN_BODY.split("**Table A.1.**")[1].split("\n\n")[1].splitlines() if l.startswith("| 20")]
 umap = {"Gu (1.5 h)": "구", "Dong (1.5 h)": "동", "Official living zones (1.5 h)": "공식LZ", "Official living zones (4 h)": "공식LZ_long", "Mobility communities (1.5 h)": "Leiden"}

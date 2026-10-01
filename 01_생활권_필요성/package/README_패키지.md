@@ -56,5 +56,7 @@ python exp21_floor_proof.py 2025 공식LZ max 0.05 14400   # 2단계: 모든 구
 python milp_check.py 2020 3600 동             # 행정동 도서관 K_min 정수해
 python recount_zero_zones.py                # 저장 입지로 0명 생활권·인구·문턱·공공체육 엄격 층 재집계
 python claims_check.py                      # 원고 수치 자동 대조 → results/claims_check.json
+python clean_empty_sets.py                  # 결과표의 빈 집합(체육시설업) 값 정리
+python build_manifest.py                    # results/manifest.json(결과별 생성 스크립트·입력 SHA·데이터 판)
 ```
 결과는 `results/`에 덮어쓴다. 앞 단계 실험(표4.1-1~13)의 명령은 `results/_logs/run0930/queues.sh`에 있다.

@@ -109,7 +109,18 @@ fig.tight_layout(rect=(0, 0.1, 1, 0.96)); fig.savefig(FIG / "Fig5_living_zone_ma
 
 # ---------- Fig. 6 Zero-completion zones by unit ----------
 fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.8), sharex=True)
-base = {"2020": {"before": 50, "ind": 21, "mip": 18, "p2": 21}, "2025": {"before": 38, "ind": 13, "mip": 14, "p2": 19}}
+# 격자 규칙의 값은 결과 파일에서 읽는다(2026-10-02 검증 S3-5): 0명 생활권 = 저장 입지 재집계(recount_zero_zones.py),
+# 완결률·하위 20% = 표4.1-19_정확해_하위20(IND·MIP)과 표4.1-18_묶음배치_seoul_{y}_p2(조정 P=2)
+RC = json.load(open(OUT / "재집계_0명생활권_인구_문턱_20261002.json", encoding="utf-8"))
+L20 = pd.read_csv(OUT / "표4.1-19_정확해_하위20.csv")
+def grid_vals(y):
+    l = L20[(L20.묶음 == "seoul") & (L20.year == int(y))].set_index("해")
+    p2 = pd.read_csv(OUT / f"표4.1-18_묶음배치_seoul_{y}_p2.csv"); p2 = p2[p2.방식 == "COL_조정_무경계"].iloc[0]
+    return {"IND": (l.loc["IND_정확해", "완결률"], l.loc["IND_정확해", "하위20_완결률"], RC[y]["IND"]["zero"]),
+            "MIP": (l.loc["정수계획", "완결률"], l.loc["정수계획", "하위20_완결률"], RC[y]["MIP"]["zero"]),
+            "P2": (p2.완결률, p2.하위20_완결률, RC[y]["P2"]["zero"])}
+GV = {y: grid_vals(y) for y in ("2020", "2025")}
+base = {y: {"before": RC[y]["before"]["zero"], "ind": GV[y]["IND"][2], "mip": GV[y]["MIP"][2], "p2": GV[y]["P2"][2]} for y in ("2020", "2025")}
 for ax, y, lab in zip(axes, ("2020", "2025"), ("(a) 2020", "(b) 2025")):
     T = pd.read_csv(OUT / f"표4.1-23_권역최저선_{y}.csv")
     def z(u): r = T[(T.단위 == u) & (T.τ == 0.05)]; return float(r["공식LZ_0%권역"].median()) if len(r) else np.nan
@@ -155,8 +166,8 @@ for lab, k in r4:
                      **{f"{y} access-poor reached (%)": f"{D10[y].loc[(f, k), '취약20_도달률']*100:.1f}" for y in ("2020", "2025")},
                      **{f"{y} living zones below minimum": int(D10[y].loc[(f, k), '공식_미달수']) for y in ("2020", "2025")}})
 T4a = pd.DataFrame(rows)
-B = [("Grid: facility-by-facility (exact)", "IND", (14.68, 16.51), (0.91, 1.12), (21, 13)), ("Grid: bundle maximisation (exact)", "MIP", (22.80, 24.22), (0.11, 0.24), (18, 14)),
-     ("Grid: coordinated (P=2)", "P2", (17.59, 18.47), (5.83, 6.31), (21, 19))]
+B = [(lab, k, tuple(100 * GV[y][k][0] for y in ("2020", "2025")), tuple(100 * GV[y][k][1] for y in ("2020", "2025")), tuple(int(GV[y][k][2]) for y in ("2020", "2025")))
+     for lab, k in (("Grid: facility-by-facility (exact)", "IND"), ("Grid: bundle maximisation (exact)", "MIP"), ("Grid: coordinated (P=2)", "P2"))]
 rows = [{"Rule": a, "2020 completion (%)": f"{b[0]:.1f}", "2025 completion (%)": f"{b[1]:.1f}", "2020 bottom-20 (%)": f"{c_[0]:.1f}", "2025 bottom-20 (%)": f"{c_[1]:.1f}", "2020 zero-completion zones": d[0], "2025 zero-completion zones": d[1]} for a, _, b, c_, d in B]
 for lab, u in (("Gu minimum 5%", "구"), ("Dong minimum 5%", "동"), ("Living-zone minimum 5%", "공식LZ_long")):
     r = {"Rule": lab}

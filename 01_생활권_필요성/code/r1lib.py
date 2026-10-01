@@ -80,10 +80,13 @@ class Year:
                 idx = self.gix.reindex(A[A.strict].grid100_cd.dropna().unique()).dropna().astype(int).to_numpy(); self.fac["공공체육_엄격"] = (np.unique(idx), T)
         # 동 그래프(무작위 구획용)
         self.dong_gdf = X.load_dong().set_index("Dong")
+        # 무작위 구획의 인구 균형은 xcommon.load_pop(SGIS 행정구역 총인구, 코어 캐시 output/exploration/_cache/pop_dong424_{y}.csv)을 쓴다.
+        # 등록 격자 인구(grid100_master 동 합)와 같지 않아(동별 최대 차 2,259명, 상관 0.998) 바꾸면 무작위 구획이 달라지므로 그대로 둔다(2026-10-02 검증 S3-7)
         self.kg = X.all_ku_graphs(year, with_pop=True)
         self.od = X.load_od(year)
         self.lz_map = X.load_lz()["life_zone_id"]
-        self.ld_map = X.load_leiden(year)[0]["global_community_id"]
+        # 이동 공동체: 배포목록 등록본 boundary-v2-leiden(00_공통_코어엔진/data). 코어 output/leiden 매핑과 424동 모두 같음(2026-10-02 대조)
+        self.ld_map = pd.read_csv(ROOT / "00_공통_코어엔진" / "data" / f"dong_to_leiden_{year}_mapping_424.csv").set_index("Dong")["global_community_id"]
         self.off_k = self.lz_map.groupby(self.dong_gdf["Ku"]).nunique()
         self.n_dong_ku = self.dong_gdf.groupby("Ku").size()
 
