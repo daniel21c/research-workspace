@@ -1,0 +1,73 @@
+{
+  "started": "2026-10-01T23:27:47",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "steps": {
+    "verify_inputs": {
+      "returncode": 0,
+      "seconds": 0.1,
+      "stdout_tail": "dd1abb0d4fc1a7c0a1da5f3bec9382c1b0d91bc543dcb8ed\",\n   \"matches_manifest\": true\n  },\n  {\n   \"file\": \"od_daily_202501.parquet\",\n   \"sha256\": \"7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4\",\n   \"matches_manifest\": true\n  },\n  {\n   \"file\": \"leiden_metrics_2025.csv\",\n   \"sha256\": \"07d247191055ab7c0f2237f52bb9f5b0172dd67849caa63de5abf757ffa75ac1\",\n   \"matches_manifest\": true\n  }\n ]\n}\n",
+      "stderr_tail": ""
+    },
+    "s3_louvain_rerun": {
+      "returncode": 0,
+      "seconds": 1610.3,
+      "stdout_tail": "O] [2025] 송파구: γ=0.920 (grid), k=7/7, Q=0.4155, IFR=0.4477, 최빈분할 72.4% =합의, ARI 1.000 (min 1.000), 비연속 0, 1600.9s \n23:54:37 [INFO] Created 116 records\n23:54:37 [INFO] Created 424 records\n23:54:38 [INFO] [2025] 완료: 커뮤니티 116개, 동 424개, 1609.2s → C:\\Users\\cyion\\AppData\\Local\\Temp\\claude\\C--Users-cyion\\84e1d65e-9ce5-4146-a82d-e9a8907c3a48\\scratchpad\\verify\\연구2_보완_패키지_20261001\\output\\louvain\\2025_repro\n",
+      "stderr_tail": ""
+    },
+    "s1_overview": {
+      "returncode": 0,
+      "seconds": 1.2,
+      "stdout_tail": "ows               4.806033e+07\nmasked_rows                 1.074413e+07\nmasked_share_rows           2.235551e-01\ntotal_flow                  2.859641e+08\nwithin_dong_flow            6.037048e+07\nwithin_dong_share_flow      2.111121e-01\nwithin_district_flow        1.737568e+08\nwithin_district_share_flow  6.076175e-01\nwithin_district_rows        2.005328e+07\nwithin_district_share_rows  4.172522e-01\n",
+      "stderr_tail": ""
+    },
+    "s4_compare": {
+      "returncode": 0,
+      "seconds": 4.5,
+      "stdout_tail": " 6.0\nstability_ari_min_overall                              NaN       1.0    0.6376\ndistricts_hitting_target_at_few_resolutions_le10       NaN       5.0       3.0\ndistricts_leiden_q_ge_louvain                           23        23        23\ndistricts_leiden_ifr_ge_louvain                         21        21        21\ndistricts_same_partition_leiden_louvain                 18        18        18\n",
+      "stderr_tail": ""
+    },
+    "s5_figures": {
+      "returncode": 0,
+      "seconds": 4.6,
+      "stdout_tail": "그림 5개 생성: ['F1_procedure.png', 'F2_maps_2025.png', 'F3_algorithm_comparison.png', 'F4_district_diagnostics.png', 'F5_iou_relations.png']\n",
+      "stderr_tail": ""
+    },
+    "s5_build_manuscript": {
+      "returncode": 0,
+      "seconds": 1.6,
+      "stdout_tail": "원고 생성: 표 7, 그림 5, 본문 9,843자 → C:\\Users\\cyion\\AppData\\Local\\Temp\\claude\\C--Users-cyion\\84e1d65e-9ce5-4146-a82d-e9a8907c3a48\\scratchpad\\verify\\연구2_보완_패키지_20261001\\manuscript\n",
+      "stderr_tail": ""
+    }
+  },
+  "s3_comparison": {
+    "mapping_csv_identical": true,
+    "raw_label_files_identical": "25/25",
+    "scan_logs_identical": "25/25",
+    "pass": true
+  },
+  "comparison": {
+    "identical": [
+      "audit\\s1_checks.json",
+      "audit\\s4_checks.json",
+      "manuscript\\연구2_생활권_구획_점검_4.2.md",
+      "results\\figures\\F1_procedure.png",
+      "results\\figures\\F2_maps_2025.png",
+      "results\\figures\\F3_algorithm_comparison.png",
+      "results\\figures\\F4_district_diagnostics.png",
+      "results\\figures\\F5_iou_relations.png",
+      "results\\tables\\C1_official_zone_composition.csv",
+      "results\\tables\\L1_algorithm_comparison_2025.csv",
+      "results\\tables\\L2_city_summary_2025.csv",
+      "results\\tables\\T1_input_overview.csv"
+    ],
+    "pixel_identical_only": [],
+    "docx_text_identical": [
+      "manuscript\\연구2_생활권_구획_점검_4.2.docx"
+    ],
+    "different": [],
+    "n_compared": 13
+  },
+  "finished": "2026-10-01T23:54:51",
+  "all_pass": true
+}

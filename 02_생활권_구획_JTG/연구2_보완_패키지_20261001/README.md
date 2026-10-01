@@ -1,0 +1,53 @@
+# 연구2 보완 패키지 (2026-10-01 작성, 2026-10-02 최종)
+
+학위논문 4.2절(생활권 구획과 공식 생활권의 이동 일치 점검)의 **Louvain 대 Leiden 비교**와 **한글 원고**를 만든 패키지이며, 연구2의 최종본이다. 설계는 `docs/연구설계.md`(R2-DESIGN-20261002-v4, 실행 결과 기준으로 다시 쓴 현행 설계)다.
+JTG(Park·Eom·Lee 2026)는 분석의 구성·방법으로만 인용하며 게재본의 자료·수치·표·그림은 쓰지 않는다.
+공식 생활권 대 Leiden 비교는 9/29 재분석 패키지(`연구2_재분석_패키지_20260929`)가 계산했다. 원고가 인용하는 그 결과표 10개는 해시와 함께 `results/reused_20260929/`에 사본으로 들어 있고(새로 계산하지 않음), 계산 코드 사본은 `code/reused/analyze_20260929.py`다. 9/29 패키지 자체는 2026-10-02 정리 때 허브 밖 `D:\Research\_archive\연구2_정리_20261002\`로 옮겼다(이 ZIP에는 없음).
+
+## 한 줄 결과
+같은 합의 절차(γ 0.01~2.50 × 3,000회, co-association ≥ 0.5)로 Leiden과 Louvain을 2025년 1월 OD에 적용했다. 둘 다 25구 전부 목표 권역 수를 맞추고 116개 권역이 모두 연결되며, 분할은 18개 구에서 같고 7개 구에서 다르다. 합의의 재현성은 Leiden이 높다. 수치와 해석은 원고와 `results/tables/L1·L2`에 있다.
+
+## 폴더
+| 경로 | 내용 |
+|---|---|
+| `manuscript/` | 4.2절 원고(`.docx` 편집용, `.pdf` 읽기용, `.md`) |
+| `results/tables/` | `T1` 자료 개요, `C1` 공식 116 구성(424동), `L1` 구별 Louvain·Leiden·공식 비교, `L2` 서울 요약 |
+| `results/reused_20260929/` | 9/29 패키지 결과표 사본(T1·T2·T3·T6·T7·T8·A1·A2·A3, summary.json). 해시는 `audit/s5_reused_inputs.json` |
+| `results/figures/` | 그림 5개(F1 절차, F2 지도, F3 알고리즘 비교, F4 구별 진단, F5 지표 관계). PNG(선 그림 1000 dpi, 지도 500 dpi)와 벡터 PDF |
+| `inputs/` | 계산 입력 사본 6개. 해시는 `audit/source_manifest.json` |
+| `output/louvain/2025/` | Louvain 실행 결과(매핑, 지표, 해상도 스캔 기록, 안정성, co-association, 3,000회 원시 라벨, 경계). 실행 중 재시작용 캐시(`_partial/`, `progress/`)는 결과가 아니어서 아카이브로 옮겼다 |
+| `code/engine/` | 공통 코어엔진 `s03` 의 Louvain 사본(`config.py`, `s03_louvain_consensus.py`)과 원본 사본(`*.orig`) |
+| `code/` | `s0_freeze.py` 입력 해시 고정, `s1_overview.py`, `s4_compare.py`, `s5_reuse.py`·`s5_figures.py`·`s5_build_manuscript.py` 그림·원고, `export_pdf.ps1` PDF 출력, `render_pages.py`·`s5_qa.py` 원고 점검, `test_louvain.py` 구현 시험, `verify_inputs.py`·`reproduce.py` 재현, `package_release.py` ZIP |
+| `audit/` | 입력 지문, 시험·점검 결과, 재현 보고, 실행 로그 |
+| `docs/` | 설계, 검증보고서 |
+
+## 실행
+```
+pip install -r requirements-replication.txt          # Python 3.12
+python code/verify_inputs.py                          # inputs/ 해시를 기록과 대조
+python code/reproduce.py                              # S1·S4·S5를 다시 만들어 저장된 결과와 대조 (수 분)
+python code/reproduce.py --full --workers 25          # 위에 더해 Louvain 2025를 처음부터 다시 실행해 대조 (약 26분)
+powershell -File code/export_pdf.ps1                  # 원고 PDF 출력(Word 필요)
+```
+`s0_freeze.py` 는 허브의 공통 코어엔진을 읽어 입력 사본을 만들었던 단계이며 허브가 있는 환경에서만 실행된다. 별도 폴더에서는 `verify_inputs.py` 를 쓴다.
+
+## Louvain 은 어떻게 만들었나
+공통 코어엔진 `00_공통_코어엔진/scripts/s03_leiden_consensus.py` 를 복사해 **`consensus_once()` 안의 알고리즘 호출 한 줄**만 `leidenalg.find_partition` 에서 python-louvain `community.best_partition(G, weight, resolution=γ, random_state=seed)` 로 바꿨다. 그래프, 해상도 격자, 반복 수, 합의 기준, 선정 규칙, 시드 규칙(base 1089930980, 2025 Leiden 정본과 같음)은 같다. 원본과의 차이는 `code/engine/*.orig` 와 비교하면 보인다. 공통 코어엔진은 수정하지 않았다.
+
+## 지표 정의
+공통 정의표(기준 문서 7절)를 따른다. 구별 Q는 구 내부 무방향 가중 그래프(f_ij+f_ji, 자기루프 f_ii 간선 1회)의 γ=1 표준 모듈러리티이며 구별 Q를 평균해 서울 Q라 하지 않는다. IFR은 구에서 서울 전체로 출발한 통행 중 같은 권역 안에서 끝난 통행의 비율이고 상위 집계는 분자합/분모합이다. G = IFR(이동) − IFR(공식), D_flow = (이동만 내부 + 공식만 내부) / 총 출발 통행이다. 공간 겹침은 1:1 최대교집합 배정의 IoU = S/(2N−S) 이다.
+
+## 한계와 포함하지 않은 것
+- 2025년 1월 한 달, 서울 내부 통행, 비공개(3명 미만) 값을 0으로 처리한 집계표다. 원자료(CSV)와 공통 코어엔진은 포함하지 않는다. 집계표의 생성은 공통 코어엔진 s02 가 담당했다.
+- 시설·접근성은 사용하지 않았다.
+- Louvain 비교는 이 자료, 구별 그래프(15~27개 동), 목표 권역 수 제약, 3,000회 합의라는 조건에 한정되며 알고리즘의 일반적 우열을 뜻하지 않는다.
+- 같은 이동자료로 구획을 정하고 평가했으므로 Q·IFR 비교는 이동자료에 대한 적합도이며 계획의 우수성이나 인과효과가 아니다.
+- 공통 경계의 상류 검증은 45개 항목 중 34 통과·5 실패·6 미검증으로 읽었다(9/29 패키지 `docs/검증보고서.md`, 아카이브 보존). 실패 5개는 좌표 변환 뒤 원형상과의 엄격한 수치 동일성 2건(허용 오차 비교는 통과), 설정 지문 차이 1건, 원 공식 폴리곤의 겹침·공통 영역 차이 2건이다. 이 패키지는 424동으로 다시 구성한 공식 116권역을 쓰며 원 공식 경계선 자체와의 일치를 주장하지 않는다.
+
+## 원고 서식 (2026-10-02 개정)
+- 약어는 처음 쓸 때 `Internal Flow Ratio(이하, IFR)`처럼 전체 용어를 쓴다(요약과 본문에서 각각).
+- 대학생이 읽을 수 있는 쉬운 어휘로 썼다. 피한 표현 목록과 자동 점검은 `code/s5_qa.py`에 있다.
+- 표·그림은 JTG 게재본과 Elsevier 규정에 맞췄다. 표는 위에 굵은 번호 줄과 제목 줄, 가로선 세 줄(위 0.5pt, 머리행 아래 0.5pt, 아래 약 0.6pt)만 쓰고 세로선·네 면 테두리·음영은 쓰지 않는다. 모든 열은 왼쪽 정렬, 왼쪽 위 칸은 비운다. 주석은 표 아래 '주:'. 그림은 아래에 굵은 '그림 번호.'와 제목, 기호·약어 풀이, 자료 출처를 둔다. 지도에는 방위표, 축척 막대, 범례를 넣는다.
+- 인용과 참고문헌은 JTG(Elsevier Harvard) 방식이다. 모듈러리티(Q)는 소수 4자리로 적는다.
+- 수식 (1)~(5)는 번호를 오른쪽 끝에 달고 본문에서 '식 (n)'으로 가리킨다. 다섯 식 모두 본문과 같은 10.5 pt, Times New Roman, Word 첨자로 쓰고 식 안에 한글을 넣지 않는다(한글이 섞이면 그 식만 글꼴이 바뀌어 크기가 달라 보인다).
+- 그림 속 수식 기호는 한글과 한 줄에 섞지 않는다. 음수는 본문·표·그림 모두 마이너스 기호(−)로 쓰고, 반올림해 0이면 부호를 붙이지 않는다.

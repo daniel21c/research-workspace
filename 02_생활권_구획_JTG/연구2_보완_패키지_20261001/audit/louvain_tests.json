@@ -1,0 +1,75 @@
+{
+  "T1_q_agreement": {
+    "districts": 25,
+    "max_abs_diff": 2.220446049250313e-16,
+    "pass": true
+  },
+  "T2_determinism": {
+    "same_seed_identical": true,
+    "different_seed_runs_differ": true,
+    "pass": true
+  },
+  "T3_igraph_cross_check": {
+    "rows": [
+      {
+        "ku": 11010,
+        "q_max_python_louvain": 0.44060401765628476,
+        "q_max_igraph_multilevel": 0.4406040176562847,
+        "q_mean_python_louvain": 0.44060401765628476,
+        "q_mean_igraph_multilevel": 0.44060401765628476,
+        "ari_best_partitions": 1.0
+      },
+      {
+        "ku": 11240,
+        "q_max_python_louvain": 0.41572776806295747,
+        "q_max_igraph_multilevel": 0.41572776806295747,
+        "q_mean_python_louvain": 0.4125742527370973,
+        "q_mean_igraph_multilevel": 0.4130709250419909,
+        "ari_best_partitions": 1.0
+      }
+    ],
+    "pass": true,
+    "note": "참고 수치. 두 구현의 최대 Q 차이 0.01 미만이면 통과"
+  },
+  "T5_speed_songpa_27dong": {
+    "louvain_ms_per_run": 1.787006000134473,
+    "leiden_ms_per_run": 0.39529666653834283,
+    "est_songpa_full_scan_minutes": 22.337575001680914,
+    "note": "해상도 250개 × 3,000회, 단일 코어, 안정성 반복 제외"
+  },
+  "T4_smoke_run": {
+    "returncode": 0,
+    "seconds": 4.037508700042963,
+    "files_written": true,
+    "metric_columns_same_as_leiden": true,
+    "row": {
+      "ku_code": 11010,
+      "ku_name": "종로구",
+      "year": 2025,
+      "n_dongs": 17,
+      "n_edges": 153,
+      "seed_base_ku": 1089930980,
+      "seed_base_final_resolution": 1089931250,
+      "target": 4,
+      "resolution": 0.91,
+      "stage": "grid",
+      "n_communities": 4,
+      "modularity": 0.440604,
+      "ifr": 0.328521,
+      "internal_flow": 3878403.25,
+      "total_outflow": 11805664.24,
+      "modal_share": 1.0,
+      "modal_equals_consensus": true,
+      "n_distinct_partitions": 1,
+      "n_resolutions_hitting_target": 7,
+      "stability_ari_mean": 1.0,
+      "stability_ari_min": 1.0,
+      "n_dongs_changed_in_any_trial": 0,
+      "min_membership_prob": 1.0,
+      "n_noncontiguous_communities": 0,
+      "seconds": 1.0,
+      "notes": NaN
+    },
+    "pass": true
+  }
+}

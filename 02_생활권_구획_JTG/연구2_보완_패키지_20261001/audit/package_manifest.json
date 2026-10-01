@@ -1,0 +1,866 @@
+{
+ "created": "2026-10-02T05:13:17",
+ "package": "연구2_보완_패키지_20261001",
+ "files": [
+  {
+   "path": "audit/louvain_run_console.log",
+   "bytes": 15523,
+   "sha256": "547bb9b8faffdedab3bb9b42426e141d5339ff159cbf76221bf929d1d62ded04"
+  },
+  {
+   "path": "audit/louvain_tests.json",
+   "bytes": 2269,
+   "sha256": "41d3a42df70cdbedb73753feebf98e146bc6749f05482a0fb30dea789e9284fd"
+  },
+  {
+   "path": "audit/reproduction_report.json",
+   "bytes": 3352,
+   "sha256": "64fcceb987d6058d217bae8fd464d0e1b9ed15d0fff47cac7ab88a1b5ecfd728"
+  },
+  {
+   "path": "audit/reproduction_report_20261001_full.json",
+   "bytes": 4058,
+   "sha256": "76f61fd90e51c20ebb02d3a23400a9263f1ab2b505dd6437e99a10439a009d75"
+  },
+  {
+   "path": "audit/s1_checks.json",
+   "bytes": 216,
+   "sha256": "1a6c3582230f219d943f94726c2513e3a4976fb4d1ed43df06e1122e39baaec8"
+  },
+  {
+   "path": "audit/s4_checks.json",
+   "bytes": 678,
+   "sha256": "ac713a1dbb1e89c2cf47d3f112cfadb67ac330241000da25e564b37f4a26bc2a"
+  },
+  {
+   "path": "audit/s4_console.log",
+   "bytes": 2511,
+   "sha256": "d10c4906ef09b554fdddf987536e61f6f86faebec3d56120f5a5beac737835a7"
+  },
+  {
+   "path": "audit/s5_qa.json",
+   "bytes": 2202,
+   "sha256": "a6589f3c8a9ac0d7ffca7c3ea2e0b94881270281702370fcdd21a09768d31194"
+  },
+  {
+   "path": "audit/s5_reused_inputs.json",
+   "bytes": 2935,
+   "sha256": "b4bcda10218a615a8c57ac45b2f60849fc744b53eb3ab92badb01169a8712b3e"
+  },
+  {
+   "path": "audit/source_manifest.json",
+   "bytes": 6859,
+   "sha256": "33016de67c4225f4204c739e29d5882c5a143af84fb774b2587b1a6206c7129e"
+  },
+  {
+   "path": "code/engine/config.py",
+   "bytes": 9855,
+   "sha256": "0a621fe7644f143eb43f8a8bae7ede36b5ce16d02239bdc20c0ef673445d9fcd"
+  },
+  {
+   "path": "code/engine/config.py.orig",
+   "bytes": 10667,
+   "sha256": "e268e585f38daf3cfd179e5935d548a23797d00d6b11953dd39c0f5529ef07d6"
+  },
+  {
+   "path": "code/engine/s03_leiden_consensus.py.orig",
+   "bytes": 35118,
+   "sha256": "5bffdb7658ee4408710632d433904a10a52e5bd0b28edd4740742e49aae1223c"
+  },
+  {
+   "path": "code/engine/s03_louvain_consensus.py",
+   "bytes": 36308,
+   "sha256": "7d7cf6d1d8da0cf6105447e8cc27e07a7a8578170dc1abcd2fadbc40fa93d2dc"
+  },
+  {
+   "path": "code/export_pdf.ps1",
+   "bytes": 835,
+   "sha256": "b81101918e978ad025bca379a3465a5840a053079f8d85900171376270637a6f"
+  },
+  {
+   "path": "code/package_release.py",
+   "bytes": 1777,
+   "sha256": "3206c12916fe5884fb52818b7c9b1af340aa158469296e8e185a61ded32010b3"
+  },
+  {
+   "path": "code/render_pages.py",
+   "bytes": 860,
+   "sha256": "cbc4e8b9ef0556c32cab9c00df68e2f8161afa5cdd20e28cfb0824a821dec432"
+  },
+  {
+   "path": "code/reproduce.py",
+   "bytes": 6297,
+   "sha256": "280e528aa87d5ddba8ad796650be9d81a7f65cf91d2a2b32db14eafa46e9c6e5"
+  },
+  {
+   "path": "code/reused/analyze_20260929.py",
+   "bytes": 21883,
+   "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1"
+  },
+  {
+   "path": "code/s0_freeze.py",
+   "bytes": 7005,
+   "sha256": "d9650e8037fabc044885bf947a09c43d0e42a27c93afb061b8698ec622f77a9c"
+  },
+  {
+   "path": "code/s1_overview.py",
+   "bytes": 3851,
+   "sha256": "150314a6fee02b1b053ba748e7606f0f1ba6e8f1cc0c9c8c37d5828260eded50"
+  },
+  {
+   "path": "code/s4_compare.py",
+   "bytes": 12453,
+   "sha256": "b10ca6ed935c2f4baacab3ca9c1501aa4a952b43f4817ccc300dd2a097330225"
+  },
+  {
+   "path": "code/s5_build_manuscript.py",
+   "bytes": 59113,
+   "sha256": "65a7e42fd936d6645e9362ff1c3cc7c7a2369aa7fa011c627a13f73e7a21039e"
+  },
+  {
+   "path": "code/s5_figures.py",
+   "bytes": 11584,
+   "sha256": "2f46a2160a48f0e4d41bc3a9db2edab5c97d1d91aa5901fecb937af312020ef4"
+  },
+  {
+   "path": "code/s5_qa.py",
+   "bytes": 8927,
+   "sha256": "85a8e8be858c707403fa9bb5fbc115842b5bc549af9b3431659aa36b0243b0a8"
+  },
+  {
+   "path": "code/s5_reuse.py",
+   "bytes": 1670,
+   "sha256": "7a120bbcbff8e00b8f47c21529d2cf0f32cc4285c566b109d661f1026becb256"
+  },
+  {
+   "path": "code/test_louvain.py",
+   "bytes": 8735,
+   "sha256": "0015f7851cc448f7f6d9d9a3f7a871d8526a468c96946b4bfb1407f20ec4a071"
+  },
+  {
+   "path": "code/verify_inputs.py",
+   "bytes": 996,
+   "sha256": "a3ebd9c8e53d703abb164c51473c8ca0e3200a5e4cb249f5371ca82fafc73844"
+  },
+  {
+   "path": "docs/검증보고서.md",
+   "bytes": 5272,
+   "sha256": "58087d217907085f656e44e35a1d27131b0f381d03f5dc3f85bbc2894c165402"
+  },
+  {
+   "path": "docs/연구설계.md",
+   "bytes": 14106,
+   "sha256": "99527eb3602be99005909ef7d3ec661a98bad23a8575e433327f0884b6ebb47f"
+  },
+  {
+   "path": "inputs/dong_to_leiden_2025_mapping_424.csv",
+   "bytes": 41769,
+   "sha256": "19c35263178c77795d6fbff35419b339f10c573098c12b1950fc85ccbdbbc149"
+  },
+  {
+   "path": "inputs/dong_to_official_livingzone_mapping_424.csv",
+   "bytes": 33039,
+   "sha256": "4c75ebfaba8e644d244f449652941d12d72e1fdc150b8e91eba2c8015c2753de"
+  },
+  {
+   "path": "inputs/leiden_metrics_2025.csv",
+   "bytes": 4033,
+   "sha256": "07d247191055ab7c0f2237f52bb9f5b0172dd67849caa63de5abf757ffa75ac1"
+  },
+  {
+   "path": "inputs/od_daily_202501.parquet",
+   "bytes": 1456506,
+   "sha256": "7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4"
+  },
+  {
+   "path": "inputs/seoul_boundaries_all.gpkg",
+   "bytes": 10424320,
+   "sha256": "ec8467ec3e9bebfcdd1abb0d4fc1a7c0a1da5f3bec9382c1b0d91bc543dcb8ed"
+  },
+  {
+   "path": "inputs/seoul_dong_424_dissolved.gpkg",
+   "bytes": 7483392,
+   "sha256": "a1b88cc8611244e887106456aea5cbd268c36f90c8b30348b68c4327062c433b"
+  },
+  {
+   "path": "manuscript/연구2_생활권_구획_점검_4.2.docx",
+   "bytes": 1730334,
+   "sha256": "3162336223168e1bf44a3cb549262602bc21e576009c93bdafff8c684179f825"
+  },
+  {
+   "path": "manuscript/연구2_생활권_구획_점검_4.2.md",
+   "bytes": 40297,
+   "sha256": "407a5ad250ccc221dda84b09624d6fdd0e71efa6992880e3156d648e99e3108f"
+  },
+  {
+   "path": "manuscript/연구2_생활권_구획_점검_4.2.pdf",
+   "bytes": 957317,
+   "sha256": "e0fd457ce155a4fdb2b569e98c912ddcbe4254fb6f65ce193a5bd273b2fd8050"
+  },
+  {
+   "path": "output/louvain/2025/boundaries/louvain_communities_2025.gpkg",
+   "bytes": 5607424,
+   "sha256": "6ee25065a9d4990ed91922f4bc4d84f4131e68e888b7ff8421149967ea50ab3c"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11010_Jongno_2025_coassoc.csv",
+   "bytes": 1450,
+   "sha256": "608e4423b1c14dec5a0ede0199603815981d882b1ed92862bcc76ba4907c8804"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11010_Jongno_2025_runs.npz",
+   "bytes": 2408,
+   "sha256": "fe472ebf2d259303f1b83325287224707f399cd665749b9c144982cab85ed451"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11020_Jung_2025_coassoc.csv",
+   "bytes": 3420,
+   "sha256": "fdc712c454d009229fd34c434031e549d731fc1807d05695a2c042b72c88577e"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11020_Jung_2025_runs.npz",
+   "bytes": 13442,
+   "sha256": "6d01256ec79f96dc533966cec32f800dca3c230128424de83ebddeb35a3662b8"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11030_Yongsan_2025_coassoc.csv",
+   "bytes": 1781,
+   "sha256": "21577a45797424c71401c97b7bf4c31e7651de60d4b0175bd6375536a29c4ba2"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11030_Yongsan_2025_runs.npz",
+   "bytes": 6219,
+   "sha256": "345a62fa47a6c777c9e30257fec569b5792d82f6cfe8ae7e3fed2a410129dbe5"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11040_Seongdong_2025_coassoc.csv",
+   "bytes": 1686,
+   "sha256": "8859401b76c2daf2a28893732bb81e889ed7de3e9097a3d6cba4b601f9e03b18"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11040_Seongdong_2025_runs.npz",
+   "bytes": 3418,
+   "sha256": "286b28ec9d1a4b136119288cb4bb83dede11ea79a1d62e6a1394f8cf0e2a3d3b"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11050_Gwangjin_2025_coassoc.csv",
+   "bytes": 2030,
+   "sha256": "ed2bd9a234376dbf6c6c4d257b52d0362151f59c79334deab0d3e1adbb3f9d11"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11050_Gwangjin_2025_runs.npz",
+   "bytes": 8916,
+   "sha256": "5143faaf3eb671f91ee53b118b9fa62819c7ec8d7a835d25259e541b9680e2ff"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11060_Dongdaemun_2025_coassoc.csv",
+   "bytes": 1925,
+   "sha256": "629fab2f0f6fd0819fd61c251b8e1b5e8cead85d560543430a72fa9d3df8a627"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11060_Dongdaemun_2025_runs.npz",
+   "bytes": 8288,
+   "sha256": "ff0872b2418b70c4e1eb028c14e2630a15fc08f5d50ba3cefc09463ddb8ae0ef"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11070_Jungnang_2025_coassoc.csv",
+   "bytes": 3941,
+   "sha256": "eb08cd064b2bfb55ddf3bcb92ea2db2a32cd4a65ef1d0c5a435febceb09f7982"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11070_Jungnang_2025_runs.npz",
+   "bytes": 14569,
+   "sha256": "1e6fd9f23edcef0393953b0ea7b0319bf04b827b41dbcf83e0f5b6db7b6da144"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11080_Seongbuk_2025_coassoc.csv",
+   "bytes": 3551,
+   "sha256": "f91f0c5bf2d3f5accff42952d2c01d2041380da1b9444d7ccb2084887dfd0f45"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11080_Seongbuk_2025_runs.npz",
+   "bytes": 4975,
+   "sha256": "46526e7ebb25703bff382f53d520735eff04646e5d8b0e01cf555707518e2509"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11090_Gangbuk_2025_coassoc.csv",
+   "bytes": 902,
+   "sha256": "aa68d4ca8f72e9e03c44545b2d60eb781ab21587995a9e11b22ff1d104d14ce1"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11090_Gangbuk_2025_runs.npz",
+   "bytes": 2551,
+   "sha256": "9cfe06c06cd131f792d9e9a3c4956b37b284a5d9ef219ff68e8945e8fd8a99bc"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11100_Dobong_2025_coassoc.csv",
+   "bytes": 1155,
+   "sha256": "da64fc652b0564e06f8304c36eafffde5e2eb4b474f89bdf5f33f9008bfc757a"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11100_Dobong_2025_runs.npz",
+   "bytes": 4337,
+   "sha256": "64ed098e2a06244d8019b5165dc34600e75dec4db587d9aeffc8eebd1fa1a527"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11110_Nowon_2025_coassoc.csv",
+   "bytes": 3950,
+   "sha256": "93e690588fc086e57dc06d17a4b20fa19535025e9c59eac91ceb3cfe7e6f6bf8"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11110_Nowon_2025_runs.npz",
+   "bytes": 11771,
+   "sha256": "1860672b148cb320a9fdaa1f467a5a385fb6e9e1ff9a354cf0c1f39ae3628efc"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11120_Eunpyeong_2025_coassoc.csv",
+   "bytes": 2449,
+   "sha256": "288a1dfe739fc06837d8263b3b54ba536277494284897e70f845fb9b5e72c23a"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11120_Eunpyeong_2025_runs.npz",
+   "bytes": 6434,
+   "sha256": "95d074e49a90d7427af582c6fedfba097441edefab4fbcaa015cd7e49db4561d"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11130_Seodaemun_2025_coassoc.csv",
+   "bytes": 1837,
+   "sha256": "5ca0fdd5bba1ccd203c970a1fd1496d72838a08daaf3978a6890d425a5974979"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11130_Seodaemun_2025_runs.npz",
+   "bytes": 7278,
+   "sha256": "a93b90c0ca0b7b49321950609688ba7809d5631fdbec3140a3799ca64bd2989a"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11140_Mapo_2025_coassoc.csv",
+   "bytes": 1879,
+   "sha256": "d85973408f01e3c200be12462dfcf645a49255458b4ba80ade19ecc8c0d6eb9a"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11140_Mapo_2025_runs.npz",
+   "bytes": 4860,
+   "sha256": "a2c351746ddd35a2e76ad1e30480cf69214f3232e998b91142fa663a402c4e9c"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11150_Yangcheon_2025_coassoc.csv",
+   "bytes": 3701,
+   "sha256": "5f815cdaf75f058396ab15170b22a3317c9438bd269bbddd874ec0e83e2053c7"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11150_Yangcheon_2025_runs.npz",
+   "bytes": 8986,
+   "sha256": "7994db8180204fe45875a78db3150a62c2abdbd0aa72780b18f363b1694d2ffe"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11160_Gangseo_2025_coassoc.csv",
+   "bytes": 5823,
+   "sha256": "032c8e4d5c4bc2c9f9f2a6a7baea955d96497df436d78a4fa4941a8d9c123fed"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11160_Gangseo_2025_runs.npz",
+   "bytes": 23232,
+   "sha256": "89340124cb6e8d583bf919fea1754dff0f8d95593662a15856cb3aefb1536dbf"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11170_Guro_2025_coassoc.csv",
+   "bytes": 1900,
+   "sha256": "dda4836f56ae12ea2fc145c315231ef44d9412a6a0fbdab8f10555a2fd2f458d"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11170_Guro_2025_runs.npz",
+   "bytes": 4478,
+   "sha256": "05f3a82a9ffcb9a5ea1815aaba2a73e1f65c12ddf9917249675b04c570d703f8"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11180_Geumcheon_2025_coassoc.csv",
+   "bytes": 1059,
+   "sha256": "1c9f132633e24bea3729b801cdd85741715c9bd5079d7fc3593057c37c43a92d"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11180_Geumcheon_2025_runs.npz",
+   "bytes": 5835,
+   "sha256": "ede67e9d9d85139a906aba52535b986c30542eeb0df0fddabc5b493155f98b41"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11190_Yeongdeungpo_2025_coassoc.csv",
+   "bytes": 1951,
+   "sha256": "b7d5c8684d95114f33c799147541d7c11560c28cdfe08916c475eadad76df75d"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11190_Yeongdeungpo_2025_runs.npz",
+   "bytes": 2935,
+   "sha256": "f8dd8a5f9a19169539c78a6e92e337680b22e95e9106a775bd00b5afe5ac1897"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11200_Dongjak_2025_coassoc.csv",
+   "bytes": 2228,
+   "sha256": "5f6ba3aa33d7c7957ac15decbea5051a40097925e2f7cf0c59a488685fcbf644"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11200_Dongjak_2025_runs.npz",
+   "bytes": 7885,
+   "sha256": "cbc97190e47e7376d50e5eac969aff64aa38d781f2c960f572208596287d85c3"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11210_Gwanak_2025_coassoc.csv",
+   "bytes": 2688,
+   "sha256": "be0af4981897747ebe45abd77b5e874fb002402b170b3592873f9b9ef3e0b07d"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11210_Gwanak_2025_runs.npz",
+   "bytes": 9578,
+   "sha256": "6e93a30024ea94a2b62503af0d27dd5a57b242887baeeb0983c945fe0ea57036"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11220_Seocho_2025_coassoc.csv",
+   "bytes": 3887,
+   "sha256": "06ee9d0d0610a1faf697f01eb3cdbf815f51080f7a54e8bb9ec4fd32305838d6"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11220_Seocho_2025_runs.npz",
+   "bytes": 15375,
+   "sha256": "7fb561a1cf5efa01cc7b3a4e6c25a5fa99fcc18ff5b2dfba245c670687a1cb01"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11230_Gangnam_2025_coassoc.csv",
+   "bytes": 3077,
+   "sha256": "69ce79ea6bd30020d4a98f7ddc8e24bec1c96db57e18edc2d6f73b2d9b2cbb2a"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11230_Gangnam_2025_runs.npz",
+   "bytes": 4567,
+   "sha256": "0cb472c86964c03cb33f51947f72eebecd187316a8c8f3ccd8f19a52133bf137"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11240_Songpa_2025_coassoc.csv",
+   "bytes": 6210,
+   "sha256": "5db13c0dddf74d6fddf6aa9792b3a0e131148c91c1c0f27964612c4ec47ea2b5"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11240_Songpa_2025_runs.npz",
+   "bytes": 16676,
+   "sha256": "8fc5c742591b788722868379e4fd3e29c9a0ef409c43119a6bb16c30734d7016"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11250_Gangdong_2025_coassoc.csv",
+   "bytes": 3211,
+   "sha256": "348093e95cafae35eb62f0cdf494f6a1705420d3ba6e12bd3c85071a1a6e2e58"
+  },
+  {
+   "path": "output/louvain/2025/coassoc/11250_Gangdong_2025_runs.npz",
+   "bytes": 9662,
+   "sha256": "efc0732973e83fba3ddfa00c278b88e72d0f16fe798c25638ace7f63dd3ae082"
+  },
+  {
+   "path": "output/louvain/2025/louvain_run_20261001_224613.log",
+   "bytes": 15520,
+   "sha256": "ca45316b4e1cb6b5906064d7937a26fc12f3ae8682784811c6169546872f44a2"
+  },
+  {
+   "path": "output/louvain/2025/metrics/louvain_mapping_2025.csv",
+   "bytes": 43436,
+   "sha256": "6fc9436643af02747dbfb63fb07ab2c10adb75a40d6e54689255e1e5ac2bcb88"
+  },
+  {
+   "path": "output/louvain/2025/metrics/louvain_metrics_2025.csv",
+   "bytes": 4127,
+   "sha256": "95ee3d2dc324216dd017469c74e8a3bd094be65bc141587948e64e71f7f19f3e"
+  },
+  {
+   "path": "output/louvain/2025/metrics/louvain_metrics_2025.xlsx",
+   "bytes": 9191,
+   "sha256": "a1b924837c1067f124d5a5d62666a126701cf09ccdcae5a8371493aa1b986783"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11010_Jongno_2025.csv",
+   "bytes": 21756,
+   "sha256": "88654188eaa2fbe14372d849eea525f9d3d18b1389c1d0bbd4784b06e956ebf8"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11020_Jung_2025.csv",
+   "bytes": 21807,
+   "sha256": "b2bf7d3db129e41e3137e47c0fe6b5edd7cef2b26ae994a67ddeec985cedf2b0"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11030_Yongsan_2025.csv",
+   "bytes": 21873,
+   "sha256": "f5d9dfe8c9d06f31e0c44c3f1f82d43d8ae7aee96b799555b4d37626c015fb78"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11040_Seongdong_2025.csv",
+   "bytes": 21891,
+   "sha256": "0dd8454883cd047cb7fc7c3318128b5b8c58d7398cd3c8fb16c2225b9fab86d4"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11050_Gwangjin_2025.csv",
+   "bytes": 21679,
+   "sha256": "d120aaa4c259d9619bd2ea6eff8b164a49bd1e2cf1dcf0f876833ed6f2170b06"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11060_Dongdaemun_2025.csv",
+   "bytes": 21743,
+   "sha256": "435960a227001c496e3315b91088f3babd0038f8a3fb15b1426322e6e3098b78"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11070_Jungnang_2025.csv",
+   "bytes": 21706,
+   "sha256": "03690bc6c131ceb9ce628ba821c8fe090760f801572345a4a6562bff36cd0b3c"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11080_Seongbuk_2025.csv",
+   "bytes": 22051,
+   "sha256": "ad5ff806c6732c162ec329a4c9cf8f0c2fd9db27ccba02a2e458cce04788333d"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11090_Gangbuk_2025.csv",
+   "bytes": 21664,
+   "sha256": "0a3fb9f621b08e1d2e255a751e5b77f9c4c92103902c5f7724e35b5def5b03b2"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11100_Dobong_2025.csv",
+   "bytes": 21618,
+   "sha256": "7557ebc53f30ebe41f27f1c165661fe33d6f46b8268c3a0c679f75df87c59efe"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11110_Nowon_2025.csv",
+   "bytes": 22021,
+   "sha256": "bef646d85c4de31ad67d7feb12d7b7ea0332371d25afc34b9028c0b7ec933e45"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11120_Eunpyeong_2025.csv",
+   "bytes": 21916,
+   "sha256": "ec34e047f1c7d42bd00b4653bce75d83ae43fc9ca05977f33de71b81ddc4b40e"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11130_Seodaemun_2025.csv",
+   "bytes": 21308,
+   "sha256": "0ed11d6e59de32ecc747db38d768ba414eab2cc055465d16f4458d2ea69856fc"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11140_Mapo_2025.csv",
+   "bytes": 22049,
+   "sha256": "3caa62b7feba7612309fe0e127a3d932974d870ffd6d3ee01c9317c3a05cea59"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11150_Yangcheon_2025.csv",
+   "bytes": 21582,
+   "sha256": "f853b2150b90b876679e12abf4410852da89df71a4f00da03e97987c535cee8b"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11160_Gangseo_2025.csv",
+   "bytes": 21928,
+   "sha256": "74c20e21cbf19eb53518cabd47f9757d8849bbc4885f7be0494979a20538a9ce"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11170_Guro_2025.csv",
+   "bytes": 21817,
+   "sha256": "0c03c8663d9ba10afd5892acf44a5b255bdaa69525c9ced3df2de09196f2d51d"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11180_Geumcheon_2025.csv",
+   "bytes": 21343,
+   "sha256": "d757d21819b3fad81a1e17c40b00636d078a232d93af58d5ecb9c1afbde71d7f"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11190_Yeongdeungpo_2025.csv",
+   "bytes": 22041,
+   "sha256": "a76011dcf359f933521d64186f44748f764fb80ca56876feb202518856d94afe"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11200_Dongjak_2025.csv",
+   "bytes": 21381,
+   "sha256": "e7616be96757022fff8f3400ff5e27441553f03aa435c6ebd08582f1332aeb6b"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11210_Gwanak_2025.csv",
+   "bytes": 21979,
+   "sha256": "8cfbf57fbb48e3bbb1d4e1166b4712e3821b518d269b750a7925e0912c06de02"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11220_Seocho_2025.csv",
+   "bytes": 21878,
+   "sha256": "2dc979fe6099cf672ae80d5cbd5a8684b6371e33afda57f17534f1277c4a5cb0"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11230_Gangnam_2025.csv",
+   "bytes": 22418,
+   "sha256": "6f604fb6d2331066a2c1bfe1c69bc18b03d16a8f041ba70be27e6ece3c6b386b"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11240_Songpa_2025.csv",
+   "bytes": 22456,
+   "sha256": "acb2b80c100558bff9b5d94ffa092a65b451618030e2c2ecb3310097907a7bb2"
+  },
+  {
+   "path": "output/louvain/2025/resolution_scan_logs/11250_Gangdong_2025.csv",
+   "bytes": 22274,
+   "sha256": "3bb6d77a0cec32c910cb8ac2fe157e45aa742a59dcdf106ab349aa456a7ce6e6"
+  },
+  {
+   "path": "output/louvain/2025/run_info.json",
+   "bytes": 1459,
+   "sha256": "80533774b6b771422260c767523f71ae7f1d901c7c192becaa4fcb0c8601e7d3"
+  },
+  {
+   "path": "output/louvain/2025/run_seed.json",
+   "bytes": 84,
+   "sha256": "f57dde78c10a76597053070a1b3155de715a8f23ac635507bd31b735fe926b11"
+  },
+  {
+   "path": "output/louvain/2025/stability/11010_Jongno_2025.json",
+   "bytes": 1450,
+   "sha256": "6d3046836d8b570167e7b8ba20e8099ae5baac06c0af127eebf09b9a81dca915"
+  },
+  {
+   "path": "output/louvain/2025/stability/11020_Jung_2025.json",
+   "bytes": 1577,
+   "sha256": "281a5d0e4f905508193154a66c7533aadeac9342b0c646e5717086edf839b05c"
+  },
+  {
+   "path": "output/louvain/2025/stability/11030_Yongsan_2025.json",
+   "bytes": 1474,
+   "sha256": "454c0bd48ca405097bfa6754801165fe3d9a8d180a6b30142eca8bf86b15571b"
+  },
+  {
+   "path": "output/louvain/2025/stability/11040_Seongdong_2025.json",
+   "bytes": 1477,
+   "sha256": "06a40c0c8e059fd6a95cd97c4b4d5b401463245e97e50fdd9664d88f58229050"
+  },
+  {
+   "path": "output/louvain/2025/stability/11050_Gwangjin_2025.json",
+   "bytes": 1562,
+   "sha256": "42a3df9d238c1a0e828b391e3af8437b17f8198339658f804aff029b17b4d30b"
+  },
+  {
+   "path": "output/louvain/2025/stability/11060_Dongdaemun_2025.json",
+   "bytes": 1477,
+   "sha256": "49126904320552a8b8ab6584a015e9089f35c596d72dc8ba1f6a435619a96507"
+  },
+  {
+   "path": "output/louvain/2025/stability/11070_Jungnang_2025.json",
+   "bytes": 1579,
+   "sha256": "15d248775e8aef5439d639693b66d04810874f7ac9eb70ca2af32dd15dfaee55"
+  },
+  {
+   "path": "output/louvain/2025/stability/11080_Seongbuk_2025.json",
+   "bytes": 1487,
+   "sha256": "ab0dd01783ace592826f2f6116a88d7ec063b42ff632a9ad5ec2f8c6115f0dd0"
+  },
+  {
+   "path": "output/louvain/2025/stability/11090_Gangbuk_2025.json",
+   "bytes": 1450,
+   "sha256": "38a30b3755475ff18cc270a2209295210781efd1d0224eb93e854878c50337c2"
+  },
+  {
+   "path": "output/louvain/2025/stability/11100_Dobong_2025.json",
+   "bytes": 1484,
+   "sha256": "51d2d295292df4b00d6f845e9e633b5573cc612ce31324a733f19ee5476c7646"
+  },
+  {
+   "path": "output/louvain/2025/stability/11110_Nowon_2025.json",
+   "bytes": 1507,
+   "sha256": "49ce46538e34759ba93a6af4ff64304716a9577b4f28ebe37beada1c2a60c9b7"
+  },
+  {
+   "path": "output/louvain/2025/stability/11120_Eunpyeong_2025.json",
+   "bytes": 1488,
+   "sha256": "380620562006d76cdb82bb0232aba2f7b13ffe3422151a3beb42b753bc40a788"
+  },
+  {
+   "path": "output/louvain/2025/stability/11130_Seodaemun_2025.json",
+   "bytes": 1477,
+   "sha256": "68d6f13442e5f641b81daa1bb34aee1d19a87dbeec1e951408888be6df0d809d"
+  },
+  {
+   "path": "output/louvain/2025/stability/11140_Mapo_2025.json",
+   "bytes": 1485,
+   "sha256": "b09fdd7c70f0640ad3f0d428b735d14b5a02fac3d7b480b5d043b9d03f65bfd0"
+  },
+  {
+   "path": "output/louvain/2025/stability/11150_Yangcheon_2025.json",
+   "bytes": 1488,
+   "sha256": "1f043ee8beb1984982e2e1402f2b5847106e52e9e66270e08a70839260d72778"
+  },
+  {
+   "path": "output/louvain/2025/stability/11160_Gangseo_2025.json",
+   "bytes": 1500,
+   "sha256": "51826a36d725ab99ba420ecb4647b8753c49a2847e44d8676066a3f022e0bc4e"
+  },
+  {
+   "path": "output/louvain/2025/stability/11170_Guro_2025.json",
+   "bytes": 1476,
+   "sha256": "82415d35650857fdcafc5c75423c746c60e3148c93ce40a81b1276c9994bea10"
+  },
+  {
+   "path": "output/louvain/2025/stability/11180_Geumcheon_2025.json",
+   "bytes": 1464,
+   "sha256": "8a069a794f21314cace311288be1328f92188ff1b60a56dc2087a805ff2008ab"
+  },
+  {
+   "path": "output/louvain/2025/stability/11190_Yeongdeungpo_2025.json",
+   "bytes": 1486,
+   "sha256": "b3df78cf41cd64e2ac12028071c4b22e60776abdfae8238f91c0ed3568cc8a90"
+  },
+  {
+   "path": "output/louvain/2025/stability/11200_Dongjak_2025.json",
+   "bytes": 1487,
+   "sha256": "9691b6770f218980361986caf79f640b5c4da1f5b093867394cfcb2e221c274b"
+  },
+  {
+   "path": "output/louvain/2025/stability/11210_Gwanak_2025.json",
+   "bytes": 1488,
+   "sha256": "8e128e422f1ea3a977e6c10957a5a446175ecc83e897fd91dea6df5144fbe202"
+  },
+  {
+   "path": "output/louvain/2025/stability/11220_Seocho_2025.json",
+   "bytes": 1604,
+   "sha256": "1546bd1cacbbc54a402710c6e42e011daa088943be83b4a1874400c7a207bf4e"
+  },
+  {
+   "path": "output/louvain/2025/stability/11230_Gangnam_2025.json",
+   "bytes": 1622,
+   "sha256": "6ac8b1ed5e2d3e750cc0afa8267120dd7020f4c27a0c1ccd14be5c1bc9d1b19d"
+  },
+  {
+   "path": "output/louvain/2025/stability/11240_Songpa_2025.json",
+   "bytes": 1508,
+   "sha256": "92297d60650ed595498d16319037dbb4675fbba2cd47bcc4bb61ea2fe9c703cb"
+  },
+  {
+   "path": "output/louvain/2025/stability/11250_Gangdong_2025.json",
+   "bytes": 1586,
+   "sha256": "64407f415945b3dfbf3228cffa3d26befc5640d82ce4e71012edd2a60e6facc9"
+  },
+  {
+   "path": "README.md",
+   "bytes": 7450,
+   "sha256": "c8cfe503a33164ff68a856ee3670d43aa68f8edd2f4194dcb54656b8f0b6990e"
+  },
+  {
+   "path": "requirements-replication.txt",
+   "bytes": 447,
+   "sha256": "6ba9d64d0b67878ba4b5ec968d23fa6bf4ee6e5fc1828ec5eccb95285f463db9"
+  },
+  {
+   "path": "results/figures/F1_procedure.pdf",
+   "bytes": 73426,
+   "sha256": "a3169116c6d53fdd4ffb9285572e712b9f6df13232dd75c383238fb5f978d902"
+  },
+  {
+   "path": "results/figures/F1_procedure.png",
+   "bytes": 400691,
+   "sha256": "48dcff1a19407560f5ea69f7df34ea70677e9f11e29a2163335eff617a9c8b41"
+  },
+  {
+   "path": "results/figures/F2_maps_2025.pdf",
+   "bytes": 2648991,
+   "sha256": "42766f71cdd7a624800cf24285080360ea0c3b0519ccf3e2baa7c45668f72216"
+  },
+  {
+   "path": "results/figures/F2_maps_2025.png",
+   "bytes": 517133,
+   "sha256": "b7dee1373d657d8d45a8c80128fe9d9a16cd696e5ae7a3597152ea5d18809b8e"
+  },
+  {
+   "path": "results/figures/F3_algorithm_comparison.pdf",
+   "bytes": 65100,
+   "sha256": "0a1c6b5fd6b3e2156d209f5b1f57b049f3b6ca07fe376bf564f44455b443da08"
+  },
+  {
+   "path": "results/figures/F3_algorithm_comparison.png",
+   "bytes": 495532,
+   "sha256": "3be2ebf0c84129cae616e0afbd8ab4f5fc3daace4f0e3342570ddebb197b5233"
+  },
+  {
+   "path": "results/figures/F4_district_diagnostics.pdf",
+   "bytes": 52098,
+   "sha256": "36165af958ca1d97fa98923405d95fe5655f39be535f2c956497727bc1e406d6"
+  },
+  {
+   "path": "results/figures/F4_district_diagnostics.png",
+   "bytes": 274378,
+   "sha256": "a788280974512266e5f66c9915fd83d86709b56711377a8ab7405af7a0bcd51d"
+  },
+  {
+   "path": "results/figures/F5_iou_relations.pdf",
+   "bytes": 42802,
+   "sha256": "1df120a1b466bc8ab3d15a6b0d26a109a072adce965f8459e120ba9d5747c933"
+  },
+  {
+   "path": "results/figures/F5_iou_relations.png",
+   "bytes": 306675,
+   "sha256": "ff2bb72aa00f23b2d1065d2058fcad4ab354bdaabc65b66a957ccc552d988d93"
+  },
+  {
+   "path": "results/reused_20260929/A1_district_2020.csv",
+   "bytes": 7375,
+   "sha256": "d209045ad6e1b9255da8c02fee3ece5b5c11c050d18df09f65c26629f446b6be"
+  },
+  {
+   "path": "results/reused_20260929/A2_fixed2025_on2020.csv",
+   "bytes": 418,
+   "sha256": "265824d3906bb280876f1792e334483b1f030e8be03b19e63eeb6178e1571366"
+  },
+  {
+   "path": "results/reused_20260929/A3_contiguity.csv",
+   "bytes": 11442,
+   "sha256": "3f3d81ad55cd3b2e41af14c7d4f79dc2e50b4123278d746053e73b01c00500ed"
+  },
+  {
+   "path": "results/reused_20260929/summary.json",
+   "bytes": 4844,
+   "sha256": "b9ee8dad8678722c11b52c56ddabb71dde338f5184cd77ff83bd3b2fdcd42bfb"
+  },
+  {
+   "path": "results/reused_20260929/T1_input_overview.csv",
+   "bytes": 262,
+   "sha256": "d8b6800167fcec9f15fbedc06463c35599209e7c582afe0d5a9d9c2ace451d81"
+  },
+  {
+   "path": "results/reused_20260929/T2_city_summary.csv",
+   "bytes": 670,
+   "sha256": "b0ffb1a76eea6cd200a6c1b31619c72df6a47560b54024958ed362dabf2b30bf"
+  },
+  {
+   "path": "results/reused_20260929/T3_district_2025.csv",
+   "bytes": 7919,
+   "sha256": "13447d9672e1c3169a4cd955d4f36a37ab0d4ce26a1ee803c48b21fe3ea341c1"
+  },
+  {
+   "path": "results/reused_20260929/T6_sensitivity.csv",
+   "bytes": 6517,
+   "sha256": "8c0d0b6af856c9c936ed139186c67f2fb2fa228bb6f61f2a09f5413aa9dfb0bf"
+  },
+  {
+   "path": "results/reused_20260929/T7_connected_reference_2025.csv",
+   "bytes": 2179,
+   "sha256": "4794e4e03a5299307314fce5960c4dda30714ddb53338a54f0eeb0273412cb3b"
+  },
+  {
+   "path": "results/reused_20260929/T8_correlations_2025.csv",
+   "bytes": 247,
+   "sha256": "cc6f5dfe6402ae9b145dc4311b05ff3ecf9d50cd89a17f70391113bbfaa41d52"
+  },
+  {
+   "path": "results/tables/C1_official_zone_composition.csv",
+   "bytes": 5638,
+   "sha256": "d9bc60f26246b36a247dd8a4f7c0884ef68da83922538982b55869796c64b54a"
+  },
+  {
+   "path": "results/tables/L1_algorithm_comparison_2025.csv",
+   "bytes": 11256,
+   "sha256": "24f7dbf2352e1438091c4d8c0ceadd01ec8e8ae22d683067b87334e25a177778"
+  },
+  {
+   "path": "results/tables/L2_city_summary_2025.csv",
+   "bytes": 950,
+   "sha256": "a7d099d6fbe8ea65f42eee0714dd2e86142755a339334edbc8b679d2e0870218"
+  },
+  {
+   "path": "results/tables/T1_input_overview.csv",
+   "bytes": 400,
+   "sha256": "e8ab8b3601767f7208c78dd0758cf47ac38e5fb86642badd1ac43a11aa0d390d"
+  }
+ ]
+}

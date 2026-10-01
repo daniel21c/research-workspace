@@ -1,0 +1,112 @@
+{
+  "docx_tables_7": true,
+  "docx_figures_5": true,
+  "pdf_pages": 13,
+  "pdf_has_all_captions": {
+    "표 4.2-1": true,
+    "표 4.2-2": true,
+    "표 4.2-3": true,
+    "표 4.2-4": true,
+    "표 4.2-5": true,
+    "표 4.2-6": true,
+    "표 A-1": true,
+    "그림 4.2-1.": true,
+    "그림 4.2-2.": true,
+    "그림 4.2-3.": true,
+    "그림 4.2-4.": true,
+    "그림 4.2-5.": true
+  },
+  "pdf_no_replacement_char": true,
+  "forbidden_terms_found": [],
+  "hard_words_found": {},
+  "abbreviation_first_use": {
+    "요약": {
+      "OD": null,
+      "IFR": true,
+      "IoU": true,
+      "ARI": null,
+      "HW·WH": null,
+      "Q": null
+    },
+    "본문": {
+      "OD": true,
+      "IFR": true,
+      "IoU": true,
+      "ARI": true,
+      "HW·WH": true,
+      "Q": true
+    }
+  },
+  "tables_jtg_rules": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "table_captions_above_label_then_title": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "figure_captions_below_bold_label": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "figure_dpi": {
+    "F1_procedure.png": 1000,
+    "F2_maps_2025.png": 500,
+    "F3_algorithm_comparison.png": 1000,
+    "F4_district_diagnostics.png": 1000,
+    "F5_iou_relations.png": 1000
+  },
+  "numbers_in_text": {
+    "IoU": true,
+    "IFR 공식": true,
+    "IFR Leiden": true,
+    "D_flow": true,
+    "Louvain 서울 IFR": true,
+    "행 수": true,
+    "가장 잦은 결과 비율 Leiden": true,
+    "가장 잦은 결과 비율 Louvain": true,
+    "같은 결과 구 수": true,
+    "Louvain 결과 바뀐 구 수": true
+  },
+  "equations": {
+    "count": 5,
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "font_sizes_pt": [
+      10.5
+    ],
+    "latin_fonts": [
+      "Times New Roman"
+    ],
+    "referenced_in_text": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "markup_left_in_docx": [],
+    "hangul_inside_equations": [],
+    "pass": true
+  },
+  "hyphen_minus_numbers": [],
+  "pass": true
+}

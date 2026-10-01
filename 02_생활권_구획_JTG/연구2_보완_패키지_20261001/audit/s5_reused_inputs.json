@@ -1,0 +1,52 @@
+[
+  {
+    "file": "T1_input_overview.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T1_input_overview.csv",
+    "sha256": "d8b6800167fcec9f15fbedc06463c35599209e7c582afe0d5a9d9c2ace451d81"
+  },
+  {
+    "file": "T2_city_summary.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T2_city_summary.csv",
+    "sha256": "b0ffb1a76eea6cd200a6c1b31619c72df6a47560b54024958ed362dabf2b30bf"
+  },
+  {
+    "file": "T3_district_2025.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T3_district_2025.csv",
+    "sha256": "13447d9672e1c3169a4cd955d4f36a37ab0d4ce26a1ee803c48b21fe3ea341c1"
+  },
+  {
+    "file": "T6_sensitivity.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T6_sensitivity.csv",
+    "sha256": "8c0d0b6af856c9c936ed139186c67f2fb2fa228bb6f61f2a09f5413aa9dfb0bf"
+  },
+  {
+    "file": "T7_connected_reference_2025.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T7_connected_reference_2025.csv",
+    "sha256": "4794e4e03a5299307314fce5960c4dda30714ddb53338a54f0eeb0273412cb3b"
+  },
+  {
+    "file": "T8_correlations_2025.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\T8_correlations_2025.csv",
+    "sha256": "cc6f5dfe6402ae9b145dc4311b05ff3ecf9d50cd89a17f70391113bbfaa41d52"
+  },
+  {
+    "file": "A1_district_2020.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\A1_district_2020.csv",
+    "sha256": "d209045ad6e1b9255da8c02fee3ece5b5c11c050d18df09f65c26629f446b6be"
+  },
+  {
+    "file": "A2_fixed2025_on2020.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\A2_fixed2025_on2020.csv",
+    "sha256": "265824d3906bb280876f1792e334483b1f030e8be03b19e63eeb6178e1571366"
+  },
+  {
+    "file": "A3_contiguity.csv",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\tables\\A3_contiguity.csv",
+    "sha256": "3f3d81ad55cd3b2e41af14c7d4f79dc2e50b4123278d746053e73b01c00500ed"
+  },
+  {
+    "file": "summary.json",
+    "source": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\results\\summary.json",
+    "sha256": "b9ee8dad8678722c11b52c56ddabb71dde338f5184cd77ff83bd3b2fdcd42bfb"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "louvain_424_unique": true,
+  "leiden_424_unique": true,
+  "q_louvain_vs_networkx_max_abs_diff": 1.6653345369377348e-16,
+  "q_louvain_vs_engine_metrics_max_abs_diff": 4.900677004759935e-07,
+  "ifr_louvain_vs_engine_metrics_max_abs_diff": 4.820339418176722e-07,
+  "louvain_n_communities_same_as_engine_metrics": true,
+  "q_leiden_vs_engine_metrics_max_abs_diff": 4.900677004759935e-07,
+  "ifr_leiden_vs_engine_metrics_max_abs_diff": 4.86234728869217e-07,
+  "leiden_n_communities_same_as_engine_metrics": true,
+  "ifr_louvain_vs_pandas_max_abs_diff": 1.1102230246251565e-16,
+  "leiden_official_vs_20260929_T3_max_abs_diff": 4.986566715103891e-13,
+  "pass": true
+}

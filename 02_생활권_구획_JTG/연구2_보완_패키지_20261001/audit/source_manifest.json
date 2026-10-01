@@ -1,0 +1,151 @@
+{
+  "stage": "S0",
+  "created": "2026-10-01T23:13:31",
+  "design": "R2R-DESIGN-20261001-v3",
+  "inputs": [
+    {
+      "release": "boundary-v2-dong",
+      "file": "seoul_dong_424_dissolved.gpkg",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\seoul_dong_424_dissolved.gpkg",
+      "bytes": 7483392,
+      "sha256": "a1b88cc8611244e887106456aea5cbd268c36f90c8b30348b68c4327062c433b",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "a1b88cc8611244e887106456aea5cbd268c36f90c8b30348b68c4327062c433b",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_package_copy": null
+    },
+    {
+      "release": "boundary-v2-dong",
+      "file": "dong_to_official_livingzone_mapping_424.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\dong_to_official_livingzone_mapping_424.csv",
+      "bytes": 33039,
+      "sha256": "4c75ebfaba8e644d244f449652941d12d72e1fdc150b8e91eba2c8015c2753de",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "4c75ebfaba8e644d244f449652941d12d72e1fdc150b8e91eba2c8015c2753de",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_package_copy": true
+    },
+    {
+      "release": "boundary-v2-leiden",
+      "file": "dong_to_leiden_2025_mapping_424.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\dong_to_leiden_2025_mapping_424.csv",
+      "bytes": 41769,
+      "sha256": "19c35263178c77795d6fbff35419b339f10c573098c12b1950fc85ccbdbbc149",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "19c35263178c77795d6fbff35419b339f10c573098c12b1950fc85ccbdbbc149",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_package_copy": true
+    },
+    {
+      "release": "boundary-v2-leiden",
+      "file": "seoul_boundaries_all.gpkg",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\seoul_boundaries_all.gpkg",
+      "bytes": 10424320,
+      "sha256": "ec8467ec3e9bebfcdd1abb0d4fc1a7c0a1da5f3bec9382c1b0d91bc543dcb8ed",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "ec8467ec3e9bebfcdd1abb0d4fc1a7c0a1da5f3bec9382c1b0d91bc543dcb8ed",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_package_copy": true
+    },
+    {
+      "release": "od-daily-v1",
+      "file": "od_daily_202501.parquet",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\od\\od_daily_202501.parquet",
+      "bytes": 1456506,
+      "sha256": "7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_package_copy": true
+    },
+    {
+      "release": "od-daily-v1",
+      "file": "od_summary_202501.json",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\od\\od_summary_202501.json",
+      "bytes": 10494,
+      "sha256": "a3d18d00540e3ae1444fc0ba852d9070e4474664a789815ec767e9a7a4ab89ef",
+      "used_in_calculation": false,
+      "core_recorded_sha256": null,
+      "matches_core_record": null,
+      "prefix16_in_distribution_list": null,
+      "same_as_20260929_package_copy": null
+    },
+    {
+      "release": "boundary-v2-leiden (같은 실행의 지표표, 보조)",
+      "file": "leiden_metrics_2025.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\..\\output\\leiden\\2025\\metrics\\leiden_metrics_2025.csv",
+      "bytes": 4033,
+      "sha256": "07d247191055ab7c0f2237f52bb9f5b0172dd67849caa63de5abf757ffa75ac1",
+      "used_in_calculation": true,
+      "core_recorded_sha256": null,
+      "matches_core_record": null,
+      "prefix16_in_distribution_list": null,
+      "same_as_20260929_package_copy": null
+    }
+  ],
+  "code_and_documents": {
+    "core_s03_leiden_consensus.py": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\scripts\\s03_leiden_consensus.py",
+      "sha256": "5bffdb7658ee4408710632d433904a10a52e5bd0b28edd4740742e49aae1223c"
+    },
+    "core_config.py": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\scripts\\config.py",
+      "sha256": "e268e585f38daf3cfd179e5935d548a23797d00d6b11953dd39c0f5529ef07d6"
+    },
+    "package_20260929_analyze.py": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\code\\analyze.py",
+      "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1"
+    },
+    "design_20260929_연구설계.md": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계.md",
+      "sha256": "70416a072fc7a1e8555e820ce5add8f5e2b0aa4eb2442f8a24bd6da4d2060c1d"
+    },
+    "design_20261001_연구설계_재현판.md": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계_재현판_20261001.md",
+      "sha256": "1f696c04f1f990031ae20712f1af634a44b231d4f3ae965438928409bdd637a7"
+    },
+    "distribution_list": {
+      "path": "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md",
+      "sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68"
+    }
+  },
+  "leiden_canonical_2025": {
+    "base_seed": 1089930980,
+    "run_info_input_od": "7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4",
+    "run_info_input_dong": "a1b88cc8611244e887106456aea5cbd268c36f90c8b30348b68c4327062c433b",
+    "run_info_params": {
+      "res_min": 0.01,
+      "res_max": 2.5,
+      "res_step": 0.01,
+      "n_iter": 3000,
+      "tau": 0.5,
+      "self_loops": true,
+      "primary": "modularity",
+      "fine_steps": 100,
+      "stab_trials": 10,
+      "stab_iter": 3000,
+      "base_seed": 1089930980
+    }
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "pyarrow": "23.0.1",
+    "geopandas": "1.1.3",
+    "shapely": "2.1.2",
+    "igraph": "1.0.0",
+    "leidenalg": "0.12.0",
+    "networkx": "3.6.1",
+    "python-louvain": "0.16",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0"
+  },
+  "note": "공통 코어엔진은 읽기만 했다. inputs/ 는 계산에 쓰는 사본(6개)이다. 마지막 파일(Leiden 지표표)은 2026-10-01 S4 확장 때 추가했다."
+}

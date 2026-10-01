@@ -1,0 +1,9 @@
+{
+  "n_dong_424": true,
+  "n_district_25": true,
+  "n_zones_116": true,
+  "composition_sums_to_424": true,
+  "every_od_dong_in_boundary": true,
+  "no_negative_flow": true,
+  "same_as_20260929_T1_2025": true
+}
