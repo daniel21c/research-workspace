@@ -336,6 +336,8 @@ def build(md: Path, mode: str, breaks: dict | None = None):
             t = s[2:].strip()
             if first_h1: first_h1 = False; continue          # 'Ⅰ. 서론'은 샘플 문단에 있음
             in_refs = t.startswith("인용문헌"); blocks.append(("h1", t)); continue
+        m = re.match(r"^\$\$\s*(.+?)\s*\|\s*(\(\d+\))\s*$", s)
+        if m: blocks.append(("eq", m.groups())); continue          # 수식: 가운데, 오른쪽에 번호(편집규정 ⑦)
         if s.startswith("### "): blocks.append(("h3", s[4:])); continue      # 1) 2) 3) 소절(편집규정 제19조⑤ 셋째 수준)
         if s.startswith("## "): blocks.append(("h2", s[3:])); continue
         m = re.match(r"^\[\[(TABLE|FIG):(\w+)\]\]$", s)
@@ -364,12 +366,12 @@ def build(md: Path, mode: str, breaks: dict | None = None):
                     t = tables[key]
                     W.two_line(f"표 {t['ko']}", f"Table {t['en']}", "표본문", "Left", size=8.5, keep_next=True)
                     W.table(t["headers"], t["rows"], t["widths"], bold_last=t.get("bold_last", False))
-                    W.para("주: " + t["note"], "표주석", align="Left")
+                    W.para("Note: " + t["note"], "표주석", align="Left")
                 else:
                     ko, en, fn, wcm, nt = figs[key]
                     W.picture(FIG / fn, wcm)
-                    W.two_line(f"그림 {ko}", f"Fig. {en}", "표본문", "Center", size=8.5)
-                    W.para("주: " + nt, "표주석", align="Left")
+                    W.two_line(f"그림 {ko}", f"Figure {en}", "표본문", "Center", size=8.5)
+                    W.para("Note: " + nt, "표주석", align="Left")
                 i += 1
             # 다음 블록이 '제목 앞 쪽 나눔' 대상 절 제목이면 2단으로 돌아가기 전에(1단 구역에서) 쪽을 나눈다.
             # 2단 구역 첫 문단에 넣은 쪽 나눔은 한글이 단 나눔으로 처리해 제목이 오른쪽 단 끝에 남았다(5차 점검, 7쪽).
@@ -383,6 +385,8 @@ def build(md: Path, mode: str, breaks: dict | None = None):
                 W.para(v, "개요1", bold_all=True, keep=True)
         elif kind == "h2":
             h2(v)
+        elif kind == "eq":
+            W.para(f"{v[0]}\u2003\u2003{v[1]}", "본문", align="Center")
         elif kind == "h3":
             W.para(v, "본문", bold_all=True, keep=True)
         elif kind == "ref":

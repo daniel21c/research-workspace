@@ -27,7 +27,7 @@ def cap(doc, ko, en, kind):
     """편집규정 제19조⑨⑩: 표 제목은 표 위 왼쪽, 그림 제목은 그림 아래 가운데, 국문 줄 + 영문 줄."""
     p = doc.add_paragraph(style="KPA Caption")
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT if kind == "table" else WD_ALIGN_PARAGRAPH.CENTER
-    for k, (lab, txt) in enumerate(((("표" if kind == "table" else "그림"), ko), (("Table" if kind == "table" else "Fig."), en))):
+    for k, (lab, txt) in enumerate(((("표" if kind == "table" else "그림"), ko), (("Table" if kind == "table" else "Figure"), en))):
         num, rest = txt.split(" ", 1)
         r = p.add_run(f"{lab} {num} "); K6.run_font(r, K6.BODY_FONT, 8.5, bold=True)
         r = p.add_run(rest); K6.run_font(r, K6.BODY_FONT, 8.5)
@@ -73,6 +73,9 @@ def build(md_path: Path):
         if not s: continue
         if s.startswith("# "): t = s[2:].strip(); in_refs = t.startswith("인용문헌"); K6.para(doc, t, "KPA Heading 1"); continue
         if s.startswith("## "): K6.para(doc, s[3:], "KPA Heading 2"); continue
+        m = re.match(r"^\$\$\s*(.+?)\s*\|\s*(\(\d+\))\s*$", s)     # 수식: 본문과 줄을 바꾸고 오른쪽에 (1) 번호(편집규정 ⑦)
+        if m:
+            p = doc.add_paragraph(style="Normal"); p.alignment = A.CENTER; r = p.add_run(f"{m.group(1)}\u2003\u2003{m.group(2)}"); K6.run_font(r, K6.BODY_FONT, 9.5); continue
         m = re.match(r"^\[\[TABLE:(\w+)\]\]$", s)
         if m:
             t = tables[m.group(1)]; cap(doc, t["ko"], t["en"], "table")
@@ -115,7 +118,7 @@ def claims(md_text: str):
     nums = {k: [x for x in re.findall(r"\d+(?:[.,]\d+)?", t) if x not in ("2020", "2025")] for k, t in ab.items()}
     ck("초록에 구체적 수치 없음(연도만 허용)", not any(nums.values()), json.dumps(nums, ensure_ascii=False))
     ck("원고에 원인 탐색·시설 접근성 표(구 표 6) 없음", "[[TABLE:T6]]" in md_text and "Coverage" not in md_text)
-    bad = [w for w in ("가까운 곳에서 이루어", "가까운 곳으로 몰린", "이들 동만", "공간적으로 연결된 커뮤니티", "크기 효과를 통제", "only those dongs", "불일치는 줄지 않았", "따라가지 못하", "8~9%에 해당하는 일부 경계 동에 집중", "쓸모없는 경계", "저절로 해소", "더 멀어져", "Claude", "ChatGPT", "박사") if w in md_text]
+    bad = [w for w in ("가까운 곳에서 이루어", "가까운 곳으로 몰린", "이들 동만", "공간적으로 연결된 커뮤니티", "크기 효과를 통제", "only those dongs", "불일치는 줄지 않았", "따라가지 못하", "8~9%에 해당하는 일부 경계 동에 집중", "쓸모없는 경계", "저절로 해소", "더 멀어져", "특유", "국지화", "순차이", "모듈러리티이", "모듈러리티은", "모듈러리티으", "률으로", "Claude", "ChatGPT", "박사") if w in md_text]
     ck("계산이 뒷받침하지 않는 표현 없음(AI 대조 점검 1·2차 09-30: 거리 단축·진단 동만 재배정·Leiden 공간 연결·크기 통제·D 불변·8~9%에 D 집중·따라가지 못함·전면 재설정; 6차 저자 결정으로 '집중'·'잘 그어짐'은 허용) + 저자 결정(도구명·학위논문 언급 없음; 규정 적합성 판정이 아님)", not bad, str(bad))
     ai = md_text.split("# AI 사용 진술문")[1].split("# 인용문헌")[0]
     ck("AI 진술문에 사용 목적·시기·저자 검토 문장 있음(가이드라인 가.5; 도구명은 저자 결정으로 미기재 — 체크리스트 B-7)", all(w in ai for w in ("2026년 9월", "검토·수정·검증", "책임")), ai[:80])

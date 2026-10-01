@@ -85,7 +85,7 @@ def caption(doc, ko, en, kind="table"):
 
 
 def note(doc, text):
-    p = doc.add_paragraph(style="KPA Note"); r = p.add_run("주: " + text); run_font(r, BODY_FONT, 7.5)
+    p = doc.add_paragraph(style="KPA Note"); r = p.add_run("Note: " + text); run_font(r, BODY_FONT, 7.5)
     return p
 
 
