@@ -12,7 +12,7 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
 AG = Path(__file__).resolve().parents[1]; RES = AG / 'results'; MS = AG / 'manuscript'; FIG = MS / 'figures'
-COMMIT = 'c6d4d73'; REPO = 'https://github.com/daniel21c/research-workspace'
+COMMIT = '49fe254'; REPO = 'https://github.com/daniel21c/research-workspace'
 import sys  # noqa: E402
 sys.path.insert(0, str(AG / 'code'))
 import a06_text_en as EN  # noqa: E402
