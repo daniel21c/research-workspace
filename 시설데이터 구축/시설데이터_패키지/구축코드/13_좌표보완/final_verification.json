@@ -1,0 +1,18 @@
+{
+  "PASS": true,
+  "sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+  "rows": 606066,
+  "analysis_ready": 603066,
+  "remaining_null": 2941,
+  "rebuild_analysis_byte_identical": true,
+  "rebuild_integrated_byte_identical": true,
+  "rebuild_summary_byte_identical": true,
+  "unchanged_other_adopted_inputs": 41,
+  "old_noncoordinate_attributes_preserved": true,
+  "unaffected_rows_preserved": true,
+  "offline_http_calls": 0,
+  "replacement_file_count": 55,
+  "registry_hash_matches": true,
+  "archive_files_hash_verified": 55,
+  "permanent_deletions": 0
+}

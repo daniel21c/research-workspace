@@ -1,0 +1,656 @@
+{
+  "release": "facility-v1.3",
+  "analysis_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+  "adopted_inputs": [
+    {
+      "path": "데이터/시설별/가족센터_자치구본소/facilities_가족센터_자치구본소_2020_01.csv",
+      "sha256": "b1fa335dcfd415bac2a20b68755449175ba53e935419cb16e13c83efe5f60e4e",
+      "bytes": 19696
+    },
+    {
+      "path": "데이터/시설별/가족센터_자치구본소/facilities_가족센터_자치구본소_2020_01.parquet",
+      "sha256": "1008608f626e510d86a1285ed5ad1faea9c71a914cf53b2ac053afd008991488",
+      "bytes": 30868
+    },
+    {
+      "path": "데이터/시설별/가족센터_자치구본소/facilities_가족센터_자치구본소_2025_01.csv",
+      "sha256": "c4279d9bb9fc06082fb01ed32c07fbc23d8ed912dd3a6de4f165d41895f15017",
+      "bytes": 16260
+    },
+    {
+      "path": "데이터/시설별/가족센터_자치구본소/facilities_가족센터_자치구본소_2025_01.parquet",
+      "sha256": "259fb6be9659b630796ed59e44dff18d2e23bf8e2f207b5d435274c490a59e84",
+      "bytes": 27819
+    },
+    {
+      "path": "데이터/시설별/공공도서관/facilities_공공도서관_2020_01.csv",
+      "sha256": "6aeedbf9e736332b3011965d77b851355ed5325d127b3def5af4ae33d844fe56",
+      "bytes": 146497
+    },
+    {
+      "path": "데이터/시설별/공공도서관/facilities_공공도서관_2020_01.parquet",
+      "sha256": "700bf43e374d9df8c5ed9f0ac538af71153fea9ca734ac840eb6f1e2b58c8c08",
+      "bytes": 65379
+    },
+    {
+      "path": "데이터/시설별/공공도서관/facilities_공공도서관_2025_01.csv",
+      "sha256": "9cc3abf2cae00ef474f8095164462151ca9f11d5a833675098feb9bed7362bb7",
+      "bytes": 174630
+    },
+    {
+      "path": "데이터/시설별/공공도서관/facilities_공공도서관_2025_01.parquet",
+      "sha256": "c012d1a4334dab8999dd853bcb843b8b150e505ccb41754faa35b5c1aea2a347",
+      "bytes": 68804
+    },
+    {
+      "path": "데이터/시설별/공연장_등록공연장/facilities_공연장_등록공연장_2020_01.csv",
+      "sha256": "43af0af06684be2d4b0511b5123a933595d60138e745a9c7291985cdd9b71ea1",
+      "bytes": 291719
+    },
+    {
+      "path": "데이터/시설별/공연장_등록공연장/facilities_공연장_등록공연장_2020_01.parquet",
+      "sha256": "ba1c1b4abaa49366bc4d9634ce5da96a7674507517d583c8a073ff92462e6135",
+      "bytes": 66490
+    },
+    {
+      "path": "데이터/시설별/공연장_등록공연장/facilities_공연장_등록공연장_2025_01.csv",
+      "sha256": "ee105ec2b4d8887540aaaaf2bd8b7f1cc13800ee0175875181067ebb02e20596",
+      "bytes": 344540
+    },
+    {
+      "path": "데이터/시설별/공연장_등록공연장/facilities_공연장_등록공연장_2025_01.parquet",
+      "sha256": "bc746fe2079e644b8cf24a033804c1b5d074cd381313a7cf75d7791c24b10b02",
+      "bytes": 75507
+    },
+    {
+      "path": "데이터/시설별/노인복지_이용시설/facilities_노인복지_이용시설_2020_01.csv",
+      "sha256": "9fb554d69122227d372fd5adba493634869846a1c9521d7c99719bc2e6dfb7d9",
+      "bytes": 372197
+    },
+    {
+      "path": "데이터/시설별/노인복지_이용시설/facilities_노인복지_이용시설_2020_01.parquet",
+      "sha256": "6356ab36e6d785b32514ad73f9a32b180196b83e45945231acc572e32e081f80",
+      "bytes": 92278
+    },
+    {
+      "path": "데이터/시설별/노인복지_이용시설/facilities_노인복지_이용시설_2025_01.csv",
+      "sha256": "47104844b4ceb4cdf4314228353c69f8d3cf324aa65f52cf54a47a2c70169f35",
+      "bytes": 416687
+    },
+    {
+      "path": "데이터/시설별/노인복지_이용시설/facilities_노인복지_이용시설_2025_01.parquet",
+      "sha256": "f9675146fc76c74040a6cf26cf7719bb2ed514262c0e2f0247967589e6b44ac8",
+      "bytes": 103109
+    },
+    {
+      "path": "데이터/시설별/노인복지_입소시설/facilities_노인복지_입소시설_2020_01.csv",
+      "sha256": "c4121b87dbefbb0cfbebed6f8599f99da466dad9ccd00f241ad044dffd12cae9",
+      "bytes": 388524
+    },
+    {
+      "path": "데이터/시설별/노인복지_입소시설/facilities_노인복지_입소시설_2020_01.parquet",
+      "sha256": "0844f910f5481e00bb7d7da816565eec14838fb2e8190061938f868b446d9de3",
+      "bytes": 89344
+    },
+    {
+      "path": "데이터/시설별/노인복지_입소시설/facilities_노인복지_입소시설_2025_01.csv",
+      "sha256": "8bfca45f62d0d5bc2073a6ef4b4d2e1a58c4053c13747bfce5e9812a24620f6c",
+      "bytes": 353962
+    },
+    {
+      "path": "데이터/시설별/노인복지_입소시설/facilities_노인복지_입소시설_2025_01.parquet",
+      "sha256": "e8218a55eabbc3e4d3bdb31f46ef96cca5922bc2a44494191149917177729317",
+      "bytes": 87136
+    },
+    {
+      "path": "데이터/시설별/대규모점포_주요4업태/facilities_대규모점포_주요4업태_2020_01.csv",
+      "sha256": "170691070da9cb3433fb7fe0fcdf4d5d4a358a8518688598444edfc32ee95ed5",
+      "bytes": 132363
+    },
+    {
+      "path": "데이터/시설별/대규모점포_주요4업태/facilities_대규모점포_주요4업태_2020_01.parquet",
+      "sha256": "0c1adffba39a2d660738f452f92c51b13b0546bbce6f1860e3b0e1c92bc20d02",
+      "bytes": 48793
+    },
+    {
+      "path": "데이터/시설별/대규모점포_주요4업태/facilities_대규모점포_주요4업태_2025_01.csv",
+      "sha256": "8fdecf2cf0e9b16821921c0dee589d91eef71ecd20deaf595f327f6f22ec9cc5",
+      "bytes": 132586
+    },
+    {
+      "path": "데이터/시설별/대규모점포_주요4업태/facilities_대규모점포_주요4업태_2025_01.parquet",
+      "sha256": "27931bb4260879038b8a33dfd9d86f563afb0e7a6c2b7f8620c59637048b4607",
+      "bytes": 48690
+    },
+    {
+      "path": "데이터/시설별/따릉이/facilities_따릉이_2020_01.csv",
+      "sha256": "125a6d71aa59d060215240184b7c14ba211fb2e478ea75db2977980a0a8afcd8",
+      "bytes": 938313
+    },
+    {
+      "path": "데이터/시설별/따릉이/facilities_따릉이_2020_01.parquet",
+      "sha256": "2d85885d54ee2c3d4b5a5a230e94f9086579bb6e6c78157b51440da2132831ea",
+      "bytes": 162212
+    },
+    {
+      "path": "데이터/시설별/따릉이/facilities_따릉이_2025_01.csv",
+      "sha256": "6906e479efd21227e6a7d45548ddde45bed3984e02687c83ae0aeb7eef571598",
+      "bytes": 1390439
+    },
+    {
+      "path": "데이터/시설별/따릉이/facilities_따릉이_2025_01.parquet",
+      "sha256": "e890629257e7e797989229455738504875e67da3b046ded65b4a989d8ccade6e",
+      "bytes": 277337
+    },
+    {
+      "path": "데이터/시설별/목욕장업/facilities_목욕장업_2020_01.csv",
+      "sha256": "0ab2a2588f9a70b06650ecd3994db44e35e3830b2fe2f8ed49e6b6a63740ff6c",
+      "bytes": 711414
+    },
+    {
+      "path": "데이터/시설별/목욕장업/facilities_목욕장업_2020_01.parquet",
+      "sha256": "80fa612107d3655a34815ce9312c20d54e44e0a19452dcd739e20a16fd3f5a92",
+      "bytes": 143500
+    },
+    {
+      "path": "데이터/시설별/목욕장업/facilities_목욕장업_2025_01.csv",
+      "sha256": "3894d64f9502dfe98a49edbd9f879a2fc85fd9eaf89397d4b75774c0fcff077e",
+      "bytes": 542717
+    },
+    {
+      "path": "데이터/시설별/목욕장업/facilities_목욕장업_2025_01.parquet",
+      "sha256": "ae5fd07f62d75c5ef6972268401c85cd581674b8ccab5206600e02689631b647",
+      "bytes": 116963
+    },
+    {
+      "path": "데이터/시설별/문화기반시설/facilities_문화기반시설_2020_01.csv",
+      "sha256": "b68e263938dc76b2373bb0b09d495aeab7fc53d643126c8ac4b41e1e5ba0ef34",
+      "bytes": 333232
+    },
+    {
+      "path": "데이터/시설별/문화기반시설/facilities_문화기반시설_2020_01.parquet",
+      "sha256": "3ddd4b6057adb80d47b085b4313986e7caa646cb5049860d82dc12bb40b64efd",
+      "bytes": 84460
+    },
+    {
+      "path": "데이터/시설별/문화기반시설/facilities_문화기반시설_2025_01.csv",
+      "sha256": "cc25c887ef25678d6f8ec03c9a2fdafb9f1be605b814208cb0b47fbec8a7c218",
+      "bytes": 390326
+    },
+    {
+      "path": "데이터/시설별/문화기반시설/facilities_문화기반시설_2025_01.parquet",
+      "sha256": "a371a6aaa7ac365b1efcb43ba212a709bac19644dc9ea12d3f1da304c3feaad7",
+      "bytes": 93410
+    },
+    {
+      "path": "데이터/시설별/미용업/facilities_미용업_2020_01.csv",
+      "sha256": "42684f218d5102cc3f82c726b977eacd6a0a8ec0d702f4bd624612ccf9a198fb",
+      "bytes": 22245039
+    },
+    {
+      "path": "데이터/시설별/미용업/facilities_미용업_2020_01.parquet",
+      "sha256": "fce55d24a3c3dc56b0b3f4ba2529f7567739b007d1ed041636ac16a58327dc13",
+      "bytes": 2909712
+    },
+    {
+      "path": "데이터/시설별/미용업/facilities_미용업_2025_01.csv",
+      "sha256": "a5f9570cd5c0e58d1dac842f4491050bc0540b6fe090e3104c68bf3841587645",
+      "bytes": 25888256
+    },
+    {
+      "path": "데이터/시설별/미용업/facilities_미용업_2025_01.parquet",
+      "sha256": "fdc796eef57ee01e94539c1e22497ddd4715d213a73308bcc633c2100566297e",
+      "bytes": 3337143
+    },
+    {
+      "path": "데이터/시설별/버스정류장/facilities_bus_stop_2020_01.csv",
+      "sha256": "44f749ba992c62e1b00cce96d486afbd9fb6798d92327d0445985db2244e467a",
+      "bytes": 6552368
+    },
+    {
+      "path": "데이터/시설별/버스정류장/facilities_bus_stop_2020_01.parquet",
+      "sha256": "e48abd40cfd4b8b118d18da5a5bc95f0e75ad0b2a2989a253dd7bb96610b2e83",
+      "bytes": 842405
+    },
+    {
+      "path": "데이터/시설별/버스정류장/facilities_bus_stop_2025_01.csv",
+      "sha256": "b9ef0e8a59e60b5cf6836b9fc33e992f01f3f7ebcbe132c177e4c2b0d3899102",
+      "bytes": 4870392
+    },
+    {
+      "path": "데이터/시설별/버스정류장/facilities_bus_stop_2025_01.parquet",
+      "sha256": "045a9f726b0cc533bb9c908a83b2d5201f54d09b7ac58037437ad543cfa6538d",
+      "bytes": 843267
+    },
+    {
+      "path": "데이터/시설별/병원급/facilities_병원급_2020_01.csv",
+      "sha256": "7b618628687842a843235ad1ac89f6ff48e8576005f9100c082425ca52777148",
+      "bytes": 521317
+    },
+    {
+      "path": "데이터/시설별/병원급/facilities_병원급_2020_01.parquet",
+      "sha256": "ac5b4a9a0b6e917ae1be845b8f020afdabe1db8741b3008d849cb0ce80d6ba33",
+      "bytes": 123325
+    },
+    {
+      "path": "데이터/시설별/병원급/facilities_병원급_2025_01.csv",
+      "sha256": "e2c52056b0d9223d8c1393a7d5fa5507bb76be3ed2a69d150cfaf8be4ecaf283",
+      "bytes": 545698
+    },
+    {
+      "path": "데이터/시설별/병원급/facilities_병원급_2025_01.parquet",
+      "sha256": "cfe0b217316293d1e71fa91f07739c73d7445034d072a8c8bb585c7a5e4e6e32",
+      "bytes": 126380
+    },
+    {
+      "path": "데이터/시설별/보건소/facilities_보건소_2020_01.csv",
+      "sha256": "bb90a1856cdaca923562ef6fba1be4d37043461ef95c4cc5c98a0e0fde59a283",
+      "bytes": 33300
+    },
+    {
+      "path": "데이터/시설별/보건소/facilities_보건소_2020_01.parquet",
+      "sha256": "a7d884c0e1290b41ee905bc334bdc132d5f0fcd07b5588e8982e82147cffc52c",
+      "bytes": 25942
+    },
+    {
+      "path": "데이터/시설별/보건소/facilities_보건소_2025_01.csv",
+      "sha256": "3462831aea97b20ae2765ffe0aba8bed93d3c56f76f117e2f80ebcfc8f0ef6fb",
+      "bytes": 63024
+    },
+    {
+      "path": "데이터/시설별/보건소/facilities_보건소_2025_01.parquet",
+      "sha256": "23c9d28526e4c4409805323e5f0b524f7eea88f05232159fed6475a6c8785e21",
+      "bytes": 35404
+    },
+    {
+      "path": "데이터/시설별/산후조리원/facilities_산후조리원_2020_01.csv",
+      "sha256": "53b386caec2b8dd775951d6d1f060047c439e3b07e81786730acb29bc45a3bcb",
+      "bytes": 108525
+    },
+    {
+      "path": "데이터/시설별/산후조리원/facilities_산후조리원_2020_01.parquet",
+      "sha256": "5d7e315f6a41b0c80ae6606d5abac6b74a07e0101810c4af95f2f41e7a56af23",
+      "bytes": 44720
+    },
+    {
+      "path": "데이터/시설별/산후조리원/facilities_산후조리원_2025_01.csv",
+      "sha256": "cf64ce865779fd0180de5968dcb7c3c227f8dddc41d8e85a32e51c7481fbd8f7",
+      "bytes": 95611
+    },
+    {
+      "path": "데이터/시설별/산후조리원/facilities_산후조리원_2025_01.parquet",
+      "sha256": "73a8950570c0c47f107e4962577ece06098c16daea736b687e502ad20df827cc",
+      "bytes": 42309
+    },
+    {
+      "path": "데이터/시설별/세탁업/facilities_세탁업_2020_01.csv",
+      "sha256": "4c521fc550969a256c61d2b6588097315dff4dbd389837868db3bc7295248620",
+      "bytes": 3590050
+    },
+    {
+      "path": "데이터/시설별/세탁업/facilities_세탁업_2020_01.parquet",
+      "sha256": "4b34aa4bbe05f547b15cdb58a4b80e99b9991f3d74e95b61f347faccc9283249",
+      "bytes": 555855
+    },
+    {
+      "path": "데이터/시설별/세탁업/facilities_세탁업_2025_01.csv",
+      "sha256": "cdd5f3b00e2e922100d3e9780081bfca0880f3d80dead17b840bc11136ad86d8",
+      "bytes": 2733273
+    },
+    {
+      "path": "데이터/시설별/세탁업/facilities_세탁업_2025_01.parquet",
+      "sha256": "04166efb8fe8e751c11f9233c255fbaf103f14d98b3a094b31386a67b943f5bc",
+      "bytes": 435857
+    },
+    {
+      "path": "데이터/시설별/소방서_안전센터/facilities_fire_station_2020_01.csv",
+      "sha256": "ba9e8c32b397ead39fe4f015811b3acb496188f2949850e084ef40cf67a093ab",
+      "bytes": 95171
+    },
+    {
+      "path": "데이터/시설별/소방서_안전센터/facilities_fire_station_2020_01.parquet",
+      "sha256": "399872e5ed065c240fc9161cf50f9a0920ccf093f77ee7944401785f050ff9be",
+      "bytes": 34331
+    },
+    {
+      "path": "데이터/시설별/소방서_안전센터/facilities_fire_station_2025_01.csv",
+      "sha256": "13cd96f3a1bd740b7d8b48bbccdf3de9a404c8311446c15db851bdb935b29be1",
+      "bytes": 96203
+    },
+    {
+      "path": "데이터/시설별/소방서_안전센터/facilities_fire_station_2025_01.parquet",
+      "sha256": "5740348828548d257690d8675c667e58ae89e514685c0db54ab0819b11fa709e",
+      "bytes": 34453
+    },
+    {
+      "path": "데이터/시설별/식료품소매_즉석판매제과/facilities_식료품소매_즉석판매제과_2020_01.csv",
+      "sha256": "539150a805d414344263cc7b70ca84371b25efcef992bff4d59df75f3109661a",
+      "bytes": 16528126
+    },
+    {
+      "path": "데이터/시설별/식료품소매_즉석판매제과/facilities_식료품소매_즉석판매제과_2020_01.parquet",
+      "sha256": "02010e180e2e4f72938ce5cf2f506e0125cfa60a4a4dc42af1422006ded10c91",
+      "bytes": 1817808
+    },
+    {
+      "path": "데이터/시설별/식료품소매_즉석판매제과/facilities_식료품소매_즉석판매제과_2025_01.csv",
+      "sha256": "fa8abacaf1f411223fd730a056d095f791b2373c986e8021e7a2ffff85f0dc19",
+      "bytes": 19405052
+    },
+    {
+      "path": "데이터/시설별/식료품소매_즉석판매제과/facilities_식료품소매_즉석판매제과_2025_01.parquet",
+      "sha256": "7ee0519a215a23121b61d386c72ecb6ebca64fc7b7720f7e572bd511a600d6a8",
+      "bytes": 2144524
+    },
+    {
+      "path": "데이터/시설별/약국/facilities_약국_2020_01.csv",
+      "sha256": "67bbec053104347d6c0ee7a8ed89775d2872c42cee8434838146dfda81c905f2",
+      "bytes": 3874133
+    },
+    {
+      "path": "데이터/시설별/약국/facilities_약국_2020_01.parquet",
+      "sha256": "2f6219db5ad2e6ee64c2f46642dc7ddd462ce8b81fa6ef2ea261f03af3fb5a66",
+      "bytes": 590070
+    },
+    {
+      "path": "데이터/시설별/약국/facilities_약국_2025_01.csv",
+      "sha256": "00fec541a69b6b6f8475e764d88e19226caca3664550eeaffefc33d9368f6a2d",
+      "bytes": 4278817
+    },
+    {
+      "path": "데이터/시설별/약국/facilities_약국_2025_01.parquet",
+      "sha256": "7a56bff5e9fc5a6c46adc815e29981b87eec86297524ccf85d70942e0d170bad",
+      "bytes": 641131
+    },
+    {
+      "path": "데이터/시설별/어린이집/facilities_어린이집_2020_01.csv",
+      "sha256": "f982d19b3345446ae759e02b02ba69f42b9ad829ab53020c4386b0d160a6ce86",
+      "bytes": 3495840
+    },
+    {
+      "path": "데이터/시설별/어린이집/facilities_어린이집_2020_01.parquet",
+      "sha256": "309ed0321725c154bf095a714a27872f6a0060719b2837fe5b38f3325bca91f8",
+      "bytes": 655850
+    },
+    {
+      "path": "데이터/시설별/어린이집/facilities_어린이집_2025_01.csv",
+      "sha256": "55077c9d48a1b0cea63d87ae02a9ca4876f3dcd73e402fee27636491c141a2fe",
+      "bytes": 2564170
+    },
+    {
+      "path": "데이터/시설별/어린이집/facilities_어린이집_2025_01.parquet",
+      "sha256": "bc510d802884170b5625bb07e55e4c300780ee62c23165c5bcc57f63bfab0a16",
+      "bytes": 493520
+    },
+    {
+      "path": "데이터/시설별/유치원/facilities_kindergarten_2020_01.csv",
+      "sha256": "2b79305f5941bae74ffc123780895efca7d237e1ce7d3ebe27654039c119311b",
+      "bytes": 500939
+    },
+    {
+      "path": "데이터/시설별/유치원/facilities_kindergarten_2020_01.parquet",
+      "sha256": "17bc708d23626e7c82a979cd17592370320af32e84f4ef3df052905bfb06c4d3",
+      "bytes": 110087
+    },
+    {
+      "path": "데이터/시설별/유치원/facilities_kindergarten_2025_01.csv",
+      "sha256": "33aecf5a531460b1a092d65ae63feafc78fcc1aeb47499057b9e2402e2932ef8",
+      "bytes": 454317
+    },
+    {
+      "path": "데이터/시설별/유치원/facilities_kindergarten_2025_01.parquet",
+      "sha256": "d0905b1a0c2bd42a0b3dda38a2bdc5a12ce434339bca0766b517f66be68652b5",
+      "bytes": 101929
+    },
+    {
+      "path": "데이터/시설별/응급의료기관/facilities_응급의료기관_2020_01.csv",
+      "sha256": "1f98b6f41ea8b21e6b076bfb1d5e07083011ab047896fe2204e8984decc80b01",
+      "bytes": 55504
+    },
+    {
+      "path": "데이터/시설별/응급의료기관/facilities_응급의료기관_2020_01.parquet",
+      "sha256": "d1b5f16477eac3727741555ca93891a1108589cddc8243feee3284ba7013fbe0",
+      "bytes": 31011
+    },
+    {
+      "path": "데이터/시설별/응급의료기관/facilities_응급의료기관_2025_01.csv",
+      "sha256": "55370c27469a4171f8215b96956a0de583c5d77caccd305e37b91ff914a9117a",
+      "bytes": 58453
+    },
+    {
+      "path": "데이터/시설별/응급의료기관/facilities_응급의료기관_2025_01.parquet",
+      "sha256": "00218c1453f286175e5bd91157e2130405ddd47cf4c331786aaffaa29615aea2",
+      "bytes": 30928
+    },
+    {
+      "path": "데이터/시설별/의원/facilities_의원_2020_01.csv",
+      "sha256": "f896f66a77b60e7cf5d1e31a3eed28a961f85cb2a684af01e91ac2872b5bbfa2",
+      "bytes": 15472399
+    },
+    {
+      "path": "데이터/시설별/의원/facilities_의원_2020_01.parquet",
+      "sha256": "96af8e3b1d5be71223ccecc04b307d8796cfc80a04f4dfda8c010e430ddb0a57",
+      "bytes": 1863663
+    },
+    {
+      "path": "데이터/시설별/의원/facilities_의원_2025_01.csv",
+      "sha256": "e6fd5a1f84a4a719827c4334de5f501192aa17f33eaab822d041c258483ff9e4",
+      "bytes": 16718783
+    },
+    {
+      "path": "데이터/시설별/의원/facilities_의원_2025_01.parquet",
+      "sha256": "9f8f3625425f19196668c3e7313f7d6d739fda55a7348ed253d832ea5ca8711c",
+      "bytes": 1983924
+    },
+    {
+      "path": "데이터/시설별/이용업/facilities_이용업_2020_01.csv",
+      "sha256": "48f8b07d78cc451175a28bcb9f6018b8f517a5011a818e1b00af50343b69149f",
+      "bytes": 2085000
+    },
+    {
+      "path": "데이터/시설별/이용업/facilities_이용업_2020_01.parquet",
+      "sha256": "52db25d3bae6051e82abe463b3bc65c2f303ac98afcaf35cec6d68218d932d63",
+      "bytes": 350279
+    },
+    {
+      "path": "데이터/시설별/이용업/facilities_이용업_2025_01.csv",
+      "sha256": "804469f61d2db0cf7d1a880b56f79adc96b5e9fdaa781417d41fe6b09cf9d596",
+      "bytes": 1892532
+    },
+    {
+      "path": "데이터/시설별/이용업/facilities_이용업_2025_01.parquet",
+      "sha256": "5eb9317609bfefadce069d4ab6025d3dc02550e5e663b1dd6968f02bdcf69129",
+      "bytes": 325066
+    },
+    {
+      "path": "데이터/시설별/일반음식점/facilities_일반음식점_2020_01.csv",
+      "sha256": "f41218840dfa86835660112fda04fe789496581b5e27d5dd220d57568d2ac41d",
+      "bytes": 104458313
+    },
+    {
+      "path": "데이터/시설별/일반음식점/facilities_일반음식점_2020_01.parquet",
+      "sha256": "1276533aab1b87fc8782069b6cd1f767c046d70d3ecce21384d0d886d6a5265e",
+      "bytes": 11419781
+    },
+    {
+      "path": "데이터/시설별/일반음식점/facilities_일반음식점_2025_01.csv",
+      "sha256": "15a37a9ca320db6cc25e535aa21d1975ea41ed175999020d7c2b673a076761dd",
+      "bytes": 106582869
+    },
+    {
+      "path": "데이터/시설별/일반음식점/facilities_일반음식점_2025_01.parquet",
+      "sha256": "ced8910fb5c587bbf8532f2467ce582fa7e6c6905d366ad4cf893170e563624e",
+      "bytes": 11706602
+    },
+    {
+      "path": "데이터/시설별/장애인복지_이용시설/facilities_장애인복지_이용시설_2020_01.csv",
+      "sha256": "d4e5cbe4bfd5ffe6ab9c1982e5c69f3664492dc6ea7afb3d8296c7f9003263ab",
+      "bytes": 197708
+    },
+    {
+      "path": "데이터/시설별/장애인복지_이용시설/facilities_장애인복지_이용시설_2020_01.parquet",
+      "sha256": "ad81ff63449129001b91860fcaabad3a3864dcd16a42998c94725a77ec14dca0",
+      "bytes": 62867
+    },
+    {
+      "path": "데이터/시설별/장애인복지_이용시설/facilities_장애인복지_이용시설_2025_01.csv",
+      "sha256": "168ab0d5c7c9aca24ef1a05bfd42a11c9295b0373228d734928f4592380c2900",
+      "bytes": 183443
+    },
+    {
+      "path": "데이터/시설별/장애인복지_이용시설/facilities_장애인복지_이용시설_2025_01.parquet",
+      "sha256": "de726cda4546465b851e80eae9b92e6d1f1c2e2b49dfa36ebb0c6e7bdabde616",
+      "bytes": 62253
+    },
+    {
+      "path": "데이터/시설별/주민센터/facilities_주민센터_2020_01.csv",
+      "sha256": "99e24a6526c0d68d8182c09cea7998a253ad5454d3d5344ff20c6c6bd25afdaf",
+      "bytes": 250341
+    },
+    {
+      "path": "데이터/시설별/주민센터/facilities_주민센터_2020_01.parquet",
+      "sha256": "e6a86e6ad3a8b07baf3e0690d608b2f699d2e287d7613ddc480fddadf7cd3595",
+      "bytes": 71306
+    },
+    {
+      "path": "데이터/시설별/주민센터/facilities_주민센터_2025_01.csv",
+      "sha256": "818826ee5fd35bf9d47f68b9ace20872deee98b013af38c1258a5f7e4375bf13",
+      "bytes": 247506
+    },
+    {
+      "path": "데이터/시설별/주민센터/facilities_주민센터_2025_01.parquet",
+      "sha256": "cd24cc11633287e613649f14a7a4592651a6341d5af1576cfa215907e01ffca2",
+      "bytes": 69103
+    },
+    {
+      "path": "데이터/시설별/주유소_영업_조건부/facilities_주유소_영업_조건부_2020_01.csv",
+      "sha256": "c4f45e33f39defb2213dd60ba0949b7732f23258478dffa07092c6529a99de7b",
+      "bytes": 427852
+    },
+    {
+      "path": "데이터/시설별/주유소_영업_조건부/facilities_주유소_영업_조건부_2020_01.parquet",
+      "sha256": "be7c788507bca13e79fe0916f66f7d23cebced9d627cf7b854c8dfd48ba14303",
+      "bytes": 90714
+    },
+    {
+      "path": "데이터/시설별/주유소_영업_조건부/facilities_주유소_영업_조건부_2025_01.csv",
+      "sha256": "c8745be9570fe173a2afb77cc3cbb4b27aaa8ddfd627dca0b72c618258bb25d8",
+      "bytes": 366906
+    },
+    {
+      "path": "데이터/시설별/주유소_영업_조건부/facilities_주유소_영업_조건부_2025_01.parquet",
+      "sha256": "bde9540d043015627d4eca8a936967729febecfe68c85138eaf3d0842b0d9fa3",
+      "bytes": 82121
+    },
+    {
+      "path": "데이터/시설별/지하철역/facilities_subway_station_2020_01.csv",
+      "sha256": "e7eb83db2bbbcad6a7dd312c3c62ae7611e7da111149a1913b6fb94a12731782",
+      "bytes": 172851
+    },
+    {
+      "path": "데이터/시설별/지하철역/facilities_subway_station_2020_01.parquet",
+      "sha256": "5a640d3f8dfbf0b240c7f3a3c5080416f70c4515f42a2d9070bae058f44bf221",
+      "bytes": 46617
+    },
+    {
+      "path": "데이터/시설별/지하철역/facilities_subway_station_2025_01.csv",
+      "sha256": "04ac71cc0ed8e1f84a57cc73aabfa406b37682c6fc17e7e61c2882b472cafd98",
+      "bytes": 178482
+    },
+    {
+      "path": "데이터/시설별/지하철역/facilities_subway_station_2025_01.parquet",
+      "sha256": "14c783bb95e41f03f7159ffa27a5f9df96133492578d132a04dc7bab738ea23a",
+      "bytes": 47812
+    },
+    {
+      "path": "데이터/시설별/청소년수련시설/facilities_청소년수련시설_2020_01.csv",
+      "sha256": "8119ba92c43a377fd7c5b87559addeaae9edaf9edd1c86e0cd50405483671d0d",
+      "bytes": 44442
+    },
+    {
+      "path": "데이터/시설별/청소년수련시설/facilities_청소년수련시설_2020_01.parquet",
+      "sha256": "c47b959fd7c4026048c70b4e99c3b901a63948804e2a9b7ddcb3a78ed1d1d947",
+      "bytes": 34126
+    },
+    {
+      "path": "데이터/시설별/청소년수련시설/facilities_청소년수련시설_2025_01.csv",
+      "sha256": "e2ccaa5decdffae7ce25baf9af1597e081a1ee7b30b4526e2c526a39db845517",
+      "bytes": 52273
+    },
+    {
+      "path": "데이터/시설별/청소년수련시설/facilities_청소년수련시설_2025_01.parquet",
+      "sha256": "f07f2f706ad50c42550bc1985b25130e8105ab00811c8495c79cb99184e29ff9",
+      "bytes": 33768
+    },
+    {
+      "path": "데이터/시설별/체육시설업_조건부/facilities_체육시설업_조건부_2020_01.csv",
+      "sha256": "7e8472b2fb393c639d6636f26a3a3c9edec8d9a9bd523b3f7db26bd443fa2419",
+      "bytes": 8510339
+    },
+    {
+      "path": "데이터/시설별/체육시설업_조건부/facilities_체육시설업_조건부_2020_01.parquet",
+      "sha256": "55e0be45a4fc3ef54060616a52b589fe89fe22aeb2dd24eac8c0b5e0aba1f0df",
+      "bytes": 1172359
+    },
+    {
+      "path": "데이터/시설별/체육시설업_조건부/facilities_체육시설업_조건부_2025_01.csv",
+      "sha256": "21ea7e6f489ad98affb8c28df7c4fa3c4dfa37a2d860162a5dcc10ecec943415",
+      "bytes": 9170706
+    },
+    {
+      "path": "데이터/시설별/체육시설업_조건부/facilities_체육시설업_조건부_2025_01.parquet",
+      "sha256": "b94a5b220e2722abc78779989e47238461497777f70083792117d4d23d745365",
+      "bytes": 1272511
+    },
+    {
+      "path": "데이터/시설별/학교/facilities_school_2020_01.csv",
+      "sha256": "d503338e3b187c03ff22766bc4c542a112bad0e13d06d658b29a88fe7bde9e0f",
+      "bytes": 1119536
+    },
+    {
+      "path": "데이터/시설별/학교/facilities_school_2020_01.parquet",
+      "sha256": "b30c33aab710d36fd0a557019886cf891830ffe4121891ad68cc34472a212621",
+      "bytes": 169099
+    },
+    {
+      "path": "데이터/시설별/학교/facilities_school_2025_01.csv",
+      "sha256": "c5dbe514aac97daf3e6d20bc4a0f86821a91a6184e053aff4d7e21ce1bf6ceb8",
+      "bytes": 1155993
+    },
+    {
+      "path": "데이터/시설별/학교/facilities_school_2025_01.parquet",
+      "sha256": "2727f46dd63f75ec05ccd5be4e9fdf5d7ecbc60298120f814383eb163f08f129",
+      "bytes": 184041
+    },
+    {
+      "path": "데이터/시설별/휴게음식점/facilities_휴게음식점_2020_01.csv",
+      "sha256": "ed333d921707bfb98cdb6c4218dcbfea7213f518bd0a5e9eb0d434e976386794",
+      "bytes": 28673423
+    },
+    {
+      "path": "데이터/시설별/휴게음식점/facilities_휴게음식점_2020_01.parquet",
+      "sha256": "683ba66eb2922e7fb1c775289866295a931a17c0c47baa65a67193f51b869324",
+      "bytes": 3729238
+    },
+    {
+      "path": "데이터/시설별/휴게음식점/facilities_휴게음식점_2025_01.csv",
+      "sha256": "07519e42b72d3650283984f5809bd7ca847e9f77bb0774fb8a7b608dd8d903d7",
+      "bytes": 30413097
+    },
+    {
+      "path": "데이터/시설별/휴게음식점/facilities_휴게음식점_2025_01.parquet",
+      "sha256": "9e7a32af0980c3c076acd658bff73c202ae5a60e901066bc7fa9680f00972105",
+      "bytes": 3996722
+    },
+    {
+      "path": "구축코드/03_교육교통공원상가/retail_daily/facilities_retail_daily_2020_01.parquet",
+      "sha256": "2c09b10bdd5e8a6ee5a9b6be11d55c9f7e093ee045357f6d4adfb71e7d941cb0",
+      "bytes": 2341606
+    },
+    {
+      "path": "구축코드/03_교육교통공원상가/retail_daily/facilities_retail_daily_2025_01.parquet",
+      "sha256": "79c68fb6483bcf33c0f1415db759f495aa556e46ef233c5e906a0495c6dcb23d",
+      "bytes": 2483919
+    }
+  ]
+}

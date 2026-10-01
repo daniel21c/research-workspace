@@ -1,0 +1,93 @@
+{
+  "서울특별시 구로구 구로 1": [
+    {
+      "facility_id": "CC_11530000047",
+      "year": 2020,
+      "address": "서울 구로구 구로1동 685-219",
+      "lon": 126.874388026134,
+      "lat": 37.4917420488038,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "어린이집"
+    },
+    {
+      "facility_id": "CC_11530000047",
+      "year": 2025,
+      "address": "서울 구로구 구로1동 685-219",
+      "lon": 126.874388026134,
+      "lat": 37.4917420488038,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "어린이집"
+    }
+  ],
+  "서울특별시 강동구 올림픽로 550": [
+    {
+      "facility_id": "LIC-bakeries-3240000-3240000-121-2017-00015",
+      "year": 2020,
+      "address": "서울특별시 강동구 올림픽로 지하 550, 2002호 (성내동, 강동구청역)",
+      "lon": 127.12057605164,
+      "lat": 37.5306740877124,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "식료품소매(즉석판매·제과)"
+    },
+    {
+      "facility_id": "LIC-general_restaurants-3240000-3240000-101-2020-00248",
+      "year": 2025,
+      "address": "서울특별시 강동구 올림픽로 지하 550, 강동구청역 812-202호 (성내동)",
+      "lon": 127.12057605164,
+      "lat": 37.5306740877124,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "일반음식점"
+    }
+  ],
+  "서울특별시 성동구 매봉길 13": [
+    {
+      "facility_id": "LIC-general_restaurants-3030000-3030000-101-2016-00252",
+      "year": 2020,
+      "address": "서울특별시 성동구 매봉길 13, 상가동 지하4층 422호 (옥수동, 래미안 옥수리버젠)",
+      "lon": 127.013714834954,
+      "lat": 37.5451371536208,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "일반음식점"
+    }
+  ],
+  "서울특별시 종로구 성균관로4길 21": [
+    {
+      "facility_id": "LIC-general_restaurants-3000000-3000000-101-2019-00204",
+      "year": 2020,
+      "address": "서울특별시 종로구 성균관로4길 21, 1층 (명륜2가)",
+      "lon": 126.998492049608,
+      "lat": 37.5849371040182,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "일반음식점"
+    },
+    {
+      "facility_id": "LIC-general_restaurants-3000000-3000000-101-2019-00204",
+      "year": 2025,
+      "address": "서울특별시 종로구 성균관로4길 21, 1층 (명륜2가)",
+      "lon": 126.998492049608,
+      "lat": 37.5849371040182,
+      "coord_method": "geocode_kakao_exact",
+      "시설": "일반음식점"
+    }
+  ],
+  "서울특별시 중구 명동 13": [
+    {
+      "facility_id": "LIC-rest_cafes-3010000-3010000-104-1993-01676",
+      "year": 2020,
+      "address": "서울특별시 중구 명동13길 29 (을지로2가)",
+      "lon": 126.98204269217476,
+      "lat": 37.5688335147003,
+      "coord_method": "geocode_vworld_exact_fill",
+      "시설": "휴게음식점"
+    },
+    {
+      "facility_id": "LIC-rest_cafes-3010000-3010000-104-1993-01676",
+      "year": 2025,
+      "address": "서울특별시 중구 명동13길 29 (을지로2가)",
+      "lon": 126.98204269217476,
+      "lat": 37.5688335147003,
+      "coord_method": "geocode_vworld_exact_fill",
+      "시설": "휴게음식점"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "PASS": true,
+  "tests": 9,
+  "synthetic_only": true,
+  "production_mutations": 0,
+  "verified_at_utc": "2026-09-29T07:27:08.022714+00:00",
+  "results": [
+    {
+      "test": "valid_receipt_uses_history_without_fresh_comparison",
+      "PASS": true
+    },
+    {
+      "test": "missing_history",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "tampered_history",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "missing_receipt",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "tampered_receipt",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "tampered_child_evidence",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "receipt_wrong_scope",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "partial_old_files",
+      "PASS": true,
+      "rejected": true
+    },
+    {
+      "test": "unsealed_receipt",
+      "PASS": true,
+      "rejected": true
+    }
+  ]
+}

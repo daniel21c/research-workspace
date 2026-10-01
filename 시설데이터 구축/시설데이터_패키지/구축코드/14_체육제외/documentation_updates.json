@@ -1,0 +1,32 @@
+[
+  {
+    "path": "시설데이터 구축\\시설데이터_패키지\\README.md",
+    "before_sha256_utf8": "7b43055414b2db5724eaf089041d391f016ea7f9ae3a49d857abb803f9cc24e0",
+    "after_sha256": "69ed76ba8a58adb287e84d9adfc24e6f4b767dd2d8ffc39fe01ceeee09bdf782"
+  },
+  {
+    "path": "시설데이터 구축\\시설데이터_패키지\\문서\\분석용파일_설명.md",
+    "before_sha256_utf8": "9122b82517fc77001041020cc27763dbc4cc5c3d3948825b39fcea15dbebcac9",
+    "after_sha256": "0f345465c11a6677b21a24bedaab63c0f4203fa66fa5bbf4f80ecb6e16e40be5"
+  },
+  {
+    "path": "시설데이터 구축\\시설데이터_패키지\\문서\\출처_전처리_안내.md",
+    "before_sha256_utf8": "1d2bbb124ee4c6f413a7d2fa10b6f3b37e93af21593df204f798540a3412b9bb",
+    "after_sha256": "97d7db129d6592f67c0bc5b05a9e0554bb929cfcb8ba228a418dc7ff54dce86a"
+  },
+  {
+    "path": "시설데이터 구축\\시설데이터_패키지\\문서\\무결성_검증.md",
+    "before_sha256_utf8": "4d8b41491a342eb642066f5b02003ed20401dca115dec232b4558c1b016d173c",
+    "after_sha256": "10a11fd2e332cdae1adf60d963b75d4309511a1a769d049e984e99ab727de5d1"
+  },
+  {
+    "path": "데이터_배포목록.md",
+    "before_sha256_utf8": "785918bdec8f6c1a562a970d4d95ca3d7569c270b1027b4e89440f93cfed854c",
+    "after_sha256": "f1463c6329601f0512ec39f217371b8aa69f7d4e32cfa2a0339aab605f877055"
+  },
+  {
+    "path": "공유_안내.md",
+    "before_sha256_utf8": "9ba5069bad710e802b6e5121db7f98f688bd3a83982d62630fac4e450ea6cb86",
+    "after_sha256": "658db6b5af457dc2882416e325b04320fde5d283a5c6feac6b4a7439c69b8dd0"
+  }
+]

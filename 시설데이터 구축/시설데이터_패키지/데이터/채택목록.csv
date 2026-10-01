@@ -2,32 +2,31 @@
 병원급,상,526,100.0,01_인허가/병원급/facilities_병원급_2020_01.parquet,,548,100.0,01_인허가/병원급/facilities_병원급_2025_01.parquet,
 산후조리원,상,133,100.0,01_인허가/산후조리업/facilities_산후조리업_2020_01.parquet,,117,100.0,01_인허가/산후조리업/facilities_산후조리업_2025_01.parquet,
 보건소,상,50,100.0,02_명부/보건소/facilities_보건소_2020_01.parquet,,63,100.0,11_신뢰도_승격/보건소/facilities_보건소_2025_01.parquet,
-어린이집,상,5877,99.5,11_신뢰도_승격/어린이집/facilities_어린이집_2020_01.parquet,12_무결성보정/01_fix_coords.py(좌표 20행),4319,99.5,11_신뢰도_승격/어린이집/facilities_어린이집_2025_01.parquet,12_무결성보정/01_fix_coords.py(좌표 20행)
+어린이집,상,5877,99.57,11_신뢰도_승격/어린이집/facilities_어린이집_2020_01.parquet,12_무결성보정/01_fix_coords.py(좌표 20행); 13_좌표보완/release_v13.py (facility-v1.3),4319,99.54,11_신뢰도_승격/어린이집/facilities_어린이집_2025_01.parquet,12_무결성보정/01_fix_coords.py(좌표 20행); 13_좌표보완/release_v13.py (facility-v1.3)
 노인복지_이용시설,상,510,97.8,11_신뢰도_승격/노인복지시설/좌표보완_v2/facilities_노인복지시설_2020_01.parquet [scope_flag=이용시설],,582,100.0,11_신뢰도_승격/노인복지시설/좌표보완_v2/facilities_노인복지시설_2025_01.parquet [scope_flag=이용시설],
-체육시설업_조건부,조건부 상,10293,99.2,11_신뢰도_승격/체육시설업/facilities_체육시설업_2020_01.parquet [scope_flag=C포함],,11007,99.5,11_신뢰도_승격/체육시설업/facilities_체육시설업_2025_01.parquet [scope_flag=C포함],12_무결성보정/02_fix_suspension.py(휴업 2행 제외)
 공연장_등록공연장,상,379,99.2,11_신뢰도_승격/공연장/facilities_공연장_2020_01.parquet,,452,100.0,11_신뢰도_승격/공연장/facilities_공연장_2025_01.parquet,
-일반음식점,상,122137,99.0,11_신뢰도_승격/일반음식점/facilities_일반음식점_2020_01.parquet,,124255,99.5,11_신뢰도_승격/일반음식점/facilities_일반음식점_2025_01.parquet,
-휴게음식점,상,35519,99.0,01_인허가/휴게음식점/facilities_휴게음식점_2020_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 395행),37546,99.2,01_인허가/휴게음식점/facilities_휴게음식점_2025_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 511행)
-식료품소매_즉석판매제과,상,16995,99.4,11_신뢰도_승격/식료품소매/facilities_식료품소매_2020_01.parquet [in_scope=True],,19873,99.8,11_신뢰도_승격/식료품소매/facilities_식료품소매_2025_01.parquet [in_scope=True],
-미용업,상,27946,99.9,01_인허가/미용업/facilities_미용업_2020_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 177행),32349,100.0,01_인허가/미용업/facilities_미용업_2025_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 370행)
-이용업,상,2685,99.4,01_인허가/이용업/facilities_이용업_2020_01.parquet,,2430,99.6,01_인허가/이용업/facilities_이용업_2025_01.parquet,
-세탁업,상,4631,99.6,01_인허가/세탁업/facilities_세탁업_2020_01.parquet,,3519,99.7,01_인허가/세탁업/facilities_세탁업_2025_01.parquet,
+일반음식점,상,122137,99.05,11_신뢰도_승격/일반음식점/facilities_일반음식점_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),124255,99.49,11_신뢰도_승격/일반음식점/facilities_일반음식점_2025_01.parquet,13_좌표보완/release_v13.py (facility-v1.3)
+휴게음식점,상,35519,98.96,01_인허가/휴게음식점/facilities_휴게음식점_2020_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 395행); 13_좌표보완/release_v13.py (facility-v1.3),37546,99.25,01_인허가/휴게음식점/facilities_휴게음식점_2025_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 511행); 13_좌표보완/release_v13.py (facility-v1.3)
+식료품소매_즉석판매제과,상,16995,99.49,11_신뢰도_승격/식료품소매/facilities_식료품소매_2020_01.parquet [in_scope=True],13_좌표보완/release_v13.py (facility-v1.3),19873,99.78,11_신뢰도_승격/식료품소매/facilities_식료품소매_2025_01.parquet [in_scope=True],13_좌표보완/release_v13.py (facility-v1.3)
+미용업,상,27946,99.89,01_인허가/미용업/facilities_미용업_2020_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 177행); 13_좌표보완/release_v13.py (facility-v1.3),32349,99.96,01_인허가/미용업/facilities_미용업_2025_01.parquet,12_무결성보정/04_fill_geocode.py(지오코딩 370행); 13_좌표보완/release_v13.py (facility-v1.3)
+이용업,상,2685,99.44,01_인허가/이용업/facilities_이용업_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),2430,99.6,01_인허가/이용업/facilities_이용업_2025_01.parquet,
+세탁업,상,4631,99.59,01_인허가/세탁업/facilities_세탁업_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),3519,99.74,01_인허가/세탁업/facilities_세탁업_2025_01.parquet,13_좌표보완/release_v13.py (facility-v1.3)
 목욕장업,상,890,99.8,01_인허가/목욕장업/facilities_목욕장업_2020_01.parquet,,676,100.0,01_인허가/목욕장업/facilities_목욕장업_2025_01.parquet,
 대규모점포_주요4업태,상,145,99.3,11_신뢰도_승격/대규모점포/facilities_대규모점포_2020_01.parquet [in_scope=True],,145,99.3,11_신뢰도_승격/대규모점포/facilities_대규모점포_2025_01.parquet [in_scope=True],12_무결성보정/02_fix_suspension.py(휴업 1행 제외)
-주유소_영업_조건부,조건부 상,497,98.8,11_신뢰도_승격/주유소/facilities_주유소_2020_01.parquet [in_scope=True],,427,99.3,11_신뢰도_승격/주유소/facilities_주유소_2025_01.parquet [in_scope=True],
+주유소_영업_조건부,조건부 상,497,99.2,11_신뢰도_승격/주유소/facilities_주유소_2020_01.parquet [in_scope=True],13_좌표보완/release_v13.py (facility-v1.3),427,99.3,11_신뢰도_승격/주유소/facilities_주유소_2025_01.parquet [in_scope=True],
 따릉이,상,1533,98.6,11_신뢰도_승격/따릉이/facilities_bike_station_2020_01.parquet,,2766,99.9,03_교육교통공원상가/bike_station/facilities_bike_station_2025_01.parquet,
 노인복지_입소시설,상,535,97.8,11_신뢰도_승격/노인복지시설/좌표보완_v2/facilities_노인복지시설_2020_01.parquet [scope_flag=입소시설],,499,99.0,11_신뢰도_승격/노인복지시설/좌표보완_v2/facilities_노인복지시설_2025_01.parquet [scope_flag=입소시설],
-장애인복지_이용시설,상,215,98.1,11_신뢰도_승격/장애인복지시설/좌표보완_v2/facilities_장애인복지시설_2020_01.parquet [scope_flag=이용시설],,220,99.1,11_신뢰도_승격/장애인복지시설/좌표보완_v2/facilities_장애인복지시설_2025_01.parquet [scope_flag=이용시설],
+장애인복지_이용시설,상,215,98.1,11_신뢰도_승격/장애인복지시설/좌표보완_v2/facilities_장애인복지시설_2020_01.parquet [scope_flag=이용시설],,220,99.55,11_신뢰도_승격/장애인복지시설/좌표보완_v2/facilities_장애인복지시설_2025_01.parquet [scope_flag=이용시설],13_좌표보완/release_v13.py (facility-v1.3)
 가족센터_자치구본소,상,25,100.0,11_신뢰도_승격/가족센터/좌표보완_v2/facilities_가족센터_2020_01.parquet [scope_flag=자치구본소],,25,100.0,11_신뢰도_승격/가족센터/좌표보완_v2/facilities_가족센터_2025_01.parquet [scope_flag=자치구본소],
 주민센터,상,424,98.3,11_신뢰도_승격/주민센터/좌표보완_v2/facilities_주민센터_2020_01.parquet,,426,100.0,11_신뢰도_승격/주민센터/좌표보완_v2/facilities_주민센터_2025_01.parquet,
-공공도서관,상,180,100.0,11_신뢰도_승격/_좌표보완_v3/공공도서관/facilities_공공도서관_2020_01.parquet,11_신뢰도_승격/_좌표보완_v3/apply_v3.py(6행),212,100.0,11_신뢰도_승격/_좌표보완_v3/공공도서관/facilities_공공도서관_2025_01.parquet,11_신뢰도_승격/_좌표보완_v3/apply_v3.py(2행)
-문화기반시설,상,412,97.1,02_명부/문화기반시설/facilities_문화기반시설_2020_01.parquet,,476,98.7,02_명부/문화기반시설/facilities_문화기반시설_2025_01.parquet,
+공공도서관,상,180,100.0,11_신뢰도_승격/_좌표보완_v3/공공도서관/facilities_공공도서관_2020_01.parquet,11_신뢰도_승격/_좌표보완_v3/apply_v3.py(6행); 13_좌표보완/release_v13.py (facility-v1.3),212,100.0,11_신뢰도_승격/_좌표보완_v3/공공도서관/facilities_공공도서관_2025_01.parquet,11_신뢰도_승격/_좌표보완_v3/apply_v3.py(2행); 13_좌표보완/release_v13.py (facility-v1.3)
+문화기반시설,상,412,97.33,02_명부/문화기반시설/facilities_문화기반시설_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),476,98.53,02_명부/문화기반시설/facilities_문화기반시설_2025_01.parquet,13_좌표보완/release_v13.py (facility-v1.3)
 버스정류장,상,11260,99.8,03_교육교통공원상가/bus_stop/facilities_bus_stop_2020_01.parquet,,11262,99.9,03_교육교통공원상가/bus_stop/facilities_bus_stop_2025_01.parquet,
 소방서_안전센터,상,178,100.0,03_교육교통공원상가/fire_station/facilities_fire_station_2020_01.parquet,,180,100.0,03_교육교통공원상가/fire_station/facilities_fire_station_2025_01.parquet,
-약국,상,5186,99.9,01_인허가/약국/facilities_약국_2020_01.parquet,,5708,100.0,01_인허가/약국/facilities_약국_2025_01.parquet,
+약국,상,5186,99.96,01_인허가/약국/facilities_약국_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),5708,100.0,01_인허가/약국/facilities_약국_2025_01.parquet,13_좌표보완/release_v13.py (facility-v1.3)
 유치원,상,814,100.0,03_교육교통공원상가/kindergarten/facilities_kindergarten_2020_01.parquet,,734,100.0,03_교육교통공원상가/kindergarten/facilities_kindergarten_2025_01.parquet,
 응급의료기관,상,68,100.0,02_명부/응급의료기관/facilities_응급의료기관_2020_01.parquet,,71,100.0,02_명부/응급의료기관/facilities_응급의료기관_2025_01.parquet,
-의원,상,17373,99.9,01_인허가/의원/facilities_의원_2020_01.parquet,,18741,99.9,01_인허가/의원/facilities_의원_2025_01.parquet [부분집합 18741/18744],12_무결성보정/02_fix_suspension.py(휴업 3행 제외)
+의원,상,17373,99.95,01_인허가/의원/facilities_의원_2020_01.parquet,13_좌표보완/release_v13.py (facility-v1.3),18741,99.96,01_인허가/의원/facilities_의원_2025_01.parquet [부분집합 18741/18744],12_무결성보정/02_fix_suspension.py(휴업 3행 제외); 13_좌표보완/release_v13.py (facility-v1.3)
 지하철역,상,299,100.0,03_교육교통공원상가/subway_station/facilities_subway_station_2020_01.parquet,,308,100.0,03_교육교통공원상가/subway_station/facilities_subway_station_2025_01.parquet,
 청소년수련시설,상,66,100.0,11_신뢰도_승격/_좌표보완_v3/청소년수련시설/facilities_청소년수련시설_2020_01.parquet,11_신뢰도_승격/_좌표보완_v3/apply_v3.py(2행),76,100.0,02_명부/청소년수련시설/facilities_청소년수련시설_2025_01.parquet,
 학교,상,1357,100.0,03_교육교통공원상가/school/facilities_school_2020_01.parquet,,1359,100.0,03_교육교통공원상가/school/facilities_school_2025_01.parquet,

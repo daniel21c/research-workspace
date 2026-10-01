@@ -1,0 +1,28 @@
+{
+  "rows": 3026,
+  "filled": 87,
+  "remaining": 2939,
+  "http_this_run": 0,
+  "http_total": 582,
+  "provider_disabled": {},
+  "by_facility": {
+    "문화기반시설": 1,
+    "미용업": 2,
+    "세탁업": 2,
+    "식료품소매(즉석판매·제과)": 12,
+    "약국": 4,
+    "어린이집": 4,
+    "의원": 8,
+    "이용업": 1,
+    "일반음식점": 34,
+    "주유소": 1,
+    "체육시설업": 15,
+    "휴게음식점": 3
+  },
+  "methods": {
+    "verified_address_reuse_registered": 12,
+    "legacy_kakao": 33,
+    "api_kakao": 41,
+    "api_vworld": 1
+  }
+}

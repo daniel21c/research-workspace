@@ -1,0 +1,38 @@
+{
+  "valid_method_counts": {
+    "geocode_kakao_exact": 26738,
+    "search_verified": 59,
+    "borrowed_lic_same_addrkey": 793,
+    "source": 573949,
+    "geocode_vworld_exact": 19,
+    "geocode_kakao_exact_fill": 1416,
+    "geocode_kakao_exact_reuse2020": 3,
+    "geocode_kakao_exact_fix_placeholder": 13,
+    "geocode_kakao_exact_fix_gu_mismatch": 7,
+    "geocode_kakao_exact_via_toilet_jibun": 6,
+    "geocode_vworld_exact_fill": 37
+  },
+  "checked_rows": 29032,
+  "risk_rows": 1295,
+  "risk_facilities": {
+    "공공도서관": 8,
+    "등록공연장": 1,
+    "노인 이용시설": 4,
+    "노인 입소시설": 7,
+    "문화기반시설": 18,
+    "미용업": 55,
+    "세탁업": 4,
+    "식료품소매(즉석판매·제과)": 77,
+    "약국": 1,
+    "어린이집": 25,
+    "의원": 7,
+    "이용업": 3,
+    "일반음식점": 1030,
+    "장애인 이용시설": 10,
+    "주민센터": 1,
+    "체육시설업": 5,
+    "학교": 1,
+    "휴게음식점": 38
+  },
+  "risk_unique_removed_queries": 639
+}

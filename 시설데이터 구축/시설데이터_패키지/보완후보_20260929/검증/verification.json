@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "base_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+  "candidate_sha256": "90e0204e5cc2148ad4d4c55b68d272b427a70b3133eb7510f1bb60fd1afa7b31",
+  "rows": 606066,
+  "facilities": 33,
+  "year_groups": 66,
+  "columns": 25,
+  "filled": 87,
+  "remaining_null": 2939,
+  "analysis_ready": 603068,
+  "analysis_ready_pct": 99.50533440252381,
+  "base_analysis_ready": 602981,
+  "non_coordinate_changes": 0,
+  "previous_valid_coordinate_changes": 0,
+  "unpatched_row_changes": 0,
+  "schema_preserved": true,
+  "key_order_preserved": true,
+  "offline_patch_identical": true,
+  "offline_http_calls": 0,
+  "exact_evidence_passed": 87,
+  "district_geometry_passed": 87,
+  "key_leak_files": 0,
+  "http": {
+    "total": 582,
+    "provider_calls": {
+      "kakao": 285,
+      "vworld": 297
+    },
+    "disabled": {},
+    "status_counts": {
+      "kakao:200": 285,
+      "vworld:200": 296
+    }
+  },
+  "base_files_unchanged": 35,
+  "changed_facility_files": 21,
+  "remaining_reasons": {
+    "no_exact_provider_and_district_match": 2848,
+    "no_parsable_seoul_numbered_address": 91
+  },
+  "offline_rebuild_sha256": "90e0204e5cc2148ad4d4c55b68d272b427a70b3133eb7510f1bb60fd1afa7b31",
+  "offline_rebuild_byte_identical": true,
+  "detailed_remaining_reasons": {
+    "정확 주소 결과 없음 (기존 실패 캐시 포함)": 2287,
+    "공급자 후보의 주소·번호·자치구·공간 일치 실패": 561,
+    "번지·건물번호 부족 또는 주소 해석 불가": 63,
+    "원자료 주소 없음": 22,
+    "서울 외 주소": 6
+  },
+  "http_attempts_without_recorded_response": 1,
+  "raw_inputs_verified_unchanged": 17
+}

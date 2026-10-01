@@ -1,0 +1,35 @@
+{
+  "PASS": true,
+  "docs_only": true,
+  "files": [
+    {
+      "file": "데이터_배포목록.md",
+      "changed_line": 14,
+      "other_lines_byte_text_unchanged": true,
+      "before_sha256": "9e6bdf38dbd5c25529d71f25589f6234bd3761b77f9499e6653beb3f523e271f",
+      "after_sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "targeted_diff": [
+        "--- 데이터_배포목록.md before\n",
+        "+++ 데이터_배포목록.md after\n",
+        "@@ -14 +14 @@\n",
+        "-| facility-v1.3 | 서울 시설33종 2020/2025, 606,066행·25열. 미좌표87행 보완·오좌표4행 교정·근거부족2행 좌표 제외 | `../_archive/facility-v1.3_superseded_20260929/데이터/서울시설_2020_2025_분석용.parquet`; 보관·삭제보류목록 `시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/deferred_cleanup_manifest.json` | 2026-09-29 | 1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47 | 시설데이터 구축 대화 | **대체됨** (→facility-v1.4). 06 현access-engine-v3.2의 입력이므로 v1.4 접근성 재계산·검증 완료까지 이전 전체 분석본 보존. 영구삭제 없음. |",
+        "+| facility-v1.3 | 서울 시설33종 2020/2025, 606,066행·25열. 미좌표87행 보완·오좌표4행 교정·근거부족2행 좌표 제외 | 이전 생성본 삭제완료(2026-09-29). [삭제영수증](<시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/cleanup_20260929/deletion_receipt.json>) · [삭제 전 역사비교 증거](<시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/cleanup_20260929/historical_evidence.json>) | 2026-09-29 | 1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47 | 시설데이터 구축 대화 | **대체됨** (→facility-v1.4). 사용자 승인에 따른 후속 정리 완료: 이전 생성파일5개·76,782,692바이트 영구삭제. 구SHA·삭제 전 정확한 대조·재현 증거와 삭제영수증 보존. 현재v1.4 자료는 변경 없음. |"
+      ]
+    },
+    {
+      "file": "공유_안내.md",
+      "changed_line": 58,
+      "other_lines_byte_text_unchanged": true,
+      "before_sha256": "02548bc8a4f6b19c603547ba872857c2de69d90a1579609f67371ab77441241b",
+      "after_sha256": "e052126ef6c6e434df9e19f419b49c9a8c9dc8bce21b5cfd42d3e998aac8aead",
+      "targeted_diff": [
+        "--- 공유_안내.md before\n",
+        "+++ 공유_안내.md after\n",
+        "@@ -58 +58 @@\n",
+        "-시설 검증/재현은 `시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/README.md` 참조. 06v3.2와 비교할 이전 v1.3 전체 분석본은 `D:\\Research\\_archive\\facility-v1.3_superseded_20260929/데이터/서울시설_2020_2025_분석용.parquet`에 보존(SHA `1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47`). 교체된 시설 생성파일5개는 접근성 재계산·검증 완료 전 영구삭제하지 않으며 `deferred_cleanup_manifest.json`에 위치·해시·정리 조건을 기록했다. 원자료·코드·캐시·배제 근거는 계속 보존한다. 이번 시설 작업에서06파일/결과/정책차단stage는 손대지 않았다.",
+        "+시설 검증/재현은 `시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/README.md` 참조. 이전 v1.3 생성파일5개(76,782,692바이트)는 후속 정리 조건 충족 후 사용자 승인에 따라 2026-09-29 영구삭제했다. 이전 분석본 SHA `1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47`과 삭제 전 대조 증거는 보존했다. [삭제영수증](<시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/cleanup_20260929/deletion_receipt.json>)과 [역사비교 증거](<시설데이터 구축/시설데이터_패키지/구축코드/14_체육제외/cleanup_20260929/historical_evidence.json>)를 참조한다. 원자료·코드·캐시·배제 근거는 계속 보존한다. 이번 시설 작업에서06파일/결과/정책차단stage는 손대지 않았다."
+      ]
+    }
+  ],
+  "data_code_tests_rerun": false
+}

@@ -1,0 +1,37 @@
+{
+  "PASS": true,
+  "deleted_files": 5,
+  "deleted_bytes": 76782692,
+  "history": "cleanup_20260929/historical_evidence.json",
+  "receipt": "cleanup_20260929/deletion_receipt.json",
+  "history_sha256": "87088f4155bdab48f0137d07dc8ce8a9239e79d3b8ebcf4eef7d4a859f4cd31a",
+  "receipt_sha256": "6ad9ac61c2bb7b7c3296c21a4144d14bccf4bd0d4d06afca190565189f21d43b",
+  "pre_verification": "cleanup_20260929/modified_verifier_precheck.json",
+  "post_verification": "cleanup_20260929/post_cleanup_verification.json",
+  "branch_tests": 9,
+  "current_analysis_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+  "current_fresh_input_files": 130,
+  "current_fresh_reproduction": "PASS",
+  "fresh_historical_comparison_after_deletion": false,
+  "changed_owned_files": [
+    "구축코드/14_체육제외/release_v14.py",
+    "구축코드/14_체육제외/cleanup_evidence.py",
+    "구축코드/14_체육제외/test_cleanup_evidence.py",
+    "구축코드/14_체육제외/delete_superseded_five.ps1",
+    "구축코드/14_체육제외/README.md",
+    "구축코드/14_체육제외/deferred_cleanup_manifest.json",
+    "구축코드/14_체육제외/final_verification.json",
+    "구축코드/14_체육제외/build_hashes.json",
+    "README.md",
+    "문서/작업기록.md"
+  ],
+  "additional_evidence_directory": "구축코드/14_체육제외/cleanup_20260929",
+  "root_registry_share_guide_changes": true,
+  "outside_scope_deletions": 0,
+  "changed_root_files": [
+    "데이터_배포목록.md",
+    "공유_안내.md"
+  ],
+  "root_change_scope": "Only facility-v1.3 deletion/receipt guidance; one existing line changed per file; all other lines unchanged.",
+  "root_documentation_followup": "cleanup_20260929/root_documentation_followup.json"
+}

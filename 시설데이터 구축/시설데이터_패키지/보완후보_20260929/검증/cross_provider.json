@@ -1,0 +1,628 @@
+{
+  "addresses": 47,
+  "results": [
+    {
+      "query": "서울특별시 종로구 성균관로4길 21",
+      "primary_provider": "registered",
+      "comparison_provider": "kakao",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 성동구 매봉길 13",
+      "primary_provider": "registered",
+      "comparison_provider": "kakao",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서대문구 신촌로35길 10",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.151,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.9558607067122,
+        "lat": 37.55862303517054,
+        "city": "서울특별시",
+        "gu": "서대문구",
+        "road": "신촌로35길",
+        "dong": "북아현동",
+        "main": 10,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 강서구 공항대로 267",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.245,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.83731164376371,
+        "lat": 37.55902717039751,
+        "city": "서울특별시",
+        "gu": "강서구",
+        "road": "공항대로",
+        "dong": "가양제1동",
+        "main": 267,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 동대문구 약령중앙로 7-4",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.578,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.03655541726772,
+        "lat": 37.57901411798056,
+        "city": "서울특별시",
+        "gu": "동대문구",
+        "road": "약령중앙로",
+        "dong": "제기동",
+        "main": 7,
+        "sub": 4,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 영등포구 영등포동2가 422",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 영등포구 영등포동2가 297",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 서초동 1333",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 반포동 1005",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 반포동 978",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 반포동 758",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 용산구 한남동 263-15",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서대문구 홍은동 11-458",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 마포구 양화로 45",
+      "primary_provider": "vworld",
+      "comparison_provider": "kakao",
+      "source": "legacy",
+      "point_count": 4,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 중구 신당동 840",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 성북구 석관동 246-12",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강남구 청담동 49-8",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 송파구 송파동 19-3",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강남구 개포동 656",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 청진동 126-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 교남동 53-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 청진동 87-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 청진동 20-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 숭인동 1429-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 숭인동 1426-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 청진동 88-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 종로구 종로1가 45-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 중구 을지로 12",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.011,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.97833295919804,
+        "lat": 37.56556722912354,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "을지로",
+        "dong": "명동",
+        "main": 12,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 중구 을지로 58",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 1.234,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.9839753627032,
+        "lat": 37.56612166942122,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "을지로",
+        "dong": "명동",
+        "main": 58,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 중구 을지로 88",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 28.372,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.98718999998843,
+        "lat": 37.56616829507789,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "을지로",
+        "dong": "명동",
+        "main": 88,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 중구 소공로 58",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 33.28,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.98171407120896,
+        "lat": 37.56094732669057,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "소공로",
+        "dong": "회현동",
+        "main": 58,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 노원구 한글비석로 57",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.372,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.06891711401508,
+        "lat": 37.63662662988718,
+        "city": "서울특별시",
+        "gu": "노원구",
+        "road": "한글비석로",
+        "dong": "하계1동",
+        "main": 57,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 구로구 신도림동 692",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 양재동 279-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강남구 개포동 656-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강남구 도곡동 168-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "legacy",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강동구 암사동 513-27",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 서초구 성촌1길 26",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 10.172,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.02145850286925,
+        "lat": 37.46546956860786,
+        "city": "서울특별시",
+        "gu": "서초구",
+        "road": "성촌1길",
+        "dong": "양재1동",
+        "main": 26,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 중구 다산로36길 53",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.005,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.01784757373164,
+        "lat": 37.56152957151755,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "다산로36길",
+        "dong": "동화동",
+        "main": 53,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 서대문구 홍제원길 11",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.009,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.94739076295568,
+        "lat": 37.58687125579235,
+        "city": "서울특별시",
+        "gu": "서대문구",
+        "road": "홍제원길",
+        "dong": "홍제제2동",
+        "main": 11,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 영등포구 국제금융로 86",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.79,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.93179671621832,
+        "lat": 37.52021274462584,
+        "city": "서울특별시",
+        "gu": "영등포구",
+        "road": "국제금융로",
+        "dong": "여의동",
+        "main": 86,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 강남구 청담동 3-20",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 0,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 중구 퇴계로78길 17",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 0.957,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.0169332973836,
+        "lat": 37.5645447448224,
+        "city": "서울특별시",
+        "gu": "중구",
+        "road": "퇴계로78길",
+        "dong": "신당제5동",
+        "main": 17,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 영등포구 당산로 77",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 3.413,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 126.89531495986213,
+        "lat": 37.52173960080002,
+        "city": "서울특별시",
+        "gu": "영등포구",
+        "road": "당산로",
+        "dong": "당산제1동",
+        "main": 77,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 성북구 보국문로 38",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": true,
+      "distance_m": 5.443,
+      "comparison_point": {
+        "kind": "road",
+        "lon": 127.01035451303613,
+        "lat": 37.60791450287026,
+        "city": "서울특별시",
+        "gu": "성북구",
+        "road": "보국문로",
+        "dong": "정릉제2동",
+        "main": 38,
+        "sub": 0,
+        "san": false
+      },
+      "verdict": "corroborated_within_50m"
+    },
+    {
+      "query": "서울특별시 강남구 역삼동 711-0",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    },
+    {
+      "query": "서울특별시 강동구 천호동 406-17",
+      "primary_provider": "kakao",
+      "comparison_provider": "vworld",
+      "source": "api",
+      "point_count": 1,
+      "comparison_exact": false,
+      "verdict": "second_provider_no_exact_match"
+    }
+  ],
+  "verdicts": {
+    "second_provider_no_exact_match": 32,
+    "corroborated_within_50m": 15
+  },
+  "http_this_run": 32
+}

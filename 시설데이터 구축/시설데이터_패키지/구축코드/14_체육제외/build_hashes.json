@@ -1,0 +1,10 @@
+{
+  "구축코드\\build_통합.py": "143fb2208ce483938be741037d81afd70f6b8e71abf7c84a107fd4f439eeaae4",
+  "구축코드\\build_분석용.py": "4d6e74bb6a9952f9dd1241d9b98c48d20e13dbde0877d446c1334b95501a6964",
+  "구축코드\\facility_selection.py": "59d9eda5a57d28ac5df554869097813610fda126bdbc24cfb7f1526b40a1330f",
+  "구축코드\\시설_선택규칙.json": "c3705db3174dbb907cbdd90d5fbe57c47a3c64b0b0179ca7b5c5ea2324fec7b7",
+  "구축코드\\14_체육제외\\release_v14.py": "bcd8819733371d5bd47b5ccdfcab457ed0488e480fe3779d18b838eb2d6b542e",
+  "구축코드\\14_체육제외\\cleanup_evidence.py": "3f89920d668e1a720704cc890fca2b0269d459e1d90421baaaefe1326f0c9d81",
+  "구축코드\\14_체육제외\\test_cleanup_evidence.py": "321b0c2d9916b126e9cb51d85d7e3f4f9ba7cf314117fcaea08cb47ac76a825f",
+  "구축코드\\14_체육제외\\delete_superseded_five.ps1": "6b4a155823b216652d103506562e5ba35577948f9ec179bcc582c3f07c56c0de"
+}

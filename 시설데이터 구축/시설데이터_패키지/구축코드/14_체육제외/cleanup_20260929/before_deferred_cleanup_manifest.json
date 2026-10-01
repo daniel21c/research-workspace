@@ -1,0 +1,85 @@
+{
+  "status": "pending_accessibility_v1.4_rebuild_validation",
+  "permanent_deletions_this_task": 0,
+  "active_release": "facility-v1.4",
+  "comparison_release": "facility-v1.3",
+  "old_analysis_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+  "new_analysis_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+  "condition": "06 v1.4/7-category recalculation verified; old v1.3/v3.2 comparison completed and archived evidence retained. No automatic deletion.",
+  "not_deletion_candidates": [
+    "raw/source",
+    "geocoding caches",
+    "source and release code",
+    "exclusion and correction evidence",
+    "required reproduction input snapshots",
+    "hash/manifests/change logs",
+    "any 06 files or denied stage"
+  ],
+  "files": [
+    {
+      "staged": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\staging\\서울시설_2020_2025_분석용.parquet",
+      "old_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+      "new_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "relative_path": "데이터/서울시설_2020_2025_분석용.parquet",
+      "old_bytes": 40210745,
+      "archive": "D:\\Research\\_archive\\facility-v1.3_superseded_20260929\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "source": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "status": "keep_until_access_validation",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "replacement_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "replacement_basis": "Verified v1.4 sports-only exclusion, canonical reproducibility PASS"
+    },
+    {
+      "staged": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\staging\\통합_신뢰도상_2020_2025.parquet",
+      "old_sha256": "ef3d2da68d9569b841f4158a3d196e62b15b1b6911289dc342af822dea1d32e1",
+      "new_sha256": "55678ecd1f9c02292a6e43450f74f894b599c8b53f91d6133784cfd37e4f1249",
+      "relative_path": "데이터/통합_신뢰도상_2020_2025.parquet",
+      "old_bytes": 36559292,
+      "archive": "D:\\Research\\_archive\\facility-v1.3_superseded_20260929\\데이터\\통합_신뢰도상_2020_2025.parquet",
+      "source": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\통합_신뢰도상_2020_2025.parquet",
+      "status": "keep_until_access_validation",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\통합_신뢰도상_2020_2025.parquet",
+      "replacement_sha256": "55678ecd1f9c02292a6e43450f74f894b599c8b53f91d6133784cfd37e4f1249",
+      "replacement_basis": "Verified v1.4 sports-only exclusion, canonical reproducibility PASS"
+    },
+    {
+      "staged": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\staging\\_요약_시설별_수_좌표.csv",
+      "old_sha256": "8cbb1a0b4ece39b68cbcf521ad106e631670411e977628b705455a6962ecd1b3",
+      "new_sha256": "38771e90d4325d50f94eefd34f7cfed13485911177fd7532da2fd04389a4e916",
+      "relative_path": "데이터/_요약_시설별_수_좌표.csv",
+      "old_bytes": 1775,
+      "archive": "D:\\Research\\_archive\\facility-v1.3_superseded_20260929\\데이터\\_요약_시설별_수_좌표.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\_요약_시설별_수_좌표.csv",
+      "status": "keep_until_access_validation",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\_요약_시설별_수_좌표.csv",
+      "replacement_sha256": "38771e90d4325d50f94eefd34f7cfed13485911177fd7532da2fd04389a4e916",
+      "replacement_basis": "Verified v1.4 sports-only exclusion, canonical reproducibility PASS"
+    },
+    {
+      "staged": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\staging\\채택목록.csv",
+      "old_sha256": "a328ca56731fd9eb7376c52eb25a291ceea6a49db7e46508593d8a908614e0a8",
+      "new_sha256": "5042ce58b683af9edf6f8ef1ac78e8dbd8a20a3555c612192464db5544adad12",
+      "relative_path": "데이터/채택목록.csv",
+      "old_bytes": 9322,
+      "archive": "D:\\Research\\_archive\\facility-v1.3_superseded_20260929\\데이터\\채택목록.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\채택목록.csv",
+      "status": "keep_until_access_validation",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\채택목록.csv",
+      "replacement_sha256": "5042ce58b683af9edf6f8ef1ac78e8dbd8a20a3555c612192464db5544adad12",
+      "replacement_basis": "Verified v1.4 sports-only exclusion, canonical reproducibility PASS"
+    },
+    {
+      "staged": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\staging\\검증결과.json",
+      "old_sha256": "3d16a265f7a85ce0004a35b7416a223bdd7a32ec8e55a2013984677627abb89d",
+      "new_sha256": "bb8e40b792bae652b5c8bac56305c94299e35784e3978c7bb24014d19d794ce2",
+      "relative_path": "데이터/검증결과.json",
+      "old_bytes": 1558,
+      "archive": "D:\\Research\\_archive\\facility-v1.3_superseded_20260929\\데이터\\검증결과.json",
+      "source": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\검증결과.json",
+      "status": "keep_until_access_validation",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\검증결과.json",
+      "replacement_sha256": "bb8e40b792bae652b5c8bac56305c94299e35784e3978c7bb24014d19d794ce2",
+      "replacement_basis": "Verified v1.4 sports-only exclusion, canonical reproducibility PASS"
+    }
+  ]
+}

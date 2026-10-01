@@ -1,0 +1,448 @@
+{
+  "release": "facility-v1.3",
+  "files": [
+    {
+      "relative_path": "데이터\\시설별\\공공도서관\\facilities_공공도서관_2020_01.parquet",
+      "old_sha256": "c7afbdaae851e3099812deb5e87e95781e63a3beabf42b9c7ee215b5e8df9bb6",
+      "old_bytes": 65128,
+      "new_sha256": "700bf43e374d9df8c5ed9f0ac538af71153fea9ca734ac840eb6f1e2b58c8c08",
+      "new_bytes": 65379,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\공공도서관\\facilities_공공도서관_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\공공도서관\\facilities_공공도서관_2020_01.csv",
+      "old_sha256": "48712a9ebac46be4403ed5cc3a005cda6f9ea265b64f9947360f8850bd3d62c2",
+      "old_bytes": 145918,
+      "new_sha256": "6aeedbf9e736332b3011965d77b851355ed5325d127b3def5af4ae33d844fe56",
+      "new_bytes": 146497,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\공공도서관\\facilities_공공도서관_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\공공도서관\\facilities_공공도서관_2025_01.parquet",
+      "old_sha256": "af8645b1fde6f23e34d295cb7909bc91e76399dfc6655e22b09448854f5d3fa8",
+      "old_bytes": 68596,
+      "new_sha256": "c012d1a4334dab8999dd853bcb843b8b150e505ccb41754faa35b5c1aea2a347",
+      "new_bytes": 68804,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\공공도서관\\facilities_공공도서관_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\공공도서관\\facilities_공공도서관_2025_01.csv",
+      "old_sha256": "8479586abbf6eed7d43bb130dd7b68783db0112938d30d55d4811a548b2b2c97",
+      "old_bytes": 174284,
+      "new_sha256": "9cc3abf2cae00ef474f8095164462151ca9f11d5a833675098feb9bed7362bb7",
+      "new_bytes": 174630,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\공공도서관\\facilities_공공도서관_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.parquet",
+      "old_sha256": "e20859f139cbf7e825f8345eaf2248f64c8621a65708776ae2136a672b5c9840",
+      "old_bytes": 84303,
+      "new_sha256": "3ddd4b6057adb80d47b085b4313986e7caa646cb5049860d82dc12bb40b64efd",
+      "new_bytes": 84460,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.csv",
+      "old_sha256": "660a39fa3cb72c9fa8eb74200a0b1f16301a95781ee7228542a76351694ebeab",
+      "old_bytes": 332551,
+      "new_sha256": "b68e263938dc76b2373bb0b09d495aeab7fc53d643126c8ac4b41e1e5ba0ef34",
+      "new_bytes": 333232,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\문화기반시설\\facilities_문화기반시설_2025_01.parquet",
+      "old_sha256": "d9846592ef4092abc9d994a8e1f477607c58fbe8d890a0fae08d9178bf48a354",
+      "old_bytes": 93418,
+      "new_sha256": "a371a6aaa7ac365b1efcb43ba212a709bac19644dc9ea12d3f1da304c3feaad7",
+      "new_bytes": 93410,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\문화기반시설\\facilities_문화기반시설_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\문화기반시설\\facilities_문화기반시설_2025_01.csv",
+      "old_sha256": "39c280372c495d86fc2f531b7202141e548d84016e662ffc74673c49ba70cd6e",
+      "old_bytes": 389801,
+      "new_sha256": "cc25c887ef25678d6f8ec03c9a2fdafb9f1be605b814208cb0b47fbec8a7c218",
+      "new_bytes": 390326,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\문화기반시설\\facilities_문화기반시설_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\미용업\\facilities_미용업_2020_01.parquet",
+      "old_sha256": "4b2253575af5ed00a725fb29cbe9e223718c2b2055887d9c262e91081d4e001e",
+      "old_bytes": 2910355,
+      "new_sha256": "fce55d24a3c3dc56b0b3f4ba2529f7567739b007d1ed041636ac16a58327dc13",
+      "new_bytes": 2909712,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\미용업\\facilities_미용업_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\미용업\\facilities_미용업_2020_01.csv",
+      "old_sha256": "3203834db4bea45598a562da70be0c312a47c67b621727db816d8b2a98f5548a",
+      "old_bytes": 22244772,
+      "new_sha256": "42684f218d5102cc3f82c726b977eacd6a0a8ec0d702f4bd624612ccf9a198fb",
+      "new_bytes": 22245039,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\미용업\\facilities_미용업_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\미용업\\facilities_미용업_2025_01.parquet",
+      "old_sha256": "621954aee0e0055a61f0141b87532c62cea8acaee69339670206b9b4753f72b8",
+      "old_bytes": 3334904,
+      "new_sha256": "fdc796eef57ee01e94539c1e22497ddd4715d213a73308bcc633c2100566297e",
+      "new_bytes": 3337143,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\미용업\\facilities_미용업_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\미용업\\facilities_미용업_2025_01.csv",
+      "old_sha256": "3d5b1165f0f453915487d6a3607438eed0a2f14ac7aaff0ec12bd8c0708b9046",
+      "old_bytes": 25887989,
+      "new_sha256": "a5f9570cd5c0e58d1dac842f4491050bc0540b6fe090e3104c68bf3841587645",
+      "new_bytes": 25888256,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\미용업\\facilities_미용업_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\세탁업\\facilities_세탁업_2020_01.parquet",
+      "old_sha256": "a6d5cca1c424368f26ea72ee9abf10c32d5e196e112fc989dd8f1cbc176733b1",
+      "old_bytes": 555749,
+      "new_sha256": "4b34aa4bbe05f547b15cdb58a4b80e99b9991f3d74e95b61f347faccc9283249",
+      "new_bytes": 555855,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\세탁업\\facilities_세탁업_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\세탁업\\facilities_세탁업_2020_01.csv",
+      "old_sha256": "ef2e7fb4fb869a06d48a0ab367bcdf2ef192da25d4622de89ce5ce80753e6a9d",
+      "old_bytes": 3585300,
+      "new_sha256": "4c521fc550969a256c61d2b6588097315dff4dbd389837868db3bc7295248620",
+      "new_bytes": 3590050,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\세탁업\\facilities_세탁업_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\세탁업\\facilities_세탁업_2025_01.parquet",
+      "old_sha256": "8ad88f9843293ca8c42010de5e1696f24bd500bce7ac0d9cb856fae47ca3b199",
+      "old_bytes": 435784,
+      "new_sha256": "04166efb8fe8e751c11f9233c255fbaf103f14d98b3a094b31386a67b943f5bc",
+      "new_bytes": 435857,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\세탁업\\facilities_세탁업_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\세탁업\\facilities_세탁업_2025_01.csv",
+      "old_sha256": "2292f625e7c88984bf5688c8b96f03115231d3a48595d165c190846136d2d2cd",
+      "old_bytes": 2729635,
+      "new_sha256": "cdd5f3b00e2e922100d3e9780081bfca0880f3d80dead17b840bc11136ad86d8",
+      "new_bytes": 2733273,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\세탁업\\facilities_세탁업_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.parquet",
+      "old_sha256": "b6bfe13a871ddd741c2869a0bc77857de732a5d69afe82d55e63e8791d6a5dfe",
+      "old_bytes": 1817258,
+      "new_sha256": "02010e180e2e4f72938ce5cf2f506e0125cfa60a4a4dc42af1422006ded10c91",
+      "new_bytes": 1817808,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.csv",
+      "old_sha256": "7760f4f3a692d2f38fbc88c314f5409ed39a2ae31b1180002be96e517adb9acb",
+      "old_bytes": 16509811,
+      "new_sha256": "539150a805d414344263cc7b70ca84371b25efcef992bff4d59df75f3109661a",
+      "new_bytes": 16528126,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.parquet",
+      "old_sha256": "4ab5176fe642dff131f2e7e52efc8726aa5ebde28e82acde84196f0828aee413",
+      "old_bytes": 2144137,
+      "new_sha256": "7ee0519a215a23121b61d386c72ecb6ebca64fc7b7720f7e572bd511a600d6a8",
+      "new_bytes": 2144524,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.csv",
+      "old_sha256": "c5d8d39a0b6b9094c387a7f0540a1308781e8d24beaa235e8806a1565aa4ada4",
+      "old_bytes": 19384741,
+      "new_sha256": "fa8abacaf1f411223fd730a056d095f791b2373c986e8021e7a2ffff85f0dc19",
+      "new_bytes": 19405052,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\약국\\facilities_약국_2020_01.parquet",
+      "old_sha256": "006d5148fe698ba106003d470512c1e321bb4c7c865e41b63de080f44edc2d91",
+      "old_bytes": 590167,
+      "new_sha256": "2f6219db5ad2e6ee64c2f46642dc7ddd462ce8b81fa6ef2ea261f03af3fb5a66",
+      "new_bytes": 590070,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\약국\\facilities_약국_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\약국\\facilities_약국_2020_01.csv",
+      "old_sha256": "554f4eb46df5a875f3942e62dcd6abaff19c9326b2bcd7edad577a976b5e407a",
+      "old_bytes": 3868710,
+      "new_sha256": "67bbec053104347d6c0ee7a8ed89775d2872c42cee8434838146dfda81c905f2",
+      "new_bytes": 3874133,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\약국\\facilities_약국_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\약국\\facilities_약국_2025_01.parquet",
+      "old_sha256": "2086c78bdb02193cb5e6db7b899771d47c871299a26fae14b02d058f9d9d9eac",
+      "old_bytes": 641225,
+      "new_sha256": "7a56bff5e9fc5a6c46adc815e29981b87eec86297524ccf85d70942e0d170bad",
+      "new_bytes": 641131,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\약국\\facilities_약국_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\약국\\facilities_약국_2025_01.csv",
+      "old_sha256": "a8e5fe145a36c7fb9492deb9c69a8b7b6b3dcd77b91032cf4f54ed8f3926ebbc",
+      "old_bytes": 4272869,
+      "new_sha256": "00fec541a69b6b6f8475e764d88e19226caca3664550eeaffefc33d9368f6a2d",
+      "new_bytes": 4278817,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\약국\\facilities_약국_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\어린이집\\facilities_어린이집_2020_01.parquet",
+      "old_sha256": "6014f8b523d4393a5c4758ebdc1e46558dad161f38e6aae633e3a686aff1c0b1",
+      "old_bytes": 655302,
+      "new_sha256": "309ed0321725c154bf095a714a27872f6a0060719b2837fe5b38f3325bca91f8",
+      "new_bytes": 655850,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\어린이집\\facilities_어린이집_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\어린이집\\facilities_어린이집_2020_01.csv",
+      "old_sha256": "b5065b0a5fe448d31d588691e2505c1214efa2e296285d132b3d65edfce60198",
+      "old_bytes": 3495146,
+      "new_sha256": "f982d19b3345446ae759e02b02ba69f42b9ad829ab53020c4386b0d160a6ce86",
+      "new_bytes": 3495840,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\어린이집\\facilities_어린이집_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\어린이집\\facilities_어린이집_2025_01.parquet",
+      "old_sha256": "8f7505b57a67d1a38a7069eed57f618fb34fb40c0c41652bbec8dc8292e3ad35",
+      "old_bytes": 492887,
+      "new_sha256": "bc510d802884170b5625bb07e55e4c300780ee62c23165c5bcc57f63bfab0a16",
+      "new_bytes": 493520,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\어린이집\\facilities_어린이집_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\어린이집\\facilities_어린이집_2025_01.csv",
+      "old_sha256": "890a957695a83c591ab78457f9bf60768f03c675c66562a9842a28d76a94263a",
+      "old_bytes": 2563476,
+      "new_sha256": "55077c9d48a1b0cea63d87ae02a9ca4876f3dcd73e402fee27636491c141a2fe",
+      "new_bytes": 2564170,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\어린이집\\facilities_어린이집_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\의원\\facilities_의원_2020_01.parquet",
+      "old_sha256": "702af9b33f12bbcb56d00a673d3bce5b546f0d5b7ddbcc640d8b3f6279502ef5",
+      "old_bytes": 1863317,
+      "new_sha256": "96af8e3b1d5be71223ccecc04b307d8796cfc80a04f4dfda8c010e430ddb0a57",
+      "new_bytes": 1863663,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\의원\\facilities_의원_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\의원\\facilities_의원_2020_01.csv",
+      "old_sha256": "d92fd0ae84ea29859591eac49f6427635abbf2e3ffd0d25e04ee2af3a1c7172c",
+      "old_bytes": 15454391,
+      "new_sha256": "f896f66a77b60e7cf5d1e31a3eed28a961f85cb2a684af01e91ac2872b5bbfa2",
+      "new_bytes": 15472399,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\의원\\facilities_의원_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\의원\\facilities_의원_2025_01.parquet",
+      "old_sha256": "8ea6abaa9476bfc2d8fef0e1f6d0f8822ee1c80a4223a395d04aef180eb7f8be",
+      "old_bytes": 1983748,
+      "new_sha256": "9f8f3625425f19196668c3e7313f7d6d739fda55a7348ed253d832ea5ca8711c",
+      "new_bytes": 1983924,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\의원\\facilities_의원_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\의원\\facilities_의원_2025_01.csv",
+      "old_sha256": "380e57d7c3b992c87543a4c4ef5b17e546ec421a4f2f01e05bcfe03f2e856936",
+      "old_bytes": 16718384,
+      "new_sha256": "e6fd5a1f84a4a719827c4334de5f501192aa17f33eaab822d041c258483ff9e4",
+      "new_bytes": 16718783,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\의원\\facilities_의원_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\이용업\\facilities_이용업_2020_01.parquet",
+      "old_sha256": "5dabce55a4d8a19a2edf16dc75742e0eb91920408ac8d39395d4cf496f8aa81f",
+      "old_bytes": 350186,
+      "new_sha256": "52db25d3bae6051e82abe463b3bc65c2f303ac98afcaf35cec6d68218d932d63",
+      "new_bytes": 350279,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\이용업\\facilities_이용업_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\이용업\\facilities_이용업_2020_01.csv",
+      "old_sha256": "e87cacae797c30aaedeff7bf62de9d532138fa304f98805feee088987552ea85",
+      "old_bytes": 2082193,
+      "new_sha256": "48f8b07d78cc451175a28bcb9f6018b8f517a5011a818e1b00af50343b69149f",
+      "new_bytes": 2085000,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\이용업\\facilities_이용업_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2020_01.parquet",
+      "old_sha256": "5c5f82ac73f0928ab72aedb0cd430dbfdcf6ca3fc5e9990e990f5f28489e9932",
+      "old_bytes": 11417695,
+      "new_sha256": "1276533aab1b87fc8782069b6cd1f767c046d70d3ecce21384d0d886d6a5265e",
+      "new_bytes": 11419781,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\일반음식점\\facilities_일반음식점_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2020_01.csv",
+      "old_sha256": "95c3d716341fb97571580261148eeb05659d981b56726a7f8f930c5b29a9e97e",
+      "old_bytes": 104332775,
+      "new_sha256": "f41218840dfa86835660112fda04fe789496581b5e27d5dd220d57568d2ac41d",
+      "new_bytes": 104458313,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\일반음식점\\facilities_일반음식점_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2025_01.parquet",
+      "old_sha256": "da83c291d10e8964a166f66458206efce1ffe3cb70e573f79679c07794050fc2",
+      "old_bytes": 11700478,
+      "new_sha256": "ced8910fb5c587bbf8532f2467ce582fa7e6c6905d366ad4cf893170e563624e",
+      "new_bytes": 11706602,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\일반음식점\\facilities_일반음식점_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2025_01.csv",
+      "old_sha256": "4e750b88a5f00fc32bfb5c49de91202ba1e8f3b3cb77517a4135d16863a9279c",
+      "old_bytes": 106457030,
+      "new_sha256": "15a37a9ca320db6cc25e535aa21d1975ea41ed175999020d7c2b673a076761dd",
+      "new_bytes": 106582869,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\일반음식점\\facilities_일반음식점_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\장애인복지_이용시설\\facilities_장애인복지_이용시설_2025_01.parquet",
+      "old_sha256": "220a4f1045c20a765cc7fc44397a0c10e084a4a2002783eda332fa2e127a0900",
+      "old_bytes": 61894,
+      "new_sha256": "de726cda4546465b851e80eae9b92e6d1f1c2e2b49dfa36ebb0c6e7bdabde616",
+      "new_bytes": 62253,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\장애인복지_이용시설\\facilities_장애인복지_이용시설_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\장애인복지_이용시설\\facilities_장애인복지_이용시설_2025_01.csv",
+      "old_sha256": "45e2228643bbb04a702b135f93f074ad0fce950befc3a1a118aa1d85b8459414",
+      "old_bytes": 183035,
+      "new_sha256": "168ab0d5c7c9aca24ef1a05bfd42a11c9295b0373228d734928f4592380c2900",
+      "new_bytes": 183443,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\장애인복지_이용시설\\facilities_장애인복지_이용시설_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.parquet",
+      "old_sha256": "77946cffee597685cf753e56cd5f7d4e0cab3945fab3fb8a34ec7d8ca3d8a24b",
+      "old_bytes": 90536,
+      "new_sha256": "be7c788507bca13e79fe0916f66f7d23cebced9d627cf7b854c8dfd48ba14303",
+      "new_bytes": 90714,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.csv",
+      "old_sha256": "7bebc222047fe256c156b11c537e7cc589a1233fc75f2edfa456696f956adf30",
+      "old_bytes": 427211,
+      "new_sha256": "c4f45e33f39defb2213dd60ba0949b7732f23258478dffa07092c6529a99de7b",
+      "new_bytes": 427852,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.parquet",
+      "old_sha256": "3b20058a088d3bf0c93b64e2c9617f27ca9162600dc3da6845b599062a419ae4",
+      "old_bytes": 1171975,
+      "new_sha256": "55e0be45a4fc3ef54060616a52b589fe89fe22aeb2dd24eac8c0b5e0aba1f0df",
+      "new_bytes": 1172359,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.csv",
+      "old_sha256": "42c77ca74da6abe78c078fd8d8e957128c671da7c58ba942775dc96ed26bd2e7",
+      "old_bytes": 8498979,
+      "new_sha256": "7e8472b2fb393c639d6636f26a3a3c9edec8d9a9bd523b3f7db26bd443fa2419",
+      "new_bytes": 8510339,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.parquet",
+      "old_sha256": "2ccb0a17288747a5bcf89807706d1cbddf94de3cfe67d954921e432910a7723e",
+      "old_bytes": 1272280,
+      "new_sha256": "b94a5b220e2722abc78779989e47238461497777f70083792117d4d23d745365",
+      "new_bytes": 1272511,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.csv",
+      "old_sha256": "3b7321a0c17853e0e737b7e20631b8939fb34bca255f86f21de8dc506087ca42",
+      "old_bytes": 9169773,
+      "new_sha256": "21ea7e6f489ad98affb8c28df7c4fa3c4dfa37a2d860162a5dcc10ecec943415",
+      "new_bytes": 9170706,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.parquet",
+      "old_sha256": "d3a58eaf7376819cf982ad2ffad61c3e857673a53e3d3a354c323161a7849826",
+      "old_bytes": 3728923,
+      "new_sha256": "683ba66eb2922e7fb1c775289866295a931a17c0c47baa65a67193f51b869324",
+      "new_bytes": 3729238,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.csv",
+      "old_sha256": "425a84d069e19082dc1e924525cb237bf499797990d1f1f6fe44b71723069ca2",
+      "old_bytes": 28672979,
+      "new_sha256": "ed333d921707bfb98cdb6c4218dcbfea7213f518bd0a5e9eb0d434e976386794",
+      "new_bytes": 28673423,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.csv"
+    },
+    {
+      "relative_path": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.parquet",
+      "old_sha256": "468ec4f4d55415ba275748549dca14dcb34276845b110b6409cad431b8df6af8",
+      "old_bytes": 3996360,
+      "new_sha256": "9e7a32af0980c3c076acd658bff73c202ae5a60e901066bc7fa9680f00972105",
+      "new_bytes": 3996722,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.parquet"
+    },
+    {
+      "relative_path": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.csv",
+      "old_sha256": "f13515f8d7e0315ac4209436c5ba26371cca22ad6646176b0628b8792883fb20",
+      "old_bytes": 30412875,
+      "new_sha256": "07519e42b72d3650283984f5809bd7ca847e9f77bb0774fb8a7b608dd8d903d7",
+      "new_bytes": 30413097,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.csv"
+    },
+    {
+      "relative_path": "데이터\\서울시설_2020_2025_분석용.parquet",
+      "old_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+      "old_bytes": 40204981,
+      "new_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+      "new_bytes": 40210745,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\서울시설_2020_2025_분석용.parquet"
+    },
+    {
+      "relative_path": "데이터\\통합_신뢰도상_2020_2025.parquet",
+      "old_sha256": "d649cb480e3db6dc45ed66440e32a088a7ee81762ac420cd71d7fe711d79ff2c",
+      "old_bytes": 36553358,
+      "new_sha256": "ef3d2da68d9569b841f4158a3d196e62b15b1b6911289dc342af822dea1d32e1",
+      "new_bytes": 36559292,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\통합_신뢰도상_2020_2025.parquet"
+    },
+    {
+      "relative_path": "데이터\\_요약_시설별_수_좌표.csv",
+      "old_sha256": "43417fc260db0c0d3f45c68183d42fb8f447fda68df98ed8984b7e0ff191d78c",
+      "old_bytes": 1788,
+      "new_sha256": "8cbb1a0b4ece39b68cbcf521ad106e631670411e977628b705455a6962ecd1b3",
+      "new_bytes": 1775,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\_요약_시설별_수_좌표.csv"
+    },
+    {
+      "relative_path": "데이터\\채택목록.csv",
+      "old_sha256": "f8fb0dfe890fd9e7d763d6a7da838d558a32b593a860dcd512167dcaa5008096",
+      "old_bytes": 8132,
+      "new_sha256": "a328ca56731fd9eb7376c52eb25a291ceea6a49db7e46508593d8a908614e0a8",
+      "new_bytes": 9322,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\채택목록.csv"
+    },
+    {
+      "relative_path": "데이터\\검증결과.json",
+      "old_sha256": "caed06c34e7a08646ec956f17f13c5d05d4bed34410ca0e232928a960a23ff6c",
+      "old_bytes": 1327,
+      "new_sha256": "3d16a265f7a85ce0004a35b7416a223bdd7a32ec8e55a2013984677627abb89d",
+      "new_bytes": 1558,
+      "staged_relative_path": "구축코드\\13_좌표보완\\staging\\검증결과.json"
+    }
+  ],
+  "file_count": 55,
+  "old_total_bytes": 556290819,
+  "new_total_bytes": 556667926
+}

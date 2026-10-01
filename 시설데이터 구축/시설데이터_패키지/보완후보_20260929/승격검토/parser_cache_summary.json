@@ -1,0 +1,23 @@
+{
+  "cache_files_scanned": 24926,
+  "query_cache_hits": 566,
+  "rows": 1295,
+  "status": {
+    "removed_query_coordinate_match": 31,
+    "no_matching_cache": 30,
+    "strict_cache_supported": 1234
+  },
+  "unresolved_facilities": {
+    "공공도서관": 7,
+    "등록공연장": 1,
+    "노인 이용시설": 1,
+    "노인 입소시설": 2,
+    "문화기반시설": 10,
+    "어린이집": 8,
+    "일반음식점": 16,
+    "장애인 이용시설": 7,
+    "체육시설업": 2,
+    "학교": 1,
+    "휴게음식점": 6
+  }
+}

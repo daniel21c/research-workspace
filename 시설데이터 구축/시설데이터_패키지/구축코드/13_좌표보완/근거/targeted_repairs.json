@@ -1,0 +1,299 @@
+[
+  {
+    "row_index": 69,
+    "complete_source_queries": [
+      "서울특별시 성동구 금호동1가 688",
+      "서울특별시 성동구 난계로 20"
+    ],
+    "cached_files_checked": 4,
+    "matches": [
+      {
+        "query": "서울특별시 성동구 금호동1가 688",
+        "kind": "jibun",
+        "gu": "성동구",
+        "provider": "kakao",
+        "point": {
+          "kind": "jibun",
+          "lon": 127.024905168089,
+          "lat": 37.5541248561526,
+          "city": "서울",
+          "gu": "성동구",
+          "road": "",
+          "dong": "금호동1가",
+          "main": 688,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\공공도서관\\raw\\geocoding\\kakao_a9aa68d7720171c2157c.json",
+        "sha256": "c17ae8fcccc389e69701e347fb8aba17114aafa29c718c92a74607d378922fb9"
+      },
+      {
+        "query": "서울특별시 성동구 금호동1가 688",
+        "kind": "jibun",
+        "gu": "성동구",
+        "provider": "kakao",
+        "point": {
+          "kind": "jibun",
+          "lon": 127.024905168089,
+          "lat": 37.5541248561526,
+          "city": "서울",
+          "gu": "성동구",
+          "road": "",
+          "dong": "금호동1가",
+          "main": 688,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\문화기반시설\\raw\\geocoding\\kakao_a9aa68d7720171c2157c.json",
+        "sha256": "3f3a6b42573a61d67b17eb56ad95b873643326a5c9141076f63365ffca8e7c1e"
+      },
+      {
+        "query": "서울특별시 성동구 난계로 20",
+        "kind": "road",
+        "gu": "성동구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 127.0248936259,
+          "lat": 37.5541287328773,
+          "city": "서울",
+          "gu": "성동구",
+          "road": "난계로",
+          "dong": "금호동1가",
+          "main": 20,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\공공도서관\\raw\\geocoding\\kakao_f9ca64db867ed98f043d.json",
+        "sha256": "fc5340e36ab38a15d8e1ee9387bae08726d4702b0ca0f2a85351c6a4f8835f9b"
+      },
+      {
+        "query": "서울특별시 성동구 난계로 20",
+        "kind": "road",
+        "gu": "성동구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 127.0248936259,
+          "lat": 37.5541287328773,
+          "city": "서울",
+          "gu": "성동구",
+          "road": "난계로",
+          "dong": "금호동1가",
+          "main": 20,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\문화기반시설\\raw\\geocoding\\kakao_f9ca64db867ed98f043d.json",
+        "sha256": "73479fd6aec1fa6fb4f207f228f6c4a30d3bfb40fc96410fc270272c2aa22d8b"
+      }
+    ],
+    "decision": "correct_from_exact_cache"
+  },
+  {
+    "row_index": 206,
+    "complete_source_queries": [
+      "서울특별시 강서구 곰달래로57가길 26"
+    ],
+    "cached_files_checked": 3,
+    "matches": [
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\공공도서관\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "fae403b89082d0a22aa914bb832f45b95b6ce5c2d8a6837ea78a8491756368f3"
+      },
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\문화기반시설\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "9ea9a68dbc1d17687b94384cc75c0a0fa55d082db928ddf4e1cbe3ca7f899de4"
+      },
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\청소년수련시설\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "11607e3e262af89786cb6686e56cbb3ee614dfd6dd835492e6e7bd3fd3dff220"
+      }
+    ],
+    "decision": "correct_from_exact_cache"
+  },
+  {
+    "row_index": 207,
+    "complete_source_queries": [
+      "서울특별시 성북구 보국문로16가길 20"
+    ],
+    "cached_files_checked": 2,
+    "matches": [
+      {
+        "query": "서울특별시 성북구 보국문로16가길 20",
+        "kind": "road",
+        "gu": "성북구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 127.010771234503,
+          "lat": 37.6117471434115,
+          "city": "서울",
+          "gu": "성북구",
+          "road": "보국문로16가길",
+          "dong": "정릉동",
+          "main": 20,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\공공도서관\\raw\\geocoding\\kakao_4bb1b7a0e4c06a804e7b.json",
+        "sha256": "9ed3c19437534df807d4a0745cd751284610e828ad947f58fba6f827878589c0"
+      },
+      {
+        "query": "서울특별시 성북구 보국문로16가길 20",
+        "kind": "road",
+        "gu": "성북구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 127.010771234503,
+          "lat": 37.6117471434115,
+          "city": "서울",
+          "gu": "성북구",
+          "road": "보국문로16가길",
+          "dong": "정릉동",
+          "main": 20,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\문화기반시설\\raw\\geocoding\\kakao_4bb1b7a0e4c06a804e7b.json",
+        "sha256": "8b6752c6d0b79ff0bdab316fad8c96bad91acf03d182685168bcbebde8dc494a"
+      }
+    ],
+    "decision": "correct_from_exact_cache"
+  },
+  {
+    "row_index": 276,
+    "complete_source_queries": [
+      "서울특별시 강서구 곰달래로57가길 26"
+    ],
+    "cached_files_checked": 3,
+    "matches": [
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\공공도서관\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "fae403b89082d0a22aa914bb832f45b95b6ce5c2d8a6837ea78a8491756368f3"
+      },
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\문화기반시설\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "9ea9a68dbc1d17687b94384cc75c0a0fa55d082db928ddf4e1cbe3ca7f899de4"
+      },
+      {
+        "query": "서울특별시 강서구 곰달래로57가길 26",
+        "kind": "road",
+        "gu": "강서구",
+        "provider": "kakao",
+        "point": {
+          "kind": "road",
+          "lon": 126.860748859236,
+          "lat": 37.5348023810774,
+          "city": "서울",
+          "gu": "강서구",
+          "road": "곰달래로57가길",
+          "dong": "화곡동",
+          "main": 26,
+          "sub": 0,
+          "san": false
+        },
+        "path": "구축코드\\02_명부\\청소년수련시설\\raw\\geocoding\\kakao_e93018299397cfd898ee.json",
+        "sha256": "11607e3e262af89786cb6686e56cbb3ee614dfd6dd835492e6e7bd3fd3dff220"
+      }
+    ],
+    "decision": "correct_from_exact_cache"
+  },
+  {
+    "row_index": 10242,
+    "complete_source_queries": [
+      "서울특별시 종로구 인사동9길 9"
+    ],
+    "cached_files_checked": 0,
+    "matches": [],
+    "decision": "clear_unsupported_coordinate"
+  },
+  {
+    "row_index": 450816,
+    "complete_source_queries": [],
+    "cached_files_checked": 0,
+    "matches": [],
+    "decision": "clear_unsupported_coordinate"
+  }
+]

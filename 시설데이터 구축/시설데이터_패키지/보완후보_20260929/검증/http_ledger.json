@@ -1,0 +1,12 @@
+{
+  "total": 582,
+  "provider_calls": {
+    "kakao": 285,
+    "vworld": 297
+  },
+  "disabled": {},
+  "status_counts": {
+    "kakao:200": 285,
+    "vworld:200": 296
+  }
+}

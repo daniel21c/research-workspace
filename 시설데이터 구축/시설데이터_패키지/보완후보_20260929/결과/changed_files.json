@@ -1,0 +1,170 @@
+[
+  {
+    "base": "데이터\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.parquet",
+    "base_sha256": "e20859f139cbf7e825f8345eaf2248f64c8621a65708776ae2136a672b5c9840",
+    "candidate": "결과\\시설별\\문화기반시설\\facilities_문화기반시설_2020_01.parquet",
+    "candidate_sha256": "3ddd4b6057adb80d47b085b4313986e7caa646cb5049860d82dc12bb40b64efd",
+    "csv_sha256": "b68e263938dc76b2373bb0b09d495aeab7fc53d643126c8ac4b41e1e5ba0ef34",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\미용업\\facilities_미용업_2020_01.parquet",
+    "base_sha256": "4b2253575af5ed00a725fb29cbe9e223718c2b2055887d9c262e91081d4e001e",
+    "candidate": "결과\\시설별\\미용업\\facilities_미용업_2020_01.parquet",
+    "candidate_sha256": "fce55d24a3c3dc56b0b3f4ba2529f7567739b007d1ed041636ac16a58327dc13",
+    "csv_sha256": "42684f218d5102cc3f82c726b977eacd6a0a8ec0d702f4bd624612ccf9a198fb",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\미용업\\facilities_미용업_2025_01.parquet",
+    "base_sha256": "621954aee0e0055a61f0141b87532c62cea8acaee69339670206b9b4753f72b8",
+    "candidate": "결과\\시설별\\미용업\\facilities_미용업_2025_01.parquet",
+    "candidate_sha256": "fdc796eef57ee01e94539c1e22497ddd4715d213a73308bcc633c2100566297e",
+    "csv_sha256": "a5f9570cd5c0e58d1dac842f4491050bc0540b6fe090e3104c68bf3841587645",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\세탁업\\facilities_세탁업_2020_01.parquet",
+    "base_sha256": "a6d5cca1c424368f26ea72ee9abf10c32d5e196e112fc989dd8f1cbc176733b1",
+    "candidate": "결과\\시설별\\세탁업\\facilities_세탁업_2020_01.parquet",
+    "candidate_sha256": "4b34aa4bbe05f547b15cdb58a4b80e99b9991f3d74e95b61f347faccc9283249",
+    "csv_sha256": "4c521fc550969a256c61d2b6588097315dff4dbd389837868db3bc7295248620",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\세탁업\\facilities_세탁업_2025_01.parquet",
+    "base_sha256": "8ad88f9843293ca8c42010de5e1696f24bd500bce7ac0d9cb856fae47ca3b199",
+    "candidate": "결과\\시설별\\세탁업\\facilities_세탁업_2025_01.parquet",
+    "candidate_sha256": "04166efb8fe8e751c11f9233c255fbaf103f14d98b3a094b31386a67b943f5bc",
+    "csv_sha256": "cdd5f3b00e2e922100d3e9780081bfca0880f3d80dead17b840bc11136ad86d8",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.parquet",
+    "base_sha256": "b6bfe13a871ddd741c2869a0bc77857de732a5d69afe82d55e63e8791d6a5dfe",
+    "candidate": "결과\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2020_01.parquet",
+    "candidate_sha256": "02010e180e2e4f72938ce5cf2f506e0125cfa60a4a4dc42af1422006ded10c91",
+    "csv_sha256": "539150a805d414344263cc7b70ca84371b25efcef992bff4d59df75f3109661a",
+    "patched_rows": 9
+  },
+  {
+    "base": "데이터\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.parquet",
+    "base_sha256": "4ab5176fe642dff131f2e7e52efc8726aa5ebde28e82acde84196f0828aee413",
+    "candidate": "결과\\시설별\\식료품소매_즉석판매제과\\facilities_식료품소매_즉석판매제과_2025_01.parquet",
+    "candidate_sha256": "7ee0519a215a23121b61d386c72ecb6ebca64fc7b7720f7e572bd511a600d6a8",
+    "csv_sha256": "fa8abacaf1f411223fd730a056d095f791b2373c986e8021e7a2ffff85f0dc19",
+    "patched_rows": 3
+  },
+  {
+    "base": "데이터\\시설별\\약국\\facilities_약국_2020_01.parquet",
+    "base_sha256": "006d5148fe698ba106003d470512c1e321bb4c7c865e41b63de080f44edc2d91",
+    "candidate": "결과\\시설별\\약국\\facilities_약국_2020_01.parquet",
+    "candidate_sha256": "2f6219db5ad2e6ee64c2f46642dc7ddd462ce8b81fa6ef2ea261f03af3fb5a66",
+    "csv_sha256": "67bbec053104347d6c0ee7a8ed89775d2872c42cee8434838146dfda81c905f2",
+    "patched_rows": 2
+  },
+  {
+    "base": "데이터\\시설별\\약국\\facilities_약국_2025_01.parquet",
+    "base_sha256": "2086c78bdb02193cb5e6db7b899771d47c871299a26fae14b02d058f9d9d9eac",
+    "candidate": "결과\\시설별\\약국\\facilities_약국_2025_01.parquet",
+    "candidate_sha256": "7a56bff5e9fc5a6c46adc815e29981b87eec86297524ccf85d70942e0d170bad",
+    "csv_sha256": "00fec541a69b6b6f8475e764d88e19226caca3664550eeaffefc33d9368f6a2d",
+    "patched_rows": 2
+  },
+  {
+    "base": "데이터\\시설별\\어린이집\\facilities_어린이집_2020_01.parquet",
+    "base_sha256": "6014f8b523d4393a5c4758ebdc1e46558dad161f38e6aae633e3a686aff1c0b1",
+    "candidate": "결과\\시설별\\어린이집\\facilities_어린이집_2020_01.parquet",
+    "candidate_sha256": "309ed0321725c154bf095a714a27872f6a0060719b2837fe5b38f3325bca91f8",
+    "csv_sha256": "f982d19b3345446ae759e02b02ba69f42b9ad829ab53020c4386b0d160a6ce86",
+    "patched_rows": 2
+  },
+  {
+    "base": "데이터\\시설별\\어린이집\\facilities_어린이집_2025_01.parquet",
+    "base_sha256": "8f7505b57a67d1a38a7069eed57f618fb34fb40c0c41652bbec8dc8292e3ad35",
+    "candidate": "결과\\시설별\\어린이집\\facilities_어린이집_2025_01.parquet",
+    "candidate_sha256": "bc510d802884170b5625bb07e55e4c300780ee62c23165c5bcc57f63bfab0a16",
+    "csv_sha256": "55077c9d48a1b0cea63d87ae02a9ca4876f3dcd73e402fee27636491c141a2fe",
+    "patched_rows": 2
+  },
+  {
+    "base": "데이터\\시설별\\의원\\facilities_의원_2020_01.parquet",
+    "base_sha256": "702af9b33f12bbcb56d00a673d3bce5b546f0d5b7ddbcc640d8b3f6279502ef5",
+    "candidate": "결과\\시설별\\의원\\facilities_의원_2020_01.parquet",
+    "candidate_sha256": "96af8e3b1d5be71223ccecc04b307d8796cfc80a04f4dfda8c010e430ddb0a57",
+    "csv_sha256": "f896f66a77b60e7cf5d1e31a3eed28a961f85cb2a684af01e91ac2872b5bbfa2",
+    "patched_rows": 5
+  },
+  {
+    "base": "데이터\\시설별\\의원\\facilities_의원_2025_01.parquet",
+    "base_sha256": "8ea6abaa9476bfc2d8fef0e1f6d0f8822ee1c80a4223a395d04aef180eb7f8be",
+    "candidate": "결과\\시설별\\의원\\facilities_의원_2025_01.parquet",
+    "candidate_sha256": "9f8f3625425f19196668c3e7313f7d6d739fda55a7348ed253d832ea5ca8711c",
+    "csv_sha256": "e6fd5a1f84a4a719827c4334de5f501192aa17f33eaab822d041c258483ff9e4",
+    "patched_rows": 3
+  },
+  {
+    "base": "데이터\\시설별\\이용업\\facilities_이용업_2020_01.parquet",
+    "base_sha256": "5dabce55a4d8a19a2edf16dc75742e0eb91920408ac8d39395d4cf496f8aa81f",
+    "candidate": "결과\\시설별\\이용업\\facilities_이용업_2020_01.parquet",
+    "candidate_sha256": "52db25d3bae6051e82abe463b3bc65c2f303ac98afcaf35cec6d68218d932d63",
+    "csv_sha256": "48f8b07d78cc451175a28bcb9f6018b8f517a5011a818e1b00af50343b69149f",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2020_01.parquet",
+    "base_sha256": "5c5f82ac73f0928ab72aedb0cd430dbfdcf6ca3fc5e9990e990f5f28489e9932",
+    "candidate": "결과\\시설별\\일반음식점\\facilities_일반음식점_2020_01.parquet",
+    "candidate_sha256": "1276533aab1b87fc8782069b6cd1f767c046d70d3ecce21384d0d886d6a5265e",
+    "csv_sha256": "f41218840dfa86835660112fda04fe789496581b5e27d5dd220d57568d2ac41d",
+    "patched_rows": 23
+  },
+  {
+    "base": "데이터\\시설별\\일반음식점\\facilities_일반음식점_2025_01.parquet",
+    "base_sha256": "da83c291d10e8964a166f66458206efce1ffe3cb70e573f79679c07794050fc2",
+    "candidate": "결과\\시설별\\일반음식점\\facilities_일반음식점_2025_01.parquet",
+    "candidate_sha256": "ced8910fb5c587bbf8532f2467ce582fa7e6c6905d366ad4cf893170e563624e",
+    "csv_sha256": "15a37a9ca320db6cc25e535aa21d1975ea41ed175999020d7c2b673a076761dd",
+    "patched_rows": 11
+  },
+  {
+    "base": "데이터\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.parquet",
+    "base_sha256": "77946cffee597685cf753e56cd5f7d4e0cab3945fab3fb8a34ec7d8ca3d8a24b",
+    "candidate": "결과\\시설별\\주유소_영업_조건부\\facilities_주유소_영업_조건부_2020_01.parquet",
+    "candidate_sha256": "be7c788507bca13e79fe0916f66f7d23cebced9d627cf7b854c8dfd48ba14303",
+    "csv_sha256": "c4f45e33f39defb2213dd60ba0949b7732f23258478dffa07092c6529a99de7b",
+    "patched_rows": 1
+  },
+  {
+    "base": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.parquet",
+    "base_sha256": "3b20058a088d3bf0c93b64e2c9617f27ca9162600dc3da6845b599062a419ae4",
+    "candidate": "결과\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2020_01.parquet",
+    "candidate_sha256": "55e0be45a4fc3ef54060616a52b589fe89fe22aeb2dd24eac8c0b5e0aba1f0df",
+    "csv_sha256": "7e8472b2fb393c639d6636f26a3a3c9edec8d9a9bd523b3f7db26bd443fa2419",
+    "patched_rows": 8
+  },
+  {
+    "base": "데이터\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.parquet",
+    "base_sha256": "2ccb0a17288747a5bcf89807706d1cbddf94de3cfe67d954921e432910a7723e",
+    "candidate": "결과\\시설별\\체육시설업_조건부\\facilities_체육시설업_조건부_2025_01.parquet",
+    "candidate_sha256": "b94a5b220e2722abc78779989e47238461497777f70083792117d4d23d745365",
+    "csv_sha256": "21ea7e6f489ad98affb8c28df7c4fa3c4dfa37a2d860162a5dcc10ecec943415",
+    "patched_rows": 7
+  },
+  {
+    "base": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.parquet",
+    "base_sha256": "d3a58eaf7376819cf982ad2ffad61c3e857673a53e3d3a354c323161a7849826",
+    "candidate": "결과\\시설별\\휴게음식점\\facilities_휴게음식점_2020_01.parquet",
+    "candidate_sha256": "683ba66eb2922e7fb1c775289866295a931a17c0c47baa65a67193f51b869324",
+    "csv_sha256": "ed333d921707bfb98cdb6c4218dcbfea7213f518bd0a5e9eb0d434e976386794",
+    "patched_rows": 2
+  },
+  {
+    "base": "데이터\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.parquet",
+    "base_sha256": "468ec4f4d55415ba275748549dca14dcb34276845b110b6409cad431b8df6af8",
+    "candidate": "결과\\시설별\\휴게음식점\\facilities_휴게음식점_2025_01.parquet",
+    "candidate_sha256": "9e7a32af0980c3c076acd658bff73c202ae5a60e901066bc7fa9680f00972105",
+    "csv_sha256": "07519e42b72d3650283984f5809bd7ca847e9f77bb0774fb8a7b608dd8d903d7",
+    "patched_rows": 1
+  }
+]

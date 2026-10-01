@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-"""../데이터/시설별(상 32종) + 일상소매(상가정보, 중·조건부) → 접근성 분석용 단일 파일.
+"""../데이터/시설별(활성 31종) + 일상소매(상가정보, 중·조건부) → 접근성 분석용 32종 단일 파일.
+2026-09-29 facility-v1.4: 시설_선택규칙.json에 따라 체육시설업 두 시점만 제외. 원천·역사 채택본은 보존.
 2026-09-25 개정: pandas 버전과 무관하게 문자열 열을 string으로 고정, 중복 키 검사를 실제로 수행(허용: 버스정류장 BUS_15143 2020),
 환경변수 FAC_OVERRIDE_DIR(보정본 시험용)·OUT_DIR(출력 위치) 지원. 실행: python build_분석용.py"""
 import pandas as pd, glob, os
+from facility_selection import SELECTION, excluded
 BASE=os.environ.get('FAC_V1_DIR') or os.path.dirname(os.path.abspath(__file__))   # 구축코드
 PKG=os.path.dirname(BASE)                                                        # 시설데이터_패키지
 OV=os.environ.get('FAC_OVERRIDE_DIR','')
@@ -36,6 +38,7 @@ for d0 in sorted(glob.glob(os.path.join(T,'*'))):
     k=os.path.basename(d0)
     if k not in NAME: continue
     for y in ['2020','2025']:
+        if excluded(k, y): continue
         fs=glob.glob(os.path.join(OV,k,f'facilities_*_{y}_01.parquet')) if OV else []
         fs=fs or glob.glob(os.path.join(d0,f'facilities_*_{y}_01.parquet')); assert len(fs)==1,(k,y,fs); d=pd.read_parquet(fs[0])
         d=d[[c for c in KEEP if c in d.columns]].copy(); d['시설']=NAME[k]; d['신뢰도']=REL.get(k,'상'); d['year']=int(y); L.append(d)
@@ -43,6 +46,8 @@ for y in ['2020','2025']:
     d=pd.read_parquet(os.path.join(BASE,'03_교육교통공원상가','retail_daily',f'facilities_retail_daily_{y}_01.parquet'))
     d=d[[c for c in KEEP if c in d.columns]].copy(); d['시설']='일상소매'; d['신뢰도']='중(조건부 채택)'; d['year']=int(y); L.append(d)
 a=pd.concat(L,ignore_index=True)
+assert a['시설'].nunique() == SELECTION['expected_analysis_types']
+assert not a['시설'].isin([item['analysis_facility'] for item in SELECTION['excluded']]).any()
 for c in ['lon','lat','x_5179','y_5179']: a[c]=pd.to_numeric(a[c],errors='coerce')
 a['기준일']=a.year.map({2020:'2019-12-31',2025:'2024-12-31'})
 t=a.apply(lambda r: tier(r['시설'],r['facility_subtype']),axis=1,result_type='expand'); a['국가기준_구분'],a['국가기준_시설'],a['국가기준_접근시간']=t[0],t[1],t[2]

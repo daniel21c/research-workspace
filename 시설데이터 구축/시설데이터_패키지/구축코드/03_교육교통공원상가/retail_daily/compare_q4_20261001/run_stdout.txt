@@ -1,0 +1,192 @@
+20191231 2348652 473267 26494
+20201231 2474574 494343 28009
+20241231 2792838 553535 29063
+20251231 2691376 534978 27947
+{
+ "20191231": {
+  "files": 17,
+  "nation_rows": 2348652,
+  "seoul_rows": 473267,
+  "seoul_retail9": 26494,
+  "dup_id_nation": 0,
+  "coord_rate_seoul": 1.0,
+  "large_codes": [
+   "G2",
+   "I1",
+   "I2",
+   "L1",
+   "M1",
+   "N1",
+   "P1",
+   "Q1",
+   "R1",
+   "S2"
+  ],
+  "id_issue_after_ref_nation": 2348652,
+  "id_issue_after_ref_seoul9": 26494,
+  "id_nonbulk_seoul9": 1440,
+  "id_issue_top_seoul9": {
+   "202208": 21193,
+   "202410": 3861,
+   "202201": 297,
+   "202408": 260,
+   "202409": 209,
+   "202406": 137,
+   "202301": 75,
+   "202411": 68
+  },
+  "id_issue_max_nation": "202509"
+ },
+ "20201231": {
+  "files": 17,
+  "nation_rows": 2474574,
+  "seoul_rows": 494343,
+  "seoul_retail9": 28009,
+  "dup_id_nation": 0,
+  "coord_rate_seoul": 1.0,
+  "large_codes": [
+   "G2",
+   "I1",
+   "I2",
+   "L1",
+   "M1",
+   "N1",
+   "P1",
+   "Q1",
+   "R1",
+   "S2"
+  ],
+  "id_issue_after_ref_nation": 2474574,
+  "id_issue_after_ref_seoul9": 28009,
+  "id_nonbulk_seoul9": 1708,
+  "id_issue_top_seoul9": {
+   "202208": 22440,
+   "202410": 3861,
+   "202201": 445,
+   "202408": 261,
+   "202409": 213,
+   "202406": 142,
+   "202207": 102,
+   "202301": 75
+  },
+  "id_issue_max_nation": "202509"
+ },
+ "20241231": {
+  "files": 17,
+  "nation_rows": 2792838,
+  "seoul_rows": 553535,
+  "seoul_retail9": 29063,
+  "dup_id_nation": 0,
+  "coord_rate_seoul": 1.0,
+  "large_codes": [
+   "G2",
+   "I1",
+   "I2",
+   "L1",
+   "M1",
+   "N1",
+   "P1",
+   "Q1",
+   "R1",
+   "S2"
+  ],
+  "id_issue_after_ref_nation": 0,
+  "id_issue_after_ref_seoul9": 0,
+  "id_nonbulk_seoul9": 7168,
+  "id_issue_top_seoul9": {
+   "202208": 15981,
+   "202410": 5914,
+   "202406": 1867,
+   "202409": 785,
+   "202411": 528,
+   "202305": 504,
+   "202301": 338,
+   "202211": 282
+  },
+  "id_issue_max_nation": "202411"
+ },
+ "20251231": {
+  "files": 17,
+  "nation_rows": 2691376,
+  "seoul_rows": 534978,
+  "seoul_retail9": 27947,
+  "dup_id_nation": 0,
+  "coord_rate_seoul": 1.0,
+  "large_codes": [
+   "G2",
+   "I1",
+   "I2",
+   "L1",
+   "M1",
+   "N1",
+   "P1",
+   "Q1",
+   "R1",
+   "S2"
+  ],
+  "id_issue_after_ref_nation": 0,
+  "id_issue_after_ref_seoul9": 0,
+  "id_nonbulk_seoul9": 8862,
+  "id_issue_top_seoul9": {
+   "202208": 15478,
+   "202410": 3607,
+   "202406": 1567,
+   "202409": 834,
+   "202305": 473,
+   "202411": 457,
+   "202201": 350,
+   "202502": 319
+  },
+  "id_issue_max_nation": "202511"
+ },
+ "existing": {
+  "2020": 26494,
+  "2025": 29063
+ },
+ "existing_matches_release": {
+  "2020_vs_20191231": true,
+  "2025_vs_20241231": true
+ },
+ "id_overlap": [
+  {
+   "a": "20191231",
+   "b": "20201231",
+   "n_a": 26494,
+   "n_b": 28009,
+   "common": 23661,
+   "only_a": 2833,
+   "only_b": 4348,
+   "jaccard": 0.7672
+  },
+  {
+   "a": "20241231",
+   "b": "20251231",
+   "n_a": 29063,
+   "n_b": 27947,
+   "common": 22866,
+   "only_a": 6197,
+   "only_b": 5081,
+   "jaccard": 0.6697
+  },
+  {
+   "a": "20201231",
+   "b": "20251231",
+   "n_a": 28009,
+   "n_b": 27947,
+   "common": 16080,
+   "only_a": 11929,
+   "only_b": 11867,
+   "jaccard": 0.4033
+  },
+  {
+   "a": "20191231",
+   "b": "20241231",
+   "n_a": 26494,
+   "n_b": 29063,
+   "common": 15036,
+   "only_a": 11458,
+   "only_b": 14027,
+   "jaccard": 0.3711
+  }
+ ]
+}

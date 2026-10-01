@@ -1,0 +1,18 @@
+{
+  "release": "facility-v1.4",
+  "PASS": true,
+  "verified_at_utc": "2026-09-29T07:27:33.449215+00:00",
+  "sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+  "rows": 584766,
+  "canonical_hashes_verified": true,
+  "adopted_input_files_verified": 130,
+  "offline_rebuild_hashes_exact": true,
+  "historical_comparison_performed_this_run": false,
+  "historical_evidence_verified": true,
+  "historical_evidence_path": "cleanup_20260929/historical_evidence.json",
+  "historical_comparison_observed_at_utc": "2026-09-29T07:21:27.627502+00:00",
+  "old_generated_files_state": "authorized_deletion_with_sealed_history",
+  "deletion_receipt_verified": true,
+  "deletion_receipt_path": "cleanup_20260929/deletion_receipt.json",
+  "note": "Fresh checks cover current v1.4 hashes and offline reproduction. After authorized deletion, exact v1.3 comparison is preserved historical evidence, not rerun."
+}

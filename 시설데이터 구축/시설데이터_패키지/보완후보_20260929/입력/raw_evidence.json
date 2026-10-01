@@ -1,0 +1,104 @@
+{
+  "large_scale_retail_stores_seoul_OA-16096.csv": {
+    "matched_rows": 2,
+    "rows": 2,
+    "sha256": "de45c331261c7f7cc4be3677f586f965d48135d3f1b2ee2065995a609fac56d7",
+    "path": "구축코드\\01_인허가\\대규모점포\\raw\\large_scale_retail_stores_seoul_OA-16096.csv"
+  },
+  "public_baths_seoul_OA-16146.csv": {
+    "matched_rows": 2,
+    "rows": 2,
+    "sha256": "6d304d8c32dc197c3bb004ca4f062e6b1da935e23e208e1094a8fa93972ca40d",
+    "path": "구축코드\\01_인허가\\목욕장업\\raw\\public_baths_seoul_OA-16146.csv"
+  },
+  "beauty_salons_seoul_OA-16063.csv": {
+    "matched_rows": 45,
+    "rows": 45,
+    "sha256": "a339341547888bfe766a6ff1e0835e2ca83ad32c3268f823c990fe8eac88a731",
+    "path": "구축코드\\01_인허가\\미용업\\raw\\beauty_salons_seoul_OA-16063.csv"
+  },
+  "laundries_seoul_OA-16065.csv": {
+    "matched_rows": 30,
+    "rows": 30,
+    "sha256": "a3512cee371c2fc491684b92ee029b0e42944c663a2df5f8c01b6431434aa4ea",
+    "path": "구축코드\\01_인허가\\세탁업\\raw\\laundries_seoul_OA-16065.csv"
+  },
+  "bakeries_seoul_OA-16084.csv": {
+    "matched_rows": 45,
+    "rows": 45,
+    "sha256": "4f85c3332b2d466653241fcf45c5d80174dee921e4c787bd5613606e127d5999",
+    "path": "구축코드\\01_인허가\\식료품소매\\raw\\bakeries_seoul_OA-16084.csv"
+  },
+  "instant_food_processors_seoul_OA-16085.csv": {
+    "matched_rows": 97,
+    "rows": 97,
+    "sha256": "7b592a0c977dbf5d6a5e7eea76ee67bbf9b39748e30663d37915c7bea0620e4c",
+    "path": "구축코드\\01_인허가\\식료품소매\\raw\\instant_food_processors_seoul_OA-16085.csv"
+  },
+  "pharmacies_seoul_OA-16484.csv": {
+    "matched_rows": 6,
+    "rows": 6,
+    "sha256": "8cfbf9d503bd67a502e7a87f6b9282d66ddc473c8d0aaf1d32f6499884438e31",
+    "path": "구축코드\\01_인허가\\약국\\raw\\pharmacies_seoul_OA-16484.csv"
+  },
+  "clinics_seoul_OA-16480.csv": {
+    "matched_rows": 24,
+    "rows": 24,
+    "sha256": "2acc12adc4fb4023b2a5c6197df69e9e6924164c769ea7cc5faf3ff07b380647",
+    "path": "구축코드\\01_인허가\\의원\\raw\\clinics_seoul_OA-16480.csv"
+  },
+  "barber_shops_seoul_OA-16064.csv": {
+    "matched_rows": 26,
+    "rows": 26,
+    "sha256": "e5bd223d6c83b60a98042d05b911ab2ef9935b57eb3fbfd123f239f09f17c5ba",
+    "path": "구축코드\\01_인허가\\이용업\\raw\\barber_shops_seoul_OA-16064.csv"
+  },
+  "general_restaurants_seoul_OA-16094.csv": {
+    "matched_rows": 1831,
+    "rows": 1831,
+    "sha256": "b4c88410eb36b48db42185f53e33747ed4ee39dd54908afeb6929251ac4dff62",
+    "path": "구축코드\\01_인허가\\일반음식점\\raw\\general_restaurants_seoul_OA-16094.csv"
+  },
+  "oil_retailers_seoul_OA-16110.csv": {
+    "matched_rows": 7,
+    "rows": 7,
+    "sha256": "989174fe3c249c98aaa77dcd047a599f9688a5b874a274354b071693fa006062",
+    "path": "구축코드\\01_인허가\\주유소\\raw\\oil_retailers_seoul_OA-16110.csv"
+  },
+  "billiard_halls_seoul_OA-16133.csv": {
+    "matched_rows": 64,
+    "rows": 64,
+    "sha256": "4b3c0a4983d8bd9199802c8847561e92c9c46cd515a00e11cc05cc71d06bbe08",
+    "path": "구축코드\\01_인허가\\체육시설업\\raw\\billiard_halls_seoul_OA-16133.csv"
+  },
+  "fitness_centers_seoul_OA-16142.csv": {
+    "matched_rows": 23,
+    "rows": 23,
+    "sha256": "4770fe0fa0b58b0e65471250349c8a571ac5f5c761c0c543e8e23875a2dffd26",
+    "path": "구축코드\\01_인허가\\체육시설업\\raw\\fitness_centers_seoul_OA-16142.csv"
+  },
+  "golf_practice_ranges_seoul_OA-16131.csv": {
+    "matched_rows": 21,
+    "rows": 21,
+    "sha256": "a5de972e504a1f725d0987e8464fbf6cc3fef14a8016cb3e791c3686a20b5873",
+    "path": "구축코드\\01_인허가\\체육시설업\\raw\\golf_practice_ranges_seoul_OA-16131.csv"
+  },
+  "martial_arts_dojo_seoul_OA-16141.csv": {
+    "matched_rows": 25,
+    "rows": 25,
+    "sha256": "8400444971dd7e603703d97855b023346e0e9420a1fc3de078310842a6a35111",
+    "path": "구축코드\\01_인허가\\체육시설업\\raw\\martial_arts_dojo_seoul_OA-16141.csv"
+  },
+  "swimming_pools_seoul_OA-16137.csv": {
+    "matched_rows": 2,
+    "rows": 2,
+    "sha256": "875354d9f90ea766cf9f2f5a05e357e823185bac60cbdaa826d237bc6a403956",
+    "path": "구축코드\\01_인허가\\체육시설업\\raw\\swimming_pools_seoul_OA-16137.csv"
+  },
+  "rest_cafes_seoul_OA-16095.csv": {
+    "matched_rows": 653,
+    "rows": 653,
+    "sha256": "90126b09e5d1c1d82b37b0b21695cb7888ff7b6a889b733c39ab83e7e231bfee",
+    "path": "구축코드\\01_인허가\\휴게음식점\\raw\\rest_cafes_seoul_OA-16095.csv"
+  }
+}

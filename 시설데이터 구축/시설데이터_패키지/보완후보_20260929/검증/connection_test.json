@@ -1,0 +1,12 @@
+{
+  "kakao": {
+    "credential_present": true,
+    "status": "200",
+    "exact_match": true
+  },
+  "vworld": {
+    "credential_present": true,
+    "status": "200",
+    "exact_match": true
+  }
+}

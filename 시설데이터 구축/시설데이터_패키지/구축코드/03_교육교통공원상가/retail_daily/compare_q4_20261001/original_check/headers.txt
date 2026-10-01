@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Thu, 01 Oct 2026 04:10:58 GMT
+Server: Apache
+Expires: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Set-Cookie: JSESSIONID=9pWYZIbXJmmPLW7wQ__-3jfWygbfFtErvXV4LqSr.portal21; path=/
+X-XSS-Protection: 1; mode=block
+Pragma: no-cache
+X-Frame-Options: DENY
+Content-Disposition: attachment; filename="소상공인시장진흥공단_상가업소정보_의료기관_201909.zip"
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Content-Length: 8458546
+Content-Type: application/octet-stream; charset=UTF-8
+

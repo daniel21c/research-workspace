@@ -20,3 +20,11 @@
 !시설데이터_패키지/구축코드/12_무결성보정/*.csv
 !시설데이터_패키지/구축코드/12_무결성보정/근거/*.csv
 !시설데이터_패키지/구축코드/12_무결성보정/지오코딩_표본시험/*.csv
+# 행 단위 기록(주소·시설명이 행마다 든 json 데이터)은 추적하지 않음 (2026-10-02)
+**/prepared_records.json
+**/null_records.json
+**/queries.json
+**/unresolved*.json
+**/parser_cache_evidence.json
+**/parser_provenance_rows.json
+**/parser_risk_rows.json

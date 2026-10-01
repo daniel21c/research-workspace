@@ -1,0 +1,14 @@
+{
+  "release": "facility-v1.4",
+  "previous_release": "facility-v1.3",
+  "previous_analysis_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+  "excluded": [{"adopted_folder": "체육시설업_조건부", "analysis_facility": "체육시설업", "years": [2020, 2025]}],
+  "expected_analysis_types": 32,
+  "expected_integrated_types": 31,
+  "functional_categories": ["교육", "돌봄·복지", "의료", "문화", "행정·안전", "소매", "생활서비스"],
+  "main_facility_types": 27,
+  "control_facility_types": 5,
+  "replacement_public_sports": false,
+  "reason": "현재 취소·말소 상태에 따른 과거 운영후보 제외 규칙의 역사비교 목적 충돌. 사용자가 체육시설업 전체를 두 시점 분석에서 제외하기로 결정.",
+  "interpretation": "기존 필터 제외후보 기록 수는 실제 누락 시설 수나 결과 영향으로 해석하지 않는다. 공공시설 시점은 인접시점 대리 가정이며 정확한 과거 검증이 아니다. 소매 과거 원배포본은 요청 중이고 미입수이므로 기존 소매를 유지한다."
+}

@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""../데이터/시설별/ 32개 시설 폴더(신뢰도 상; 일상소매 제외) → ../데이터/통합_신뢰도상_2020_2025.parquet (csv 사본은 OUT_CSV=1일 때만)
+"""../데이터/시설별/ 중 선택규칙에 따른 활성 31종(일상소매 제외) → ../데이터/통합_신뢰도상_2020_2025.parquet (csv 사본은 OUT_CSV=1일 때만)
 공통 20열 + '시설'(폴더 이름). 규모변수 sz_*와 시설별 추가 열은 개별 파일 참조.
 환경변수 FAC_OVERRIDE_DIR가 있으면 그 아래 같은 상대경로 파일을 우선 사용(보정본 시험용). OUT_DIR로 출력 위치 변경.
 실행: python build_통합.py"""
 import os, glob
 import pandas as pd
+from facility_selection import SELECTION, excluded
 
 PKG = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # 시설데이터_패키지
 T = os.environ.get('FAC_T_DIR') or os.path.join(PKG, '데이터', '시설별')
@@ -27,9 +28,11 @@ for d0 in sorted(glob.glob(os.path.join(T, '*'))):
     k = os.path.basename(d0)
     if not os.path.isdir(d0) or k.startswith('_'): continue
     for y in ['2020', '2025']:
+        if excluded(k, y): continue
         d = pd.read_parquet(pick(k, y))
         d = d[[c for c in COLS if c in d.columns]].copy(); d['시설'] = k; L.append(d)
 a = pd.concat(L, ignore_index=True)
+assert a['시설'].nunique() == SELECTION['expected_integrated_types']
 for c in ['lon', 'lat', 'x_5179', 'y_5179']: a[c] = pd.to_numeric(a[c], errors='coerce')
 a['inside_seoul'] = a.inside_seoul.astype(str).isin(['True', '1', 'true'])
 for c in a.columns:
