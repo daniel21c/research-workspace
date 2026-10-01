@@ -1,0 +1,78 @@
+K05 ||| 12 ||| 가;나 ||| 생활권계획은 신도시의 주거지계획에 적용되는 개념에서부터 하나의 생활권 내에서 인구와 공공서비스시설을 적정하게 배치하는 도시 차원에 이르기까지 폭넓게 사용되고 있다. |||
+K05 ||| 12 ||| 나 ||| 현행 「도시·군 기본계획 수립지침」은 2014년 개정된 이후 ‘생활권계획’에 대해 ‘도시기본계획의 부문별 계획 중 하나로, 전체 도시기본계획의 내용을 생활권별로 상세화한 계획’으로 정의하고 있다. ||| (수립지침 인용)
+K05 ||| 13 ||| 바 ||| 생활권은 사전적으로 ‘행정구역과는 관계없이 통학이나 통근, 쇼핑, 오락 따위의 일상생활을 하느라고 활동하는 범위’로 정의된다. |||
+K05 ||| 13 ||| 바;마 ||| 생활권계획에서의 핵심은 ‘지역주민들이 하나의 생활권으로 인식하는 공간범위가 어느 정도인가’ 하는 점인데, 이에 대해 주거지계획에서는 근린주구이론, 일상생활권, 어번 빌리지(Urban Village) 등의 외국 이론들을 적용해 왔다. |||
+K05 ||| 14 ||| 바 ||| 일상생활권은 주민의 일상생활활동(통학, 사교모임, 근린공공서비스, 장보기 등)이 이루어지는 범위로 1개 이상의 읍·면·동 규모를 가지며 모든 도시에 적용 가능하다. ||| (수립지침 2021 요약 인용)
+K05 ||| 15 ||| 가;나;다 ||| 2000년대 이전까지는 생활권계획을 통해 인구배분계획, 기능 및 시설배치계획을 수립하는 데 중점을 두었으며, 2000년대 이후에는 도시계획의 목표인 ‘삶의 질 향상’을 위해 지역주민이 바라는 지역상을 제시하는 계획의 역할이 강조되고 있다. |||
+K05 ||| 15 ||| 나;마 ||| 셋째, 자치구 발전계획 및 자치구 간 상생발전을 위한 근거로 자치구 도시관리계획을 결정하고 관련 사업을 시행하거나 예산을 지원하는 데 근거가 되는 플랫폼 역할을 할 수 있다. ||| (2030 서울도시기본계획 2014 요약 인용)
+K05 ||| 15 ||| 나 ||| 최근에는 생활권계획을 통해 공공정책이나 사회적 이슈를 지역 현안과 연결하여 중단기적 해결 방향과 대안을 제시하는 등 보다 종합적인 성격을 갖는 계획으로 접근하고 있다. |||
+K05 ||| 53 ||| 가 ||| 이는 도심 내에 집중해 있는 단핵적 도시기능과 공간구조를 다핵화하고, 소생활권을 형성하여 생활편익시설과 공공서비스를 균형 있게 공급하기 위한 것이었다. ||| (1978 서울 도시기본계획안·1980 장기구상 요약)
+K05 ||| 53 ||| 가 ||| 계층적 권역은 대·중·소생활권으로 구분되며, 자족적·독립적으로 생활할 수 있도록 생활권별로 필요한 기능(시설)을 적정하게 배치하도록 하였다. |||
+K05 ||| 53 ||| 나 ||| 서울은 이미 하나의 도시기본계획으로 관리하기엔 너무 비대해졌으며, 지역마다 다양한 성장패턴과 공간구조적 특성을 고려할 필요가 있었다. |||
+K05 ||| 54 ||| 나;마 ||| 서울의 기본구상을 주민의 입장에서 효율적으로 개발‧유도하고, 각 생활권의 특성을 살리면서 상위계획과 조화를 이루기 위한 주민 생활권단위의 개발계획이 필요하게 되었다 ||| (1981 관악구 도시기본계획 6쪽 직접 인용)
+K05 ||| 54 ||| 가;나;바 ||| 도시민의 기초활동 범위인 소생활권을 기본단위로 하여 생활환경 개선과 편익시설의 적정 배치 등 구단위로 실행해야 하는 도시계획사업 및 도시시설 결정을 위한 지침 역할을 수행한다. |||
+K05 ||| 62 ||| 마 ||| 근린생활권에서는 시설배치 이상으로 주민 간 사회적 유대를 통한 동네의식 고취를 강조하였다. ||| (1981 관악구 도시기본계획 요약)
+K05 ||| 62 ||| 가;나;바 ||| 생활권계획에서는 구민들의 효율적인 생활편익시설 이용을 도모하고 불필요한 교통유발을 억제하며, 공공시설과 도시편익시설의 효율적 배치를 위해 관악구를 7개 중생활권과 25개 소생활권으로 구분하였다. ||| (1981 관악구 도시기본계획 34~35쪽 요약)
+K05 ||| 62 ||| 나 ||| 인구 50만의 대생활권이란 서울시가 지향하는 다핵도시체계로의 전환을 위하여 부도심 형성을 유도하기 위한 구분이므로, 관악구의 행정구역 전체를 하나의 대생활권으로 간주하였다. |||
+K05 ||| 113 ||| 나;가 ||| 생활권 단위의 도시관리가 필요한 지자체는 권역 내 개발방향, 생활 인프라 구축 계획, 밀도·높이 관리방안 등 생활권 중심 도시발전을 위한 생활권 도시계획을 수립할 것으로 전망된다. ||| (국토교통부 2023.1.5 도시계획 혁신방안 8쪽 요약 인용)
+K05 ||| 115 ||| 나;가;마 ||| 이를 위해서는 생활권계획이 ‘도시관리계획을 보다 적극적으로 가이드’할 수 있도록 역할을 설정하고, 중심지, 생활SOC, 주거지관리 및 가로활성화, 지역특화와 관련된 내용을 대폭 강화할 필요가 있다. |||
+K05 ||| 115 ||| 나 ||| 또한 생활권계획을 ‘자치구 도시계획 입안·결정의 준거 틀’로 활용하도록 해야 한다. |||
+K05 ||| 115 ||| 다;마 ||| 생활권계획을 통해 서울시와 자치구가 지역 발전방향을 공유하고, 계획의 목표와 전략을 협력적으로 실현해 나가는 방안을 마련해야 할 것이다. |||
+F01 ||| 24 ||| 가;라 ||| The complete (or 20-minute) neighborhoods index tracks access to services and amenities, such as grocery stores, parks, sidewalks and many more things, across the city. ||| 완전한(20분) 근린 지수는 식료품점·공원·보도 등 서비스·편의시설에 대한 접근을 도시 전역에서 추적한다.
+F01 ||| 14 ||| 가;바;마 ||| Promote complete and vibrant neighborhood centers. Our neighborhoods must provide businesses and services; housing that is easily accessible by foot, wheelchair, bike and transit; healthy food; and parks and other gathering places. ||| 완전하고 활기찬 근린중심을 촉진한다. 근린은 상업·서비스, 도보·휠체어·자전거·대중교통으로 쉽게 접근하는 주택, 건강한 식품, 공원과 모임 장소를 갖춰야 한다.
+F01 ||| 12-13 ||| 가;나 ||| Support strong, vibrant and complete neighborhood centers through land use, community economic development, and housing, infrastructure and technology investments. ||| 토지이용, 지역경제개발, 주택·인프라·기술 투자를 통해 강하고 활기찬 완전한 근린중심을 지원한다.
+F02 ||| 4 ||| 마;바 ||| 地方の中心都市を核とした市町村界にとらわれない新たな発想からの地域生活圏の形成 ||| 지방 중심도시를 핵으로, 시정촌 경계에 얽매이지 않는 새로운 발상의 지역생활권 형성.
+F02 ||| 4 ||| 마;바 ||| 生活圏人口１０万人程度以上を一つの目安として想定した地域づくり（地域の生活・経済の実態に即した市町村界にとらわれない地域間の連携・補完） ||| 생활권 인구 10만 명 정도 이상을 하나의 기준으로 상정한 지역 만들기(지역의 생활·경제 실태에 맞춰 시정촌 경계에 얽매이지 않는 지역 간 연계·보완).
+F02 ||| 4 ||| 나;마 ||| 「共」の視点からの地域経営（サービス・活動を「兼ねる、束ねる、繋げる」発想への転換） ||| '공(共)'의 관점에서의 지역 경영(서비스·활동을 '겸하고, 묶고, 잇는' 발상으로 전환).
+F02 ||| 4 ||| 마 ||| 生活に身近な地域コミュニティの再生（小さな拠点を核とした集落生活圏の形成、都市コミュニティの再生） ||| 생활에 가까운 지역 커뮤니티의 재생(작은 거점을 핵으로 한 취락생활권 형성, 도시 커뮤니티 재생).
+F02 ||| 8 ||| 바;다;마 ||| エリアは、地域の文化的・自然的特性を活かしつつ、生活・経済の実態に即して地域が主体的にデザイン ||| 권역은 지역의 문화적·자연적 특성을 살리면서 생활·경제 실태에 맞춰 지역이 주체적으로 설계한다.
+F02 ||| 8 ||| 가 ||| 「地方の豊かさ」と「都市の利便性」の融合 → 全国どこでも誰もが便利で快適に暮らせる社会 ||| '지방의 풍요'와 '도시의 편리성'의 융합 → 전국 어디서나 누구나 편리하고 쾌적하게 살 수 있는 사회.
+F02 ||| 9 ||| 가;나;바 ||| 生活者や利用者などサービス需要側の視点に立って、利便性を最適化できるよう、地域の生活・経済の実態に応じて、効率的・持続的なサービス提供を実現するための官民のパートナーシップを構築していく必要。 ||| 생활자·이용자 등 서비스 수요 측 관점에서 편리성을 최적화할 수 있도록, 지역의 생활·경제 실태에 따라 효율적·지속적 서비스 제공을 실현하는 관민 파트너십을 구축할 필요.
+F02 ||| 9 ||| 나 ||| 地域課題の解決に資する公共性の高い生活サービスの提供において、民間の力を最大限に活用する仕組みを構築。 ||| 지역과제 해결에 기여하는 공공성 높은 생활서비스 제공에서 민간의 힘을 최대한 활용하는 구조를 구축.
+F03 ||| 1 ||| 가;나;마 ||| 人口が減少する中でも、医療・福祉・子育て支援・商業等の都市機能を都市の中心拠点や生活拠点に誘導しつつ、その周辺や公共交通の沿線に居住を誘導し、生活サービスへのアクセスを確保しながら一定のエリアにおいて人口密度を維持することにより、生活サービスやコミュニティの持続性が高まると考えられます。 ||| 인구가 줄어도 의료·복지·육아지원·상업 등 도시기능을 중심거점·생활거점에 유도하고 그 주변과 대중교통 연선에 거주를 유도해, 생활서비스 접근을 확보하면서 일정 구역의 인구밀도를 유지하면 생활서비스와 커뮤니티의 지속성이 높아진다.
+F03 ||| 1 ||| 나;가 ||| 拡散した市街地のままで人口が減少し居住が低密度化すれば、一定の人口密度に支えられてきた医療・福祉・子育て支援・商業等の生活サービス（都市機能）は密度の経済性が発揮されにくくなり、将来的にそれらサービスの提供が困難になりかねない状況にあります。 ||| 확산된 시가지 그대로 인구가 줄고 저밀화되면 일정 인구밀도에 의존해 온 생활서비스는 밀도의 경제성을 잃어 장래 서비스 제공이 어려워질 수 있다.
+F03 ||| 1 ||| 나 ||| 行政サービスについては、人口密度が高い都市ほど一人あたりの歳出が低下するなど、効率的である傾向があります。 ||| 행정서비스는 인구밀도가 높은 도시일수록 1인당 세출이 낮아지는 등 효율적인 경향이 있다.
+F03 ||| 3 ||| 나 ||| 将来の都市像を明示し、財政・金融・税制等の経済的なインセンティブにより、計画的な時間軸の中で誘導による都市構造の再編を図ることが重要となっています。 ||| 장래 도시상을 명시하고 재정·금융·세제 등 경제적 인센티브로 계획적 시간축 안에서 유도에 의한 도시구조 재편을 도모하는 것이 중요하다.
+F03 ||| 3 ||| 나;라;바 ||| 立地適正化計画においては、人口、土地利用や交通の現状及び将来の見通しを勘案しながら、都市計画区域の中でも特に居住を誘導して人口密度を一定以上に維持する居住誘導区域と都市機能の誘導を図る都市機能誘導区域を設定するとともに、その誘導のために講ずべき施策等を定めることとしています。 ||| 인구·토지이용·교통의 현황과 전망을 감안해 거주유도구역과 도시기능유도구역을 설정하고 유도 시책을 정한다.
+F03 ||| 3 ||| 나 ||| 立地適正化計画は、既存の土地利用規制に重ねる形で居住や都市機能を誘導する区域を即地的に定めることができ、また、都市計画制度と財政・金融・税制等による支援措置とを結びつける役割も果たすことができるものであり ||| 입지적정화계획은 기존 토지이용규제 위에 유도구역을 즉지적으로 정할 수 있고, 도시계획제도와 재정·금융·세제 지원을 연결하는 역할을 한다.
+F03 ||| 5 ||| 라 ||| 立地適正化計画は「作成して終わり」ではなく、施策の効果や実効性を不断に検証し、評価結果を踏まえ適切な見直しを行う動的な運用が求められる制度であり、適切にPDCAサイクルを回していく必要があります。 ||| 입지적정화계획은 '만들고 끝'이 아니라 시책 효과와 실효성을 끊임없이 검증하고 평가 결과에 따라 재검토하는 동적 운용(PDCA)이 요구되는 제도다.
+F03 ||| 10 ||| 나 ||| 立地適正化計画の作成により、市町村のまちづくりに関する将来像の明確化が図られます。 ||| 계획 작성으로 시정촌 마을만들기의 장래상이 명확해진다.
+F04 ||| 1 ||| 가;바 ||| En France, les bassins de vie sont définis comme les plus petits territoires au sein desquels les habitants ont accès aux équipements et services les plus courants. ||| 프랑스에서 생활분지는 주민이 가장 흔한 시설·서비스에 접근할 수 있는 가장 작은 영역으로 정의된다.
+F04 ||| 1 ||| 바 ||| C’est dans ces contours que s’organise une grande partie du quotidien des habitants. ||| 주민 일상의 대부분이 이 경계 안에서 조직된다.
+F04 ||| 4 ||| 가;라 ||| Cette gamme d’équipement a été retenue car elle n’est pas présente sur tout le territoire et a donc un rôle plus structurant. ||| 이 (중간) 시설군은 전국에 고르게 있지 않아 공간을 구조화하는 역할이 크므로 기준으로 선택했다.
+F04 ||| 4 ||| 바 ||| Les zones d’influence de chaque pôle de services sont ensuite délimitées en regroupant les communes les plus proches, la proximité se mesurant en temps de trajet, par la route à heure creuse. ||| 각 서비스 거점의 영향권은 가장 가까운 코뮌을 묶어 정하며, 근접성은 비혼잡 시간대 도로 이동시간으로 측정한다.
+F04 ||| 4 ||| 라;가 ||| Par rapport au zonage en aires urbaines qui mesure l’influence des villes sur la base des déplacements entre domicile et travail, le zonage en bassins de vie apporte un complément à travers l’analyse de la répartition des équipements et de leur accès. ||| 통근 기반 도시권 구획과 달리 생활분지 구획은 시설 분포와 접근의 분석으로 보완한다.
+F04 ||| 4 ||| 라 ||| Son principal intérêt est de décrire les espaces non fortement peuplés, c’est-à-dire les bassins de vie construits sur des unités urbaines de moins de 50 000 habitants. ||| 주된 유용성은 인구 5만 미만 도시단위에 기반한 저밀 공간을 기술하는 데 있다.
+F05 ||| 1 ||| 다 ||| Challenge from local communities to proposals for housing and economic development within their neighbourhoods is partly related to communities' lack of opportunity to help shape the development. ||| 주택·경제개발 제안에 대한 지역사회의 반발은 개발 방향 형성에 참여할 기회가 없었던 데 일부 기인한다.
+F05 ||| 1 ||| 다 ||| The Localism Act empowers local communities to take responsibility for the development of planning policy for their neighbourhood through a Neighbourhood Plan ||| 지역주의법은 지역사회가 근린계획을 통해 자기 근린의 계획정책을 스스로 책임지도록 권한을 준다.
+F05 ||| 1 ||| 다;나 ||| The empowerment of neighbourhood communities coupled with a share in the benefits of development through a meaningful share of the Community Infrastructure Levy can encourage community ownership of plans and their deliverability. ||| 근린 공동체의 권한 부여와 개발이익(기반시설부담금) 배분은 계획의 주인의식과 실행가능성을 높인다.
+F05 ||| 1 ||| 다;가;나 ||| This will help communities to become proponents of appropriate and necessary housing and economic growth and could lead to: i) development that is more in line with local needs and provides greater public amenity; and ii) increased civic engagement and a move towards the ‘Big Society’. iii) more certainty for applicants and local residents; ||| 지역 수요에 맞고 공공 편의를 늘리는 개발, 시민 참여 증가, 신청자·주민의 확실성 증가로 이어질 수 있다.
+F05 ||| 3 ||| 다 ||| Localism is intended to enable communities to find their own ways of overcoming the tensions between development and conservation, environmental quality and pressure on services. ||| 지역주의는 개발과 보전, 환경질, 서비스 압박 사이의 긴장을 공동체가 스스로 풀도록 하는 것이 목적이다.
+F05 ||| 4 ||| 다 ||| Neighbourhood planning aims to give people greater ownership of plans and policies that affect their local area. ||| 근린계획은 자기 지역에 영향을 주는 계획·정책에 대한 주민의 주인의식을 높이는 것을 목표로 한다.
+F05 ||| 4 ||| 나;다 ||| A strengthened plan-led system supported by the community is intended to increase certainty for applicants and also residents who otherwise would be worried by the threat of speculative development. ||| 공동체가 뒷받침하는 계획주도 체계는 신청자와 주민에게 확실성을 높이려는 것이다.
+F05 ||| 4 ||| 나 ||| Neighbourhood planning aims to support the rate of growth of housing and economic development in England. ||| 근린계획은 잉글랜드의 주택·경제개발 성장률을 뒷받침하는 것을 목표로 한다.
+F06 ||| 1 ||| 다;나 ||| 住民自治の充実の観点から、区を設け、住民の意見をとりまとめる地域協議会と住民に身近な事務を処理する事務所を置くもの。 ||| 주민자치 충실의 관점에서 구를 두고, 주민 의견을 모으는 지역협의회와 주민에 가까운 사무를 처리하는 사무소를 두는 것.
+F06 ||| 1 ||| 다;가 ||| 条例で定める地域自治区の区域に係る重要事項等について市町村長が意見聴取／市町村長等に対する意見具申権。（重要事項の例）区域内の公の施設の設置及び廃止／区域内の公の施設の管理のあり方 ||| 구역의 중요사항(예: 구역 내 공공시설 설치·폐지, 공공시설 관리 방식)에 대해 시정촌장이 의견을 듣고, 협의회는 의견을 제출할 권한을 가진다.
+F06 ||| 2 ||| 다;나 ||| 条例に定める市町村の施策に関する重要事項であって、地域協議会の意見を聴かなければならない事項：市町村の基本構想の作成等に関する事項 51%／各種公的施設の管理に関する事項 24%／予算編成に関する事項 11% ||| 지역협의회 의견을 들어야 하는 사항: 기본구상 작성 51%, 공공시설 관리 24%, 예산편성 11%(2007.10 기준).
+F08 ||| paris.fr 2022 ||| 가;바 ||| Paris souhaite devenir la ville des proximités, où l'on trouve tout ce qui est nécessaire à quinze minutes à pied de chez soi. ||| 파리는 필요한 모든 것을 집에서 도보 15분 안에 찾을 수 있는 근접의 도시가 되고자 한다.
+F08 ||| paris.fr 2022 ||| 가;바 ||| La ville du quart d'heure, c'est défendre l'idée que l'on puisse trouver près de chez soi tout ce qui est essentiel à la vie : faire des courses, travailler, s'amuser, se cultiver, faire du sport, se soigner… ||| 15분 도시는 장보기·일·여가·문화·운동·치료 등 삶에 필수적인 모든 것을 집 근처에서 찾을 수 있어야 한다는 생각을 지키는 것이다.
+F08 ||| paris.fr 2022 ||| 바;기타 ||| Plusieurs métropoles telles Ottawa, Copenhague ou Melbourne planchent également sur cette forme de nouvelle urbanité, afin de limiter les déplacements polluants et d'améliorer le cadre de vie. ||| 오타와·코펜하겐·멜버른 등도 오염 유발 이동을 줄이고 생활환경을 개선하기 위해 이 새로운 도시성을 검토한다.
+F08 ||| paris.fr 2022 ||| 바 ||| Le concept nécessite d'en finir avec une ville fragmentée où de nombreuses activités dépendent des déplacements en voiture ou en transports en commun. ||| 이 개념은 많은 활동이 자동차·대중교통 이동에 의존하는 분절된 도시를 끝내는 것을 요구한다.
+F08 ||| paris.fr 2022 ||| 기타 ||| La ville du quart d'heure est aussi une réponse à la crise sanitaire que nous traversons. ||| 15분 도시는 우리가 겪는 보건 위기에 대한 대응이기도 하다.
+F08 ||| paris.fr 2022 ||| 가;기타 ||| Ainsi, le concept de ville du quart d'heure permettrait non seulement de favoriser le bien être des habitants en leur simplifiant la vie et la ville, mais constituerait aussi une réponse possible aux défis sanitaires et climatiques à venir. ||| 15분 도시는 삶과 도시를 단순하게 해 주민 복리를 높일 뿐 아니라 다가올 보건·기후 도전에 대한 대응이 될 수 있다.
+F09 ||| planning.vic.gov.au ||| 가;바 ||| The 20-minute neighbourhood is all about 'living locally' and enabling people to meet most of their daily needs within a 20-minute return walk from home. ||| 20분 근린은 '지역에서 살기'이며, 집에서 왕복 20분 도보 안에서 일상 수요 대부분을 충족하게 하는 것이다.
+F09 ||| planning.vic.gov.au ||| 가;마 ||| Creating well-designed walkable neighbourhoods that are connected through a mix of land-uses, housing types and access to quality public transport, we can create more healthy, liveable communities. ||| 용도 혼합·다양한 주택·양질의 대중교통으로 연결된 보행 가능 근린을 만들면 더 건강하고 살기 좋은 공동체를 만들 수 있다.
+F09 ||| planning.vic.gov.au ||| 나 ||| Revitalising and enabling neighbourhood activity centres to accommodate the necessary supporting populations is key to creating a city of 20-minute neighbourhoods. ||| 근린활동중심이 필요한 배후인구를 수용하도록 활성화하는 것이 20분 근린 도시의 핵심이다.
+F09 ||| planning.vic.gov.au ||| 바;나 ||| If 50% of short private vehicle trips were instead made walking, it would save the Victorian economy approximately $165 million a year in congestion, health, infrastructure and environmental costs. ||| 단거리 자가용 통행의 50%가 도보로 바뀌면 빅토리아 경제는 연 약 1.65억 달러의 혼잡·건강·인프라·환경 비용을 절감한다.
+F09 ||| planning.vic.gov.au ||| 마 ||| Walkable streets and community spaces can enhance the sense of community and provide critical opportunities for social interaction and social cohesion. ||| 보행 가로와 공동체 공간은 공동체 의식을 높이고 사회적 교류·결속의 기회를 준다.
+F10 ||| berlin.de ||| 라 ||| Um beispielsweise soziale Entwicklungen in Stadtquartieren frühzeitig zu erkennen und mögliche Handlungsoptionen herauszuarbeiten, ist die kleinräumige Untersuchung bestimmter Quartiere erforderlich. ||| 도시 구역의 사회 변화를 조기에 인지하고 대응 방안을 도출하려면 소지역 단위 조사가 필요하다.
+F10 ||| berlin.de ||| 라;나 ||| Die 'lebensweltlich orientierten Räume' (LOR) bilden seit 01.01.2007 die 'räumliche Grundlage für Planung, Prognose und Beobachtung demografischer und sozialer Entwicklungen in Berlin'. ||| LOR은 2007년부터 베를린의 인구·사회 변화에 대한 계획·예측·관찰의 공간적 기초다.
+F10 ||| berlin.de ||| 라;나 ||| Dies betrifft insbesondere die Umsetzung von (sozial-)raumbezogenen Planungen sowie die damit verbundene Bereitstellung kleinräumiger soziostruktureller Daten. ||| 특히 (사회)공간 기반 계획의 실행과 이에 필요한 소지역 사회구조 자료 제공에 관련된다.
+F10 ||| berlin.de ||| 바;라 ||| Ziel ist die Abbildung lebensweltlicher Homogenität bei gleichzeitiger Wahrung einer Vergleichbarkeit der Planungsraumeinheiten. ||| 목표는 생활세계의 동질성을 반영하면서 계획공간 단위 간 비교가능성을 유지하는 것이다.
+F10 ||| berlin.de ||| 바;마 ||| Bei der Definition und Abgrenzung der Räume standen homogene Binnenstrukturen im Vordergrund. ||| 공간 정의·경계 설정에서는 동질적 내부구조를 우선했다.
+F10 ||| berlin.de ||| 라;마 ||| Die LOR berücksichtigen auch soziale Homogenität (ähnliche sozioökonomische Strukturen). ||| LOR은 사회적 동질성(유사한 사회경제 구조)도 고려한다.
+F11 ||| unhabitat.org 2014 ||| 가;기타 ||| UN-Habitat supports countries to develop urban planning methods and systems to address current urbanization challenges such as population growth, urban sprawl, poverty, inequality, pollution, congestion, as well as urban biodiversity, urban mobility and energy. ||| UN-Habitat는 인구 증가·스프롤·빈곤·불평등·오염·혼잡·생물다양성·이동·에너지 과제에 대응하는 계획 방법을 지원한다.
+F11 ||| unhabitat.org 2014 ||| 기타 ||| The proposed approach is based on 5 principles that support the 3 key features of sustainable neighbourhoods and cities: compact, integrated, connected. ||| 제안된 접근은 지속가능한 근린·도시의 세 특징(압축·통합·연결)을 뒷받침하는 5원칙에 기초한다.
+F12 ||| ghzyj.sh.gov.cn 2023 ||| 기타 ||| 为认真践行"人民城市"重要理念 ||| '인민도시' 이념을 성실히 실천하기 위해.
+F12 ||| ghzyj.sh.gov.cn 2023 ||| 나 ||| 落实国家关于社区生活圈规划的总体要求和技术指引 ||| 사구생활권 계획에 관한 국가의 총체적 요구와 기술지침을 이행한다.
+F12 ||| ghzyj.sh.gov.cn 2023 ||| 라;가 ||| 工作导引以"五宜"为框架整合提出目标导向和具体标准 ||| 업무 지침은 '오의(五宜: 거주·취업·여가·학습·양로 적합)'를 틀로 목표와 구체 기준을 통합 제시한다.
