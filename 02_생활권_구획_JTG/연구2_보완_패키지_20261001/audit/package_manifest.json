@@ -1,5 +1,5 @@
 {
- "created": "2026-10-02T05:13:17",
+ "created": "2026-10-02T05:54:06",
  "package": "연구2_보완_패키지_20261001",
  "files": [
   {
@@ -14,13 +14,18 @@
   },
   {
    "path": "audit/reproduction_report.json",
-   "bytes": 3352,
-   "sha256": "64fcceb987d6058d217bae8fd464d0e1b9ed15d0fff47cac7ab88a1b5ecfd728"
+   "bytes": 3569,
+   "sha256": "d9ddb7c7509c853fbfcbd0e78c8cf948ccbae2b659ae496e5d49578faefbeba5"
   },
   {
    "path": "audit/reproduction_report_20261001_full.json",
    "bytes": 4058,
    "sha256": "76f61fd90e51c20ebb02d3a23400a9263f1ab2b505dd6437e99a10439a009d75"
+  },
+  {
+   "path": "audit/reuse_20260929_rebuild.json",
+   "bytes": 3533,
+   "sha256": "fbc3123857c539d7991c6bb660f5937a009b54354d1b83065bec6ab6b0bf86af"
   },
   {
    "path": "audit/s1_checks.json",
@@ -39,8 +44,8 @@
   },
   {
    "path": "audit/s5_qa.json",
-   "bytes": 2202,
-   "sha256": "a6589f3c8a9ac0d7ffca7c3ea2e0b94881270281702370fcdd21a09768d31194"
+   "bytes": 2336,
+   "sha256": "26ff474cd10d132bb77e9d51a3ba9cb0c41c07d8799c0a7b3d212d8b37f53c3c"
   },
   {
    "path": "audit/s5_reused_inputs.json",
@@ -49,8 +54,8 @@
   },
   {
    "path": "audit/source_manifest.json",
-   "bytes": 6859,
-   "sha256": "33016de67c4225f4204c739e29d5882c5a143af84fb774b2587b1a6206c7129e"
+   "bytes": 9923,
+   "sha256": "9e80e907a93336c2a563333da26d7f2fc62726e72c89764ec37ce26472d71ea5"
   },
   {
    "path": "code/engine/config.py",
@@ -89,18 +94,28 @@
   },
   {
    "path": "code/reproduce.py",
-   "bytes": 6297,
-   "sha256": "280e528aa87d5ddba8ad796650be9d81a7f65cf91d2a2b32db14eafa46e9c6e5"
+   "bytes": 6503,
+   "sha256": "40a19b8ff8e61cb4f3404e51c491fb7aa6ae2eabaec8a2c984804c3116412df3"
   },
   {
-   "path": "code/reused/analyze_20260929.py",
+   "path": "code/reuse_20260929/analyze_20260929.py",
    "bytes": 21883,
    "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1"
   },
   {
+   "path": "code/reuse_20260929/rebuild_reused.py",
+   "bytes": 7203,
+   "sha256": "73e2129c548bb540f6e54394be65eb2f450e2c2be8f8cdb552af6e0a8cd6e42c"
+  },
+  {
    "path": "code/s0_freeze.py",
-   "bytes": 7005,
-   "sha256": "d9650e8037fabc044885bf947a09c43d0e42a27c93afb061b8698ec622f77a9c"
+   "bytes": 7204,
+   "sha256": "ed9d4e25d58e80ef926a36bca1ddd06c067ede777e618db8879d0a5a27bae83c"
+  },
+  {
+   "path": "code/s0b_amend_20261002.py",
+   "bytes": 5798,
+   "sha256": "80334c838d12a4463b7d17f8d3ab3bea3c9dad691872274ff97c1741f387a20d"
   },
   {
    "path": "code/s1_overview.py",
@@ -109,23 +124,23 @@
   },
   {
    "path": "code/s4_compare.py",
-   "bytes": 12453,
-   "sha256": "b10ca6ed935c2f4baacab3ca9c1501aa4a952b43f4817ccc300dd2a097330225"
+   "bytes": 12461,
+   "sha256": "52d0e3192a8afef032f0ee37519891fb0c84b1f2ca79a6b43b31bcd806eaca8a"
   },
   {
    "path": "code/s5_build_manuscript.py",
-   "bytes": 59113,
-   "sha256": "65a7e42fd936d6645e9362ff1c3cc7c7a2369aa7fa011c627a13f73e7a21039e"
+   "bytes": 60228,
+   "sha256": "5ab13b45a8c5520a51633a80ba77ec0871a8e16c1dc80fc77efe302ba83f474c"
   },
   {
    "path": "code/s5_figures.py",
-   "bytes": 11584,
-   "sha256": "2f46a2160a48f0e4d41bc3a9db2edab5c97d1d91aa5901fecb937af312020ef4"
+   "bytes": 11524,
+   "sha256": "e7f761fedf55f168e62715510f327d88ca2f92923ec3cfecb429429ae9587cab"
   },
   {
    "path": "code/s5_qa.py",
-   "bytes": 8927,
-   "sha256": "85a8e8be858c707403fa9bb5fbc115842b5bc549af9b3431659aa36b0243b0a8"
+   "bytes": 9769,
+   "sha256": "18341fe35e4ad8c76292b18f73694cf6faf352aff8e6997ca8633c112260dc57"
   },
   {
    "path": "code/s5_reuse.py",
@@ -134,8 +149,8 @@
   },
   {
    "path": "code/test_louvain.py",
-   "bytes": 8735,
-   "sha256": "0015f7851cc448f7f6d9d9a3f7a871d8526a468c96946b4bfb1407f20ec4a071"
+   "bytes": 8840,
+   "sha256": "a26bfb355a0d92f7be5e14178da171a3935c24d0363ee9f094da162758155166"
   },
   {
    "path": "code/verify_inputs.py",
@@ -144,13 +159,18 @@
   },
   {
    "path": "docs/검증보고서.md",
-   "bytes": 5272,
-   "sha256": "58087d217907085f656e44e35a1d27131b0f381d03f5dc3f85bbc2894c165402"
+   "bytes": 7060,
+   "sha256": "880e0953301240879f4acc6ce1fd0b6977c6210a408025bc6f5ca0cac93ea9c6"
   },
   {
    "path": "docs/연구설계.md",
-   "bytes": 14106,
-   "sha256": "99527eb3602be99005909ef7d3ec661a98bad23a8575e433327f0884b6ebb47f"
+   "bytes": 17149,
+   "sha256": "b4773e056a8991129e8bd349470e60794a4ec3c718f2d4837d08cd957aeb2df5"
+  },
+  {
+   "path": "inputs/dong_to_leiden_2020_mapping_424.csv",
+   "bytes": 41721,
+   "sha256": "d03ba1a05a17e875ef54192b6b66c76b8cc8ed049815cbae28fd372ac534c984"
   },
   {
    "path": "inputs/dong_to_leiden_2025_mapping_424.csv",
@@ -166,6 +186,11 @@
    "path": "inputs/leiden_metrics_2025.csv",
    "bytes": 4033,
    "sha256": "07d247191055ab7c0f2237f52bb9f5b0172dd67849caa63de5abf757ffa75ac1"
+  },
+  {
+   "path": "inputs/od_daily_202001.parquet",
+   "bytes": 1454975,
+   "sha256": "4533810ebd4c68fd77dec2992096dd8fc7a3c39e0cbfac8d3e5fa8838da04b38"
   },
   {
    "path": "inputs/od_daily_202501.parquet",
@@ -184,18 +209,18 @@
   },
   {
    "path": "manuscript/연구2_생활권_구획_점검_4.2.docx",
-   "bytes": 1730334,
-   "sha256": "3162336223168e1bf44a3cb549262602bc21e576009c93bdafff8c684179f825"
+   "bytes": 1706777,
+   "sha256": "d2cfe82823b955f7365c0d520c197adf6eed6dca2960f8d9908093130cae68c4"
   },
   {
    "path": "manuscript/연구2_생활권_구획_점검_4.2.md",
-   "bytes": 40297,
-   "sha256": "407a5ad250ccc221dda84b09624d6fdd0e71efa6992880e3156d648e99e3108f"
+   "bytes": 40685,
+   "sha256": "bc377b354077339744e157842828f3147c3654e3dfba764633e01f31c560aee0"
   },
   {
    "path": "manuscript/연구2_생활권_구획_점검_4.2.pdf",
-   "bytes": 957317,
-   "sha256": "e0fd457ce155a4fdb2b569e98c912ddcbe4254fb6f65ce193a5bd273b2fd8050"
+   "bytes": 951114,
+   "sha256": "0807c82de2a52b53a6cb381c16c38827579cd79830c1b1206e0de59a943dac17"
   },
   {
    "path": "output/louvain/2025/boundaries/louvain_communities_2025.gpkg",
@@ -734,8 +759,8 @@
   },
   {
    "path": "README.md",
-   "bytes": 7450,
-   "sha256": "c8cfe503a33164ff68a856ee3670d43aa68f8edd2f4194dcb54656b8f0b6990e"
+   "bytes": 8710,
+   "sha256": "3776abff69d3c29c7acbf5d7cdd8abcaa9d2f3a73e4d6f75fdda0c8d7d4cef1b"
   },
   {
    "path": "requirements-replication.txt",
@@ -744,18 +769,18 @@
   },
   {
    "path": "results/figures/F1_procedure.pdf",
-   "bytes": 73426,
-   "sha256": "a3169116c6d53fdd4ffb9285572e712b9f6df13232dd75c383238fb5f978d902"
+   "bytes": 71611,
+   "sha256": "126f2918f801bf3d5ee27630fa49433938682a92953bc5fb02bcc212daf94dcd"
   },
   {
    "path": "results/figures/F1_procedure.png",
-   "bytes": 400691,
-   "sha256": "48dcff1a19407560f5ea69f7df34ea70677e9f11e29a2163335eff617a9c8b41"
+   "bytes": 386494,
+   "sha256": "27bb842252c828bbe42820cff8ac4c2b77390e2de436b44c346148fe7a444673"
   },
   {
    "path": "results/figures/F2_maps_2025.pdf",
    "bytes": 2648991,
-   "sha256": "42766f71cdd7a624800cf24285080360ea0c3b0519ccf3e2baa7c45668f72216"
+   "sha256": "ae5cf23862caa06d08eafcac404714716521ed469ff8e445e553dea51bda1e78"
   },
   {
    "path": "results/figures/F2_maps_2025.png",
@@ -765,7 +790,7 @@
   {
    "path": "results/figures/F3_algorithm_comparison.pdf",
    "bytes": 65100,
-   "sha256": "0a1c6b5fd6b3e2156d209f5b1f57b049f3b6ca07fe376bf564f44455b443da08"
+   "sha256": "fd829f8d5186cd77bcdce9a16fd86120c5f2c5eba05d46fdafefc3de587c2fb0"
   },
   {
    "path": "results/figures/F3_algorithm_comparison.png",
@@ -774,23 +799,23 @@
   },
   {
    "path": "results/figures/F4_district_diagnostics.pdf",
-   "bytes": 52098,
-   "sha256": "36165af958ca1d97fa98923405d95fe5655f39be535f2c956497727bc1e406d6"
+   "bytes": 50415,
+   "sha256": "557e0ce9399617d6ae538a9ced352d2e3643129f00ad30f2c0da6fd7d284d2ce"
   },
   {
    "path": "results/figures/F4_district_diagnostics.png",
-   "bytes": 274378,
-   "sha256": "a788280974512266e5f66c9915fd83d86709b56711377a8ab7405af7a0bcd51d"
+   "bytes": 269412,
+   "sha256": "974375399903a121be379515ba22fd5518fa22ee52c929126d40f256106cf8e2"
   },
   {
    "path": "results/figures/F5_iou_relations.pdf",
-   "bytes": 42802,
-   "sha256": "1df120a1b466bc8ab3d15a6b0d26a109a072adce965f8459e120ba9d5747c933"
+   "bytes": 41071,
+   "sha256": "c76109787e9816e1290ac74fe1bae02d484c4f2f299153715baac09942f749a9"
   },
   {
    "path": "results/figures/F5_iou_relations.png",
-   "bytes": 306675,
-   "sha256": "ff2bb72aa00f23b2d1065d2058fcad4ab354bdaabc65b66a957ccc552d988d93"
+   "bytes": 301251,
+   "sha256": "c6a8721d392389d93798552071c4408a4a13f7951e1cbcbccf5aa019aec719ae"
   },
   {
    "path": "results/reused_20260929/A1_district_2020.csv",

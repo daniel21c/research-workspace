@@ -125,7 +125,8 @@ def main():
     sec = time.perf_counter() - t0
     out = C.LEIDEN_OUT / "2025_test"
     met = pd.read_csv(out / "metrics" / "louvain_metrics_2025.csv")
-    core_cols = pd.read_csv(PKG.parents[1] / "00_공통_코어엔진" / "output" / "leiden" / "2025" / "metrics" / "leiden_metrics_2025.csv", nrows=1).columns.tolist()
+    # Leiden 정본 지표표는 S0에서 해시와 함께 inputs/ 에 복사한 사본을 읽는다(허브 코어 경로를 읽지 않아 ZIP 해제 폴더에서도 돈다).
+    core_cols = pd.read_csv(PKG / "inputs" / "leiden_metrics_2025.csv", nrows=1).columns.tolist()
     files_ok = all((out / p).exists() for p in ("run_info.json", "metrics/louvain_mapping_2025.csv", "boundaries/louvain_communities_2025.gpkg"))
     cols_same = met.columns.tolist() == core_cols
     results["T4_smoke_run"] = {"returncode": r.returncode, "seconds": sec, "files_written": files_ok, "metric_columns_same_as_leiden": cols_same,

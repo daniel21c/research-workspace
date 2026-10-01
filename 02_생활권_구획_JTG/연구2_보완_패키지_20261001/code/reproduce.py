@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """별도 해제 폴더에서 분석을 처음부터 다시 실행하고, 저장된 결과와 대조한다. 공통 코어엔진·허브 폴더를 읽지 않는다.
 
-  python code/reproduce.py            # S1·S4·S5(그림·원고)를 다시 만들어 저장된 결과와 대조 (수 분)
+  python code/reproduce.py            # 9/29 결과표 10개 재생성 대조, S1·S4·S5(그림·원고)를 다시 만들어 저장된 결과와 대조 (수 분)
   python code/reproduce.py --full     # 위에 더해 S3(Louvain 2025, 25구 × 250γ × 3,000회)를 처음부터 다시 실행해 대조 (워커 25개로 약 26분)
 
 대조 규칙: 표(CSV)·원고 MD는 바이트 일치, 그림(PNG)은 바이트 일치(불일치하면 픽셀 일치), DOCX는 문단·표 글자 일치(압축 시각이 달라 바이트 비교 불가).
@@ -102,6 +102,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--full", action="store_true"); ap.add_argument("--workers", type=int, default=25)
     a = ap.parse_args()
     run("verify_inputs", ["code/verify_inputs.py"])
+    run("reuse_20260929_rebuild", ["code/reuse_20260929/rebuild_reused.py"])   # 9/29 결과표 10개를 입력에서 다시 만들어 사본과 SHA 대조(약 20초)
     snapshot()
     louv_env = None
     if a.full:

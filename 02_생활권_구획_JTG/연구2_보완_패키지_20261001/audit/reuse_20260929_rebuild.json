@@ -1,0 +1,84 @@
+{
+ "created": "2026-10-02T05:53:51",
+ "code": "code/reuse_20260929/analyze_20260929.py (9/29 analyze.py 사본, SHA-256 20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1)",
+ "changes_to_original": {
+  "head_lines_replaced": 24,
+  "make_figures_removed": true,
+  "execution_record_removed": true
+ },
+ "inputs": {
+  "dong_to_official_livingzone_mapping_424.csv": "4c75ebfaba8e644d244f449652941d12d72e1fdc150b8e91eba2c8015c2753de",
+  "dong_to_leiden_2020_mapping_424.csv": "d03ba1a05a17e875ef54192b6b66c76b8cc8ed049815cbae28fd372ac534c984",
+  "dong_to_leiden_2025_mapping_424.csv": "19c35263178c77795d6fbff35419b339f10c573098c12b1950fc85ccbdbbc149",
+  "seoul_boundaries_all.gpkg": "ec8467ec3e9bebfcdd1abb0d4fc1a7c0a1da5f3bec9382c1b0d91bc543dcb8ed",
+  "od_daily_202001.parquet": "4533810ebd4c68fd77dec2992096dd8fc7a3c39e0cbfac8d3e5fa8838da04b38",
+  "od_daily_202501.parquet": "7ee0183b2544a8dd419e8f79ee567e725ed2ec998cf12e88c96dddc0fcbfa5a4"
+ },
+ "checks_passed": "164/164",
+ "files": [
+  {
+   "file": "T1_input_overview.csv",
+   "rebuilt_sha256": "d8b6800167fcec9f15fbedc06463c35599209e7c582afe0d5a9d9c2ace451d81",
+   "copy_sha256": "d8b6800167fcec9f15fbedc06463c35599209e7c582afe0d5a9d9c2ace451d81",
+   "same": true
+  },
+  {
+   "file": "T2_city_summary.csv",
+   "rebuilt_sha256": "b0ffb1a76eea6cd200a6c1b31619c72df6a47560b54024958ed362dabf2b30bf",
+   "copy_sha256": "b0ffb1a76eea6cd200a6c1b31619c72df6a47560b54024958ed362dabf2b30bf",
+   "same": true
+  },
+  {
+   "file": "T3_district_2025.csv",
+   "rebuilt_sha256": "13447d9672e1c3169a4cd955d4f36a37ab0d4ce26a1ee803c48b21fe3ea341c1",
+   "copy_sha256": "13447d9672e1c3169a4cd955d4f36a37ab0d4ce26a1ee803c48b21fe3ea341c1",
+   "same": true
+  },
+  {
+   "file": "T6_sensitivity.csv",
+   "rebuilt_sha256": "8c0d0b6af856c9c936ed139186c67f2fb2fa228bb6f61f2a09f5413aa9dfb0bf",
+   "copy_sha256": "8c0d0b6af856c9c936ed139186c67f2fb2fa228bb6f61f2a09f5413aa9dfb0bf",
+   "same": true
+  },
+  {
+   "file": "T7_connected_reference_2025.csv",
+   "rebuilt_sha256": "4794e4e03a5299307314fce5960c4dda30714ddb53338a54f0eeb0273412cb3b",
+   "copy_sha256": "4794e4e03a5299307314fce5960c4dda30714ddb53338a54f0eeb0273412cb3b",
+   "same": true
+  },
+  {
+   "file": "T8_correlations_2025.csv",
+   "rebuilt_sha256": "cc6f5dfe6402ae9b145dc4311b05ff3ecf9d50cd89a17f70391113bbfaa41d52",
+   "copy_sha256": "cc6f5dfe6402ae9b145dc4311b05ff3ecf9d50cd89a17f70391113bbfaa41d52",
+   "same": true
+  },
+  {
+   "file": "A1_district_2020.csv",
+   "rebuilt_sha256": "d209045ad6e1b9255da8c02fee3ece5b5c11c050d18df09f65c26629f446b6be",
+   "copy_sha256": "d209045ad6e1b9255da8c02fee3ece5b5c11c050d18df09f65c26629f446b6be",
+   "same": true
+  },
+  {
+   "file": "A2_fixed2025_on2020.csv",
+   "rebuilt_sha256": "265824d3906bb280876f1792e334483b1f030e8be03b19e63eeb6178e1571366",
+   "copy_sha256": "265824d3906bb280876f1792e334483b1f030e8be03b19e63eeb6178e1571366",
+   "same": true
+  },
+  {
+   "file": "A3_contiguity.csv",
+   "rebuilt_sha256": "3f3d81ad55cd3b2e41af14c7d4f79dc2e50b4123278d746053e73b01c00500ed",
+   "copy_sha256": "3f3d81ad55cd3b2e41af14c7d4f79dc2e50b4123278d746053e73b01c00500ed",
+   "same": true
+  },
+  {
+   "file": "summary.json",
+   "rebuilt_sha256": "b9ee8dad8678722c11b52c56ddabb71dde338f5184cd77ff83bd3b2fdcd42bfb",
+   "copy_sha256": "b9ee8dad8678722c11b52c56ddabb71dde338f5184cd77ff83bd3b2fdcd42bfb",
+   "same": true
+  }
+ ],
+ "same_as_copies": true,
+ "same_as_s5_reused_record": true,
+ "seconds": 21.4,
+ "pass": true
+}

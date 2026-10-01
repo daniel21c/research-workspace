@@ -1,12 +1,11 @@
 {
- "created": "2026-10-02T05:13:57",
- "package": "연구2_보완_패키지_20261001 (최종본)",
+ "created": "2026-10-02T05:55:30",
+ "package": "연구2_보완_패키지_20261001 (최종본, 검증 판정 S3 10건 반영)",
  "zip": {
   "file": "연구2_보완_패키지_20261001.zip",
-  "sha256": "edc88bc8defed9226fe219e45662ae42f5eb3a619203084aa024a3babef03ad6",
-  "bytes": 22382912,
-  "files": 173,
-  "note": "ZIP 안 파일 수(audit/package_manifest.json 포함)"
+  "sha256": "699e30bde08ee0ed8249a9a1738c63c4d44aaaaab519e8f47cd9770f9db2cca5",
+  "bytes": 23601420,
+  "files": 178
  },
  "design": "R2-DESIGN-20261002-v4",
  "separate_folder_quick_reproduction": {
@@ -14,6 +13,7 @@
   "all_pass": true,
   "steps": {
    "verify_inputs": 0,
+   "reuse_20260929_rebuild": 0,
    "s1_overview": 0,
    "s4_compare": 0,
    "s5_figures": 0,
@@ -25,23 +25,63 @@
   "docx_text_identical": 1,
   "different": []
  },
- "louvain_and_inputs_vs_previous_zip": {
-  "previous_zip_sha256": "ff736ad6dcd879afbd73993200e4368fea0446d96acf556cc415ade59bc9d097",
-  "previous_zip_archived_at": "D:\\Research\\_archive\\연구2_정리_20261002\\이전_ZIP_ff736ad6\\연구2_보완_패키지_20261001.zip",
-  "files": 113,
+ "reuse_20260929_rebuild_in_separate_folder": {
+  "pass": true,
+  "same_sha_files": "10/10",
+  "checks": "164/164",
+  "seconds": 21.1,
+  "files": {
+   "T1_input_overview.csv": "d8b6800167fcec9f",
+   "T2_city_summary.csv": "b0ffb1a76eea6cd2",
+   "T3_district_2025.csv": "13447d9672e1c316",
+   "T6_sensitivity.csv": "8c0d0b6af856c9c9",
+   "T7_connected_reference_2025.csv": "4794e4e03a529930",
+   "T8_correlations_2025.csv": "cc6f5dfe6402ae9b",
+   "A1_district_2020.csv": "d209045ad6e1b925",
+   "A2_fixed2025_on2020.csv": "265824d3906bb280",
+   "A3_contiguity.csv": "3f3d81ad55cd3b2e",
+   "summary.json": "b9ee8dad8678722c"
+  }
+ },
+ "test_louvain_in_separate_folder": {
+  "T4_smoke_run_pass": true,
+  "metric_columns_same_as_leiden": true,
+  "note": "허브 코어 경로 대신 패키지 안 inputs/leiden_metrics_2025.csv 를 읽도록 고친 뒤 ZIP 해제 폴더에서 끝까지 실행됨(F6)"
+ },
+ "louvain_outputs_vs_previous_zip": {
+  "previous_zip_sha256": "edc88bc8defed9226fe219e45662ae42f5eb3a619203084aa024a3babef03ad6",
+  "previous_zip_archived_at": "D:\\Research\\_archive\\연구2_정리_20261002\\이전_ZIP_edc88bc8\\연구2_보완_패키지_20261001.zip",
+  "files": 107,
   "identical": true,
-  "note": "이전 ZIP(ff736ad6)의 Louvain 산출·입력은 2026-10-01 전체 재실행(reproduction_report_20261001_full.json)으로 검증한 판과 해시가 같았다. 따라서 이번 최종본도 같은 판이다."
+  "note": "Louvain 산출은 2026-10-01 전체 재실행(audit/reproduction_report_20261001_full.json)으로 검증한 판과 해시가 같다"
+ },
+ "inputs": {
+  "files": 8,
+  "same_as_previous": {
+   "inputs/dong_to_leiden_2020_mapping_424.csv": false,
+   "inputs/dong_to_leiden_2025_mapping_424.csv": true,
+   "inputs/dong_to_official_livingzone_mapping_424.csv": true,
+   "inputs/leiden_metrics_2025.csv": true,
+   "inputs/od_daily_202001.parquet": false,
+   "inputs/od_daily_202501.parquet": true,
+   "inputs/seoul_boundaries_all.gpkg": true,
+   "inputs/seoul_dong_424_dissolved.gpkg": true
+  },
+  "note": "2020년 OD·Leiden 2020 매핑 2개를 9/29 결과표 재생성용으로 추가(S0 보완)"
  },
  "changes_vs_previous_zip": {
   "changed": [
    "README.md",
    "audit/reproduction_report.json",
    "audit/s5_qa.json",
+   "audit/source_manifest.json",
+   "code/reproduce.py",
    "code/s0_freeze.py",
+   "code/s4_compare.py",
    "code/s5_build_manuscript.py",
    "code/s5_figures.py",
    "code/s5_qa.py",
-   "code/s5_reuse.py",
+   "code/test_louvain.py",
    "docs/검증보고서.md",
    "docs/연구설계.md",
    "manuscript/연구2_생활권_구획_점검_4.2.docx",
@@ -51,35 +91,33 @@
    "results/figures/F1_procedure.png",
    "results/figures/F2_maps_2025.pdf",
    "results/figures/F3_algorithm_comparison.pdf",
-   "results/figures/F3_algorithm_comparison.png",
    "results/figures/F4_district_diagnostics.pdf",
    "results/figures/F4_district_diagnostics.png",
    "results/figures/F5_iou_relations.pdf",
    "results/figures/F5_iou_relations.png"
   ],
-  "added": [],
-  "removed": []
+  "added": [
+   "audit/reuse_20260929_rebuild.json",
+   "code/reuse_20260929/analyze_20260929.py",
+   "code/reuse_20260929/rebuild_reused.py",
+   "code/s0b_amend_20261002.py",
+   "inputs/dong_to_leiden_2020_mapping_424.csv",
+   "inputs/od_daily_202001.parquet"
+  ],
+  "removed": [
+   "code/reused/analyze_20260929.py"
+  ]
  },
  "manuscript_qa": {
   "pass": true,
   "pdf_pages": 13,
-  "equations": {
-   "count": 5,
-   "numbers": [
-    1,
-    2,
-    3,
-    4,
-    5
-   ],
-   "font_sizes_pt": [
-    10.5
-   ],
-   "latin_fonts": [
-    "Times New Roman"
-   ],
-   "pass": true
+  "d_term": {
+   "summary_defines": true,
+   "body_defines": true,
+   "no_D_flow": true,
+   "dong_range_from_L1": true
   },
+  "equations_pass": true,
   "hyphen_minus_numbers": []
  },
  "full_reproduction_reference": "audit/reproduction_report_20261001_full.json (Louvain 2025 처음부터 재실행, 매핑·원시 라벨 25/25 일치)",

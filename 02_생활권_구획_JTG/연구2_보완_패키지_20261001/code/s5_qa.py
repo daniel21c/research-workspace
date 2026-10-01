@@ -31,7 +31,7 @@ checks["pdf_has_all_captions"] = {c: (c in pdf_text) for c in labels}
 checks["pdf_no_replacement_char"] = "�" not in pdf_text
 
 # 2) 금지 표현과 어려운 낱말 ─────────────────────────────────────────────────────────
-bad = ["JTG", "게재본", "March", "3월", "PASS", "BLOCKED", "검증 필요", "작업 메모", "TODO", "추후"]
+bad = ["JTG", "게재본", "March", "3월", "PASS", "BLOCKED", "검증 필요", "작업 메모", "TODO", "추후", "패키지", "기록 파일", "분이 걸렸다"]
 hard = ["정합성", "연결요소", "결속도", "후향", "재표집", "co-association", "신장나무", "대리 규칙", "최빈 분할", "상충", "도출", "산출하였", "기술적 분류", "순차이", "특유"]
 checks["forbidden_terms_found"] = [b for b in bad if b in md]
 checks["hard_words_found"] = {h: md.count(h) for h in hard if h in md}
@@ -47,6 +47,13 @@ def first_use_ok(text, abbr):
 abbrs = ["OD", "IFR", "IoU", "ARI", "HW·WH", "Q"]
 checks["abbreviation_first_use"] = {"요약": {a: first_use_ok(summary, a) for a in abbrs}, "본문": {a: first_use_ok(body, a) for a in abbrs}}
 abbr_ok = all(v in (True, None) for part in checks["abbreviation_first_use"].values() for v in part.values())
+# 불일치 D(박사논문 공통 용어, 2026-10-02): 요약·본문에서 처음 쓸 때 정의, D_flow 표기 없음, 구별 동 수 범위는 결과표 값
+L1 = pd.read_csv(PKG / "results/tables/L1_algorithm_comparison_2025.csv")
+docx_text = "\n".join(p.text for p in doc.paragraphs) + "\n".join(c.text for t in doc.tables for row in t.rows for c in row.cells)
+checks["d_term"] = {"summary_defines": "불일치(D)" in summary, "body_defines": "불일치(D)는 두 경계가" in body,
+                    "no_D_flow": "D_flow" not in md and "D_flow" not in docx_text and "Dflow" not in docx_text,
+                    "dong_range_from_L1": f"{int(L1.n_dong.min())}~{int(L1.n_dong.max())}개 동으로 된 구별 연결망" in md}
+abbr_ok = abbr_ok and all(checks["d_term"].values())
 
 # 4) 표 서식(JTG): 가로선 3줄(위·머리행 아래·아래), 세로선·좌우·안쪽 가로선·음영 없음, 머리행 보통 굵기 ─────
 def tbl_ok(t):

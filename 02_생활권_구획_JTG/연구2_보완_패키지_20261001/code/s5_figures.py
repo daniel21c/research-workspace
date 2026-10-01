@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """S5-1 그림 생성: 저장된 결과표(CSV)와 매핑에서 그림 5개를 새로 만든다. 수치는 모두 CSV에서 읽는다.
-F1 절차 흐름도 / F2 공식·Leiden·Louvain 지도 / F3 Louvain 대 Leiden(구별 Q, 결과가 다시 나오는 정도) / F4 구별 진단(IoU·G·D_flow) / F5 IoU와 이동 지표의 관계
+F1 절차 흐름도 / F2 공식·Leiden·Louvain 지도 / F3 Louvain 대 Leiden(구별 Q, 결과가 다시 나오는 정도) / F4 구별 진단(IoU·G·불일치 D) / F5 IoU와 이동 지표의 관계
 
 2026-10-02 개정(JTG·Elsevier 그림 규정 반영):
 - 실제 인쇄 폭(본문 폭 16 cm)으로 그려 글자가 인쇄 크기에서 7 pt 이상이 되게 한다.
@@ -64,7 +64,7 @@ def f1_flow():
         ax.add_patch(FancyArrowPatch((top[i][1] + 17.5, 32), (top[i + 1][1] - 0.5, 32), arrowstyle="-|>", mutation_scale=8, color=MUTE, lw=0.8))
     ax.add_patch(FancyArrowPatch((89.5, 23.5), (89.5, 15.5), arrowstyle="-|>", mutation_scale=8, color=MUTE, lw=0.8))
     bot = [(["평가 지표", "$Q$, IFR,", "공간 연속성"], 3), (["공식 생활권과의", "겹침(IoU, ARI)"], 28),
-           (["IFR 차이와", "판정이 바뀐 통행", r"($G$, $D_{\mathrm{flow}}$)"], 53), (["후속 조사", "후보 고르기"], 79)]
+           (["IFR 차이와 불일치", r"($G$, $D$)"], 53), (["후속 조사", "후보 고르기"], 79)]
     for t, x in bot:
         ax.add_patch(FancyBboxPatch((x, 2), 19, 12.5, boxstyle="round,pad=0.3,rounding_size=1.0", fc="#fbf3ec", ec=ORANGE, lw=0.8))
         lines_text(ax, x + 9.5, 8.25, t)
@@ -146,7 +146,7 @@ def f4_diagnostics():
     y = np.arange(len(T))
     axes[0].barh(y, T["iou_1to1"], color=BLUE, height=0.66); axes[0].set_xlim(0, 1.05); axes[0].set_xlabel("IoU")
     axes[1].barh(y, T["g"] * 100, color=[GREEN if v >= 0 else ORANGE for v in T["g"]], height=0.66); axes[1].axvline(0, color=INK, lw=0.6); axes[1].set_xlabel("$G$ (%p)")
-    axes[2].barh(y, T["d_flow"] * 100, color="#7a7a7a", height=0.66); axes[2].set_xlabel(r"$D_{\mathrm{flow}}$ (%)")
+    axes[2].barh(y, T["d_flow"] * 100, color="#7a7a7a", height=0.66); axes[2].set_xlabel(r"$D$ (%)")
     axes[0].set_yticks(y); axes[0].set_yticklabels(T["ku_name"])
     for ax, lab in zip(axes, ("(a)", "(b)", "(c)")):
         ax.grid(axis="x", color="#e6e6e6", lw=0.5); ax.set_axisbelow(True); panel(ax, lab)
@@ -157,7 +157,7 @@ def f4_diagnostics():
 def f5_relations():
     T = pd.read_csv(OLD / "T3_district_2025.csv"); C = pd.read_csv(OLD / "T8_correlations_2025.csv")
     fig, axes = plt.subplots(1, 3, figsize=(W, 2.3))
-    for ax, (col, lab, scale), pl in zip(axes, [("g", r"$G$ (%p)", 100), ("delta_q", r"$\Delta Q$", 1), ("d_flow", r"$D_{\mathrm{flow}}$ (%)", 100)], ("(a)", "(b)", "(c)")):
+    for ax, (col, lab, scale), pl in zip(axes, [("g", r"$G$ (%p)", 100), ("delta_q", r"$\Delta Q$", 1), ("d_flow", r"$D$ (%)", 100)], ("(a)", "(b)", "(c)")):
         ax.scatter(T["iou_1to1"], T[col] * scale, s=12, color=BLUE, alpha=0.9, lw=0)
         r = C[(C.x == "iou_1to1") & (C.y == col)].iloc[0]
         mn = lambda v: f"{v:.2f}".replace("-", "−")  # 축 눈금과 같은 마이너스 기호

@@ -86,6 +86,32 @@
       "matches_core_record": null,
       "prefix16_in_distribution_list": null,
       "same_as_20260929_package_copy": null
+    },
+    {
+      "release": "od-daily-v1",
+      "file": "od_daily_202001.parquet",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\od\\od_daily_202001.parquet",
+      "bytes": 1454975,
+      "sha256": "4533810ebd4c68fd77dec2992096dd8fc7a3c39e0cbfac8d3e5fa8838da04b38",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "4533810ebd4c68fd77dec2992096dd8fc7a3c39e0cbfac8d3e5fa8838da04b38",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_analysis_input": true,
+      "added": "2026-10-02 (S0 보완). 9/29 결과표 재생성(code/reuse_20260929/rebuild_reused.py)에만 쓴다"
+    },
+    {
+      "release": "boundary-v2-leiden",
+      "file": "dong_to_leiden_2020_mapping_424.csv",
+      "source": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\dong_to_leiden_2020_mapping_424.csv",
+      "bytes": 41721,
+      "sha256": "d03ba1a05a17e875ef54192b6b66c76b8cc8ed049815cbae28fd372ac534c984",
+      "used_in_calculation": true,
+      "core_recorded_sha256": "d03ba1a05a17e875ef54192b6b66c76b8cc8ed049815cbae28fd372ac534c984",
+      "matches_core_record": true,
+      "prefix16_in_distribution_list": true,
+      "same_as_20260929_analysis_input": true,
+      "added": "2026-10-02 (S0 보완). 9/29 결과표 재생성(code/reuse_20260929/rebuild_reused.py)에만 쓴다"
     }
   ],
   "code_and_documents": {
@@ -98,20 +124,29 @@
       "sha256": "e268e585f38daf3cfd179e5935d548a23797d00d6b11953dd39c0f5529ef07d6"
     },
     "package_20260929_analyze.py": {
-      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\code\\analyze.py",
-      "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1"
+      "path": "D:\\Research\\_archive\\연구2_정리_20261002\\연구2_재분석_패키지_20260929\\code\\analyze.py",
+      "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1",
+      "path_at_S0": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\code\\analyze.py",
+      "package_copy": "code/reuse_20260929/analyze_20260929.py (같은 해시)"
     },
     "design_20260929_연구설계.md": {
-      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계.md",
-      "sha256": "70416a072fc7a1e8555e820ce5add8f5e2b0aa4eb2442f8a24bd6da4d2060c1d"
+      "path": "D:\\Research\\_archive\\연구2_정리_20261002\\설계_이전판\\연구설계_R2-DESIGN-20260929-v2.md",
+      "sha256": "70416a072fc7a1e8555e820ce5add8f5e2b0aa4eb2442f8a24bd6da4d2060c1d",
+      "path_at_S0": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계.md",
+      "note": "S0 때 02 폴더의 연구설계.md(9/29 v2). 그 자리는 지금 v4다. 같은 해시의 보존본 경로로 고쳤다"
     },
     "design_20261001_연구설계_재현판.md": {
-      "path": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계_재현판_20261001.md",
-      "sha256": "1f696c04f1f990031ae20712f1af634a44b231d4f3ae965438928409bdd637a7"
+      "path": null,
+      "sha256": "1f696c04f1f990031ae20712f1af634a44b231d4f3ae965438928409bdd637a7",
+      "path_at_S0": "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구설계_재현판_20261001.md",
+      "preserved_copy": "보존본 없음",
+      "reason": "S0(2026-10-01 23:13) 뒤에 같은 파일(v3)을 계속 고쳐 쓰면서 S0 시점 내용을 따로 저장하지 않았다. 아카이브에는 그 뒤 판 두 개만 있다: 설계_이전판/연구설계_재현판_R2R-DESIGN-20261001-v3.md(e02cb232…, 10/02 v3 보존본), 설계_이전판/연구설계_재현판_20261001_대체표시판.md(da7c44c8…). 둘 다 이 해시와 다르다. 계산 입력이 아닌 설계 문서라 결과에는 영향이 없다"
     },
     "distribution_list": {
       "path": "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md",
-      "sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68"
+      "sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "preserved_copy": "D:\\Research\\_archive\\연구2_정리_20261002\\연구2_재분석_패키지_20260929\\references\\shared_contract\\데이터_배포목록.md",
+      "note": "허브 데이터_배포목록.md 는 그 뒤 갱신될 수 있다. S0 시점과 같은 해시의 사본이 9/29 패키지 references 에 있다"
     }
   },
   "leiden_canonical_2025": {
@@ -147,5 +182,10 @@
     "scipy": "1.17.1",
     "scikit-learn": "1.9.0"
   },
-  "note": "공통 코어엔진은 읽기만 했다. inputs/ 는 계산에 쓰는 사본(6개)이다. 마지막 파일(Leiden 지표표)은 2026-10-01 S4 확장 때 추가했다."
+  "note": "공통 코어엔진은 읽기만 했다. inputs/ 는 계산에 쓰는 사본(6개)이다. 마지막 파일(Leiden 지표표)은 2026-10-01 S4 확장 때 추가했다.",
+  "amended": {
+    "date": "2026-10-02T05:43:32",
+    "script": "code/s0b_amend_20261002.py",
+    "what": "2020년 입력 2개 추가(9/29 결과표 재생성용), 아카이브로 옮긴 문서의 경로 정정. S0 때 적은 해시·시각은 그대로"
+  }
 }

@@ -37,6 +37,12 @@
       "Q": true
     }
   },
+  "d_term": {
+    "summary_defines": true,
+    "body_defines": true,
+    "no_D_flow": true,
+    "dong_range_from_L1": true
+  },
   "tables_jtg_rules": [
     true,
     true,

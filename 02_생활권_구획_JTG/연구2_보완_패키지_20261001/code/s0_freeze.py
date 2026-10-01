@@ -84,6 +84,7 @@ def main():
         "core_config.py": CORE / "scripts" / "config.py",
         "package_20260929_analyze.py": OLD_PKG / "code" / "analyze.py",
         # S0 실행(2026-10-01) 때는 02 폴더의 연구설계.md(9/29판)·연구설계_재현판_20261001.md 였다. 지금은 아카이브의 보존본을 가리킨다.
+        # 9/29판은 같은 해시의 보존본이다. 재현판은 S0 시점(1f696c04…) 보존본이 없어 그 뒤 v3 보존본(e02cb232…)을 가리킨다(audit/source_manifest.json 'reason').
         "design_20260929_연구설계.md": ARCHIVE / "설계_이전판" / "연구설계_R2-DESIGN-20260929-v2.md",
         "design_20261001_연구설계_재현판.md": ARCHIVE / "설계_이전판" / "연구설계_재현판_R2R-DESIGN-20261001-v3.md",
         "distribution_list": DIST_LIST,

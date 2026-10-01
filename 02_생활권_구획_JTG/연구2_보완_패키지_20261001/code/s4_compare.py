@@ -23,7 +23,7 @@ OLD_T3 = PKG / "results" / "reused_20260929" / "T3_district_2025.csv"         # 
 sys.path.insert(0, str(PKG / "code" / "engine"))
 import config as C                                              # noqa: E402
 import s03_louvain_consensus as S                               # noqa: E402  (modularity_q, contiguity, ari 재사용)
-spec = importlib.util.spec_from_file_location("analyze_20260929", PKG / "code" / "reused" / "analyze_20260929.py")
+spec = importlib.util.spec_from_file_location("analyze_20260929", PKG / "code" / "reuse_20260929" / "analyze_20260929.py")
 A = importlib.util.module_from_spec(spec); spec.loader.exec_module(A)   # overlap(), q_matrix(), q_networkx()
 
 
