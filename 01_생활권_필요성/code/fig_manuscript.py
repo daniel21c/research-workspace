@@ -13,7 +13,7 @@ from matplotlib.patches import Patch, FancyBboxPatch, FancyArrowPatch
 from bundlelib import Ctx, State
 from r1lib import OUT, X, md
 plt.rcParams.update({"font.family": "Arial", "axes.unicode_minus": False, "font.size": 9})
-FIG = Path(__file__).parent.parent / "manuscript" / "figures"; TAB = Path(__file__).parent.parent / "manuscript" / "tables"; FIG.mkdir(parents=True, exist_ok=True); TAB.mkdir(parents=True, exist_ok=True)
+FIG = Path(__file__).parent.parent / "manuscript" / "figures"; TAB = Path(__file__).parent / "manuscript_src" / "tables"; FIG.mkdir(parents=True, exist_ok=True); TAB.mkdir(parents=True, exist_ok=True)
 BL, OR, AQ, YE, GR, LG = "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#52514e", "#e6e6e3"
 def clean(ax, axis="y"): ax.grid(color=LG, linewidth=0.6, axis=axis); ax.spines[["top", "right"]].set_visible(False); ax.set_axisbelow(True)
 
@@ -33,7 +33,7 @@ ax.legend(handles=[plt.Line2D([], [], color=GR, lw=1.4, label="Gu (25)"), plt.Li
                    plt.Line2D([], [], color="#c8c8c4", lw=0.6, label="Administrative dong (424)")], loc="lower left", frameon=False)
 ax.annotate("", xy=(0.95, 0.95), xytext=(0.95, 0.86), xycoords="axes fraction", arrowprops=dict(arrowstyle="-|>", color=GR)); ax.text(0.95, 0.965, "N", transform=ax.transAxes, ha="center")
 x0, y0 = ax.get_xlim()[1] - 12000, ax.get_ylim()[0] + 1500; ax.plot([x0, x0 + 10000], [y0, y0], color=GR, lw=2); ax.text(x0 + 5000, y0 + 500, "10 km", ha="center")
-fig.tight_layout(); fig.savefig(FIG / "Fig1_study_area.png", dpi=300); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "Fig1_study_area.png", dpi=600); fig.savefig(FIG / "Fig1_study_area.pdf"); plt.close(fig)
 
 # ---------- Fig. 2 Framework ----------
 fig, ax = plt.subplots(figsize=(7.2, 3.6)); ax.set_xlim(0, 10); ax.set_ylim(0, 5); ax.set_axis_off()
@@ -49,7 +49,7 @@ box(5.7, 1.75, 2.0, 2.95, "Score\n(three report cards)\n\n1 Total access\n2 Bott
 box(8.1, 2.75, 1.8, 1.95, "RQ2\nDo grid rules\nfill every\nliving zone?", fc="#eaf2fc", ec=BL, bold=True)
 box(8.1, 0.15, 1.8, 2.3, "RQ3\nWhich unit can\nmeet the minimum?\n+ official vs random\n116 boundaries", fc="#eaf2fc", ec=BL, bold=True)
 arr(1.2, 3.6, 1.2, 3.2); arr(2.3, 4.15, 2.8, 4.15); arr(4.0, 3.6, 4.0, 3.2); arr(5.2, 2.45, 5.7, 2.6); arr(5.2, 0.85, 5.7, 1.9); arr(7.7, 3.6, 8.1, 3.6); arr(7.7, 2.1, 8.1, 1.6)
-fig.tight_layout(); fig.savefig(FIG / "Fig2_framework.png", dpi=300); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "Fig2_framework.png", dpi=600); fig.savefig(FIG / "Fig2_framework.pdf"); plt.close(fig)
 
 # ---------- Fig. 3 Completion curves ----------
 DEF = [("logan4_원정의(약국·슈퍼·공원·초등)", "Logan et al. 4 amenities", AQ), ("logan7_최댓값(cat_A 7)", "Everyday functions (7 categories)", GR),
@@ -69,7 +69,7 @@ def dist(r, kmax):
 xs = np.arange(4); w = 0.38
 ax.bar(xs - w / 2, np.array(dist(a, 7)) * 100, w, color=GR, label="Everyday functions, 15 min"); ax.bar(xs + w / 2, np.array(dist(b, 6)) * 100, w, color=OR, label="Planned services, 10 min")
 ax.set_xticks(xs); ax.set_xticklabels(["1", "2", "3", "4+"]); ax.set_xlabel("Missing domains"); ax.set_ylabel("Share of non-completing residents (%)"); ax.set_title("(c) Missing domains, 2025", loc="left"); ax.legend(frameon=False, fontsize=8); clean(ax)
-fig.tight_layout(); fig.savefig(FIG / "Fig3_completion_curves.png", dpi=300); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "Fig3_completion_curves.png", dpi=600); fig.savefig(FIG / "Fig3_completion_curves.pdf"); plt.close(fig)
 
 # ---------- Fig. 4 Single facilities ----------
 pol = [("P0", "Grid efficiency", GR), ("PG1", "Grid vulnerability-weighted", YE), ("PL_구", "Gu minimum", OR), ("PL_공식", "Living-zone minimum", BL)]
@@ -83,7 +83,7 @@ for ax, y, lab in zip(axes, ("2020", "2025"), ("(a) 2020", "(b) 2025")):
             if vv == 0: ax.text(xx, 0.2, "0", ha="center", va="bottom", fontsize=7, color=col, fontweight="bold")
     ax.set_xticks(xs); ax.set_xticklabels([f[1] for f in fac], rotation=30, ha="right"); ax.set_title(lab, loc="left"); clean(ax)
 axes[0].set_ylabel("Living zones below the minimum (of 116)"); axes[0].legend(frameon=False, fontsize=8)
-fig.tight_layout(); fig.savefig(FIG / "Fig4_single_facility_shortfall.png", dpi=300); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "Fig4_single_facility_shortfall.png", dpi=600); fig.savefig(FIG / "Fig4_single_facility_shortfall.pdf"); plt.close(fig)
 
 # ---------- Fig. 5 Map ----------
 def lz_share(c, picks):
@@ -102,7 +102,7 @@ for ax, (t, picks) in zip(axes, [("(a) Before placement", None), ("(b) Grid-opti
     g.plot(column="share", cmap=cmap, norm=norm, ax=ax, edgecolor="white", linewidth=0.3); gu.boundary.plot(ax=ax, color=GR, linewidth=0.5)
     ax.set_axis_off(); ax.set_title(f"{t}\nZero-completion zones: {int((sh <= 0).sum())}; below 5%: {int((sh < 0.05).sum())}", fontsize=8.5, loc="left")
 fig.legend(handles=[Patch(color=cmap(i), label=l) for i, l in enumerate(["0%", "0–5%", "5–10%", "10–25%", "≥25%"])], loc="lower center", ncol=5, frameon=False, title="Residents completing the six-domain bundle within 10 min")
-fig.tight_layout(rect=(0, 0.1, 1, 1)); fig.savefig(FIG / "Fig5_living_zone_map_2025.png", dpi=300); plt.close(fig)
+fig.tight_layout(rect=(0, 0.1, 1, 1)); fig.savefig(FIG / "Fig5_living_zone_map_2025.png", dpi=600); fig.savefig(FIG / "Fig5_living_zone_map_2025.pdf"); plt.close(fig)
 
 # ---------- Fig. 6 Zero-completion zones by unit ----------
 fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.8), sharex=True)
@@ -119,7 +119,7 @@ for ax, y, lab in zip(axes, ("2020", "2025"), ("(a) 2020", "(b) 2025")):
     for yy, v in zip(ys, vals): ax.text((0 if np.isnan(v) else v) + 0.5, yy, "not run" if np.isnan(v) else f"{v:.0f}", va="center", fontsize=8)
     ax.set_yticks(ys); ax.set_yticklabels([r[0] for r in rows]); ax.invert_yaxis(); ax.set_title(lab, loc="left"); clean(ax, "x")
     ax.set_xlabel("Zero-completion living zones (of 116)")
-fig.tight_layout(); fig.savefig(FIG / "Fig6_zero_completion_by_unit.png", dpi=300); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "Fig6_zero_completion_by_unit.png", dpi=600); fig.savefig(FIG / "Fig6_zero_completion_by_unit.pdf"); plt.close(fig)
 
 # ---------- Tables ----------
 M = ctx["2025"].Yr.M
