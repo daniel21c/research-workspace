@@ -268,9 +268,27 @@ class Writer:
                 h.set_style(ST["표본문"]); h.HAction.Run(ALIGN["Left" if j == 0 else "Center"])
                 h.set_font(Height=size, Bold=(i == 0 or last)); h.insert_text(str(v))
                 if not (i == len(data) - 1 and j == len(row) - 1): h.TableRightCell()
+        self._kpa_table_lines()
         h.MoveDocEnd()
         h.set_para(KeepWithNext=1)                                             # 표와 아래 주석이 떨어지지 않게
         h.BreakPara()
+
+    def _kpa_table_lines(self):
+        """학회 국문샘플(2026-01-22판)의 표 선: 세로선·바깥 좌우선 없음, 가로선 0.1mm 실선, 머리행 회색 바탕.
+        (샘플 표의 셀 테두리: 좌우 None/흰색, 위아래 Solid 0.1mm — kpa_sample.hml에서 확인, 2026-10-02)"""
+        h = self.h; hw = h.hwp
+        hw.HAction.Run("TableCellBlock"); hw.HAction.Run("TableCellBlockExtend"); hw.HAction.Run("TableCellBlockExtend")   # 표 전체 셀 선택
+        ps = hw.HParameterSet.HCellBorderFill; hw.HAction.GetDefault("CellBorderFill", ps.HSet)
+        none, solid, w = hw.HwpLineType("None"), hw.HwpLineType("Solid"), hw.HwpLineWidth("0.1mm")
+        ps.BorderTypeLeft = none; ps.BorderTypeRight = none; ps.TypeVert = none                       # 세로선·좌우 바깥선 없음
+        ps.BorderTypeTop = solid; ps.BorderTypeBottom = solid; ps.TypeHorz = solid                    # 가로선 0.1mm 검정
+        ps.BorderWidthTop = w; ps.BorderWidthBottom = w; ps.WidthHorz = w
+        ps.BorderColorTop = 0; ps.BorderColorBottom = 0; ps.ColorHorz = 0
+        hw.HAction.Execute("CellBorderFill", ps.HSet); hw.HAction.Run("Cancel")
+        hw.HAction.Run("TableColPageUp"); hw.HAction.Run("TableColBegin")                                              # 첫 행 첫 셀
+        hw.HAction.Run("TableCellBlock"); hw.HAction.Run("TableCellBlockRow")                                           # 머리행 선택
+        h.cell_fill((230, 230, 230))
+        hw.HAction.Run("Cancel")
 
     def picture(self, path: Path, width_cm: float):
         h = self.h
@@ -299,8 +317,8 @@ def layout_check(pdf: Path, h2s=()) -> dict:
         rects = [fitz.Rect(l["bbox"]) for b in pg.get_text("dict")["blocks"] for l in b.get("lines", []) if "".join(s["text"] for s in l["spans"]).strip()]
         if any((not (rects[a] & rects[c]).is_empty) and (rects[a] & rects[c]).height > 2 and (rects[a] & rects[c]).width > 5 for a in range(len(rects)) for c in range(a + 1, len(rects))): over.append(i + 1)
         t = pg.get_text()
-        for m in re.findall(r"(?:표|그림) (A?\d+)\. ", t): loc.setdefault(("ko", m), i + 1)
-        for m in re.findall(r"(?:Table|Fig\.) (A?\d+)\. ", t): loc.setdefault(("en", m), i + 1)
+        for k, m in re.findall(r"(표|그림) (A?\d+)\. ", t): loc.setdefault(("ko", k + m), i + 1)        # 표 A1·그림 A1을 따로 센다
+        for k, m in re.findall(r"(Table|Figure|Fig\.) (A?\d+)\. ", t): loc.setdefault(("en", ("표" if k == "Table" else "그림") + m), i + 1)
         Wd, Hd = pg.rect.width, pg.rect.height
         blocks = [b for b in pg.get_text("blocks") if b[4].strip() and b[1] > 65 and b[3] < Hd - 40]   # 머리말·꼬리말 제외(꼬리말이 마지막 블록이 되어 그 위의 제목을 놓치던 문제)
         for c in (0, 1):

@@ -99,17 +99,16 @@ def cell_text(cell, text, size=7.5, bold=False, align=WD_ALIGN_PARAGRAPH.CENTER)
 
 
 def borders(table):
-    """학술지 표: 위·아래 굵은 선, 머리행 아래 가는 선, 세로선 없음."""
+    """학회 국문샘플 표: 가로선 0.1mm, 세로선·좌우 바깥선 없음, 머리행 회색."""
     tbl = table._tbl; tblPr = tbl.tblPr
     b = OxmlElement("w:tblBorders")
-    for edge, val, sz in (("top", "single", 12), ("bottom", "single", 12), ("left", "nil", 0), ("right", "nil", 0), ("insideH", "nil", 0), ("insideV", "nil", 0)):
+    for edge, val, sz in (("top", "single", 2), ("bottom", "single", 2), ("left", "nil", 0), ("right", "nil", 0), ("insideH", "single", 2), ("insideV", "nil", 0)):   # 학회 샘플: 가로선 0.1mm, 세로선 없음
         e = OxmlElement(f"w:{edge}"); e.set(qn("w:val"), val)
         if sz: e.set(qn("w:sz"), str(sz)); e.set(qn("w:color"), "000000")
         b.append(e)
     tblPr.append(b)
-    for c in table.rows[0].cells:
-        tcPr = c._tc.get_or_add_tcPr(); tb = OxmlElement("w:tcBorders"); e = OxmlElement("w:bottom")
-        e.set(qn("w:val"), "single"); e.set(qn("w:sz"), "6"); e.set(qn("w:color"), "000000"); tb.append(e); tcPr.append(tb)
+    for c in table.rows[0].cells:                                     # 머리행 회색 바탕(학회 샘플)
+        tcPr = c._tc.get_or_add_tcPr(); sh = OxmlElement("w:shd"); sh.set(qn("w:val"), "clear"); sh.set(qn("w:color"), "auto"); sh.set(qn("w:fill"), "E6E6E6"); tcPr.append(sh)
 
 
 def add_table(doc, headers, rows, widths_cm, first_left=True, bold_last=False):
