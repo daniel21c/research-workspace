@@ -14,7 +14,7 @@
 
 | 파일 | 내용 |
 |---|---|
-| `manuscript/AG_manuscript_anonymised.docx` (.pdf) | 투고용 익명 본문(초록 245단어·본문·표 4·그림 4·참고문헌 51편, 전체 7,885단어) |
+| `manuscript/AG_manuscript_anonymised.docx` (.pdf) | 투고용 익명 본문(초록 245단어·본문·표 4·그림 4·참고문헌 51편, 전체 7,881단어) |
 | `manuscript/AG_한국어_원고.docx` (.pdf) | 같은 내용의 한국어 전문(검토용) |
 | `manuscript/AG_supplementary_appendix.docx` (.pdf) | 부록 A: Table A.1 시설 유형, A.2 범주별 누락, A.3 민감도·초기 분석, A.4 범주별 경로 끝 변화, A.5 누락을 달리 센 결과(5범주·시점 등급 C 제외), A.6 시설 원천 자료 |
 | `manuscript/AG_title_page.docx`, `AG_highlights.docx`, `AG_cover_letter.docx` | 제목 면(저자 2인·ORCID·연구비·CRediT·저장소 링크), 하이라이트 5개, 투고 편지 |

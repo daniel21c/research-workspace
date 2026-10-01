@@ -384,7 +384,6 @@ def render(blocks, V, TB, caps, d, lang='en'):
 REFS = [
     'Alexander, L., Jiang, S., Murga, M., & González, M. C. (2015). Origin–destination trips by purpose and time of day inferred from mobile phone data. Transportation Research Part C: Emerging Technologies, 58, 240–250. https://doi.org/10.1016/j.trc.2015.02.018',
     'Allam, Z., Nieuwenhuijsen, M., Chabaud, D., & Moreno, C. (2022). The 15-minute city offers a new framework for sustainability, liveability, and health. The Lancet Planetary Health, 6(3), e181–e183. https://doi.org/10.1016/S2542-5196(22)00014-6',
-    'Berlin Senate Department for Urban Development, Building and Housing. (2021). Lebensweltlich orientierte Räume (LOR): Spatial reference system for Berlin. https://gdi.berlin.de/',
     'Boyne, G., & Powell, M. (1991). Territorial justice: A review of theory and evidence. Political Geography Quarterly, 10(3), 263–281. https://doi.org/10.1016/0260-9827(91)90038-V',
     'Chen, J., & Rodden, J. (2013). Unintentional gerrymandering: Political geography and electoral bias in legislatures. Quarterly Journal of Political Science, 8(3), 239–269. https://doi.org/10.1561/100.00012033',
     'Coombes, M., & Bond, S. (2008). Travel-to-work areas: The 2007 review. Office for National Statistics.',
@@ -422,6 +421,7 @@ REFS = [
     'Perry, C. A. (1929). The neighborhood unit. In Regional survey of New York and its environs, Vol. VII: Neighborhood and community planning. Regional Plan of New York and Its Environs.',
     'Polsby, D. D., & Popper, R. D. (1991). The third criterion: Compactness as a procedural safeguard against partisan gerrymandering. Yale Law & Policy Review, 9(2), 301–353.',
     'Ratti, C., Sobolevsky, S., Calabrese, F., Andris, C., Reades, J., Martino, M., Claxton, R., & Strogatz, S. H. (2010). Redrawing the map of Great Britain from a network of human interactions. PLoS ONE, 5(12), Article e14248. https://doi.org/10.1371/journal.pone.0014248',
+    'Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen. (2021). Lebensweltlich orientierte Räume (LOR) in Berlin [Lifeworld-oriented spaces (LOR) in Berlin]. https://www.berlin.de/sen/stadt/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/',
     'Seoul Metropolitan Government. (2018). 2030 Seoul living-zone plan [in Korean]. Seoul Urban Planning Portal. https://urban.seoul.go.kr/view/html/PMNU3040000001',
     'Shen, Y., & Batty, M. (2019). Delineating the perceived functional regions of London from commuting flows. Environment and Planning A: Economy and Space, 51(3), 547–550. https://doi.org/10.1177/0308518X18786253',
     'Smart, M. W. (1974). Labour market areas: Uses and definition. Progress in Planning, 2, 239–353. https://doi.org/10.1016/0305-9006(74)90008-7',

@@ -32,7 +32,7 @@ BODY = [
           'idea runs from Perry’s (1929) neighbourhood unit, sized by the walk to an elementary school, through the guidelines '
           'reviewed by Park and Rogers (2015), to Talen’s (2003) view of neighbourhoods as providers of walkable services.'),
     ('p', 'Cities use planning areas of several sizes. Berlin’s lifeworld-oriented spaces are the spatial reference for social '
-          'planning and population monitoring (Berlin Senate Department for Urban Development, Building and Housing, 2021). The '
+          'planning and population monitoring (Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen, 2021). The '
           '2016 London Plan used sub-regions for monitoring and coordination across boroughs (Greater London Authority, 2016), and '
           'Greater Sydney’s 2018 strategy grouped the region into three cities and five districts around a 30-minute access aim '
           '(Greater Sydney Commission, 2018). Seoul’s living-zone plan, adopted under the city’s 2030 planning framework, has five '

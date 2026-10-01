@@ -4,7 +4,7 @@
 - 상태(2026-10-02): 원고 확정. 2026-09-30 교수님 팀즈 보고 → 2026-10-02 데이터 사용 정합 감사(S1 0건·S2 1건·S3 8건) 반영 완료. 팀즈 게시글 수정본과 "9/30 보고판 대비 바뀐 점"은 `보고_20260930/`에 있고 아직 보내지 않았다. 교수님 승인·공저자 확인 뒤 투고.
 - **핵심 결과**: 통행 기준 재배정은 자족성을 높이면서 생활권 안 보행 시설 누락의 **총량**을 줄였고(무작위는 예외 없이 늘림), 그 감소는 문화·행정·안전에서 나왔다(나머지 다섯 범주는 늘었지만 무작위보다 덜). 공식 생활권은 대안 지도 거의 전부보다 낫다. 통행–시설 위치 관계는 의료·소매·생활서비스에서 강하지만 감소를 설명하지 않는다.
 - **설계**: [연구설계.md](연구설계.md) — 질문과 답, 분석의 틀, 원고 구성·쓰기 규칙, 본문 밖 분석과 한계, 재현 순서, 변경 이력
-- **원고**: `manuscript/` — `AG_manuscript_anonymised.docx`(익명 본문, 7,885단어) · `AG_title_page.docx` · `AG_highlights.docx` · `AG_supplementary_appendix.docx`(Table A.1~A.6) · `AG_cover_letter.docx` · 한국어 전문 `AG_한국어_원고.docx` · 그림 `figures/` · 채운 값 `values_used.json` · 단어 수 `word_count.json`. PDF는 `보고_20260930/`와 패키지 zip 안에 있다.
+- **원고**: `manuscript/` — `AG_manuscript_anonymised.docx`(익명 본문, 7,881단어) · `AG_title_page.docx` · `AG_highlights.docx` · `AG_supplementary_appendix.docx`(Table A.1~A.6) · `AG_cover_letter.docx` · 한국어 전문 `AG_한국어_원고.docx` · 그림 `figures/` · 채운 값 `values_used.json` · 단어 수 `word_count.json`. PDF는 `보고_20260930/`와 패키지 zip 안에 있다.
 - **공동연구자 패키지**: `package/AG_확정본_공동연구자패키지_20260930.zip` (안내 `package/README_패키지.md`, 새 폴더 자체 점검 `package/package_selfcheck.json`)
 - **교수님 보고 세트**: `보고_20260930/` (보고 메모 docx·pdf, 팀즈 게시글 수정본, 9/30 보고판 대비 변경점, 한·영 원고·부록 PDF, 패키지 zip 사본, 그래픽 초록)
 - **검수·감사 대응**: [검수의견_대응표_20260930.md](검수의견_대응표_20260930.md) — 1~9절 외부 검수, 10절 문체 개정, 11절 쉬운 어휘·AG 서식, 12절 데이터 사용 정합 감사(반영·미반영 이유)
