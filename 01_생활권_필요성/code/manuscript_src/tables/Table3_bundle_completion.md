@@ -1,4 +1,4 @@
-# Table 3 Bundle completion rate (% of residents) by walking-time threshold
+# Table 3. Bundle completion rate by walking-time threshold (% of residents).
 
 | Bundle | 2020 10 min | 2020 15 min | 2025 10 min | 2025 15 min |
 |---|---|---|---|---|

@@ -43,9 +43,9 @@ def arr(x1, y1, x2, y2): ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrows
 box(0.1, 3.6, 2.2, 1.1, "Measure\n100 m grid population\nwalking times (OSM, 4 km/h)\nfacility inventories", fc="#f4f4f2")
 box(0.1, 2.1, 2.2, 1.1, "RQ1\nBundle completion\nby living zone", fc="#eaf2fc", ec=BL, bold=True)
 box(2.8, 3.6, 2.4, 1.1, "Place\nN facilities = net additions\n2020→2025, same for all rules", fc="#f4f4f2")
-box(2.8, 1.75, 2.4, 1.45, "Grid-based rules\n• efficiency (max new access)\n• vulnerability-weighted\n• bundle MCLP (exact)", fc="#fdf3df", ec=YE)
+box(2.8, 1.75, 2.4, 1.45, "Grid-based rules\n• efficiency\n• access-poor weighting\n• bundle maximisation (exact)\n• coordinated", fc="#fdf3df", ec=YE)
 box(2.8, 0.15, 2.4, 1.45, "Zone-based rules\nminimum standard first, then\nefficiency, set by\ngu / living zone / dong", fc="#fbe6dc", ec=OR)
-box(5.7, 1.75, 2.0, 2.95, "Score\n(three report cards)\n\n1 Total access\n2 Bottom-20 residents\n3 Living zones below\n   the minimum", fc="#f4f4f2")
+box(5.7, 1.75, 2.0, 2.95, "Score\n(three report cards)\n\n1 Total access\n2 Access-poor residents\n3 Living zones below\n   the minimum", fc="#f4f4f2")
 box(8.1, 2.75, 1.8, 1.95, "RQ2\nDo grid rules\nfill every\nliving zone?", fc="#eaf2fc", ec=BL, bold=True)
 box(8.1, 0.15, 1.8, 2.3, "RQ3\nWhich unit can\nmeet the minimum?\n+ official vs random\n116 boundaries", fc="#eaf2fc", ec=BL, bold=True)
 arr(1.2, 3.6, 1.2, 3.2); arr(2.3, 4.15, 2.8, 4.15); arr(4.0, 3.6, 4.0, 3.2); arr(5.2, 2.45, 5.7, 2.6); arr(5.2, 0.85, 5.7, 1.9); arr(7.7, 3.6, 8.1, 3.6); arr(7.7, 2.1, 8.1, 1.6)
@@ -72,7 +72,7 @@ ax.set_xticks(xs); ax.set_xticklabels(["1", "2", "3", "4+"]); ax.set_xlabel("Mis
 fig.tight_layout(); fig.savefig(FIG / "Fig3_completion_curves.png", dpi=600); fig.savefig(FIG / "Fig3_completion_curves.pdf"); plt.close(fig)
 
 # ---------- Fig. 4 Single facilities ----------
-pol = [("P0", "Grid efficiency", GR), ("PG1", "Grid vulnerability-weighted", YE), ("PL_구", "Gu minimum", OR), ("PL_공식", "Living-zone minimum", BL)]
+pol = [("P0", "Grid efficiency", GR), ("PG1", "Grid access-poor weighting", YE), ("PL_구", "Gu minimum", OR), ("PL_공식", "Living-zone minimum", BL)]
 fac = [("도서관", "Library"), ("국공립유치원10분", "Public kindergarten"), ("공공문화시설", "Cultural facility"), ("국공립어린이집5분", "Public childcare"), ("주민센터", "Community centre"), ("노인이용시설", "Senior facility"), ("청소년수련시설", "Youth centre")]
 fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.6), sharey=True)
 for ax, y, lab in zip(axes, ("2020", "2025"), ("(a) 2020", "(b) 2025")):
@@ -96,22 +96,25 @@ c = ctx["2025"]
 mip = json.load(open(OUT / "exp16_milp_picks_seoul_2025.json", encoding="utf-8"))["MIP"]["picks"]
 flo = json.load(open(OUT / "exp20_picks_2025_공식LZ_long_0.05.json", encoding="utf-8"))["picks"]
 cmap = ListedColormap(["#7a1f12", "#f0a080", "#f6d7c3", "#cfe0f5", "#2a78d6"]); norm = BoundaryNorm([-1e-9, 1e-9, 0.05, 0.10, 0.25, 1.0], cmap.N)
-fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.9))
-for ax, (t, picks) in zip(axes, [("(a) Before placement", None), ("(b) Grid-optimised (exact MCLP)", mip), ("(c) Living-zone minimum 5% (MIP)", flo)]):
+fig, axes = plt.subplots(1, 3, figsize=(10.5, 4.3))
+for ax, (t, picks) in zip(axes, [("(a) Before placement", None), ("(b) Grid bundle maximisation", mip), ("(c) Living-zone minimum 5%", flo)]):
     sh = lz_share(c, picks); g = lz.merge(sh, left_on="life_zone_id", right_index=True, how="left")
     g.plot(column="share", cmap=cmap, norm=norm, ax=ax, edgecolor="white", linewidth=0.3); gu.boundary.plot(ax=ax, color=GR, linewidth=0.5)
-    ax.set_axis_off(); ax.set_title(f"{t}\nZero-completion zones: {int((sh <= 0).sum())}; below 5%: {int((sh < 0.05).sum())}", fontsize=8.5, loc="left")
+    ax.set_axis_off(); ax.set_title(f"{t}\nZero-completion: {int((sh <= 0).sum())}; below 5%: {int((sh < 0.05).sum())}", fontsize=8.5, loc="left", pad=6)
+    if t.startswith("(a)"):
+        ax.annotate("", xy=(0.93, 0.97), xytext=(0.93, 0.85), xycoords="axes fraction", arrowprops=dict(arrowstyle="-|>", color=GR)); ax.text(0.93, 0.99, "N", transform=ax.transAxes, ha="center", va="bottom", fontsize=8)
+        x0, y0 = ax.get_xlim()[1] - 11000, ax.get_ylim()[0] + 800; ax.plot([x0, x0 + 10000], [y0, y0], color=GR, lw=2); ax.text(x0 + 5000, y0 + 500, "10 km", ha="center", fontsize=8)
 fig.legend(handles=[Patch(color=cmap(i), label=l) for i, l in enumerate(["0%", "0–5%", "5–10%", "10–25%", "≥25%"])], loc="lower center", ncol=5, frameon=False, title="Residents completing the six-domain bundle within 10 min")
-fig.tight_layout(rect=(0, 0.1, 1, 1)); fig.savefig(FIG / "Fig5_living_zone_map_2025.png", dpi=600); fig.savefig(FIG / "Fig5_living_zone_map_2025.pdf"); plt.close(fig)
+fig.tight_layout(rect=(0, 0.1, 1, 0.96)); fig.savefig(FIG / "Fig5_living_zone_map_2025.png", dpi=600); fig.savefig(FIG / "Fig5_living_zone_map_2025.pdf"); plt.close(fig)
 
 # ---------- Fig. 6 Zero-completion zones by unit ----------
 fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.8), sharex=True)
-base = {"2020": {"before": 50, "mip": 18, "p2": 21}, "2025": {"before": 38, "mip": 14, "p2": 19}}
+base = {"2020": {"before": 50, "ind": 21, "mip": 18, "p2": 21}, "2025": {"before": 38, "ind": 13, "mip": 14, "p2": 19}}
 for ax, y, lab in zip(axes, ("2020", "2025"), ("(a) 2020", "(b) 2025")):
     T = pd.read_csv(OUT / f"표4.1-23_권역최저선_{y}.csv")
     def z(u): r = T[(T.단위 == u) & (T.τ == 0.05)]; return float(r["공식LZ_0%권역"].median()) if len(r) else np.nan
     rnd = T[T.단위.str.startswith("rand116") & (T.τ == 0.05)]["공식LZ_0%권역"]
-    rows = [("Before placement", base[y]["before"], GR), ("Grid: maximise total (exact)", base[y]["mip"], GR), ("Grid: vulnerability-weighted (P=2)", base[y]["p2"], YE),
+    rows = [("Before placement", base[y]["before"], GR), ("Grid: facility-by-facility (exact)", base[y]["ind"], GR), ("Grid: bundle maximisation (exact)", base[y]["mip"], GR), ("Grid: coordinated (P=2)", base[y]["p2"], YE),
             ("Gu minimum 5%", z("구"), OR), ("Dong minimum 5%", z("동"), OR), ("Random 116 minimum 5%", float(rnd.median()) if len(rnd) else np.nan, AQ),
             ("Mobility-community 116 minimum 5%", z("Leiden"), AQ), ("Living-zone minimum 5%", z("공식LZ_long"), BL)]
     ys = np.arange(len(rows)); vals = [r[1] for r in rows]
@@ -126,36 +129,36 @@ M = ctx["2025"].Yr.M
 rows = []
 for name, col, g in (("Gu", "ku", gu), ("Official living zone", "lz", lz), ("Administrative dong", "dong", dong)):
     s = M.groupby(col)["pop"].sum(); a = g.geometry.area / 1e6
-    rows.append({"Unit": name, "Number": s.size, "Mean population (2024)": f"{s.mean():,.0f}", "Population range": f"{s.min():,.0f}–{s.max():,.0f}", "Mean area (km²)": f"{a.mean():.2f}"})
-rows.append({"Unit": "Grid cell (100 m, populated)", "Number": int((M["pop"] > 0).sum()), "Mean population (2024)": f"{M['pop'][M['pop'] > 0].mean():,.0f}", "Population range": "", "Mean area (km²)": "0.01"})
+    rows.append({"Unit": name, "Number": f"{s.size:,}" if s.size >= 10000 else s.size, "Mean population (2024)": f"{s.mean():,.0f}", "Population range": f"{s.min():,.0f}–{s.max():,.0f}", "Mean area (km²)": f"{a.mean():.2f}"})
+rows.append({"Unit": "Grid cell (100 m, populated)", "Number": f"{int((M["pop"] > 0).sum()):,}", "Mean population (2024)": f"{M['pop'][M['pop'] > 0].mean():,.0f}", "Population range": "", "Mean area (km²)": "0.01"})
 T1 = pd.DataFrame(rows); T1.to_csv(TAB / "Table1_planning_hierarchy.csv", index=False, encoding="utf-8-sig")
 nest = f"Each living zone contains {M.groupby('lz').dong.nunique().mean():.1f} dong on average (range {M.groupby('lz').dong.nunique().min()}–{M.groupby('lz').dong.nunique().max()}); each gu contains {M.groupby('ku').lz.nunique().mean():.1f} living zones (range {M.groupby('ku').lz.nunique().min()}–{M.groupby('ku').lz.nunique().max()})."
-(TAB / "Table1_planning_hierarchy.md").write_text("# Table 1 Planning hierarchy of Seoul\n\n" + md(T1, "{}") + "\n\n" + nest + "\n", encoding="utf-8")
+(TAB / "Table1_planning_hierarchy.md").write_text("# Table 1. Planning hierarchy of Seoul.\n\n" + md(T1, "{}") + "\n\nNote: " + nest + "\n", encoding="utf-8")
 cn = {"공원": "Park", "도서관": "Public library", "노인여가": "Senior leisure", "청소년아동": "Youth and children", "보육": "Childcare", "공공체육": "Public sports"}
 pl = {"도서관": "Public library", "노인이용시설": "Senior facility", "청소년수련시설": "Youth centre", "국공립어린이집5분": "Public childcare centre", "공공체육": "Public sports facility"}
 r2 = []
 for k, (n, idx, subs) in enumerate(ctx["2025"].CATS):
-    n20 = len(ctx["2020"].CATS[k][1]); r2.append({"Domain": cn[n], "Facility cells 2020": n20, "Facility cells 2025": len(idx), "Placed type (N)": "; ".join(f"{pl[s]} ({K})" for s, K in subs) or "fixed (not placed)"})
+    n20 = len(ctx["2020"].CATS[k][1]); r2.append({"Domain": cn[n], "Facility cells 2020": f"{n20:,}" if n20 >= 10000 else n20, "Facility cells 2025": f"{len(idx):,}" if len(idx) >= 10000 else len(idx), "Placed type (N)": "; ".join(f"{pl[s]} ({K})" for s, K in subs) or "fixed (not placed)"})
 T2 = pd.DataFrame(r2); T2.to_csv(TAB / "Table2_bundle_domains.csv", index=False, encoding="utf-8-sig")
-(TAB / "Table2_bundle_domains.md").write_text("# Table 2 Planned public-service bundle: domains, facility cells and placement budget\n\nN = net increase in facility-occupied 100 m cells, 2020→2025 (total 381). Park layer: 2018 living-zone plan layer, fixed for both years. Youth and children = youth centres ∪ community child centres (2026 list, fixed).\n\n" + md(T2, "{}") + "\n", encoding="utf-8")
+(TAB / "Table2_bundle_domains.md").write_text("# Table 2. Planned public-service bundle: Domains, facility cells and placement budget.\n\nNote: N = net increase in facility-occupied 100 m cells, 2020→2025 (total 381). Park layer: 2018 living-zone plan layer, fixed for both years. Youth and children = youth centres ∪ community child centres (current list, fixed). Childcare cells count all childcare centres, public and private, and fell as private centres closed; the budget counts public centres only.\n\n" + md(T2, "{}") + "\n", encoding="utf-8")
 W = {y: pd.read_csv(OUT / f"표4.1-16_묶음정의별_완결_{y}.csv") for y in ("2020", "2025")}
 def g3(y, key, t): d = W[y]; r = d[(d.정의.str.startswith(key)) & (d["임계(분)"] == t)]; return f"{r.완결률.iloc[0]*100:.1f}" if len(r) else ""
 r3 = [{"Bundle": lab, **{f"{y} {t} min": g3(y, key, t) for y in ("2020", "2025") for t in (10, 15)}} for key, lab in (("logan4", "Logan et al. 4 amenities"), ("logan7", "Everyday functions (7 categories)"), ("seoul_FULL_6분야(공원·도서관", "Planned public services (6 domains)"))]
 T3 = pd.DataFrame(r3); T3.to_csv(TAB / "Table3_bundle_completion.csv", index=False, encoding="utf-8-sig")
-(TAB / "Table3_bundle_completion.md").write_text("# Table 3 Bundle completion rate (% of residents) by walking-time threshold\n\n" + md(T3, "{}") + "\n", encoding="utf-8")
-r4 = [("Grid efficiency (single facility)", "P0"), ("Grid vulnerability-weighted (single facility)", "PG1"), ("Gu minimum (single facility)", "PL_구"), ("Living-zone minimum (single facility)", "PL_공식"), ("Living-zone minimum + vulnerability (single facility)", "HY_공식")]
+(TAB / "Table3_bundle_completion.md").write_text("# Table 3. Bundle completion rate by walking-time threshold (% of residents).\n\n" + md(T3, "{}") + "\n", encoding="utf-8")
+r4 = [("Grid efficiency", "P0"), ("Grid access-poor weighting", "PG1"), ("Gu minimum", "PL_구"), ("Living-zone minimum", "PL_공식"), ("Living-zone minimum + access-poor weighting", "HY_공식")]
 D10 = {y: pd.read_csv(OUT / f"표4.1-10_정책비교_{y}.csv").groupby(["시설", "정책"]).median(numeric_only=True) for y in ("2020", "2025")}
 rows = []
 for lab, k in r4:
     for f, fl in (("도서관", "Library"), ("국공립유치원10분", "Public kindergarten")):
         rows.append({"Rule": lab, "Facility": fl, **{f"{y} total access (%)": f"{D10[y].loc[(f, k), 'COV']*100:.1f}" for y in ("2020", "2025")},
-                     **{f"{y} vulnerable-20 reach (%)": f"{D10[y].loc[(f, k), '취약20_도달률']*100:.1f}" for y in ("2020", "2025")},
+                     **{f"{y} access-poor reached (%)": f"{D10[y].loc[(f, k), '취약20_도달률']*100:.1f}" for y in ("2020", "2025")},
                      **{f"{y} living zones below minimum": int(D10[y].loc[(f, k), '공식_미달수']) for y in ("2020", "2025")}})
 T4a = pd.DataFrame(rows)
-B = [("Grid: facility-by-facility (exact)", "IND", (14.68, 16.51), (0.91, 1.12), (21, 13)), ("Grid: maximise bundle (exact MCLP)", "MIP", (22.80, 24.22), (0.11, 0.24), (18, 14)),
-     ("Grid: vulnerability-weighted (P=2)", "P2", (17.59, 18.47), (5.83, 6.31), (21, 19))]
+B = [("Grid: facility-by-facility (exact)", "IND", (14.68, 16.51), (0.91, 1.12), (21, 13)), ("Grid: bundle maximisation (exact)", "MIP", (22.80, 24.22), (0.11, 0.24), (18, 14)),
+     ("Grid: coordinated (P=2)", "P2", (17.59, 18.47), (5.83, 6.31), (21, 19))]
 rows = [{"Rule": a, "2020 completion (%)": f"{b[0]:.1f}", "2025 completion (%)": f"{b[1]:.1f}", "2020 bottom-20 (%)": f"{c_[0]:.1f}", "2025 bottom-20 (%)": f"{c_[1]:.1f}", "2020 zero-completion zones": d[0], "2025 zero-completion zones": d[1]} for a, _, b, c_, d in B]
-for lab, u in (("Gu minimum 5% (MIP, time-limited)", "구"), ("Dong minimum 5% (MIP, time-limited)", "동"), ("Living-zone minimum 5% (MIP, time-limited)", "공식LZ_long")):
+for lab, u in (("Gu minimum 5%", "구"), ("Dong minimum 5%", "동"), ("Living-zone minimum 5%", "공식LZ_long")):
     r = {"Rule": lab}
     for y in ("2020", "2025"):
         T = pd.read_csv(OUT / f"표4.1-23_권역최저선_{y}.csv"); q = T[(T.단위 == u) & (T.τ == 0.05)].iloc[0]
@@ -163,5 +166,5 @@ for lab, u in (("Gu minimum 5% (MIP, time-limited)", "구"), ("Dong minimum 5% (
     rows.append(r)
 T4b = pd.DataFrame(rows)
 T4a.to_csv(TAB / "Table4a_single_facility_report_cards.csv", index=False, encoding="utf-8-sig"); T4b.to_csv(TAB / "Table4b_bundle_report_cards.csv", index=False, encoding="utf-8-sig")
-(TAB / "Table4_report_cards.md").write_text("# Table 4 Three report cards by placement rule\n\n## (a) Single facilities (library, public kindergarten)\n\n" + md(T4a, "{}") + "\n\n## (b) Six-domain bundle (10 min)\n\nExact solutions: grid rules optimal (gap 0); zone minimums within time limits (living zone 4 h, gap 3–49%; gu and dong 1.5 h).\n\n" + md(T4b, "{}") + "\n", encoding="utf-8")
+(TAB / "Table4_report_cards.md").write_text("# Table 4. Three report cards by placement rule.\n\n## (a) Single facilities (library, public kindergarten)\n\nNote: Greedy placement. Access-poor: residents in the cells with the poorest pre-placement neighbourhood access (top 20%, ties included). Thresholds: library 15 min, public kindergarten 10 min.\n\n" + md(T4a, "{}") + "\n\n## (b) Six-domain bundle (10 min)\n\nNote: Facility-by-facility planning and bundle maximisation are exact integer programmes (gap 0); the coordinated rule is greedy; the minimum standards are integer programmes solved within time limits (living zones 4 h, gu and dong 1.5 h; Table A.1). Bottom-20: residents who reached the fewest domains before placement.\n\n" + md(T4b, "{}") + "\n", encoding="utf-8")
 print(T1.to_string(index=False)); print(nest); print(T2.to_string(index=False)); print(T3.to_string(index=False)); print(T4b.to_string(index=False)); print("done")

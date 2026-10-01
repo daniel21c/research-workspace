@@ -14,7 +14,7 @@ ROTH = int(sys.argv[2]) if len(sys.argv) > 2 else 40
 RNULL = int(sys.argv[3]) if len(sys.argv) > 3 else 100
 K = 32; rng = np.random.default_rng(20260927); t0 = time.time()
 Y = {y: Year(y) for y in ("2020", "2025")}
-LOSS_SETS = ["도서관", "문화", "행정안전", "유치원10분", "어린이집5분", "초등학교15분", "의원10분", "생활체육10분"]
+LOSS_SETS = ["도서관", "문화", "행정안전", "유치원10분", "어린이집5분", "초등학교15분", "의원10분"]   # 생활체육10분(체육시설업)은 v1.4에서 빈 집합이라 제외(2026-10-02)
 def wmedian(x, w):
     o = np.argsort(x); cw = np.cumsum(w[o]); return x[o][np.searchsorted(cw, cw[-1] / 2)]
 r_none, C_none, tau_main, cand, base_gain = {}, {}, {}, {}, {}

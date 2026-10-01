@@ -21,7 +21,7 @@
 | `01_생활권_필요성/manuscript/` | 투고 docx 6개(익명 원고, 제목면, 하이라이트, 진술문, 투고 서한, 한국어 원고), `figures/`(Fig1~6 png·pdf, Figure_1~6 tif, 그래픽 초록), `word_count.json` |
 | `01_생활권_필요성/보고_20261002/` | 교수님 보고 메모 docx·pdf, Teams 보고글, 한·영 원고 PDF, 그래픽 초록 |
 | `01_생활권_필요성/code/` | 실험 코드 전부(공통 `r1lib.py`, `bundlelib.py`), 원고 원문 `manuscript_src/`(영문·한국어 md, 표), 그림·원고 생성 코드 |
-| `01_생활권_필요성/results/` | 결과 표 `표4.1-*`, 결과총람(분석항목 25개), 그림, 입지 JSON, 실행 로그 `_logs/` |
+| `01_생활권_필요성/results/` | 결과 표 `표4.1-*`, 결과총람(분석항목 26개), 그림, 입지 JSON, 재집계 JSON, 수치 대조 `claims_check.json`, 실행 로그 `_logs/` |
 | `01_생활권_필요성/검수기록/` | 외부 검토 원문·검증 파일, 선행연구 대조(`문헌대조/`: 원문대조표, Cities 문헌 A·B·C) |
 | `01_생활권_필요성/package/` | 이 안내, `make_package.py`, `package_selfcheck.json` |
 | `시설데이터 구축/시설데이터_패키지/부가층_v1.5후보_20261001/` | 공원·공공체육·지역아동센터 부가 층 |
@@ -50,5 +50,11 @@ python exp16_low20.py                       # 정확해의 하위 20%
 python exp19_holdout_sens.py                # 민감도 (표4.1-22)
 python exp20_bundle_floor.py 2025 공식LZ 0.05 14400   # 권역별 묶음 최저선 (표4.1-23)
 python run_exp20.py 5 5400                  # exp20 일괄
+python exp21_floor_proof.py 2025 공식LZ zero 0          # 채울 수 있는지 1단계: 0명 구역 수 최소 (표4.1-24)
+python exp21_floor_proof.py 2025 공식LZ short 0.05 7200  # 1단계: 미달 최소
+python exp21_floor_proof.py 2025 공식LZ max 0.05 14400   # 2단계: 모든 구역 ≥ τ에서 완결 최대(비용 하한)
+python milp_check.py 2020 3600 동             # 행정동 도서관 K_min 정수해
+python recount_zero_zones.py                # 저장 입지로 0명 생활권·인구·문턱·공공체육 엄격 층 재집계
+python claims_check.py                      # 원고 수치 자동 대조 → results/claims_check.json
 ```
 결과는 `results/`에 덮어쓴다. 앞 단계 실험(표4.1-1~13)의 명령은 `results/_logs/run0930/queues.sh`에 있다.

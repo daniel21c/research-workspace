@@ -1,17 +1,17 @@
 {
- "abstract": 244,
- "main_text_1_to_5": 7744,
- "appendices": 467,
- "references": 2456,
- "figure_captions": 167,
- "tables": 734,
- "total_including_references": 11812,
- "n_references": 85,
+ "abstract": 250,
+ "main_text_1_to_5": 8995,
+ "appendices": 1587,
+ "references": 2566,
+ "figure_captions": 164,
+ "tables": 784,
+ "total_including_references": 14346,
+ "n_references": 89,
  "highlights_chars": [
   77,
   78,
+  73,
   74,
-  71,
   78
  ]
 }

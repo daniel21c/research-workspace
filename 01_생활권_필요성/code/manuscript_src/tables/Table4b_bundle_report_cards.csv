@@ -1,0 +1,7 @@
+﻿Rule,2020 completion (%),2025 completion (%),2020 bottom-20 (%),2025 bottom-20 (%),2020 zero-completion zones,2025 zero-completion zones
+Grid: facility-by-facility (exact),14.7,16.5,0.9,1.1,21,13
+Grid: bundle maximisation (exact),22.8,24.2,0.1,0.2,18,14
+Grid: coordinated (P=2),17.6,18.5,5.8,6.3,21,19
+Gu minimum 5%,22.8,24.2,0.1,0.2,18,12
+Dong minimum 5%,17.6,19.6,0.0,0.2,20,16
+Living-zone minimum 5%,20.0,22.1,0.1,0.4,3,2

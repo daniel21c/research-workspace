@@ -24,7 +24,7 @@ FACSETS = {
     "초등학교15분": (lambda f: (f["시설"] == "학교") & f["시설_세부"].str.startswith("초등학교", na=False), 900),
     "의원10분": (lambda f: f["시설"] == "의원", 600),
     "약국10분": (lambda f: f["시설"] == "약국", 600),
-    "생활체육10분": (lambda f: f["시설"] == "체육시설업", 600),
+    # "생활체육10분"(체육시설업)은 facility-v1.4에서 제외되어 격자 0개 → 2026-10-02 검증(S2-2)에 따라 목록에서 뺐다. 이전 결과표(표4.1-2·3)의 해당 행은 빈 집합이다.
     "소매10분": (lambda f: f["시설"] == "일상소매", 600),
     # 배치 실험 확장(공공이 입지를 정하는 시설). K = 실제 2020→2025 증가분(exp9 에서 계산)
     "공공문화시설": (lambda f: (f["시설"] == "문화기반시설") & ~f["시설_세부"].str.contains("도서관", na=False), 900),
@@ -35,7 +35,7 @@ FACSETS = {
     "주민센터": (lambda f: f["시설"] == "주민센터", 900),
 }
 PLACE_SETS = ["도서관", "공공문화시설", "국공립유치원10분", "국공립어린이집5분", "노인이용시설", "청소년수련시설", "주민센터"]
-DIAG_SETS = ["도서관", "문화", "행정안전", "어린이집5분", "유치원10분", "초등학교15분", "의원10분", "약국10분", "생활체육10분", "소매10분"]
+DIAG_SETS = ["도서관", "문화", "행정안전", "어린이집5분", "유치원10분", "초등학교15분", "의원10분", "약국10분", "소매10분"]
 
 
 class Year:
@@ -216,7 +216,7 @@ class Year:
         return cov
 
     # ── 나눠 쓰기(2SFCA 격자값) ───────────────────────────────────────────
-    def sfca_grid(self, item="공공도서관"):
+    def sfca_grid(self, item="공공도서관"):   # 미사용(2026-10-02 검증 S3): 어떤 실험도 부르지 않는다. exp4는 같은 이름의 자체 함수를 쓴다.
         g = ds.dataset(PKG / f"결과/main/grid_sfca_{self.year}_100.parquet").to_table(
             filter=(ds.field("b") == "none") & (ds.field("item") == item), columns=["grid_cd", "A_per10k"]).to_pandas()
         A = np.full(len(self.M), np.nan); ix = self.gix.reindex(g.grid_cd).to_numpy(); ok = ~np.isnan(ix)
