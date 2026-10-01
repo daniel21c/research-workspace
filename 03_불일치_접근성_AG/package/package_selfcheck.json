@@ -1,10 +1,10 @@
 {
- "files": 83,
- "zip_bytes_before_selfcheck_append": 23018386,
+ "files": 94,
+ "zip_bytes_before_selfcheck_append": 23266357,
  "zip": "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\package\\AG_확정본_공동연구자패키지_20260930.zip",
  "selfcheck_in_fresh_extract": {
   "exit_code": 0,
-  "n_checks": 136,
+  "n_checks": 190,
   "n_fail": 0,
   "stderr_tail": ""
  }

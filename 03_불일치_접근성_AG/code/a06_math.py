@@ -152,7 +152,7 @@ _BASE = r'(' + re.escape(_IFR) + r')|(\u0394[LQ])|(?<![A-Za-z0-9])([A-Za-z])_([A
 _Q = "\u2019'"
 _SINGLE_EN = (r'|(?<![A-Za-z0-9À-ɏ' + _Q + r'])([LQocbvzdkijNR])(?![A-Za-z0-9À-ɏ' + _Q + r'])'
               r'|(?<=zone )(a)(?![A-Za-z])|(?<=, and )(m)(?= is)'
-              r'|\b(A)(?= and P\b)|(?<=A and )(P)\b|\b(W)(?= (?:and|on) F\b)|(?<=W and )(F)\b|(?<=W on )(F)\b')
+              r'|\b(A)(?= and P\b)|(?<=A and )(P)\b|\b(W)(?= (?:and|on) F\b)|(?<=W and )(F)\b|(?<=W on )(F)\b|\b(F)(?=, A and P\b)')
 _SINGLE_KO = r'|(?<![A-Za-z0-9À-ɏ])(?<!\d )(?<!부록 )(?<!표 )([LQocbvzdkijNRaAPWFm])(?![A-Za-z0-9À-ɏ])(?!\.\d)'
 INLINE = {'en': re.compile(_BASE + _SINGLE_EN), 'ko': re.compile(_BASE + _SINGLE_KO)}
 

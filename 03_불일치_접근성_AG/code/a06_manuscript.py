@@ -99,6 +99,14 @@ def values():
     V['ifr_en'] = f'{"no" if a25 == 0 else a25} alternative map{"s" if a25 > 1 else ""} had a higher IFR in 2025, and {a20} did in 2020.'
     V['ifr_ko'] = f'IFR이 공식보다 높은 대안은 2025년 {"한 장도 없었고" if a25 == 0 else f"{a25}장이었고"}, 2020년 {a20}장이었다.'
     V['pop25m'] = V.pop('pop25m'); V.pop('pop20m')
+    for y in (2020, 2025):  # 범주 의존·시설 시점 민감도(a10, 2026-10-02 감사 S2-1 대응)
+        t = str(y)[2:]; a = json.load(open(RES / str(y) / 'a10_sensitivity.json', encoding='utf-8')); fc = a['flow_end_minus_official_by_category']; pa = a['paths']
+        V.update({f'cul_d{t}': sgn(fc['문화']), f'civ_d{t}': sgn(fc['행정·안전']), f'edu_d{t}': sgn(fc['교육']),
+                  f'f5_{t}': sgn(pa['five']['flow_end']), f'r5_{t}': n0(pa['five']['rand_end_median']), f'b5_{t}': f"{100 * (1 - pa['five']['rand_end_share_below_flow']):.0f}",
+                  f'fC_{t}': sgn(pa['noC']['flow_end']), f'rC_{t}': sgn(pa['noC']['rand_end_median']), f'kC_{t}': str(pa['noC']['first_k_flow_below_all_random']),
+                  f'g5_{t}': n0(a['ensemble']['five']['n_greater']), f'gC_{t}': n0(a['ensemble']['noC']['n_greater'])})
+        T[y]['a10'] = a
+    V['minstates'] = str(min(int(pd.read_csv(f).query('ku not in [11010, 11020, 11130, 11180]').saved_unique_states.min()) for f in sorted(RES.glob('20*/a02_ensemble_*_chain_diag.csv'))))
     return V, T
 
 
@@ -150,8 +158,8 @@ def tables(V, T, lang='en'):
          [k('Partial ρ(W, F | A, P, zone population, zone jobs)', '편 ρ(W, F | A, P, 생활권 인구·종사자)')] + [f"{f3(mm[y]['partial_W_F_given_AP_Zpop_Zemp']['est'])} {ci(*mm[y]['partial_W_F_given_AP_Zpop_Zemp']['ci95'])}" for y in Y],
          [k('Dong fixed effects: standardised coefficient on F', '동 고정효과: F의 표준화 계수')] + [f"{f3(mm[y]['dongFE_std_beta']['F']['est'])} {ci(*mm[y]['dongFE_std_beta']['F']['ci95'])}" for y in Y]]
     out['T4'] = (k('Table 4. Trip shares and walkable facility shares of adjacent zones.', '표 4. 인접 생활권의 통행 비율과 보행 시설 비율.'), r,
-                 k('W: share of a boundary dong’s out-of-dong trips ending in the adjacent zone; F: share of its walkable facility cells located there (mean of seven categories); A, P: shares of reachable cells and reachable population. Brackets: 95% dong-cluster bootstrap intervals.',
-                   'W: 경계 동의 동 밖 통행 중 인접 생활권에서 끝나는 비율, F: 보행 시설 격자 중 그 생활권에 있는 비율(7범주 평균), A·P: 닿는 격자·인구 비율. 괄호는 동 군집 부트스트랩 95% 구간.'))
+                 k('W: share of a boundary dong’s out-of-dong trips ending in the adjacent zone; F: share of its walkable facility cells located there (mean of seven categories); A, P: shares of reachable cells and of the population of reachable cells; F, A and P are all weighted by origin-cell population. Brackets: 95% dong-cluster bootstrap intervals.',
+                   'W: 경계 동의 동 밖 통행 중 인접 생활권에서 끝나는 비율, F: 보행 시설 격자 중 그 생활권에 있는 비율(7범주 평균), A·P: 닿는 격자 비율·닿는 격자의 인구 비율. F·A·P 모두 출발 격자 인구로 가중. 괄호는 동 군집 부트스트랩 95% 구간.'))
     return out
 
 
@@ -178,7 +186,7 @@ SOURCES = {  # (source, 2020 reference / 2025 reference, reconstruction method)
     '등록공연장': ('Ministry of Culture, Sports and Tourism, registered performance venues', '31 Dec 2019 / 31 Dec 2024', 'A'),
     '주민센터': ('Ministry of the Interior and Safety, sub-municipal offices (data.go.kr 15059715)', '30 Jun 2019 / 31 Jul 2024 (outside the nominal window); former and temporary offices partly restored', 'C'),
     '소방서·119안전센터': ('Seoul Fire and Disaster Headquarters, Seoul Open Data OA-21072', '2020 / 2024 annual editions', 'C'),
-    '일상소매': ('Small Enterprise and Market Service, commercial district data (15083033), nine everyday-retail subclasses', 'Dec 2019 (regenerated Nov 2025) / Dec 2024; not a complete historical inventory', 'A'),
+    '일상소매': ('Small Enterprise and Market Service, commercial district data (15083033), nine everyday-retail subclasses', 'Dec 2019 (regenerated Nov 2025) / Dec 2024; not a complete historical inventory', 'B / A'),
     '식료품소매(즉석판매·제과)': ('LocalData / Seoul Open Data OA-16085, OA-16084', 'open and close dates reconstructed', 'B'),
     '대규모점포(주요4업태)': ('LocalData / Seoul Open Data OA-16096; hypermarkets, department stores, shopping centres, specialty stores', 'open and close dates reconstructed', 'B'),
     '일반음식점': ('LocalData / Seoul Open Data OA-16094', 'open and close dates reconstructed; missing coordinates geocoded', 'B'),
@@ -222,11 +230,34 @@ def appendix_tables(V, T, lang='en'):
     for c in CAT:
         for tname in TYPES[c]:
             src, dates, meth = SOURCES[tname]; r4.append([k(CAT_EN[c], c), k(TYPE_EN[tname], tname), src, dates, meth])
-    out['A4'] = (k('Table A.4. Facility sources and reconstruction of the 2020 and 2025 inventories.', '표 A.4. 시설 원천 자료와 2020·2025 목록 재구축.'), r4,
+    out['A4'] = (k('Table A.6. Facility sources and reconstruction of the 2020 and 2025 inventories.', '표 A.6. 시설 원천 자료와 2020·2025 목록 재구축.'), r4,
                  k('Method: A, snapshot or edition dated at or near the reference date (end of 2019 / end of 2024); B, current licensing history with open and close dates used to reconstruct the stock at the reference date; C, nearest annual or nominal edition. All facilities were assigned to 100 m cells by coordinates; records outside the grid (39 per year) were dropped. Sports businesses were excluded. Source files and retrieval dates are listed in the data package.',
                    '방법: A 기준 시점(2019년 말 / 2024년 말) 근처의 스냅숏·판본, B 현재 인허가 이력의 개폐업일로 기준 시점 재고를 역산, C 가장 가까운 연간·명목 판본. 좌표로 100 m 격자에 배정, 격자 밖 기록(연 39건) 제외, 체육시설업 제외. 원파일·취득일은 자료 패키지에 기록.'))
     out['A3'] = (k('Table A.3. Sensitivity and earlier analyses not reported in full in the main text.', '표 A.3. 본문에 전부 싣지 않은 민감도·초기 분석.'), r,
                  k('All analyses are post hoc. ΔL values give new / resolved in parentheses.', '모든 분석은 사후 분석. 괄호는 신규 / 해소.'))
+    a10 = {y: T[y]['a10'] for y in Y}; CK = ['교육', '보육·복지', '의료', '문화', '행정·안전', '소매', '생활서비스']
+    r5 = [[k('Category', '범주'), k('Flow-guided 2020', '통행 기준 2020'), k('Random median 2020', '무작위 중앙값 2020'), k('Flow-guided 2025', '통행 기준 2025'), k('Random median 2025', '무작위 중앙값 2025')]]
+    for c in CK:
+        r5.append([k(CAT_EN[c], c)] + [x for y in Y for x in (sgn(a10[y]['flow_end_minus_official_by_category'][c]), sgn(a10[y]['random_end_minus_official_median_by_category'][c]))])
+    r5.append([k('Five categories without culture and civic (unique residents)', '문화·행정·안전을 뺀 5범주(고유 주민)')] + [x for y in Y for x in (sgn(a10[y]['paths']['five']['flow_end']), sgn(a10[y]['paths']['five']['rand_end_median']))])
+    r5.append([k('All seven categories (unique residents; Table 2)', '7범주 전체(고유 주민, 표 2)')] + [x for y in Y for x in (sgn(a10[y]['paths']['all7']['flow_end']), sgn(a10[y]['paths']['all7']['rand_end_median']))])
+    out['A5'] = (k('Table A.4. Change in excluded residents by category at the end of the reassignment paths.', '표 A.4. 재배정 경로 끝의 범주별 누락 인구 변화.'), r5,
+                 k('Change relative to the official plan after all moves (66 in 2020, 65 in 2025). Category rows count residents excluded for that category, so they overlap and do not add up to the unique-resident rows. Random figures are medians over the 100 paths.',
+                   '모든 이동 뒤(2020년 66회, 2025년 65회) 공식 생활권 대비 변화. 범주 행은 그 범주에서 누락된 주민 수라 서로 겹치며 고유 주민 행의 합이 아니다. 무작위 값은 100개 경로의 중앙값.'))
+    S6 = (('all7', k('All seven categories (main analysis)', '7범주(주분석)')), ('five', k('Five categories (without culture and civic)', '5범주(문화·행정·안전 제외)')),
+          ('noC', k('Without the three least precisely dated types', '시점 등급 C 세 유형 제외')))
+    r6 = [[k('Measure', '항목')] + [lab for _, lab in S6]]
+    for y in Y:
+        pa = a10[y]['paths']; en = a10[y]['ensemble']; g_all = T[y]['e']['n_greater']
+        r6 += [[k(f'{y}: official plan, excluded residents', f'{y}: 공식 생활권 누락 인구')] + [n0(a10[y]['official_L'][nm]) for nm, _ in S6],
+               [k(f'{y}: flow-guided ΔL at end of path', f'{y}: 통행 기준 경로 끝 ΔL')] + [sgn(pa[nm]['flow_end']) for nm, _ in S6],
+               [k(f'{y}: random ΔL, median of 100 paths', f'{y}: 무작위 ΔL, 100경로 중앙값')] + [sgn(pa[nm]['rand_end_median']) for nm, _ in S6],
+               [k(f'{y}: random paths ending above flow-guided (%)', f'{y}: 통행 기준보다 높게 끝난 무작위 경로(%)')] + [f"{100 * (1 - pa[nm]['rand_end_share_below_flow']):.0f}" for nm, _ in S6],
+               [k(f'{y}: flow-guided below all random paths from k =', f'{y}: 통행 기준이 모든 무작위 경로보다 낮아지는 k')] + [str(pa[nm]['first_k_flow_below_all_random'] or '—') for nm, _ in S6],
+               [k(f'{y}: alternative maps (of 1000) excluding more than official', f'{y}: 공식보다 누락이 많은 대안 지도(1000장 중)')] + [n0(g_all), n0(en['five']['n_greater']), n0(en['noC']['n_greater'])]]
+    out['A6'] = (k('Table A.5. Results under alternative counts of excluded residents.', '표 A.5. 누락 인구를 달리 셌을 때의 결과.'), r6,
+                 k('Five categories: residents excluded for at least one of education, childcare and welfare, health, retail and personal services. Without the three least precisely dated types: public libraries, community service centres, and fire stations and 119 safety centres are removed from the inventory (method C in Table A.6), which removes civic and safety services altogether. Paths, random seeds and alternative maps are those of the main analysis. —: no such k.',
+                   '5범주: 교육·보육·복지·의료·소매·생활서비스 가운데 하나라도 누락된 주민. 시점 등급 C 세 유형 제외: 공공도서관·주민센터·소방서·119안전센터를 시설 목록에서 뺌(표 A.6의 방법 C). 행정·안전 범주가 통째로 빠진다. 경로·무작위 시드·대안 지도는 주분석과 같다. —: 해당 k 없음.'))
     return out
 
 
@@ -304,7 +335,7 @@ def table(d, cap, rows, note, size=9):
     for e in ('top', 'left', 'bottom', 'right', 'insideH', 'insideV'):
         el = OxmlElement(f'w:{e}'); el.set(qn('w:val'), 'nil'); tb.append(el)
     t._tbl.tblPr.append(tb)
-    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A.1' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A.4' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
+    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A.1' in cap else [6.4, 3.2, 3.2, 3.2] if 'A.5' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A.6' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
     for i, row in enumerate(rows):
         for j, v in enumerate(row):
             c = t.cell(i, j); c.width = Cm(W[j]); c.text = ''; pp = c.paragraphs[0]; pp.paragraph_format.line_spacing = 1.0; rr = pp.add_run(str(v)); rr.font.size = Pt(size)  # 머리행도 보통 글씨(AG 게재본)
@@ -470,15 +501,15 @@ def main():
     # 부록
     d = base_doc(lines=False); para(d, 'Supplementary material', bold=True, indent=False, size=14); para(d, EN.TITLE, italic=True, indent=False); d.add_paragraph()
     heading(d, 'Appendix A. Facility inventory, exclusion by category and analyses not reported in the main text', 1)
-    for key in ('A1', 'A2', 'A3', 'A4'):
+    for key in ('A1', 'A2', 'A3', 'A5', 'A6', 'A4'):  # 표시 번호 A.1~A.6 순서(A5=A.4, A6=A.5, A4=A.6)
         table(d, *AP[key])
-    para(d, 'Chain diagnostics. In Jongno, Jung, Seodaemun and Geumcheon the size and compactness rules admit very few partitions. Exhaustive enumeration of valid partitions (without looking at any outcome) found 4, 5–6, 1–2 and 7–8 partitions respectively, depending on the year. The chains visited every enumerated partition except the single alternative for Seodaemun in 2020. In the other 21 gu each chain saved many distinct states.', indent=False)
+    para(d, 'Chain diagnostics. In Jongno, Jung, Seodaemun and Geumcheon the size and compactness rules admit very few partitions. Exhaustive enumeration of valid partitions (without looking at any outcome) found 4, 5–6, 1–2 and 7–8 partitions respectively, depending on the year. The chains visited every enumerated partition except the single alternative for Seodaemun in 2020. In the other 21 gu each chain saved at least ' + V['minstates'] + ' distinct states.', indent=False)
     d.save(MS / 'AG_supplementary_appendix.docx')
     # 투고 편지
     d = base_doc(lines=False, spacing=1.15)
     for s in ['Dear Editor,', '',
               f'We submit the manuscript “{EN.TITLE}” for consideration as a research article in Applied Geography.',
-              'Cities that plan by living zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary dongs with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary dongs go where walkable facilities are. In Seoul, following trips kept walkable services inside the zones while raising self-containment; random moves of the same extent pushed them out every time. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
+              'Cities that plan by living zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary dongs with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary dongs go where walkable facilities are. In Seoul, following trips raised self-containment and lowered total exclusion from within-zone walkable services, mainly in culture and civic services, while random moves of the same extent raised it every time. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
               'The manuscript has not been published and is not under consideration elsewhere. A companion paper in preparation for a Korean planning journal uses the same mobility data to study how the mismatch between official zones and trips changed between 2020 and 2025; it does not examine facilities or accessibility, and its questions and results do not overlap with this submission. We have not cited it to preserve anonymity and because it has not yet been submitted.',
               'Both authors have approved the manuscript and agree with its submission. There are no competing interests.', '', 'Sincerely,', 'Jongha Park and Sunyong Eom (corresponding author, sunyongeom@hanyang.ac.kr)', 'Graduate School of Urban Studies, Hanyang University']:
         para(d, s, indent=False)
@@ -488,12 +519,12 @@ def main():
     para(d, KO.TITLE, bold=True, indent=False, align=WD_ALIGN_PARAGRAPH.CENTER, size=14); d.add_paragraph()
     heading(d, '초록', 1); para(d, KO.ABSTRACT, indent=False); para(d, '주제어: ' + ', '.join(KO.KEYWORDS), indent=False, space_before=6)
     heading(d, '연구 하이라이트(영문 원고용 번역)', 1)
-    for h in ['경계 동을 통행을 따라 재배정하면 걸어서 닿는 서비스가 서울 생활권 안에 남았다', '같은 규모의 무작위 재배정은 모의 경로 전부에서 서비스를 밖으로 밀어냈다',
-              '자족성과 생활권 안 시설 포착이 함께 좋아졌다', '서울 공식 생활권은 규모·모양을 맞춘 대안 지도 거의 전부보다 낫다', '경계 동의 통행은 걸어서 닿는 의료·소매·생활서비스가 있는 곳으로 간다']:
+    for h in ['경계 동을 통행을 따라 재배정하면 생활권 안 보행 시설 누락의 총량이 줄었다', '같은 규모의 무작위 재배정은 모의 경로 전부에서 서비스를 밖으로 밀어냈다',
+              '감소는 문화·행정·안전에서 나왔고, 나머지 범주는 늘었지만 무작위보다 덜 늘었다', '서울 공식 생활권은 규모·모양을 맞춘 대안 지도 거의 전부보다 낫다', '경계 동의 통행은 걸어서 닿는 의료·소매·생활서비스가 있는 곳으로 간다']:
         para(d, '• ' + h, indent=False)
     d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d, lang='ko')
     heading(d, '부록 A', 1)
-    for key in ('A1', 'A2', 'A3', 'A4'):
+    for key in ('A1', 'A2', 'A3', 'A5', 'A6', 'A4'):
         table(d, *APk[key])
     heading(d, '생성형 AI 사용 고지(영문 원고 본문 끝의 절)', 1); para(d, '이 연구를 준비하면서 저자들은 분석 코드 작성·점검과 본문 초안 작성·수정에 Claude(Anthropic)를 사용했다. 사용 후 저자들이 내용을 검토·수정했으며 출판물의 내용에 전적으로 책임진다.', indent=False)
     heading(d, '참고문헌', 1)

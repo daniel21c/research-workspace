@@ -51,6 +51,21 @@ def main():
         chk(f'pc{t}', pcorr(O, ['A', 'P']), 0.0005); chk(f'pz{t}', pcorr(O, ['A', 'P', 'logZpop', 'logZemp']), 0.0005)
         for key, c in (('h', '의료'), ('r', '소매'), ('s', '생활서비스')):
             dd = O.dropna(subset=[f'F_{c}']).rename(columns={'F': 'Fm'}).rename(columns={f'F_{c}': 'F'}); chk(f'{key}{t}', pcorr(dd, ['A', 'P', 'logZpop', 'logZemp']), 0.005)
+        # a10 범주 의존·시설 시점 민감도: 상태별 표(a10_states_subsets.csv)에서 다시 계산(감사 S2-1 대응)
+        SR = pd.read_csv(RES / str(y) / 'a10_states_subsets.csv'); a10 = json.load(open(RES / str(y) / 'a10_sensitivity.json', encoding='utf-8'))
+        assert np.allclose(SR.merge(R, on=['strategy', 'k', 'rep']).pipe(lambda m: m.dL - m.dL_all7), 0, atol=1e-6), 'a10 all7 ≠ a01'
+        for nm, fk_, rk_, kk_ in (('five', 'f5', 'r5', None), ('noC', 'fC', 'rC', 'kC')):
+            fl10 = SR[SR.strategy == 'FLOW'].set_index('k')[f'dL_{nm}']; rd10 = SR[SR.strategy == 'RAND']; e10 = rd10[rd10.k == K][f'dL_{nm}']
+            chk(f'{fk_}_{t}', float(fl10[K])); chk(f'{rk_}_{t}', float(e10.median()))
+            if nm == 'five':
+                chk(f'b5_{t}', 100 * float((e10 > fl10[K]).mean()), 0.5)
+            if kk_:
+                bl = [k for k in range(1, K + 1) if (rd10[rd10.k == k][f'dL_{nm}'] > fl10[k]).all()]
+                chk(f'{kk_}_{t}', next(k for k in range(1, K + 1) if all(j in bl for j in range(k, K + 1))), 0)
+        for key, c in (('cul_d', '문화'), ('civ_d', '행정·안전'), ('edu_d', '교육')):
+            chk(f'{key}{t}', a10['flow_end_minus_official_by_category'][c])
+        for key, nm in (('g5_', 'five'), ('gC_', 'noC')):
+            chk(f'{key}{t}', a10['ensemble'][nm]['n_greater'], 0)
     # 원고 본문 반영 확인
     texts = {}
     for f in ('AG_manuscript_anonymised.docx', 'AG_한국어_원고.docx'):

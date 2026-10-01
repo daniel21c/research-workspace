@@ -104,11 +104,11 @@ def fig_ga():
     tx = fig.add_subplot(gs[1]); tx.set_axis_off()
     lines = [('Following trips, keeping services', 10.5, 'bold'),
              ('Do walkable facilities stay inside living zones when boundary dongs are moved to follow trips?', 8, 'normal'),
-             ('\u2022 Moving boundary dongs along trips kept walkable services inside the zones.', 8, 'normal'),
+             ('\u2022 Moving boundary dongs along trips lowered total exclusion; the fall came from culture and civic services.', 8, 'normal'),
              ('\u2022 Random moves of the same number pushed services out in every one of 100 paths.', 8, 'normal'),
              ('\u2022 Seoul\u2019s official zones beat almost all of 1,000 size- and shape-matched alternative maps.', 8, 'normal'),
-             ('\u2022 Trips from boundary dongs go to adjacent zones that hold more of their walkable facilities.', 8, 'normal'),
-             ('Check self-containment and within-zone service coverage together whenever zones are revised.', 8, 'italic')]
+             ('\u2022 Trips from boundary dongs go to adjacent zones with more walkable health, retail and services.', 8, 'normal'),
+             ('Check self-containment and within-zone service coverage, by category, whenever zones are revised.', 8, 'italic')]
     yy = 0.98
     for t, fs, w in lines:
         tx.text(0, yy, '\n'.join(_wrap(t, 52)), fontsize=fs, fontweight='bold' if w == 'bold' else 'normal', fontstyle='italic' if w == 'italic' else 'normal', va='top', ha='left', transform=tx.transAxes)

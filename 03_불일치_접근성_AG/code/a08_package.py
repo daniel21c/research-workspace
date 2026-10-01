@@ -47,6 +47,10 @@ def build():
     for f in sorted((AG / 'code').glob('*')):
         if f.suffix in ('.py', '.ps1'):
             shutil.copy2(f, OUT / 'code' / f.name)
+    (OUT / 'code' / 'appendix').mkdir()  # 부록 보조 산출 재생성 코드(2026-10-02 감사 S3-3)
+    for f in sorted((AG / 'code' / 'appendix').glob('*')):
+        if f.suffix in ('.py', '.md'):
+            shutil.copy2(f, OUT / 'code' / 'appendix' / f.name)
     (OUT / 'docs').mkdir(); shutil.copy2(AG / '연구설계.md', OUT / 'docs' / '연구설계_AG확정본.md'); shutil.copy2(AG / '검수의견_대응표_20260930.md', OUT / 'docs' / '검수의견_대응표_20260930.md')
     shutil.copy2(AG / 'package' / 'README_패키지.md', OUT / 'README.md')
     rows = ['path,bytes,sha256']
