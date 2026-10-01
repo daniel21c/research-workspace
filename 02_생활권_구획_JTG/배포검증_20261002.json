@@ -1,10 +1,10 @@
 {
- "created": "2026-10-02T05:55:30",
- "package": "연구2_보완_패키지_20261001 (최종본, 검증 판정 S3 10건 반영)",
+ "created": "2026-10-02T06:31:08",
+ "package": "연구2_보완_패키지_20261001 (최종본, 검증 판정 S3 10건과 재확인 N2 반영)",
  "zip": {
   "file": "연구2_보완_패키지_20261001.zip",
-  "sha256": "699e30bde08ee0ed8249a9a1738c63c4d44aaaaab519e8f47cd9770f9db2cca5",
-  "bytes": 23601420,
+  "sha256": "72e8dd27cc3bf012dab91063e26c81bbedcf24ec545d71c2929a8a1bb74d57be",
+  "bytes": 23601533,
   "files": 178
  },
  "design": "R2-DESIGN-20261002-v4",
@@ -29,7 +29,7 @@
   "pass": true,
   "same_sha_files": "10/10",
   "checks": "164/164",
-  "seconds": 21.1,
+  "seconds": 19.5,
   "files": {
    "T1_input_overview.csv": "d8b6800167fcec9f",
    "T2_city_summary.csv": "b0ffb1a76eea6cd2",
@@ -49,8 +49,8 @@
   "note": "허브 코어 경로 대신 패키지 안 inputs/leiden_metrics_2025.csv 를 읽도록 고친 뒤 ZIP 해제 폴더에서 끝까지 실행됨(F6)"
  },
  "louvain_outputs_vs_previous_zip": {
-  "previous_zip_sha256": "edc88bc8defed9226fe219e45662ae42f5eb3a619203084aa024a3babef03ad6",
-  "previous_zip_archived_at": "D:\\Research\\_archive\\연구2_정리_20261002\\이전_ZIP_edc88bc8\\연구2_보완_패키지_20261001.zip",
+  "previous_zip_sha256": "699e30bde08ee0ed8249a9a1738c63c4d44aaaaab519e8f47cd9770f9db2cca5",
+  "previous_zip_archived_at": "D:\\Research\\_archive\\연구2_정리_20261002\\이전_ZIP_699e30bd\\연구2_보완_패키지_20261001.zip",
   "files": 107,
   "identical": true,
   "note": "Louvain 산출은 2026-10-01 전체 재실행(audit/reproduction_report_20261001_full.json)으로 검증한 판과 해시가 같다"
@@ -58,11 +58,11 @@
  "inputs": {
   "files": 8,
   "same_as_previous": {
-   "inputs/dong_to_leiden_2020_mapping_424.csv": false,
+   "inputs/dong_to_leiden_2020_mapping_424.csv": true,
    "inputs/dong_to_leiden_2025_mapping_424.csv": true,
    "inputs/dong_to_official_livingzone_mapping_424.csv": true,
    "inputs/leiden_metrics_2025.csv": true,
-   "inputs/od_daily_202001.parquet": false,
+   "inputs/od_daily_202001.parquet": true,
    "inputs/od_daily_202501.parquet": true,
    "inputs/seoul_boundaries_all.gpkg": true,
    "inputs/seoul_dong_424_dissolved.gpkg": true
@@ -71,42 +71,18 @@
  },
  "changes_vs_previous_zip": {
   "changed": [
-   "README.md",
    "audit/reproduction_report.json",
-   "audit/s5_qa.json",
-   "audit/source_manifest.json",
-   "code/reproduce.py",
+   "audit/reuse_20260929_rebuild.json",
    "code/s0_freeze.py",
-   "code/s4_compare.py",
-   "code/s5_build_manuscript.py",
-   "code/s5_figures.py",
-   "code/s5_qa.py",
-   "code/test_louvain.py",
-   "docs/검증보고서.md",
-   "docs/연구설계.md",
    "manuscript/연구2_생활권_구획_점검_4.2.docx",
-   "manuscript/연구2_생활권_구획_점검_4.2.md",
-   "manuscript/연구2_생활권_구획_점검_4.2.pdf",
    "results/figures/F1_procedure.pdf",
-   "results/figures/F1_procedure.png",
    "results/figures/F2_maps_2025.pdf",
    "results/figures/F3_algorithm_comparison.pdf",
    "results/figures/F4_district_diagnostics.pdf",
-   "results/figures/F4_district_diagnostics.png",
-   "results/figures/F5_iou_relations.pdf",
-   "results/figures/F5_iou_relations.png"
+   "results/figures/F5_iou_relations.pdf"
   ],
-  "added": [
-   "audit/reuse_20260929_rebuild.json",
-   "code/reuse_20260929/analyze_20260929.py",
-   "code/reuse_20260929/rebuild_reused.py",
-   "code/s0b_amend_20261002.py",
-   "inputs/dong_to_leiden_2020_mapping_424.csv",
-   "inputs/od_daily_202001.parquet"
-  ],
-  "removed": [
-   "code/reused/analyze_20260929.py"
-  ]
+  "added": [],
+  "removed": []
  },
  "manuscript_qa": {
   "pass": true,

@@ -83,10 +83,11 @@ def main():
         "core_s03_leiden_consensus.py": CORE / "scripts" / "s03_leiden_consensus.py",
         "core_config.py": CORE / "scripts" / "config.py",
         "package_20260929_analyze.py": OLD_PKG / "code" / "analyze.py",
-        # S0 실행(2026-10-01) 때는 02 폴더의 연구설계.md(9/29판)·연구설계_재현판_20261001.md 였다. 지금은 아카이브의 보존본을 가리킨다.
-        # 9/29판은 같은 해시의 보존본이다. 재현판은 S0 시점(1f696c04…) 보존본이 없어 그 뒤 v3 보존본(e02cb232…)을 가리킨다(audit/source_manifest.json 'reason').
+        # S0 실행(2026-10-01) 때는 02 폴더의 연구설계.md(9/29판)·연구설계_재현판_20261001.md 였다.
+        # 9/29판은 같은 해시(70416a07…)의 보존본이 아카이브에 있어 그 경로를 가리킨다.
+        # 재현판(S0 시점 1f696c04…)은 보존본 없음: S0 뒤 같은 파일을 계속 고쳐 써서 그 시점 내용이 남지 않았다(audit/source_manifest.json 의
+        # 'preserved_copy'·'reason'). 다른 판을 대신 기록하지 않도록 여기서 뺀다. S0 때 적은 해시는 매니페스트에 그대로 있다.
         "design_20260929_연구설계.md": ARCHIVE / "설계_이전판" / "연구설계_R2-DESIGN-20260929-v2.md",
-        "design_20261001_연구설계_재현판.md": ARCHIVE / "설계_이전판" / "연구설계_재현판_R2R-DESIGN-20261001-v3.md",
         "distribution_list": DIST_LIST,
     }
     seed_file = CORE / "output" / "leiden" / "2025" / "run_seed.json"

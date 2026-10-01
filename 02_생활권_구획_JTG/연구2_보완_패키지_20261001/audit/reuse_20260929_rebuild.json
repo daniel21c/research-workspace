@@ -1,5 +1,5 @@
 {
- "created": "2026-10-02T05:53:51",
+ "created": "2026-10-02T06:30:03",
  "code": "code/reuse_20260929/analyze_20260929.py (9/29 analyze.py 사본, SHA-256 20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1)",
  "changes_to_original": {
   "head_lines_replaced": 24,
@@ -79,6 +79,6 @@
  ],
  "same_as_copies": true,
  "same_as_s5_reused_record": true,
- "seconds": 21.4,
+ "seconds": 19.6,
  "pass": true
 }

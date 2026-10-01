@@ -1,5 +1,5 @@
 {
-  "started": "2026-10-02T05:53:29",
+  "started": "2026-10-02T06:29:43",
   "python": "3.12.10",
   "platform": "Windows-11-10.0.22631-SP0",
   "steps": {
@@ -11,31 +11,31 @@
     },
     "reuse_20260929_rebuild": {
       "returncode": 0,
-      "seconds": 21.7,
-      "stdout_tail": "9/29 결과표 재생성: 검사 164/164, 10개 중 같은 SHA 10개, 21.4s\n",
+      "seconds": 19.8,
+      "stdout_tail": "9/29 결과표 재생성: 검사 164/164, 10개 중 같은 SHA 10개, 19.6s\n",
       "stderr_tail": ""
     },
     "s1_overview": {
       "returncode": 0,
-      "seconds": 1.1,
+      "seconds": 1.0,
       "stdout_tail": "ows               4.806033e+07\nmasked_rows                 1.074413e+07\nmasked_share_rows           2.235551e-01\ntotal_flow                  2.859641e+08\nwithin_dong_flow            6.037048e+07\nwithin_dong_share_flow      2.111121e-01\nwithin_district_flow        1.737568e+08\nwithin_district_share_flow  6.076175e-01\nwithin_district_rows        2.005328e+07\nwithin_district_share_rows  4.172522e-01\n",
       "stderr_tail": ""
     },
     "s4_compare": {
       "returncode": 0,
-      "seconds": 3.7,
+      "seconds": 3.4,
       "stdout_tail": " 6.0\nstability_ari_min_overall                              NaN       1.0    0.6376\ndistricts_hitting_target_at_few_resolutions_le10       NaN       5.0       3.0\ndistricts_leiden_q_ge_louvain                           23        23        23\ndistricts_leiden_ifr_ge_louvain                         21        21        21\ndistricts_same_partition_leiden_louvain                 18        18        18\n",
       "stderr_tail": ""
     },
     "s5_figures": {
       "returncode": 0,
-      "seconds": 7.9,
+      "seconds": 7.0,
       "stdout_tail": "그림 생성: ['F1_procedure.pdf', 'F1_procedure.png', 'F2_maps_2025.pdf', 'F2_maps_2025.png', 'F3_algorithm_comparison.pdf', 'F3_algorithm_comparison.png', 'F4_district_diagnostics.pdf', 'F4_district_diagnostics.png', 'F5_iou_relations.pdf', 'F5_iou_relations.png']\n",
       "stderr_tail": ""
     },
     "s5_build_manuscript": {
       "returncode": 0,
-      "seconds": 1.6,
+      "seconds": 1.4,
       "stdout_tail": "원고 생성: 표 7, 그림 5, 본문 11,756자 → D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_보완_패키지_20261001\\manuscript\n",
       "stderr_tail": ""
     }
@@ -62,6 +62,6 @@
     "different": [],
     "n_compared": 13
   },
-  "finished": "2026-10-02T05:54:05",
+  "finished": "2026-10-02T06:30:16",
   "all_pass": true
 }

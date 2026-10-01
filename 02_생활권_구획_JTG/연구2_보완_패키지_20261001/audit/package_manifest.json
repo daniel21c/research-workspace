@@ -1,5 +1,5 @@
 {
- "created": "2026-10-02T05:54:06",
+ "created": "2026-10-02T06:30:17",
  "package": "연구2_보완_패키지_20261001",
  "files": [
   {
@@ -15,7 +15,7 @@
   {
    "path": "audit/reproduction_report.json",
    "bytes": 3569,
-   "sha256": "d9ddb7c7509c853fbfcbd0e78c8cf948ccbae2b659ae496e5d49578faefbeba5"
+   "sha256": "708a678971a07b0dee4a65c08dace615809826c30949009105e9dadd9d88f7bd"
   },
   {
    "path": "audit/reproduction_report_20261001_full.json",
@@ -25,7 +25,7 @@
   {
    "path": "audit/reuse_20260929_rebuild.json",
    "bytes": 3533,
-   "sha256": "fbc3123857c539d7991c6bb660f5937a009b54354d1b83065bec6ab6b0bf86af"
+   "sha256": "e3daa9298bf3be7158a66db55922bf3a896a665dc074f1d488adf4c83884f4bf"
   },
   {
    "path": "audit/s1_checks.json",
@@ -109,8 +109,8 @@
   },
   {
    "path": "code/s0_freeze.py",
-   "bytes": 7204,
-   "sha256": "ed9d4e25d58e80ef926a36bca1ddd06c067ede777e618db8879d0a5a27bae83c"
+   "bytes": 7271,
+   "sha256": "4937c5bb2ae2607176af2c549739b8f179cc09c80ea6c1faa30883a1c5482a88"
   },
   {
    "path": "code/s0b_amend_20261002.py",
@@ -210,7 +210,7 @@
   {
    "path": "manuscript/연구2_생활권_구획_점검_4.2.docx",
    "bytes": 1706777,
-   "sha256": "d2cfe82823b955f7365c0d520c197adf6eed6dca2960f8d9908093130cae68c4"
+   "sha256": "080e988cc23de0b98adadba5762170ddbfacd437a067b447b856aa9c47e077d9"
   },
   {
    "path": "manuscript/연구2_생활권_구획_점검_4.2.md",
@@ -770,7 +770,7 @@
   {
    "path": "results/figures/F1_procedure.pdf",
    "bytes": 71611,
-   "sha256": "126f2918f801bf3d5ee27630fa49433938682a92953bc5fb02bcc212daf94dcd"
+   "sha256": "6934e0bf3b3239aa9955a94ab09ac8a5fcf1e40dcd85d11c1bd875322852fca8"
   },
   {
    "path": "results/figures/F1_procedure.png",
@@ -780,7 +780,7 @@
   {
    "path": "results/figures/F2_maps_2025.pdf",
    "bytes": 2648991,
-   "sha256": "ae5cf23862caa06d08eafcac404714716521ed469ff8e445e553dea51bda1e78"
+   "sha256": "a6d2699cca41f112bc776101ee4cf230972c8a92c6df422c12ce996261a19deb"
   },
   {
    "path": "results/figures/F2_maps_2025.png",
@@ -790,7 +790,7 @@
   {
    "path": "results/figures/F3_algorithm_comparison.pdf",
    "bytes": 65100,
-   "sha256": "fd829f8d5186cd77bcdce9a16fd86120c5f2c5eba05d46fdafefc3de587c2fb0"
+   "sha256": "bea5cbeb70702b95e63eaf9dd1e4a87546123cb7313444c4ff6cf287c64d9719"
   },
   {
    "path": "results/figures/F3_algorithm_comparison.png",
@@ -800,7 +800,7 @@
   {
    "path": "results/figures/F4_district_diagnostics.pdf",
    "bytes": 50415,
-   "sha256": "557e0ce9399617d6ae538a9ced352d2e3643129f00ad30f2c0da6fd7d284d2ce"
+   "sha256": "d12b70591f2e1c5d5e4ab351dfb99dec9668e607507c210fe2529a83b5643fae"
   },
   {
    "path": "results/figures/F4_district_diagnostics.png",
@@ -810,7 +810,7 @@
   {
    "path": "results/figures/F5_iou_relations.pdf",
    "bytes": 41071,
-   "sha256": "c76109787e9816e1290ac74fe1bae02d484c4f2f299153715baac09942f749a9"
+   "sha256": "e1f8316214a45282e090360fc83cbfc7c8d7940d21934c8365502108667d9504"
   },
   {
    "path": "results/figures/F5_iou_relations.png",
