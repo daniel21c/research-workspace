@@ -64,8 +64,12 @@ def main():
                 chk(f'{kk_}_{t}', next(k for k in range(1, K + 1) if all(j in bl for j in range(k, K + 1))), 0)
         for key, c in (('cul_d', '문화'), ('civ_d', '행정·안전'), ('edu_d', '교육')):
             chk(f'{key}{t}', a10['flow_end_minus_official_by_category'][c])
-        for key, nm in (('g5_', 'five'), ('gC_', 'noC')):
+        for key, nm in (('g5_', 'five'), ('gC_', 'noC'), ('gC7_', 'noC7')):
             chk(f'{key}{t}', a10['ensemble'][nm]['n_greater'], 0)
+        fl7 = SR[SR.strategy == 'FLOW'].set_index('k').dL_noC7; chk(f'fC7_{t}', float(fl7[K]))
+        flC = SR[SR.strategy == 'FLOW'].set_index('k').dL_noC; chk(f'fCpct_{t}', 100 * float(flC[K]) / float(fl[fl.k == K].dL.iloc[0]), 0.5)
+        om = json.load(open(RES / 'appendix' / 'od_masking.json', encoding='utf-8'))[str(y)]  # a11(코어 od_daily)의 결과
+        chk(f'odm{t}', 100 * om['masked_rows'] / om['rows'], 0.05); chk(f'odu{t}', 100 * 2.99 * om['masked_rows'] / (om['flow'] + 2.99 * om['masked_rows']), 0.05)
     # 원고 본문 반영 확인
     texts = {}
     for f in ('AG_manuscript_anonymised.docx', 'AG_한국어_원고.docx'):

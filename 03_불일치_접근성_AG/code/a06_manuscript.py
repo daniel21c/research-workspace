@@ -105,6 +105,11 @@ def values():
                   f'f5_{t}': sgn(pa['five']['flow_end']), f'r5_{t}': n0(pa['five']['rand_end_median']), f'b5_{t}': f"{100 * (1 - pa['five']['rand_end_share_below_flow']):.0f}",
                   f'fC_{t}': sgn(pa['noC']['flow_end']), f'rC_{t}': sgn(pa['noC']['rand_end_median']), f'kC_{t}': str(pa['noC']['first_k_flow_below_all_random']),
                   f'g5_{t}': n0(a['ensemble']['five']['n_greater']), f'gC_{t}': n0(a['ensemble']['noC']['n_greater'])})
+        sr = pd.read_csv(RES / str(y) / 'a10_states_subsets.csv'); fl = sr[sr.strategy == 'FLOW'].set_index('k').dL_noC; kpos = [int(k) for k in fl.index if k > fl.idxmin() and fl[k] >= 0]
+        V.update({f'fC7_{t}': sgn(pa['noC7']['flow_end']), f'gC7_{t}': n0(a['ensemble']['noC7']['n_greater']),
+                  f'fCpct_{t}': f"{100 * pa['noC']['flow_end'] / pa['all7']['flow_end']:.0f}", f'kCpos_{t}': (f'{kpos[0]}–{kpos[-1]}' if len(kpos) > 1 else (str(kpos[0]) if kpos else '—'))})
+        om = json.load(open(RES / 'appendix' / 'od_masking.json', encoding='utf-8'))[str(y)]
+        V.update({f'odm{t}': f"{100 * om['masked_row_share']:.1f}", f'odu{t}': f"{100 * om['flow_upper_share_c2.99']:.1f}"})
         T[y]['a10'] = a
     V['minstates'] = str(min(int(pd.read_csv(f).query('ku not in [11010, 11020, 11130, 11180]').saved_unique_states.min()) for f in sorted(RES.glob('20*/a02_ensemble_*_chain_diag.csv'))))
     return V, T
@@ -245,7 +250,7 @@ def appendix_tables(V, T, lang='en'):
                  k('Change relative to the official plan after all moves (66 in 2020, 65 in 2025). Category rows count residents excluded for that category, so they overlap and do not add up to the unique-resident rows. Random figures are medians over the 100 paths.',
                    '모든 이동 뒤(2020년 66회, 2025년 65회) 공식 생활권 대비 변화. 범주 행은 그 범주에서 누락된 주민 수라 서로 겹치며 고유 주민 행의 합이 아니다. 무작위 값은 100개 경로의 중앙값.'))
     S6 = (('all7', k('All seven categories (main analysis)', '7범주(주분석)')), ('five', k('Five categories (without culture and civic)', '5범주(문화·행정·안전 제외)')),
-          ('noC', k('Without the three least precisely dated types', '시점 등급 C 세 유형 제외')))
+          ('noC', k('Without the three method-C types in culture and civic', '방법 C 중 문화·행정·안전 세 유형 제외')), ('noC7', k('Without all seven method-C types', '방법 C 일곱 유형 모두 제외')))
     r6 = [[k('Measure', '항목')] + [lab for _, lab in S6]]
     for y in Y:
         pa = a10[y]['paths']; en = a10[y]['ensemble']; g_all = T[y]['e']['n_greater']
@@ -254,10 +259,10 @@ def appendix_tables(V, T, lang='en'):
                [k(f'{y}: random ΔL, median of 100 paths', f'{y}: 무작위 ΔL, 100경로 중앙값')] + [sgn(pa[nm]['rand_end_median']) for nm, _ in S6],
                [k(f'{y}: random paths ending above flow-guided (%)', f'{y}: 통행 기준보다 높게 끝난 무작위 경로(%)')] + [f"{100 * (1 - pa[nm]['rand_end_share_below_flow']):.0f}" for nm, _ in S6],
                [k(f'{y}: flow-guided below all random paths from k =', f'{y}: 통행 기준이 모든 무작위 경로보다 낮아지는 k')] + [str(pa[nm]['first_k_flow_below_all_random'] or '—') for nm, _ in S6],
-               [k(f'{y}: alternative maps (of 1000) excluding more than official', f'{y}: 공식보다 누락이 많은 대안 지도(1000장 중)')] + [n0(g_all), n0(en['five']['n_greater']), n0(en['noC']['n_greater'])]]
+               [k(f'{y}: alternative maps (of 1000) excluding more than official', f'{y}: 공식보다 누락이 많은 대안 지도(1000장 중)')] + [n0(g_all), n0(en['five']['n_greater']), n0(en['noC']['n_greater']), n0(en['noC7']['n_greater'])]]
     out['A6'] = (k('Table A.5. Results under alternative counts of excluded residents.', '표 A.5. 누락 인구를 달리 셌을 때의 결과.'), r6,
-                 k('Five categories: residents excluded for at least one of education, childcare and welfare, health, retail and personal services. Without the three least precisely dated types: public libraries, community service centres, and fire stations and 119 safety centres are removed from the inventory (method C in Table A.6), which removes civic and safety services altogether. Paths, random seeds and alternative maps are those of the main analysis. —: no such k.',
-                   '5범주: 교육·보육·복지·의료·소매·생활서비스 가운데 하나라도 누락된 주민. 시점 등급 C 세 유형 제외: 공공도서관·주민센터·소방서·119안전센터를 시설 목록에서 뺌(표 A.6의 방법 C). 행정·안전 범주가 통째로 빠진다. 경로·무작위 시드·대안 지도는 주분석과 같다. —: 해당 k 없음.'))
+                 k('Five categories: residents excluded for at least one of education, childcare and welfare, health, retail and personal services. Method C (Table A.6) covers seven types. Without the three in culture and civic: public libraries, community service centres, and fire stations and 119 safety centres are removed, which removes civic and safety services altogether. Without all seven: youth centres, senior welfare and day centres, disability community centres and public health centres are also removed. Paths, random seeds and alternative maps are those of the main analysis. —: no such k.',
+                   '5범주: 교육·보육·복지·의료·소매·생활서비스 가운데 하나라도 누락된 주민. 방법 C(표 A.6)는 일곱 유형이다. 문화·행정·안전 세 유형 제외: 공공도서관·주민센터·소방서·119안전센터를 뺌(행정·안전 범주가 통째로 빠짐). 일곱 유형 모두 제외: 청소년수련시설·노인 이용시설·장애인 이용시설·보건소·보건지소도 뺌. 경로·무작위 시드·대안 지도는 주분석과 같다. —: 해당 k 없음.'))
     return out
 
 
@@ -335,7 +340,7 @@ def table(d, cap, rows, note, size=9):
     for e in ('top', 'left', 'bottom', 'right', 'insideH', 'insideV'):
         el = OxmlElement(f'w:{e}'); el.set(qn('w:val'), 'nil'); tb.append(el)
     t._tbl.tblPr.append(tb)
-    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A.1' in cap else [6.4, 3.2, 3.2, 3.2] if 'A.5' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A.6' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
+    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A.1' in cap else [6.4, 3.2, 3.2, 3.2] if 'A.5' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A.6' in cap else [5.2, 2.7, 2.7, 2.7, 2.7] if 'A.5' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
     for i, row in enumerate(rows):
         for j, v in enumerate(row):
             c = t.cell(i, j); c.width = Cm(W[j]); c.text = ''; pp = c.paragraphs[0]; pp.paragraph_format.line_spacing = 1.0; rr = pp.add_run(str(v)); rr.font.size = Pt(size)  # 머리행도 보통 글씨(AG 게재본)
@@ -509,7 +514,7 @@ def main():
     d = base_doc(lines=False, spacing=1.15)
     for s in ['Dear Editor,', '',
               f'We submit the manuscript “{EN.TITLE}” for consideration as a research article in Applied Geography.',
-              'Cities that plan by living zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary dongs with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary dongs go where walkable facilities are. In Seoul, following trips raised self-containment and lowered total exclusion from within-zone walkable services, mainly in culture and civic services, while random moves of the same extent raised it every time. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
+              'Cities that plan by living zones are being urged to redraw them with mobility data. The paper asks whether doing so keeps residents’ walkable services inside their zones, a consequence of boundary revision that flow-based delineation does not measure. Using Seoul’s official living-zone plan at two points in time, we compare flow-guided reassignment of boundary dongs with random reassignment of the same extent, place the official plan among size- and shape-matched alternative maps generated with a redistricting ensemble method, and test whether trips from boundary dongs go where walkable facilities are. In Seoul, following trips raised self-containment and lowered total exclusion from within-zone walkable services, entirely in culture and civic services; in the other five categories exclusion rose, though less than under random moves, which raised the total every time. We think the combination of an explicit coverage measure and explicit baselines will interest readers working on accessibility, functional regions and planning geography.',
               'The manuscript has not been published and is not under consideration elsewhere. A companion paper in preparation for a Korean planning journal uses the same mobility data to study how the mismatch between official zones and trips changed between 2020 and 2025; it does not examine facilities or accessibility, and its questions and results do not overlap with this submission. We have not cited it to preserve anonymity and because it has not yet been submitted.',
               'Both authors have approved the manuscript and agree with its submission. There are no competing interests.', '', 'Sincerely,', 'Jongha Park and Sunyong Eom (corresponding author, sunyongeom@hanyang.ac.kr)', 'Graduate School of Urban Studies, Hanyang University']:
         para(d, s, indent=False)

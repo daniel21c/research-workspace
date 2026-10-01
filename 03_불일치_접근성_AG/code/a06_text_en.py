@@ -73,7 +73,7 @@ BODY = [
           'cost services in total. The paper makes two contributions. First, it treats within-zone service coverage as a property '
           'of a boundary, separate from accessibility itself, and shows how to measure it with standard data. Second, it judges '
           'boundary revisions against clear benchmarks, namely random revisions of the same extent and large sets of alternative '
-          'plans. Sections 2 to 5 take the three questions in the same order.'),
+          'plans.'),
     ('h1', '2. Literature review'),
     ('h2', '2.1. Living zones as service units and the boundary problem'),
     ('p', 'Proximity-based planning has renewed interest in such units. Studies of the 15-minute city measure whether residents can '
@@ -193,7 +193,7 @@ BODY = [
           'plan counts as inside a resident’s zone. It does not record which services residents actually use, and it does not '
           'mean that they cannot use services outside their zone.'),
     ('h2', '3.2. Flow-guided and random reassignment of boundary dongs (Q1)'),
-    ('p', 'We answer the first question by comparing two kinds of reassignment path. A reassignment moves one dong to an adjacent '
+    ('p', 'A reassignment moves one dong to an adjacent '
           'zone in the same gu; two dongs are adjacent if their boundaries touch at any point (queen contiguity). A move is allowed '
           'only if the zone the dong leaves remains non-empty and connected. The number of zones therefore never changes, and only '
           'dongs on the edge of their zone, the boundary dongs, can move.'),
@@ -269,22 +269,19 @@ BODY = [
           '{ifr25}% to {fifr25}% in 2025, while random paths lowered it (median {rifr25}%).'),
     ('p', 'This result holds for the tested modularity rule, with the number of zones fixed and no limits on zone population or '
           'shape. When the population and shape rules of Section 3.3 were applied to every move, the same rule lowered exclusion in '
-          '2020 but raised it in 2025, and both paths stopped after 22 moves (Table A.3). We therefore claim the gain for adjusting '
-          'an existing plan, not for redesigning zones under constraints.'),
+          '2020 but raised it in 2025, and both paths stopped after 22 moves (Table A.3).'),
     ('p', 'The fall in the total came from two categories. At the end of the flow-guided path, exclusion fell for culture '
           '({cul_d20} residents in 2020, {cul_d25} in 2025) and for civic and safety services ({civ_d20}, {civ_d25}), the two '
           'categories with the sparsest facilities. It rose for education ({edu_d20}, {edu_d25}) and changed little elsewhere '
           '(Table A.4). Counted over the other five categories only, the flow-guided path ended above the official plan ({f5_20} '
           'in 2020, {f5_25} in 2025), but below {b5_20}% and {b5_25}% of random paths, whose median rose by {r5_20} and {r5_25} '
-          '(Table A.5). Without the three facility types with the least precise dates, which removes civic services altogether, the flow-guided path still ended below the official plan '
-          '({fC_20}, {fC_25}) and below all random paths from k = {kC_20} and {kC_25} (Table A.5).'),
+          '(Table A.5). Without the three method-C facility types in culture and civic services (public libraries, community service centres and fire stations; Table A.6), which removes civic services altogether, the flow-guided path still ended below the official plan: clearly in 2020 ({fC_20}), but in 2025 only narrowly ({fC_25}, {fCpct_25}% of the main result) after rising above zero at k = {kCpos_25} (Table A.5). Without all seven method-C types the results were similar ({fC7_20}, {fC7_25}).'),
     ('table', 'T2'),
     ('h2', '4.3. The official plan among alternative maps (Q2)'),
     ('p', 'The official plan excluded fewer residents than {g25} of the 1000 alternative maps in 2025 and {g20} of the 1000 in 2020 '
           '(Fig. 3; Table 3). The median alternative excluded {med25} residents in 2025, {dmed25} more than the official plan, and '
           '{med20} in 2020, {dmed20} more. In 2025, even the best alternative excluded {dmin25} more residents than the official '
-          'plan. The ranking held when exclusion was counted over the five categories ({g5_25} and {g5_20} maps) or without the '
-          'three least precisely dated types ({gC_25}, {gC_20}; Table A.5). The official plan also had higher self-containment: '
+          'plan. The ranking held when exclusion was counted over the five categories ({g5_25} and {g5_20} maps) or without the method-C types in culture and civic services ({gC_25}, {gC_20}) or all seven of them ({gC7_25}, {gC7_20}; Table A.5). The official plan also had higher self-containment: '
           '{ifr_en} Successive maps in a chain are similar to each other, and the effective sample size of L ranged from {essmin} '
           'to {essmax} per chain. {depend_en}'),
     ('fig', 'Fig3'),
@@ -349,10 +346,7 @@ BODY = [
           'and in four gu the rules left very few alternatives. In 2020, the dong-level association lost precision once zone size '
           'was controlled for. The facility stocks are reconstructions: 98.3% of the 2020 records and 88.0% of the 2025 records '
           'come from current licensing histories with opening and closing dates, some public registers are dated near rather than '
-          'at the reference date, and the 2020 everyday-retail inventory is a regenerated snapshot (Table A.6); without the least '
-          'precisely dated types the direction of the path results did not change (Table A.5). The mobility data exclude home–work '
-          'trips and set suppressed cells of fewer than three trips to zero (24.1% of Seoul-internal records in January 2020, at '
-          'most about 12% of trips). The walking network comes from OpenStreetMap, and 15 minutes is one reasonable threshold.'),
+          'at the reference date, and the 2020 everyday-retail inventory is a regenerated snapshot (Table A.6). Without the method-C types the total still fell, though only slightly in 2025 (Table A.5). The mobility data exclude home–work trips, and records with fewer than three travellers are suppressed and set to zero ({odm20}% of the records used in 2020 and {odm25}% in 2025, at most {odu20}% and {odu25}% of trips). The walking network comes from OpenStreetMap, and 15 minutes is one reasonable threshold.'),
     ('p', 'In sum, reassigning the boundary dongs of Seoul’s living-zone plan along observed trips raised self-containment and '
           'lowered total exclusion from within-zone walkable services. The fall came from culture and civic services; in the other '
           'categories, flow-guided moves added less exclusion than random ones. Random reassignment of the same extent pushed '

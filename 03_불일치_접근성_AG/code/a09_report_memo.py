@@ -68,7 +68,7 @@ def main():
       f'공식 생활권은 규모·모양을 맞춘 대안 지도 1,000장 중 {E[2020]["n_greater"]}장(2020)·{E[2025]["n_greater"]}장(2025)보다 L이 적었다. '
       f'다만 L 총량의 감소는 시설이 드문 문화({sgn(X[2020]["flow_end_minus_official_by_category"]["문화"])} / {sgn(X[2025]["flow_end_minus_official_by_category"]["문화"])}명)와 행정·안전({sgn(X[2020]["flow_end_minus_official_by_category"]["행정·안전"])} / {sgn(X[2025]["flow_end_minus_official_by_category"]["행정·안전"])}명)에서 나왔다. 나머지 다섯 범주로 세면 통행 기준 경로도 누락을 늘렸지만({sgn(X[2020]["paths"]["five"]["flow_end"])} / {sgn(X[2025]["paths"]["five"]["flow_end"])}명), 무작위 중앙값({sgn(X[2020]["paths"]["five"]["rand_end_median"])} / {sgn(X[2025]["paths"]["five"]["rand_end_median"])}명)보다는 덜 늘렸다. '
       f'경계 동의 통행은 걸어서 닿는 시설(특히 의료·소매·생활서비스)이 더 많은 인접 생활권으로 향했지만(편상관 {M[2020]["partial_W_F_given_AP"]["est"]:.2f} / {M[2025]["partial_W_F_given_AP"]["est"]:.2f}), 이 관계는 감소가 일어난 문화·행정·안전에서 약해 감소의 이유가 되지 못한다. '
-      f'시점 등급 C 시설 세 유형(공공도서관·주민센터·소방서)을 빼고 다시 세도 통행 기준 경로는 누락을 줄였다({sgn(X[2020]["paths"]["noC"]["flow_end"])} / {sgn(X[2025]["paths"]["noC"]["flow_end"])}명). '
+      f'시점 방법 C 가운데 문화·행정·안전의 세 유형(공공도서관·주민센터·소방서)을 빼고 다시 세면 2020년에는 감소가 유지되고({sgn(X[2020]["paths"]["noC"]["flow_end"])}명), 2025년에는 마지막 단계들에서 0 근처까지 올라갔다가 작은 감소로 끝났다({sgn(X[2025]["paths"]["noC"]["flow_end"])}명, 주분석의 {100 * X[2025]["paths"]["noC"]["flow_end"] / X[2025]["paths"]["all7"]["flow_end"]:.0f}%). 방법 C 일곱 유형을 모두 빼도 비슷했다({sgn(X[2020]["paths"]["noC7"]["flow_end"])} / {sgn(X[2025]["paths"]["noC7"]["flow_end"])}명). '
       '결론: 서울에서는 통행을 따라 경계 동을 재배정해도 총량으로는 시설을 잃지 않는다. 이동 자료는 공식 생활권을 다듬는 도구로 쓸 수 있고, 재배정할 때마다 자족성과 함께 생활권 안 시설 포착을 범주별로 확인해야 한다. 이 결과는 인구·모양 제약을 두지 않은 규칙에서 두 해 성립했고, 두 제약을 함께 걸면 2025년에는 뒤집혔다(부록 Table A.3). 그래서 기존 생활권의 조정에 한정하고 전면 재설계로 넓히지 않았다.')
 
     H('2. 논지 프로세스')
@@ -102,7 +102,8 @@ def main():
        ['대안 지도 1,000장 중 L > 공식', f"{E[2020]['n_greater']}", f"{E[2025]['n_greater']}"],
        ['대안 중앙값 − 공식 L', sgn(E[2020]['median_minus_LZ']), sgn(E[2025]['median_minus_LZ'])],
        ['5범주(문화·행정·안전 제외) 통행 기준 경로 끝 ΔL / 무작위 중앙값', f"{sgn(X[2020]['paths']['five']['flow_end'])} / {sgn(X[2020]['paths']['five']['rand_end_median'])}", f"{sgn(X[2025]['paths']['five']['flow_end'])} / {sgn(X[2025]['paths']['five']['rand_end_median'])}"],
-       ['시점 등급 C 3유형 제외 통행 기준 경로 끝 ΔL', sgn(X[2020]['paths']['noC']['flow_end']), sgn(X[2025]['paths']['noC']['flow_end'])],
+       ['방법 C 중 문화·행정·안전 3유형 제외 통행 기준 경로 끝 ΔL', sgn(X[2020]['paths']['noC']['flow_end']), sgn(X[2025]['paths']['noC']['flow_end'])],
+       ['방법 C 7유형 모두 제외 통행 기준 경로 끝 ΔL', sgn(X[2020]['paths']['noC7']['flow_end']), sgn(X[2025]['paths']['noC7']['flow_end'])],
        ['편상관 W~F | A,P [95% CI]', f"{M[2020]['partial_W_F_given_AP']['est']:.3f} [{M[2020]['partial_W_F_given_AP']['ci95'][0]:.3f}, {M[2020]['partial_W_F_given_AP']['ci95'][1]:.3f}]", f"{M[2025]['partial_W_F_given_AP']['est']:.3f} [{M[2025]['partial_W_F_given_AP']['ci95'][0]:.3f}, {M[2025]['partial_W_F_given_AP']['ci95'][1]:.3f}]"]], [7.5, 4.75, 4.75])
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.add_run().add_picture(str(FIG / 'Fig2.png'), width=Cm(15))
     q = d.add_paragraph('그림. 경계 동 재배정 횟수 k에 따른 누락 인구 변화: 무작위 100경로(파랑) vs 통행 기준(빨강). 공식 생활권 대비.'); q.runs[0].font.size = Pt(8.5)

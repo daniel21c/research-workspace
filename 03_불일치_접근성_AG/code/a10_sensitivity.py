@@ -4,8 +4,10 @@
 a01과 똑같은 통행 기준 경로·무작위 100경로(같은 시드·같은 코드)를 다시 만들고, 매 상태를 세 가지 L로 센다.
   all7 : 원고의 L(7범주). a01_states.csv의 ΔL과 전 상태 일치를 assert한다(재현 확인).
   five : 문화·행정·안전을 뺀 5범주로 센 고유 주민 L(같은 보행 도달 행렬의 열 부분집합).
-  noC  : 시점 등급 C 세 유형(공공도서관·주민센터·소방서·119안전센터)을 시설 목록에서 빼고 다시 센 L.
-         행정·안전은 두 유형이 모두 C라 범주 전체가 빠지고, 문화는 공공도서관만 빠진다(시설 패키지 표 A.4 등급).
+  noC  : 시점 방법 C 중 문화·행정·안전의 세 유형(공공도서관·주민센터·소방서·119안전센터)을 시설 목록에서 빼고 다시 센 L.
+         행정·안전은 두 유형이 모두 C라 범주 전체가 빠지고, 문화는 공공도서관만 빠진다(원고 표 A.6의 방법 C).
+  noC7 : 표 A.6의 방법 C 일곱 유형 전부(위 셋 + 청소년수련시설·노인 이용시설·장애인 이용시설·보건소·보건지소)를 빼고 다시 센 L
+         (2026-10-02 감사 재확인 N1 대응).
 또 범주별 단독 누락(그 범주에서 누락된 주민)의 경로 끝 변화, 대안 지도 1000장(a02 저장 표본)에 대한 five·noC의 Q2 결과를 낸다.
 실행: python code/a10_sensitivity.py 2025   (2020도 같음)
 출력: results/{연도}/a10_sensitivity.json, a10_states_subsets.csv
@@ -25,7 +27,8 @@ import a01_flow_random as A1  # noqa: E402
 from a02_ensemble import SEEDS  # noqa: E402
 
 NREP = 100
-C_TYPES = ['공공도서관', '주민센터', '소방서·119안전센터']  # 시점 등급 C(표 A.4)
+C_TYPES = ['공공도서관', '주민센터', '소방서·119안전센터']  # 방법 C 중 문화·행정·안전(표 A.6)
+C7_TYPES = C_TYPES + ['청소년수련시설', '노인 이용시설', '장애인 이용시설', '보건소·보건지소']  # 표 A.6 방법 C 전부
 CI = {c: j for j, c in enumerate(S.CATS)}
 FIVE = [CI[c] for c in S.CATS if c not in ('문화', '행정·안전')]
 
@@ -33,10 +36,10 @@ FIVE = [CI[c] for c in S.CATS if c not in ('문화', '행정·안전')]
 class ReachNoC:
     """study.Accessibility와 같은 규칙(15분, 인구 있는 출발 격자, 출발 격자→도착 격자의 동)으로, C 유형을 뺀 시설의 범주별 도달 여부만 계산."""
 
-    def __init__(self, D, paths, ev):
+    def __init__(self, D, paths, ev, exclude=C_TYPES):
         gm = D['gm']; ng = len(gm); code = pd.Series(np.arange(ng), index=gm.grid_cd)
         f = pd.read_parquet(paths['units'], columns=['year', '시설', '분석가능', 'role', 'cat_A', 'grid100_cd'])
-        f = f[(f.year == D['year']) & f['분석가능'].astype(bool) & f['role'].ne('control') & f.cat_A.isin(S.CATS) & ~f['시설'].isin(C_TYPES)]
+        f = f[(f.year == D['year']) & f['분석가능'].astype(bool) & f['role'].ne('control') & f.cat_A.isin(S.CATS) & ~f['시설'].isin(exclude)]
         gi = f.grid100_cd.map(code); ok = gi.notna()
         mask = np.zeros(ng, np.uint8)
         np.bitwise_or.at(mask, gi[ok].to_numpy(int), np.left_shift(1, f.loc[ok, 'cat_A'].map(CI).to_numpy()).astype(np.uint8))
@@ -120,13 +123,15 @@ def path_summary(SR, col, K):
 
 def main(year):
     out = AG / 'results' / str(year); cache = AG / 'results' / '_cache' / str(year); cache.mkdir(parents=True, exist_ok=True)
-    paths = S.input_paths(ROOT, year); D = S.load(ROOT, year, paths); ev = S.Accessibility(D, paths, cache); evC = ReachNoC(D, paths, ev)
+    paths = S.input_paths(ROOT, year); D = S.load(ROOT, year, paths); ev = S.Accessibility(D, paths, cache); evC = ReachNoC(D, paths, ev); evC7 = ReachNoC(D, paths, ev, C7_TYPES)
     PL, K = paths_like_a01(D)
-    xc0 = ev.rn & ~(ev.base > 0); L0 = float(ev.p[ev.x0].sum()); x5_0 = xc0[:, FIVE].any(1); L5_0 = float(ev.p[x5_0].sum()); LC_0 = float(evC.p[evC.x0].sum())
+    xc0 = ev.rn & ~(ev.base > 0); L0 = float(ev.p[ev.x0].sum()); x5_0 = xc0[:, FIVE].any(1); L5_0 = float(ev.p[x5_0].sum()); LC_0 = float(evC.p[evC.x0].sum()); LC7_0 = float(evC7.p[evC7.x0].sum())
     rows = []; cat_end = {}
     for (s, kk, r), (lab, moved) in PL.items():
         mat = ev.matrix(lab); xc = ev.rn & ~(mat > 0); x = xc.any(1); matC = evC.matrix(lab); xC = (evC.rn & ~(matC > 0)).any(1)
-        rows.append({'strategy': s, 'k': kk, 'rep': r, 'dL_all7': float(ev.p[x].sum()) - L0, 'dL_five': float(ev.p[xc[:, FIVE].any(1)].sum()) - L5_0, 'dL_noC': float(evC.p[xC].sum()) - LC_0})
+        xC7 = (evC7.rn & ~(evC7.matrix(lab) > 0)).any(1)
+        rows.append({'strategy': s, 'k': kk, 'rep': r, 'dL_all7': float(ev.p[x].sum()) - L0, 'dL_five': float(ev.p[xc[:, FIVE].any(1)].sum()) - L5_0, 'dL_noC': float(evC.p[xC].sum()) - LC_0,
+                     'dL_noC7': float(evC7.p[xC7].sum()) - LC7_0})
         if kk == K:
             cat_end[(s, r)] = [float(ev.p[xc[:, j]].sum() - ev.p[xc0[:, j]].sum()) for j in range(7)]
     SR = pd.DataFrame(rows)
@@ -135,22 +140,23 @@ def main(year):
     SR.to_csv(out / 'a10_states_subsets.csv', index=False, encoding='utf-8-sig', float_format='%.12g')
     flow_cat = cat_end[('FLOW', -1)]; rand_cat = np.median(np.array([v for (s, r), v in cat_end.items() if s == 'RAND']), 0)
     res = {'year': year, 'reproduces_a01_states': True, 'n_states': len(SR), 'K': K,
-           'official_L': {'all7': L0, 'five': L5_0, 'noC': LC_0},
+           'official_L': {'all7': L0, 'five': L5_0, 'noC': LC_0, 'noC7': LC7_0},
            'official_excluded_by_category': {c: float(ev.p[xc0[:, j]].sum()) for j, c in enumerate(S.CATS)},
            'flow_end_minus_official_by_category': dict(zip(S.CATS, flow_cat)), 'random_end_minus_official_median_by_category': dict(zip(S.CATS, map(float, rand_cat))),
-           'paths': {nm: path_summary(SR, f'dL_{nm}', K) for nm in ('all7', 'five', 'noC')},
-           'noC_facility': {'excluded_types': C_TYPES, 'records_kept': evC.n_records, 'cells_by_category': evC.n_cells_by_category}}
+           'paths': {nm: path_summary(SR, f'dL_{nm}', K) for nm in ('all7', 'five', 'noC', 'noC7')},
+           'noC_facility': {'excluded_types': C_TYPES, 'records_kept': evC.n_records, 'cells_by_category': evC.n_cells_by_category},
+           'noC7_facility': {'excluded_types': C7_TYPES, 'records_kept': evC7.n_records, 'cells_by_category': evC7.n_cells_by_category}}
     # Q2: 대안 지도 1000장
-    ens = {'five': [], 'noC': []}; offi = {}
+    ens = {'five': [], 'noC': [], 'noC7': []}; offi = {}
     for sd in SEEDS[year]:
         Lb = np.load(out / f'a02_ensemble_{sd}_labels.npz'); assert np.array_equal(Lb['dongs'], D['dongs'])
         for key in ['LZ'] + [f'E{i:03d}' for i in range(500)]:
             lab = Lb[key].astype(np.int64); mat = ev.matrix(lab); v5 = float(ev.p[(ev.rn[:, FIVE] & ~(mat[:, FIVE] > 0)).any(1)].sum())
-            vC = float(evC.p[(evC.rn & ~(evC.matrix(lab) > 0)).any(1)].sum())
+            vC = float(evC.p[(evC.rn & ~(evC.matrix(lab) > 0)).any(1)].sum()); vC7 = float(evC7.p[(evC7.rn & ~(evC7.matrix(lab) > 0)).any(1)].sum())
             if key == 'LZ':
-                offi = {'five': v5, 'noC': vC}
+                offi = {'five': v5, 'noC': vC, 'noC7': vC7}
             else:
-                ens['five'].append(v5); ens['noC'].append(vC)
+                ens['five'].append(v5); ens['noC'].append(vC); ens['noC7'].append(vC7)
     res['ensemble'] = {nm: {'official': offi[nm], 'n_maps': len(v), 'n_greater': int((np.array(v) > offi[nm] + .5).sum()), 'median_minus_official': float(np.median(v) - offi[nm])} for nm, v in ens.items()}
     (out / 'a10_sensitivity.json').write_text(json.dumps(res, ensure_ascii=False, indent=1, default=float), encoding='utf-8')
     print(json.dumps({k: res[k] for k in ('official_L', 'paths', 'ensemble', 'flow_end_minus_official_by_category')}, ensure_ascii=False, default=float))
