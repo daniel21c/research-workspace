@@ -8,7 +8,7 @@
 | `AG_한국어_원고.pdf` | 한국어 전문(현재본) |
 | `AG_manuscript_anonymised.pdf` | 영문 익명 투고본(현재본, 7,887단어) |
 | `AG_supplementary_appendix.pdf` | 부록 A(Table A.1~A.6: 시설 유형·범주별 누락·민감도·범주별 경로 끝 변화·누락을 달리 센 결과·시설 원천) |
-| `AG_확정본_공동연구자패키지_20260930_489e52d.zip` | 공동연구자 패키지(= `../package/` zip 사본, SHA-256 동일) |
+| `AG_확정본_공동연구자패키지_20260930_9d69b1e.zip` | 공동연구자 패키지(= `../package/` zip 사본, SHA-256 동일) |
 | `GraphicalAbstract.png` | 그래픽 초록 |
 
 팀즈 첨부: 메모 PDF·한국어 원고 PDF·영문 PDF·부록 PDF·zip(줄이려면 메모·한국어·zip). 서식 대조는 상위 폴더 `../AG_투고서식_체크리스트_20260930.md`.
