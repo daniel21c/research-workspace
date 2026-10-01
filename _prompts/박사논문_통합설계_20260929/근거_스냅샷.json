@@ -1,0 +1,292 @@
+{
+  "captured_at": "2026-09-29T18:31:27.690490+09:00",
+  "scope": "current source fingerprints; not rerun of research analyses",
+  "baseline_path": "D:\\Research\\00_박사논문_연구체계\\_prompts\\orchestrator_rebuild_20260929\\data_baseline_20260929_174154490.json",
+  "baseline_sha256": "6a1c1370ba067bf9fac714a7e7b8a838a68d8d9f5ef55ffba1841926a62cf6a1",
+  "baseline_files": [
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md",
+      "expected_sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "current_sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "matches": true
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\manifest.json",
+      "expected_sha256": "114f572c96d4720e589372d4280bf6cc675993261d0107441305085bc23c2cc4",
+      "current_sha256": "114f572c96d4720e589372d4280bf6cc675993261d0107441305085bc23c2cc4",
+      "matches": true
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "expected_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "current_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "matches": true
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\manifest_sha256.csv",
+      "expected_sha256": "fd1b817398b98aaf053d762aac7b2271d0108351f4659cfaf030ce14ca6cdd20",
+      "current_sha256": "fd1b817398b98aaf053d762aac7b2271d0108351f4659cfaf030ce14ca6cdd20",
+      "matches": true
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\release_provenance.json",
+      "expected_sha256": "28525f70e3ecab23c9ab820020ffe06f2630ee16b39499d2f3bc0ea83d9bacbb",
+      "current_sha256": "28525f70e3ecab23c9ab820020ffe06f2630ee16b39499d2f3bc0ea83d9bacbb",
+      "matches": true
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\output\\codex_boundary_validation_20260929_01a0eb4a-3625-7f91-9b4e-ad77dc3508ad\\근거보고서.md",
+      "expected_sha256": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24",
+      "current_sha256": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24",
+      "matches": true
+    }
+  ],
+  "linked_files": {
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\박사논문_통합설계_20260929\\7범주_탑다운_실행기준.md": {
+      "sha256": "3e5a19ba0d8852f9f0b3c2e4360eccfdb7a97b951fc84511f524734f59a27251",
+      "bytes": 15908,
+      "mtime_ns": 1790674287632313400,
+      "line_count": 109
+    },
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\박사논문_통합설계_20260929\\근거표.md": {
+      "sha256": "df141a82cc17f763939f5d858335a1638815ceb23c91bea653d6c1d500a0dc21",
+      "bytes": 15240,
+      "mtime_ns": 1790674266871479900,
+      "line_count": 68
+    },
+    "D:\\Research\\00_박사논문_연구체계\\README.md": {
+      "sha256": "7dede20eb0d7c2263e44a27bf6e358b561a6b328e2defa177ae2b51aa22b8e4c",
+      "bytes": 6329,
+      "mtime_ns": 1790673365580632500,
+      "line_count": 43
+    },
+    "D:\\Research\\AGENTS.md": {
+      "sha256": "1626d99d53f6e1fe60f8c97f6bf6614aa7e24d4a7271210003783ce474761ad9",
+      "bytes": 1857,
+      "mtime_ns": 1790168242835453300,
+      "line_count": 16
+    },
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\박사논문_통합설계_20260929\\7범주_적용전_보존\\박사논문_연구설계.md": {
+      "sha256": "e1a10f06d638e4548ad5061c4a45ad6a9ee93acde5b09884a13476575778dc79",
+      "bytes": 22617,
+      "mtime_ns": 1790297256443927400,
+      "line_count": 179
+    },
+    "D:\\Research\\00_박사논문_연구체계\\박사논문_연구설계.md": {
+      "sha256": "f4c129f49718d48a62e4a4b4919144f9c777effec5dd4b706d01ae737689eb40",
+      "bytes": 29717,
+      "mtime_ns": 1790674039586317700,
+      "line_count": 198
+    },
+    "D:\\Research\\999_논문\\교수님 논문지도\\26.09.21_엄교수님 논문지도.txt": {
+      "sha256": "cf99d956579c2bbb34ab6604708daf69c184d242225b983739e7d414b6d0f586",
+      "bytes": 51961,
+      "mtime_ns": 1789979966892646300,
+      "line_count": 1321
+    },
+    "D:\\Research\\999_논문\\교수님 논문지도\\26.09.21_엄교수님 논문지도_요약.md": {
+      "sha256": "a1b37e46151be970dbea1e48a3a0a277a7f2c275f829a002d15168328d0531d6",
+      "bytes": 8003,
+      "mtime_ns": 1789997955294843900,
+      "line_count": 124
+    },
+    "D:\\Research\\00_박사논문_연구체계\\00_선행연구\\연구설계.md": {
+      "sha256": "b721a5d456dfb7890a21dbdbbaf932713527b44bc26f228aeace83926daf0a51",
+      "bytes": 27669,
+      "mtime_ns": 1790224486966206200,
+      "line_count": 306
+    },
+    "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md": {
+      "sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "bytes": 18508,
+      "mtime_ns": 1790667105640827700,
+      "line_count": 29
+    },
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\orchestrator_rebuild_20260929\\data_baseline_20260929_174154490.json": {
+      "sha256": "6a1c1370ba067bf9fac714a7e7b8a838a68d8d9f5ef55ffba1841926a62cf6a1",
+      "bytes": 2444,
+      "mtime_ns": 1790671314505216000,
+      "line_count": null
+    },
+    "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\output\\codex_boundary_validation_20260929_01a0eb4a-3625-7f91-9b4e-ad77dc3508ad\\근거보고서.md": {
+      "sha256": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24",
+      "bytes": 17974,
+      "mtime_ns": 1790655303533244100,
+      "line_count": 93
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\문서\\지표정의_확정.md": {
+      "sha256": "30b208e71282b43a5f110e79b588d44476fe7eb85c572918ea5a2b15f8ffeedd",
+      "bytes": 15963,
+      "mtime_ns": 1790667619013746800,
+      "line_count": 138
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\문서\\배포검증_v33_20260929.md": {
+      "sha256": "687744624ca483afa26e968483c190fa5fa07acc33366102d8d465836353a2c8",
+      "bytes": 5338,
+      "mtime_ns": 1790667479289757200,
+      "line_count": 46
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\문서\\공동연구자_시작_20260929.md": {
+      "sha256": "7f796c9e696725599ccbfa9bdb722157aa10ba75105214148e2b6e652a13e019",
+      "bytes": 5391,
+      "mtime_ns": 1790667619013746800,
+      "line_count": 29
+    },
+    "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\README.md": {
+      "sha256": "84cde56c96a0559065aa2ffcf403be263122ad9474da638d85958efa280ab991",
+      "bytes": 10353,
+      "mtime_ns": 1790666952701400000,
+      "line_count": 123
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a00_config.py": {
+      "sha256": "e5db8974bd61bedbe35c98ddbadd8cee2f9114e138638a484acec17f86cca448",
+      "bytes": 6826,
+      "mtime_ns": 1790665177709861300,
+      "line_count": 97
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06c_delta.py": {
+      "sha256": "0f22acc242255088d4073d038ceb439a486059af58b33d485151da072fb0d4b1",
+      "bytes": 4128,
+      "mtime_ns": 1790665177709861300,
+      "line_count": 79
+    },
+    "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\문서\\출처_전처리_연결표_20260929.md": {
+      "sha256": "b334a06c09d1e01c3dfd1c9443ff89b5de4c87f77327c87689126b2b076890e5",
+      "bytes": 10829,
+      "mtime_ns": 1790667479289757200,
+      "line_count": 46
+    },
+    "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\논문사용을_위한_수정재분석설계_20260929.md": {
+      "sha256": "2b1c97faed1d413b09aa7796f7191c7d0682f40341b31fa8c98295515d243296",
+      "bytes": 24015,
+      "mtime_ns": 1790651314421049600,
+      "line_count": 118
+    },
+    "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\무결성감사_20260929.md": {
+      "sha256": "98b12a7223759ac98c873d60b3c7899d66907768bd06abb279303d8f278dadd2",
+      "bytes": 30656,
+      "mtime_ns": 1790640021461241400,
+      "line_count": 183
+    },
+    "D:\\Research\\00_박사논문_연구체계\\01_생활권_필요성\\code\\reanalysis_v3\\adopt_inputs.py": {
+      "sha256": "d0deeb8c72bfbac651571ae2514dfda12e4c7d131f4f0b1fd2937c0bf2e47631",
+      "bytes": 5382,
+      "mtime_ns": 1790671423010947000,
+      "line_count": 54
+    },
+    "D:\\Research\\999_논문\\250801_Journal of Transport Geography\\게재\\1-s2.0-S0966692326002073-main.pdf": {
+      "sha256": "f8ec8d1f28ca7fda78b9401c1f41bd9011ccaf12b7f476845eab93c1f1b03e11",
+      "bytes": 13035517,
+      "mtime_ns": 1788331497703376500,
+      "line_count": null
+    },
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\orchestrator_rebuild_20260929\\연구2_JTG_시작문.md": {
+      "sha256": "dadd3ed6476cbf5f4d0b6ba4bce58ee428c42329474f8805e8fc353db547702f",
+      "bytes": 11636,
+      "mtime_ns": 1790671854561941100,
+      "line_count": 31
+    },
+    "D:\\Research\\00_박사논문_연구체계\\02_생활권_구획_JTG\\연구2_재분석_패키지_20260929\\code\\analyze.py": {
+      "sha256": "20c8d856bad6975c5419d1a17f8277f9b9a2247e5ecac84c8563a637420855a1",
+      "bytes": 21883,
+      "mtime_ns": 1790674133509191500,
+      "line_count": 268
+    },
+    "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\연구설계.md": {
+      "sha256": "fdccb44bd5f5b55905d2835b4147f2066d74046d3d93384a7d8e280004e96a76",
+      "bytes": 11049,
+      "mtime_ns": 1790673968499823300,
+      "line_count": 72
+    },
+    "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\explore\\v3\\AG_v3_원고_재설계안_20260929.md": {
+      "sha256": "bd9ceab81d59a07b809389e36710fe16413fc6476827fa19323e6b06c13ad6a0",
+      "bytes": 21967,
+      "mtime_ns": 1790639137859691500,
+      "line_count": 134
+    },
+    "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\explore\\v3\\manuscript\\AG_v3_자료보완판_20260929\\AG_v3_한국어_핵심본문_자료보완판_20260929.md": {
+      "sha256": "c2f43ddbc20a207fcd27da42196a7bbf240497b3ba3085cf7e868bedb40cc5be",
+      "bytes": 34309,
+      "mtime_ns": 1790656158254910700,
+      "line_count": 207
+    },
+    "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\explore\\v3\\common_v3.py": {
+      "sha256": "dce9947d27e8f29dfd78b7efd143f1c378a9e77e33677e969691153c73d36a99",
+      "bytes": 12612,
+      "mtime_ns": 1790599043191149800,
+      "line_count": 236
+    },
+    "D:\\Research\\00_박사논문_연구체계\\03_불일치_접근성_AG\\작업기록.md": {
+      "sha256": "2f1f0a02ccd79566028463fd968c2e6d2e82892955d3ac16bf8e359b6e84a8ab",
+      "bytes": 80384,
+      "mtime_ns": 1790656171708495900,
+      "line_count": 383
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\연구설계_v2_경계동진단.md": {
+      "sha256": "af2336eafaa5f97b7b6f763b87605013df19b3bbe284fba88542ec7adf4ac515",
+      "bytes": 4260,
+      "mtime_ns": 1790616190798353400,
+      "line_count": 27
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\연구설계_현재후보.md": {
+      "sha256": "cdc00a3ed5e312281ef7a0d539d72cc182f127519d298a68341a74484d2da2a3",
+      "bytes": 14976,
+      "mtime_ns": 1790674002743873800,
+      "line_count": 106
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\교수님_검토요청문_20260929.md": {
+      "sha256": "1360200e22bed07f146a070ada16b7587a461fcc78551070229ac748d6c7e9bc",
+      "bytes": 3093,
+      "mtime_ns": 1790638895003192900,
+      "line_count": 22
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\writing\\KPA_v2_집필작업본_20260929\\편집메모.md": {
+      "sha256": "999a193cafc57308b41c90dba908f8d29f8b71e60d123b500da78c41987cc378",
+      "bytes": 13666,
+      "mtime_ns": 1790654955650956300,
+      "line_count": 80
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\scripts\\kpa_metrics.py": {
+      "sha256": "a4774690fd09d53bd0d75a4ccded4d947b0be961736e885c000950bb372539d4",
+      "bytes": 9283,
+      "mtime_ns": 1790220145164380700,
+      "line_count": 196
+    },
+    "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\scripts\\k14_reassign.py": {
+      "sha256": "a6c25edfa48fae50d72951d90316875e53a0054a136a2b74e48e00d733660ec2",
+      "bytes": 12655,
+      "mtime_ns": 1790614763618210500,
+      "line_count": 172
+    },
+    "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet": {
+      "sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "bytes": 38578951,
+      "mtime_ns": 1790664030674990600,
+      "line_count": null
+    },
+    "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\시설_선택규칙.json": {
+      "sha256": "c3705db3174dbb907cbdd90d5fbe57c47a3c64b0b0179ca7b5c5ea2324fec7b7",
+      "bytes": 1121,
+      "mtime_ns": 1790663640035915200,
+      "line_count": null
+    },
+    "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\facility_selection.py": {
+      "sha256": "59d9eda5a57d28ac5df554869097813610fda126bdbc24cfb7f1526b40a1330f",
+      "bytes": 800,
+      "mtime_ns": 1790663640035915200,
+      "line_count": 25
+    },
+    "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\구축코드\\14_체육제외\\README.md": {
+      "sha256": "762f439e1df372b9b3bed98594410da4ffd7330e7ca9857ae5278461bcd3fda9",
+      "bytes": 5379,
+      "mtime_ns": 1790666952701400000,
+      "line_count": 44
+    },
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\박사논문_통합설계_20260929\\통합설계안.md": {
+      "sha256": "1f4d5c1ccda00b0a0e226b07af96755159c567586050ed77ca87ca72dd946869",
+      "bytes": 50370,
+      "mtime_ns": 1790674039587323600,
+      "line_count": 370
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "checked_at": "2026-09-29T18:31:27.632313+09:00",
+  "passed": true,
+  "scope": "central common-design application only; no research recalculation",
+  "checks": [
+    {
+      "check": "six_release_fingerprints_unchanged",
+      "passed": true
+    },
+    {
+      "check": "current_versions_in_both_central_documents",
+      "passed": true
+    },
+    {
+      "check": "historical_section_preserved_## 1.",
+      "passed": true
+    },
+    {
+      "check": "historical_section_preserved_## 2.",
+      "passed": true
+    },
+    {
+      "check": "historical_section_preserved_## 5.",
+      "passed": true
+    },
+    {
+      "check": "historical_section_preserved_## 8.",
+      "passed": true
+    },
+    {
+      "check": "historical_seunghoon_eight_types_preserved",
+      "passed": true
+    },
+    {
+      "check": "seven_categories_match_actual_config",
+      "passed": true
+    },
+    {
+      "check": "analysis_types_match_actual_config_27",
+      "passed": true
+    },
+    {
+      "check": "criteria_categories_match_config",
+      "passed": true
+    },
+    {
+      "check": "current_ranges_and_distinct_subsets",
+      "passed": true
+    },
+    {
+      "check": "facility_grid_assignment_defined",
+      "passed": true
+    },
+    {
+      "check": "jtg_no_facility_dependency",
+      "passed": true
+    },
+    {
+      "check": "utf8_README.md",
+      "passed": true
+    },
+    {
+      "check": "utf8_박사논문_연구설계.md",
+      "passed": true
+    },
+    {
+      "check": "utf8_7범주_탑다운_실행기준.md",
+      "passed": true
+    },
+    {
+      "check": "central_and_criteria_table_links",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "input_fingerprints": [
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md",
+      "expected": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68",
+      "actual": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\manifest.json",
+      "expected": "114f572c96d4720e589372d4280bf6cc675993261d0107441305085bc23c2cc4",
+      "actual": "114f572c96d4720e589372d4280bf6cc675993261d0107441305085bc23c2cc4"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "expected": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+      "actual": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\manifest_sha256.csv",
+      "expected": "fd1b817398b98aaf053d762aac7b2271d0108351f4659cfaf030ce14ca6cdd20",
+      "actual": "fd1b817398b98aaf053d762aac7b2271d0108351f4659cfaf030ce14ca6cdd20"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\release_provenance.json",
+      "expected": "28525f70e3ecab23c9ab820020ffe06f2630ee16b39499d2f3bc0ea83d9bacbb",
+      "actual": "28525f70e3ecab23c9ab820020ffe06f2630ee16b39499d2f3bc0ea83d9bacbb"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\output\\codex_boundary_validation_20260929_01a0eb4a-3625-7f91-9b4e-ad77dc3508ad\\근거보고서.md",
+      "expected": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24",
+      "actual": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24"
+    }
+  ],
+  "files": {
+    "D:\\Research\\00_박사논문_연구체계\\README.md": "7dede20eb0d7c2263e44a27bf6e358b561a6b328e2defa177ae2b51aa22b8e4c",
+    "D:\\Research\\00_박사논문_연구체계\\박사논문_연구설계.md": "f4c129f49718d48a62e4a4b4919144f9c777effec5dd4b706d01ae737689eb40",
+    "D:\\Research\\00_박사논문_연구체계\\_prompts\\박사논문_통합설계_20260929\\7범주_탑다운_실행기준.md": "3e5a19ba0d8852f9f0b3c2e4360eccfdb7a97b951fc84511f524734f59a27251"
+  },
+  "status_marker_written": true
+}

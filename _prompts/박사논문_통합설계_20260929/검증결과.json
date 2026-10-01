@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-09-29T18:31:27.690490+09:00",
+  "passed": true,
+  "checks": [
+    {
+      "check": "통합설계안.md: utf8_no_replacement",
+      "passed": true
+    },
+    {
+      "check": "통합설계안.md: balanced_fences",
+      "passed": true
+    },
+    {
+      "check": "근거표.md: utf8_no_replacement",
+      "passed": true
+    },
+    {
+      "check": "근거표.md: balanced_fences",
+      "passed": true
+    },
+    {
+      "check": "작업기록.md: utf8_no_replacement",
+      "passed": true
+    },
+    {
+      "check": "작업기록.md: balanced_fences",
+      "passed": true
+    },
+    {
+      "check": "7범주_탑다운_실행기준.md: utf8_no_replacement",
+      "passed": true
+    },
+    {
+      "check": "7범주_탑다운_실행기준.md: balanced_fences",
+      "passed": true
+    },
+    {
+      "check": "baseline_six_fingerprints",
+      "passed": true
+    },
+    {
+      "check": "local_links_and_line_anchors",
+      "passed": true
+    },
+    {
+      "check": "markdown_table_columns",
+      "passed": true
+    },
+    {
+      "check": "evidence_ids_resolve",
+      "passed": true
+    },
+    {
+      "check": "required_ten_sections",
+      "passed": true
+    },
+    {
+      "check": "five_chapter_outline",
+      "passed": true
+    },
+    {
+      "check": "flowchart_present",
+      "passed": true
+    }
+  ],
+  "link_errors": [],
+  "table_errors": [],
+  "not_performed": [
+    "research recalculation",
+    "production data verification rerun",
+    "professor approval",
+    "external publication"
+  ]
+}

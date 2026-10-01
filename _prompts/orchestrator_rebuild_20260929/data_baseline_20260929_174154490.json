@@ -1,0 +1,46 @@
+{
+  "captured_at_utc": "2026-09-29T08:41:54.4889280Z",
+  "purpose": "Shared data baseline for research 2, 3, and 4 rebuild and collaborator packages",
+  "boundary": "boundary-v2-dong / boundary-v2-leiden / od-daily-v1; dong-based official layer for common-area comparisons",
+  "facility": "facility-v1.4",
+  "accessibility": "access-engine-v3.3-facility-v1.4-20260929",
+  "scope": "Fingerprint of release indexes, facility input and boundary validation report; not a fresh verification of all indexed files",
+  "files": [
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\데이터_배포목록.md",
+      "bytes": 18508,
+      "last_write_utc": "2026-09-29T07:31:45.6408277Z",
+      "sha256": "aeb6e2206b79c70acfbe420f8e8ca87ce8dbdac10b4484adb0e83966a4e99d68"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\data\\manifest.json",
+      "bytes": 5150,
+      "last_write_utc": "2026-09-24T01:57:39.3091839Z",
+      "sha256": "114f572c96d4720e589372d4280bf6cc675993261d0107441305085bc23c2cc4"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\시설데이터 구축\\시설데이터_패키지\\데이터\\서울시설_2020_2025_분석용.parquet",
+      "bytes": 38578951,
+      "last_write_utc": "2026-09-29T06:40:30.6749906Z",
+      "sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\manifest_sha256.csv",
+      "bytes": 239072,
+      "last_write_utc": "2026-09-29T07:40:50.5920578Z",
+      "sha256": "fd1b817398b98aaf053d762aac7b2271d0108351f4659cfaf030ce14ca6cdd20"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\release_provenance.json",
+      "bytes": 260067,
+      "last_write_utc": "2026-09-29T07:40:35.6764327Z",
+      "sha256": "28525f70e3ecab23c9ab820020ffe06f2630ee16b39499d2f3bc0ea83d9bacbb"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\00_공통_코어엔진\\output\\codex_boundary_validation_20260929_01a0eb4a-3625-7f91-9b4e-ad77dc3508ad\\근거보고서.md",
+      "bytes": 17974,
+      "last_write_utc": "2026-09-29T04:15:03.5332441Z",
+      "sha256": "d7817605b6384bb78949fa35e5946d19a0c6712f3c5bacc3be2df5a3ccff5f24"
+    }
+  ]
+}

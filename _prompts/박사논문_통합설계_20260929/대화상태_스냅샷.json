@@ -1,0 +1,80 @@
+{
+  "captured_at_utc": "2026-09-29 09:06:54 UTC",
+  "source": "wait_threads timeoutMs=0",
+  "research_calculations_rerun_here": false,
+  "polls": [
+    {
+      "threadId": "01a0ea59-ff4a-7161-8307-1abcedb9a16e",
+      "hostId": "local",
+      "cursor": "ac9b4065-57a4-48a8-8c59-a48618be4a1f:8",
+      "latestTurn": {
+        "id": "01a0ec4a-8a15-7293-baa0-44b492f8224f",
+        "status": "inProgress",
+        "error": null,
+        "startedAt": 1790670703,
+        "completedAt": null,
+        "durationMs": null
+      },
+      "status": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "latestCommentary": "최종 묶음에는 결과표·그림과 함께 “이 분석이 박사논문에서 무엇을 설명하는가”를 짧게 붙이고 있습니다. 핵심은 책임구역의 크기를 바꿀 때 전체 도달인구와 지역별 최소 보장이 어떻게 달라지는지입니다. 생활권의 우월성이나 실제 행정비용 절감까지 입증한 것으로 확대하지 않겠습니다."
+    },
+    {
+      "threadId": "01a0ec58-bcef-7ed2-83d3-919c3831219e",
+      "hostId": "local",
+      "cursor": "6bbf6801-a033-47f7-b392-b8059800742b:5",
+      "latestTurn": {
+        "id": "01a0ec58-bfc6-74e3-834d-4317af3f6cc3",
+        "status": "inProgress",
+        "error": null,
+        "startedAt": 1790671634,
+        "completedAt": null,
+        "durationMs": null
+      },
+      "status": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "latestCommentary": "첫 재실행과 계산 검사가 완료됐습니다. 2025년 서울 IFR은 공식 생활권 37.86%, Leiden 39.36%로 차이는 1.50%p지만, 두 경계가 다르게 분류하는 통행은 8.33%입니다. 공간 일치도가 낮을수록 IFR 차이가 커진다는 관계는 이번 결과에서 뚜렷하지 않았습니다. 특히 양천구는 IFR 순차이가 거의 없어도 통행 불일치가 커, 이 점을 본문 해석에 반영하겠습니다."
+    },
+    {
+      "threadId": "01a0e8da-58e7-7bc2-808f-59963fc6d8cb",
+      "hostId": "local",
+      "cursor": "8e6d2024-717b-4578-84f2-50fefc17a423:6",
+      "latestTurn": {
+        "id": "01a0ec58-3368-74a3-9ccb-e174d976f606",
+        "status": "inProgress",
+        "error": null,
+        "startedAt": 1790671598,
+        "completedAt": null,
+        "durationMs": null
+      },
+      "status": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "latestCommentary": "공유본에는 원고·부록뿐 아니라 실행 코드, 환경 정보, 입력 배포본 목록, 결과 CSV와 검증 기록을 넣습니다. 공통 데이터에 의존하는 부분과 패키지만으로 확인할 수 있는 부분을 시작 안내에서 구분해, 공동연구자가 재현 범위를 바로 알 수 있게 정리하고 있습니다."
+    },
+    {
+      "threadId": "01a0e8d8-ff9b-74f0-8bb1-ec4087ce1248",
+      "hostId": "local",
+      "cursor": "02b5b362-be96-44c4-b7ff-8991b7c37954:5",
+      "latestTurn": {
+        "id": "01a0ec58-345d-7bd2-8c52-f3a31ccd65ed",
+        "status": "inProgress",
+        "error": null,
+        "startedAt": 1790671598,
+        "completedAt": null,
+        "durationMs": null
+      },
+      "status": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "latestCommentary": "새 입력의 해시·스키마·결합 조건 등 260개 검사를 통과했습니다. 원고에서는 단일 이동 후보가 ‘모든 경계 동’이 아니라 ‘초기 인접 생활권 지향군’에서 나온 수치임을 더 분명히 했습니다. 전체 계산이 끝나면 새 결과의 독립 검산과 문서 수치 대조를 진행합니다."
+    }
+  ],
+  "errors": []
+}
