@@ -1,0 +1,476 @@
+{
+ "engine": "access-engine-v3.2",
+ "year": 2020,
+ "grid_m": 250,
+ "T_sec": 900.0,
+ "speed_kmh": 4.0,
+ "catset": "A",
+ "retail": "with",
+ "union": false,
+ "tag": "sens_grid250",
+ "ku": null,
+ "ttm_rows": 725618,
+ "fac_rows_year_analyzable": 293741,
+ "fac_rows_used": 279673,
+ "fac_rows_outside_grid": 13,
+ "fac_cells": 6324,
+ "fac_cells_by_cat": {
+  "교육": 1589,
+  "보육·복지": 3392,
+  "의료": 3201,
+  "문화": 511,
+  "체육": 3328,
+  "행정·안전": 532,
+  "소매": 5267,
+  "생활서비스": 5712
+ },
+ "Cg_dist": {
+  "1": 756,
+  "2": 779,
+  "3": 1043,
+  "4": 1477,
+  "5": 1555,
+  "6": 604,
+  "7": 98,
+  "8": 12
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+ "snap": false,
+ "ld_other": false,
+ "provenance": {
+  "schema": "access-run-provenance/2",
+  "release": "access-engine-v3.2-facility-v1.3-20260929",
+  "recorded_at": "2026-09-29T14:30:50.750372+09:00",
+  "code_base": "package_code",
+  "input_base": "package_inputs",
+  "code": {
+   "sha256": "0a8407247af091c2053a95cfd9116dab78ca5141f18cf1af63163fe13230415f",
+   "files": [
+    {
+     "file": "a00_config.py",
+     "bytes": 6394,
+     "sha256": "1e9d3a9c7e1144df9a7408cbf577af0d94f9dbb1b44e8bdc2e55b904115b8136"
+    },
+    {
+     "file": "a06_engine.py",
+     "bytes": 37168,
+     "sha256": "f5b8ed0a02730214eb6e5a1b196b8ad0bf6ee782af77f96645acdee0ceab7c31"
+    },
+    {
+     "file": "a11_provenance.py",
+     "bytes": 5720,
+     "sha256": "322d95c2e6947eb7ceb211b05233a5b69ae4493a7479c5850bf19c4eccf36ac4"
+    }
+   ]
+  },
+  "inputs": {
+   "sha256": "c308f101dff33a0923ef5c2f63273a06af8fac8fd51ea345ca2a8b7cb04c3d41",
+   "files": [
+    {
+     "file": "facility/facility_2020_2025_units.parquet",
+     "bytes": 44284682,
+     "sha256": "9a6036f1feb87d85f55c3366983c8dba574e14e2298bec28d0de826bac8a066a"
+    },
+    {
+     "file": "facility/facility_2020_2025_units.source.json",
+     "bytes": 287,
+     "sha256": "596d202657a1a2ed22cc53f65c9d9db7f46b307506442be5b4fa126d03c65141"
+    },
+    {
+     "file": "grid/grid250_master.parquet",
+     "bytes": 580312,
+     "sha256": "60ddd455fe27e20ab8bf91830f10a15d5fcaea40206f9f35581faaf89e256aa0"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11010/chunk_000.parquet",
+     "bytes": 39226,
+     "sha256": "f470286dd6964ed9f97c9f77066ac30b349b44da351b883bf34615e5e3d0253e"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11010/chunk_001.parquet",
+     "bytes": 22758,
+     "sha256": "d9e6ebb4469ee8436e3e92d08b30334f0ee270a0105cdd5e96c94f91030d074f"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11020/chunk_000.parquet",
+     "bytes": 40499,
+     "sha256": "3c2f7af0de8c689839b8abf9c40cfaa41abfb18c6ff02a6ef1ba9410e49fa28d"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11030/chunk_000.parquet",
+     "bytes": 44061,
+     "sha256": "c76a6522a1cea6e8159d3ff102005298bbabd64bf4762b58f8c46190a3880a58"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11030/chunk_001.parquet",
+     "bytes": 9287,
+     "sha256": "a9ff081bc3d8e1a6b39b64a119e91fac4329ed23d873a07978fc22c2aa691b14"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11040/chunk_000.parquet",
+     "bytes": 45565,
+     "sha256": "4f523a6d647a101471c2bde019febb16e5f75019fbca5604f99b9d81732af55c"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11040/chunk_001.parquet",
+     "bytes": 9328,
+     "sha256": "b019feecc2f69169ad41cef59e12e9c9394e4f75e80e6201aa74b1866c4d3010"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11050/chunk_000.parquet",
+     "bytes": 46203,
+     "sha256": "b8380ddb356d7cacd3aacf29694d63f70b3c2bf78c99dfa06b517ff684ee3ba4"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11050/chunk_001.parquet",
+     "bytes": 6586,
+     "sha256": "c32ab8ada8e4b9b89a2dc37693305163b652f5cb400ccdfe7a34247f2bd3b863"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11060/chunk_000.parquet",
+     "bytes": 52363,
+     "sha256": "9b5c135b1afe94304253bc1034e69e3562acba8881266b5a1e435c670dbe0a0e"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11060/chunk_001.parquet",
+     "bytes": 8339,
+     "sha256": "8138fd989e5cba917de76bb1a8067b7e41e8580c893c649d083fe0980e250871"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11070/chunk_000.parquet",
+     "bytes": 49593,
+     "sha256": "2a95eba4c08870bb58020a47937ce6782b8c80435c7ffad01e1c9b8c10a70bf8"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11070/chunk_001.parquet",
+     "bytes": 9330,
+     "sha256": "c644bc16fd9b650c9a012c7e7d5da3b66cb549e8a9048e1d243f4a7a20b2a9ed"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11080/chunk_000.parquet",
+     "bytes": 42758,
+     "sha256": "67a3bb9e6449f415dbee60a7d6e5e405da81611eeea13f25f19eee394de4fe62"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11080/chunk_001.parquet",
+     "bytes": 33236,
+     "sha256": "58413fe95c379d50bf582f7f97e758683e528269cb3174b065556163b581a4ab"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11090/chunk_000.parquet",
+     "bytes": 49346,
+     "sha256": "7e6fd7ba0df8913834b423b7a15c53e7ae7a34ba19d8a04b6a89bff78e836acd"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11090/chunk_001.parquet",
+     "bytes": 9861,
+     "sha256": "821a9d4822ef525f58a468e73940d5b9527ca184e8f844c3be9267381c74180c"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11100/chunk_000.parquet",
+     "bytes": 47234,
+     "sha256": "74a67c2c11c97069724334ee29cad161e72a0db83410309cbbc86a4c40e66103"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11100/chunk_001.parquet",
+     "bytes": 13255,
+     "sha256": "00559966262e328494b84d85b7b5aed51b9a656f562bfd213e06825e7e74ed33"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11110/chunk_000.parquet",
+     "bytes": 44757,
+     "sha256": "ea2ff674e257540494355951d8b24388371c461f83709fcf6b20fdff3bca14f7"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11110/chunk_001.parquet",
+     "bytes": 33938,
+     "sha256": "59df5d574e36c229c72ba70cc476a29ecc9ccd1883e05b769f900cf7f34ec71f"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11120/chunk_000.parquet",
+     "bytes": 44826,
+     "sha256": "288097f5db2275c01a45ebc7046a6a0bd1c72422a2b704131c44528e73729320"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11120/chunk_001.parquet",
+     "bytes": 32549,
+     "sha256": "5776ce0df4c86508e798621f8b9e0b83aadca20c39cf815c27c7250a8e1b1fbb"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11130/chunk_000.parquet",
+     "bytes": 46914,
+     "sha256": "1e99370fa02f2096a085cf734011811100c2e4e3032b9f034f5d56b974685faa"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11130/chunk_001.parquet",
+     "bytes": 15763,
+     "sha256": "82035d04e6c5c9f362142c751c3d0945c3aea6daceed49015e834fc59ffd569d"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11140/chunk_000.parquet",
+     "bytes": 44424,
+     "sha256": "4747ef44148c77a5f5029e3554e53028950b7690fe688944fc4e6b54cf85800e"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11140/chunk_001.parquet",
+     "bytes": 20362,
+     "sha256": "36c5ef674fa645fcd682a4376e537b0cc1c2d669e10653b7304f992d12e33364"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11150/chunk_000.parquet",
+     "bytes": 46665,
+     "sha256": "57764a1105ca7d0b1b0c631df768b802bffc0af0100ffd8053b85bc3633da307"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11150/chunk_001.parquet",
+     "bytes": 18304,
+     "sha256": "dfaebfbf8646cfe68aef347f444d67096f9828f8e76db6e1c9b17a56ccae0426"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11160/chunk_000.parquet",
+     "bytes": 43964,
+     "sha256": "e420661b741c808a0ed54f8ae7b3774669f328133d43cebb105bd66a53f50100"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11160/chunk_001.parquet",
+     "bytes": 51189,
+     "sha256": "d298f25bf287ce88136e6e35b590f3e00cf34d0221e8d826d9b2a1871a5a9ac9"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11160/chunk_002.parquet",
+     "bytes": 7817,
+     "sha256": "ce52625e9e3c4b9ffbaa157f3802d67150556ea890a66a4dbdc5b8a93ddaa92c"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11170/chunk_000.parquet",
+     "bytes": 34674,
+     "sha256": "c5e2c13914998a68535c07d7d95ce46011817ab224613eb607db3d0ab53c3c1b"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11170/chunk_001.parquet",
+     "bytes": 27007,
+     "sha256": "bedada5bb5f7a466820cc725b681d27001a109cfc15f1c908809566ec6a69b85"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11180/chunk_000.parquet",
+     "bytes": 37631,
+     "sha256": "01d54be9281acfa01a7db1d75acf24bd3b553cdd49ed4578a7350ecb9192bd33"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11190/chunk_000.parquet",
+     "bytes": 49362,
+     "sha256": "b475147c00824508a945c6fc3db10615cfadbd9a1df1276511762da16aecf586"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11190/chunk_001.parquet",
+     "bytes": 23116,
+     "sha256": "3c12d7f51a97690fecdf4b0768890d99eb7637d37ff8996380173ace2d5900dc"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11200/chunk_000.parquet",
+     "bytes": 44177,
+     "sha256": "ed65f75c3064b4d79b3bfc84f7cc333a063cc68e156498c7d0fb21d2d7dbb7c8"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11200/chunk_001.parquet",
+     "bytes": 13145,
+     "sha256": "803ecd85368f36edbd15439e098c2f918d999b895ba44079b8f624e668992816"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11210/chunk_000.parquet",
+     "bytes": 46992,
+     "sha256": "49d43a28e38486278a3166aa056ad256decff234020ac4d6e93f6d00ea4f546b"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11210/chunk_001.parquet",
+     "bytes": 25269,
+     "sha256": "8a0500f7f6631076056553c7ff7e7eaeebe0bdcde3b9e738040be76a305720b9"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11220/chunk_000.parquet",
+     "bytes": 43879,
+     "sha256": "16886b48105503cc1344ae7a9dc98a6f5da520d5b83ff418e381acbc5047844e"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11220/chunk_001.parquet",
+     "bytes": 43579,
+     "sha256": "1ea6e1932ac4d03632f6b002411e386b22fdbe77924c9358756e188ff764d7ca"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11220/chunk_002.parquet",
+     "bytes": 19600,
+     "sha256": "d06d9a026395598f94543c479cb34b75ec0f1a1860978932bdb2f7d4bd3e5d8f"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11230/chunk_000.parquet",
+     "bytes": 54286,
+     "sha256": "020a392a9a9a08cd422618f24687fcb2f5a1ae94236ea14eb61e8b1b55eb7f0c"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11230/chunk_001.parquet",
+     "bytes": 46834,
+     "sha256": "300db3d5b43a96be9d4a67a04351c75ebe53a59d818c269acc262e412365f609"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11230/chunk_002.parquet",
+     "bytes": 22081,
+     "sha256": "ab58f888702d59fcb706278f3df79e2589c66b49a57ff41828de2382f35a6fed"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11240/chunk_000.parquet",
+     "bytes": 44825,
+     "sha256": "62d6af2d84df726d631c5a49ddab16c590c0f235d5f797ee965b1a3f84f42098"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11240/chunk_001.parquet",
+     "bytes": 45068,
+     "sha256": "4bef44ba1c081a8e3af7db632c973a61f29e25de9338ebeea0a897c58e0f832f"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11240/chunk_002.parquet",
+     "bytes": 10796,
+     "sha256": "e5d21424f0f86ca29a29ba5a7d7effbd32411ad5a7a6b9957b170aa6cf285003"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11250/chunk_000.parquet",
+     "bytes": 51173,
+     "sha256": "5bfcecbafa5c48d86e5a5a620f3a896487250cdd8cc11e626a667f4b8f7d6190"
+    },
+    {
+     "file": "ttm/ttm250_2020/ku=11250/chunk_001.parquet",
+     "bytes": 21852,
+     "sha256": "280b04769bf87a03a73823c429226735deed0ecd4ef5de691eb20ce690934259"
+    }
+   ]
+  },
+  "upstream_inputs": {
+   "sha256": "15d2a718f6a7e755a79d8095d60d63484fa3f2ff7963c350a3db2bf8e46e1584",
+   "files": [
+    {
+     "file": "시설데이터 구축/시설데이터_패키지/데이터/서울시설_2020_2025_분석용.parquet",
+     "bytes": 40210745,
+     "sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47"
+    }
+   ]
+  },
+  "environment": {
+   "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+   "platform": "Windows-11-10.0.22631-SP0",
+   "packages": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "pyarrow": "23.0.1",
+    "scipy": "1.17.1",
+    "geopandas": "1.1.3",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.2",
+    "duckdb": "1.5.5",
+    "osmium": null,
+    "matplotlib": "3.10.8"
+   }
+  }
+ },
+ "origins": 7005,
+ "origins_missing_in_ttm": 0,
+ "sfca": {
+  "items": 36,
+  "worst_rel_err_global": 6.670091013766319e-15,
+  "worst_abs_err_unit": 9.094947017729282e-13,
+  "supply_unassigned_category": {
+   "none": {
+    "교육": 0,
+    "보육·복지": 3,
+    "의료": 4,
+    "문화": 0,
+    "체육": 2,
+    "행정·안전": 1,
+    "소매": 22,
+    "생활서비스": 96
+   },
+   "dong424": {
+    "교육": 0,
+    "보육·복지": 5,
+    "의료": 7,
+    "문화": 5,
+    "체육": 4,
+    "행정·안전": 2,
+    "소매": 364,
+    "생활서비스": 261
+   },
+   "lz116": {
+    "교육": 0,
+    "보육·복지": 4,
+    "의료": 5,
+    "문화": 2,
+    "체육": 2,
+    "행정·안전": 1,
+    "소매": 28,
+    "생활서비스": 128
+   },
+   "ld": {
+    "교육": 0,
+    "보육·복지": 4,
+    "의료": 4,
+    "문화": 0,
+    "체육": 2,
+    "행정·안전": 1,
+    "소매": 27,
+    "생활서비스": 119
+   },
+   "ku": {
+    "교육": 0,
+    "보육·복지": 3,
+    "의료": 4,
+    "문화": 0,
+    "체육": 2,
+    "행정·안전": 1,
+    "소매": 25,
+    "생활서비스": 105
+   }
+  },
+  "supply_dedup": {
+   "rows_in": 279660,
+   "facility_dup_removed": 1343,
+   "category_library_removed": 176,
+   "category_cross_type_removed": 143
+  }
+ },
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9642246.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true,
+  "sfca_nonneg": true,
+  "sfca_conservation_global": true,
+  "sfca_conservation_unit": true
+ },
+ "files_base": "run_meta_directory",
+ "files": [
+  {
+   "file": "grid_access_2020_250.parquet",
+   "sha256": "9f963d978e2833b60241dde226e236b05b253936c8ef4fe6bb24ab766ac5f54d",
+   "bytes": 380241
+  },
+  {
+   "file": "unit_access_2020_250.csv",
+   "sha256": "44c1657b020e6358eb0edfa63d44ec726a03dcda547bc6ab6986daa2fa4f452b",
+   "bytes": 3666603
+  },
+  {
+   "file": "sfca_unit_2020_250.csv",
+   "sha256": "286f50967dc653dae70a2b6a327ed84ca92665f7657be930823232c451c24263",
+   "bytes": 15876894
+  }
+ ],
+ "seconds": 3.1
+}

@@ -1,0 +1,13 @@
+{
+ "status": "PASS",
+ "release": "access-engine-v3.2-facility-v1.3-20260929",
+ "replacements": 120,
+ "new_files": 90,
+ "manifest_count": 1309,
+ "hub_files": [
+  "README.md",
+  "데이터_배포목록.md",
+  "공유_안내.md"
+ ],
+ "source_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47"
+}

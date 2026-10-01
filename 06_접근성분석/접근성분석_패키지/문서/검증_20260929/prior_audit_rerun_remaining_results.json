@@ -1,0 +1,526 @@
+[
+  {
+    "meta": "데이터\\결과\\sens_retail_without\\run_meta_2020_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2020",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "without",
+      "--tag",
+      "sens_retail_without",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 22.02,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_retail_without/grid_access_2020_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "2c0671dd10a3306d2ccc1234b36039deebc2d5d049d43ec2fc0f3c6700529a84",
+        "rerun_sha256": "2c0671dd10a3306d2ccc1234b36039deebc2d5d049d43ec2fc0f3c6700529a84"
+      },
+      {
+        "file": "데이터/결과/sens_retail_without/unit_access_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "e7e09717482414b540be48047a2d362dd366ceced5584aef41bd07b2c9b06b56",
+        "rerun_sha256": "e7e09717482414b540be48047a2d362dd366ceced5584aef41bd07b2c9b06b56"
+      },
+      {
+        "file": "데이터/결과/sens_retail_without/sfca_unit_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "b7d4befb66a81683e606ee7d84b509e7d0cb57b66abe9f48045b27a8656217ab",
+        "rerun_sha256": "b7d4befb66a81683e606ee7d84b509e7d0cb57b66abe9f48045b27a8656217ab"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_retail_without\\run_meta_2025_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2025",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "without",
+      "--tag",
+      "sens_retail_without",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 22.12,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_retail_without/grid_access_2025_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "dfc1d3e4631f76eba4b425fa2a213bb561863af0c8d9b823a633f25b7a4551f9",
+        "rerun_sha256": "dfc1d3e4631f76eba4b425fa2a213bb561863af0c8d9b823a633f25b7a4551f9"
+      },
+      {
+        "file": "데이터/결과/sens_retail_without/unit_access_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "bce94af8b31a79ecd5cc11cf72ba2eed52f7bc2c4bd43b3cd32cdd5ab1187f49",
+        "rerun_sha256": "bce94af8b31a79ecd5cc11cf72ba2eed52f7bc2c4bd43b3cd32cdd5ab1187f49"
+      },
+      {
+        "file": "데이터/결과/sens_retail_without/sfca_unit_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "98d18fcaef5cc24e1c93a35a7e0d196567dda9c4c9461e1e8c61fbbd7e0a6c41",
+        "rerun_sha256": "98d18fcaef5cc24e1c93a35a7e0d196567dda9c4c9461e1e8c61fbbd7e0a6c41"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_snap\\run_meta_2020_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2020",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_snap",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun",
+      "--snap"
+    ],
+    "returncode": 0,
+    "elapsed": 21.54,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_snap/grid_access_2020_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "3ffa01b7c23233afe495af953ea18779d2ce1100d839ce8f25451479b95150cf",
+        "rerun_sha256": "3ffa01b7c23233afe495af953ea18779d2ce1100d839ce8f25451479b95150cf"
+      },
+      {
+        "file": "데이터/결과/sens_snap/unit_access_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "536a108e3116b3dce8fef44c9eef1b74257a4b2729c6c16c7398f345eaff8ac9",
+        "rerun_sha256": "536a108e3116b3dce8fef44c9eef1b74257a4b2729c6c16c7398f345eaff8ac9"
+      },
+      {
+        "file": "데이터/결과/sens_snap/sfca_unit_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "e276108aec111a58196fe2fe3ae2e1572211990c814c1fb69a1d129b35fdfb5a",
+        "rerun_sha256": "e276108aec111a58196fe2fe3ae2e1572211990c814c1fb69a1d129b35fdfb5a"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_snap\\run_meta_2025_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2025",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_snap",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun",
+      "--snap"
+    ],
+    "returncode": 0,
+    "elapsed": 21.33,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_snap/grid_access_2025_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "50c9997163e0cef202e3c861711dbdacefbf930f1d58653fe42bb614453820d9",
+        "rerun_sha256": "50c9997163e0cef202e3c861711dbdacefbf930f1d58653fe42bb614453820d9"
+      },
+      {
+        "file": "데이터/결과/sens_snap/unit_access_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "0c5b682ad917fb264c103e1f614a1f1b4b7291aa3d877c261b8faed9111d53cc",
+        "rerun_sha256": "0c5b682ad917fb264c103e1f614a1f1b4b7291aa3d877c261b8faed9111d53cc"
+      },
+      {
+        "file": "데이터/결과/sens_snap/sfca_unit_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "5780ec88489db4bce508f65fbdcb365dd71fd5251d0acfc53562da71daf93396",
+        "rerun_sha256": "5780ec88489db4bce508f65fbdcb365dd71fd5251d0acfc53562da71daf93396"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_speed36\\run_meta_2020_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2020",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "3.6",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_speed36",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 20.51,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_speed36/grid_access_2020_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "a307849a27ff6b8b8471f8e655e9e058a4fba3948bb4be368d1997848139cef7",
+        "rerun_sha256": "a307849a27ff6b8b8471f8e655e9e058a4fba3948bb4be368d1997848139cef7"
+      },
+      {
+        "file": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "bee1de1b9882916606d1f693b36f4baf527af3180145ba88632624a72b20e509",
+        "rerun_sha256": "bee1de1b9882916606d1f693b36f4baf527af3180145ba88632624a72b20e509"
+      },
+      {
+        "file": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "1945316c0af05093fa268d15937931d0c865c40e7ee4db75d838adf95cea7ff2",
+        "rerun_sha256": "1945316c0af05093fa268d15937931d0c865c40e7ee4db75d838adf95cea7ff2"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_speed36\\run_meta_2025_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2025",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "3.6",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_speed36",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 20.81,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_speed36/grid_access_2025_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "46b7f22ce9035ce4ca6eb6cdaa919f9f0acf7747a586fbc4d7c152cdb8f18369",
+        "rerun_sha256": "46b7f22ce9035ce4ca6eb6cdaa919f9f0acf7747a586fbc4d7c152cdb8f18369"
+      },
+      {
+        "file": "데이터/결과/sens_speed36/unit_access_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "8221cc4da3bb7d36b885bbfa218239b48e2d399c265b8b1bbf2a623c626f043d",
+        "rerun_sha256": "8221cc4da3bb7d36b885bbfa218239b48e2d399c265b8b1bbf2a623c626f043d"
+      },
+      {
+        "file": "데이터/결과/sens_speed36/sfca_unit_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "645b8cbd50a1a023e0bfc070c52f37fcc2e9da45c7464368ef657632fe886d00",
+        "rerun_sha256": "645b8cbd50a1a023e0bfc070c52f37fcc2e9da45c7464368ef657632fe886d00"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_T600\\run_meta_2020_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2020",
+      "--grid",
+      "100",
+      "--T",
+      "600.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_T600",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 19.66,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_T600/grid_access_2020_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "4c8c76c892d501906a1bbf9e4666c5b0342bedfe2280d394883fd17cc4d00320",
+        "rerun_sha256": "4c8c76c892d501906a1bbf9e4666c5b0342bedfe2280d394883fd17cc4d00320"
+      },
+      {
+        "file": "데이터/결과/sens_T600/unit_access_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "870ad6a0763fb0b37319d00b3b17ca47ff3f8a542b4fc8790cdc62ccf40336f9",
+        "rerun_sha256": "870ad6a0763fb0b37319d00b3b17ca47ff3f8a542b4fc8790cdc62ccf40336f9"
+      },
+      {
+        "file": "데이터/결과/sens_T600/sfca_unit_2020_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "14be8efb25b510848da57008397f3ce54d5e924f26a82b7842679dbf21517ec3",
+        "rerun_sha256": "14be8efb25b510848da57008397f3ce54d5e924f26a82b7842679dbf21517ec3"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_T600\\run_meta_2025_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2025",
+      "--grid",
+      "100",
+      "--T",
+      "600.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_T600",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun"
+    ],
+    "returncode": 0,
+    "elapsed": 20.42,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_T600/grid_access_2025_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "ede95f738cdc15ba48dd23bdad447b811bfa791ccf3448bf5b73ca30c62183fe",
+        "rerun_sha256": "ede95f738cdc15ba48dd23bdad447b811bfa791ccf3448bf5b73ca30c62183fe"
+      },
+      {
+        "file": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "0e026dc8ff72993b64f675f88e931ad047cc74fb786a176f4795a5cec341d129",
+        "rerun_sha256": "0e026dc8ff72993b64f675f88e931ad047cc74fb786a176f4795a5cec341d129"
+      },
+      {
+        "file": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "39b6b6c574441c74bb2cf16e67913900a16beee35ecd6a906786ed73aa9f4ab3",
+        "rerun_sha256": "39b6b6c574441c74bb2cf16e67913900a16beee35ecd6a906786ed73aa9f4ab3"
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_union\\run_meta_2020_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2020",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_union",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun",
+      "--union"
+    ],
+    "returncode": 1,
+    "elapsed": 14.92,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_union/grid_access_2020_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+        "rerun_sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0"
+      },
+      {
+        "file": "데이터/결과/sens_union/unit_access_2020_100.csv",
+        "exists": false,
+        "same_sha256": false,
+        "original_sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+        "rerun_sha256": null
+      },
+      {
+        "file": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+        "exists": false,
+        "same_sha256": false,
+        "original_sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+        "rerun_sha256": null
+      }
+    ]
+  },
+  {
+    "meta": "데이터\\결과\\sens_union\\run_meta_2025_100.json",
+    "command": [
+      "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\guard_run.py",
+      "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "--year",
+      "2025",
+      "--grid",
+      "100",
+      "--T",
+      "900.0",
+      "--speed",
+      "4.0",
+      "--catset",
+      "A",
+      "--retail",
+      "with",
+      "--tag",
+      "sens_union",
+      "--out-root",
+      "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun",
+      "--union"
+    ],
+    "returncode": 0,
+    "elapsed": 21.01,
+    "comparisons": [
+      {
+        "file": "데이터/결과/sens_union/grid_access_2025_100.parquet",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "b4ceee96454a601a7b67736d076cad715014408056807a98d441c35c36c313f2",
+        "rerun_sha256": "b4ceee96454a601a7b67736d076cad715014408056807a98d441c35c36c313f2"
+      },
+      {
+        "file": "데이터/결과/sens_union/unit_access_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "00b64a3d2dfe7659dd0f5c99e472268150c01e9f18569df92666ac9ec4d9988f",
+        "rerun_sha256": "00b64a3d2dfe7659dd0f5c99e472268150c01e9f18569df92666ac9ec4d9988f"
+      },
+      {
+        "file": "데이터/결과/sens_union/sfca_unit_2025_100.csv",
+        "exists": true,
+        "same_sha256": true,
+        "original_sha256": "4970a714ac3bb61196e34c3eea3556666f4332fb94145c22f0f6aba246aa8e24",
+        "rerun_sha256": "4970a714ac3bb61196e34c3eea3556666f4332fb94145c22f0f6aba246aa8e24"
+      }
+    ]
+  }
+]

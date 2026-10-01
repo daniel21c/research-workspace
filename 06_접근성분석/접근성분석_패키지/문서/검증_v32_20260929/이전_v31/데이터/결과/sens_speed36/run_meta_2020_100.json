@@ -1,0 +1,139 @@
+{
+ "engine": "access-engine-v3",
+ "year": 2020,
+ "grid_m": 100,
+ "T_sec": 900.0,
+ "speed_kmh": 3.6,
+ "catset": "A",
+ "retail": "with",
+ "union": false,
+ "tag": "sens_speed36",
+ "ku": null,
+ "ttm_rows": 22082441,
+ "fac_rows_year_analyzable": 293685,
+ "fac_rows_used": 279618,
+ "fac_rows_outside_grid": 40,
+ "fac_cells": 25155,
+ "fac_cells_by_cat": {
+  "교육": 1884,
+  "보육·복지": 5191,
+  "의료": 6748,
+  "문화": 588,
+  "체육": 6264,
+  "행정·안전": 547,
+  "소매": 15578,
+  "생활서비스": 20780
+ },
+ "Cg_dist": {
+  "1": 7625,
+  "2": 7652,
+  "3": 5650,
+  "4": 3507,
+  "5": 656,
+  "6": 62,
+  "7": 3
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+ "origins": 30751,
+ "origins_missing_in_ttm": 0,
+ "sfca": {
+  "items": 36,
+  "worst_rel_err_global": 1.2332518634166327e-14,
+  "worst_abs_err_unit": 9.094947017729282e-13,
+  "supply_unassigned_category": {
+   "none": {
+    "교육": 2,
+    "보육·복지": 4,
+    "의료": 6,
+    "문화": 5,
+    "체육": 4,
+    "행정·안전": 2,
+    "소매": 45,
+    "생활서비스": 214
+   },
+   "dong424": {
+    "교육": 6,
+    "보육·복지": 10,
+    "의료": 11,
+    "문화": 10,
+    "체육": 11,
+    "행정·안전": 2,
+    "소매": 442,
+    "생활서비스": 408
+   },
+   "lz116": {
+    "교육": 6,
+    "보육·복지": 10,
+    "의료": 9,
+    "문화": 8,
+    "체육": 10,
+    "행정·안전": 2,
+    "소매": 74,
+    "생활서비스": 295
+   },
+   "ld": {
+    "교육": 4,
+    "보육·복지": 10,
+    "의료": 7,
+    "문화": 9,
+    "체육": 7,
+    "행정·안전": 2,
+    "소매": 58,
+    "생활서비스": 257
+   },
+   "ku": {
+    "교육": 2,
+    "보육·복지": 6,
+    "의료": 6,
+    "문화": 5,
+    "체육": 4,
+    "행정·안전": 2,
+    "소매": 45,
+    "생활서비스": 215
+   }
+  },
+  "supply_dedup": {
+   "rows_in": 279578,
+   "facility_dup_removed": 1343,
+   "category_library_removed": 176,
+   "category_cross_type_removed": 143
+  }
+ },
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9642246.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true,
+  "sfca_nonneg": true,
+  "sfca_conservation_global": true,
+  "sfca_conservation_unit": true
+ },
+ "files": [
+  {
+   "file": "데이터/결과/sens_speed36/grid_access_2020_100.parquet",
+   "sha256": "a307849a27ff6b8b8471f8e655e9e058a4fba3948bb4be368d1997848139cef7",
+   "bytes": 1617595
+  },
+  {
+   "file": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+   "sha256": "bee1de1b9882916606d1f693b36f4baf527af3180145ba88632624a72b20e509",
+   "bytes": 3674524
+  },
+  {
+   "file": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+   "sha256": "1945316c0af05093fa268d15937931d0c865c40e7ee4db75d838adf95cea7ff2",
+   "bytes": 15878443
+  }
+ ],
+ "seconds": 17.3
+}

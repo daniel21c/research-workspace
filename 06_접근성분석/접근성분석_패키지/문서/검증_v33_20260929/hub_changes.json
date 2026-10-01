@@ -1,0 +1,17 @@
+[
+ {
+  "file": "README.md",
+  "old_sha256": "68e61d6fdb97294d31213bd72d157a043482e88e321c1713ff881931b366a549",
+  "new_sha256": "e7d82a2cc1fb67d87cab909ad147a7edc1aedc311e89f467ebddd3355f84203b"
+ },
+ {
+  "file": "공유_안내.md",
+  "old_sha256": "658db6b5af457dc2882416e325b04320fde5d283a5c6feac6b4a7439c69b8dd0",
+  "new_sha256": "02548bc8a4f6b19c603547ba872857c2de69d90a1579609f67371ab77441241b"
+ },
+ {
+  "file": "데이터_배포목록.md",
+  "old_sha256": "f1463c6329601f0512ec39f217371b8aa69f7d4e32cfa2a0339aab605f877055",
+  "new_sha256": "9e6bdf38dbd5c25529d71f25589f6234bd3761b77f9499e6653beb3f523e271f"
+ }
+]

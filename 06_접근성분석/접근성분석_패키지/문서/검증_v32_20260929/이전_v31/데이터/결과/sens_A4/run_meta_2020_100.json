@@ -1,0 +1,61 @@
+{
+ "engine": "access-engine-v3",
+ "year": 2020,
+ "grid_m": 100,
+ "T_sec": 900.0,
+ "speed_kmh": 4.0,
+ "catset": "A4",
+ "retail": "with",
+ "union": false,
+ "tag": "sens_A4",
+ "ku": null,
+ "ttm_rows": 22082441,
+ "fac_rows_year_analyzable": 293685,
+ "fac_rows_used": 279618,
+ "fac_rows_outside_grid": 40,
+ "fac_cells": 25155,
+ "fac_cells_by_cat": {
+  "교육·복지": 6840,
+  "의료": 6748,
+  "체육·문화": 6713,
+  "소매·서비스·행정": 22621
+ },
+ "Cg_dist": {
+  "1": 12725,
+  "2": 7709,
+  "3": 4105,
+  "4": 616
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+ "origins": 30751,
+ "origins_missing_in_ttm": 0,
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9642246.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true
+ },
+ "files": [
+  {
+   "file": "데이터/결과/sens_A4/grid_access_2020_100.parquet",
+   "sha256": "86c47d3609e5b0839d35ec9be76dbce2b95c7ece52b4fe19283cbb5329a0a784",
+   "bytes": 839155
+  },
+  {
+   "file": "데이터/결과/sens_A4/unit_access_2020_100.csv",
+   "sha256": "9715168800f15daee734a614a02eeebc1325f742d2b128a9a9c78c0a9138a804",
+   "bytes": 2127384
+  }
+ ],
+ "seconds": 10.6
+}

@@ -1,0 +1,135 @@
+{
+ "release": "access-engine-v3.3-facility-v1.4-20260929",
+ "timestamp": "2026-09-29T16:40:40.086119+09:00",
+ "facility_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+ "engine_runs": 22,
+ "tests_passed": 35,
+ "run_metadata_verified": [
+  {
+   "file": "데이터/결과/main/run_meta_2020_100.json",
+   "sha256": "d08e4960d41952cf55c1f9461a8c9ee008106f8bc5f87d6162bcf09573e3d96e",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/main/run_meta_2025_100.json",
+   "sha256": "14b0ba02025cb513c9994974fc2bf6ec4b8d07bc00c960443bcc5f8b887c44f7",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/natstd_B/run_meta_2020_100.json",
+   "sha256": "33820470d4478201b5bcad3ee19d9501bef2a53d2f40353c732902429d6dfb9d",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/natstd_B/run_meta_2025_100.json",
+   "sha256": "53c2e90edbb4ad05b9d2e46221e78fea3b521acef494b7750bfeae6bac958be1",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_A4/run_meta_2020_100.json",
+   "sha256": "fa5e9c11e7561816576c2f563bd5e17ab61d9c98b859a55e8ef93a06173d6dff",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_A4/run_meta_2025_100.json",
+   "sha256": "9e5ce32e44d6e7c9928bb3c921894ccd6f7aa856f9e90fe2f32627ff99dd27c1",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_grid250/run_meta_2020_250.json",
+   "sha256": "baf6cdf1f7e70e90efd75f83459e4ddd177e498a845949043c2d049689cb3732",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_grid250/run_meta_2025_250.json",
+   "sha256": "f4867e91028103413c70c0e31a9885cc217e6fe085341b857b646d96f345dfbe",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_net2025/run_meta_2020_100.json",
+   "sha256": "42a7153d35511f95a06eb0e368ad355211c11324917caefca0c85ca98e5a9a9a",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/run_meta_2020_100.json",
+   "sha256": "74dbbf09797553859f0f95d11bee795fe54e28c793f4fc6f13c9e146a0c39c9c",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/run_meta_2025_100.json",
+   "sha256": "1f9c8a0a0a03f7e938bfb5935a5d5cdab29794acc6c761e583b51f7de8a48f90",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_snap/run_meta_2020_100.json",
+   "sha256": "5fb36f175c39dc11f8c2496016f9c61c26e35eeb748a4dade9cdc042795467aa",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_snap/run_meta_2025_100.json",
+   "sha256": "ab38dddd0860f323fe09012b27a328c6fc1f50599ba07a1c3851e45f2ec7ac8f",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_speed36/run_meta_2020_100.json",
+   "sha256": "b5e96b77c9700a173d81d3e21783143556aa375e205dad213b2ffea17e25cc6a",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_speed36/run_meta_2025_100.json",
+   "sha256": "48370cb8e0615b323d686a08b55b82dd007edd7077c923ecb6d54d4606907d65",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_T600/run_meta_2020_100.json",
+   "sha256": "82fb83b7063f368e74a0f461c907a4410049d2da66929e3ac6d8750a21594cd6",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_T600/run_meta_2025_100.json",
+   "sha256": "22e54e586616833ded0b5139322ee8835ed85365a0769c7be002b86798902732",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_union/run_meta_2020_100.json",
+   "sha256": "337be1fb28b7b74b23d4cea5c01b89cd3db449c5ba4d9cb04c5ed6bce31d13b9",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/sens_union/run_meta_2025_100.json",
+   "sha256": "d17ec1baa7ccb30c4cc69d3279ee88d9ea76dcc63011a571ab35fcce4e4c7099",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/xb_main/run_meta_2020_100.json",
+   "sha256": "8bf076908080f4794afcf5497bc0e59b0ca7262621112be4a6f9d02c44693e21",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/xb_main/run_meta_2025_100.json",
+   "sha256": "869865ac197c3312cca3ac59f65b485dfa9ed255ab1378e67c3328090bcd7ba4",
+   "verified": true
+  },
+  {
+   "file": "데이터/결과/xb_net2025/run_meta_2020_100.json",
+   "sha256": "1d0a9acccbc25cff871831319ed8e8287f305264f160e9682e52d7674dc0d00c",
+   "verified": true
+  }
+ ],
+ "provenance_inventory_errors": [],
+ "source_evidence_files": 192,
+ "package_input_files": 1036,
+ "unchanged_nonfacility_inputs": 1033,
+ "independent_sfca_values": 615360,
+ "independent_sfca_max_relative_error": 5.94e-08,
+ "counts": {
+  "PASS": 56,
+  "WARN": 3,
+  "FAIL": 0
+ },
+ "scientific_fitness": "conditional use under documented source-date and retail assumptions; historical sports HOLD does not apply to active 7 categories",
+ "cleanup_status": "current_release_cleanup_complete_prior_denied_targets_retained",
+ "manifest_errors": [],
+ "manifest_files": 1430,
+ "notes": "Manifest does not hash itself. This final record is included in the final manifest; no circular manifest hash."
+}

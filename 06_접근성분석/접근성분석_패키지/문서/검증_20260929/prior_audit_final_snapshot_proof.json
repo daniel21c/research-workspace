@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-09-29T08:54:31.396980+09:00",
+  "initial_files": 1180,
+  "final_files": 1180,
+  "added": [],
+  "removed": [],
+  "changed_stat": [],
+  "checked_hash_files": 1173,
+  "changed_hash": [],
+  "transcripts_fully_read": {
+    "records": 123,
+    "visible_characters": 97846,
+    "chunks_read": 7,
+    "excludes": "thinking, tool payloads, images, subagent transcripts; synthetic notifications read but not interpreted as present authorization"
+  },
+  "xb_existing_conditions": [
+    {
+      "tag": "xb_main",
+      "year": 2020,
+      "rows": 30690,
+      "missing_keys": 0,
+      "max_error": {
+        "pop_total": 0.0,
+        "pop_reach": 0.0,
+        "COV": 0.0,
+        "MAI": 0.0,
+        "PWATT_sec": 0.0,
+        "n_cat_mai": 0.0
+      }
+    },
+    {
+      "tag": "xb_main",
+      "year": 2025,
+      "rows": 30690,
+      "missing_keys": 0,
+      "max_error": {
+        "pop_total": 0.0,
+        "pop_reach": 0.0,
+        "COV": 0.0,
+        "MAI": 0.0,
+        "PWATT_sec": 0.0,
+        "n_cat_mai": 0.0
+      }
+    },
+    {
+      "tag": "xb_net2025",
+      "year": 2020,
+      "rows": 30690,
+      "missing_keys": 0,
+      "max_error": {
+        "pop_total": 0.0,
+        "pop_reach": 0.0,
+        "COV": 0.0,
+        "MAI": 0.0,
+        "PWATT_sec": 0.0,
+        "n_cat_mai": 0.0
+      }
+    }
+  ]
+}

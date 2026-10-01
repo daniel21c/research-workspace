@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""P5 공통 접근성 엔진 (access-engine-v2: 도달시간·Coverage·MAI·2SFCA).
+"""P5 공통 접근성 엔진 (access-engine-v3.1: 도달시간·Coverage·MAI·2SFCA).
 
 정의 출처: 문서/지표정의_확정.md (이 파일은 그 문서를 그대로 구현한다)
   - 도달시간  t_b(o,c) = min_{g: c in C_g, 단위_b(g)=단위_b(o)} t_og
@@ -17,6 +17,8 @@
   python a06_engine.py --year 2025 --grid 100 --catset B --tag natstd_B
   python a06_engine.py --year 2025 --grid 100 --ku 11010 --tag test_ku11010   # 한 구 시험
   python a06_engine.py --year 2020 --grid 100 --net-year 2025 --tag sens_net2025   # 네트워크 고정(2020 시설·인구 + 2025 보행망)
+  python a06_engine.py --year 2025 --grid 100 --ld-other --tag xb_main            # 경계 교차(ld_other = ld2020), 연구3 시계열 확장
+  python a06_engine.py --year 2020 --grid 100 --net-year 2025 --ld-other --tag xb_net2025
     (먼저 python a05c_ttm_supplement.py --net 2025 --for-year 2020 --grid 100 — 2025 표에 없는 2019 인구 격자 보충)
 """
 from __future__ import annotations
@@ -35,11 +37,15 @@ import pyarrow.dataset as pads
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import a00_config as C  # noqa: E402
+import a11_provenance as P
 
-ENGINE_VERSION = 'access-engine-v3'   # v2 (2026-09-25): 2SFCA 추가, facility-v1.2 / v3 (2026-09-25): 2SFCA 공급 중복 제거, 실행 환경·입력 해시 기록
+ENGINE_VERSION = 'access-engine-v3.3'   # v2 (2026-09-25): 2SFCA 추가, facility-v1.2 / v3 (2026-09-25): 2SFCA 공급 중복 제거, 실행 환경·입력 해시 기록
 BOUNDS = ['none', 'dong424', 'lz116', 'ld', 'ku']          # 경계 조건 b (ld = 해당 연도 Leiden)
 UNIT_LEVELS = ['dong424', 'lz116', 'ld', 'ku', 'seoul']     # 집계 단위 u
-CAT_B_ORDER = ['교육', '돌봄', '의료', '체육', '편의']
+# --ld-other (2026-09-27, 연구3 시계열 확장): 경계 연도와 데이터 연도를 분리. 'ld_other' = 다른 연도의 Leiden
+# (2020 데이터 → ld2025, 2025 데이터 → ld2020). 켜면 BOUNDS·UNIT_LEVELS 에 'ld_other' 가 더해지고 2SFCA 는 계산하지 않는다.
+LD_OTHER_YEAR = {2020: 2025, 2025: 2020}
+CAT_B_ORDER = list(dict.fromkeys(x[0] for x in C.CAT_B))
 POPCOUNT8 = np.array([bin(i).count('1') for i in range(256)], dtype=np.uint8)
 
 
@@ -264,7 +270,7 @@ SUPPLY_KEY = ['name', 'x_5179', 'y_5179']      # 같은 시설 판정: 이름·�
 
 
 def build_supply(year: int, grid: int, retail: str, gm: pd.DataFrame):
-    """2SFCA 공급 행렬: 항목 = 기능 카테고리 8개 + 시설 28종, 값 = 격자별 분석가능 시설 개수.
+    """2SFCA 공급 행렬: 항목 = 기능 카테고리 7개 + 시설 27종, 값 = 격자별 분석가능 시설 개수.
     중복 제거(v3): 시설 항목은 (시설, 이름, 좌표)가 같은 행을 한 곳으로, 카테고리 항목은 문화기반시설 중 공공도서관 행
     (공공도서관 종과 같은 시설)을 빼고 (카테고리, 이름, 좌표)가 같은 행을 한 곳으로 센다. Coverage·MAI 는 격자 비트라 영향 없음."""
     gcol = 'grid100_cd' if grid == 100 else 'grid250_cd'
@@ -375,10 +381,20 @@ def sfca_outputs(gm, items, S, sres, pos_cells, year, grid, T, speed, retail, ou
 
 # ---------------------------------------------------------------- 실행
 def run(args):
+    global BOUNDS, UNIT_LEVELS
     t0 = time.time()
+    # Each run owns its boundary configuration, including repeated in-process runs.
+    BOUNDS = ['none', 'dong424', 'lz116', 'ld', 'ku']
+    UNIT_LEVELS = ['dong424', 'lz116', 'ld', 'ku', 'seoul']
     year, grid, T, speed = args.year, args.grid, float(args.T), float(args.speed)
     factor = C.WALK_KMH / speed                     # 소요시간 환산 (4.0 km/h 기준 표)
     gm, cats, Cmask, groups, info = load_inputs(year, grid, args.catset, args.retail)
+    ld_other = bool(getattr(args, 'ld_other', False))
+    if ld_other:
+        gm['ld_other'] = gm[f'ld{LD_OTHER_YEAR[year]}']
+        if 'ld_other' not in BOUNDS:
+            BOUNDS = BOUNDS + ['ld_other']
+            UNIT_LEVELS = UNIT_LEVELS[:-1] + ['ld_other', 'seoul']
     K = len(cats)
     code = pd.Series(gm['gi'].values, index=gm['grid_cd'].values)
     popv = gm['pop'].values
@@ -387,13 +403,14 @@ def run(args):
         unit_codes[b] = gm[b].astype(np.int64).values
     net = year if args.net_year is None else args.net_year
     dset, kus = ttm_partitions(year, grid, args.ku, net)
+    provenance = P.capture_run(args, P.dataset_files(dset))
     snap_sec = None
     if args.snap:
         snap_sec, snap_info = load_snap_sec(grid, net, gm, speed)
         info = {**info, **snap_info}
     parts, parts_b = [], []
     n_rows = 0
-    do_sfca = args.catset == 'A' and args.ku is None     # 2SFCA 는 집수역이 구를 넘으므로 서울 전체 실행에서만
+    do_sfca = args.catset == 'A' and args.ku is None and not ld_other   # 2SFCA 는 집수역이 구를 넘으므로 서울 전체 실행에서만; 경계 교차 실행(xb)에서는 계산 안 함
     wo, wd = [], []
     for k in kus:
         o, d, t, nr = read_ttm_ku(dset, k, code, popv, factor, snap_sec)
@@ -420,12 +437,16 @@ def run(args):
     outdir.mkdir(parents=True, exist_ok=True)
     meta = dict(engine=ENGINE_VERSION, year=year, grid_m=grid, T_sec=T, speed_kmh=speed, catset=args.catset,
                 retail=args.retail, union=bool(args.union), tag=args.tag, ku=args.ku, ttm_rows=int(n_rows), **info,
-                env=C.runtime_env(), facility_units_source_sha256=C.units_source_sha256())
+                env=C.runtime_env(), facility_units_source_sha256=C.units_source_sha256(),
+                snap=bool(args.snap), ld_other=ld_other, provenance=provenance)
     if net != year:                                   # 네트워크 고정 민감도일 때만 기록(기본 실행의 run_meta 는 그대로)
         meta['net_year'] = net
         meta['ttm_dirs'] = [f'데이터/입력/ttm/ttm{grid}_{net}'] + ([f'데이터/입력/ttm/ttm{grid}_{net}_for{year}']
                                                                if (C.DATA / 'ttm' / f'ttm{grid}_{net}_for{year}').exists() else [])
         meta['boundary_ld'] = f'ld{year}'
+    if ld_other:
+        meta['boundary_year'] = {'lz116': 'fixed', 'ld': year, 'ld_other': LD_OTHER_YEAR[year]}
+        meta['sfca_skipped'] = 'ld_other 실행에서는 2SFCA 계산 안 함'
     files = []
     suffix = f'{year}_{grid}' + (f'_ku{args.ku}' if args.ku else '')
     if args.catset == 'B':
@@ -457,13 +478,17 @@ def run(args):
             pt = tmp.groupby('unit_id')['pop'].sum()
             covs = [(tmp['pop'] * tmp[c]).groupby(tmp['unit_id']).sum() / pt for c in cols_c]
             s = pd.DataFrame({'unit_id': pt.index, 'pop_total': pt.values, 'COV': np.mean(np.vstack([v.values for v in covs]), axis=0)})
-            s['item'] = '종합(5개 단순평균)'; s['level'] = 'composite'; s['unit_level'] = lvl; s['pop_reach'] = np.nan
+            s['item'] = f'종합({len(CAT_B_ORDER)}개 단순평균)'; s['level'] = 'composite'; s['unit_level'] = lvl; s['pop_reach'] = np.nan
             rows.append(s)
         nat = pd.concat(rows, ignore_index=True)
         nat.insert(0, 'year', year); nat.insert(1, 'grid_m', grid); nat.insert(2, 'speed_kmh', speed)
         nat = nat[['year', 'grid_m', 'speed_kmh', 'unit_level', 'unit_id', 'level', 'item', 'pop_total', 'pop_reach', 'COV']]
         p = outdir / f'nat_standard_coverage_{suffix}.csv'
         nat.to_csv(p, index=False, encoding='utf-8-sig', float_format='%.6f', lineterminator='\n'); files.append(p)
+        meta['checks'] = dict(origins_complete=len(uo)==len(pos_cells) and len(set(uo))==len(uo),
+            COV_in_0_1=bool(nat.COV.between(0,1).all()),
+            reach_in_0_1=bool(((rg==0)|(rg==1)).all() and ((rc==0)|(rc==1)).all()),
+            pop_total_same_all_levels=bool(nat[nat.level=='composite'].groupby('unit_level').pop_total.sum().nunique()==1))
     else:
         df = pd.concat(parts, ignore_index=True)
         got = np.unique(df['gi'].values)
@@ -481,7 +506,7 @@ def run(args):
         meta['origins'] = int(len(np.unique(df['gi']))); meta['origins_missing_in_ttm'] = int(len(missing))
         g = gm.set_index('gi')
         df['pop'] = popv[df['gi'].values]
-        for lvl in ['dong424', 'lz116', 'ld', 'ku']:
+        for lvl in [l for l in UNIT_LEVELS if l != 'seoul']:
             df[lvl] = g[lvl].values[df['gi'].values]
         df['seoul'] = 0
         # 격자 결과 저장
@@ -524,8 +549,11 @@ def run(args):
             f_s, c_s, m_s = sfca_outputs(gm, items, S, sres, pos_cells, year, grid, T, speed, args.retail, outdir, suffix, args.save_sfca_grid)
             files += f_s; chk.update(c_s); meta['sfca'] = {**m_s, 'supply_dedup': dedup}
         meta['checks'] = chk
-    meta['files'] = [dict(file=(str(p.relative_to(C.ROOT)) if p.is_relative_to(C.ROOT) else str(p)).replace('\\', '/'),
-                          sha256=sha256(p), bytes=p.stat().st_size) for p in files]
+    drift = P.check_inventory(provenance['inputs'], C.DATA) + P.check_inventory(provenance['upstream_inputs'], C.BASE)
+    if drift:
+        raise RuntimeError('Inputs changed during calculation: ' + '; '.join(drift))
+    meta['files_base'] = 'run_meta_directory'
+    meta['files'] = [dict(file=p.name, sha256=sha256(p), bytes=p.stat().st_size) for p in files]
     meta['seconds'] = round(time.time() - t0, 1)
     mp = outdir / f'run_meta_{suffix}.json'
     mp.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding='utf-8', newline='\n')
@@ -547,6 +575,7 @@ def main(argv=None):
     ap.add_argument('--net-year', type=int, choices=[2020, 2025], default=None,
                     help='소요시간표(보행망) 시점. 기본 = --year. 다르면 네트워크 고정 민감도(예: --year 2020 --net-year 2025)')
     ap.add_argument('--snap', action='store_true', help='스냅 거리 민감도: o≠d 쌍에 양끝 격자 중심→노드 보행 시간을 더함(sens_snap)')
+    ap.add_argument('--ld-other', action='store_true', help='경계 조건 ld_other(다른 연도 Leiden) 추가: 2020 데이터→ld2025, 2025 데이터→ld2020. 2SFCA 는 계산 안 함(xb_*)')
     ap.add_argument('--out-root', default=None, help='출력 상위 폴더(기본 데이터/결과). 재현 점검용')
     ap.add_argument('--save-sfca-grid', action='store_true', help='2SFCA 격자 값(grid_sfca_*.parquet)도 저장(본 분석용, 약 5백만 행)')
     a = ap.parse_args(argv)

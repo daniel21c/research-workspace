@@ -80,7 +80,7 @@ def md(df, fmt='{:.4f}', ints=('n', 'year', 'Δ=0 동', 'Δ>0 동', 'Δ<0 동', 
 
 def write_t5_md(t):
     L = ['# T5 카테고리별 ΔCOV·ΔMAI 기술통계 (동 424, Δ = Leiden LD116 − 공식 LZ116)', '',
-         '- 원자료: `데이터/결과/main/unit_access_{2025,2020}_100.csv`(본 분석: A 8개 카테고리, T = 15분, 4.0 km/h, 100m 격자). 코드 `코드/a07_study3_outputs.py`.',
+         '- 원자료: `데이터/결과/main/unit_access_{2025,2020}_100.csv`(본 분석: A 7개 카테고리, T = 15분, 4.0 km/h, 100m 격자). 코드 `코드/a07_study3_outputs.py`.',
          '- 각 동의 COV·MAI는 경계 조건 b 아래 격자 값에서 바로 분자합/분모합으로 만든 값이다. "LZ·LD 동 평균"은 동 값의 단순평균(기술통계용)이며 서울 전체 값이 아니다.',
          '- Δ>0 은 Leiden 경계 안에서 접근성이 더 높은 동. Δ=0 판정은 |Δ| ≤ 1e-12. MAI는 도달 인구가 없는 동에서 정의되지 않아 그 카테고리의 n에서 빠진다.',
          '- 연구3 본 시점은 2025(LD = Leiden 2025). 2020(LD = Leiden 2020)은 참고.', '']
@@ -157,7 +157,7 @@ def f3():
         cb.ax.tick_params(labelsize=8); cb.outline.set_linewidth(0.3)
         cb.set_label(f'{name}  (색 범위 ±{lim:.3g} = |Δ|≠0 동의 95분위, 넘는 값은 끝색)', fontsize=7.5)
     legend_lines(fig)
-    fig.text(0.01, 0.005, '자료: 데이터/결과/main/unit_access_2025_100.csv (A 8개 카테고리, 15분, 4.0 km/h, 100m). 파랑 = Leiden 경계 안 접근성이 더 높음, 빨강 = 공식 생활권 쪽이 더 높음, 회색 = 같음.',
+    fig.text(0.01, 0.005, '자료: 데이터/결과/main/unit_access_2025_100.csv (A 7개 카테고리, 15분, 4.0 km/h, 100m). 파랑 = Leiden 경계 안 접근성이 더 높음, 빨강 = 공식 생활권 쪽이 더 높음, 회색 = 같음.',
              fontsize=7, color='#5c5c58')
     fig.tight_layout(rect=(0, 0.05, 1, 1))
     for ext in ('png', 'pdf'):
@@ -165,7 +165,7 @@ def f3():
     plt.close(fig)
     # 부록: 카테고리별 작은 지도(색 범위는 지표마다 카테고리 공통)
     cats = list(C.CAT_A)
-    fig, axes = plt.subplots(2, 8, figsize=(18, 5.6))
+    fig, axes = plt.subplots(2, len(cats), figsize=(16, 5.6))
     for i, (ind, name) in enumerate([('dCOV', 'ΔCOV'), ('dMAI', 'ΔMAI')]):
         allv = p[p.cat.isin(cats)][ind]
         lim = sym_limit(allv)

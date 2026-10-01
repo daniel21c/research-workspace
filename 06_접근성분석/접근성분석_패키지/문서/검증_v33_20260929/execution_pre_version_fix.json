@@ -1,0 +1,130 @@
+[
+ {
+  "name": "a02",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\a02_facility_boundary.py"
+  ],
+  "exit_code": 0,
+  "seconds": 11.13
+ },
+ {
+  "name": "test_engine",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\tests\\test_engine.py"
+  ],
+  "exit_code": 0,
+  "seconds": 6.64
+ },
+ {
+  "name": "test_release",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\tests\\test_release.py"
+  ],
+  "exit_code": 0,
+  "seconds": 0.8
+ },
+ {
+  "name": "test_geometry",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\tests\\test_geometry.py"
+  ],
+  "exit_code": 0,
+  "seconds": 0.96
+ },
+ {
+  "name": "engine_main_2020",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--T",
+   "900.0",
+   "--speed",
+   "4.0",
+   "--catset",
+   "A",
+   "--retail",
+   "with",
+   "--tag",
+   "main",
+   "--save-sfca-grid"
+  ],
+  "exit_code": 0,
+  "seconds": 21.82
+ },
+ {
+  "name": "engine_main_2025",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\a06_engine.py",
+   "--year",
+   "2025",
+   "--grid",
+   "100",
+   "--T",
+   "900.0",
+   "--speed",
+   "4.0",
+   "--catset",
+   "A",
+   "--retail",
+   "with",
+   "--tag",
+   "main",
+   "--save-sfca-grid"
+  ],
+  "exit_code": 0,
+  "seconds": 21.38
+ },
+ {
+  "name": "engine_natstd_B_2020",
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지\\코드\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--T",
+   "900.0",
+   "--speed",
+   "4.0",
+   "--catset",
+   "B",
+   "--retail",
+   "with",
+   "--tag",
+   "natstd_B"
+  ],
+  "exit_code": 0,
+  "seconds": 7.64
+ }
+]

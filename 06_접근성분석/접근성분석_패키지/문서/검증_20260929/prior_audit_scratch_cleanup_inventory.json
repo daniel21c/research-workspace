@@ -1,0 +1,265 @@
+{
+  "root": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun",
+  "files": [
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\grid_access_2020_100.parquet",
+      "bytes": 1603841,
+      "sha256": "cd5e32ae04b1ef704f3b42e44a2d15133c9eac760e7e764d489a8fe278f56d55",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\grid_access_2025_100.parquet",
+      "bytes": 1560826,
+      "sha256": "2ea3cadf6f99b036b32026636fc2dada06ecc3ba82d734a98e0fd41908aba35e",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\grid_sfca_2020_100.parquet",
+      "bytes": 15495308,
+      "sha256": "1cc84127d13fb80456496679103969747443f73db9e59b1ec5a58e88907aa8cd",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\grid_sfca_2025_100.parquet",
+      "bytes": 15655564,
+      "sha256": "a1e8b82be8edbb55f6d8121344bc4ad703bb368767d875f67a7355f638400ae6",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\run_meta_2020_100.json",
+      "bytes": 3377,
+      "sha256": "026c84023be0e39af6d18d5cc408d02df0b54b883b2a9a634b6a4735452ecda8",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\run_meta_2025_100.json",
+      "bytes": 3374,
+      "sha256": "0e33dc9d176221aa500bd2fbcb48f6b794d4cebcede0da5a0e43c3f71f3622d6",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\sfca_unit_2020_100.csv",
+      "bytes": 15878493,
+      "sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\sfca_unit_2025_100.csv",
+      "bytes": 15878915,
+      "sha256": "4970a714ac3bb61196e34c3eea3556666f4332fb94145c22f0f6aba246aa8e24",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\unit_access_2020_100.csv",
+      "bytes": 3674475,
+      "sha256": "4a6da7a1ca2a2ba45a39736c9de16eb247ca14e4430737a89128b80b0b74fce2",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\main\\unit_access_2025_100.csv",
+      "bytes": 3675726,
+      "sha256": "62a0ef5df1fd87a828bfde3795b439cb86e1b1c4b8676f465e86cb3fe675bf0d",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\grid_access_2020_100.parquet",
+      "bytes": 279741,
+      "sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\grid_access_2025_100.parquet",
+      "bytes": 281420,
+      "sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\nat_standard_coverage_2020_100.csv",
+      "bytes": 817760,
+      "sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\nat_standard_coverage_2025_100.csv",
+      "bytes": 817409,
+      "sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\run_meta_2020_100.json",
+      "bytes": 1486,
+      "sha256": "32a9e74ef98ec25ea9f57d76c047e10c47b60dc4fb1330eee89c2c98e57c3417",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\natstd_B\\run_meta_2025_100.json",
+      "bytes": 1486,
+      "sha256": "d37731ce9980358e83c44ff98b3dde10b0652c7fa54e935251afb65560b30e44",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\grid_access_2020_100.parquet",
+      "bytes": 839155,
+      "sha256": "86c47d3609e5b0839d35ec9be76dbce2b95c7ece52b4fe19283cbb5329a0a784",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\grid_access_2025_100.parquet",
+      "bytes": 843881,
+      "sha256": "024127ef2f6dfbf73b4a797567be55cd11762992b9ec624b00de5c58e3446560",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\run_meta_2020_100.json",
+      "bytes": 1511,
+      "sha256": "d1067faecb2cdd58663bfd3b2bd5aae9f649038fd5d877e58549bd5451485f34",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\run_meta_2025_100.json",
+      "bytes": 1511,
+      "sha256": "285731817b62054a4b075e8b473c00dbf8dd6d89824eacd1120ba89cfdf0044c",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\unit_access_2020_100.csv",
+      "bytes": 2127384,
+      "sha256": "9715168800f15daee734a614a02eeebc1325f742d2b128a9a9c78c0a9138a804",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_A4\\unit_access_2025_100.csv",
+      "bytes": 2127711,
+      "sha256": "ee87f4da413e2f80d11e23614d9ef4e4eea1f87bf8e484b433214a1647405fe6",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\grid_access_2020_250.parquet",
+      "bytes": 380259,
+      "sha256": "4e3fdac5dac53b05b3f530c33ed990917dd3349dc51f5cbdadd4fe9f02e3b91d",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\grid_access_2025_250.parquet",
+      "bytes": 376274,
+      "sha256": "2dd2e7e8923b49579948c6e5dab596a79cb9cb5ac8ed6bf3bded4ce83bf6631c",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\run_meta_2020_250.json",
+      "bytes": 3178,
+      "sha256": "06bb6f0c58d584e3976595eb9d79c0abdff1bec35a49ed162bab3de29c7c1ed3",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\run_meta_2025_250.json",
+      "bytes": 3179,
+      "sha256": "6650bf610d873770ecd7c9a23a97d122a4ddf8f508ee884eccf57eff1ac181bd",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\sfca_unit_2020_250.csv",
+      "bytes": 15876808,
+      "sha256": "fbac5b6840f9850f5f547ef77bdaa408d205c49bca6f5dc830651cad1062908a",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\sfca_unit_2025_250.csv",
+      "bytes": 15877936,
+      "sha256": "764e9d70fa3ec931cd2c9496c80e0e844bfc31a2df2c009a1bbae448a537700e",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\unit_access_2020_250.csv",
+      "bytes": 3666608,
+      "sha256": "5b315fd1ebee9aac6a20eece8b1c251ad9a1e9c79934a6e4f032d4db144b1c7b",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_grid250\\unit_access_2025_250.csv",
+      "bytes": 3668739,
+      "sha256": "ab2382eb1a5568532d83b282a414ade3480bc06583c6f5d4b8d9ff3187b4a88c",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_net2025\\grid_access_2020_100.parquet",
+      "bytes": 1656382,
+      "sha256": "d27cdae126af85e94ee81c33d0ba119414a216ea72b4bf48eec61aee9f99c288",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_net2025\\run_meta_2020_100.json",
+      "bytes": 3323,
+      "sha256": "c16dfdc30462d778500cd50d80dd32df7387d99fcebf0d68b47f578caee421b0",
+      "same_original": false,
+      "kind": "metadata"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_net2025\\sfca_unit_2020_100.csv",
+      "bytes": 15878477,
+      "sha256": "e47a5e84f0b4c93e4f0d50c5f72d3b2799b0e041247246f5f9fa8c98e4545c5c",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_net2025\\unit_access_2020_100.csv",
+      "bytes": 3674882,
+      "sha256": "50bed0d773598f14d7abbb4de48b1419a832151820b2f15dfc7507bfbb1f0b37",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_retail_without\\grid_access_2020_100.parquet",
+      "bytes": 1665020,
+      "sha256": "2c0671dd10a3306d2ccc1234b36039deebc2d5d049d43ec2fc0f3c6700529a84",
+      "same_original": true,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_retail_without\\sfca_unit_2020_100.csv",
+      "bytes": 7423772,
+      "sha256": "2ad1ff46596aea0613ff3abcf23fead798d1a0f869da405a1636ded6a42cfb0a",
+      "same_original": false,
+      "kind": "output"
+    },
+    {
+      "path": "C:\\Users\\cyion\\.codex\\tmp\\access-integrity-audit-20260929-01a0ea59\\rerun\\sens_retail_without\\unit_access_2020_100.csv",
+      "bytes": 3768796,
+      "sha256": "e7e09717482414b540be48047a2d362dd366ceced5584aef41bd07b2c9b06b56",
+      "same_original": true,
+      "kind": "output"
+    }
+  ],
+  "total_bytes": 155493987
+}

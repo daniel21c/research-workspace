@@ -1,0 +1,66 @@
+{
+ "COV_columns_unchanged": 12,
+ "non_MAI_columns_unchanged": 21,
+ "COV_group_summary_unchanged": true,
+ "category_file_identical": true,
+ "COV_summary_and_verdict_unchanged": true,
+ "MAI_changes": [
+  {
+   "year": 2020,
+   "column": "main_MAI_cost_lz_종합",
+   "changed": 34,
+   "sign_reversals": 18,
+   "max_abs": 0.5628005714285713
+  },
+  {
+   "year": 2020,
+   "column": "main_MAI_dLDLZ_종합",
+   "changed": 24,
+   "sign_reversals": 10,
+   "max_abs": 0.49546471428571387
+  },
+  {
+   "year": 2020,
+   "column": "sens_T600_MAI_cost_lz_종합",
+   "changed": 42,
+   "sign_reversals": 20,
+   "max_abs": 0.5295457142857148
+  },
+  {
+   "year": 2020,
+   "column": "sens_T600_MAI_dLDLZ_종합",
+   "changed": 27,
+   "sign_reversals": 11,
+   "max_abs": 0.4738902857142855
+  },
+  {
+   "year": 2025,
+   "column": "main_MAI_cost_lz_종합",
+   "changed": 24,
+   "sign_reversals": 11,
+   "max_abs": 0.4848787142857142
+  },
+  {
+   "year": 2025,
+   "column": "main_MAI_dLDLZ_종합",
+   "changed": 14,
+   "sign_reversals": 3,
+   "max_abs": 0.4479171428571433
+  },
+  {
+   "year": 2025,
+   "column": "sens_T600_MAI_cost_lz_종합",
+   "changed": 31,
+   "sign_reversals": 17,
+   "max_abs": 0.5092209999999994
+  },
+  {
+   "year": 2025,
+   "column": "sens_T600_MAI_dLDLZ_종합",
+   "changed": 24,
+   "sign_reversals": 7,
+   "max_abs": 0.45132614285714306
+  }
+ ],
+ "manuscript_dependency": "k18_v2_results.py 237-250 and k19_kpa_v2.py 161 read COV only; r2 bundle b5 copies left unchanged"
+}

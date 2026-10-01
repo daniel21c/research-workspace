@@ -1,5 +1,5 @@
 @echo off
-REM run_engine.bat - access engine v3 (a06: travel time, Coverage, MAI, 2SFCA) for all runs,
+REM run_engine.bat - access engine v3.3 (a06: travel time, Coverage, MAI, 2SFCA) for all runs,
 REM summaries (a06b), study-3 tables/figures (a07), district table (a08), unit tests and verification (a10).
 REM Run from any folder; paths are relative to this file. Needs Python 3.10+ with numpy, pandas, pyarrow.
 REM Usage:  run_engine.bat          (all runs + summaries, tables, figures, verification: about 8 minutes)
@@ -48,6 +48,15 @@ REM network-fixed sensitivity: 2020 facilities/population on the 2025 walk netwo
 python a05c_ttm_supplement.py --net 2025 --for-year 2020 --grid 100 --check 40
 if errorlevel 1 goto :fail
 python a06_engine.py --year 2020 --grid 100 --net-year 2025 --tag sens_net2025
+if errorlevel 1 goto :fail
+REM cross-boundary runs for study 3 time-series extension (ld_other = the other year's Leiden; no 2SFCA)
+python a06_engine.py --year 2020 --grid 100 --ld-other --tag xb_main
+if errorlevel 1 goto :fail
+python a06_engine.py --year 2025 --grid 100 --ld-other --tag xb_main
+if errorlevel 1 goto :fail
+python a06_engine.py --year 2020 --grid 100 --net-year 2025 --ld-other --tag xb_net2025
+if errorlevel 1 goto :fail
+python a06d_temporal_sensitivity.py
 if errorlevel 1 goto :fail
 python a06b_summary.py
 if errorlevel 1 goto :fail

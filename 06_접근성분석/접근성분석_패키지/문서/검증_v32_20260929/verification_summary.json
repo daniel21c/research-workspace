@@ -1,0 +1,155 @@
+{
+ "release": "access-engine-v3.2-facility-v1.3-20260929",
+ "verdict": "PASS",
+ "tests": {
+  "engine": 17,
+  "release": 11,
+  "geometry": 4,
+  "total": 32
+ },
+ "successful_engine_runs": 22,
+ "comparisons": 35,
+ "main": [
+  {
+   "year": 2020,
+   "metric": "SFCA_per10k",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 1252,
+   "changed_dongs": 141,
+   "categories_or_items": [
+    "공공도서관",
+    "문화",
+    "문화기반시설",
+    "미용업",
+    "보육·복지",
+    "생활서비스",
+    "세탁업",
+    "소매",
+    "식료품소매(즉석판매·제과)",
+    "약국",
+    "어린이집",
+    "의료",
+    "의원",
+    "이용업",
+    "일반음식점",
+    "체육",
+    "체육시설업",
+    "휴게음식점"
+   ],
+   "max_abs": 16.63893599999983
+  },
+  {
+   "year": 2025,
+   "metric": "SFCA_per10k",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 843,
+   "changed_dongs": 104,
+   "categories_or_items": [
+    "공공도서관",
+    "문화",
+    "문화기반시설",
+    "미용업",
+    "보육·복지",
+    "생활서비스",
+    "세탁업",
+    "소매",
+    "식료품소매(즉석판매·제과)",
+    "약국",
+    "어린이집",
+    "의료",
+    "의원",
+    "일반음식점",
+    "장애인 이용시설",
+    "체육",
+    "체육시설업",
+    "휴게음식점"
+   ],
+   "max_abs": 15.748031000000026
+  },
+  {
+   "year": 2020,
+   "metric": "COV",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 40,
+   "changed_dongs": 8,
+   "categories_or_items": [
+    "문화",
+    "생활서비스",
+    "종합"
+   ],
+   "max_abs": 0.821826
+  },
+  {
+   "year": 2020,
+   "metric": "MAI",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 84,
+   "changed_dongs": 13,
+   "categories_or_items": [
+    "문화",
+    "생활서비스",
+    "종합"
+   ],
+   "max_abs": 0.9998130000000001
+  },
+  {
+   "year": 2020,
+   "metric": "PWATT_sec",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 135,
+   "changed_dongs": 17,
+   "categories_or_items": [
+    "문화",
+    "보육·복지",
+    "생활서비스",
+    "소매",
+    "의료",
+    "종합",
+    "체육"
+   ],
+   "max_abs": 118.69742200000007
+  },
+  {
+   "year": 2025,
+   "metric": "COV",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 6,
+   "changed_dongs": 3,
+   "categories_or_items": [
+    "문화",
+    "종합"
+   ],
+   "max_abs": 0.3403590000000001
+  },
+  {
+   "year": 2025,
+   "metric": "MAI",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 6,
+   "changed_dongs": 3,
+   "categories_or_items": [
+    "문화",
+    "종합"
+   ],
+   "max_abs": 0.3408660000000001
+  },
+  {
+   "year": 2025,
+   "metric": "PWATT_sec",
+   "scope": "dong424, all 5 boundary conditions",
+   "changed_rows": 56,
+   "changed_dongs": 8,
+   "categories_or_items": [
+    "문화",
+    "보육·복지",
+    "소매",
+    "종합",
+    "체육"
+   ],
+   "max_abs": 149.51480400000003
+  }
+ ],
+ "scientific_fitness": "HOLD for definitive historical comparisons including sports",
+ "failed": 0,
+ "elapsed_seconds": 15.9
+}

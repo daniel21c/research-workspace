@@ -1,0 +1,1677 @@
+{
+ "status": "promoted_and_verified",
+ "replaced_existing": 135,
+ "added": 103,
+ "files": [
+  {
+   "file": "README.md",
+   "old_sha256": "34c05c8a268a71ee0217124a08cae2415f407f01e4cfe3dbd1d26bc17d3061d0",
+   "new_sha256": "4ea31cd57c898fe09b998695112bd5d900c9550afb6c9f4ab43f3c98b4357de3",
+   "bytes": 1303,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/manifest_sha256.csv",
+   "old_sha256": "12e7cd7af247013010942832a610146688d63bc2a02f8ea64cd6f9d8daa5c8ed",
+   "new_sha256": "ec733ebb58d2b3c2951439763ed386e1c06ccc1544a065e4b3d0dad81d3631af",
+   "bytes": 221089,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/검증결과.json",
+   "old_sha256": "c7472f6a023eb1935d1fef32b2be69c5073437af263c4d2adf2f267b2fb7d75c",
+   "new_sha256": "986d76096c7189ad2729a62f385421ba53a2bb48549cf1b203c475d73b456fcd",
+   "bytes": 19968,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증보고서.md",
+   "old_sha256": "95c38e88e209f4fcd74b215b55cbb4432eeed82d43e5926458aa834317595bc3",
+   "new_sha256": "0abb3268068ce77374eb5e4b3cd6703c2ec6b5148a7f1da588d5224ebbd30f45",
+   "bytes": 12748,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/공동연구자_시작_20260929.md",
+   "old_sha256": "d9a902ef518c3aec6dc6de583c2c72b03a1a9634910687f27f9d82ded2797dca",
+   "new_sha256": "5029da6ac51b5e0fc06cd0318085553b150f712ac47634c04702d6360bd1fa5d",
+   "bytes": 4076,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/배포검증_20260929.md",
+   "old_sha256": "1f8453ec9a1a2a028506812a7f4a2dd1a2534b19a0562646c8e3dde11668686a",
+   "new_sha256": "725f696b79166855ef3c5ba2718140acced8ab35d66be66fddbe197873afb130",
+   "bytes": 7475,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/배포검증_v32_20260929.md",
+   "old_sha256": "c12d31fb8dfc563deec9620152d2f8374c92542b9115ea9156d1ec46e45b1c37",
+   "new_sha256": "ee202ea3a720ab2a7cc0da6f47e1d5fa732892ec894cb080413e9866666d8c7e",
+   "bytes": 7861,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/배포검증_v33_20260929.md",
+   "old_sha256": null,
+   "new_sha256": "adde17c2783a67c86397dac7b15803bb3b8538c0c328c47e3611cd730d97dbdc",
+   "bytes": 4497,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/시설경계연결_구축기록.md",
+   "old_sha256": "46cf6854b52d0a8344229f3fe64a25dc73077cdafa96e50615a851ae7aa3e8cf",
+   "new_sha256": "580c502f7baf1647b78fded32e924e5ff9e5beee27c531efd5ae8e0523ae57a9",
+   "bytes": 6984,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/작업기록.md",
+   "old_sha256": "ae3e74acabcbaa38a3f16c33a8caec89bc974b6268213b32c1b6a949a37d52e4",
+   "new_sha256": "f01700f9e6a16595c2f858efbdafe32721aa906444ed430daeaf63a34a9d5730",
+   "bytes": 37139,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/지표정의_확정.md",
+   "old_sha256": "ae8a6a0e581fbc92c3caad95996e3d45f3691f6db66e5d4bc38e0755a336c466",
+   "new_sha256": "17a2ec89ba327900af21b123960e0595da5ead7017aa8248a6fe63158e54590c",
+   "bytes": 15934,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/출처_전처리_연결표_20260929.md",
+   "old_sha256": "80386ad45147e462243f95b2ea5f2a3919aadca12c586a6c02732e1b8935c351",
+   "new_sha256": "89357a92884f7185cc304a773c94e1009c753ae9a9266d3107c6874c14ca6d0c",
+   "bytes": 10388,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/후속소비_영향_v33_20260929.md",
+   "old_sha256": null,
+   "new_sha256": "3aa88a4422f894df278af946f4a8fe0390aa72ac1906a1f021278ad8068614ac",
+   "bytes": 1353,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a00_config.py",
+   "old_sha256": "1e9d3a9c7e1144df9a7408cbf577af0d94f9dbb1b44e8bdc2e55b904115b8136",
+   "new_sha256": "e5db8974bd61bedbe35c98ddbadd8cee2f9114e138638a484acec17f86cca448",
+   "bytes": 6826,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a02_facility_boundary.py",
+   "old_sha256": "247af2347d5a98302c323eb4bf8fc7be88be2fc534cf2091a3cbf7c1eabeca9c",
+   "new_sha256": "7097f39125d0b35cac0e0eb15c578183a4950c8910c0ca743b1a3b3b2798f5c1",
+   "bytes": 13668,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a06b_summary.py",
+   "old_sha256": "edce1cd372ea9319131c0bb0e061f1f09dc4bcbff2d6fd2b4bb9a078b3469ec1",
+   "new_sha256": "f6d0718f680950e06e86b98d0eb0c2808a156e2d3aa6e30f7625217d4477b367",
+   "bytes": 19085,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a06c_delta.py",
+   "old_sha256": "9d6c15cd8177e45cba5c0ddacd60c4f86c945312b1f9aea32621731be9234a8b",
+   "new_sha256": "0f22acc242255088d4073d038ceb439a486059af58b33d485151da072fb0d4b1",
+   "bytes": 4128,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a06_engine.py",
+   "old_sha256": "f5b8ed0a02730214eb6e5a1b196b8ad0bf6ee782af77f96645acdee0ceab7c31",
+   "new_sha256": "4f42684d24f8b033aa7b863aec890369d782501e4035e2e7fbd7132e377ee4b2",
+   "bytes": 37177,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a07_study3_outputs.py",
+   "old_sha256": "0eb19ffefba26657135399276222e884fca250ae03300ce7625091da3da4806f",
+   "new_sha256": "3408e1693e622dd913768e29d5f2822ba5a43a9512c7456f3234ff3a046e39c7",
+   "bytes": 11569,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a08_ku_compare.py",
+   "old_sha256": "0ec88f2bac4ff271d3001e984bc4d0fe50dbf749fae56c73765666cc51fa175f",
+   "new_sha256": "5bf6a5360ac29a9ed42da4f39384b65dd1f92a9076c1c2face7fff7b2c710621",
+   "bytes": 12864,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a10_verify.py",
+   "old_sha256": "24e15c11dc051fa8d21e81269ddf287ea6ff03c63367ba94d61b3b4b8ffba4d7",
+   "new_sha256": "a8d6ebe94fece6bf81d47225079b6b320a01e81e5576e1047d11c9bc26cd878d",
+   "bytes": 28530,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/a11_provenance.py",
+   "old_sha256": "322d95c2e6947eb7ceb211b05233a5b69ae4493a7479c5850bf19c4eccf36ac4",
+   "new_sha256": "fcf97c9dbfe43888ac9bd4f7bf8887480a8f5d211c4f9dfe910c810573181b9e",
+   "bytes": 5778,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/run_engine.bat",
+   "old_sha256": "3f1b2737339a11b5b65631a5afffa8f8f16485c3e10ef9649b24a641d5b692fc",
+   "new_sha256": "44b7a9e3147196016a1b2568665b7b8dd3348962fc4e491d160e5a9cf5523834",
+   "bytes": 3421,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/summary_sensitivity.md",
+   "old_sha256": "dd4ea457e15ffec23957f4541460c911592a1e1820602b01c5866c0c204c7723",
+   "new_sha256": "757734e71ae1223f3a10b6dbfa84ce26f9021eecae2fdb1a7971cd6b0c2a5c12",
+   "bytes": 12835,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/figures/F3s_dong_delta_by_category_2025.png",
+   "old_sha256": "be6c215be33786d6a5993cd47fd1ce888ff61587e365ca2b2b6ccf3637a41c69",
+   "new_sha256": "25560cf6d3de861f020b083708ff911d9aeaeb68a3956a91152204f051f9279e",
+   "bytes": 876239,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/figures/F3_dong_dCOV_dMAI_2025.pdf",
+   "old_sha256": "4ed5879a12c2b1d9b4fc11b56fc50476dfebc731c200f3f5b037138a60eed3cd",
+   "new_sha256": "499f3646921ff54baedbf355fcdc9a983bde293e3273dd355b4ca91e80f83a1b",
+   "bytes": 3703266,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/figures/F3_dong_dCOV_dMAI_2025.png",
+   "old_sha256": "76557cbc71863d2cef0b059dbffe073a06d035f48253bdccb85636cf9c39fce4",
+   "new_sha256": "5ebf1f183f1ca6165f2ebaa0b34ec566940465b55cf7efa181dcd2808670de86",
+   "bytes": 925903,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/grid_access_2020_100.parquet",
+   "old_sha256": "6d0ae4b56e475cf17453ae7ac18788502d6b3911986d272a87c0847afd730ba3",
+   "new_sha256": "3979d7add031307480eb5300efe6eb5514fc0e69e898c017c94723299b188f6e",
+   "bytes": 2110383,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/grid_access_2025_100.parquet",
+   "old_sha256": "d2d08e5e66dc1f3febfb50218b49726071c18985031d342d30d2709e9524d004",
+   "new_sha256": "97c03edfbc54b380b074425c7c1811962f4529c9b26a413a0f50ec9510d3f8dc",
+   "bytes": 2128016,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/grid_sfca_2020_100.parquet",
+   "old_sha256": "6fd815a232f8da1c765259e8fad159088d0e0e366713d9be7f98cad61c432739",
+   "new_sha256": "2fcc14da9693dfe3b822724ed4c992230a83227b8441f3c9710843423d3a9491",
+   "bytes": 14962918,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/grid_sfca_2025_100.parquet",
+   "old_sha256": "d3fa2064ab4b8a22c243dc409eeb452169533696b4a557b00d41e58944192949",
+   "new_sha256": "d06192754159547920b2ad0efc00105363835af6dfca2522a9bd8c922b75e225",
+   "bytes": 15088739,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/run_meta_2020_100.json",
+   "old_sha256": "edad5187990a278460f770f71d3c31f56fb698256ae4c957f52e8eeda17c32b3",
+   "new_sha256": "d08e4960d41952cf55c1f9461a8c9ee008106f8bc5f87d6162bcf09573e3d96e",
+   "bytes": 38242,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/run_meta_2025_100.json",
+   "old_sha256": "c96756984cff7040ff106e472f0fb6f872dddf706d803c8618b31cd5553324dd",
+   "new_sha256": "14b0ba02025cb513c9994974fc2bf6ec4b8d07bc00c960443bcc5f8b887c44f7",
+   "bytes": 38427,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/sfca_unit_2020_100.csv",
+   "old_sha256": "820d9ec1fc668dc5563797fefa754004e9f1b69c5a6533d7fcece58bf894204c",
+   "new_sha256": "f3b74d1a0e76072e0efdf7f65933efdd8c0a90042c57a3cb7fb89820c6659821",
+   "bytes": 15017334,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/sfca_unit_2025_100.csv",
+   "old_sha256": "db307479262e62dbe002a425b4c538e093a506721454d77cffd126c947d4e64b",
+   "new_sha256": "845ca9c2c6d602c77c754069d339ed04795c5d600819ea4ffbde2d65886dd23a",
+   "bytes": 15016612,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/summary_main.md",
+   "old_sha256": "d47ae541e590a8005290ad7a35f2a3010edd7aa55ae1409bb4c1c45087e18594",
+   "new_sha256": "ce50a7b6896c43bc09d04562229e5150b59e6750709f36ecebe77fbbced61f28",
+   "bytes": 12144,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/unit_access_2020_100.csv",
+   "old_sha256": "1ea674424f5dc95594527519bef30519079c6adb0808ebbf292a31d35779812e",
+   "new_sha256": "7d3781025b36825a12734e41911dfff732910c32b473cc0aa0b344db7746c643",
+   "bytes": 3272606,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/main/unit_access_2025_100.csv",
+   "old_sha256": "2bfde3a94d673bc6afc674d8284ecf0ff8332e28da2a4612524f04b1c7264ce9",
+   "new_sha256": "83906419b7e7f8c96b770205b734c6662402938471cd3264d4ba104796e1c8e6",
+   "bytes": 3274063,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/grid_access_2020_100.parquet",
+   "old_sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+   "new_sha256": "8b54b5a2966f2e626cec657f1c32621c4dae6ed2b4f8c3bf2907cf52520f4575",
+   "bytes": 274472,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/grid_access_2025_100.parquet",
+   "old_sha256": "c764659d01abb30d5c315af6099d2870ca50645b5a84dcbd89a973e962751886",
+   "new_sha256": "9dcb15653b3a7e013c0f9b9cd7f1d8fec48423a4e455bd3626dcc14981c5954a",
+   "bytes": 276155,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/nat_standard_coverage_2020_100.csv",
+   "old_sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+   "new_sha256": "01195ead726e0fe2a7a5104140579b125131380b38fc99a12dc84df81349e6b0",
+   "bytes": 689724,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/nat_standard_coverage_2025_100.csv",
+   "old_sha256": "e309d3a18581e429aae32a1348718302465b90861f0dc6bd95eadb7f5151b43a",
+   "new_sha256": "b47efb63f6428c80a1f26e7c261aa4afb22becc8824c583c8e65f8fe58fa24a7",
+   "bytes": 689413,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/run_meta_2020_100.json",
+   "old_sha256": "7fde5449d6fea29494423ac592ec1e3e2f30ee33cebdc08b3045493d9894d73f",
+   "new_sha256": "33820470d4478201b5bcad3ee19d9501bef2a53d2f40353c732902429d6dfb9d",
+   "bytes": 36682,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/run_meta_2025_100.json",
+   "old_sha256": "f1a43a2b238f8ffdb5fb44f2e3427db4d375ae0d2ee87ed558864651baa3e4e1",
+   "new_sha256": "53c2e90edbb4ad05b9d2e46221e78fea3b521acef494b7750bfeae6bac958be1",
+   "bytes": 36859,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/natstd_B/summary_natstd_B.md",
+   "old_sha256": "cf90598e2481393ceed124b792421fd1eed15ff806b8ae80f3cf8777f9b18ac8",
+   "new_sha256": "47c84ff46c2fa2ef8e8ea88c386e6cf648a8abea5faa0ab5354154f1a1e78cd5",
+   "bytes": 2069,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/grid_access_2020_100.parquet",
+   "old_sha256": "97c4b8b80af65224d5886bbe4c03a03582d970b26fe394c84931e7ff0d6e410d",
+   "new_sha256": "c93b320310468dc868352e581bcb8866b60049d62120609bcaf090a1e8dfbb2e",
+   "bytes": 1117316,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/grid_access_2025_100.parquet",
+   "old_sha256": "85422bb39727e6de3ca92e70d3f71ba656ce00103bc0d9eddf367d88ad612a59",
+   "new_sha256": "1310dfbf4d865ee64261ca404cc2ddf52d42eedb20ec00ff9c43c771a27d3b54",
+   "bytes": 1089291,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/run_meta_2020_100.json",
+   "old_sha256": "c1e05f9d8adc87e4730b6e19332a144d0c710c1b86b9f6fa13f8a9bbbef55b86",
+   "new_sha256": "fa5e9c11e7561816576c2f563bd5e17ab61d9c98b859a55e8ef93a06173d6dff",
+   "bytes": 36632,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/run_meta_2025_100.json",
+   "old_sha256": "9825fff2ead3523ae150d01fde94ac86d52488973e106a33b3975d18c25a5207",
+   "new_sha256": "9e5ce32e44d6e7c9928bb3c921894ccd6f7aa856f9e90fe2f32627ff99dd27c1",
+   "bytes": 36809,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/summary_sens_A4.md",
+   "old_sha256": "9deb3fe0836e2865360998fcff1acbd45d073c4a9e7b678b01ebc8888492de2a",
+   "new_sha256": "e53bf9541ea53571f2c73eddb652f78f546f97bbf16a46e07264de9aaba3c217",
+   "bytes": 5298,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/unit_access_2020_100.csv",
+   "old_sha256": "312df8c95524243469f77f048633a27f141351a3e03cf95fed3a7e1a40198df8",
+   "new_sha256": "d4086b37e1b43dc09d56e5dafc7454e0c316867dc6d9f33cdc173ab51998773c",
+   "bytes": 2093579,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_A4/unit_access_2025_100.csv",
+   "old_sha256": "134684964e1b7e519ed03a9aa9aa1d91f76c25fce1419ee1153d1cb79a3fd923",
+   "new_sha256": "221c54a6cd685d812231ece11418b3d6e7a666f26771db0fe722eee4880a33e1",
+   "bytes": 2095428,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/grid_access_2020_250.parquet",
+   "old_sha256": "9f963d978e2833b60241dde226e236b05b253936c8ef4fe6bb24ab766ac5f54d",
+   "new_sha256": "16b1e7e1f0170b3d12858b9b3e4820d789879bd365a6b7e7e764fd1849a3b597",
+   "bytes": 501322,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/grid_access_2025_250.parquet",
+   "old_sha256": "2e70b1b324e839c3bd580edbef3cfeb50fe171d049bba64a60edb35bc276a3de",
+   "new_sha256": "166a315c52de7b144360e6914d9246bb5082a6f489fc525808c9fea956c18641",
+   "bytes": 508883,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/run_meta_2020_250.json",
+   "old_sha256": "06a0e0cd7cb26015a4553f8508a6df574c5c2b57295dafa71867b1bc7c9db96d",
+   "new_sha256": "baf6cdf1f7e70e90efd75f83459e4ddd177e498a845949043c2d049689cb3732",
+   "bytes": 14996,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/run_meta_2025_250.json",
+   "old_sha256": "f53e7e8c4651b075d5001b854bc5b010b803e3c9b351e614684d3748e1a45532",
+   "new_sha256": "f4867e91028103413c70c0e31a9885cc217e6fe085341b857b646d96f345dfbe",
+   "bytes": 14999,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/sfca_unit_2020_250.csv",
+   "old_sha256": "286f50967dc653dae70a2b6a327ed84ca92665f7657be930823232c451c24263",
+   "new_sha256": "869981d83abec19040bc275b6152f19abb8d4bdd904e35f6d4ada6154ec14996",
+   "bytes": 15015786,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/sfca_unit_2025_250.csv",
+   "old_sha256": "a5ed8214a8e90aa9cc0061bf46c0f47559d6edbeb510c7b9ba731217c6c424b3",
+   "new_sha256": "cf176f5a561b196b638ab26e3a85902b92db06ed3bb9311a1ea72d2b158f4918",
+   "bytes": 15015739,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/summary_sens_grid250.md",
+   "old_sha256": "40cb95f5d93b025ac9eda63a60bf994c48565968ac54495851a84b1cd71b96c0",
+   "new_sha256": "bed8c150f5b4a5a1ef44b7ee1315c9bd7d22edd6b7dcf2f8d68c50862c7d005f",
+   "bytes": 11988,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/unit_access_2020_250.csv",
+   "old_sha256": "44c1657b020e6358eb0edfa63d44ec726a03dcda547bc6ab6986daa2fa4f452b",
+   "new_sha256": "fd6dd9a1a467914b949e6af746d47cce0983c807226a249aaa38cca4d2d08645",
+   "bytes": 3265937,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_grid250/unit_access_2025_250.csv",
+   "old_sha256": "9a400178b0bf93f187030e8a2e815f647aacbe2be843d0b14b9dff4c47389a35",
+   "new_sha256": "26a767b7131cce284ddb2b273d1aed9c759ef9846958845eba776d54dec34296",
+   "bytes": 3268151,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/decomp_network_2020_2025.csv",
+   "old_sha256": "e0d63528181f66f18fdaca62a9985efd786321ddc5b6c76524d1f55e402e24d4",
+   "new_sha256": "0eff506750206e3d99b45292ae4314962f75491a2f6b90b5b0be6c093ae713c4",
+   "bytes": 3235,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/grid_access_2020_100.parquet",
+   "old_sha256": "d9426a9d1738743793b44d63868a3f30a6afa42d93c2eb796288ead21489f676",
+   "new_sha256": "c6dcef009b1d9c4624c8be49cbd57caffb44e010427c5afe31dedab680b8396a",
+   "bytes": 2119610,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/run_meta_2020_100.json",
+   "old_sha256": "20cc6f5030be658db46e1ceb30a220a3eaf4875fe953f991b3e9ea92dc083c52",
+   "new_sha256": "42a7153d35511f95a06eb0e368ad355211c11324917caefca0c85ca98e5a9a9a",
+   "bytes": 42995,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/sfca_unit_2020_100.csv",
+   "old_sha256": "03590f4ecdd246c0ffca755d48298e06d75843b99c416fcfb1c9f46c01f1262e",
+   "new_sha256": "14073631ac2e9ec11d4700c1aaa315fb092ccb7eb6a6c2efc2146bf15237068e",
+   "bytes": 15017334,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/summary_sens_net2025.md",
+   "old_sha256": "df8b6e7b3aa209cd9cd7f4b58a0f88171c54578179c5e0be0ac822dfc1854a10",
+   "new_sha256": "1cf50e666f2abb4a51c054d7cf88a7dc51158bc68ce2be27f88b7adae200fa76",
+   "bytes": 13319,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_net2025/unit_access_2020_100.csv",
+   "old_sha256": "b920a213d686558637eff1019350cc2e966ac98905f91e285c8044881a599954",
+   "new_sha256": "73aa021db626950391f26e3d696de0af3a2d4437a46d7d14d7255b2e78b22d0d",
+   "bytes": 3273038,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/grid_access_2020_100.parquet",
+   "old_sha256": "764476eaa5b940ddb47c74a22856630c28cc115fc158a293b26a34e444f51a18",
+   "new_sha256": "84b8943386ae771a05672777e0f563b93296f7086e46652336d473e77cad419c",
+   "bytes": 2121150,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/grid_access_2025_100.parquet",
+   "old_sha256": "1ea3345c4b5bc742184072df5b72e9b2412b0d0bea0c0fcca3a3b00aa693192c",
+   "new_sha256": "6cc63624d4a1e1cb36e839f24a2e9d06a4498648c52b2788537f8632c7d60750",
+   "bytes": 2137086,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/run_meta_2020_100.json",
+   "old_sha256": "c8b3c2f23ec4d50f98010922166fbc007a0a8fd227eab21ab690eacf02312e87",
+   "new_sha256": "74dbbf09797553859f0f95d11bee795fe54e28c793f4fc6f13c9e146a0c39c9c",
+   "bytes": 38127,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/run_meta_2025_100.json",
+   "old_sha256": "6b36f78b7809843050651fa84b9d7af7dba0d68a2f8772e8e5f604c5ba05d81d",
+   "new_sha256": "1f9c8a0a0a03f7e938bfb5935a5d5cdab29794acc6c761e583b51f7de8a48f90",
+   "bytes": 38302,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/sfca_unit_2020_100.csv",
+   "old_sha256": "5849f6bf6eb2c29a8543e85d37fb186636548a7280135b89521fedce6cc021d1",
+   "new_sha256": "8008edc46009fc2734d8a03fc91e655508ad37f67ed7a20a23371133236fa764",
+   "bytes": 14913747,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/sfca_unit_2025_100.csv",
+   "old_sha256": "37d2cd8b273d8df584a1c6d95335d8155978f611ce3e05609d3e4046e8b14d78",
+   "new_sha256": "a12e199ecb0ef3603027035f4e50909ac0f340b0da92a547ba6e3c33469472e6",
+   "bytes": 14913034,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/summary_sens_retail_without.md",
+   "old_sha256": "85bef5fd57c0a26d5997ee582fd90f86face46d27ed360c7b27ca54137fad41c",
+   "new_sha256": "2bb73d7927808ae8e2806d395682f4ad06f0924ee8210367b250946b9a0e0bb8",
+   "bytes": 12070,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/unit_access_2020_100.csv",
+   "old_sha256": "427d520168b55c8636de3427e3a8f6e06c53e27ba00b2ea0b833d0e86055af8d",
+   "new_sha256": "aa6d6026ca7d42105de02395546224ac42ce7c9b6055cd384baedafe59b0e1c8",
+   "bytes": 3356697,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/unit_access_2025_100.csv",
+   "old_sha256": "3a8314baf925d715ba2a14add9e4c9702151d560bc1222b1edb33da133c138ab",
+   "new_sha256": "49d2d97a39b508b86f0b2a86fdd7248d5d4ec121c8814f70f2bc84b7ae35f061",
+   "bytes": 3357864,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/grid_access_2020_100.parquet",
+   "old_sha256": "afd303431be56652a8b1c2c5bf8146ba3ed62a4b26b5e250228f58d3f4432906",
+   "new_sha256": "0a49c45f17eebe4467eb141675518dbf7bd7e58b766bb3d52b7928750796b4be",
+   "bytes": 3057702,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/grid_access_2025_100.parquet",
+   "old_sha256": "51e8a7401b829866725c8571762612353f733608be3e4d0de836096e83c957f0",
+   "new_sha256": "e7358926bbcec3627924624fb7eafd56b65612d12a33707f2612bc188d31b76a",
+   "bytes": 3101828,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/run_meta_2020_100.json",
+   "old_sha256": "3dd1278f361e69a053431b02f7831ab64c7d343516ce31cde24ceecaeda2274d",
+   "new_sha256": "5fb36f175c39dc11f8c2496016f9c61c26e35eeb748a4dade9cdc042795467aa",
+   "bytes": 38383,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/run_meta_2025_100.json",
+   "old_sha256": "ade646b6a83ea8d1d8bc51b70f4fbcb28d7780160c12ad679634b5c9556548bb",
+   "new_sha256": "ab38dddd0860f323fe09012b27a328c6fc1f50599ba07a1c3851e45f2ec7ac8f",
+   "bytes": 38565,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/sfca_unit_2020_100.csv",
+   "old_sha256": "38f342139385b2b5ccf3a13a711c35175302b2fd267fb4e06f99ee06184b2089",
+   "new_sha256": "1655061e30b1a5331b46184fa0a010a419c3148991030aaf61695de27eefbd1c",
+   "bytes": 15017320,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/sfca_unit_2025_100.csv",
+   "old_sha256": "7cd294cc0f59b296e8ac1e446926a10cc86dfaad7c60516804ced867b5f1ef81",
+   "new_sha256": "eaf8e41a5e9a8f189804ba696d1fa332f6c5f516955ef66f9c25318996274fad",
+   "bytes": 15016623,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/summary_sens_snap.md",
+   "old_sha256": "7682640a43eca95125e70a62abff70e50a7707eea5d50e320a397d4ae3334726",
+   "new_sha256": "9b5121745ce0016c39788b4f8c231459149c2adf690c2798ba9ec22f977ecd5d",
+   "bytes": 12113,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/unit_access_2020_100.csv",
+   "old_sha256": "1201c212c01febac9dd11a3d1a3f1eea458d53f15975286081be36844e8f8904",
+   "new_sha256": "8ea41841a32a7f684acf9e4642c610c35923ccabac4de5434ab7e943ac5b85f9",
+   "bytes": 3274055,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_snap/unit_access_2025_100.csv",
+   "old_sha256": "4776b9d6d738bed3e0de4eaad7466443b89d3f1a6fcc8b7f6dd096cff1ccad47",
+   "new_sha256": "ab4fd34c2799ba0efe2634c5674956741ea63992d591600d0d2a0b34ce402bd9",
+   "bytes": 3275150,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/grid_access_2020_100.parquet",
+   "old_sha256": "e74530c2edba879b5188ba6d55f0f59a19dc089ae1f471fc4b2f4f769a091a05",
+   "new_sha256": "64e28bf21212005962d45c230a317bac26d387c9affd0e2e1107dda4ad57ddf2",
+   "bytes": 2120977,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/grid_access_2025_100.parquet",
+   "old_sha256": "1b4726acddcc111ed3c5ad0cef5d1df9c7ac28f622edc4fd477b57c858318cc9",
+   "new_sha256": "8da7a6dc527fbd3ac2b480c781fdf5c37017852fdffb3fca596581f70e9005a5",
+   "bytes": 2140679,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/run_meta_2020_100.json",
+   "old_sha256": "fb011b8d8c7937f753ce8e51e6a3fe3cc1bd45fc9dff2be7dcb82aebefe6c93a",
+   "new_sha256": "b5e96b77c9700a173d81d3e21783143556aa375e205dad213b2ffea17e25cc6a",
+   "bytes": 38101,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/run_meta_2025_100.json",
+   "old_sha256": "78596fac073c2f456b4da943c6fd99f28ab9eceb28f0347ef1c129c759b0c8fe",
+   "new_sha256": "48370cb8e0615b323d686a08b55b82dd007edd7077c923ecb6d54d4606907d65",
+   "bytes": 38282,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+   "old_sha256": "0e529e5b9af241e2f357146c44a529851a5e8b0d3e5cd4e63fec9ae8ab2429d0",
+   "new_sha256": "252325c38c57147b5ba034715f979ef712b3846bd9cb592ce7c84a6c454a13c1",
+   "bytes": 15017286,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/sfca_unit_2025_100.csv",
+   "old_sha256": "b0ee6dcf3ae34765f6ddfc8b7db6ae968f6c8c7e8a51381f667bac2a19d22350",
+   "new_sha256": "f8be5b377a46bc6aae0640a45340d5e1c8614acb1f12f945d9f7fa84d5d5d13b",
+   "bytes": 15016628,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/summary_sens_speed36.md",
+   "old_sha256": "26a8ba32c50b39bc911c3f5410d470e9bd3c64aac62727455fd7ad81e4c2ff45",
+   "new_sha256": "9a1fca0626a1439fb7b3cb2aabb45b3bb18dd4e8d2f9dfc52f0a66b73d980b21",
+   "bytes": 12000,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+   "old_sha256": "1f309c86a8fabe5495a04160a8ce32884f16ebd4ee641d34e8ef73058850a500",
+   "new_sha256": "27c71f04f58c34c3f2c857dc101f7592dccf48abc360db44054dc9fd3f62f707",
+   "bytes": 3272649,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_speed36/unit_access_2025_100.csv",
+   "old_sha256": "6a9ac31676cd065c88af36b8e7a94bf198fe2cfd67a122bb863b6792d815e173",
+   "new_sha256": "ee11d1f96142a9cf0470d6fc97e923386085ef172286b98087c101e01e127137",
+   "bytes": 3274046,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/grid_access_2020_100.parquet",
+   "old_sha256": "95e426144bce7b0e69cf14f68528f232da6c3567a8556a184a7ae2395b9ee696",
+   "new_sha256": "4ac644a28e1f8f3f320a7e09075fb36f759c0bcce98183d8e30d83843b0abc71",
+   "bytes": 2145505,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/grid_access_2025_100.parquet",
+   "old_sha256": "23bcfecd0d005c9a2d8aa69c7d0f4c3cbdc0f067bb7ffce00bf5433ba0617b43",
+   "new_sha256": "50ed9c1afe14b6b82c88f23a10508beabb29c4a15ed7df4db19b8d2e6534b7f8",
+   "bytes": 2169635,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/run_meta_2020_100.json",
+   "old_sha256": "aa644a6522f86ec88b791a2e2fd0720a46ebd9ea716f9bbc5a75989640e03ec5",
+   "new_sha256": "82fb83b7063f368e74a0f461c907a4410049d2da66929e3ac6d8750a21594cd6",
+   "bytes": 38110,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/run_meta_2025_100.json",
+   "old_sha256": "9dc6f0a0327ca474e7b344282c43804ca389388069f7ee260a4bf145d590ae45",
+   "new_sha256": "22e54e586616833ded0b5139322ee8835ed85365a0769c7be002b86798902732",
+   "bytes": 38295,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/sfca_unit_2020_100.csv",
+   "old_sha256": "320de693c0fab0a8dfb14498f849fab97369962074094eaac84856ada4212ab0",
+   "new_sha256": "d4dbbf237987ae60811264507586b95a70f322cf7923f63bab726e48d862a4f5",
+   "bytes": 15017416,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+   "old_sha256": "90ab16f0b203bc09db35855c95f8b664eabbeadb89610dc323f6a630d84e1c4a",
+   "new_sha256": "6f0e84ad9b027bfac2fc180f0630d32e87de0db2baf825d519f326b91a65db45",
+   "bytes": 15016699,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/summary_sens_T600.md",
+   "old_sha256": "54e8556fa49775d3228f2909204f38a93c4c4a8cddf09ae4677ab1471761296e",
+   "new_sha256": "5e74d55eecc7878c6214e7d2fe6ca4040695c8113f3e64c160314186f71c7a20",
+   "bytes": 12001,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/unit_access_2020_100.csv",
+   "old_sha256": "548681f952eec94ea699f2e7924dccf258f9906609baae9b3e7d61aa49ade2c1",
+   "new_sha256": "dede4615e38aaac7c54c1322fb91f37931f5e6acdbf491a3e4cc05fbbd639085",
+   "bytes": 3268910,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+   "old_sha256": "f008153e819183e263ac876c84dfe5023d0435c5a1f468c444e49c736558b980",
+   "new_sha256": "1e743c2903bb14880fa84414c9032d20074bde03e127fa1aca2a48be72fbe313",
+   "bytes": 3271015,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/grid_access_2020_100.parquet",
+   "old_sha256": "aee538fffdfb4bfc947ec635671453f0ce68789f6e97dc3c59696fea93dc8bc9",
+   "new_sha256": "6dfa8e76280804ec5ea57c8340d69d935fd4d49272ee0edca0ecc17af0765d51",
+   "bytes": 2148372,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/grid_access_2025_100.parquet",
+   "old_sha256": "1c3893b276b0c99d1efaa8a96a51472ebadad0ce374e9643a3c9536add0a4e51",
+   "new_sha256": "e260dcafa179700e552c45ec00e09814d15c9b650d0dfe52f533b3f39406aead",
+   "bytes": 2165560,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/run_meta_2020_100.json",
+   "old_sha256": "88dcf354af12174ab13ac99a76b04dfe8c1b2bf58fb85a3404d1212c7ac4c37b",
+   "new_sha256": "337be1fb28b7b74b23d4cea5c01b89cd3db449c5ba4d9cb04c5ed6bce31d13b9",
+   "bytes": 38095,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/run_meta_2025_100.json",
+   "old_sha256": "98c605edd97c45ae5950539e2c74f31020364dfd4208ad5126d4ca5ae763c182",
+   "new_sha256": "d17ec1baa7ccb30c4cc69d3279ee88d9ea76dcc63011a571ab35fcce4e4c7099",
+   "bytes": 38280,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+   "old_sha256": "820d9ec1fc668dc5563797fefa754004e9f1b69c5a6533d7fcece58bf894204c",
+   "new_sha256": "f3b74d1a0e76072e0efdf7f65933efdd8c0a90042c57a3cb7fb89820c6659821",
+   "bytes": 15017334,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/sfca_unit_2025_100.csv",
+   "old_sha256": "db307479262e62dbe002a425b4c538e093a506721454d77cffd126c947d4e64b",
+   "new_sha256": "845ca9c2c6d602c77c754069d339ed04795c5d600819ea4ffbde2d65886dd23a",
+   "bytes": 15016612,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/summary_sens_union.md",
+   "old_sha256": "8df12361c406c2b942ec57a2505cd87f1893baff8c5c3db44049c42d8a21d762",
+   "new_sha256": "fea510e8813fa252262049892c0466c056f03dc3f292ac22d4db12548c86f064",
+   "bytes": 12550,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/unit_access_2020_100.csv",
+   "old_sha256": "9da28acf47c818ef49135ce428c88e0b9d7f125d600a65e0504215b845c2d811",
+   "new_sha256": "de2524cc6140780cb584c7358509cfe0cf8ff6c2e23207778d2cdce47f1adcc1",
+   "bytes": 3760949,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/sens_union/unit_access_2025_100.csv",
+   "old_sha256": "ead3952287dc95a52e43d8cd2b827fa6a6f65756f06842d8caf1c66c15466151",
+   "new_sha256": "241f185e5e6f8fc4c7efcccbaf59397d345fb66a63001566daa4f6687504e042",
+   "bytes": 3763038,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/F3_dong_delta_2025.csv",
+   "old_sha256": "a674994657a2965dae0812c0bd0f76f5e0e09da463bf69bb919e3b69c6423fda",
+   "new_sha256": "b6b07fd8a00328209667afa4e1993317eacf2b9c6d9681c412fbcbbe2afae5ac",
+   "bytes": 38918,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/ku_compare_seunghoon.md",
+   "old_sha256": "1288ab251e40dab1c71b49e344142fc54fe2bd7201bf913ce3fc075cb15b1ac8",
+   "new_sha256": "e68713229c418348aa44ea77caa9d9410e3f80466b2ee88be0deee7b2acee4f1",
+   "bytes": 7049,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/ku_compare_template.csv",
+   "old_sha256": "084c19948622c5b4d08aa6e20d974ec17ced11576a6bf6893119e21efcb97631",
+   "new_sha256": "5d8451f36ceeccd1447b3c09e94d746af574a5051215ce5db7071a0b6cc556a1",
+   "bytes": 1321,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/ku_none_COV_MAI.csv",
+   "old_sha256": "c8b6f216e281a76c1f37f7ca275b55d162e8ce6c968a2f700a52f75e45698730",
+   "new_sha256": "a772c81bc8f2e29b508e1c6fe50374014fb533dbbb72ced1d326670915b8f78a",
+   "bytes": 85486,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/SFCA_open_ratio.csv",
+   "old_sha256": "d26b048257bc4f7ab987f28e5516dd8bf4344f0f738bff08fee05c00bc75b5b7",
+   "new_sha256": "e445b2a3561afac216a6cf0743474046937da0db02f034203ea8225b044cac2f",
+   "bytes": 21304,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/T5_category_delta_LD_LZ.csv",
+   "old_sha256": "15e34cbc749d4d1b956f486e2074bb68ee5f55d8d29ecb46f5f67bc91d5e278d",
+   "new_sha256": "7f42559e9e9826134803857f89aca5ee6f744acad8d83c2aabe8801360293652",
+   "bytes": 3939,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/tables/T5_category_delta_LD_LZ.md",
+   "old_sha256": "ebc6877003a4e20c0bb0894a587e2a18e5a7cba7bbf03dd963e0099356a17992",
+   "new_sha256": "9833254a9c6b9ae3ad0632c9308a29679cd385ec74475b79ed2b75515a68a27e",
+   "bytes": 6045,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/fixed_ld2020_net2025.csv",
+   "old_sha256": "217dca448623263a8f8d3461de25d9770eb75ddc95fe109c74ca11e38f79d281",
+   "new_sha256": "19bc52bc3f6d41274df0b7137c4d25b1ed53a928e7b8d287db28c1c503f3822b",
+   "bytes": 58318,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/fixed_ld2025_net2025.csv",
+   "old_sha256": "1a1f8b870b1339fc230b50e23eb65bae3e484149aac3e68e8f957304d8d1c1ab",
+   "new_sha256": "bf9dd90484135407ab20a20f349d1bd29d30b2d94db518aa89f621c4d2420df0",
+   "bytes": 57910,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/moving_ld_moving_net.csv",
+   "old_sha256": "7370c5521d3e8ffdbf823fe2e7df02873ded293cebb370056a37eb82d71bec36",
+   "new_sha256": "049a0ca891a78e2b56803d89373b32c0ce832110476a8efabcf95620c84e0146",
+   "bytes": 59094,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/moving_ld_net2025.csv",
+   "old_sha256": "5f8a738e3fd024c39c90e36214591b014a5fe7013dec5e16073a81632caff970",
+   "new_sha256": "36c3180fcb96c5d3093dbb8c1966ea199b0f4ee981ff96753660a8cf2401d69c",
+   "bytes": 58950,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/moving_ld_snap.csv",
+   "old_sha256": "2da3ac5e8f27428480e0901dffb0f18292b722c59ee251cc06c1055fa06a0fbe",
+   "new_sha256": "bb1aa2d7897b352937c94245c215fac616a0f9a94b574abb3b1165350cfbf930",
+   "bytes": 58847,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/temporal_common4/verification.json",
+   "old_sha256": "ac57def8c2fecc7daab86dd2091db5696b2e7d45bcb87268f8eed669b8ed6335",
+   "new_sha256": "460f6c30e08fc41df6fac14d8cc0edeb6079100955c6caf929b880c9b454bbb1",
+   "bytes": 4873,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/grid_access_2020_100.parquet",
+   "old_sha256": "d819c12063405124a35b128cacc50e81dcde582f4b1edd30dba0df712485bdb9",
+   "new_sha256": "7f50e45bdaefe656735fc9b32f8d61838c34cb614de5b99204f828067294d606",
+   "bytes": 2448979,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/grid_access_2025_100.parquet",
+   "old_sha256": "426d7ddf6afe5964f07283bb7d468eb18d503a1ed79167881aebb34f75701f12",
+   "new_sha256": "4b512cd0bdad455ee4eb4920b9497927d82b6cae0ad4be948dc887aedc956dc8",
+   "bytes": 2459443,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/run_meta_2020_100.json",
+   "old_sha256": "fd5587478785f6df8e2fc50bb75de982bd658fb6d99b5fea5d632d45bfcfc9b2",
+   "new_sha256": "8bf076908080f4794afcf5497bc0e59b0ca7262621112be4a6f9d02c44693e21",
+   "bytes": 36848,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/run_meta_2025_100.json",
+   "old_sha256": "bb3572b2c18f589825b348845060bf7a520b40f34e3ec99eb7fa43469cf89ff9",
+   "new_sha256": "869865ac197c3312cca3ac59f65b485dfa9ed255ab1378e67c3328090bcd7ba4",
+   "bytes": 37035,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/unit_access_2020_100.csv",
+   "old_sha256": "2c6d06b1fa0dde53f0b5e25691363e87ef15258a9f6c4c924d1e5008d68488c6",
+   "new_sha256": "5e3ea9683eb6f736fa6ed09140ab46c4ca8d1f69b85eadce40e53163428dbbd1",
+   "bytes": 4642140,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_main/unit_access_2025_100.csv",
+   "old_sha256": "cd31359120145576a538ded3722f12ff5813f7b6efe6f9a2dc197d1ab796be42",
+   "new_sha256": "d0976ab0cfa15d3d3732bda0eea1af837ff0f263835b72255b36daee3d9a437b",
+   "bytes": 4644112,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_net2025/grid_access_2020_100.parquet",
+   "old_sha256": "5eab27957109f8e0c985287ed7d48e96cd718ac1b9ac3bc3431eb5b9b37c5a93",
+   "new_sha256": "f1389413df3575c951e8fd2ee94f660aba9f260d7c9c3f44e5aaf38999016abe",
+   "bytes": 2452355,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_net2025/run_meta_2020_100.json",
+   "old_sha256": "0a21d75ac8f3a0da1871c53e1497a690008567db7316bd314038e3beaf6d8f2a",
+   "new_sha256": "1d0a9acccbc25cff871831319ed8e8287f305264f160e9682e52d7674dc0d00c",
+   "bytes": 41750,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+   "old_sha256": "f9f218c8de5f7753b6ece4b7214d66da1fed8ff251961c27bd10d67c4bd9ce48",
+   "new_sha256": "a0447040581acc2048c68755b7226e61483d845cb5a016cb266cdfebf6b2bcd5",
+   "bytes": 4642748,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/입력/facility/facility_2020_2025_units.parquet",
+   "old_sha256": "9a6036f1feb87d85f55c3366983c8dba574e14e2298bec28d0de826bac8a066a",
+   "new_sha256": "2b5763c23f3bd92c9fc6dfafa51414c9492c979dd0e735997c46da30d04d4722",
+   "bytes": 42511760,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "데이터/입력/facility/facility_2020_2025_units.source.json",
+   "old_sha256": "596d202657a1a2ed22cc53f65c9d9db7f46b307506442be5b4fa126d03c65141",
+   "new_sha256": "60d8b7cc4ec5161c3a15a65c0e2ad531644acad9ca5d8016c75446f40d9e2eaf",
+   "bytes": 943,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/a02.log",
+   "old_sha256": null,
+   "new_sha256": "04a2e528863fae0257c7ff43754dfa144cfd937ea2cf624b9ad115c2a8237ba0",
+   "bytes": 7257,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/a06b_summary.log",
+   "old_sha256": null,
+   "new_sha256": "2b463bbe96b01d9f644c219f62da86a409ee10c78bf28a55583c879ebddbd2e0",
+   "bytes": 223,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/a06d_temporal_sensitivity.log",
+   "old_sha256": null,
+   "new_sha256": "462c3f43cf9b36517b1dc75c655a113a4797b454beb58740312185c5dffac6f9",
+   "bytes": 734,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/a07_study3_outputs.log",
+   "old_sha256": null,
+   "new_sha256": "5a0695c93c006d54f6bb82156412d16453ba8a920eabeb1e1a38aee8c3c0df91",
+   "bytes": 1175,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/a08_ku_compare.log",
+   "old_sha256": null,
+   "new_sha256": "3658cd8eeffc0709d0071768d58cd4c6babb0638224eae2a72cde6828ea357f6",
+   "bytes": 954,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/baseline.json",
+   "old_sha256": null,
+   "new_sha256": "dbe9b16dc54e8779d38af376422f2c1ddd6508d9215268b9361460fa1fe7df58",
+   "bytes": 247601,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/docs.py",
+   "old_sha256": null,
+   "new_sha256": "6248cd1a4528dfa6c1c2bdd225648be39bdd85fa9036dfaecf3fbdcbde674fc7",
+   "bytes": 18533,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_main_2020.log",
+   "old_sha256": null,
+   "new_sha256": "2fcd00cd531137699906c0580c11549f294184363bf7f7a528427392b3dad006",
+   "bytes": 32292,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_main_2025.log",
+   "old_sha256": null,
+   "new_sha256": "a219d6bbb30c5086a61892dfb48e6a971184c9a03a71dce89380ad17bc37dd4b",
+   "bytes": 32450,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_natstd_B_2020.log",
+   "old_sha256": null,
+   "new_sha256": "55cdc61c546e131da6363895f8004795f9a46cf502c0ae4a5ebb22fdda37f2d2",
+   "bytes": 31173,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_natstd_B_2025.log",
+   "old_sha256": null,
+   "new_sha256": "92fb7e02cd472e21e82629ebf79276ce1ecec4abcaceeb47f100d5c85aa3bfc5",
+   "bytes": 31325,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_A4_2020.log",
+   "old_sha256": null,
+   "new_sha256": "b612932b77fd93d49fca841f078b468724e7014ded7dc4f583456c49a5d6ecda",
+   "bytes": 31212,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_A4_2025.log",
+   "old_sha256": null,
+   "new_sha256": "172014070fa4245f6b7e09791bb01a1fd793b3b85c8ed10875bb8c3c95ba992a",
+   "bytes": 31364,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_grid250_2020.log",
+   "old_sha256": null,
+   "new_sha256": "070ef0377497be1eaa83fa4831b8a727053e9de3e2f1d67eb9993b4c906e7e26",
+   "bytes": 12472,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_grid250_2025.log",
+   "old_sha256": null,
+   "new_sha256": "cbd6792330d5d1f26b0fdacad181b421f64d5c17d323e7dc51ab91bb0e5f4a8e",
+   "bytes": 12475,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_net2025_2020.log",
+   "old_sha256": null,
+   "new_sha256": "83991f68d872d5871524e8ab77cea89ba7472b8551ad010e1e586d70c3ff7ec1",
+   "bytes": 36537,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_retail_without_2020.log",
+   "old_sha256": null,
+   "new_sha256": "9c1bc41517bb33d24a7b81208a09000c8156bfd07b945c23f6fda30393b2ce5a",
+   "bytes": 32328,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_retail_without_2025.log",
+   "old_sha256": null,
+   "new_sha256": "7246ff80d877cc264df6ac20e46898a4e5bd34bf21766c2dbea720b3f302bc4f",
+   "bytes": 32478,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_snap_2020.log",
+   "old_sha256": null,
+   "new_sha256": "af9c5a4d99f4971bbee5eb31c9a104a1684a78d26ff1f44fd894fcc23065c7e8",
+   "bytes": 32557,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_snap_2025.log",
+   "old_sha256": null,
+   "new_sha256": "8610fe714ecdf8b9b01ab893e90b934340c95f700f99389c098812b2e3e16886",
+   "bytes": 32712,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_speed36_2020.log",
+   "old_sha256": null,
+   "new_sha256": "801735a47fa3e199e3c24713ad0c610d3f155518fecf456c643199554f69737b",
+   "bytes": 32303,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_speed36_2025.log",
+   "old_sha256": null,
+   "new_sha256": "41a2007cb67c82ad8d7400e596d8f3442229ce2dfe5b66f3e123aa99cb6d2136",
+   "bytes": 32457,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_T600_2020.log",
+   "old_sha256": null,
+   "new_sha256": "1ff8281a46790f22fd77a8b3601b39bc1a466896b148c40071d271449512790e",
+   "bytes": 32312,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_T600_2025.log",
+   "old_sha256": null,
+   "new_sha256": "e297ac2f518d40ade67b5f47512d69a0fb352603a985953116588c9c4845e916",
+   "bytes": 32470,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_union_2020.log",
+   "old_sha256": null,
+   "new_sha256": "ae0f7d72b3771f933ae8549f62cecbe510cdcabd403b0ec42632dd69c892d66c",
+   "bytes": 32297,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_sens_union_2025.log",
+   "old_sha256": null,
+   "new_sha256": "b1ffefc0ef26c4ffd1159a3d64a6de3b8659ad078903b07d6c3107bc3df9a888",
+   "bytes": 32455,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_xb_main_2020.log",
+   "old_sha256": null,
+   "new_sha256": "11de0b4b1dbc87837b9788fa43656413b5923a3556f9ad644e8cf2bc93691c42",
+   "bytes": 31407,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_xb_main_2025.log",
+   "old_sha256": null,
+   "new_sha256": "7b621c6001bae3e99ad9a448c917e15c6263a5737432a7eedd490d32058e9d63",
+   "bytes": 31567,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/engine_xb_net2025_2020.log",
+   "old_sha256": null,
+   "new_sha256": "92bf3d95983ea398124e609109b1dab47026ead0a88e5b64980285548ce33ddb",
+   "bytes": 35649,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/execution.json",
+   "old_sha256": null,
+   "new_sha256": "3cf7d3529825c2ce0c61f4332b61ab1a564e7fa56a6e6c184e03f0d60feb6fe8",
+   "bytes": 14356,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/execution_pre_version_fix.json",
+   "old_sha256": null,
+   "new_sha256": "678b44d47242fe2a6f821a2501cdd7cbf7e65c5fe4a1515e3e833bf8b21a0026",
+   "bytes": 2914,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/facility_comparison.json",
+   "old_sha256": null,
+   "new_sha256": "a0bd53d4b8e1afd9f7c7153e245e690b2532e035fb357ee39e27ae7f9d0d5952",
+   "bytes": 427,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/finalize.py",
+   "old_sha256": null,
+   "new_sha256": "d5119016af1945a915597e96bca8fa45546116445644175e98b633130adcc017",
+   "bytes": 4863,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/git_status.txt",
+   "old_sha256": null,
+   "new_sha256": "1ebcd1cd09f09898d9f45fae8ffe20fa1383f304f8cd3624847f0b7456d9c372",
+   "bytes": 7005,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/grid_regression.json",
+   "old_sha256": null,
+   "new_sha256": "06bf7750d952708d69a245c805471a8f535578ecd5ea2f7cf8d5a114577fcd4a",
+   "bytes": 1451,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/independent_reuse_guard.json",
+   "old_sha256": null,
+   "new_sha256": "723c3ee481ad0ed8084f7adc4f8d6c29da369c59aba7700995c6d0d6e57f2f5d",
+   "bytes": 10662,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/numerical_changes.json",
+   "old_sha256": null,
+   "new_sha256": "bed23b6fa10d3864f856e642d82f93c01e9eeab211fd6d6edd0608a9a9a4d65a",
+   "bytes": 26293,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/patch_final.py",
+   "old_sha256": null,
+   "new_sha256": "8485404827d0e06118a9eaf382490cf68b95bc48d01b186fa3c21c28643bea7b",
+   "bytes": 2630,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/prepare.py",
+   "old_sha256": null,
+   "new_sha256": "08a89350c4d3e44732e9cbc2cdaff118168e6cd98f848092626020e451e286d2",
+   "bytes": 5708,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/promote.py",
+   "old_sha256": null,
+   "new_sha256": "bc013769763d7cebc31e5546a09ae4c40ce20c8c2c01c741551827d497579cc6",
+   "bytes": 7422,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/restart.py",
+   "old_sha256": null,
+   "new_sha256": "c78c9f8704c036ac52dfe4ab4e2a7c32d24e6a9595bb0a186998162feb9dd674",
+   "bytes": 1025,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/run_all.py",
+   "old_sha256": null,
+   "new_sha256": "8f9e84552a85e9b2133b9ab1fbd98b1af54f81fc2fd89dc2fdc47be96ed0fbc4",
+   "bytes": 2218,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/test_engine.log",
+   "old_sha256": null,
+   "new_sha256": "5b35d6ffbc682d8fe8aba42b70387ae093f1f9f892016915a4b4d3c09b922d54",
+   "bytes": 998,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/test_geometry.log",
+   "old_sha256": null,
+   "new_sha256": "140af57cb8b907bf573bc69dea62d68c4a49b0c0ede658ac86273c10edadf625",
+   "bytes": 152,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/test_release.log",
+   "old_sha256": null,
+   "new_sha256": "22d5e1cc4e4d8d5b3bf31e625f8d72ff69cee846e2af92cc53225916de895e67",
+   "bytes": 118,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/unchanged_inputs.json",
+   "old_sha256": null,
+   "new_sha256": "b38c9ca218708680bb596b1d0350505edacb282a66f5a45d40dca0219ae2055b",
+   "bytes": 196472,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/verification.log",
+   "old_sha256": null,
+   "new_sha256": "531e0674b11e45c7ee6be169b0622b2ebfa061c15df512af9fe9adddbe593457",
+   "bytes": 7988,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/verification_final.log",
+   "old_sha256": null,
+   "new_sha256": "c75de3165a351b9820551f778c25ee9c0aee18f9ff415ab89a302031a5c33b4d",
+   "bytes": 11661,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/verification_phase1.log",
+   "old_sha256": null,
+   "new_sha256": "531e0674b11e45c7ee6be169b0622b2ebfa061c15df512af9fe9adddbe593457",
+   "bytes": 7988,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/verification_summary.json",
+   "old_sha256": null,
+   "new_sha256": "8c01f215d2e270b72b4f395890e2ebcdbb403ab5ab2ed4f6099fd967a68eaa0b",
+   "bytes": 2795,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/verify.py",
+   "old_sha256": null,
+   "new_sha256": "8a870e9dfda5cb9b03a3c7d9c25b34e161da15f7c33ba6815ca33e6547dab5f7",
+   "bytes": 8805,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/xb_regression.json",
+   "old_sha256": null,
+   "new_sha256": "082e3f380516589a1779665b2debc0af4e251c294285b83ee31e44e58f2630e8",
+   "bytes": 303,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/README.md",
+   "old_sha256": null,
+   "new_sha256": "34c05c8a268a71ee0217124a08cae2415f407f01e4cfe3dbd1d26bc17d3061d0",
+   "bytes": 11908,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a00_config.py",
+   "old_sha256": null,
+   "new_sha256": "1e9d3a9c7e1144df9a7408cbf577af0d94f9dbb1b44e8bdc2e55b904115b8136",
+   "bytes": 6394,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a01_grid_master.py",
+   "old_sha256": null,
+   "new_sha256": "a95c57a0908af5ae0bbd5688a979ec8142eef551b290d26be64709422507e0e1",
+   "bytes": 31101,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a02_facility_boundary.py",
+   "old_sha256": null,
+   "new_sha256": "247af2347d5a98302c323eb4bf8fc7be88be2fc534cf2091a3cbf7c1eabeca9c",
+   "bytes": 13534,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a03_boundary_metrics.py",
+   "old_sha256": null,
+   "new_sha256": "1fea4703cd5fe75ea6809646c510b0f64ac65b73429fa7eb0d645a8997999890",
+   "bytes": 13512,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a04_network.py",
+   "old_sha256": null,
+   "new_sha256": "aadf82fa2f96a1554987bb0ed32222459b9befdf5e97e330d09b82433165e49d",
+   "bytes": 17913,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a05b_record.py",
+   "old_sha256": null,
+   "new_sha256": "2191eda4a5a3d72ac0fe609c77e4b0db6732166e94014a4a6a609cabf2956dea",
+   "bytes": 19198,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a05c_ttm_supplement.py",
+   "old_sha256": null,
+   "new_sha256": "ff512e35bb24af0c560274ca4f47216f52e1ab5a241e490591df63e8d1a7cf12",
+   "bytes": 7483,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a05_ttm.py",
+   "old_sha256": null,
+   "new_sha256": "0ea96f6ac70ba021706f03d3d05751f465fe71787878c5d6e6c4e9836178d4aa",
+   "bytes": 19431,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a06b_summary.py",
+   "old_sha256": null,
+   "new_sha256": "edce1cd372ea9319131c0bb0e061f1f09dc4bcbff2d6fd2b4bb9a078b3469ec1",
+   "bytes": 18825,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a06c_delta.py",
+   "old_sha256": null,
+   "new_sha256": "9d6c15cd8177e45cba5c0ddacd60c4f86c945312b1f9aea32621731be9234a8b",
+   "bytes": 4040,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a06d_temporal_sensitivity.py",
+   "old_sha256": null,
+   "new_sha256": "19c449fb20b7c33007846184cc36b042ce49653349f741418515c6b654e77600",
+   "bytes": 1886,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a06_engine.py",
+   "old_sha256": null,
+   "new_sha256": "f5b8ed0a02730214eb6e5a1b196b8ad0bf6ee782af77f96645acdee0ceab7c31",
+   "bytes": 37168,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a07_study3_outputs.py",
+   "old_sha256": null,
+   "new_sha256": "0eb19ffefba26657135399276222e884fca250ae03300ce7625091da3da4806f",
+   "bytes": 11372,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a08_ku_compare.py",
+   "old_sha256": null,
+   "new_sha256": "0ec88f2bac4ff271d3001e984bc4d0fe50dbf749fae56c73765666cc51fa175f",
+   "bytes": 12713,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a10_verify.py",
+   "old_sha256": null,
+   "new_sha256": "24e15c11dc051fa8d21e81269ddf287ea6ff03c63367ba94d61b3b4b8ffba4d7",
+   "bytes": 27931,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a11_provenance.py",
+   "old_sha256": null,
+   "new_sha256": "322d95c2e6947eb7ceb211b05233a5b69ae4493a7479c5850bf19c4eccf36ac4",
+   "bytes": 5720,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/a99_manifest.py",
+   "old_sha256": null,
+   "new_sha256": "59b336ae1930c529c3c1807264a450eaceba9b200976ed6a843eac3246a5b000",
+   "bytes": 2698,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/데이터/release_provenance.json",
+   "old_sha256": null,
+   "new_sha256": "be41fce21c212a1f11482fd51a4d51e792b7aed353bcbe7c14cdc8df24009749",
+   "bytes": 251262,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/데이터/검증결과.json",
+   "old_sha256": null,
+   "new_sha256": "c7472f6a023eb1935d1fef32b2be69c5073437af263c4d2adf2f267b2fb7d75c",
+   "bytes": 19677,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/문서/검증보고서.md",
+   "old_sha256": null,
+   "new_sha256": "95c38e88e209f4fcd74b215b55cbb4432eeed82d43e5926458aa834317595bc3",
+   "bytes": 12550,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/문서/공동연구자_시작_20260929.md",
+   "old_sha256": null,
+   "new_sha256": "d9a902ef518c3aec6dc6de583c2c72b03a1a9634910687f27f9d82ded2797dca",
+   "bytes": 8053,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/문서/지표정의_확정.md",
+   "old_sha256": null,
+   "new_sha256": "ae8a6a0e581fbc92c3caad95996e3d45f3691f6db66e5d4bc38e0755a336c466",
+   "bytes": 15677,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/문서/출처_전처리_연결표_20260929.md",
+   "old_sha256": null,
+   "new_sha256": "80386ad45147e462243f95b2ea5f2a3919aadca12c586a6c02732e1b8935c351",
+   "bytes": 8687,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/tests/test_engine.py",
+   "old_sha256": null,
+   "new_sha256": "3a44d5b59419652759d7287f7f33ecf15c0e1256a20ad3db5518e0e31b0376fe",
+   "bytes": 21384,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/tests/test_geometry.py",
+   "old_sha256": null,
+   "new_sha256": "2a1fc939f72f2682f97d035e7be2a8b1a24bff08a9e47ed62ac8e3cc4197f274",
+   "bytes": 2314,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/code/tests/test_release.py",
+   "old_sha256": null,
+   "new_sha256": "c00378ffc75423f7d0cb90fbd926cb315dbfcfaf909d2ba49974d107f146a18a",
+   "bytes": 5764,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/main/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "edad5187990a278460f770f71d3c31f56fb698256ae4c957f52e8eeda17c32b3",
+   "bytes": 37545,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/main/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "c96756984cff7040ff106e472f0fb6f872dddf706d803c8618b31cd5553324dd",
+   "bytes": 37718,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/natstd_B/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "7fde5449d6fea29494423ac592ec1e3e2f30ee33cebdc08b3045493d9894d73f",
+   "bytes": 35928,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/natstd_B/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "f1a43a2b238f8ffdb5fb44f2e3427db4d375ae0d2ee87ed558864651baa3e4e1",
+   "bytes": 36105,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_A4/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "c1e05f9d8adc87e4730b6e19332a144d0c710c1b86b9f6fa13f8a9bbbef55b86",
+   "bytes": 35828,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_A4/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "9825fff2ead3523ae150d01fde94ac86d52488973e106a33b3975d18c25a5207",
+   "bytes": 36005,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_grid250/run_meta_2020_250.json",
+   "old_sha256": null,
+   "new_sha256": "06a0e0cd7cb26015a4553f8508a6df574c5c2b57295dafa71867b1bc7c9db96d",
+   "bytes": 14298,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_grid250/run_meta_2025_250.json",
+   "old_sha256": null,
+   "new_sha256": "f53e7e8c4651b075d5001b854bc5b010b803e3c9b351e614684d3748e1a45532",
+   "bytes": 14300,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_net2025/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "20cc6f5030be658db46e1ceb30a220a3eaf4875fe953f991b3e9ea92dc083c52",
+   "bytes": 42296,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_retail_without/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "c8b3c2f23ec4d50f98010922166fbc007a0a8fd227eab21ab690eacf02312e87",
+   "bytes": 37432,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_retail_without/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "6b36f78b7809843050651fa84b9d7af7dba0d68a2f8772e8e5f604c5ba05d81d",
+   "bytes": 37604,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_snap/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "3dd1278f361e69a053431b02f7831ab64c7d343516ce31cde24ceecaeda2274d",
+   "bytes": 37686,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_snap/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "ade646b6a83ea8d1d8bc51b70f4fbcb28d7780160c12ad679634b5c9556548bb",
+   "bytes": 37856,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_speed36/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "fb011b8d8c7937f753ce8e51e6a3fe3cc1bd45fc9dff2be7dcb82aebefe6c93a",
+   "bytes": 37404,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_speed36/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "78596fac073c2f456b4da943c6fd99f28ab9eceb28f0347ef1c129c759b0c8fe",
+   "bytes": 37573,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_T600/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "aa644a6522f86ec88b791a2e2fd0720a46ebd9ea716f9bbc5a75989640e03ec5",
+   "bytes": 37414,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_T600/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "9dc6f0a0327ca474e7b344282c43804ca389388069f7ee260a4bf145d590ae45",
+   "bytes": 37591,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_union/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "88dcf354af12174ab13ac99a76b04dfe8c1b2bf58fb85a3404d1212c7ac4c37b",
+   "bytes": 37398,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/sens_union/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "98c605edd97c45ae5950539e2c74f31020364dfd4208ad5126d4ca5ae763c182",
+   "bytes": 37571,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/xb_main/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "fd5587478785f6df8e2fc50bb75de982bd658fb6d99b5fea5d632d45bfcfc9b2",
+   "bytes": 36064,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/xb_main/run_meta_2025_100.json",
+   "old_sha256": null,
+   "new_sha256": "bb3572b2c18f589825b348845060bf7a520b40f34e3ec99eb7fa43469cf89ff9",
+   "bytes": 36241,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "문서/검증_v33_20260929/이전_v32/run_metadata/xb_net2025/run_meta_2020_100.json",
+   "old_sha256": null,
+   "new_sha256": "0a21d75ac8f3a0da1871c53e1497a690008567db7316bd314038e3beaf6d8f2a",
+   "bytes": 40966,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  },
+  {
+   "file": "코드/tests/test_release.py",
+   "old_sha256": "c00378ffc75423f7d0cb90fbd926cb315dbfcfaf909d2ba49974d107f146a18a",
+   "new_sha256": "1b9748f50c30d9f32f9266b445f8d03770cc24581cc5af02bc9714f5188d62ae",
+   "bytes": 7411,
+   "reason": "facility-v1.4 sports exclusion; validated current scope/results or preserved evidence"
+  }
+ ],
+ "verification": "verification_summary.json; 22 current run metadata",
+ "historical_evidence": "이전_v32; baseline.json; phase1 logs retained in private scratch",
+ "promotion_verified_at": "2026-09-29T16:37:56.957995+09:00",
+ "post_promotion_document_finalization": "Current documentation, release provenance and manifest finalized separately after facility producer cleanup; original promotion hashes retain the actual earlier snapshot."
+}

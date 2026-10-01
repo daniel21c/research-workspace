@@ -16,7 +16,7 @@ import a00_config as C  # noqa: E402
 import a06c_delta as D  # noqa: E402
 
 BL = {'none': '없음', 'dong424': '동424', 'lz116': '공식 LZ116', 'ld': 'Leiden LD116', 'ku': '구25'}
-TAGS = {'main': '본 분석 (A 8개, T=15분, 4.0 km/h, 100m, 일상소매 포함)',
+TAGS = {'main': '본 분석 (A 7개, T=15분, 4.0 km/h, 100m, 일상소매 포함)',
         'sens_T600': '임계 T = 10분', 'sens_speed36': '속도 3.6 km/h', 'sens_grid250': '격자 250m',
         'sens_A4': '카테고리 4개(A4)', 'sens_retail_without': '일상소매 제외', 'sens_union': '합집합 카테고리 수(Nicoletti) 추가',
         'sens_snap': '스냅 거리 포함: o≠d 쌍 소요시간에 양끝 격자 중심→가장 가까운 보행망 노드 거리(보행 시간) 추가',
@@ -92,7 +92,7 @@ def summary_tag(tag):
     t1 = s.pivot_table(index='b', columns='year', values=['COV', 'MAI', 'PWATT_min'], observed=True)
     t1.columns = [f'{a} {b}' for a, b in t1.columns]
     t1 = t1.reindex(list(BL)).reset_index(); t1['b'] = t1['b'].map(BL)
-    L += ['## 1. 서울 전체 종합값 (경계 조건별)', '', md(t1), '', '- PWATT_min: 15분 안에 도달한 인구만의 인구가중 평균 도달시간(분), 8개 카테고리 단순평균(보조).', '']
+    L += ['## 1. 서울 전체 종합값 (경계 조건별)', '', md(t1), '', '- PWATT_min: 15분 안에 도달한 인구만의 인구가중 평균 도달시간(분), 현재 설정 카테고리 단순평균(보조).', '']
     if 'UNI' in u.columns:
         t1u = s.pivot_table(index='b', columns='year', values=['UNI', 'UNI_allpop'], observed=True)
         t1u.columns = [f'{a} {b}' for a, b in t1u.columns]; t1u = t1u.reindex(list(BL)).reset_index(); t1u['b'] = t1u['b'].map(BL)
@@ -181,7 +181,8 @@ def sfca_section(tag):
     if tag == 'main':
         tb = C.OUT / 'tables'; tb.mkdir(exist_ok=True)
         pd.concat([open_ratio_table(s, yy) for yy in years]).to_csv(tb / 'SFCA_open_ratio.csv', index=False, encoding='utf-8-sig', float_format='%.6f', lineterminator='\n')
-        L += ['- 전체 항목(카테고리 8·시설 28)·두 연도: `데이터/결과/tables/SFCA_open_ratio.csv`.', '']
+        n_c = s[s.item_type == 'category'].item.nunique(); n_f = s[s.item_type == 'facility'].item.nunique()   # 현행 7·27 (항목 수는 결과에서 셈)
+        L += [f'- 전체 항목(카테고리 {n_c}·시설 {n_f})·두 연도: `데이터/결과/tables/SFCA_open_ratio.csv`.', '']
     return L
 
 
@@ -248,7 +249,7 @@ def summary_sensitivity():
                          '동 ΔCOV(LD−LZ) 평균': dong_delta(u, y, 'COV').mean(), '동 ΔMAI(LD−LZ) 평균': dong_delta(u, y, 'MAI').mean()})
     t = pd.DataFrame(rows)
     L = ['# 민감도 비교 — 서울 전체 종합값', '', '- 각 tag의 `unit_access_*.csv` 서울 행(종합)과 본 분석(main)의 차이. 경계 조건은 없음·공식 LZ·Leiden LD만 표시(전체는 각 CSV).',
-         '- A4는 카테고리 4개라 MAI 범위가 1~4로 달라 main과 수준 비교가 되지 않는다(Δ는 참고).', '- 체육 "규칙 없음"(취소·말소 포함) 민감도는 분석용 파일에 해당 행이 없어 계산하지 않았다. 면적비 격자 배정(연구1 전용)은 이번 범위 밖.', '',
+         '- A4는 카테고리 4개라 MAI 범위가 1~4로 달라 main과 수준 비교가 되지 않는다(Δ는 참고).', '- 체육시설업은 facility-v1.4에서 두 연도 전체 제외했다. 공공체육 대체 없음. 면적비 격자 배정(연구1 전용)은 이번 범위 밖.', '',
          md(t), '']
     uu = load_unit('sens_union')
     if uu is not None:

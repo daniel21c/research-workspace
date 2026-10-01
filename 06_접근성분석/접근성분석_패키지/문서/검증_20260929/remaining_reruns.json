@@ -1,0 +1,234 @@
+[
+ {
+  "tag": "sens_union",
+  "year": 2020,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--tag",
+   "sens_union",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--union"
+  ],
+  "returncode": 0,
+  "seconds": 21.69,
+  "outputs": [
+   {
+    "file": "데이터/결과/sens_union/grid_access_2020_100.parquet",
+    "old_sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+    "new_sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/sens_union/unit_access_2020_100.csv",
+    "old_sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+    "new_sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+    "old_sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+    "new_sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+    "same": true
+   }
+  ]
+ },
+ {
+  "tag": "xb_main",
+  "year": 2020,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--tag",
+   "xb_main",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--ld-other"
+  ],
+  "returncode": 0,
+  "seconds": 16.48,
+  "outputs": [
+   {
+    "file": "데이터/결과/xb_main/grid_access_2020_100.parquet",
+    "old_sha256": "e547a2ba6a0d139e18b49e09fefe49f0af77c5cbd5ebf622218663bc07d634fc",
+    "new_sha256": "e547a2ba6a0d139e18b49e09fefe49f0af77c5cbd5ebf622218663bc07d634fc",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/xb_main/unit_access_2020_100.csv",
+    "old_sha256": "613a6bf40c6b8896a2949fddd31f459442d45d10a35e3f7c1d979ceb4affb33f",
+    "new_sha256": "613a6bf40c6b8896a2949fddd31f459442d45d10a35e3f7c1d979ceb4affb33f",
+    "same": true
+   }
+  ]
+ },
+ {
+  "tag": "xb_main",
+  "year": 2025,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2025",
+   "--grid",
+   "100",
+   "--tag",
+   "xb_main",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--ld-other"
+  ],
+  "returncode": 0,
+  "seconds": 16.4,
+  "outputs": [
+   {
+    "file": "데이터/결과/xb_main/grid_access_2025_100.parquet",
+    "old_sha256": "6ecab5938335dfff8006e729833b7b44ed74d01062864bbbc117ca9baa42cf80",
+    "new_sha256": "6ecab5938335dfff8006e729833b7b44ed74d01062864bbbc117ca9baa42cf80",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/xb_main/unit_access_2025_100.csv",
+    "old_sha256": "44636d84870218967282a5e02097c92da2a681464e29f2c332fae9b27fef41c8",
+    "new_sha256": "44636d84870218967282a5e02097c92da2a681464e29f2c332fae9b27fef41c8",
+    "same": true
+   }
+  ]
+ },
+ {
+  "tag": "xb_net2025",
+  "year": 2020,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--tag",
+   "xb_net2025",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--ld-other",
+   "--net-year",
+   "2025"
+  ],
+  "returncode": 0,
+  "seconds": 15.74,
+  "outputs": [
+   {
+    "file": "데이터/결과/xb_net2025/grid_access_2020_100.parquet",
+    "old_sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+    "new_sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+    "old_sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+    "new_sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+    "same": true
+   }
+  ]
+ },
+ {
+  "tag": "natstd_B",
+  "year": 2020,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2020",
+   "--grid",
+   "100",
+   "--tag",
+   "natstd_B",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--catset",
+   "B"
+  ],
+  "returncode": 0,
+  "seconds": 7.87,
+  "outputs": [
+   {
+    "file": "데이터/결과/natstd_B/grid_access_2020_100.parquet",
+    "old_sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+    "new_sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/natstd_B/nat_standard_coverage_2020_100.csv",
+    "old_sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+    "new_sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+    "same": true
+   }
+  ]
+ },
+ {
+  "tag": "natstd_B",
+  "year": 2025,
+  "command": [
+   "C:\\Users\\cyion\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+   "-B",
+   "-X",
+   "utf8",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\staged_run.py",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\code\\a06_engine.py",
+   "--year",
+   "2025",
+   "--grid",
+   "100",
+   "--tag",
+   "natstd_B",
+   "--out-root",
+   "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results",
+   "--catset",
+   "B"
+  ],
+  "returncode": 0,
+  "seconds": 7.99,
+  "outputs": [
+   {
+    "file": "데이터/결과/natstd_B/grid_access_2025_100.parquet",
+    "old_sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+    "new_sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+    "same": true
+   },
+   {
+    "file": "데이터/결과/natstd_B/nat_standard_coverage_2025_100.csv",
+    "old_sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+    "new_sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+    "same": true
+   }
+  ]
+ }
+]

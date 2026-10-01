@@ -1,0 +1,80 @@
+{
+ "engine": "access-engine-v3",
+ "year": 2020,
+ "grid_m": 100,
+ "T_sec": 900.0,
+ "speed_kmh": 4.0,
+ "catset": "A",
+ "retail": "with",
+ "union": false,
+ "tag": "xb_net2025",
+ "ku": null,
+ "ttm_rows": 22902253,
+ "fac_rows_year_analyzable": 293685,
+ "fac_rows_used": 279618,
+ "fac_rows_outside_grid": 40,
+ "fac_cells": 25155,
+ "fac_cells_by_cat": {
+  "교육": 1884,
+  "보육·복지": 5191,
+  "의료": 6748,
+  "문화": 588,
+  "체육": 6264,
+  "행정·안전": 547,
+  "소매": 15578,
+  "생활서비스": 20780
+ },
+ "Cg_dist": {
+  "1": 7625,
+  "2": 7652,
+  "3": 5650,
+  "4": 3507,
+  "5": 656,
+  "6": 62,
+  "7": 3
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+ "net_year": 2025,
+ "ttm_dirs": [
+  "데이터/입력/ttm/ttm100_2025",
+  "데이터/입력/ttm/ttm100_2025_for2020"
+ ],
+ "boundary_ld": "ld2020",
+ "boundary_year": {
+  "lz116": "fixed",
+  "ld": 2020,
+  "ld_other": 2025
+ },
+ "sfca_skipped": "ld_other 실행에서는 2SFCA 계산 안 함",
+ "origins": 30751,
+ "origins_missing_in_ttm": 0,
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9642246.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true
+ },
+ "files": [
+  {
+   "file": "데이터/결과/xb_net2025/grid_access_2020_100.parquet",
+   "sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+   "bytes": 1674692
+  },
+  {
+   "file": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+   "sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+   "bytes": 5212736
+  }
+ ],
+ "seconds": 14.5
+}

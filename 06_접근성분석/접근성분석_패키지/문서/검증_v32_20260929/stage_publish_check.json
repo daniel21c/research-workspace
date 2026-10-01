@@ -1,0 +1,9 @@
+{
+ "manifest_count": 1309,
+ "manifest_issues": 0,
+ "source_evidence": 156,
+ "baseline_files": 1223,
+ "canonical_concurrent_changes": 0,
+ "tests_passed": 32,
+ "engine_runs": 22
+}

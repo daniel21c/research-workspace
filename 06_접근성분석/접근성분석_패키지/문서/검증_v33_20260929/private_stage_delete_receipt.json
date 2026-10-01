@@ -1,0 +1,11 @@
+{
+  "target": "C:\\Users\\cyion\\.codex\\tmp\\access-v33-20260929-01a0ea59\\접근성분석_패키지",
+  "file_count": 1422,
+  "bytes": 639022034,
+  "inventory_sha256": "8be024437e7e2161165d29b657ebab3874726b2e143380f438e781521317452a",
+  "boundary_and_reparse_checks": "PASS",
+  "prior_denied_targets_in_scope": false,
+  "status": "deleted",
+  "verified_at": "2026-09-29T16:38:59.9624765+09:00",
+  "completed_at": "2026-09-29T16:39:00.2331367+09:00"
+}

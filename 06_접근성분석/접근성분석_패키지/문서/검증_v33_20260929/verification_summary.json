@@ -1,0 +1,131 @@
+{
+ "release": "access-engine-v3.3-facility-v1.4-20260929",
+ "verdict": "PASS",
+ "tests": 35,
+ "engine_runs": 22,
+ "main": [
+  {
+   "year": 2020,
+   "scope": "all_items",
+   "metric": "SFCA_per10k",
+   "changed_rows": 0,
+   "changed_dongs": 0,
+   "max_abs": 0.0
+  },
+  {
+   "year": 2025,
+   "scope": "all_items",
+   "metric": "SFCA_per10k",
+   "changed_rows": 0,
+   "changed_dongs": 0,
+   "max_abs": 0.0
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "COV",
+   "changed_rows": 1885,
+   "changed_dongs": 410,
+   "max_abs": 0.05720799999999998
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "MAI",
+   "changed_rows": 13748,
+   "changed_dongs": 424,
+   "max_abs": 1.0714290000000002
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 51.679396999999994
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "COV",
+   "changed_rows": 1885,
+   "changed_dongs": 410,
+   "max_abs": 0.05720799999999998
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "MAI",
+   "changed_rows": 2118,
+   "changed_dongs": 424,
+   "max_abs": 1.0714290000000002
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 51.679396999999994
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "COV",
+   "changed_rows": 1882,
+   "changed_dongs": 411,
+   "max_abs": 0.04377500000000001
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "MAI",
+   "changed_rows": 14123,
+   "changed_dongs": 424,
+   "max_abs": 1.0952380000000002
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 35.196618
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "COV",
+   "changed_rows": 1882,
+   "changed_dongs": 411,
+   "max_abs": 0.04377500000000001
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "MAI",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 1.0952380000000002
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 35.196618
+  }
+ ],
+ "sfca_unchanged_rows": 1732280,
+ "category_B_invariant_rows": 492698,
+ "population_unchanged_rows": 2305496,
+ "grid_compared_rows": 12676416,
+ "unchanged_inputs": 1033,
+ "scientific_fitness": "conditional use under documented source-date and retail assumptions; historical sports HOLD does not apply to active 7 categories",
+ "counts": {
+  "PASS": 56,
+  "WARN": 3,
+  "FAIL": 0
+ }
+}

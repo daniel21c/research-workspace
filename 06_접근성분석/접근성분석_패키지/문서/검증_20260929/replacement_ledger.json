@@ -1,0 +1,272 @@
+{
+  "authority": "2026-09-29 user authorized local repair and replacement after validation",
+  "entries": [
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\a06c_delta.py",
+      "old_sha256": "85ddc2e5f71c74d98cc99d9c5f966b6b423b2dde89a6666533ee47f9e9a3a769",
+      "new_sha256": "9d6c15cd8177e45cba5c0ddacd60c4f86c945312b1f9aea32621731be9234a8b",
+      "old_bytes": 2591,
+      "new_bytes": 4040,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\a06d_temporal_sensitivity.py",
+      "old_sha256": null,
+      "new_sha256": "19c449fb20b7c33007846184cc36b042ce49653349f741418515c6b654e77600",
+      "old_bytes": 0,
+      "new_bytes": 1886,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\a06_engine.py",
+      "old_sha256": "94075362bd989b95b67f0ac63efe2c2ca2355fe8e476488f102fc798b8dcf12a",
+      "new_sha256": "627962cc404c7cab343603b6788e4f671df7232e6d7a4421a90b4ac93d8c3b1e",
+      "old_bytes": 35691,
+      "new_bytes": 37109,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\a10_verify.py",
+      "old_sha256": "bd30c57869926535b8ec0167fbb2850d7b050e078705bba602bb05c0e304ef4f",
+      "new_sha256": "5ac7a9e2be52479c101e8af501668f4ba9b25a03258a21c316bbabe4d373af57",
+      "old_bytes": 25783,
+      "new_bytes": 27931,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\a11_provenance.py",
+      "old_sha256": null,
+      "new_sha256": "089ad4a40cbdc1a4d06683a75f0ec7697cd4fc45d33b19521cb40f404c69f782",
+      "old_bytes": 0,
+      "new_bytes": 5370,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\run_engine.bat",
+      "old_sha256": "ca464655fb5ae60230e7f9946dbfbe689322c3df6cc4aaf8acbfb6158e72133d",
+      "new_sha256": "a86ba9cbdcedb4a6b66667098e082a30bc8e56fe5280941c147e49c0ac586ff8",
+      "old_bytes": 3354,
+      "new_bytes": 3421,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\코드\\tests\\test_release.py",
+      "old_sha256": null,
+      "new_sha256": "c28946f27ee7ef567755747d7fcfa126d3d59200036151a07f8047407c993b11",
+      "old_bytes": 0,
+      "new_bytes": 4215,
+      "reason": "release code/tests"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\문서\\공동연구자_시작_20260929.md",
+      "old_sha256": null,
+      "new_sha256": "49ab0856f4e09b8bc609311931e9e3ecbc71e0be4bca35e345836d0738d1632c",
+      "old_bytes": 0,
+      "new_bytes": 5866,
+      "reason": "release documentation"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\문서\\배포검증_20260929.md",
+      "old_sha256": null,
+      "new_sha256": "beaa54b847e2ddb8d25732a1825975bcd12c6eb45e5ee5d0d2b73511327d7c9e",
+      "old_bytes": 0,
+      "new_bytes": 7104,
+      "reason": "release documentation"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\문서\\출처_전처리_연결표_20260929.md",
+      "old_sha256": null,
+      "new_sha256": "dcb51a28b0df088038d6f4fe62ef1a71ada0124b8b73f86226f47b738b3ed4ed",
+      "old_bytes": 0,
+      "new_bytes": 6525,
+      "reason": "release documentation"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\fixed_ld2020_net2025.csv",
+      "old_sha256": null,
+      "new_sha256": "217dca448623263a8f8d3461de25d9770eb75ddc95fe109c74ca11e38f79d281",
+      "old_bytes": 0,
+      "new_bytes": 61179,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\fixed_ld2025_net2025.csv",
+      "old_sha256": null,
+      "new_sha256": "0ae34a1f10b9f2c82e178d27ea23bf6431e1782725468e00776c43051084eb07",
+      "old_bytes": 0,
+      "new_bytes": 60584,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_moving_net.csv",
+      "old_sha256": null,
+      "new_sha256": "794593af57e710c6a103f1747a60def4f0caaa7e62d859ef6ae29f2101e8b4a4",
+      "old_bytes": 0,
+      "new_bytes": 61809,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_net2025.csv",
+      "old_sha256": null,
+      "new_sha256": "5f8a738e3fd024c39c90e36214591b014a5fe7013dec5e16073a81632caff970",
+      "old_bytes": 0,
+      "new_bytes": 61777,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_snap.csv",
+      "old_sha256": null,
+      "new_sha256": "2da3ac5e8f27428480e0901dffb0f18292b722c59ee251cc06c1055fa06a0fbe",
+      "old_bytes": 0,
+      "new_bytes": 61705,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\verification.json",
+      "old_sha256": null,
+      "new_sha256": "ecf8357cbad306423ef6964e73bc7a07aee68da410cb88ee3d71848d2d5e763a",
+      "old_bytes": 0,
+      "new_bytes": 4871,
+      "reason": "additional sensitivity only"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\run_meta_2020_100.json",
+      "old_sha256": "77c9a8219cdd7c294a165117bee163b68fb5b4cc81fd064bd2a89733d4c43086",
+      "new_sha256": "cc4a66ed240a88a1267dc56b878072f09d52ecb472c051115f57bce2bece12b7",
+      "old_bytes": 1374,
+      "new_bytes": 47315,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\run_meta_2025_100.json",
+      "old_sha256": "a4571301e35bfdd370858bf351ad30c074e34d48e2b842ff86db4eebd7dc673a",
+      "new_sha256": "7b40c35099747d32b544248c73f4d24b83267d8680750d0cb7464c956195a2e4",
+      "old_bytes": 1374,
+      "new_bytes": 47554,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\sens_union\\run_meta_2020_100.json",
+      "old_sha256": "3863eb210d973edcd633808086c8d6a8d2ed458b0a2e055001420301971f674f",
+      "new_sha256": "415f429b3a09fbc8e0005d51de9385369914f84f1def698f53413862a92369e8",
+      "old_bytes": 3002,
+      "new_bytes": 48784,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\run_meta_2020_100.json",
+      "old_sha256": "b7be3d74772847da517ce83cd48f4adb0f33dda71b58f2c3495076a9ac2713c3",
+      "new_sha256": "b08a3ea496cfe32445b8d0a6d020a10d189da22def0e38576bcef30cef80c531",
+      "old_bytes": 1636,
+      "new_bytes": 47451,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\run_meta_2025_100.json",
+      "old_sha256": "e9a1a04a3e3dca3d4b4e01e4898a5fab478c4fdde286c44b7c9e147abacb63e3",
+      "new_sha256": "8f13a605e9f01a21ae22334c6e6884b209c8fe591d98b2b271a38e8ecce5a9c9",
+      "old_bytes": 1636,
+      "new_bytes": 47690,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_net2025\\run_meta_2020_100.json",
+      "old_sha256": "125746ae5b7447c5965457aebcb8e56c07ac7e079ac821c5806f88a3416cb631",
+      "new_sha256": "f909cc9ae8d064ed9b1730b4e8c83df29217db5652f1a379632a40447e9d901b",
+      "old_bytes": 1792,
+      "new_bytes": 53965,
+      "reason": "actually rerun metadata; historical original retained"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\데이터\\release_provenance.json",
+      "old_sha256": null,
+      "new_sha256": "0d8f700730421e29491e7e2b65a06e321d6213b65093ea6d958f559d273b3ded",
+      "old_bytes": 0,
+      "new_bytes": 270387,
+      "reason": "current release inventory, not historic backfill"
+    },
+    {
+      "path": "04_불일치_시간변화_KPA\\scripts\\k15_access_link.py",
+      "old_sha256": "da0c3cba44b41ee241f78ce7a4af9c8a97fe5ba0294eddbfed3f8ad45efb29bc",
+      "new_sha256": "ccdcfe5799ad883d30947c882f998b954fd839c064b2e68b772577dceb8de133",
+      "old_bytes": 7654,
+      "new_bytes": 8383,
+      "reason": "common-category MAI differences"
+    },
+    {
+      "path": "04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_dong_access.csv",
+      "old_sha256": "87287d7ad2c97fec3fafa85bde831e2dff1fd1240dab83e3e888871c5137272e",
+      "new_sha256": "c3a6a759e494c10631285d54cf8f7382a4d5267aec1e3ab388c6671744b76334",
+      "old_bytes": 228750,
+      "new_bytes": 228097,
+      "reason": "corrected KPA direct derived outputs; COV unchanged"
+    },
+    {
+      "path": "04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_group_summary.csv",
+      "old_sha256": "2b013d2970c2bee657deede25605302e4b1a18e6781360de4c0a48df32f451ff",
+      "new_sha256": "9f7f77e9d5b19eb14b59221fd6916f7b5fea2277604c5b416924fa2539a1f8cc",
+      "old_bytes": 2907,
+      "new_bytes": 2889,
+      "reason": "corrected KPA direct derived outputs; COV unchanged"
+    },
+    {
+      "path": "04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_summary.json",
+      "old_sha256": "c985ec3cc3c84af92cb3dbbd489caae03860423f3acd9ceda2e9cfb5e02a72fd",
+      "new_sha256": "81629b17691357295c09a29e88c6a8a21128918e7f5e557bd4ca0d0ff68c8161",
+      "old_bytes": 3951,
+      "new_bytes": 4131,
+      "reason": "corrected KPA direct derived outputs; COV unchanged"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\README.md",
+      "old_sha256": "05124d9fee0508698509024fcd62d38da2edce395ded9f3ed2ca3763c0110716",
+      "new_sha256": "c16ec9fd3e17bb449c2ab26b067b1082b95ea38dfcc5a2aa4da7bb2abc452bd6",
+      "old_bytes": 10395,
+      "new_bytes": 11470,
+      "reason": "release documentation"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\문서\\작업기록.md",
+      "old_sha256": "3bec837294cec175bfa3bdead7236f7c013ee1429e6a22eea931be253cb697f9",
+      "new_sha256": "31c02eda6d97abfdcbf9f8d7a8cb12706b9fb1343b6689a4a52e365f6958ae3a",
+      "old_bytes": 34770,
+      "new_bytes": 35388,
+      "reason": "release documentation"
+    },
+    {
+      "path": "06_접근성분석\\접근성분석_패키지\\문서\\지표정의_확정.md",
+      "old_sha256": "c5c52ed27e3fa62c8e3809c073b45d55d7f708fe53489e69cf1b1270b40f1258",
+      "new_sha256": "ae8a6a0e581fbc92c3caad95996e3d45f3691f6db66e5d4bc38e0755a336c466",
+      "old_bytes": 15180,
+      "new_bytes": 15677,
+      "reason": "release documentation"
+    },
+    {
+      "path": "데이터_배포목록.md",
+      "old_sha256": "dc14ab3eaea6afbab4ee791e1d4db6f4febd74a19c42996a96e854bff54066ad",
+      "new_sha256": "20afbd6cedd1641e4768394ae7591b3a482336e4770c36581ff63565863685a3",
+      "old_bytes": 14330,
+      "new_bytes": 15112,
+      "reason": "minimum access registration"
+    },
+    {
+      "path": "공유_안내.md",
+      "old_sha256": "585aae53b3148bb77a71531c862afe02313aabf23a388605f6722871cecaf244",
+      "new_sha256": "d038acab2e619bcd1083b43b065b70ee8c814b9b3eb087a6a02f8794e093c605",
+      "old_bytes": 4557,
+      "new_bytes": 5108,
+      "reason": "minimum access registration"
+    },
+    {
+      "path": "04_불일치_시간변화_KPA\\작업기록.md",
+      "old_sha256": "3da9e3129ea1869aff8077d302409a8c4f628b5b6dee1430ef19c7a727cb63fb",
+      "new_sha256": "00a8546c3798feb6c4628f0d16b01a89e7f7d2694e2882dd44d1a0111ff58aa2",
+      "old_bytes": 37337,
+      "new_bytes": 37625,
+      "reason": "narrow KPA correction worklog"
+    }
+  ],
+  "historical_metadata_retained": 6,
+  "numeric_files_not_rewritten_when_sha_identical": 13,
+  "KPA_r2_ZIP_and_PDF": "untouched pending user decision"
+}

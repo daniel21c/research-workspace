@@ -1,0 +1,83 @@
+{
+ "engine": "access-engine-v3",
+ "year": 2025,
+ "grid_m": 100,
+ "T_sec": 900.0,
+ "speed_kmh": 4.0,
+ "catset": "B",
+ "retail": "with",
+ "union": false,
+ "tag": "natstd_B",
+ "ku": null,
+ "ttm_rows": 22625482,
+ "fac_rows_year_analyzable": 309296,
+ "fac_rows_used": 65928,
+ "fac_rows_outside_grid": 8,
+ "groups": [
+  [
+   "교육",
+   "유치원",
+   10,
+   732
+  ],
+  [
+   "교육",
+   "학교",
+   15,
+   604
+  ],
+  [
+   "돌봄",
+   "어린이집",
+   5,
+   3758
+  ],
+  [
+   "의료",
+   "약국",
+   10,
+   3878
+  ],
+  [
+   "의료",
+   "의원",
+   10,
+   5793
+  ],
+  [
+   "체육",
+   "체육시설업",
+   10,
+   4931
+  ],
+  [
+   "편의",
+   "일상소매",
+   10,
+   13277
+  ]
+ ],
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+ "origins": 30785,
+ "origins_missing_in_ttm": 0,
+ "files": [
+  {
+   "file": "데이터/결과/natstd_B/grid_access_2025_100.parquet",
+   "sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+   "bytes": 281420
+  },
+  {
+   "file": "데이터/결과/natstd_B/nat_standard_coverage_2025_100.csv",
+   "sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+   "bytes": 817409
+  }
+ ],
+ "seconds": 6.7
+}

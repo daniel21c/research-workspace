@@ -1,0 +1,20 @@
+[
+ {
+  "tag": "xb_main",
+  "year": 2020,
+  "rows": 27280,
+  "unchanged_against_base": true
+ },
+ {
+  "tag": "xb_main",
+  "year": 2025,
+  "rows": 27280,
+  "unchanged_against_base": true
+ },
+ {
+  "tag": "xb_net2025",
+  "year": 2020,
+  "rows": 27280,
+  "unchanged_against_base": true
+ }
+]

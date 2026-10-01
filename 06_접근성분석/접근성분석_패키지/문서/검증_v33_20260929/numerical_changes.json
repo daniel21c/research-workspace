@@ -1,0 +1,1297 @@
+{
+ "comparisons": [
+  {
+   "file": "데이터/결과/main/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/main/sfca_unit_2025_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/main/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23273,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3173,
+     "max_abs": 0.05720799999999998
+    },
+    "MAI": {
+     "changed_rows": 23271,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 51.679396999999994
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/main/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23789,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3169,
+     "max_abs": 0.04377500000000001
+    },
+    "MAI": {
+     "changed_rows": 23789,
+     "max_abs": 1.0952380000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 35.196618
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/natstd_B/nat_standard_coverage_2020_100.csv",
+   "rows": 7502,
+   "removed_rows": 1364,
+   "changed_rows": 661,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 661,
+     "max_abs": 0.06431600000000004
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/natstd_B/nat_standard_coverage_2025_100.csv",
+   "rows": 7502,
+   "removed_rows": 1364,
+   "changed_rows": 673,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 673,
+     "max_abs": 0.06102399999999997
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_A4/unit_access_2020_100.csv",
+   "rows": 17050,
+   "removed_rows": 0,
+   "changed_rows": 16672,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 2949,
+     "max_abs": 4616236.0
+    },
+    "COV": {
+     "changed_rows": 5898,
+     "max_abs": 1.0
+    },
+    "MAI": {
+     "changed_rows": 16555,
+     "max_abs": 3.0
+    },
+    "PWATT_sec": {
+     "changed_rows": 6820,
+     "max_abs": 764.291507
+    },
+    "n_cat_mai": {
+     "changed_rows": 302,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_A4/unit_access_2025_100.csv",
+   "rows": 17050,
+   "removed_rows": 0,
+   "changed_rows": 16649,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 2844,
+     "max_abs": 4143772.0
+    },
+    "COV": {
+     "changed_rows": 5688,
+     "max_abs": 1.0
+    },
+    "MAI": {
+     "changed_rows": 16485,
+     "max_abs": 3.0
+    },
+    "PWATT_sec": {
+     "changed_rows": 6820,
+     "max_abs": 785.313883
+    },
+    "n_cat_mai": {
+     "changed_rows": 230,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_grid250/sfca_unit_2020_250.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_grid250/sfca_unit_2025_250.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_grid250/unit_access_2020_250.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 26054,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3080,
+     "max_abs": 0.06128600000000001
+    },
+    "MAI": {
+     "changed_rows": 26050,
+     "max_abs": 1.0535709999999998
+    },
+    "PWATT_sec": {
+     "changed_rows": 3409,
+     "max_abs": 44.585105
+    },
+    "n_cat_mai": {
+     "changed_rows": 3409,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_grid250/unit_access_2025_250.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 26284,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3053,
+     "max_abs": 0.053571000000000035
+    },
+    "MAI": {
+     "changed_rows": 26283,
+     "max_abs": 1.060759
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 47.434342000000015
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_net2025/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_net2025/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23282,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3199,
+     "max_abs": 0.05720799999999998
+    },
+    "MAI": {
+     "changed_rows": 23280,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 64.62494500000003
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/sfca_unit_2020_100.csv",
+   "rows": 112530,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/sfca_unit_2025_100.csv",
+   "rows": 112530,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23336,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3173,
+     "max_abs": 0.057440999999999964
+    },
+    "MAI": {
+     "changed_rows": 23335,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 49.00390699999997
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_retail_without/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23821,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3169,
+     "max_abs": 0.044333999999999985
+    },
+    "MAI": {
+     "changed_rows": 23821,
+     "max_abs": 1.0952380000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 33.491127000000006
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_snap/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_snap/sfca_unit_2025_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_snap/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23220,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3236,
+     "max_abs": 0.05604300000000001
+    },
+    "MAI": {
+     "changed_rows": 23218,
+     "max_abs": 1.0684910000000003
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 63.40968499999997
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_snap/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23765,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3231,
+     "max_abs": 0.04377500000000001
+    },
+    "MAI": {
+     "changed_rows": 23765,
+     "max_abs": 1.0952380000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 34.72629300000003
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_speed36/sfca_unit_2025_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23257,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3277,
+     "max_abs": 0.05604300000000001
+    },
+    "MAI": {
+     "changed_rows": 23255,
+     "max_abs": 1.0678860000000001
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 50.80635900000004
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_speed36/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23780,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3296,
+     "max_abs": 0.04377500000000001
+    },
+    "MAI": {
+     "changed_rows": 23780,
+     "max_abs": 1.063059
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 35.963633000000016
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_T600/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_T600/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23184,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3408,
+     "max_abs": 0.04132099999999994
+    },
+    "MAI": {
+     "changed_rows": 23184,
+     "max_abs": 1.045318
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 43.14241899999999
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 23473,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3409,
+     "max_abs": 0.041783000000000015
+    },
+    "MAI": {
+     "changed_rows": 23473,
+     "max_abs": 1.0684490000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 31.128593000000023
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_union/sfca_unit_2025_100.csv",
+   "rows": 115940,
+   "removed_rows": 6820,
+   "changed_rows": 0,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "supply_unassigned_in_unit": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "SFCA_per10k": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_share_A0": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "open_ratio": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_union/unit_access_2020_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 27280,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3173,
+     "max_abs": 0.05720799999999998
+    },
+    "MAI": {
+     "changed_rows": 23271,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 51.679396999999994
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    },
+    "UNI": {
+     "changed_rows": 26938,
+     "max_abs": 1.0
+    },
+    "UNI_allpop": {
+     "changed_rows": 27280,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/sens_union/unit_access_2025_100.csv",
+   "rows": 27280,
+   "removed_rows": 3410,
+   "changed_rows": 27280,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 3169,
+     "max_abs": 0.04377500000000001
+    },
+    "MAI": {
+     "changed_rows": 23789,
+     "max_abs": 1.0952380000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 3410,
+     "max_abs": 35.196618
+    },
+    "n_cat_mai": {
+     "changed_rows": 3410,
+     "max_abs": 1.0
+    },
+    "UNI": {
+     "changed_rows": 27019,
+     "max_abs": 1.0
+    },
+    "UNI_allpop": {
+     "changed_rows": 27280,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/xb_main/unit_access_2020_100.csv",
+   "rows": 38304,
+   "removed_rows": 4788,
+   "changed_rows": 32992,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 4510,
+     "max_abs": 0.05720799999999998
+    },
+    "MAI": {
+     "changed_rows": 32990,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 4788,
+     "max_abs": 51.679396999999994
+    },
+    "n_cat_mai": {
+     "changed_rows": 4788,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/xb_main/unit_access_2025_100.csv",
+   "rows": 38304,
+   "removed_rows": 4788,
+   "changed_rows": 33670,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 4505,
+     "max_abs": 0.04377500000000001
+    },
+    "MAI": {
+     "changed_rows": 33670,
+     "max_abs": 1.0952380000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 4788,
+     "max_abs": 35.196618
+    },
+    "n_cat_mai": {
+     "changed_rows": 4788,
+     "max_abs": 1.0
+    }
+   }
+  },
+  {
+   "file": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+   "rows": 38304,
+   "removed_rows": 4788,
+   "changed_rows": 33008,
+   "metrics": {
+    "pop_total": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "pop_reach": {
+     "changed_rows": 0,
+     "max_abs": 0.0
+    },
+    "COV": {
+     "changed_rows": 4542,
+     "max_abs": 0.05720799999999998
+    },
+    "MAI": {
+     "changed_rows": 33006,
+     "max_abs": 1.0714290000000002
+    },
+    "PWATT_sec": {
+     "changed_rows": 4788,
+     "max_abs": 64.62494500000003
+    },
+    "n_cat_mai": {
+     "changed_rows": 4788,
+     "max_abs": 1.0
+    }
+   }
+  }
+ ],
+ "main": [
+  {
+   "year": 2020,
+   "scope": "all_items",
+   "metric": "SFCA_per10k",
+   "changed_rows": 0,
+   "changed_dongs": 0,
+   "max_abs": 0.0
+  },
+  {
+   "year": 2025,
+   "scope": "all_items",
+   "metric": "SFCA_per10k",
+   "changed_rows": 0,
+   "changed_dongs": 0,
+   "max_abs": 0.0
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "COV",
+   "changed_rows": 1885,
+   "changed_dongs": 410,
+   "max_abs": 0.05720799999999998
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "MAI",
+   "changed_rows": 13748,
+   "changed_dongs": 424,
+   "max_abs": 1.0714290000000002
+  },
+  {
+   "year": 2020,
+   "scope": "all_categories",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 51.679396999999994
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "COV",
+   "changed_rows": 1885,
+   "changed_dongs": 410,
+   "max_abs": 0.05720799999999998
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "MAI",
+   "changed_rows": 2118,
+   "changed_dongs": 424,
+   "max_abs": 1.0714290000000002
+  },
+  {
+   "year": 2020,
+   "scope": "종합",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 51.679396999999994
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "COV",
+   "changed_rows": 1882,
+   "changed_dongs": 411,
+   "max_abs": 0.04377500000000001
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "MAI",
+   "changed_rows": 14123,
+   "changed_dongs": 424,
+   "max_abs": 1.0952380000000002
+  },
+  {
+   "year": 2025,
+   "scope": "all_categories",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 35.196618
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "COV",
+   "changed_rows": 1882,
+   "changed_dongs": 411,
+   "max_abs": 0.04377500000000001
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "MAI",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 1.0952380000000002
+  },
+  {
+   "year": 2025,
+   "scope": "종합",
+   "metric": "PWATT_sec",
+   "changed_rows": 2120,
+   "changed_dongs": 424,
+   "max_abs": 35.196618
+  }
+ ],
+ "sfca_unchanged_rows": 1732280,
+ "category_and_B_invariant_rows": 492698,
+ "population_unchanged_rows": 2305496
+}

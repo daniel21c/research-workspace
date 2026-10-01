@@ -1,0 +1,3758 @@
+[
+  {
+    "year": 2020,
+    "ttm": {
+      "rows": 22082441,
+      "duplicate_pairs_in_chunks": 0,
+      "repeated_origins_across_chunks": 0,
+      "unknown_ids": 0,
+      "time_out_of_range": 0,
+      "missing_positive_origins": 0
+    },
+    "access": [
+      {
+        "b": "none",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "교육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "보육·복지",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "의료",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "문화",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "체육",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "행정·안전",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "소매",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "생활서비스",
+        "rows": 30751,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      }
+    ],
+    "sfca": [
+      {
+        "b": "none",
+        "item": "교육",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.90898454440493e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "보육·복지",
+        "rows": 30751,
+        "max_abs_error": 4.068110024491034e-05,
+        "max_relative_error": 5.9495855406304455e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "의료",
+        "rows": 30751,
+        "max_abs_error": 2.9915802429059113e-05,
+        "max_relative_error": 5.9188006605737225e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "문화",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.915314449446307e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "체육",
+        "rows": 30751,
+        "max_abs_error": 1.3330375793429994e-05,
+        "max_relative_error": 5.9090820726448296e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "행정·안전",
+        "rows": 30751,
+        "max_abs_error": 4.5721542107912683e-07,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "소매",
+        "rows": 30751,
+        "max_abs_error": 0.0004563414677249966,
+        "max_relative_error": 5.914328033955249e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "생활서비스",
+        "rows": 30751,
+        "max_abs_error": 0.0014160978025756776,
+        "max_relative_error": 5.919992712018314e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "유치원",
+        "rows": 30751,
+        "max_abs_error": 2.018110141221996e-07,
+        "max_relative_error": 5.930956450341956e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "학교",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.887424255560208e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "청소년수련시설",
+        "rows": 30751,
+        "max_abs_error": 1.3739375770427387e-07,
+        "max_relative_error": 5.65469265084273e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "어린이집",
+        "rows": 30751,
+        "max_abs_error": 4.068110024491034e-05,
+        "max_relative_error": 5.9387815265786676e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "노인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.909644159045511e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "장애인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 8.719308027593797e-06,
+        "max_relative_error": 5.790293202097562e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30751,
+        "max_abs_error": 2.028041856672047e-08,
+        "max_relative_error": 3.844697158548384e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "의원",
+        "rows": 30751,
+        "max_abs_error": 2.6309976760785503e-05,
+        "max_relative_error": 5.943947025870745e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "약국",
+        "rows": 30751,
+        "max_abs_error": 7.562779615000181e-06,
+        "max_relative_error": 5.91223160803589e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "병원급",
+        "rows": 30751,
+        "max_abs_error": 4.701432665399352e-07,
+        "max_relative_error": 5.9258859751017944e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "보건소·보건지소",
+        "rows": 30751,
+        "max_abs_error": 2.3561865902799184e-08,
+        "max_relative_error": 4.649162297046261e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "응급의료기관",
+        "rows": 30751,
+        "max_abs_error": 2.17536874735913e-07,
+        "max_relative_error": 4.853961560706162e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "산후조리원",
+        "rows": 30751,
+        "max_abs_error": 1.135347065250869e-07,
+        "max_relative_error": 5.447070182900795e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "공공도서관",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.388776226187977e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "문화기반시설",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.850401179126542e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "등록공연장",
+        "rows": 30751,
+        "max_abs_error": 2.936125454766625e-06,
+        "max_relative_error": 5.915314449446307e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "체육시설업",
+        "rows": 30751,
+        "max_abs_error": 1.3330375793429994e-05,
+        "max_relative_error": 5.9090820726448296e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "주민센터",
+        "rows": 30751,
+        "max_abs_error": 1.914376381861871e-07,
+        "max_relative_error": 5.710025217798379e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "소방서·119안전센터",
+        "rows": 30751,
+        "max_abs_error": 4.377482003548039e-07,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "일상소매",
+        "rows": 30751,
+        "max_abs_error": 0.0003364011827216018,
+        "max_relative_error": 5.9287441381744414e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30751,
+        "max_abs_error": 0.00011257457435931428,
+        "max_relative_error": 5.94483961253962e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30751,
+        "max_abs_error": 5.462613046347542e-07,
+        "max_relative_error": 5.7899566748711185e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "일반음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008445037965429947,
+        "max_relative_error": 5.919534766789922e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "휴게음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008722149723325856,
+        "max_relative_error": 5.949520566393283e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "미용업",
+        "rows": 30751,
+        "max_abs_error": 1.4947158547329309e-05,
+        "max_relative_error": 5.911549769285997e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "이용업",
+        "rows": 30751,
+        "max_abs_error": 4.290648575988598e-06,
+        "max_relative_error": 5.921790524730501e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "세탁업",
+        "rows": 30751,
+        "max_abs_error": 9.462325074593991e-07,
+        "max_relative_error": 5.9075694806278825e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "목욕장업",
+        "rows": 30751,
+        "max_abs_error": 1.601175355858686e-06,
+        "max_relative_error": 5.945600484555101e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "교육",
+        "rows": 30751,
+        "max_abs_error": 6.260016107262345e-06,
+        "max_relative_error": 5.865996131945721e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "보육·복지",
+        "rows": 30751,
+        "max_abs_error": 3.2172553801501635e-05,
+        "max_relative_error": 5.902908336444347e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "의료",
+        "rows": 30751,
+        "max_abs_error": 0.0002347791187276016,
+        "max_relative_error": 5.90368518947192e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "문화",
+        "rows": 30751,
+        "max_abs_error": 1.8918510704679647e-05,
+        "max_relative_error": 5.896934380622353e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "체육",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.8599260263211813e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "행정·안전",
+        "rows": 30751,
+        "max_abs_error": 1.8378421827947022e-05,
+        "max_relative_error": 5.7727098552440284e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "소매",
+        "rows": 30751,
+        "max_abs_error": 0.0007164295711845625,
+        "max_relative_error": 5.8755749978663247e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "생활서비스",
+        "rows": 30751,
+        "max_abs_error": 0.0026908128056675196,
+        "max_relative_error": 5.881938349779882e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "유치원",
+        "rows": 30751,
+        "max_abs_error": 2.4220300076649437e-06,
+        "max_relative_error": 5.7109785333310165e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "학교",
+        "rows": 30751,
+        "max_abs_error": 6.260016107262345e-06,
+        "max_relative_error": 5.6717952942127414e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "청소년수련시설",
+        "rows": 30751,
+        "max_abs_error": 2.0975263304023883e-07,
+        "max_relative_error": 5.111694331563221e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "어린이집",
+        "rows": 30751,
+        "max_abs_error": 2.9190726877459383e-05,
+        "max_relative_error": 5.912779148038393e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "노인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 1.4066200947127072e-05,
+        "max_relative_error": 5.7727098440929495e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "장애인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 5.548650563014235e-06,
+        "max_relative_error": 5.8153342963223045e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30751,
+        "max_abs_error": 5.2518136506307656e-08,
+        "max_relative_error": 4.6956539301734606e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "의원",
+        "rows": 30751,
+        "max_abs_error": 0.0002347791187276016,
+        "max_relative_error": 5.9371519319708734e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "약국",
+        "rows": 30751,
+        "max_abs_error": 1.292310236067351e-05,
+        "max_relative_error": 5.866141739769188e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "병원급",
+        "rows": 30751,
+        "max_abs_error": 8.061247058321896e-06,
+        "max_relative_error": 5.773901928308734e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "보건소·보건지소",
+        "rows": 30751,
+        "max_abs_error": 5.740756514605039e-08,
+        "max_relative_error": 5.438923851297518e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "응급의료기관",
+        "rows": 30751,
+        "max_abs_error": 4.6107766671354966e-07,
+        "max_relative_error": 5.187988288248846e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "산후조리원",
+        "rows": 30751,
+        "max_abs_error": 7.280258129682693e-08,
+        "max_relative_error": 4.7355890247158254e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "공공도서관",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.116635671790703e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "문화기반시설",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.896934380622353e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "등록공연장",
+        "rows": 30751,
+        "max_abs_error": 3.675560137139655e-06,
+        "max_relative_error": 5.523042605056245e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "체육시설업",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.8599260263211813e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "주민센터",
+        "rows": 30751,
+        "max_abs_error": 5.844064823179451e-07,
+        "max_relative_error": 5.7727098552440284e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "소방서·119안전센터",
+        "rows": 30751,
+        "max_abs_error": 4.695011966759921e-06,
+        "max_relative_error": 5.7727098552440284e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "일상소매",
+        "rows": 30751,
+        "max_abs_error": 0.0009224702698702458,
+        "max_relative_error": 5.8857820695373795e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30751,
+        "max_abs_error": 0.00048356397746829316,
+        "max_relative_error": 5.898737610883534e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30751,
+        "max_abs_error": 1.3568542982511644e-06,
+        "max_relative_error": 5.283355696139579e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "일반음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0012107920629205182,
+        "max_relative_error": 5.923978201163988e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "휴게음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0009637334187573288,
+        "max_relative_error": 5.8949504077607755e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "미용업",
+        "rows": 30751,
+        "max_abs_error": 3.014242588506022e-05,
+        "max_relative_error": 5.887608777657072e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "이용업",
+        "rows": 30751,
+        "max_abs_error": 6.308402544163982e-05,
+        "max_relative_error": 5.8434235256485234e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "세탁업",
+        "rows": 30751,
+        "max_abs_error": 3.6163992831461655e-06,
+        "max_relative_error": 5.797325356958202e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "목욕장업",
+        "rows": 30751,
+        "max_abs_error": 7.4093271962283325e-06,
+        "max_relative_error": 5.769940895631993e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "교육",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.913772133067895e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "보육·복지",
+        "rows": 30751,
+        "max_abs_error": 4.962410594089306e-05,
+        "max_relative_error": 5.9334965351022894e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "의료",
+        "rows": 30751,
+        "max_abs_error": 5.9271814052408445e-05,
+        "max_relative_error": 5.904125493056456e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "문화",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.795814422347123e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "체육",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.936362146921637e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "행정·안전",
+        "rows": 30751,
+        "max_abs_error": 4.695011966759921e-06,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "소매",
+        "rows": 30751,
+        "max_abs_error": 0.0003647936464403756,
+        "max_relative_error": 5.9275714811192114e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "생활서비스",
+        "rows": 30751,
+        "max_abs_error": 0.0006398305558832362,
+        "max_relative_error": 5.889608090572976e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "유치원",
+        "rows": 30751,
+        "max_abs_error": 6.698334438226539e-07,
+        "max_relative_error": 5.8814984653260915e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "학교",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.786101950858479e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "청소년수련시설",
+        "rows": 30751,
+        "max_abs_error": 1.3739375770427387e-07,
+        "max_relative_error": 4.96506690795373e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "어린이집",
+        "rows": 30751,
+        "max_abs_error": 4.962410594089306e-05,
+        "max_relative_error": 5.923140340932388e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "노인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.6257843838847234e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "장애인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 5.548650563014235e-06,
+        "max_relative_error": 5.5789545021170095e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30751,
+        "max_abs_error": 2.2028371571281014e-08,
+        "max_relative_error": 4.0197372443273595e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "의원",
+        "rows": 30751,
+        "max_abs_error": 3.0183049261722772e-05,
+        "max_relative_error": 5.881241089777959e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "약국",
+        "rows": 30751,
+        "max_abs_error": 1.2226275941884523e-05,
+        "max_relative_error": 5.900651217566115e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "병원급",
+        "rows": 30751,
+        "max_abs_error": 8.061247058321896e-06,
+        "max_relative_error": 5.882978433408015e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "보건소·보건지소",
+        "rows": 30751,
+        "max_abs_error": 5.94324418567993e-08,
+        "max_relative_error": 5.182623851603952e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "응급의료기관",
+        "rows": 30751,
+        "max_abs_error": 2.17536874735913e-07,
+        "max_relative_error": 5.012750618991202e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "산후조리원",
+        "rows": 30751,
+        "max_abs_error": 7.865861118006023e-08,
+        "max_relative_error": 5.334941948978552e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "공공도서관",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.668955693183666e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "문화기반시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.795814422347123e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "등록공연장",
+        "rows": 30751,
+        "max_abs_error": 3.6971281929254474e-06,
+        "max_relative_error": 5.79476356637465e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "체육시설업",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.936362146921637e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "주민센터",
+        "rows": 30751,
+        "max_abs_error": 1.9145214480431605e-07,
+        "max_relative_error": 5.7727098552440284e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "소방서·119안전센터",
+        "rows": 30751,
+        "max_abs_error": 4.695011966759921e-06,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "일상소매",
+        "rows": 30751,
+        "max_abs_error": 0.00043806882422359195,
+        "max_relative_error": 5.88300312723238e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30751,
+        "max_abs_error": 0.0001582831637279014,
+        "max_relative_error": 5.9156929027246197e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30751,
+        "max_abs_error": 6.983741904775798e-07,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "일반음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0017841356748249382,
+        "max_relative_error": 5.937132375194363e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "휴게음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008722149723325856,
+        "max_relative_error": 5.9389146767127357e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "미용업",
+        "rows": 30751,
+        "max_abs_error": 2.2541743533111003e-05,
+        "max_relative_error": 5.916868688218661e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "이용업",
+        "rows": 30751,
+        "max_abs_error": 8.202026265280438e-05,
+        "max_relative_error": 5.8876487158485824e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "세탁업",
+        "rows": 30751,
+        "max_abs_error": 1.7587838740951156e-06,
+        "max_relative_error": 5.9232251120277925e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "목욕장업",
+        "rows": 30751,
+        "max_abs_error": 1.2514084687609284e-05,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "교육",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.913772133067895e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "보육·복지",
+        "rows": 30751,
+        "max_abs_error": 2.9190726877459383e-05,
+        "max_relative_error": 5.889237986106039e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "의료",
+        "rows": 30751,
+        "max_abs_error": 5.9271814052408445e-05,
+        "max_relative_error": 5.904125493056456e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "문화",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.8481740078237856e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "체육",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.942112925770199e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "행정·안전",
+        "rows": 30751,
+        "max_abs_error": 4.695011966759921e-06,
+        "max_relative_error": 5.9371869883803566e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "소매",
+        "rows": 30751,
+        "max_abs_error": 0.001620122951862868,
+        "max_relative_error": 5.936508311221694e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "생활서비스",
+        "rows": 30751,
+        "max_abs_error": 0.0006398305558832362,
+        "max_relative_error": 5.8881929029498496e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "유치원",
+        "rows": 30751,
+        "max_abs_error": 6.698334438226539e-07,
+        "max_relative_error": 5.8814984653260915e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "학교",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.8410284038236625e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "청소년수련시설",
+        "rows": 30751,
+        "max_abs_error": 1.3739375770427387e-07,
+        "max_relative_error": 4.969537265355761e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "어린이집",
+        "rows": 30751,
+        "max_abs_error": 2.9190726877459383e-05,
+        "max_relative_error": 5.881225300839456e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "노인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.629870716904079e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "장애인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 5.548650563014235e-06,
+        "max_relative_error": 5.7727098552440284e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30751,
+        "max_abs_error": 2.2028371571281014e-08,
+        "max_relative_error": 4.070103175675688e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "의원",
+        "rows": 30751,
+        "max_abs_error": 3.0183049261722772e-05,
+        "max_relative_error": 5.8584806780510066e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "약국",
+        "rows": 30751,
+        "max_abs_error": 1.2226275941884523e-05,
+        "max_relative_error": 5.93744252790788e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "병원급",
+        "rows": 30751,
+        "max_abs_error": 5.729584842129043e-07,
+        "max_relative_error": 5.71012495801937e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "보건소·보건지소",
+        "rows": 30751,
+        "max_abs_error": 5.94324418567993e-08,
+        "max_relative_error": 4.731416696219792e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "응급의료기관",
+        "rows": 30751,
+        "max_abs_error": 2.17536874735913e-07,
+        "max_relative_error": 5.497932441778653e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "산후조리원",
+        "rows": 30751,
+        "max_abs_error": 5.8887732024004436e-08,
+        "max_relative_error": 5.8462796530020914e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "공공도서관",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.668955693183666e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "문화기반시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.795814422347123e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "등록공연장",
+        "rows": 30751,
+        "max_abs_error": 3.7829569237146643e-06,
+        "max_relative_error": 5.850466830534933e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "체육시설업",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.942112925770199e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "주민센터",
+        "rows": 30751,
+        "max_abs_error": 1.9145214480431605e-07,
+        "max_relative_error": 5.8074174194891115e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "소방서·119안전센터",
+        "rows": 30751,
+        "max_abs_error": 4.695011966759921e-06,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "일상소매",
+        "rows": 30751,
+        "max_abs_error": 0.0006191498396219686,
+        "max_relative_error": 5.86930548347204e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30751,
+        "max_abs_error": 0.0001582831637279014,
+        "max_relative_error": 5.9156929027246197e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30751,
+        "max_abs_error": 6.983741904775798e-07,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "일반음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0017841356748249382,
+        "max_relative_error": 5.900514145368499e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "휴게음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008722149723325856,
+        "max_relative_error": 5.904131156252675e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "미용업",
+        "rows": 30751,
+        "max_abs_error": 2.2541743533111003e-05,
+        "max_relative_error": 5.916868688218661e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "이용업",
+        "rows": 30751,
+        "max_abs_error": 8.202026265280438e-05,
+        "max_relative_error": 5.8876487158485824e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "세탁업",
+        "rows": 30751,
+        "max_abs_error": 1.757995867990303e-06,
+        "max_relative_error": 5.946660714897521e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "목욕장업",
+        "rows": 30751,
+        "max_abs_error": 1.2514084687609284e-05,
+        "max_relative_error": 5.816910447613583e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "교육",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.872022757544695e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "보육·복지",
+        "rows": 30751,
+        "max_abs_error": 4.068110024491034e-05,
+        "max_relative_error": 5.880401980538967e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "의료",
+        "rows": 30751,
+        "max_abs_error": 5.990487898088759e-05,
+        "max_relative_error": 5.9081423958005775e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "문화",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.905611772920414e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "체육",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.91099778223723e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "행정·안전",
+        "rows": 30751,
+        "max_abs_error": 3.850484020517797e-07,
+        "max_relative_error": 5.954433137868217e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "소매",
+        "rows": 30751,
+        "max_abs_error": 0.00031669367672293447,
+        "max_relative_error": 5.9221560787104266e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "생활서비스",
+        "rows": 30751,
+        "max_abs_error": 0.0014160978025756776,
+        "max_relative_error": 5.910987495993722e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "유치원",
+        "rows": 30751,
+        "max_abs_error": 3.675340671804861e-07,
+        "max_relative_error": 5.8814984653260915e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "학교",
+        "rows": 30751,
+        "max_abs_error": 1.3092090455302241e-05,
+        "max_relative_error": 5.930262858968447e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "청소년수련시설",
+        "rows": 30751,
+        "max_abs_error": 2.0978627901513391e-07,
+        "max_relative_error": 5.1259994520824745e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "어린이집",
+        "rows": 30751,
+        "max_abs_error": 4.068110024491034e-05,
+        "max_relative_error": 5.899280938477409e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "노인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.5956840529702845e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "장애인 이용시설",
+        "rows": 30751,
+        "max_abs_error": 8.719308027593797e-06,
+        "max_relative_error": 5.744695667434519e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30751,
+        "max_abs_error": 2.2028371571281014e-08,
+        "max_relative_error": 4.070103175675688e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "의원",
+        "rows": 30751,
+        "max_abs_error": 2.9602654308291676e-05,
+        "max_relative_error": 5.935223931704466e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "약국",
+        "rows": 30751,
+        "max_abs_error": 7.514821817267148e-06,
+        "max_relative_error": 5.9104808435442245e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "병원급",
+        "rows": 30751,
+        "max_abs_error": 4.701432665399352e-07,
+        "max_relative_error": 5.6966285163461024e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "보건소·보건지소",
+        "rows": 30751,
+        "max_abs_error": 2.6446014156356057e-08,
+        "max_relative_error": 4.810094840745905e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "응급의료기관",
+        "rows": 30751,
+        "max_abs_error": 2.17536874735913e-07,
+        "max_relative_error": 5.497932441778653e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "산후조리원",
+        "rows": 30751,
+        "max_abs_error": 1.135347065250869e-07,
+        "max_relative_error": 5.482903221776847e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "공공도서관",
+        "rows": 30751,
+        "max_abs_error": 8.607522033798887e-06,
+        "max_relative_error": 5.668955693183666e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "문화기반시설",
+        "rows": 30751,
+        "max_abs_error": 1.2797694068922283e-05,
+        "max_relative_error": 5.66633522655463e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "등록공연장",
+        "rows": 30751,
+        "max_abs_error": 3.5723091542649854e-06,
+        "max_relative_error": 5.624002913666741e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "체육시설업",
+        "rows": 30751,
+        "max_abs_error": 4.1286429222964216e-05,
+        "max_relative_error": 5.91099778223723e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "주민센터",
+        "rows": 30751,
+        "max_abs_error": 1.995554521627696e-07,
+        "max_relative_error": 5.954433137868217e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "소방서·119안전센터",
+        "rows": 30751,
+        "max_abs_error": 3.628333935523642e-07,
+        "max_relative_error": 5.8189034416317173e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "일상소매",
+        "rows": 30751,
+        "max_abs_error": 0.00017411492262908723,
+        "max_relative_error": 5.9287441381744414e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30751,
+        "max_abs_error": 0.00012148334508310654,
+        "max_relative_error": 5.950608246691723e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30751,
+        "max_abs_error": 8.339834849380168e-07,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "일반음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008445037965429947,
+        "max_relative_error": 5.9033963527687936e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "휴게음식점",
+        "rows": 30751,
+        "max_abs_error": 0.0008722149723325856,
+        "max_relative_error": 5.949520566393283e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "미용업",
+        "rows": 30751,
+        "max_abs_error": 1.5184003757440223e-05,
+        "max_relative_error": 5.9146877884331405e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "이용업",
+        "rows": 30751,
+        "max_abs_error": 4.290648575988598e-06,
+        "max_relative_error": 5.921790524730501e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "세탁업",
+        "rows": 30751,
+        "max_abs_error": 1.8795971712393111e-06,
+        "max_relative_error": 5.896144828341191e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "목욕장업",
+        "rows": 30751,
+        "max_abs_error": 3.76601501272944e-06,
+        "max_relative_error": 5.882635479344089e-08,
+        "pass": true
+      }
+    ],
+    "supply": {
+      "교육": 2237.0,
+      "보육·복지": 6576.0,
+      "의료": 23300.0,
+      "문화": 779.0,
+      "체육": 10054.0,
+      "행정·안전": 595.0,
+      "소매": 43006.0,
+      "생활서비스": 191369.0,
+      "유치원": 814.0,
+      "학교": 1357.0,
+      "청소년수련시설": 66.0,
+      "어린이집": 5846.0,
+      "노인 이용시설": 494.0,
+      "장애인 이용시설": 211.0,
+      "가족센터(자치구 본소)": 25.0,
+      "의원": 17344.0,
+      "약국": 5180.0,
+      "병원급": 526.0,
+      "보건소·보건지소": 50.0,
+      "응급의료기관": 68.0,
+      "산후조리원": 133.0,
+      "공공도서관": 180.0,
+      "문화기반시설": 400.0,
+      "등록공연장": 375.0,
+      "체육시설업": 10054.0,
+      "주민센터": 417.0,
+      "소방서·119안전센터": 178.0,
+      "일상소매": 26199.0,
+      "식료품소매(즉석판매·제과)": 16675.0,
+      "대규모점포(주요4업태)": 140.0,
+      "일반음식점": 120459.0,
+      "휴게음식점": 35055.0,
+      "미용업": 27834.0,
+      "이용업": 2666.0,
+      "세탁업": 4603.0,
+      "목욕장업": 886.0
+    },
+    "seconds": 32.84
+  },
+  {
+    "year": 2025,
+    "ttm": {
+      "rows": 22625482,
+      "duplicate_pairs_in_chunks": 0,
+      "repeated_origins_across_chunks": 0,
+      "unknown_ids": 0,
+      "time_out_of_range": 0,
+      "missing_positive_origins": 0
+    },
+    "access": [
+      {
+        "b": "none",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "none",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "dong424",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "lz116",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ku",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "교육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "보육·복지",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "의료",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "문화",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "체육",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "행정·안전",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "소매",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      },
+      {
+        "b": "ld_other",
+        "cat": "생활서비스",
+        "rows": 30785,
+        "bad_r": 0,
+        "bad_t": 0,
+        "bad_m": 0
+      }
+    ],
+    "sfca": [
+      {
+        "b": "none",
+        "item": "교육",
+        "rows": 30785,
+        "max_abs_error": 2.0345052121228946e-05,
+        "max_relative_error": 5.957639645855076e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "보육·복지",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.8958928463664554e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "의료",
+        "rows": 30785,
+        "max_abs_error": 2.8976042699468962e-05,
+        "max_relative_error": 5.923264448542115e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "문화",
+        "rows": 30785,
+        "max_abs_error": 5.997599544116383e-06,
+        "max_relative_error": 5.9233431431323424e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "체육",
+        "rows": 30785,
+        "max_abs_error": 7.924230089884077e-06,
+        "max_relative_error": 5.8580566219409275e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "행정·안전",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.8242483206737156e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "소매",
+        "rows": 30785,
+        "max_abs_error": 0.0003047052032343345,
+        "max_relative_error": 5.943808315142573e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "생활서비스",
+        "rows": 30785,
+        "max_abs_error": 0.0004855727202084381,
+        "max_relative_error": 5.929312447411133e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "유치원",
+        "rows": 30785,
+        "max_abs_error": 6.158255665411616e-07,
+        "max_relative_error": 5.837572382339991e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "학교",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.918766714257061e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "청소년수련시설",
+        "rows": 30785,
+        "max_abs_error": 2.0345052121228946e-05,
+        "max_relative_error": 4.974305632635678e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "어린이집",
+        "rows": 30785,
+        "max_abs_error": 3.486736872559959e-06,
+        "max_relative_error": 5.932933979588549e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "노인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 5.70422020729211e-07,
+        "max_relative_error": 5.926511362671318e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "장애인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.483351135320287e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30785,
+        "max_abs_error": 1.412850831883361e-07,
+        "max_relative_error": 5.074143408843046e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "의원",
+        "rows": 30785,
+        "max_abs_error": 2.7507456820785592e-05,
+        "max_relative_error": 5.9328938885863043e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "약국",
+        "rows": 30785,
+        "max_abs_error": 7.500560457174288e-06,
+        "max_relative_error": 5.910111493395239e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "병원급",
+        "rows": 30785,
+        "max_abs_error": 4.2766319019449384e-07,
+        "max_relative_error": 5.8168689814312296e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "보건소·보건지소",
+        "rows": 30785,
+        "max_abs_error": 5.1752050422848583e-08,
+        "max_relative_error": 5.209445939657887e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "응급의료기관",
+        "rows": 30785,
+        "max_abs_error": 1.963447120445494e-07,
+        "max_relative_error": 5.7518482218266164e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "산후조리원",
+        "rows": 30785,
+        "max_abs_error": 1.453352407310149e-07,
+        "max_relative_error": 5.503181945283433e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "공공도서관",
+        "rows": 30785,
+        "max_abs_error": 5.379701271124304e-07,
+        "max_relative_error": 5.905717488368008e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "문화기반시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 5.905717488368008e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "등록공연장",
+        "rows": 30785,
+        "max_abs_error": 9.34073381131384e-06,
+        "max_relative_error": 5.62579219587153e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "체육시설업",
+        "rows": 30785,
+        "max_abs_error": 7.924230089884077e-06,
+        "max_relative_error": 5.8580566219409275e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "주민센터",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.816935529530699e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "소방서·119안전센터",
+        "rows": 30785,
+        "max_abs_error": 1.1302806655066888e-06,
+        "max_relative_error": 5.223993574553129e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "일상소매",
+        "rows": 30785,
+        "max_abs_error": 0.0001134489743890299,
+        "max_relative_error": 5.948274963188974e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30785,
+        "max_abs_error": 0.0001208288508678379,
+        "max_relative_error": 5.9421887100866604e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30785,
+        "max_abs_error": 8.948901815131194e-07,
+        "max_relative_error": 5.7893991559637695e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "일반음식점",
+        "rows": 30785,
+        "max_abs_error": 0.0002441324131723377,
+        "max_relative_error": 5.9314569727977395e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "휴게음식점",
+        "rows": 30785,
+        "max_abs_error": 0.00021284054491843563,
+        "max_relative_error": 5.9332790015919486e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "미용업",
+        "rows": 30785,
+        "max_abs_error": 1.4940613652925094e-05,
+        "max_relative_error": 5.927301357261184e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "이용업",
+        "rows": 30785,
+        "max_abs_error": 3.1232531085834125e-06,
+        "max_relative_error": 5.932577461286282e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "세탁업",
+        "rows": 30785,
+        "max_abs_error": 1.6042867230225966e-06,
+        "max_relative_error": 5.878120159893494e-08,
+        "pass": true
+      },
+      {
+        "b": "none",
+        "item": "목욕장업",
+        "rows": 30785,
+        "max_abs_error": 3.3368022940294395e-06,
+        "max_relative_error": 5.8435831402845545e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "교육",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.8960914653449774e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "보육·복지",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.856080592385014e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "의료",
+        "rows": 30785,
+        "max_abs_error": 0.00011823293334600748,
+        "max_relative_error": 5.938246039745634e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "문화",
+        "rows": 30785,
+        "max_abs_error": 1.5175222756624862e-05,
+        "max_relative_error": 5.7458877497973405e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "체육",
+        "rows": 30785,
+        "max_abs_error": 4.94689211336663e-05,
+        "max_relative_error": 5.9201833417234804e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "행정·안전",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.688199306379478e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "소매",
+        "rows": 30785,
+        "max_abs_error": 0.01442307693650946,
+        "max_relative_error": 5.8663760028884126e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "생활서비스",
+        "rows": 30785,
+        "max_abs_error": 0.000965226448897738,
+        "max_relative_error": 5.955624415470381e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "유치원",
+        "rows": 30785,
+        "max_abs_error": 9.302687864476411e-07,
+        "max_relative_error": 5.662441262543894e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "학교",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.8960914653449774e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "청소년수련시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 5.7065486812313276e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "어린이집",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.8772789017526596e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "노인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 5.70422020729211e-07,
+        "max_relative_error": 5.544140059346555e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "장애인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 3.4430274808983086e-06,
+        "max_relative_error": 5.46276568574977e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30785,
+        "max_abs_error": 1.412850831883361e-07,
+        "max_relative_error": 5.595684042934979e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "의원",
+        "rows": 30785,
+        "max_abs_error": 0.00012182077853140072,
+        "max_relative_error": 5.870933178399721e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "약국",
+        "rows": 30785,
+        "max_abs_error": 2.686793652628694e-05,
+        "max_relative_error": 5.8914533376344205e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "병원급",
+        "rows": 30785,
+        "max_abs_error": 4.677478724346429e-07,
+        "max_relative_error": 5.610585199959939e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "보건소·보건지소",
+        "rows": 30785,
+        "max_abs_error": 5.762378574303284e-08,
+        "max_relative_error": 5.595684042934979e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "응급의료기관",
+        "rows": 30785,
+        "max_abs_error": 1.9793240557675063e-07,
+        "max_relative_error": 5.610585199959939e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "산후조리원",
+        "rows": 30785,
+        "max_abs_error": 4.2385525134136515e-07,
+        "max_relative_error": 5.595684042934979e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "공공도서관",
+        "rows": 30785,
+        "max_abs_error": 9.258973960868389e-07,
+        "max_relative_error": 5.7458877497973405e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "문화기반시설",
+        "rows": 30785,
+        "max_abs_error": 1.5175222756624862e-05,
+        "max_relative_error": 5.7458877497973405e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "등록공연장",
+        "rows": 30785,
+        "max_abs_error": 6.243274810913135e-06,
+        "max_relative_error": 5.5587291867031935e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "체육시설업",
+        "rows": 30785,
+        "max_abs_error": 4.94689211336663e-05,
+        "max_relative_error": 5.9201833417234804e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "주민센터",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.6457519468722235e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "소방서·119안전센터",
+        "rows": 30785,
+        "max_abs_error": 1.0707922228903044e-06,
+        "max_relative_error": 5.5313110479460196e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "일상소매",
+        "rows": 30785,
+        "max_abs_error": 0.0072115384391509,
+        "max_relative_error": 5.948274963188974e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30785,
+        "max_abs_error": 0.00721153846825473,
+        "max_relative_error": 5.8889796991572404e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30785,
+        "max_abs_error": 1.2668736317777984e-06,
+        "max_relative_error": 5.187988288888334e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "일반음식점",
+        "rows": 30785,
+        "max_abs_error": 0.0009483710819040425,
+        "max_relative_error": 5.872536676430744e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "휴게음식점",
+        "rows": 30785,
+        "max_abs_error": 0.00024366772140638204,
+        "max_relative_error": 5.87820577143698e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "미용업",
+        "rows": 30785,
+        "max_abs_error": 5.896646985092957e-05,
+        "max_relative_error": 5.927301357261184e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "이용업",
+        "rows": 30785,
+        "max_abs_error": 7.08283013750588e-06,
+        "max_relative_error": 5.8705624407649504e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "세탁업",
+        "rows": 30785,
+        "max_abs_error": 2.3848066916798416e-06,
+        "max_relative_error": 5.9228760461849496e-08,
+        "pass": true
+      },
+      {
+        "b": "dong424",
+        "item": "목욕장업",
+        "rows": 30785,
+        "max_abs_error": 9.637139669393946e-06,
+        "max_relative_error": 5.859136576111812e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "교육",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.835157208306948e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "보육·복지",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.8948984165973785e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "의료",
+        "rows": 30785,
+        "max_abs_error": 6.0985427126070135e-05,
+        "max_relative_error": 5.9202667958452396e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "문화",
+        "rows": 30785,
+        "max_abs_error": 6.94292157277232e-06,
+        "max_relative_error": 5.857203968604631e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "체육",
+        "rows": 30785,
+        "max_abs_error": 2.8625162258322234e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "행정·안전",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.841928044281106e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "소매",
+        "rows": 30785,
+        "max_abs_error": 0.00027343212059349753,
+        "max_relative_error": 5.954773061613063e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "생활서비스",
+        "rows": 30785,
+        "max_abs_error": 0.00048480201803613454,
+        "max_relative_error": 5.894762373713308e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "유치원",
+        "rows": 30785,
+        "max_abs_error": 7.318225883068408e-07,
+        "max_relative_error": 5.9418070249153754e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "학교",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.914730873469665e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "청소년수련시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 4.922151562143373e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "어린이집",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.891210702305971e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "노인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 5.70422020729211e-07,
+        "max_relative_error": 5.926787097815607e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "장애인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.734001899625484e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30785,
+        "max_abs_error": 1.412850831883361e-07,
+        "max_relative_error": 4.1007995552622136e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "의원",
+        "rows": 30785,
+        "max_abs_error": 5.933963416282495e-05,
+        "max_relative_error": 5.883781254311675e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "약국",
+        "rows": 30785,
+        "max_abs_error": 1.236426908235444e-05,
+        "max_relative_error": 5.875219604130905e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "병원급",
+        "rows": 30785,
+        "max_abs_error": 4.724479740758625e-07,
+        "max_relative_error": 5.876377182846158e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "보건소·보건지소",
+        "rows": 30785,
+        "max_abs_error": 5.762378574303284e-08,
+        "max_relative_error": 5.267858499879985e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "응급의료기관",
+        "rows": 30785,
+        "max_abs_error": 1.9793240557675063e-07,
+        "max_relative_error": 5.6028366197669036e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "산후조리원",
+        "rows": 30785,
+        "max_abs_error": 4.2385525134136515e-07,
+        "max_relative_error": 5.298727053704724e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "공공도서관",
+        "rows": 30785,
+        "max_abs_error": 9.258973960868389e-07,
+        "max_relative_error": 5.668401704372882e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "문화기반시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 5.886266464812516e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "등록공연장",
+        "rows": 30785,
+        "max_abs_error": 3.792184188000647e-06,
+        "max_relative_error": 5.903907961837686e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "체육시설업",
+        "rows": 30785,
+        "max_abs_error": 2.8625162258322234e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "주민센터",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.841928044281106e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "소방서·119안전센터",
+        "rows": 30785,
+        "max_abs_error": 1.0707922228903044e-06,
+        "max_relative_error": 5.388259871983435e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "일상소매",
+        "rows": 30785,
+        "max_abs_error": 0.0002002254441322293,
+        "max_relative_error": 5.953723728539737e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30785,
+        "max_abs_error": 0.00011913214893866098,
+        "max_relative_error": 5.908651918197104e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30785,
+        "max_abs_error": 8.464152614351406e-07,
+        "max_relative_error": 5.6350231121654607e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "일반음식점",
+        "rows": 30785,
+        "max_abs_error": 0.0004617318154487293,
+        "max_relative_error": 5.915886579099277e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "휴게음식점",
+        "rows": 30785,
+        "max_abs_error": 0.00021284054491843563,
+        "max_relative_error": 5.9294166162486484e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "미용업",
+        "rows": 30785,
+        "max_abs_error": 3.046024676223169e-05,
+        "max_relative_error": 5.9351856795792193e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "이용업",
+        "rows": 30785,
+        "max_abs_error": 4.303761016899443e-06,
+        "max_relative_error": 5.913656847693343e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "세탁업",
+        "rows": 30785,
+        "max_abs_error": 1.8870884730404214e-06,
+        "max_relative_error": 5.9194024430216426e-08,
+        "pass": true
+      },
+      {
+        "b": "lz116",
+        "item": "목욕장업",
+        "rows": 30785,
+        "max_abs_error": 5.600026952379267e-06,
+        "max_relative_error": 5.7198150486101245e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "교육",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.8514501102435236e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "보육·복지",
+        "rows": 30785,
+        "max_abs_error": 6.704615202579589e-06,
+        "max_relative_error": 5.905164600165641e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "의료",
+        "rows": 30785,
+        "max_abs_error": 6.0985427126070135e-05,
+        "max_relative_error": 5.893391227607459e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "문화",
+        "rows": 30785,
+        "max_abs_error": 6.94292157277232e-06,
+        "max_relative_error": 5.8262596778740195e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "체육",
+        "rows": 30785,
+        "max_abs_error": 2.8625162258322234e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "행정·안전",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.8814508366237905e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "소매",
+        "rows": 30785,
+        "max_abs_error": 0.0003376613458385691,
+        "max_relative_error": 5.943808315142573e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "생활서비스",
+        "rows": 30785,
+        "max_abs_error": 0.00048480201803613454,
+        "max_relative_error": 5.938520060877455e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "유치원",
+        "rows": 30785,
+        "max_abs_error": 7.318225883068408e-07,
+        "max_relative_error": 5.712509154811585e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "학교",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.914730873469665e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "청소년수련시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 4.9257278504843956e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "어린이집",
+        "rows": 30785,
+        "max_abs_error": 3.7731550435182726e-06,
+        "max_relative_error": 5.905164600165641e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "노인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 5.70422020729211e-07,
+        "max_relative_error": 5.860512106574936e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "장애인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.5004208608020884e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30785,
+        "max_abs_error": 1.412850831883361e-07,
+        "max_relative_error": 4.073381424366529e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "의원",
+        "rows": 30785,
+        "max_abs_error": 5.933963416282495e-05,
+        "max_relative_error": 5.917095148770232e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "약국",
+        "rows": 30785,
+        "max_abs_error": 1.236426908235444e-05,
+        "max_relative_error": 5.9223691370906184e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "병원급",
+        "rows": 30785,
+        "max_abs_error": 4.7484995313595846e-07,
+        "max_relative_error": 5.810606601069171e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "보건소·보건지소",
+        "rows": 30785,
+        "max_abs_error": 5.762378574303284e-08,
+        "max_relative_error": 5.1844120033006647e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "응급의료기관",
+        "rows": 30785,
+        "max_abs_error": 1.9793240557675063e-07,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "산후조리원",
+        "rows": 30785,
+        "max_abs_error": 1.453352407310149e-07,
+        "max_relative_error": 5.7567236309208045e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "공공도서관",
+        "rows": 30785,
+        "max_abs_error": 9.258973960868389e-07,
+        "max_relative_error": 5.351305016177976e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "문화기반시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 5.663929226254003e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "등록공연장",
+        "rows": 30785,
+        "max_abs_error": 3.6727578560658003e-06,
+        "max_relative_error": 5.903907961837686e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "체육시설업",
+        "rows": 30785,
+        "max_abs_error": 2.8625162258322234e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "주민센터",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.8814508366237905e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "소방서·119안전센터",
+        "rows": 30785,
+        "max_abs_error": 1.0707922228903044e-06,
+        "max_relative_error": 5.388259871983435e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "일상소매",
+        "rows": 30785,
+        "max_abs_error": 0.00018005953097599559,
+        "max_relative_error": 5.953723728539737e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30785,
+        "max_abs_error": 0.00011553249669304932,
+        "max_relative_error": 5.909272121850382e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30785,
+        "max_abs_error": 8.464152614351406e-07,
+        "max_relative_error": 5.894899370240125e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "일반음식점",
+        "rows": 30785,
+        "max_abs_error": 0.0004617318154487293,
+        "max_relative_error": 5.9290425187093276e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "휴게음식점",
+        "rows": 30785,
+        "max_abs_error": 0.00021284054491843563,
+        "max_relative_error": 5.943191353243455e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "미용업",
+        "rows": 30785,
+        "max_abs_error": 3.046024676223169e-05,
+        "max_relative_error": 5.927301357261184e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "이용업",
+        "rows": 30785,
+        "max_abs_error": 4.303761016899443e-06,
+        "max_relative_error": 5.882226436796176e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "세탁업",
+        "rows": 30785,
+        "max_abs_error": 1.8870884730404214e-06,
+        "max_relative_error": 5.9194024430216426e-08,
+        "pass": true
+      },
+      {
+        "b": "ld",
+        "item": "목욕장업",
+        "rows": 30785,
+        "max_abs_error": 5.600026952379267e-06,
+        "max_relative_error": 5.894899370240125e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "교육",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.957639645855076e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "보육·복지",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.870340205192672e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "의료",
+        "rows": 30785,
+        "max_abs_error": 5.9669112033589045e-05,
+        "max_relative_error": 5.882183465601903e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "문화",
+        "rows": 30785,
+        "max_abs_error": 5.997599544116383e-06,
+        "max_relative_error": 5.9233431431323424e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "체육",
+        "rows": 30785,
+        "max_abs_error": 1.5243109487528272e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "행정·안전",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.8242483206737156e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "소매",
+        "rows": 30785,
+        "max_abs_error": 0.0003047052032343345,
+        "max_relative_error": 5.943808315142573e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "생활서비스",
+        "rows": 30785,
+        "max_abs_error": 0.000488189540192252,
+        "max_relative_error": 5.938520060877455e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "유치원",
+        "rows": 30785,
+        "max_abs_error": 7.318225883068408e-07,
+        "max_relative_error": 5.9418070249153754e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "학교",
+        "rows": 30785,
+        "max_abs_error": 3.1994235172305707e-06,
+        "max_relative_error": 5.7971678063140345e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "청소년수련시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 4.922151562143373e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "어린이집",
+        "rows": 30785,
+        "max_abs_error": 3.7745733578731233e-06,
+        "max_relative_error": 5.926496321181126e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "노인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 5.70422020729211e-07,
+        "max_relative_error": 5.8710698929846e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "장애인 이용시설",
+        "rows": 30785,
+        "max_abs_error": 1.4595363438729692e-05,
+        "max_relative_error": 5.283355696139579e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "가족센터(자치구 본소)",
+        "rows": 30785,
+        "max_abs_error": 1.412850831883361e-07,
+        "max_relative_error": 5.074143408843046e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "의원",
+        "rows": 30785,
+        "max_abs_error": 5.268179302220233e-05,
+        "max_relative_error": 5.9328938885863043e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "약국",
+        "rows": 30785,
+        "max_abs_error": 1.1332563985888555e-05,
+        "max_relative_error": 5.904568244830168e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "병원급",
+        "rows": 30785,
+        "max_abs_error": 4.144492820046253e-07,
+        "max_relative_error": 5.8168689814312296e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "보건소·보건지소",
+        "rows": 30785,
+        "max_abs_error": 5.1752050422848583e-08,
+        "max_relative_error": 5.1045417834627576e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "응급의료기관",
+        "rows": 30785,
+        "max_abs_error": 1.963447120445494e-07,
+        "max_relative_error": 5.805492392418899e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "산후조리원",
+        "rows": 30785,
+        "max_abs_error": 1.453352407310149e-07,
+        "max_relative_error": 5.503181945283433e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "공공도서관",
+        "rows": 30785,
+        "max_abs_error": 9.258973960868389e-07,
+        "max_relative_error": 5.7727718385185025e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "문화기반시설",
+        "rows": 30785,
+        "max_abs_error": 5.086263001885527e-06,
+        "max_relative_error": 5.657929884197089e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "등록공연장",
+        "rows": 30785,
+        "max_abs_error": 9.34073381131384e-06,
+        "max_relative_error": 5.611868350311095e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "체육시설업",
+        "rows": 30785,
+        "max_abs_error": 1.5243109487528272e-05,
+        "max_relative_error": 5.9377206773141164e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "주민센터",
+        "rows": 30785,
+        "max_abs_error": 1.8153543237531267e-06,
+        "max_relative_error": 5.687642799254181e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "소방서·119안전센터",
+        "rows": 30785,
+        "max_abs_error": 1.0707922228903044e-06,
+        "max_relative_error": 4.877746092270541e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "일상소매",
+        "rows": 30785,
+        "max_abs_error": 0.0001134489743890299,
+        "max_relative_error": 5.948274963188974e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "식료품소매(즉석판매·제과)",
+        "rows": 30785,
+        "max_abs_error": 0.0001208288508678379,
+        "max_relative_error": 5.9069587013252283e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "대규모점포(주요4업태)",
+        "rows": 30785,
+        "max_abs_error": 8.832445921314047e-07,
+        "max_relative_error": 5.894899370240125e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "일반음식점",
+        "rows": 30785,
+        "max_abs_error": 0.0004151214270677883,
+        "max_relative_error": 5.9358494290718185e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "휴게음식점",
+        "rows": 30785,
+        "max_abs_error": 0.00021284054491843563,
+        "max_relative_error": 5.9057398686472835e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "미용업",
+        "rows": 30785,
+        "max_abs_error": 3.0280569148999348e-05,
+        "max_relative_error": 5.9302409552523455e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "이용업",
+        "rows": 30785,
+        "max_abs_error": 4.303761016899443e-06,
+        "max_relative_error": 5.8970464657720806e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "세탁업",
+        "rows": 30785,
+        "max_abs_error": 1.8714547920239966e-06,
+        "max_relative_error": 5.8976477039039796e-08,
+        "pass": true
+      },
+      {
+        "b": "ku",
+        "item": "목욕장업",
+        "rows": 30785,
+        "max_abs_error": 3.7497347591397556e-06,
+        "max_relative_error": 5.894899370240125e-08,
+        "pass": true
+      }
+    ],
+    "supply": {
+      "교육": 2168.0,
+      "보육·복지": 5117.0,
+      "의료": 25223.0,
+      "문화": 923.0,
+      "체육": 10820.0,
+      "행정·안전": 606.0,
+      "소매": 48235.0,
+      "생활서비스": 199012.0,
+      "유치원": 734.0,
+      "학교": 1358.0,
+      "청소년수련시설": 76.0,
+      "어린이집": 4294.0,
+      "노인 이용시설": 580.0,
+      "장애인 이용시설": 218.0,
+      "가족센터(자치구 본소)": 25.0,
+      "의원": 18720.0,
+      "약국": 5705.0,
+      "병원급": 548.0,
+      "보건소·보건지소": 63.0,
+      "응급의료기관": 71.0,
+      "산후조리원": 117.0,
+      "공공도서관": 212.0,
+      "문화기반시설": 469.0,
+      "등록공연장": 452.0,
+      "체육시설업": 10820.0,
+      "주민센터": 426.0,
+      "소방서·119안전센터": 180.0,
+      "일상소매": 28743.0,
+      "식료품소매(즉석판매·제과)": 19362.0,
+      "대규모점포(주요4업태)": 140.0,
+      "일반음식점": 123091.0,
+      "휴게음식점": 37178.0,
+      "미용업": 32264.0,
+      "이용업": 2419.0,
+      "세탁업": 3507.0,
+      "목욕장업": 675.0
+    },
+    "seconds": 30.52
+  }
+]

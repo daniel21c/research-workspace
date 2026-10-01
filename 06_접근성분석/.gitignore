@@ -5,3 +5,4 @@
 !접근성분석_패키지/데이터/manifest_sha256.csv
 !접근성분석_패키지/데이터/검증결과.json
 **/__pycache__/
+_release_stage*/

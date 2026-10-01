@@ -1,0 +1,232 @@
+{
+  "root": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01",
+  "authority": "2026-09-29 explicit replacement and cleanup approval",
+  "task_created_only": true,
+  "preserve": "raw sources, metadata history, original audit, scripts/logs, KPA r2 ZIP/PDF",
+  "files": [
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\natstd_B\\grid_access_2020_100.parquet",
+      "bytes": 279741,
+      "sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\grid_access_2020_100.parquet",
+      "replacement_sha256": "c95fd4c713457bb55db65c55e997a386a09cbf6783a6572d9c524a2ac14a24db",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\natstd_B\\grid_access_2025_100.parquet",
+      "bytes": 281420,
+      "sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\grid_access_2025_100.parquet",
+      "replacement_sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\natstd_B\\nat_standard_coverage_2020_100.csv",
+      "bytes": 817760,
+      "sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\nat_standard_coverage_2020_100.csv",
+      "replacement_sha256": "9f321f7c5dc8771fede5fb55cd843ace32aca6a33c9f211157475b0bc5f46505",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\natstd_B\\nat_standard_coverage_2025_100.csv",
+      "bytes": 817409,
+      "sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\natstd_B\\nat_standard_coverage_2025_100.csv",
+      "replacement_sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\sens_union\\grid_access_2020_100.parquet",
+      "bytes": 1636581,
+      "sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\sens_union\\grid_access_2020_100.parquet",
+      "replacement_sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\sens_union\\sfca_unit_2020_100.csv",
+      "bytes": 15878493,
+      "sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\sens_union\\sfca_unit_2020_100.csv",
+      "replacement_sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\sens_union\\unit_access_2020_100.csv",
+      "bytes": 4224238,
+      "sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\sens_union\\unit_access_2020_100.csv",
+      "replacement_sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_main\\grid_access_2020_100.parquet",
+      "bytes": 1689395,
+      "sha256": "e547a2ba6a0d139e18b49e09fefe49f0af77c5cbd5ebf622218663bc07d634fc",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\grid_access_2020_100.parquet",
+      "replacement_sha256": "e547a2ba6a0d139e18b49e09fefe49f0af77c5cbd5ebf622218663bc07d634fc",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_main\\grid_access_2025_100.parquet",
+      "bytes": 1657343,
+      "sha256": "6ecab5938335dfff8006e729833b7b44ed74d01062864bbbc117ca9baa42cf80",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\grid_access_2025_100.parquet",
+      "replacement_sha256": "6ecab5938335dfff8006e729833b7b44ed74d01062864bbbc117ca9baa42cf80",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_main\\unit_access_2020_100.csv",
+      "bytes": 5212159,
+      "sha256": "613a6bf40c6b8896a2949fddd31f459442d45d10a35e3f7c1d979ceb4affb33f",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\unit_access_2020_100.csv",
+      "replacement_sha256": "613a6bf40c6b8896a2949fddd31f459442d45d10a35e3f7c1d979ceb4affb33f",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_main\\unit_access_2025_100.csv",
+      "bytes": 5213824,
+      "sha256": "44636d84870218967282a5e02097c92da2a681464e29f2c332fae9b27fef41c8",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_main\\unit_access_2025_100.csv",
+      "replacement_sha256": "44636d84870218967282a5e02097c92da2a681464e29f2c332fae9b27fef41c8",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_net2025\\grid_access_2020_100.parquet",
+      "bytes": 1674692,
+      "sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_net2025\\grid_access_2020_100.parquet",
+      "replacement_sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\results\\xb_net2025\\unit_access_2020_100.csv",
+      "bytes": 5212736,
+      "sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\xb_net2025\\unit_access_2020_100.csv",
+      "replacement_sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\fixed_ld2020_net2025.csv",
+      "bytes": 61179,
+      "sha256": "217dca448623263a8f8d3461de25d9770eb75ddc95fe109c74ca11e38f79d281",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\fixed_ld2020_net2025.csv",
+      "replacement_sha256": "217dca448623263a8f8d3461de25d9770eb75ddc95fe109c74ca11e38f79d281",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\fixed_ld2025_net2025.csv",
+      "bytes": 60584,
+      "sha256": "0ae34a1f10b9f2c82e178d27ea23bf6431e1782725468e00776c43051084eb07",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\fixed_ld2025_net2025.csv",
+      "replacement_sha256": "0ae34a1f10b9f2c82e178d27ea23bf6431e1782725468e00776c43051084eb07",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\moving_ld_moving_net.csv",
+      "bytes": 61809,
+      "sha256": "794593af57e710c6a103f1747a60def4f0caaa7e62d859ef6ae29f2101e8b4a4",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_moving_net.csv",
+      "replacement_sha256": "794593af57e710c6a103f1747a60def4f0caaa7e62d859ef6ae29f2101e8b4a4",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\moving_ld_net2025.csv",
+      "bytes": 61777,
+      "sha256": "5f8a738e3fd024c39c90e36214591b014a5fe7013dec5e16073a81632caff970",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_net2025.csv",
+      "replacement_sha256": "5f8a738e3fd024c39c90e36214591b014a5fe7013dec5e16073a81632caff970",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\moving_ld_snap.csv",
+      "bytes": 61705,
+      "sha256": "2da3ac5e8f27428480e0901dffb0f18292b722c59ee251cc06c1055fa06a0fbe",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\moving_ld_snap.csv",
+      "replacement_sha256": "2da3ac5e8f27428480e0901dffb0f18292b722c59ee251cc06c1055fa06a0fbe",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\temporal_common4\\verification.json",
+      "bytes": 4871,
+      "sha256": "ecf8357cbad306423ef6964e73bc7a07aee68da410cb88ee3d71848d2d5e763a",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\접근성분석_패키지\\데이터\\결과\\temporal_common4\\verification.json",
+      "replacement_sha256": "ecf8357cbad306423ef6964e73bc7a07aee68da410cb88ee3d71848d2d5e763a",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\kpa_results\\b5_category.csv",
+      "bytes": 2221,
+      "sha256": "c6e3b0e8e2abddfbb4049f062991295ccea0cc9dc0acfe643f500d16e1200b63",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_category.csv",
+      "replacement_sha256": "c6e3b0e8e2abddfbb4049f062991295ccea0cc9dc0acfe643f500d16e1200b63",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\kpa_results\\b5_dong_access.csv",
+      "bytes": 228097,
+      "sha256": "c3a6a759e494c10631285d54cf8f7382a4d5267aec1e3ab388c6671744b76334",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_dong_access.csv",
+      "replacement_sha256": "c3a6a759e494c10631285d54cf8f7382a4d5267aec1e3ab388c6671744b76334",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\kpa_results\\b5_group_summary.csv",
+      "bytes": 2889,
+      "sha256": "9f7f77e9d5b19eb14b59221fd6916f7b5fea2277604c5b416924fa2539a1f8cc",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_group_summary.csv",
+      "replacement_sha256": "9f7f77e9d5b19eb14b59221fd6916f7b5fea2277604c5b416924fa2539a1f8cc",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\kpa_results\\b5_summary.json",
+      "bytes": 4131,
+      "sha256": "81629b17691357295c09a29e88c6a8a21128918e7f5e557bd4ca0d0ff68c8161",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_summary.json",
+      "replacement_sha256": "81629b17691357295c09a29e88c6a8a21128918e7f5e557bd4ca0d0ff68c8161",
+      "reason": "verified staged output replica"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\before\\kpa\\output\\tables\\benchmark\\b5_category.csv",
+      "bytes": 2221,
+      "sha256": "c6e3b0e8e2abddfbb4049f062991295ccea0cc9dc0acfe643f500d16e1200b63",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_category.csv",
+      "replacement_sha256": "c6e3b0e8e2abddfbb4049f062991295ccea0cc9dc0acfe643f500d16e1200b63",
+      "reason": "superseded task-created b5 rollback replica; original hashes and numerical comparison retained"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\before\\kpa\\output\\tables\\benchmark\\b5_dong_access.csv",
+      "bytes": 228750,
+      "sha256": "87287d7ad2c97fec3fafa85bde831e2dff1fd1240dab83e3e888871c5137272e",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_dong_access.csv",
+      "replacement_sha256": "c3a6a759e494c10631285d54cf8f7382a4d5267aec1e3ab388c6671744b76334",
+      "reason": "superseded task-created b5 rollback replica; original hashes and numerical comparison retained"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\before\\kpa\\output\\tables\\benchmark\\b5_group_summary.csv",
+      "bytes": 2907,
+      "sha256": "2b013d2970c2bee657deede25605302e4b1a18e6781360de4c0a48df32f451ff",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_group_summary.csv",
+      "replacement_sha256": "9f7f77e9d5b19eb14b59221fd6916f7b5fea2277604c5b416924fa2539a1f8cc",
+      "reason": "superseded task-created b5 rollback replica; original hashes and numerical comparison retained"
+    },
+    {
+      "path": "D:\\Research\\00_박사논문_연구체계\\06_접근성분석\\_release_stage_20260929_01\\before\\kpa\\output\\tables\\benchmark\\b5_summary.json",
+      "bytes": 3951,
+      "sha256": "c985ec3cc3c84af92cb3dbbd489caae03860423f3acd9ceda2e9cfb5e02a72fd",
+      "replacement": "D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\output\\tables\\benchmark\\b5_summary.json",
+      "replacement_sha256": "81629b17691357295c09a29e88c6a8a21128918e7f5e557bd4ca0d0ff68c8161",
+      "reason": "superseded task-created b5 rollback replica; original hashes and numerical comparison retained"
+    }
+  ],
+  "bytes": 45382883,
+  "count": 27,
+  "status": "deleted after validated replacement; exact inventory retained",
+  "deleted_at": "2026-09-29T12:32:23.3316844+09:00",
+  "deleted_count": 27,
+  "remaining": 0,
+  "stage_removed_from_share_tree": true,
+  "stage_archive_evidence": "stage_archive_inventory.json"
+}

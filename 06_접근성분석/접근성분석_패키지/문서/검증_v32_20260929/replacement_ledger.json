@@ -1,0 +1,2471 @@
+{
+ "schema": "replacement-ledger/1",
+ "release": "access-engine-v3.2-facility-v1.3-20260929",
+ "baseline_files": 1223,
+ "canonical_concurrent_changes": 0,
+ "replacements": 120,
+ "new_files": 90,
+ "files": [
+  {
+   "path": "README.md",
+   "old": {
+    "sha256": "c16ec9fd3e17bb449c2ab26b067b1082b95ea38dfcc5a2aa4da7bb2abc452bd6",
+    "bytes": 11470
+   },
+   "new": {
+    "sha256": "9ec026a91afb9d91d38930d4d34f776bb79b665e2039113963b56b83d74b869d",
+    "bytes": 11614
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/release_provenance.json",
+   "old": {
+    "sha256": "0d8f700730421e29491e7e2b65a06e321d6213b65093ea6d958f559d273b3ded",
+    "bytes": 270387
+   },
+   "new": {
+    "sha256": "be41fce21c212a1f11482fd51a4d51e792b7aed353bcbe7c14cdc8df24009749",
+    "bytes": 251262
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/검증결과.json",
+   "old": {
+    "sha256": "0e11826be1cdbf73e968df6bc0b74d0e529c5dc83004344263e279a3f124ab58",
+    "bytes": 14060
+   },
+   "new": {
+    "sha256": "c7472f6a023eb1935d1fef32b2be69c5073437af263c4d2adf2f267b2fb7d75c",
+    "bytes": 19677
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/figures/F3_dong_dCOV_dMAI_2025.pdf",
+   "old": {
+    "sha256": "cd3b18d52f81445b4a7ace127ffb53f499f300b55e8864319e5d0ad756785bcf",
+    "bytes": 3707478
+   },
+   "new": {
+    "sha256": "4ed5879a12c2b1d9b4fc11b56fc50476dfebc731c200f3f5b037138a60eed3cd",
+    "bytes": 3707478
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "cd5e32ae04b1ef704f3b42e44a2d15133c9eac760e7e764d489a8fe278f56d55",
+    "bytes": 1603841
+   },
+   "new": {
+    "sha256": "6d0ae4b56e475cf17453ae7ac18788502d6b3911986d272a87c0847afd730ba3",
+    "bytes": 1621304
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "2ea3cadf6f99b036b32026636fc2dada06ecc3ba82d734a98e0fd41908aba35e",
+    "bytes": 1560826
+   },
+   "new": {
+    "sha256": "d2d08e5e66dc1f3febfb50218b49726071c18985031d342d30d2709e9524d004",
+    "bytes": 1561994
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/grid_sfca_2020_100.parquet",
+   "old": {
+    "sha256": "1cc84127d13fb80456496679103969747443f73db9e59b1ec5a58e88907aa8cd",
+    "bytes": 15495308
+   },
+   "new": {
+    "sha256": "6fd815a232f8da1c765259e8fad159088d0e0e366713d9be7f98cad61c432739",
+    "bytes": 15494198
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/grid_sfca_2025_100.parquet",
+   "old": {
+    "sha256": "a1e8b82be8edbb55f6d8121344bc4ad703bb368767d875f67a7355f638400ae6",
+    "bytes": 15655564
+   },
+   "new": {
+    "sha256": "d3fa2064ab4b8a22c243dc409eeb452169533696b4a557b00d41e58944192949",
+    "bytes": 15655219
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/run_meta_2020_100.json",
+   "old": {
+    "sha256": "be7f387260d87575b45ad0547f8585b589b488a3e9cb6786f2e4a15fe71be1a6",
+    "bytes": 3153
+   },
+   "new": {
+    "sha256": "edad5187990a278460f770f71d3c31f56fb698256ae4c957f52e8eeda17c32b3",
+    "bytes": 37545
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/run_meta_2025_100.json",
+   "old": {
+    "sha256": "90c1bb9d158687d142ec64a2cd8084a09aa199ac29b4003fc61e1ba934588ed2",
+    "bytes": 3150
+   },
+   "new": {
+    "sha256": "c96756984cff7040ff106e472f0fb6f872dddf706d803c8618b31cd5553324dd",
+    "bytes": 37718
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+    "bytes": 15878493
+   },
+   "new": {
+    "sha256": "820d9ec1fc668dc5563797fefa754004e9f1b69c5a6533d7fcece58bf894204c",
+    "bytes": 15878518
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "4970a714ac3bb61196e34c3eea3556666f4332fb94145c22f0f6aba246aa8e24",
+    "bytes": 15878915
+   },
+   "new": {
+    "sha256": "db307479262e62dbe002a425b4c538e093a506721454d77cffd126c947d4e64b",
+    "bytes": 15878928
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/summary_main.md",
+   "old": {
+    "sha256": "58665a800fbceeb527c7db758d09a4bc36cf19313195bd5dce6fccbfe4c3b7e4",
+    "bytes": 12341
+   },
+   "new": {
+    "sha256": "d47ae541e590a8005290ad7a35f2a3010edd7aa55ae1409bb4c1c45087e18594",
+    "bytes": 12343
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "4a6da7a1ca2a2ba45a39736c9de16eb247ca14e4430737a89128b80b0b74fce2",
+    "bytes": 3674475
+   },
+   "new": {
+    "sha256": "1ea674424f5dc95594527519bef30519079c6adb0808ebbf292a31d35779812e",
+    "bytes": 3674356
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/main/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "62a0ef5df1fd87a828bfde3795b439cb86e1b1c4b8676f465e86cb3fe675bf0d",
+    "bytes": 3675726
+   },
+   "new": {
+    "sha256": "2bfde3a94d673bc6afc674d8284ecf0ff8332e28da2a4612524f04b1c7264ce9",
+    "bytes": 3675726
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/natstd_B/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "3369eae69beda6e668252d8ba7e596176a150bbbcd8312949e4eabd6b4524416",
+    "bytes": 281420
+   },
+   "new": {
+    "sha256": "c764659d01abb30d5c315af6099d2870ca50645b5a84dcbd89a973e962751886",
+    "bytes": 281418
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/natstd_B/nat_standard_coverage_2025_100.csv",
+   "old": {
+    "sha256": "58f155cdc095b7d94055f92bbb55846622110c436bb4acd15a4f299ae3e0a2cf",
+    "bytes": 817409
+   },
+   "new": {
+    "sha256": "e309d3a18581e429aae32a1348718302465b90861f0dc6bd95eadb7f5151b43a",
+    "bytes": 817409
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/natstd_B/run_meta_2020_100.json",
+   "old": {
+    "sha256": "cc4a66ed240a88a1267dc56b878072f09d52ecb472c051115f57bce2bece12b7",
+    "bytes": 47315
+   },
+   "new": {
+    "sha256": "7fde5449d6fea29494423ac592ec1e3e2f30ee33cebdc08b3045493d9894d73f",
+    "bytes": 35928
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/natstd_B/run_meta_2025_100.json",
+   "old": {
+    "sha256": "7b40c35099747d32b544248c73f4d24b83267d8680750d0cb7464c956195a2e4",
+    "bytes": 47554
+   },
+   "new": {
+    "sha256": "f1a43a2b238f8ffdb5fb44f2e3427db4d375ae0d2ee87ed558864651baa3e4e1",
+    "bytes": 36105
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/natstd_B/summary_natstd_B.md",
+   "old": {
+    "sha256": "bc98b42cc121de7327406f969d388d7cdfdb5669a97ee36187664502c387f147",
+    "bytes": 2187
+   },
+   "new": {
+    "sha256": "cf90598e2481393ceed124b792421fd1eed15ff806b8ae80f3cf8777f9b18ac8",
+    "bytes": 2189
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "86c47d3609e5b0839d35ec9be76dbce2b95c7ece52b4fe19283cbb5329a0a784",
+    "bytes": 839155
+   },
+   "new": {
+    "sha256": "97c4b8b80af65224d5886bbe4c03a03582d970b26fe394c84931e7ff0d6e410d",
+    "bytes": 839155
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "024127ef2f6dfbf73b4a797567be55cd11762992b9ec624b00de5c58e3446560",
+    "bytes": 843881
+   },
+   "new": {
+    "sha256": "85422bb39727e6de3ca92e70d3f71ba656ce00103bc0d9eddf367d88ad612a59",
+    "bytes": 843886
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/run_meta_2020_100.json",
+   "old": {
+    "sha256": "2edb8ef908b39c115ae95415f0cea97f6c7c4740d71e7bbd0b2ecd4f63620755",
+    "bytes": 1399
+   },
+   "new": {
+    "sha256": "c1e05f9d8adc87e4730b6e19332a144d0c710c1b86b9f6fa13f8a9bbbef55b86",
+    "bytes": 35828
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/run_meta_2025_100.json",
+   "old": {
+    "sha256": "9f7deb674bab6224d059c4621f589171dff03d34143ddd27b8beddd4a26f6604",
+    "bytes": 1399
+   },
+   "new": {
+    "sha256": "9825fff2ead3523ae150d01fde94ac86d52488973e106a33b3975d18c25a5207",
+    "bytes": 36005
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/summary_sens_A4.md",
+   "old": {
+    "sha256": "02e6501525e81a31aeca4d9fea4c5d7a1fc2022ce9776c615b141c9fb46c32c0",
+    "bytes": 5313
+   },
+   "new": {
+    "sha256": "9deb3fe0836e2865360998fcff1acbd45d073c4a9e7b678b01ebc8888492de2a",
+    "bytes": 5315
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "9715168800f15daee734a614a02eeebc1325f742d2b128a9a9c78c0a9138a804",
+    "bytes": 2127384
+   },
+   "new": {
+    "sha256": "312df8c95524243469f77f048633a27f141351a3e03cf95fed3a7e1a40198df8",
+    "bytes": 2127384
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_A4/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "ee87f4da413e2f80d11e23614d9ef4e4eea1f87bf8e484b433214a1647405fe6",
+    "bytes": 2127711
+   },
+   "new": {
+    "sha256": "134684964e1b7e519ed03a9aa9aa1d91f76c25fce1419ee1153d1cb79a3fd923",
+    "bytes": 2127711
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/grid_access_2020_250.parquet",
+   "old": {
+    "sha256": "4e3fdac5dac53b05b3f530c33ed990917dd3349dc51f5cbdadd4fe9f02e3b91d",
+    "bytes": 380259
+   },
+   "new": {
+    "sha256": "9f963d978e2833b60241dde226e236b05b253936c8ef4fe6bb24ab766ac5f54d",
+    "bytes": 380241
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/grid_access_2025_250.parquet",
+   "old": {
+    "sha256": "2dd2e7e8923b49579948c6e5dab596a79cb9cb5ac8ed6bf3bded4ce83bf6631c",
+    "bytes": 376274
+   },
+   "new": {
+    "sha256": "2e70b1b324e839c3bd580edbef3cfeb50fe171d049bba64a60edb35bc276a3de",
+    "bytes": 376196
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/run_meta_2020_250.json",
+   "old": {
+    "sha256": "0f0500df40a115431a9badfb39ad1db82f1cc09ac821c309d6019b1fc2e1c4b1",
+    "bytes": 3010
+   },
+   "new": {
+    "sha256": "06a0e0cd7cb26015a4553f8508a6df574c5c2b57295dafa71867b1bc7c9db96d",
+    "bytes": 14298
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/run_meta_2025_250.json",
+   "old": {
+    "sha256": "45bebe1a4bd2e004158f70f8d78a95cdd504f350dff2c3c6bc22c26c90edbe6c",
+    "bytes": 3011
+   },
+   "new": {
+    "sha256": "f53e7e8c4651b075d5001b854bc5b010b803e3c9b351e614684d3748e1a45532",
+    "bytes": 14300
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/sfca_unit_2020_250.csv",
+   "old": {
+    "sha256": "fbac5b6840f9850f5f547ef77bdaa408d205c49bca6f5dc830651cad1062908a",
+    "bytes": 15876808
+   },
+   "new": {
+    "sha256": "286f50967dc653dae70a2b6a327ed84ca92665f7657be930823232c451c24263",
+    "bytes": 15876894
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/sfca_unit_2025_250.csv",
+   "old": {
+    "sha256": "764e9d70fa3ec931cd2c9496c80e0e844bfc31a2df2c009a1bbae448a537700e",
+    "bytes": 15877936
+   },
+   "new": {
+    "sha256": "a5ed8214a8e90aa9cc0061bf46c0f47559d6edbeb510c7b9ba731217c6c424b3",
+    "bytes": 15877959
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/summary_sens_grid250.md",
+   "old": {
+    "sha256": "7e3cf11c7855f22c3a635076812fff7cab0cd20269c438d131de3dc7feccbd39",
+    "bytes": 12191
+   },
+   "new": {
+    "sha256": "40cb95f5d93b025ac9eda63a60bf994c48565968ac54495851a84b1cd71b96c0",
+    "bytes": 12193
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/unit_access_2020_250.csv",
+   "old": {
+    "sha256": "5b315fd1ebee9aac6a20eece8b1c251ad9a1e9c79934a6e4f032d4db144b1c7b",
+    "bytes": 3666608
+   },
+   "new": {
+    "sha256": "44c1657b020e6358eb0edfa63d44ec726a03dcda547bc6ab6986daa2fa4f452b",
+    "bytes": 3666603
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_grid250/unit_access_2025_250.csv",
+   "old": {
+    "sha256": "ab2382eb1a5568532d83b282a414ade3480bc06583c6f5d4b8d9ff3187b4a88c",
+    "bytes": 3668739
+   },
+   "new": {
+    "sha256": "9a400178b0bf93f187030e8a2e815f647aacbe2be843d0b14b9dff4c47389a35",
+    "bytes": 3668734
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/decomp_network_2020_2025.csv",
+   "old": {
+    "sha256": "9a1c1440bb8f7caa3f58358efd070d9d825b1562f153df5ca9b750025b7c88da",
+    "bytes": 3478
+   },
+   "new": {
+    "sha256": "e0d63528181f66f18fdaca62a9985efd786321ddc5b6c76524d1f55e402e24d4",
+    "bytes": 3478
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "d27cdae126af85e94ee81c33d0ba119414a216ea72b4bf48eec61aee9f99c288",
+    "bytes": 1656382
+   },
+   "new": {
+    "sha256": "d9426a9d1738743793b44d63868a3f30a6afa42d93c2eb796288ead21489f676",
+    "bytes": 1674037
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/run_meta_2020_100.json",
+   "old": {
+    "sha256": "b63ca78b0e2e66df9efc9dbd0f770d610cedfcbbef6b1399f7b08f2cf8bda624",
+    "bytes": 3155
+   },
+   "new": {
+    "sha256": "20cc6f5030be658db46e1ceb30a220a3eaf4875fe953f991b3e9ea92dc083c52",
+    "bytes": 42296
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "e47a5e84f0b4c93e4f0d50c5f72d3b2799b0e041247246f5f9fa8c98e4545c5c",
+    "bytes": 15878477
+   },
+   "new": {
+    "sha256": "03590f4ecdd246c0ffca755d48298e06d75843b99c416fcfb1c9f46c01f1262e",
+    "bytes": 15878502
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/summary_sens_net2025.md",
+   "old": {
+    "sha256": "71212ed2abaed7bf9160a5f5423343f3eb9afe3af22eeddc6912bd3341c0676b",
+    "bytes": 13636
+   },
+   "new": {
+    "sha256": "df8b6e7b3aa209cd9cd7f4b58a0f88171c54578179c5e0be0ac822dfc1854a10",
+    "bytes": 13638
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_net2025/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "50bed0d773598f14d7abbb4de48b1419a832151820b2f15dfc7507bfbb1f0b37",
+    "bytes": 3674882
+   },
+   "new": {
+    "sha256": "b920a213d686558637eff1019350cc2e966ac98905f91e285c8044881a599954",
+    "bytes": 3674833
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "2c0671dd10a3306d2ccc1234b36039deebc2d5d049d43ec2fc0f3c6700529a84",
+    "bytes": 1665020
+   },
+   "new": {
+    "sha256": "764476eaa5b940ddb47c74a22856630c28cc115fc158a293b26a34e444f51a18",
+    "bytes": 1665442
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "dfc1d3e4631f76eba4b425fa2a213bb561863af0c8d9b823a633f25b7a4551f9",
+    "bytes": 1591229
+   },
+   "new": {
+    "sha256": "1ea3345c4b5bc742184072df5b72e9b2412b0d0bea0c0fcca3a3b00aa693192c",
+    "bytes": 1591787
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/run_meta_2020_100.json",
+   "old": {
+    "sha256": "0ee65cafd781424fdb332cbfb2274c75d43a78c0dc4299c25ff9048b378577e0",
+    "bytes": 3063
+   },
+   "new": {
+    "sha256": "c8b3c2f23ec4d50f98010922166fbc007a0a8fd227eab21ab690eacf02312e87",
+    "bytes": 37432
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/run_meta_2025_100.json",
+   "old": {
+    "sha256": "5c0590c6f2c2f40654bf06a7f6b0e7493087a07a1212569fbb8db3d22167eea8",
+    "bytes": 3059
+   },
+   "new": {
+    "sha256": "6b36f78b7809843050651fa84b9d7af7dba0d68a2f8772e8e5f604c5ba05d81d",
+    "bytes": 37604
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "b7d4befb66a81683e606ee7d84b509e7d0cb57b66abe9f48045b27a8656217ab",
+    "bytes": 15795366
+   },
+   "new": {
+    "sha256": "5849f6bf6eb2c29a8543e85d37fb186636548a7280135b89521fedce6cc021d1",
+    "bytes": 15795391
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "98d18fcaef5cc24e1c93a35a7e0d196567dda9c4c9461e1e8c61fbbd7e0a6c41",
+    "bytes": 15795797
+   },
+   "new": {
+    "sha256": "37d2cd8b273d8df584a1c6d95335d8155978f611ce3e05609d3e4046e8b14d78",
+    "bytes": 15795810
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/summary_sens_retail_without.md",
+   "old": {
+    "sha256": "cf7320dc8150b1780ef8f9e4a848ff7839208b03324386195c0c97572030a660",
+    "bytes": 12262
+   },
+   "new": {
+    "sha256": "85bef5fd57c0a26d5997ee582fd90f86face46d27ed360c7b27ca54137fad41c",
+    "bytes": 12264
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "e7e09717482414b540be48047a2d362dd366ceced5584aef41bd07b2c9b06b56",
+    "bytes": 3768796
+   },
+   "new": {
+    "sha256": "427d520168b55c8636de3427e3a8f6e06c53e27ba00b2ea0b833d0e86055af8d",
+    "bytes": 3768677
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_retail_without/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "bce94af8b31a79ecd5cc11cf72ba2eed52f7bc2c4bd43b3cd32cdd5ab1187f49",
+    "bytes": 3769757
+   },
+   "new": {
+    "sha256": "3a8314baf925d715ba2a14add9e4c9702151d560bc1222b1edb33da133c138ab",
+    "bytes": 3769757
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "3ffa01b7c23233afe495af953ea18779d2ce1100d839ce8f25451479b95150cf",
+    "bytes": 2461126
+   },
+   "new": {
+    "sha256": "afd303431be56652a8b1c2c5bf8146ba3ed62a4b26b5e250228f58d3f4432906",
+    "bytes": 2467525
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "50c9997163e0cef202e3c861711dbdacefbf930f1d58653fe42bb614453820d9",
+    "bytes": 2420962
+   },
+   "new": {
+    "sha256": "51e8a7401b829866725c8571762612353f733608be3e4d0de836096e83c957f0",
+    "bytes": 2420849
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/run_meta_2020_100.json",
+   "old": {
+    "sha256": "a549bc38b474dae6d0aec9d057f57d6b1c54af771fe559b1a87d742218d801d5",
+    "bytes": 3130
+   },
+   "new": {
+    "sha256": "3dd1278f361e69a053431b02f7831ab64c7d343516ce31cde24ceecaeda2274d",
+    "bytes": 37686
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/run_meta_2025_100.json",
+   "old": {
+    "sha256": "d74a00e1009b5722c276d8629ec46caef7cf96774984cbcbc324c0ddca3cf582",
+    "bytes": 3122
+   },
+   "new": {
+    "sha256": "ade646b6a83ea8d1d8bc51b70f4fbcb28d7780160c12ad679634b5c9556548bb",
+    "bytes": 37856
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "e276108aec111a58196fe2fe3ae2e1572211990c814c1fb69a1d129b35fdfb5a",
+    "bytes": 15878467
+   },
+   "new": {
+    "sha256": "38f342139385b2b5ccf3a13a711c35175302b2fd267fb4e06f99ee06184b2089",
+    "bytes": 15878496
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "5780ec88489db4bce508f65fbdcb365dd71fd5251d0acfc53562da71daf93396",
+    "bytes": 15878933
+   },
+   "new": {
+    "sha256": "7cd294cc0f59b296e8ac1e446926a10cc86dfaad7c60516804ced867b5f1ef81",
+    "bytes": 15878947
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/summary_sens_snap.md",
+   "old": {
+    "sha256": "c42ba62e13d8eb02c9475ac6441ba8774a0a96b196096390de6afceb7d6d6c7d",
+    "bytes": 12304
+   },
+   "new": {
+    "sha256": "7682640a43eca95125e70a62abff70e50a7707eea5d50e320a397d4ae3334726",
+    "bytes": 12306
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "536a108e3116b3dce8fef44c9eef1b74257a4b2729c6c16c7398f345eaff8ac9",
+    "bytes": 3676049
+   },
+   "new": {
+    "sha256": "1201c212c01febac9dd11a3d1a3f1eea458d53f15975286081be36844e8f8904",
+    "bytes": 3676003
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_snap/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "0c5b682ad917fb264c103e1f614a1f1b4b7291aa3d877c261b8faed9111d53cc",
+    "bytes": 3676966
+   },
+   "new": {
+    "sha256": "4776b9d6d738bed3e0de4eaad7466443b89d3f1a6fcc8b7f6dd096cff1ccad47",
+    "bytes": 3676965
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "a307849a27ff6b8b8471f8e655e9e058a4fba3948bb4be368d1997848139cef7",
+    "bytes": 1617595
+   },
+   "new": {
+    "sha256": "e74530c2edba879b5188ba6d55f0f59a19dc089ae1f471fc4b2f4f769a091a05",
+    "bytes": 1634915
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "46b7f22ce9035ce4ca6eb6cdaa919f9f0acf7747a586fbc4d7c152cdb8f18369",
+    "bytes": 1576837
+   },
+   "new": {
+    "sha256": "1b4726acddcc111ed3c5ad0cef5d1df9c7ac28f622edc4fd477b57c858318cc9",
+    "bytes": 1577747
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/run_meta_2020_100.json",
+   "old": {
+    "sha256": "0329e1a3d2a41dc6aac30a6f3dd1d287355ebc95d59519035282e8a14e85b1c5",
+    "bytes": 3015
+   },
+   "new": {
+    "sha256": "fb011b8d8c7937f753ce8e51e6a3fe3cc1bd45fc9dff2be7dcb82aebefe6c93a",
+    "bytes": 37404
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/run_meta_2025_100.json",
+   "old": {
+    "sha256": "e6d51b5f24d2519e0c856130a1a35fe0373b8eab1fea8abe2d7717fdacfa88f0",
+    "bytes": 3007
+   },
+   "new": {
+    "sha256": "78596fac073c2f456b4da943c6fd99f28ab9eceb28f0347ef1c129c759b0c8fe",
+    "bytes": 37573
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "1945316c0af05093fa268d15937931d0c865c40e7ee4db75d838adf95cea7ff2",
+    "bytes": 15878443
+   },
+   "new": {
+    "sha256": "0e529e5b9af241e2f357146c44a529851a5e8b0d3e5cd4e63fec9ae8ab2429d0",
+    "bytes": 15878472
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "645b8cbd50a1a023e0bfc070c52f37fcc2e9da45c7464368ef657632fe886d00",
+    "bytes": 15878928
+   },
+   "new": {
+    "sha256": "b0ee6dcf3ae34765f6ddfc8b7db6ae968f6c8c7e8a51381f667bac2a19d22350",
+    "bytes": 15878940
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/summary_sens_speed36.md",
+   "old": {
+    "sha256": "1695962bec7d8494d7f59921b2b60915fe12f2efcfaa0181d9ec4b004a975baf",
+    "bytes": 12196
+   },
+   "new": {
+    "sha256": "26a8ba32c50b39bc911c3f5410d470e9bd3c64aac62727455fd7ad81e4c2ff45",
+    "bytes": 12198
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "bee1de1b9882916606d1f693b36f4baf527af3180145ba88632624a72b20e509",
+    "bytes": 3674524
+   },
+   "new": {
+    "sha256": "1f309c86a8fabe5495a04160a8ce32884f16ebd4ee641d34e8ef73058850a500",
+    "bytes": 3674474
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_speed36/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "8221cc4da3bb7d36b885bbfa218239b48e2d399c265b8b1bbf2a623c626f043d",
+    "bytes": 3675765
+   },
+   "new": {
+    "sha256": "6a9ac31676cd065c88af36b8e7a94bf198fe2cfd67a122bb863b6792d815e173",
+    "bytes": 3675765
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "4c8c76c892d501906a1bbf9e4666c5b0342bedfe2280d394883fd17cc4d00320",
+    "bytes": 1648693
+   },
+   "new": {
+    "sha256": "95e426144bce7b0e69cf14f68528f232da6c3567a8556a184a7ae2395b9ee696",
+    "bytes": 1665865
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "ede95f738cdc15ba48dd23bdad447b811bfa791ccf3448bf5b73ca30c62183fe",
+    "bytes": 1612008
+   },
+   "new": {
+    "sha256": "23bcfecd0d005c9a2d8aa69c7d0f4c3cbdc0f067bb7ffce00bf5433ba0617b43",
+    "bytes": 1612856
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/run_meta_2020_100.json",
+   "old": {
+    "sha256": "bdd48b9a01b66442b22c751d5c71e5f8bdf25c21eeb1ff91fbc3bb729deadb4d",
+    "bytes": 3015
+   },
+   "new": {
+    "sha256": "aa644a6522f86ec88b791a2e2fd0720a46ebd9ea716f9bbc5a75989640e03ec5",
+    "bytes": 37414
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/run_meta_2025_100.json",
+   "old": {
+    "sha256": "ecdf5366ffa0451966d0b4388fa380569e548bdd85a36b6999bdae2ed9c95ea4",
+    "bytes": 3015
+   },
+   "new": {
+    "sha256": "9dc6f0a0327ca474e7b344282c43804ca389388069f7ee260a4bf145d590ae45",
+    "bytes": 37591
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "14be8efb25b510848da57008397f3ce54d5e924f26a82b7842679dbf21517ec3",
+    "bytes": 15878577
+   },
+   "new": {
+    "sha256": "320de693c0fab0a8dfb14498f849fab97369962074094eaac84856ada4212ab0",
+    "bytes": 15878602
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "39b6b6c574441c74bb2cf16e67913900a16beee35ecd6a906786ed73aa9f4ab3",
+    "bytes": 15878988
+   },
+   "new": {
+    "sha256": "90ab16f0b203bc09db35855c95f8b664eabbeadb89610dc323f6a630d84e1c4a",
+    "bytes": 15879003
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/summary_sens_T600.md",
+   "old": {
+    "sha256": "c1286c8e8c96876480afa4cb87d118ffa260bb3a26dc926a971af40b2577df47",
+    "bytes": 12204
+   },
+   "new": {
+    "sha256": "54e8556fa49775d3228f2909204f38a93c4c4a8cddf09ae4677ab1471761296e",
+    "bytes": 12206
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "870ad6a0763fb0b37319d00b3b17ca47ff3f8a542b4fc8790cdc62ccf40336f9",
+    "bytes": 3670676
+   },
+   "new": {
+    "sha256": "548681f952eec94ea699f2e7924dccf258f9906609baae9b3e7d61aa49ade2c1",
+    "bytes": 3670622
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "0e026dc8ff72993b64f675f88e931ad047cc74fb786a176f4795a5cec341d129",
+    "bytes": 3672646
+   },
+   "new": {
+    "sha256": "f008153e819183e263ac876c84dfe5023d0435c5a1f468c444e49c736558b980",
+    "bytes": 3672645
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "d39873431bffb495a03c727dbc842ba8cc15fcff5ce998565fc2ffc4f46b79e0",
+    "bytes": 1636581
+   },
+   "new": {
+    "sha256": "aee538fffdfb4bfc947ec635671453f0ce68789f6e97dc3c59696fea93dc8bc9",
+    "bytes": 1654097
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "b4ceee96454a601a7b67736d076cad715014408056807a98d441c35c36c313f2",
+    "bytes": 1593556
+   },
+   "new": {
+    "sha256": "1c3893b276b0c99d1efaa8a96a51472ebadad0ce374e9643a3c9536add0a4e51",
+    "bytes": 1594741
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/run_meta_2020_100.json",
+   "old": {
+    "sha256": "415f429b3a09fbc8e0005d51de9385369914f84f1def698f53413862a92369e8",
+    "bytes": 48784
+   },
+   "new": {
+    "sha256": "88dcf354af12174ab13ac99a76b04dfe8c1b2bf58fb85a3404d1212c7ac4c37b",
+    "bytes": 37398
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/run_meta_2025_100.json",
+   "old": {
+    "sha256": "255eba9f4f9db842d84ca24bcbf2ee044b530cecb77df190e65eda163f5eaec0",
+    "bytes": 2999
+   },
+   "new": {
+    "sha256": "98c605edd97c45ae5950539e2c74f31020364dfd4208ad5126d4ca5ae763c182",
+    "bytes": 37571
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+   "old": {
+    "sha256": "5d5f934698efbf65a46c42189fce2ba6e3d91aef55ec66c1de25f5c5d783f0a3",
+    "bytes": 15878493
+   },
+   "new": {
+    "sha256": "820d9ec1fc668dc5563797fefa754004e9f1b69c5a6533d7fcece58bf894204c",
+    "bytes": 15878518
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/sfca_unit_2025_100.csv",
+   "old": {
+    "sha256": "4970a714ac3bb61196e34c3eea3556666f4332fb94145c22f0f6aba246aa8e24",
+    "bytes": 15878915
+   },
+   "new": {
+    "sha256": "db307479262e62dbe002a425b4c538e093a506721454d77cffd126c947d4e64b",
+    "bytes": 15878928
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/summary_sens_union.md",
+   "old": {
+    "sha256": "3124de450e4e85bd3046c80798689a2137648e75b29b5749c5758cb8964b8f7a",
+    "bytes": 12747
+   },
+   "new": {
+    "sha256": "8df12361c406c2b942ec57a2505cd87f1893baff8c5c3db44049c42d8a21d762",
+    "bytes": 12749
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "2422b615196d572a70d769bf9702a15a654416a4a07dc460b137d2791629c1a4",
+    "bytes": 4224238
+   },
+   "new": {
+    "sha256": "9da28acf47c818ef49135ce428c88e0b9d7f125d600a65e0504215b845c2d811",
+    "bytes": 4224079
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/sens_union/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "00b64a3d2dfe7659dd0f5c99e472268150c01e9f18569df92666ac9ec4d9988f",
+    "bytes": 4226081
+   },
+   "new": {
+    "sha256": "ead3952287dc95a52e43d8cd2b827fa6a6f65756f06842d8caf1c66c15466151",
+    "bytes": 4226081
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/summary_sensitivity.md",
+   "old": {
+    "sha256": "af96fc8768d7d17da35c062565da10b109a8fbe59f5e57755d726a74b0e26e35",
+    "bytes": 13131
+   },
+   "new": {
+    "sha256": "dd4ea457e15ffec23957f4541460c911592a1e1820602b01c5866c0c204c7723",
+    "bytes": 13131
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/ku_compare_seunghoon.md",
+   "old": {
+    "sha256": "213092251daf19b237f6a624dddcb7d4f9fa2e226d459bb7ddb0d3cecfe43367",
+    "bytes": 7095
+   },
+   "new": {
+    "sha256": "1288ab251e40dab1c71b49e344142fc54fe2bd7201bf913ce3fc075cb15b1ac8",
+    "bytes": 7095
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/ku_compare_template.csv",
+   "old": {
+    "sha256": "22941a7a443a3c6d07bc4a0897a5f7b3ef49dbaca75ee496b68cc0d6fd9406c2",
+    "bytes": 1321
+   },
+   "new": {
+    "sha256": "084c19948622c5b4d08aa6e20d974ec17ced11576a6bf6893119e21efcb97631",
+    "bytes": 1321
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/ku_none_COV_MAI.csv",
+   "old": {
+    "sha256": "fba994d538ae9fbec02289e9bfb5860ebfea60893fe83f034205edfe44dfb412",
+    "bytes": 96026
+   },
+   "new": {
+    "sha256": "c8b6f216e281a76c1f37f7ca275b55d162e8ce6c968a2f700a52f75e45698730",
+    "bytes": 96026
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/SFCA_open_ratio.csv",
+   "old": {
+    "sha256": "323c5574b4e91a7a9707b43a4ec8853dd3cb524094583e2f929a4b093f1ac845",
+    "bytes": 22488
+   },
+   "new": {
+    "sha256": "d26b048257bc4f7ab987f28e5516dd8bf4344f0f738bff08fee05c00bc75b5b7",
+    "bytes": 22488
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/T5_category_delta_LD_LZ.csv",
+   "old": {
+    "sha256": "6218e0a2a7332959e08910b997ceba3b209e8a597b10e2797c5ae88a93d8214d",
+    "bytes": 4397
+   },
+   "new": {
+    "sha256": "15e34cbc749d4d1b956f486e2074bb68ee5f55d8d29ecb46f5f67bc91d5e278d",
+    "bytes": 4397
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/tables/T5_category_delta_LD_LZ.md",
+   "old": {
+    "sha256": "3a500f4753ebc0207db9670e9e26213ba5df47c704788171d90f75ccc0289624",
+    "bytes": 6523
+   },
+   "new": {
+    "sha256": "ebc6877003a4e20c0bb0894a587e2a18e5a7cba7bbf03dd963e0099356a17992",
+    "bytes": 6523
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/temporal_common4/fixed_ld2025_net2025.csv",
+   "old": {
+    "sha256": "0ae34a1f10b9f2c82e178d27ea23bf6431e1782725468e00776c43051084eb07",
+    "bytes": 60584
+   },
+   "new": {
+    "sha256": "1a1f8b870b1339fc230b50e23eb65bae3e484149aac3e68e8f957304d8d1c1ab",
+    "bytes": 60585
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/temporal_common4/moving_ld_moving_net.csv",
+   "old": {
+    "sha256": "794593af57e710c6a103f1747a60def4f0caaa7e62d859ef6ae29f2101e8b4a4",
+    "bytes": 61809
+   },
+   "new": {
+    "sha256": "7370c5521d3e8ffdbf823fe2e7df02873ded293cebb370056a37eb82d71bec36",
+    "bytes": 61802
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/temporal_common4/verification.json",
+   "old": {
+    "sha256": "ecf8357cbad306423ef6964e73bc7a07aee68da410cb88ee3d71848d2d5e763a",
+    "bytes": 4871
+   },
+   "new": {
+    "sha256": "ac57def8c2fecc7daab86dd2091db5696b2e7d45bcb87268f8eed669b8ed6335",
+    "bytes": 4871
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "e547a2ba6a0d139e18b49e09fefe49f0af77c5cbd5ebf622218663bc07d634fc",
+    "bytes": 1689395
+   },
+   "new": {
+    "sha256": "d819c12063405124a35b128cacc50e81dcde582f4b1edd30dba0df712485bdb9",
+    "bytes": 1692849
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/grid_access_2025_100.parquet",
+   "old": {
+    "sha256": "6ecab5938335dfff8006e729833b7b44ed74d01062864bbbc117ca9baa42cf80",
+    "bytes": 1657343
+   },
+   "new": {
+    "sha256": "426d7ddf6afe5964f07283bb7d468eb18d503a1ed79167881aebb34f75701f12",
+    "bytes": 1650161
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/run_meta_2020_100.json",
+   "old": {
+    "sha256": "b08a3ea496cfe32445b8d0a6d020a10d189da22def0e38576bcef30cef80c531",
+    "bytes": 47451
+   },
+   "new": {
+    "sha256": "fd5587478785f6df8e2fc50bb75de982bd658fb6d99b5fea5d632d45bfcfc9b2",
+    "bytes": 36064
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/run_meta_2025_100.json",
+   "old": {
+    "sha256": "8f13a605e9f01a21ae22334c6e6884b209c8fe591d98b2b271a38e8ecce5a9c9",
+    "bytes": 47690
+   },
+   "new": {
+    "sha256": "bb3572b2c18f589825b348845060bf7a520b40f34e3ec99eb7fa43469cf89ff9",
+    "bytes": 36241
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "613a6bf40c6b8896a2949fddd31f459442d45d10a35e3f7c1d979ceb4affb33f",
+    "bytes": 5212159
+   },
+   "new": {
+    "sha256": "2c6d06b1fa0dde53f0b5e25691363e87ef15258a9f6c4c924d1e5008d68488c6",
+    "bytes": 5212011
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_main/unit_access_2025_100.csv",
+   "old": {
+    "sha256": "44636d84870218967282a5e02097c92da2a681464e29f2c332fae9b27fef41c8",
+    "bytes": 5213824
+   },
+   "new": {
+    "sha256": "cd31359120145576a538ded3722f12ff5813f7b6efe6f9a2dc197d1ab796be42",
+    "bytes": 5213824
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_net2025/grid_access_2020_100.parquet",
+   "old": {
+    "sha256": "b3db04be1ac9b9ee74fc03a9ea409742d46dd751f1229ba04804a9bd5450ff37",
+    "bytes": 1674692
+   },
+   "new": {
+    "sha256": "5eab27957109f8e0c985287ed7d48e96cd718ac1b9ac3bc3431eb5b9b37c5a93",
+    "bytes": 1678178
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_net2025/run_meta_2020_100.json",
+   "old": {
+    "sha256": "f909cc9ae8d064ed9b1730b4e8c83df29217db5652f1a379632a40447e9d901b",
+    "bytes": 53965
+   },
+   "new": {
+    "sha256": "0a21d75ac8f3a0da1871c53e1497a690008567db7316bd314038e3beaf6d8f2a",
+    "bytes": 40966
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+   "old": {
+    "sha256": "bbb99a54a8fb3985aa5017275adc8aa9273d51fb2edab625ec9f368b84e411cb",
+    "bytes": 5212736
+   },
+   "new": {
+    "sha256": "f9f218c8de5f7753b6ece4b7214d66da1fed8ff251961c27bd10d67c4bd9ce48",
+    "bytes": 5212680
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/입력/facility/facility_2020_2025_units.parquet",
+   "old": {
+    "sha256": "ff1df7681352889a02b2ea5805def613a6748d0940a5bef32647188b2e530ed3",
+    "bytes": 44293873
+   },
+   "new": {
+    "sha256": "9a6036f1feb87d85f55c3366983c8dba574e14e2298bec28d0de826bac8a066a",
+    "bytes": 44284682
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "데이터/입력/facility/facility_2020_2025_units.source.json",
+   "old": {
+    "sha256": "392e8527433716f88bfa9a34324588a7bf3b0ff3c9ab1690e73c5923390f1c89",
+    "bytes": 287
+   },
+   "new": {
+    "sha256": "596d202657a1a2ed22cc53f65c9d9db7f46b307506442be5b4fa126d03c65141",
+    "bytes": 287
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/a02.log",
+   "old": null,
+   "new": {
+    "sha256": "a3693e27a791d8a6a0b0ee9b8519186ed4b19ea5bbb704be06b0bb4fbbd7b8bb",
+    "bytes": 7847
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/a06b_summary.log",
+   "old": null,
+   "new": {
+    "sha256": "2b463bbe96b01d9f644c219f62da86a409ee10c78bf28a55583c879ebddbd2e0",
+    "bytes": 223
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/a06d_temporal_sensitivity.log",
+   "old": null,
+   "new": {
+    "sha256": "0d0be04c6fde3c5608d640075a563f45c76544c060775f9e0e7d9950aa25d1ba",
+    "bytes": 732
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/a07_study3_outputs.log",
+   "old": null,
+   "new": {
+    "sha256": "b0b72bc956a85b6b36122cdb6003510b0d0b41996f00d9dac9c78436ee58ea9f",
+    "bytes": 1307
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/a08_ku_compare.log",
+   "old": null,
+   "new": {
+    "sha256": "5623cda1534f15c65c7075be32409d7bb6bd750bc3e329849a527863f5c18a83",
+    "bytes": 954
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/baseline.json",
+   "old": null,
+   "new": {
+    "sha256": "db81a92a0cf6e9de6833f8a637841cedaaad0011e5a5746946e614885c885d55",
+    "bytes": 210198
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_main_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "adc5c45ec3255bf90d6a636a46640c76083217944a4c434607a884020bb4200c",
+    "bytes": 31721
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_main_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "7db3638ad201bd8c38aafac5178daca6412497786495c61efd2a60fb9298e9ad",
+    "bytes": 31869
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_natstd_B_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "fc4854eadecc4325ca3a8229dcf457bc80b6877624ecddbecc3fa9457982cb2e",
+    "bytes": 30551
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_natstd_B_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "d9586b8d734082ff632b68b9c304658d1c23c5c5ff8c15edf4e872536d89daff",
+    "bytes": 30703
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_A4_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "907c5cfc18c66258d8c7dfb25e909127f40a37b8a4b51b7d44ac87e56ac070c1",
+    "bytes": 30559
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_A4_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "5d4535f39452b5bea019417ab6de8994f73dbe5d2775c4cad95c54fbada2e98a",
+    "bytes": 30711
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_grid250_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "2574c9b73561d2368f174eca2cc0c5d7991fa9f8a3d258d6afd742c75199bb17",
+    "bytes": 11900
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_grid250_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "c69e207e41175e6f8a18101298c9aa95e578f38ae4adef02f4aaaa059e2071f6",
+    "bytes": 11902
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_net2025_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "179e7516f26756646a2015b9479844c4502f7b43848b94b4fbd91f725bcddced",
+    "bytes": 35964
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_retail_without_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "dddba05ae0f37b2ddf513631a40b9efc68ea9c0a639c6842b8c7ee4802f58387",
+    "bytes": 31759
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_retail_without_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "c2ce168f489d982c6b9df6bdf6d17b9f6e928f34b6ea36736b13900e3d1c0f0d",
+    "bytes": 31906
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_snap_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "fae5aa7c6dc0ebf24084633d11a78d6525712d3cbe14d9759825e14d2f72e7e0",
+    "bytes": 31986
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_snap_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "02aa714e4ada8b9f537e5eedeb1078cd7956dcb8ffa7775a925cd3f9a09fa28e",
+    "bytes": 32131
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_speed36_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "2b1823cbfe0c6c3078b70b72a1db17916c64173cb86954262e75126ac88bfd16",
+    "bytes": 31732
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_speed36_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "3bc90e7931b27baec7b528724e256c67828b80fb2bbc28d21218993c99a86972",
+    "bytes": 31876
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_T600_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "18151461d0981e7d27736bf01f6e8645828194357fbb67968f10d54e2b20cfa4",
+    "bytes": 31742
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_T600_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "f8150d8dd783660b72b213699528a8e0d9acaf59e8075a90274c9c679725e301",
+    "bytes": 31894
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_union_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "1f5c8045956eb6468e843253b21f75c4f59746142b2abede5f26b85335f1c6b5",
+    "bytes": 31726
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_sens_union_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "4042bc430f9d14bf37cb406b493b4625dc46d6dc6677edefa11b8ba9b2f2f702",
+    "bytes": 31874
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_xb_main_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "3d0648a61c66399ed41dec1a85840635fdf66bea19d7297c8b408cf27eb2b01e",
+    "bytes": 30769
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_xb_main_2025.log",
+   "old": null,
+   "new": {
+    "sha256": "a5135558e1e82cb437090d29f8fef11eff205ebbdbe23ea456d0f08ec3db251e",
+    "bytes": 30921
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/engine_xb_net2025_2020.log",
+   "old": null,
+   "new": {
+    "sha256": "8ee9fa658a341ee8360f0aea73acb99c3f4d88a8e3041d6dd48a30fad0c8fc0f",
+    "bytes": 35011
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/execution.json",
+   "old": null,
+   "new": {
+    "sha256": "604e550c8010003a5dd52396a4dc4eebb5f8c3acbf61ffe76dddfc2cbc829703",
+    "bytes": 15409
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/facility_delta.json",
+   "old": null,
+   "new": {
+    "sha256": "8277a9c118a7a44995477a84346e7f6480a6a59f9c3691f9c33eecd41d901ba6",
+    "bytes": 2897
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/numerical_changes.json",
+   "old": null,
+   "new": {
+    "sha256": "73c027e06c02d4ce9a809b3473cc709cea6d22ad8b849af77a28bc05d7c8d6fd",
+    "bytes": 28228
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/prepare.py",
+   "old": null,
+   "new": {
+    "sha256": "1e727601dc8a373dab318924d61aafcd64543ef8622724bfb267bcd89c3984f5",
+    "bytes": 5056
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/progress.log",
+   "old": null,
+   "new": {
+    "sha256": "10b8ec9fd5b5fa29a1f6a1647ded37a623199af4344f4a8203ab200b0fca1ba9",
+    "bytes": 1284
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/run_all.py",
+   "old": null,
+   "new": {
+    "sha256": "92e98a26fa39ed222cc414bd16909004ffe2e0252576180d8c5b269ccafad9aa",
+    "bytes": 2020
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/stage_env.json",
+   "old": null,
+   "new": {
+    "sha256": "0b1022837a758fbd8cc18e9ca523b759173063d1d2d5dc8393a148a4998ee80e",
+    "bytes": 72
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/supplement.log",
+   "old": null,
+   "new": {
+    "sha256": "1da56618e11927e8542c3d74938cc0b088e3eea1a45b320aab959fb97d07ad76",
+    "bytes": 1321
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/supplement.py",
+   "old": null,
+   "new": {
+    "sha256": "665d980c47014d784455f9d01169a1665c28ebfe6bdcb9bf146b68ad3698e1dc",
+    "bytes": 3958
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/supplementary_checks.json",
+   "old": null,
+   "new": {
+    "sha256": "2ac00256cd3033d9d0836a749dc11eddf9f5abfad121fe143d0d5239ae4a3f48",
+    "bytes": 30878
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/test_engine.log",
+   "old": null,
+   "new": {
+    "sha256": "32427f5def38521d85929f41c8ef457c3b3b5f664e8429e5f195d85fda1b115b",
+    "bytes": 998
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/test_geometry.log",
+   "old": null,
+   "new": {
+    "sha256": "140af57cb8b907bf573bc69dea62d68c4a49b0c0ede658ac86273c10edadf625",
+    "bytes": 152
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/test_release.log",
+   "old": null,
+   "new": {
+    "sha256": "530b7cc02418c35c286df95c2b2d8a509a21f3697607e1821a43d619ac32197a",
+    "bytes": 114
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/test_release_v32.log",
+   "old": null,
+   "new": {
+    "sha256": "279db5933370ec92b94f4edee001b486ee3f7f8551f39ab8cde047e29ca90291",
+    "bytes": 115
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/unchanged_inputs.json",
+   "old": null,
+   "new": {
+    "sha256": "2f8e9b88b198739e531ca64f7b420a4882e0bffd724785fa14ea9c3d6491f6c8",
+    "bytes": 71634
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/verification.log",
+   "old": null,
+   "new": {
+    "sha256": "17d8854ba6f80c93810245f5e71e801a9ff0ed6fe04aa2de437e17474c4bce30",
+    "bytes": 7739
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/verification_phase1.log",
+   "old": null,
+   "new": {
+    "sha256": "17d8854ba6f80c93810245f5e71e801a9ff0ed6fe04aa2de437e17474c4bce30",
+    "bytes": 7739
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/verification_resume.log",
+   "old": null,
+   "new": {
+    "sha256": "485431cf027eab524036dcf11929182302564eae9b591236d01845a9a1ad47bc",
+    "bytes": 9186
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/verification_summary.json",
+   "old": null,
+   "new": {
+    "sha256": "7c313edcf803a6fc871a5f38ec6f2dc57307244f206e190b61992ffadca0fb14",
+    "bytes": 3283
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/verify_v32.py",
+   "old": null,
+   "new": {
+    "sha256": "79dc39fa22470b3ef4190e09b6a2d67b04fa4b3ba4bf8f2b1b89a7662eca9ef3",
+    "bytes": 7360
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/write_docs.log",
+   "old": null,
+   "new": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/write_docs.py",
+   "old": null,
+   "new": {
+    "sha256": "4da826df5740f6c9d9b42a5b462386b0cb34ec5decc3218dcdc12dded679e5df",
+    "bytes": 19998
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/README.md",
+   "old": null,
+   "new": {
+    "sha256": "c16ec9fd3e17bb449c2ab26b067b1082b95ea38dfcc5a2aa4da7bb2abc452bd6",
+    "bytes": 11470
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/release_provenance.json",
+   "old": null,
+   "new": {
+    "sha256": "0d8f700730421e29491e7e2b65a06e321d6213b65093ea6d958f559d273b3ded",
+    "bytes": 270387
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/검증결과.json",
+   "old": null,
+   "new": {
+    "sha256": "0e11826be1cdbf73e968df6bc0b74d0e529c5dc83004344263e279a3f124ab58",
+    "bytes": 14060
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/main/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "be7f387260d87575b45ad0547f8585b589b488a3e9cb6786f2e4a15fe71be1a6",
+    "bytes": 3153
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/main/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "90c1bb9d158687d142ec64a2cd8084a09aa199ac29b4003fc61e1ba934588ed2",
+    "bytes": 3150
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/natstd_B/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "cc4a66ed240a88a1267dc56b878072f09d52ecb472c051115f57bce2bece12b7",
+    "bytes": 47315
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/natstd_B/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "7b40c35099747d32b544248c73f4d24b83267d8680750d0cb7464c956195a2e4",
+    "bytes": 47554
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_A4/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "2edb8ef908b39c115ae95415f0cea97f6c7c4740d71e7bbd0b2ecd4f63620755",
+    "bytes": 1399
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_A4/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "9f7deb674bab6224d059c4621f589171dff03d34143ddd27b8beddd4a26f6604",
+    "bytes": 1399
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_grid250/run_meta_2020_250.json",
+   "old": null,
+   "new": {
+    "sha256": "0f0500df40a115431a9badfb39ad1db82f1cc09ac821c309d6019b1fc2e1c4b1",
+    "bytes": 3010
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_grid250/run_meta_2025_250.json",
+   "old": null,
+   "new": {
+    "sha256": "45bebe1a4bd2e004158f70f8d78a95cdd504f350dff2c3c6bc22c26c90edbe6c",
+    "bytes": 3011
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_net2025/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "b63ca78b0e2e66df9efc9dbd0f770d610cedfcbbef6b1399f7b08f2cf8bda624",
+    "bytes": 3155
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_retail_without/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "0ee65cafd781424fdb332cbfb2274c75d43a78c0dc4299c25ff9048b378577e0",
+    "bytes": 3063
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_retail_without/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "5c0590c6f2c2f40654bf06a7f6b0e7493087a07a1212569fbb8db3d22167eea8",
+    "bytes": 3059
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_snap/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "a549bc38b474dae6d0aec9d057f57d6b1c54af771fe559b1a87d742218d801d5",
+    "bytes": 3130
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_snap/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "d74a00e1009b5722c276d8629ec46caef7cf96774984cbcbc324c0ddca3cf582",
+    "bytes": 3122
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_speed36/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "0329e1a3d2a41dc6aac30a6f3dd1d287355ebc95d59519035282e8a14e85b1c5",
+    "bytes": 3015
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_speed36/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "e6d51b5f24d2519e0c856130a1a35fe0373b8eab1fea8abe2d7717fdacfa88f0",
+    "bytes": 3007
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_T600/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "bdd48b9a01b66442b22c751d5c71e5f8bdf25c21eeb1ff91fbc3bb729deadb4d",
+    "bytes": 3015
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_T600/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "ecdf5366ffa0451966d0b4388fa380569e548bdd85a36b6999bdae2ed9c95ea4",
+    "bytes": 3015
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_union/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "415f429b3a09fbc8e0005d51de9385369914f84f1def698f53413862a92369e8",
+    "bytes": 48784
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/sens_union/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "255eba9f4f9db842d84ca24bcbf2ee044b530cecb77df190e65eda163f5eaec0",
+    "bytes": 2999
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/xb_main/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "b08a3ea496cfe32445b8d0a6d020a10d189da22def0e38576bcef30cef80c531",
+    "bytes": 47451
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/xb_main/run_meta_2025_100.json",
+   "old": null,
+   "new": {
+    "sha256": "8f13a605e9f01a21ae22334c6e6884b209c8fe591d98b2b271a38e8ecce5a9c9",
+    "bytes": 47690
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/데이터/결과/xb_net2025/run_meta_2020_100.json",
+   "old": null,
+   "new": {
+    "sha256": "f909cc9ae8d064ed9b1730b4e8c83df29217db5652f1a379632a40447e9d901b",
+    "bytes": 53965
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/검증보고서.md",
+   "old": null,
+   "new": {
+    "sha256": "c3af4982cc7828118848d1535ced623fd8f5f86068b6a162c011341cc731798c",
+    "bytes": 7931
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/격자마스터_구축기록.md",
+   "old": null,
+   "new": {
+    "sha256": "2acf0a480ac600544697602a254668f080265e3f9d4b518695784e5cd9808f2f",
+    "bytes": 11935
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/경계기하지표_구축기록.md",
+   "old": null,
+   "new": {
+    "sha256": "5d816901eaf4cd33b893b1ed400474cc18c525248fcd9c683e53229da3d07e4b",
+    "bytes": 6518
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/공동연구자_시작_20260929.md",
+   "old": null,
+   "new": {
+    "sha256": "49ab0856f4e09b8bc609311931e9e3ecbc71e0be4bca35e345836d0738d1632c",
+    "bytes": 5866
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/네트워크_소요시간표_구축기록.md",
+   "old": null,
+   "new": {
+    "sha256": "2a973e72a5600c6316c930d4812c32cea86bbe3d66abfcb6284154f61eb6e9d1",
+    "bytes": 15394
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/배포검증_20260929.md",
+   "old": null,
+   "new": {
+    "sha256": "beaa54b847e2ddb8d25732a1825975bcd12c6eb45e5ee5d0d2b73511327d7c9e",
+    "bytes": 7104
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/선행연구_지표정의_조사.md",
+   "old": null,
+   "new": {
+    "sha256": "7ee90c744bbb50f30d9bc8fbb9e2eedb9ffd9a641cc2029c8447ce6c1aa34f52",
+    "bytes": 8680
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/시설경계연결_구축기록.md",
+   "old": null,
+   "new": {
+    "sha256": "f425ac676c3755ddd987fc425284d63c3e46efaddf868b7ae307b226e37dc246",
+    "bytes": 7525
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/자료가공설계.md",
+   "old": null,
+   "new": {
+    "sha256": "5206c38695c9f88ee6fa8f8faba660ff4c595174ccbed249ea456d89645dfc59",
+    "bytes": 11504
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/작업기록.md",
+   "old": null,
+   "new": {
+    "sha256": "31c02eda6d97abfdcbf9f8d7a8cb12706b9fb1343b6689a4a52e365f6958ae3a",
+    "bytes": 35388
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/접근성엔진_구축기록.md",
+   "old": null,
+   "new": {
+    "sha256": "464ecd47a86b43821a6d44e5221913914e06413d4f3aa81f31d641f6cf38fb64",
+    "bytes": 17634
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/지표정의_확정.md",
+   "old": null,
+   "new": {
+    "sha256": "ae8a6a0e581fbc92c3caad95996e3d45f3691f6db66e5d4bc38e0755a336c466",
+    "bytes": 15677
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증_v32_20260929/이전_v31/문서/출처_전처리_연결표_20260929.md",
+   "old": null,
+   "new": {
+    "sha256": "dcb51a28b0df088038d6f4fe62ef1a71ada0124b8b73f86226f47b738b3ed4ed",
+    "bytes": 6525
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/검증보고서.md",
+   "old": {
+    "sha256": "c3af4982cc7828118848d1535ced623fd8f5f86068b6a162c011341cc731798c",
+    "bytes": 7931
+   },
+   "new": {
+    "sha256": "95c38e88e209f4fcd74b215b55cbb4432eeed82d43e5926458aa834317595bc3",
+    "bytes": 12550
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/공동연구자_시작_20260929.md",
+   "old": {
+    "sha256": "49ab0856f4e09b8bc609311931e9e3ecbc71e0be4bca35e345836d0738d1632c",
+    "bytes": 5866
+   },
+   "new": {
+    "sha256": "997473757093867808ae8a46caecddef240dd438e677cded0ce8c63c3d06e3e6",
+    "bytes": 6922
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/배포검증_20260929.md",
+   "old": {
+    "sha256": "beaa54b847e2ddb8d25732a1825975bcd12c6eb45e5ee5d0d2b73511327d7c9e",
+    "bytes": 7104
+   },
+   "new": {
+    "sha256": "1f8453ec9a1a2a028506812a7f4a2dd1a2534b19a0562646c8e3dde11668686a",
+    "bytes": 7305
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/배포검증_v32_20260929.md",
+   "old": null,
+   "new": {
+    "sha256": "a48c35f19d43f653813d3edb3fab41e6ee1d271e4fa67bcee4dbf4de31366c5d",
+    "bytes": 6560
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/시설경계연결_구축기록.md",
+   "old": {
+    "sha256": "f425ac676c3755ddd987fc425284d63c3e46efaddf868b7ae307b226e37dc246",
+    "bytes": 7525
+   },
+   "new": {
+    "sha256": "46cf6854b52d0a8344229f3fe64a25dc73077cdafa96e50615a851ae7aa3e8cf",
+    "bytes": 7525
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/작업기록.md",
+   "old": {
+    "sha256": "31c02eda6d97abfdcbf9f8d7a8cb12706b9fb1343b6689a4a52e365f6958ae3a",
+    "bytes": 35388
+   },
+   "new": {
+    "sha256": "7a32e8b3e9d045ef087379e115ba43274778a17d3f5d817d71b41def708a70ef",
+    "bytes": 36297
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/출처_전처리_연결표_20260929.md",
+   "old": {
+    "sha256": "dcb51a28b0df088038d6f4fe62ef1a71ada0124b8b73f86226f47b738b3ed4ed",
+    "bytes": 6525
+   },
+   "new": {
+    "sha256": "80386ad45147e462243f95b2ea5f2a3919aadca12c586a6c02732e1b8935c351",
+    "bytes": 8687
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "문서/후속소비_영향_v32_20260929.md",
+   "old": null,
+   "new": {
+    "sha256": "36ce4192e6ecde6f4f5ee7363136dfea2e927ffc6f818975f58365f765e75d4b",
+    "bytes": 1755
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/a00_config.py",
+   "old": {
+    "sha256": "3ae74676dd6386590cd09ff8902dd3da6e7c7b1550ba31cbb7e47a0b3933d819",
+    "bytes": 6346
+   },
+   "new": {
+    "sha256": "1e9d3a9c7e1144df9a7408cbf577af0d94f9dbb1b44e8bdc2e55b904115b8136",
+    "bytes": 6394
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/a06_engine.py",
+   "old": {
+    "sha256": "627962cc404c7cab343603b6788e4f671df7232e6d7a4421a90b4ac93d8c3b1e",
+    "bytes": 37109
+   },
+   "new": {
+    "sha256": "f5b8ed0a02730214eb6e5a1b196b8ad0bf6ee782af77f96645acdee0ceab7c31",
+    "bytes": 37168
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/a10_verify.py",
+   "old": {
+    "sha256": "5ac7a9e2be52479c101e8af501668f4ba9b25a03258a21c316bbabe4d373af57",
+    "bytes": 27931
+   },
+   "new": {
+    "sha256": "24e15c11dc051fa8d21e81269ddf287ea6ff03c63367ba94d61b3b4b8ffba4d7",
+    "bytes": 27931
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/a11_provenance.py",
+   "old": {
+    "sha256": "089ad4a40cbdc1a4d06683a75f0ec7697cd4fc45d33b19521cb40f404c69f782",
+    "bytes": 5370
+   },
+   "new": {
+    "sha256": "322d95c2e6947eb7ceb211b05233a5b69ae4493a7479c5850bf19c4eccf36ac4",
+    "bytes": 5720
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/run_engine.bat",
+   "old": {
+    "sha256": "a86ba9cbdcedb4a6b66667098e082a30bc8e56fe5280941c147e49c0ac586ff8",
+    "bytes": 3421
+   },
+   "new": {
+    "sha256": "3f1b2737339a11b5b65631a5afffa8f8f16485c3e10ef9649b24a641d5b692fc",
+    "bytes": 3421
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  },
+  {
+   "path": "코드/tests/test_release.py",
+   "old": {
+    "sha256": "c28946f27ee7ef567755747d7fcfa126d3d59200036151a07f8047407c993b11",
+    "bytes": 4215
+   },
+   "new": {
+    "sha256": "c00378ffc75423f7d0cb90fbd926cb315dbfcfaf909d2ba49974d107f146a18a",
+    "bytes": 5764
+   },
+   "reason": "facility-v1.3 regenerated result or release code/document/evidence update",
+   "verification": "22 CLI successful; 32 tests; 22 fresh run fingerprints; independent SFCA; numerical and input invariants"
+  }
+ ],
+ "note": "Old numeric bytes at the same canonical path are replaced after stage validation; source/raw/history preserved. Manifest and this ledger are release administrative files."
+}

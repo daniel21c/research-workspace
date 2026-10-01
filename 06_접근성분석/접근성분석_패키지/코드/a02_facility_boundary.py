@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""P2. 33종 시설 분석용 파일에 경계 단위(동424·구·공식생활권116·Leiden 2020/2025)·카테고리(A 8개, A4, B 5개+τ, 역할)·250m 격자 코드를 붙인다.
+"""P2. 32종 시설 분석용 파일에 경계 단위(동424·구·공식생활권116·Leiden 2020/2025)·카테고리(A 7개, A4, B 4개+τ, 역할)·250m 격자 코드를 붙인다.
 입력: a00_config.FACILITY_PARQUET, BOUND_GPKG(dong_424), DONG_LZ_MAP, DONG_LD_MAP, GRID250_SRC
 출력: 데이터/입력/facility/facility_2020_2025_units.parquet, 문서/시설경계연결_구축기록.md, 데이터/manifest_sha256.csv 갱신
 (2026-09-25부터 355 MB csv 사본은 만들지 않는다 — 같은 내용이 parquet 에 있음)
@@ -148,7 +148,7 @@ def main():
     fac.to_parquet(OUT_PQ, index=False)
     import json
     C.UNITS_SOURCE_JSON.write_text(json.dumps(dict(source=str(C.FACILITY_PARQUET.relative_to(C.BASE)).replace('\\', '/'),
-                                                   source_sha256=sha256(C.FACILITY_PARQUET), units_sha256=sha256(OUT_PQ)),
+                                                   source_sha256=sha256(C.FACILITY_PARQUET), units_sha256=sha256(OUT_PQ), selection_rule_sha256=sha256(C.FACILITY_SELECTION_JSON), analysis_scope=C.ANALYSIS_SCOPE),
                                               ensure_ascii=False, indent=1), encoding='utf-8', newline='\n')
     P(f'\n## 4. 출력\n- `{OUT_PQ.relative_to(C.ROOT)}` {len(fac):,}행 × {fac.shape[1]}열 (2026-09-25부터 csv 사본은 만들지 않음)')
     P('- 추가 열: dong424, dong424_name, ku, ku_name, lz116, ld2020, ld2025, dong424_method, cat_A, cat_A4, cat_B, tau_B_min, role, grid250_cd')
@@ -180,20 +180,18 @@ def main():
     # 학교 세부·체육 세부 확인
     sch = fac.loc[ok & (fac['시설'] == '학교')].groupby(['year', fac['시설_세부'].str[:4]]).size().unstack(0)
     P('\n### 5.6 학교 `시설_세부` 앞 4자(초등학교만 cat_B)\n' + sch.to_markdown())
-    sp_ = fac.loc[ok & (fac['시설'] == '체육시설업')].groupby(['시설_세부', 'year']).size().unstack(1).fillna(0).astype(int)
-    sp_['cat_B'] = sp_.index.isin(['체력단련장', '체육도장', '수영장', '종합체육시설'])
-    P('\n### 5.7 체육시설업 `시설_세부`(4종만 cat_B)\n' + sp_.to_markdown())
+    P('\n### 5.7 체육시설업 제외\n- facility-v1.4에서 두 연도 전체 제외. 공공체육 대체 없음. 선택규칙 JSON 및 원천 증거 보존.')
 
     # 격자 g (100m) 통계 — MAI 용 |C_g|
     A = fac.loc[ok & (fac.cat_A != 'control') & fac.grid100_cd.notna()]
-    P('\n### 5.8 시설 격자(100m, 시설 ≥1, 분석가능·A 28종)')
+    P('\n### 5.8 시설 격자(100m, 시설 ≥1, 분석가능·A 27종)')
     gc = A.groupby('year').grid100_cd.nunique()
     P('- 연도별 시설 격자 수: ' + ', '.join(f'{y}: {n:,}' for y, n in gc.items()))
     gcc = A.groupby(['cat_A', 'year']).grid100_cd.nunique().unstack(1)
     P('- 카테고리별 시설 격자 수:\n' + gcc.to_markdown())
     hist = A.groupby(['year', 'grid100_cd']).cat_A.nunique().rename('Cg').reset_index()
     h = pd.crosstab(hist.Cg, hist.year); h.loc['합계'] = h.sum()
-    P('\n### 5.9 격자별 동시입지 카테고리 수 |C_g| 분포 (1..8, 분석가능·A 28종, 100m)\n' + h.to_markdown())
+    P('\n### 5.9 격자별 동시입지 카테고리 수 |C_g| 분포 (1..7, 분석가능·A 27종, 100m)\n' + h.to_markdown())
     mean_cg = hist.groupby('year').Cg.mean().round(3).to_dict()
     P(f'- |C_g| 평균: {mean_cg}')
     A250 = A[A.grid250_cd.notna()]

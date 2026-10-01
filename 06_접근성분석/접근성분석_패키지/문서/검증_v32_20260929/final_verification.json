@@ -1,0 +1,150 @@
+{
+ "release": "access-engine-v3.2-facility-v1.3-20260929",
+ "checked_at": "2026-09-29T14:51:01.631032+09:00",
+ "calculation_verdict": "PASS",
+ "scientific_fitness": "HOLD: historical sports selection filter unresolved",
+ "tests_passed": 32,
+ "engine_runs_succeeded": 22,
+ "metadata": {
+  "fully_recorded": 22,
+  "historical_or_incomplete": 0,
+  "failed": 0,
+  "runs": [
+   {
+    "file": "데이터/결과/main/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/main/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/natstd_B/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/natstd_B/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_A4/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_A4/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_grid250/run_meta_2020_250.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_grid250/run_meta_2025_250.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_net2025/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_retail_without/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_retail_without/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_snap/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_snap/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_speed36/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_speed36/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_T600/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_T600/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_union/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/sens_union/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/xb_main/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/xb_main/run_meta_2025_100.json",
+    "failures": [],
+    "unverified": []
+   },
+   {
+    "file": "데이터/결과/xb_net2025/run_meta_2020_100.json",
+    "failures": [],
+    "unverified": []
+   }
+  ]
+ },
+ "provenance_inventory_issues": {
+  "code": [],
+  "package_inputs": [],
+  "upstream_inputs": [],
+  "source_evidence": []
+ },
+ "source_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+ "recorded_checks": {
+  "PASS": 52,
+  "WARN": 4,
+  "FAIL": 0
+ },
+ "canonical_replaced_files": 120,
+ "canonical_new_files_before_final_evidence": 90,
+ "canonical_changed_since_initial_snapshot_before_promotion": 0,
+ "cleanup_status": "blocked_by_automatic_policy_review",
+ "deleted_stage_files": 0,
+ "stage_files_pending": 1365,
+ "obsolete_bytecode_pending": 6,
+ "stage_excluded_from_share": true,
+ "source_evidence_files": 156,
+ "package_input_files": 1036,
+ "manifest_files": 1316,
+ "manifest_issues": 0,
+ "manifest_bytes": 650171787
+}

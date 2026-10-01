@@ -1,0 +1,120 @@
+{
+  "facility_preserved_columns": {
+    "source_rows": 606066,
+    "unit_rows": 606066,
+    "columns": [
+      "facility_id",
+      "year",
+      "기준일",
+      "시설",
+      "시설_세부",
+      "국가기준_구분",
+      "국가기준_시설",
+      "국가기준_접근시간",
+      "신뢰도",
+      "name",
+      "address",
+      "lon",
+      "lat",
+      "x_5179",
+      "y_5179",
+      "adm_dong_cd",
+      "oa_cd",
+      "grid100_cd",
+      "inside_seoul",
+      "분석가능",
+      "coord_method",
+      "grade",
+      "source_org",
+      "source_dataset",
+      "source_reference_date"
+    ],
+    "unequal_columns": []
+  },
+  "unit_sidecar_hash_match": true,
+  "grids": [
+    {
+      "grid": 100,
+      "rows": 60528,
+      "unique": true,
+      "pop2019": 9642246.0,
+      "pop2024": 9337885.0,
+      "mapping_mismatch": {
+        "lz116": 0,
+        "ld2020": 0,
+        "ld2025": 0
+      }
+    },
+    {
+      "grid": 250,
+      "rows": 9774,
+      "unique": true,
+      "pop2019": 9642246.0,
+      "pop2024": 9337885.0,
+      "mapping_mismatch": {
+        "lz116": 0,
+        "ld2020": 0,
+        "ld2025": 0
+      }
+    }
+  ],
+  "snaps": [
+    {
+      "grid": 100,
+      "year": 2020,
+      "rows": 60528,
+      "grid_order_match": true,
+      "missing_distance": 0,
+      "node_id_mismatch": 0,
+      "distance_max_abs_error_m": 4.7461234771617455e-05
+    },
+    {
+      "grid": 100,
+      "year": 2025,
+      "rows": 60528,
+      "grid_order_match": true,
+      "missing_distance": 0,
+      "node_id_mismatch": 0,
+      "distance_max_abs_error_m": 2.846212862550601e-05
+    },
+    {
+      "grid": 250,
+      "year": 2020,
+      "rows": 9774,
+      "grid_order_match": true,
+      "missing_distance": 0,
+      "node_id_mismatch": 0,
+      "distance_max_abs_error_m": 2.9910490297879733e-05
+    },
+    {
+      "grid": 250,
+      "year": 2025,
+      "rows": 9774,
+      "grid_order_match": true,
+      "missing_distance": 0,
+      "node_id_mismatch": 0,
+      "distance_max_abs_error_m": 2.6828119530364347e-05
+    }
+  ],
+  "temporal_common_category_diagnostic": {
+    "rule": "unapproved sensitivity diagnostic; four-way vs per-year pair-common categories",
+    "all_dongs_changed_gt_1e5": 9,
+    "sample_C_n": 288,
+    "sample_changed_gt_1e5": 8,
+    "max_abs_difference": 0.50121675,
+    "sample_max_abs_difference": 0.50121675,
+    "sample_sign_reversed": 2
+  },
+  "metas": {
+    "runs": 22,
+    "output_files": 61,
+    "hash_failures": [],
+    "missing_checks": [
+      "데이터\\결과\\natstd_B\\run_meta_2020_100.json",
+      "데이터\\결과\\natstd_B\\run_meta_2025_100.json"
+    ],
+    "versions": [
+      "access-engine-v3"
+    ]
+  }
+}

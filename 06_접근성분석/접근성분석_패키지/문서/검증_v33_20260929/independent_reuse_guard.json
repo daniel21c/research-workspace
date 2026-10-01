@@ -1,0 +1,274 @@
+[
+ {
+  "file": "데이터/결과/main/grid_access_2020_100.parquet",
+  "sha256": "3979d7add031307480eb5300efe6eb5514fc0e69e898c017c94723299b188f6e"
+ },
+ {
+  "file": "데이터/결과/main/grid_access_2025_100.parquet",
+  "sha256": "97c03edfbc54b380b074425c7c1811962f4529c9b26a413a0f50ec9510d3f8dc"
+ },
+ {
+  "file": "데이터/결과/main/grid_sfca_2020_100.parquet",
+  "sha256": "2fcc14da9693dfe3b822724ed4c992230a83227b8441f3c9710843423d3a9491"
+ },
+ {
+  "file": "데이터/결과/main/grid_sfca_2025_100.parquet",
+  "sha256": "d06192754159547920b2ad0efc00105363835af6dfca2522a9bd8c922b75e225"
+ },
+ {
+  "file": "데이터/결과/main/sfca_unit_2020_100.csv",
+  "sha256": "f3b74d1a0e76072e0efdf7f65933efdd8c0a90042c57a3cb7fb89820c6659821"
+ },
+ {
+  "file": "데이터/결과/main/sfca_unit_2025_100.csv",
+  "sha256": "845ca9c2c6d602c77c754069d339ed04795c5d600819ea4ffbde2d65886dd23a"
+ },
+ {
+  "file": "데이터/결과/main/unit_access_2020_100.csv",
+  "sha256": "7d3781025b36825a12734e41911dfff732910c32b473cc0aa0b344db7746c643"
+ },
+ {
+  "file": "데이터/결과/main/unit_access_2025_100.csv",
+  "sha256": "83906419b7e7f8c96b770205b734c6662402938471cd3264d4ba104796e1c8e6"
+ },
+ {
+  "file": "데이터/결과/sens_A4/grid_access_2020_100.parquet",
+  "sha256": "c93b320310468dc868352e581bcb8866b60049d62120609bcaf090a1e8dfbb2e"
+ },
+ {
+  "file": "데이터/결과/sens_A4/grid_access_2025_100.parquet",
+  "sha256": "1310dfbf4d865ee64261ca404cc2ddf52d42eedb20ec00ff9c43c771a27d3b54"
+ },
+ {
+  "file": "데이터/결과/sens_A4/unit_access_2020_100.csv",
+  "sha256": "d4086b37e1b43dc09d56e5dafc7454e0c316867dc6d9f33cdc173ab51998773c"
+ },
+ {
+  "file": "데이터/결과/sens_A4/unit_access_2025_100.csv",
+  "sha256": "221c54a6cd685d812231ece11418b3d6e7a666f26771db0fe722eee4880a33e1"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/grid_access_2020_250.parquet",
+  "sha256": "16b1e7e1f0170b3d12858b9b3e4820d789879bd365a6b7e7e764fd1849a3b597"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/grid_access_2025_250.parquet",
+  "sha256": "166a315c52de7b144360e6914d9246bb5082a6f489fc525808c9fea956c18641"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/sfca_unit_2020_250.csv",
+  "sha256": "869981d83abec19040bc275b6152f19abb8d4bdd904e35f6d4ada6154ec14996"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/sfca_unit_2025_250.csv",
+  "sha256": "cf176f5a561b196b638ab26e3a85902b92db06ed3bb9311a1ea72d2b158f4918"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/unit_access_2020_250.csv",
+  "sha256": "fd6dd9a1a467914b949e6af746d47cce0983c807226a249aaa38cca4d2d08645"
+ },
+ {
+  "file": "데이터/결과/sens_grid250/unit_access_2025_250.csv",
+  "sha256": "26a767b7131cce284ddb2b273d1aed9c759ef9846958845eba776d54dec34296"
+ },
+ {
+  "file": "데이터/결과/sens_net2025/decomp_network_2020_2025.csv",
+  "sha256": "0eff506750206e3d99b45292ae4314962f75491a2f6b90b5b0be6c093ae713c4"
+ },
+ {
+  "file": "데이터/결과/sens_net2025/grid_access_2020_100.parquet",
+  "sha256": "c6dcef009b1d9c4624c8be49cbd57caffb44e010427c5afe31dedab680b8396a"
+ },
+ {
+  "file": "데이터/결과/sens_net2025/sfca_unit_2020_100.csv",
+  "sha256": "14073631ac2e9ec11d4700c1aaa315fb092ccb7eb6a6c2efc2146bf15237068e"
+ },
+ {
+  "file": "데이터/결과/sens_net2025/unit_access_2020_100.csv",
+  "sha256": "73aa021db626950391f26e3d696de0af3a2d4437a46d7d14d7255b2e78b22d0d"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/grid_access_2020_100.parquet",
+  "sha256": "84b8943386ae771a05672777e0f563b93296f7086e46652336d473e77cad419c"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/grid_access_2025_100.parquet",
+  "sha256": "6cc63624d4a1e1cb36e839f24a2e9d06a4498648c52b2788537f8632c7d60750"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/sfca_unit_2020_100.csv",
+  "sha256": "8008edc46009fc2734d8a03fc91e655508ad37f67ed7a20a23371133236fa764"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/sfca_unit_2025_100.csv",
+  "sha256": "a12e199ecb0ef3603027035f4e50909ac0f340b0da92a547ba6e3c33469472e6"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/unit_access_2020_100.csv",
+  "sha256": "aa6d6026ca7d42105de02395546224ac42ce7c9b6055cd384baedafe59b0e1c8"
+ },
+ {
+  "file": "데이터/결과/sens_retail_without/unit_access_2025_100.csv",
+  "sha256": "49d2d97a39b508b86f0b2a86fdd7248d5d4ec121c8814f70f2bc84b7ae35f061"
+ },
+ {
+  "file": "데이터/결과/sens_snap/grid_access_2020_100.parquet",
+  "sha256": "0a49c45f17eebe4467eb141675518dbf7bd7e58b766bb3d52b7928750796b4be"
+ },
+ {
+  "file": "데이터/결과/sens_snap/grid_access_2025_100.parquet",
+  "sha256": "e7358926bbcec3627924624fb7eafd56b65612d12a33707f2612bc188d31b76a"
+ },
+ {
+  "file": "데이터/결과/sens_snap/sfca_unit_2020_100.csv",
+  "sha256": "1655061e30b1a5331b46184fa0a010a419c3148991030aaf61695de27eefbd1c"
+ },
+ {
+  "file": "데이터/결과/sens_snap/sfca_unit_2025_100.csv",
+  "sha256": "eaf8e41a5e9a8f189804ba696d1fa332f6c5f516955ef66f9c25318996274fad"
+ },
+ {
+  "file": "데이터/결과/sens_snap/unit_access_2020_100.csv",
+  "sha256": "8ea41841a32a7f684acf9e4642c610c35923ccabac4de5434ab7e943ac5b85f9"
+ },
+ {
+  "file": "데이터/결과/sens_snap/unit_access_2025_100.csv",
+  "sha256": "ab4fd34c2799ba0efe2634c5674956741ea63992d591600d0d2a0b34ce402bd9"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/grid_access_2020_100.parquet",
+  "sha256": "64e28bf21212005962d45c230a317bac26d387c9affd0e2e1107dda4ad57ddf2"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/grid_access_2025_100.parquet",
+  "sha256": "8da7a6dc527fbd3ac2b480c781fdf5c37017852fdffb3fca596581f70e9005a5"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/sfca_unit_2020_100.csv",
+  "sha256": "252325c38c57147b5ba034715f979ef712b3846bd9cb592ce7c84a6c454a13c1"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/sfca_unit_2025_100.csv",
+  "sha256": "f8be5b377a46bc6aae0640a45340d5e1c8614acb1f12f945d9f7fa84d5d5d13b"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/unit_access_2020_100.csv",
+  "sha256": "27c71f04f58c34c3f2c857dc101f7592dccf48abc360db44054dc9fd3f62f707"
+ },
+ {
+  "file": "데이터/결과/sens_speed36/unit_access_2025_100.csv",
+  "sha256": "ee11d1f96142a9cf0470d6fc97e923386085ef172286b98087c101e01e127137"
+ },
+ {
+  "file": "데이터/결과/sens_T600/grid_access_2020_100.parquet",
+  "sha256": "4ac644a28e1f8f3f320a7e09075fb36f759c0bcce98183d8e30d83843b0abc71"
+ },
+ {
+  "file": "데이터/결과/sens_T600/grid_access_2025_100.parquet",
+  "sha256": "50ed9c1afe14b6b82c88f23a10508beabb29c4a15ed7df4db19b8d2e6534b7f8"
+ },
+ {
+  "file": "데이터/결과/sens_T600/sfca_unit_2020_100.csv",
+  "sha256": "d4dbbf237987ae60811264507586b95a70f322cf7923f63bab726e48d862a4f5"
+ },
+ {
+  "file": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+  "sha256": "6f0e84ad9b027bfac2fc180f0630d32e87de0db2baf825d519f326b91a65db45"
+ },
+ {
+  "file": "데이터/결과/sens_T600/unit_access_2020_100.csv",
+  "sha256": "dede4615e38aaac7c54c1322fb91f37931f5e6acdbf491a3e4cc05fbbd639085"
+ },
+ {
+  "file": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+  "sha256": "1e743c2903bb14880fa84414c9032d20074bde03e127fa1aca2a48be72fbe313"
+ },
+ {
+  "file": "데이터/결과/sens_union/grid_access_2020_100.parquet",
+  "sha256": "6dfa8e76280804ec5ea57c8340d69d935fd4d49272ee0edca0ecc17af0765d51"
+ },
+ {
+  "file": "데이터/결과/sens_union/grid_access_2025_100.parquet",
+  "sha256": "e260dcafa179700e552c45ec00e09814d15c9b650d0dfe52f533b3f39406aead"
+ },
+ {
+  "file": "데이터/결과/sens_union/sfca_unit_2020_100.csv",
+  "sha256": "f3b74d1a0e76072e0efdf7f65933efdd8c0a90042c57a3cb7fb89820c6659821"
+ },
+ {
+  "file": "데이터/결과/sens_union/sfca_unit_2025_100.csv",
+  "sha256": "845ca9c2c6d602c77c754069d339ed04795c5d600819ea4ffbde2d65886dd23a"
+ },
+ {
+  "file": "데이터/결과/sens_union/unit_access_2020_100.csv",
+  "sha256": "de2524cc6140780cb584c7358509cfe0cf8ff6c2e23207778d2cdce47f1adcc1"
+ },
+ {
+  "file": "데이터/결과/sens_union/unit_access_2025_100.csv",
+  "sha256": "241f185e5e6f8fc4c7efcccbaf59397d345fb66a63001566daa4f6687504e042"
+ },
+ {
+  "file": "데이터/결과/tables/F3_dong_delta_2025.csv",
+  "sha256": "b6b07fd8a00328209667afa4e1993317eacf2b9c6d9681c412fbcbbe2afae5ac"
+ },
+ {
+  "file": "데이터/결과/tables/ku_compare_template.csv",
+  "sha256": "5d8451f36ceeccd1447b3c09e94d746af574a5051215ce5db7071a0b6cc556a1"
+ },
+ {
+  "file": "데이터/결과/tables/ku_none_COV_MAI.csv",
+  "sha256": "a772c81bc8f2e29b508e1c6fe50374014fb533dbbb72ced1d326670915b8f78a"
+ },
+ {
+  "file": "데이터/결과/tables/SFCA_open_ratio.csv",
+  "sha256": "e445b2a3561afac216a6cf0743474046937da0db02f034203ea8225b044cac2f"
+ },
+ {
+  "file": "데이터/결과/tables/T5_category_delta_LD_LZ.csv",
+  "sha256": "7f42559e9e9826134803857f89aca5ee6f744acad8d83c2aabe8801360293652"
+ },
+ {
+  "file": "데이터/결과/temporal_common4/fixed_ld2020_net2025.csv",
+  "sha256": "19bc52bc3f6d41274df0b7137c4d25b1ed53a928e7b8d287db28c1c503f3822b"
+ },
+ {
+  "file": "데이터/결과/temporal_common4/fixed_ld2025_net2025.csv",
+  "sha256": "bf9dd90484135407ab20a20f349d1bd29d30b2d94db518aa89f621c4d2420df0"
+ },
+ {
+  "file": "데이터/결과/temporal_common4/moving_ld_moving_net.csv",
+  "sha256": "049a0ca891a78e2b56803d89373b32c0ce832110476a8efabcf95620c84e0146"
+ },
+ {
+  "file": "데이터/결과/temporal_common4/moving_ld_net2025.csv",
+  "sha256": "36c3180fcb96c5d3093dbb8c1966ea199b0f4ee981ff96753660a8cf2401d69c"
+ },
+ {
+  "file": "데이터/결과/temporal_common4/moving_ld_snap.csv",
+  "sha256": "bb1aa2d7897b352937c94245c215fac616a0f9a94b574abb3b1165350cfbf930"
+ },
+ {
+  "file": "데이터/결과/xb_main/grid_access_2020_100.parquet",
+  "sha256": "7f50e45bdaefe656735fc9b32f8d61838c34cb614de5b99204f828067294d606"
+ },
+ {
+  "file": "데이터/결과/xb_main/grid_access_2025_100.parquet",
+  "sha256": "4b512cd0bdad455ee4eb4920b9497927d82b6cae0ad4be948dc887aedc956dc8"
+ },
+ {
+  "file": "데이터/결과/xb_main/unit_access_2020_100.csv",
+  "sha256": "5e3ea9683eb6f736fa6ed09140ab46c4ca8d1f69b85eadce40e53163428dbbd1"
+ },
+ {
+  "file": "데이터/결과/xb_main/unit_access_2025_100.csv",
+  "sha256": "d0976ab0cfa15d3d3732bda0eea1af837ff0f263835b72255b36daee3d9a437b"
+ },
+ {
+  "file": "데이터/결과/xb_net2025/grid_access_2020_100.parquet",
+  "sha256": "f1389413df3575c951e8fd2ee94f660aba9f260d7c9c3f44e5aaf38999016abe"
+ },
+ {
+  "file": "데이터/결과/xb_net2025/unit_access_2020_100.csv",
+  "sha256": "a0447040581acc2048c68755b7226e61483d845cb5a016cb266cdfebf6b2bcd5"
+ }
+]

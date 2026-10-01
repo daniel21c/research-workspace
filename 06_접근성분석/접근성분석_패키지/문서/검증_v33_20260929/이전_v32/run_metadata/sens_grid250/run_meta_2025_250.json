@@ -1,0 +1,476 @@
+{
+ "engine": "access-engine-v3.2",
+ "year": 2025,
+ "grid_m": 250,
+ "T_sec": 900.0,
+ "speed_kmh": 4.0,
+ "catset": "A",
+ "retail": "with",
+ "union": false,
+ "tag": "sens_grid250",
+ "ku": null,
+ "ttm_rows": 749529,
+ "fac_rows_year_analyzable": 309325,
+ "fac_rows_used": 294090,
+ "fac_rows_outside_grid": 25,
+ "fac_cells": 6357,
+ "fac_cells_by_cat": {
+  "교육": 1501,
+  "보육·복지": 3086,
+  "의료": 3208,
+  "문화": 595,
+  "체육": 3441,
+  "행정·안전": 539,
+  "소매": 5277,
+  "생활서비스": 5766
+ },
+ "Cg_dist": {
+  "1": 757,
+  "2": 849,
+  "3": 1021,
+  "4": 1552,
+  "5": 1495,
+  "6": 576,
+  "7": 100,
+  "8": 7
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+ "snap": false,
+ "ld_other": false,
+ "provenance": {
+  "schema": "access-run-provenance/2",
+  "release": "access-engine-v3.2-facility-v1.3-20260929",
+  "recorded_at": "2026-09-29T14:30:54.571261+09:00",
+  "code_base": "package_code",
+  "input_base": "package_inputs",
+  "code": {
+   "sha256": "0a8407247af091c2053a95cfd9116dab78ca5141f18cf1af63163fe13230415f",
+   "files": [
+    {
+     "file": "a00_config.py",
+     "bytes": 6394,
+     "sha256": "1e9d3a9c7e1144df9a7408cbf577af0d94f9dbb1b44e8bdc2e55b904115b8136"
+    },
+    {
+     "file": "a06_engine.py",
+     "bytes": 37168,
+     "sha256": "f5b8ed0a02730214eb6e5a1b196b8ad0bf6ee782af77f96645acdee0ceab7c31"
+    },
+    {
+     "file": "a11_provenance.py",
+     "bytes": 5720,
+     "sha256": "322d95c2e6947eb7ceb211b05233a5b69ae4493a7479c5850bf19c4eccf36ac4"
+    }
+   ]
+  },
+  "inputs": {
+   "sha256": "4ff6a15137cbf668b3a556933426f8ca1e649b0a5ac8a17d50b74c7b1020c976",
+   "files": [
+    {
+     "file": "facility/facility_2020_2025_units.parquet",
+     "bytes": 44284682,
+     "sha256": "9a6036f1feb87d85f55c3366983c8dba574e14e2298bec28d0de826bac8a066a"
+    },
+    {
+     "file": "facility/facility_2020_2025_units.source.json",
+     "bytes": 287,
+     "sha256": "596d202657a1a2ed22cc53f65c9d9db7f46b307506442be5b4fa126d03c65141"
+    },
+    {
+     "file": "grid/grid250_master.parquet",
+     "bytes": 580312,
+     "sha256": "60ddd455fe27e20ab8bf91830f10a15d5fcaea40206f9f35581faaf89e256aa0"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11010/chunk_000.parquet",
+     "bytes": 43031,
+     "sha256": "e35e23d6109775713d9a78ce7e3c8b917790337a8756c28620e82992296d77ec"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11010/chunk_001.parquet",
+     "bytes": 23699,
+     "sha256": "dc55d3faa9b6dcc9ac52424df8401cf15f9d81888a5a19454d584f7dc6961669"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11020/chunk_000.parquet",
+     "bytes": 40650,
+     "sha256": "d350ca0fd5f207c5a57e1f9430d25fa4b7eaa46587339ef3d42c4287f04431e0"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11030/chunk_000.parquet",
+     "bytes": 44470,
+     "sha256": "579d989647159345d01c1388afde25834bb507e37bc224504c54c535834a8fd0"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11030/chunk_001.parquet",
+     "bytes": 9849,
+     "sha256": "65f75b05f7a2a49306765c9a4e3f1f0e3b8ac7274cdf9c325a7cb77d2b3949b6"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11040/chunk_000.parquet",
+     "bytes": 46107,
+     "sha256": "b4e5fdfd1036eb6f562dcbc586bf0bb24bfe8ae3252c54cbc2846650ac61c743"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11040/chunk_001.parquet",
+     "bytes": 6739,
+     "sha256": "e0690f12dc899831a4691c53654044c398a8d4444d5031888bcdf3fb09e3b99e"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11050/chunk_000.parquet",
+     "bytes": 49086,
+     "sha256": "68217f2bf793837c58a087151efaf861c7d00679438e1dcc06b5fd8798c62eda"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11050/chunk_001.parquet",
+     "bytes": 6195,
+     "sha256": "8f99c12bbe8648eaf5de12fbbf915bd1722aa8498b36368bc04296b3f4e4a1c0"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11060/chunk_000.parquet",
+     "bytes": 50929,
+     "sha256": "1b70c41ddfd66ae3cd2212073534ec9f2325c87b2793ddfa36c52ae1cc2c2aa7"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11060/chunk_001.parquet",
+     "bytes": 7786,
+     "sha256": "5522a0e547d8fec1cdb1ea0d64993496bd1a6c0874d3ad91e134c4ee3ff68656"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11070/chunk_000.parquet",
+     "bytes": 49235,
+     "sha256": "27f8390e1bfc756723e02095cbac16f185bce5bd9f37d4cc9a34ba9ad9f87cff"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11070/chunk_001.parquet",
+     "bytes": 10218,
+     "sha256": "53181948fc307ae7a9c28fff9a11b48445b30926930f34f05bbcf5ffacef1e49"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11080/chunk_000.parquet",
+     "bytes": 43816,
+     "sha256": "45a7ace977c2eb89e89305243f42cf62e91d28800121b3aec3736ce5fb23d0c5"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11080/chunk_001.parquet",
+     "bytes": 32081,
+     "sha256": "3863ca0ea5039ab9bc898dc069ef9ea19c44ab61c72d768ca9259bbf9daa02f4"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11090/chunk_000.parquet",
+     "bytes": 49737,
+     "sha256": "1eecc5ad2a3f39ff9291df8dba215736267dfc4710011c9d2e04b813fb4a4a9c"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11090/chunk_001.parquet",
+     "bytes": 10703,
+     "sha256": "731c80938ba36103903fd297fd5495067fa46605644cc841afc47c64319c2dd6"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11100/chunk_000.parquet",
+     "bytes": 46926,
+     "sha256": "f4dd03dd1cf24cf8ee4f713b9f184d6218a711a005e4b11901a9294a3cd7e560"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11100/chunk_001.parquet",
+     "bytes": 12437,
+     "sha256": "f879c8e0f0913d21ef1ccb5b0bfa197fa1fff44e690ef0698aaa32edd0c411dd"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11110/chunk_000.parquet",
+     "bytes": 43378,
+     "sha256": "9a2d54dd9f5aa11bd9147c16e26b7d668d4e99fd8ff95265c5a038d46db95b68"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11110/chunk_001.parquet",
+     "bytes": 39679,
+     "sha256": "ac6ea3098de52b81f2b6068e3ade955c962ee4d9842be219ecb483f55f6fa4cb"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11120/chunk_000.parquet",
+     "bytes": 45289,
+     "sha256": "e04c5f3044123167b51991a289ffe78ee95e41a9d364197c4843639966006c9a"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11120/chunk_001.parquet",
+     "bytes": 35523,
+     "sha256": "deb75e5033b8716365e3fe06ed6a1d017544d4b88c7eb30bf251e9438453c029"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11130/chunk_000.parquet",
+     "bytes": 48970,
+     "sha256": "f7a40701daa01b5f8af4800ded2dbaee05f050a0b809eb993017cf25368c4abf"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11130/chunk_001.parquet",
+     "bytes": 16617,
+     "sha256": "b71e32ec9bf49ce81e0ca144bcb5824ef06bf9ea4b1f58750be7869b075cc3df"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11140/chunk_000.parquet",
+     "bytes": 43659,
+     "sha256": "ef631cf89ee9081859e683948f68e3dd8f592f90a8c83b7133e97a4521f4fc09"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11140/chunk_001.parquet",
+     "bytes": 22605,
+     "sha256": "f8abd60340af0bf21e7343e148f50f9d67ba45fd75457ee4bcf36e32ad157b31"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11150/chunk_000.parquet",
+     "bytes": 48528,
+     "sha256": "f8bfa7fc538619f47e8d3256a961e90b67679240001fdd29a30af911d0abd588"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11150/chunk_001.parquet",
+     "bytes": 20550,
+     "sha256": "0e2be7973a2e1af7192340b44dceec2a5d2a284a3c3a33eac15f24a18f28b5cb"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11160/chunk_000.parquet",
+     "bytes": 41016,
+     "sha256": "32dca4dae69a26ab1b3e8533b9e6e72b3ebefa70444f315f68b9a35c86907b0f"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11160/chunk_001.parquet",
+     "bytes": 50698,
+     "sha256": "97a41aaf096acc0f8098b45f5986553c7e9e0d9eae9101cfcf2ea3013e5b8acb"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11160/chunk_002.parquet",
+     "bytes": 8505,
+     "sha256": "cc6a2f0c86847ff0121a5abf7a6b95aded578acf4272419c58529b46930af5d2"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11170/chunk_000.parquet",
+     "bytes": 34948,
+     "sha256": "c62df0fc73a4834c4ab566e08676cb711a7bb577bce2df7c601f6f81aefac8a8"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11170/chunk_001.parquet",
+     "bytes": 29741,
+     "sha256": "c3083b39af9b0fb47dfae643bdf8ed11614c6f0852618abb8707fbb3d26c711c"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11180/chunk_000.parquet",
+     "bytes": 42260,
+     "sha256": "8734b2cc6d733461f7f899740fdff5ae78f72843885deab0636a0e49d5000813"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11190/chunk_000.parquet",
+     "bytes": 49362,
+     "sha256": "f63939c7a4046bf041f55069c056ae2ca4de8827ce5ca692900c658f7df7b5b9"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11190/chunk_001.parquet",
+     "bytes": 24453,
+     "sha256": "e32399afd2aa74befbda028f70895bfa082de67a0be8e0264f7dd0548f0b94a8"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11200/chunk_000.parquet",
+     "bytes": 47535,
+     "sha256": "553ec2b035305a0bde3120cd824c50bf7705548c3eacb637c511d2ea38ee8ccc"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11200/chunk_001.parquet",
+     "bytes": 13622,
+     "sha256": "90032b2c256edd5391ec977d1a150060e3a4e893b6dd96a38e5278a4a5622fe7"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11210/chunk_000.parquet",
+     "bytes": 48165,
+     "sha256": "513daf6b88ade07ef782e9af0c4159f496e2214508e97ff5b5095971f9bc6a99"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11210/chunk_001.parquet",
+     "bytes": 25638,
+     "sha256": "639d596f2d874193740ebf5e0bb560ae410d2e8a73e282d6332b45d048862fac"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11220/chunk_000.parquet",
+     "bytes": 47317,
+     "sha256": "398119c94c3a793a230b066e91847ed6148afd8b562a9cc876e9d3d382560d99"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11220/chunk_001.parquet",
+     "bytes": 45592,
+     "sha256": "5c6d0d68529ba875255db3016cab3a195e8907b9748ec4eddbbced6017e532b6"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11220/chunk_002.parquet",
+     "bytes": 22197,
+     "sha256": "3bfc59eaeac0c2cdee89afacf6fc24d1b12f0677391ea699ae5ae9f2b729dbcf"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11230/chunk_000.parquet",
+     "bytes": 53361,
+     "sha256": "d61c808f4b46b2ad65b3030472dcbaba783da32fa65cf7fb9fe1317710cd1504"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11230/chunk_001.parquet",
+     "bytes": 45257,
+     "sha256": "24bb60c2069f4907f65adef8c86374181743a29477317c51927f1609bf2d8423"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11230/chunk_002.parquet",
+     "bytes": 27161,
+     "sha256": "380da302a7f0b10c621a78de63065989900f22c99c239893d9c88952cb05b56c"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11240/chunk_000.parquet",
+     "bytes": 46099,
+     "sha256": "1fef90206c63b708f5cb8e54167b42e0f1a3ef3c21ff572c249077615bc4288d"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11240/chunk_001.parquet",
+     "bytes": 48012,
+     "sha256": "54d41a19ced52dce54e29df1196e8a4295a677a600355f3ae1b827477fc72f18"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11240/chunk_002.parquet",
+     "bytes": 13038,
+     "sha256": "8afe1d22511baefb5861a5dcf2d8c5e46988b904f16baedfcfa119004523ab48"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11250/chunk_000.parquet",
+     "bytes": 50901,
+     "sha256": "34280318f015530a04b59512c13791c005bbe3ada54507aa0e1c009de9b1812b"
+    },
+    {
+     "file": "ttm/ttm250_2025/ku=11250/chunk_001.parquet",
+     "bytes": 26279,
+     "sha256": "c27adb73f4fd78ecb2fd5c7c6d3c90e29596b1e34ac47ccc997fd6e624aa8c45"
+    }
+   ]
+  },
+  "upstream_inputs": {
+   "sha256": "15d2a718f6a7e755a79d8095d60d63484fa3f2ff7963c350a3db2bf8e46e1584",
+   "files": [
+    {
+     "file": "시설데이터 구축/시설데이터_패키지/데이터/서울시설_2020_2025_분석용.parquet",
+     "bytes": 40210745,
+     "sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47"
+    }
+   ]
+  },
+  "environment": {
+   "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+   "platform": "Windows-11-10.0.22631-SP0",
+   "packages": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "pyarrow": "23.0.1",
+    "scipy": "1.17.1",
+    "geopandas": "1.1.3",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.2",
+    "duckdb": "1.5.5",
+    "osmium": null,
+    "matplotlib": "3.10.8"
+   }
+  }
+ },
+ "origins": 7034,
+ "origins_missing_in_ttm": 0,
+ "sfca": {
+  "items": 36,
+  "worst_rel_err_global": 5.041079178418078e-15,
+  "worst_abs_err_unit": 9.094947017729282e-13,
+  "supply_unassigned_category": {
+   "none": {
+    "교육": 1,
+    "보육·복지": 2,
+    "의료": 5,
+    "문화": 0,
+    "체육": 3,
+    "행정·안전": 3,
+    "소매": 13,
+    "생활서비스": 120
+   },
+   "dong424": {
+    "교육": 2,
+    "보육·복지": 2,
+    "의료": 6,
+    "문화": 1,
+    "체육": 3,
+    "행정·안전": 3,
+    "소매": 22,
+    "생활서비스": 140
+   },
+   "lz116": {
+    "교육": 1,
+    "보육·복지": 2,
+    "의료": 5,
+    "문화": 1,
+    "체육": 3,
+    "행정·안전": 3,
+    "소매": 20,
+    "생활서비스": 137
+   },
+   "ld": {
+    "교육": 1,
+    "보육·복지": 2,
+    "의료": 5,
+    "문화": 0,
+    "체육": 3,
+    "행정·안전": 3,
+    "소매": 19,
+    "생활서비스": 125
+   },
+   "ku": {
+    "교육": 1,
+    "보육·복지": 2,
+    "의료": 5,
+    "문화": 0,
+    "체육": 3,
+    "행정·안전": 3,
+    "소매": 19,
+    "생활서비스": 125
+   }
+  },
+  "supply_dedup": {
+   "rows_in": 294065,
+   "facility_dup_removed": 1574,
+   "category_library_removed": 210,
+   "category_cross_type_removed": 133
+  }
+ },
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9337885.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true,
+  "sfca_nonneg": true,
+  "sfca_conservation_global": true,
+  "sfca_conservation_unit": true
+ },
+ "files_base": "run_meta_directory",
+ "files": [
+  {
+   "file": "grid_access_2025_250.parquet",
+   "sha256": "2e70b1b324e839c3bd580edbef3cfeb50fe171d049bba64a60edb35bc276a3de",
+   "bytes": 376196
+  },
+  {
+   "file": "unit_access_2025_250.csv",
+   "sha256": "9a400178b0bf93f187030e8a2e815f647aacbe2be843d0b14b9dff4c47389a35",
+   "bytes": 3668734
+  },
+  {
+   "file": "sfca_unit_2025_250.csv",
+   "sha256": "a5ed8214a8e90aa9cc0061bf46c0f47559d6edbeb510c7b9ba731217c6c424b3",
+   "bytes": 15877959
+  }
+ ],
+ "seconds": 3.2
+}

@@ -1,0 +1,74 @@
+[
+ {
+  "file": "데이터/결과/main/grid_access_2020_100.parquet",
+  "rows": 1076285,
+  "columns": [
+   "pop",
+   "r",
+   "t_min_sec"
+  ],
+  "unchanged": true
+ },
+ {
+  "file": "데이터/결과/main/grid_sfca_2020_100.parquet",
+  "rows": 5227670,
+  "columns": [
+   "A_per10k"
+  ],
+  "unchanged": true
+ },
+ {
+  "file": "데이터/결과/natstd_B/grid_access_2020_100.parquet",
+  "rows": 30751,
+  "columns": [
+   "pop",
+   "r_교육",
+   "r_돌봄",
+   "r_의료",
+   "r_편의",
+   "r_교육_유치원_10분",
+   "r_교육_학교_15분",
+   "r_돌봄_어린이집_5분",
+   "r_의료_약국_10분",
+   "r_의료_의원_10분",
+   "r_편의_일상소매_10분"
+  ],
+  "unchanged": true
+ },
+ {
+  "file": "데이터/결과/main/grid_access_2025_100.parquet",
+  "rows": 1077475,
+  "columns": [
+   "pop",
+   "r",
+   "t_min_sec"
+  ],
+  "unchanged": true
+ },
+ {
+  "file": "데이터/결과/main/grid_sfca_2025_100.parquet",
+  "rows": 5233450,
+  "columns": [
+   "A_per10k"
+  ],
+  "unchanged": true
+ },
+ {
+  "file": "데이터/결과/natstd_B/grid_access_2025_100.parquet",
+  "rows": 30785,
+  "columns": [
+   "pop",
+   "r_교육",
+   "r_돌봄",
+   "r_의료",
+   "r_편의",
+   "r_교육_유치원_10분",
+   "r_교육_학교_15분",
+   "r_돌봄_어린이집_5분",
+   "r_의료_약국_10분",
+   "r_의료_의원_10분",
+   "r_편의_일상소매_10분"
+  ],
+  "unchanged": true
+ }
+]

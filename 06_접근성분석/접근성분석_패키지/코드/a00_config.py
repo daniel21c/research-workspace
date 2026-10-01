@@ -5,7 +5,7 @@ import os
 
 HERE = Path(__file__).resolve().parent          # 06_접근성분석/접근성분석_패키지/코드
 ROOT = HERE.parent                                # 06_접근성분석/접근성분석_패키지
-BASE = ROOT.parent.parent                         # 00_박사논문_연구체계
+BASE = Path(os.environ.get("ACCESS_REPOSITORY_ROOT", ROOT.parent.parent))                         # 00_박사논문_연구체계
 # 모든 경로는 00_박사논문_연구체계(BASE) 안의 상대경로다(2026-09-26, 공동연구자 공유용 자기완결 구성).
 CORE   = BASE / '00_공통_코어엔진'
 # 2026-09-25: 시설데이터는 패키지 하나로 정리됨 → 시설데이터 구축/시설데이터_패키지/ (데이터·문서·구축코드·SGIS)
@@ -46,25 +46,23 @@ SEOUL_BUFFER_M = 2000  # 네트워크 자르기 버퍼
 SNAP_MAX_M = 200       # 격자 중심 → 노드 연결 거리 표시 기준
 CRS = 5179
 
-# 33종 → 카테고리 (분석용 파일의 '시설' 값 기준)
+# 32종 → 카테고리 (분석용 파일의 '시설' 값 기준)
 CAT_A = {
  '교육': ['유치원','학교','청소년수련시설'],
  '보육·복지': ['어린이집','노인 이용시설','장애인 이용시설','가족센터(자치구 본소)'],
  '의료': ['의원','약국','병원급','보건소·보건지소','응급의료기관','산후조리원'],
  '문화': ['공공도서관','문화기반시설','등록공연장'],
- '체육': ['체육시설업'],
  '행정·안전': ['주민센터','소방서·119안전센터'],
  '소매': ['일상소매','식료품소매(즉석판매·제과)','대규모점포(주요4업태)'],
  '생활서비스': ['일반음식점','휴게음식점','미용업','이용업','세탁업','목욕장업'],
 }
-CAT_A4 = {'교육·복지': ['교육','보육·복지'], '의료': ['의료'], '체육·문화': ['체육','문화'], '소매·서비스·행정': ['소매','생활서비스','행정·안전']}
+CAT_A4 = {'교육·복지': ['교육','보육·복지'], '의료': ['의료'], '문화': ['문화'], '소매·서비스·행정': ['소매','생활서비스','행정·안전']}
 CONTROL = ['버스정류장','지하철역','따릉이 대여소','주유소','노인 입소시설']
 # 묶음 B: (카테고리, 시설, 세부조건(None=전체), τ분)
 CAT_B = [
  ('교육','유치원',None,10), ('교육','학교',lambda s: str(s).startswith('초등학교'),15),
  ('돌봄','어린이집',None,5),
  ('의료','의원',None,10), ('의료','약국',None,10),
- ('체육','체육시설업',lambda s: s in ('체력단련장','체육도장','수영장','종합체육시설'),10),
  ('편의','일상소매',None,10),
 ]
 BOUNDARY_CONDS = ['none','dong','lz','ld','ku']
@@ -93,3 +91,7 @@ def runtime_env():
     import numpy, pandas, pyarrow
     return dict(python=sys.version.split()[0], platform=platform.platform(), numpy=numpy.__version__,
                 pandas=pandas.__version__, pyarrow=pyarrow.__version__)
+
+# facility-v1.4: both years exclude the full sports-business type; no public-sports replacement.
+FACILITY_SELECTION_JSON = FACPKG / '구축코드' / '시설_선택규칙.json'
+ANALYSIS_SCOPE = {'facility_release': 'facility-v1.4', 'excluded_types': ['체육시설업'], 'excluded_years': [2020, 2025], 'excluded_rows_by_year': {'2020': 10293, '2025': 11007}, 'A_categories': list(CAT_A), 'A_K': len(CAT_A), 'A_types': sum(map(len,CAT_A.values())), 'B_functions': list(dict.fromkeys(x[0] for x in CAT_B)), 'public_sports_replacement': False, 'retail_historic_original': 'requested_not_received'}

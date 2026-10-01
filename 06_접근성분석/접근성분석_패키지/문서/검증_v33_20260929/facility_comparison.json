@@ -1,0 +1,16 @@
+{
+ "old_sha256": "1a097e954a134d4440a64bf668252943de0ace6a0bc38ec5b5f499c36be17a47",
+ "new_sha256": "c0857567127210d823bb57cea01799f2cc46917ab636be84ab441556f97158cb",
+ "old_rows": 606066,
+ "new_rows": 584766,
+ "new_columns": 25,
+ "new_types": 32,
+ "analysis_ready": 581888,
+ "removed_by_year": {
+  "2020": 10293,
+  "2025": 11007
+ },
+ "remaining_exact": true,
+ "coordinate_changes": 0,
+ "other_type_changes": 0
+}

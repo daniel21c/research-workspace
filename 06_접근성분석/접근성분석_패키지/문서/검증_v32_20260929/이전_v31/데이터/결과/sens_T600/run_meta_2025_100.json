@@ -1,0 +1,139 @@
+{
+ "engine": "access-engine-v3",
+ "year": 2025,
+ "grid_m": 100,
+ "T_sec": 600.0,
+ "speed_kmh": 4.0,
+ "catset": "A",
+ "retail": "with",
+ "union": false,
+ "tag": "sens_T600",
+ "ku": null,
+ "ttm_rows": 22625482,
+ "fac_rows_year_analyzable": 309296,
+ "fac_rows_used": 294061,
+ "fac_rows_outside_grid": 40,
+ "fac_cells": 25069,
+ "fac_cells_by_cat": {
+  "교육": 1765,
+  "보육·복지": 4336,
+  "의료": 6748,
+  "문화": 696,
+  "체육": 6617,
+  "행정·안전": 555,
+  "소매": 16146,
+  "생활서비스": 21036
+ },
+ "Cg_dist": {
+  "1": 7235,
+  "2": 7959,
+  "3": 5560,
+  "4": 3576,
+  "5": 675,
+  "6": 61,
+  "7": 3
+ },
+ "env": {
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "numpy": "2.4.4",
+  "pandas": "3.0.2",
+  "pyarrow": "23.0.1"
+ },
+ "facility_units_source_sha256": "b87ed1cc198bec94d21808b2eb8d0314b6b4b45662782db019a96f3804aef39f",
+ "origins": 30785,
+ "origins_missing_in_ttm": 0,
+ "sfca": {
+  "items": 36,
+  "worst_rel_err_global": 1.710983565945544e-14,
+  "worst_abs_err_unit": 4.547473508864641e-13,
+  "supply_unassigned_category": {
+   "none": {
+    "교육": 8,
+    "보육·복지": 9,
+    "의료": 8,
+    "문화": 17,
+    "체육": 17,
+    "행정·안전": 6,
+    "소매": 106,
+    "생활서비스": 463
+   },
+   "dong424": {
+    "교육": 12,
+    "보육·복지": 14,
+    "의료": 19,
+    "문화": 22,
+    "체육": 25,
+    "행정·안전": 7,
+    "소매": 152,
+    "생활서비스": 597
+   },
+   "lz116": {
+    "교육": 9,
+    "보육·복지": 14,
+    "의료": 15,
+    "문화": 21,
+    "체육": 18,
+    "행정·안전": 7,
+    "소매": 131,
+    "생활서비스": 536
+   },
+   "ld": {
+    "교육": 9,
+    "보육·복지": 12,
+    "의료": 8,
+    "문화": 20,
+    "체육": 17,
+    "행정·안전": 7,
+    "소매": 117,
+    "생활서비스": 467
+   },
+   "ku": {
+    "교육": 8,
+    "보육·복지": 9,
+    "의료": 8,
+    "문화": 17,
+    "체육": 17,
+    "행정·안전": 6,
+    "소매": 107,
+    "생활서비스": 463
+   }
+  },
+  "supply_dedup": {
+   "rows_in": 294021,
+   "facility_dup_removed": 1574,
+   "category_library_removed": 210,
+   "category_cross_type_removed": 133
+  }
+ },
+ "checks": {
+  "pop_total_same_all_b": true,
+  "seoul_pop_total": 9337885.0,
+  "COV_in_0_1": true,
+  "MAI_in_1_K": true,
+  "PWATT_le_T": true,
+  "r_b_le_r_none": true,
+  "r_ku_ge_r_dong": true,
+  "sfca_nonneg": true,
+  "sfca_conservation_global": true,
+  "sfca_conservation_unit": true
+ },
+ "files": [
+  {
+   "file": "데이터/결과/sens_T600/grid_access_2025_100.parquet",
+   "sha256": "ede95f738cdc15ba48dd23bdad447b811bfa791ccf3448bf5b73ca30c62183fe",
+   "bytes": 1612008
+  },
+  {
+   "file": "데이터/결과/sens_T600/unit_access_2025_100.csv",
+   "sha256": "0e026dc8ff72993b64f675f88e931ad047cc74fb786a176f4795a5cec341d129",
+   "bytes": 3672646
+  },
+  {
+   "file": "데이터/결과/sens_T600/sfca_unit_2025_100.csv",
+   "sha256": "39b6b6c574441c74bb2cf16e67913900a16beee35ecd6a906786ed73aa9f4ab3",
+   "bytes": 15878988
+  }
+ ],
+ "seconds": 16.4
+}
