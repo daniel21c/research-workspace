@@ -12,6 +12,7 @@ k01 — 지표 계산 (연구설계 4.4 ①~⑥)
   t05_null_partitions.csv     귀무 분할 IFR 분포 (H4)
   t08_lz116_metrics.csv       생활권 116 보조표
   t09_ari_ld20_ld25.csv       구별 LD2020 vs LD2025 ARI, 소속이 바뀐 동
+  t10_iou_vs_gap.csv          구별 IoU(1:1 대응)와 G·D, t10_iou_regression.csv 는 D·G ~ IoU 회귀의 R²·p
   results.json                핵심 수치 (원고 작성 스크립트가 읽는다)
 
 실행: python k01_compute.py
@@ -237,6 +238,16 @@ def main():
             iou[f"{c}_{y}"] = gu[y][c]
     iou["dG"] = ch["dG"]; iou["dD"] = ch["dD"]
     iou.to_csv(C.TAB / "t10_iou_vs_gap.csv", encoding="utf-8-sig")
+    # D·G ~ IoU 선형회귀(구 25개): 원고 Ⅲ.1 3)의 R²·p를 결과 파일로 남긴다(2026-10-02 감사 지적: 원고 수치 대조가 계산해 쓰던 값과 고정 문구 "p < 0.001").
+    from scipy.stats import linregress
+    reg_rows = []
+    for y in C.YEARS:
+        for target in ("D", "G"):
+            for sample in ("전체", "같은_구_제외"):
+                sub = iou if sample == "전체" else iou[iou[f"D_{y}"] != 0]          # 같은 구 = 두 경계가 완전히 같아 D = 0
+                r = linregress(sub[f"IoU_{y}"], sub[f"{target}_{y}"])
+                reg_rows.append({"year": y, "target": target, "sample": sample, "n": len(sub), "r2": r.rvalue ** 2, "slope": r.slope, "p_value": r.pvalue})
+    pd.DataFrame(reg_rows).to_csv(C.TAB / "t10_iou_regression.csv", index=False, encoding="utf-8-sig")
 
     # ⑪ 생활권(116) 단위 변화표 — 본문에는 쓰지 않고, 선별 구 안에서 문제 생활권을 지목할 때만 쓴다
     zw = z.pivot(index="lz_O", columns="year", values=["G", "D", "T"])

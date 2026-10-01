@@ -90,7 +90,7 @@ def readme(pkg, stem, verify, claims, indep, selftest, stamp):
 - **내부통행률(Internal Flow Ratio, IFR)**: 동에서 출발한 서울 내부 통행 중 같은 권역 안에서 끝나는 통행의 비율(같은 동 안 통행 포함, 구를 넘는 통행은 분모에만 들어감). 분모 정의는 저자가 확정함(`docs/연구설계.md` §3).
 - **데이터 기반 커뮤니티**: 같은 해 생활이동 통행으로 만든 경계(자치구 안 Leiden 3,000회 종합, 개수 = 기존 생활권 수). 기존 생활권을 대체하는 안이 아니라 비교 기준이다.
 - **무작위 경계**: 이동 정보 없이 이웃한 동을 무작위로 묶은 경계. 자치구마다 1,000번 추출(중복 허용). N0는 권역 수만, N1은 권역별 동 수까지, N2는 N1 중 통행량 비중이 비슷한 것(보조 분석). 최소 기준으로 쓴다.
-- **불일치 D**: 두 경계가 권역 안/밖을 서로 다르게 분류한 통행의 비율 = (a + b)/T. **내부통행률 격차 G** = 커뮤니티 IFR − 기존 생활권 IFR = (a − b)/T. D는 JTG에서 쓴 경계 일치도 IoU(동 수 기준 일대일 대응)와 구별 차이의 79~85%를 공유하고(R²), G는 거의 설명하지 못한다(R² ≤ 0.14).
+- **불일치 D**: 두 경계가 권역 안/밖을 서로 다르게 분류한 통행의 비율 = (a + b)/T. **내부통행률 격차 G** = 커뮤니티 IFR − 기존 생활권 IFR = (a − b)/T. D는 JTG에서 쓴 경계 일치도 IoU(동 수 기준 일대일 대응)와 구별 차이의 79~85%를 공유하고(R²), G는 거의 설명하지 못한다(R² < 0.15).
 
 ## 2. 읽는 순서
 1. `manuscript/국토계획_투고본_심사용_{DATE}.hwp·.pdf` — 투고용(학회 샘플 양식, 익명). `…_저자정보_…` — 저자·소속·이메일 포함본(심사 업로드용 아님)
@@ -117,7 +117,7 @@ python k19_kpa_v2.py               # 원고 docx + 원고 본문 수치 대조(k
 python tests/test_text_claims.py   # 원고 숫자를 바꾸면 반드시 실패하는지
 python k11_independent_check.py    # a·b·T 독립 재계산 + docx/hwp 표 셀 대조
 python k22_hwp_kpa.py both         # (Windows + 한글 2022) 학회 샘플 위 투고본 hwp·pdf
-python k23_repro_check.py          # k13·k14·k25·k18 재실행 재현성(약 35분)
+python k23_repro_check.py          # k01·k13·k14·k25·k18 재실행 재현성(약 35분)
 python k21_raw_integrity.py        # (원자료가 있을 때만) 원자료 CSV 48개 해시·원자료→OD 재구성
 ```
 시드: 무작위 경계 20260927(k13), N0 ΔIFR 20260924(k01). 같은 순서로 실행하면 csv는 바이트 단위로, json은 실행 시간 항목을 뺀 내용이 같다.
@@ -175,7 +175,7 @@ QNA = """# 예상 심사 질문과 답변 요지 (확정본, 원고 용어 기�
 | 13 | 구별 부호검정 p값이 서울 전체 지표의 변화를 검정한 것인가 | 아니다. 구별 증가·감소 방향의 검정이며 자치구끼리 독립이라고 가정한다. 서울 전체 D·G의 변화는 기술값으로 따로 보고한다 | Ⅲ.3, Ⅳ.3, Ⅴ.5 |
 | 14 | 기존 생활권은 원래 경계 그대로인가 | 면적이 가장 많이 겹치는 기준으로 424개 행정동에 대응시킨 경계다(겹침 비율 최솟값 0.51). 겹침이 낮은 동에서는 원래 경계와 차이가 있을 수 있으므로 재검토 후보를 곧바로 실제 경계의 오류로 부르지 않는다 | Ⅲ.1 |
 | 15 | 65개 동 변경이 불일치를 줄이는 데 필요한 최소 변경 수인가 | 아니다. 65개는 모듈러리티가 가장 많이 오르는 이동부터 적용한 단계적 재배정의 결과이며 바꿀 동의 수를 가장 적게 하도록 설계한 것이 아니다. 최소 변경안이나 반드시 시행할 재배정 규모로 해석하지 않는다 | Ⅳ.4 |
-| 16 | IoU와 D는 같은 두 경계에서 나오니 독립이 아니지 않은가 | 맞다. 그래서 검증이 아니라 대응 관계로 제시했다. 요점은 D가 IoU(동 개수)와 같은 어긋남을 통행량으로 잰다는 것과, a에서 b를 뺀 값인 G는 IoU로 설명되지 않아(R² ≤ 0.14) D를 따로 써야 한다는 것이다 | Ⅲ.1 |
+| 16 | IoU와 D는 같은 두 경계에서 나오니 독립이 아니지 않은가 | 맞다. 그래서 검증이 아니라 대응 관계로 제시했다. 요점은 D가 IoU(동 개수)와 같은 어긋남을 통행량으로 잰다는 것과, a에서 b를 뺀 값인 G는 IoU로 설명되지 않아(R² < 0.15) D를 따로 써야 한다는 것이다 | Ⅲ.1 |
 """
 
 
@@ -228,7 +228,7 @@ def selftest(pkg):
     R = {}
     rr = C.TAB / "_repro_result_benchmark.json"
     if rr.exists():
-        d = json.loads(rr.read_text(encoding="utf-8")); R["재실행_재현성"] = "동일(csv 바이트·json 정규화)" if not d["달라진파일"] else f"달라짐: {d['달라진파일']}"
+        d = json.loads(rr.read_text(encoding="utf-8")); dif = d["달라진파일"] + d.get("k01_달라진파일", []); R["재실행_재현성"] = "동일(csv 바이트·json 정규화)" if not dif else f"달라짐: {dif}"
     else: R["재실행_재현성"] = "미실행"
     env = {**os.environ, "PYTHONIOENCODING": "utf-8"}
     run = lambda cmd: subprocess.run([sys.executable] + cmd, cwd=pkg / "scripts", capture_output=True, text=True, encoding="utf-8", env=env)
@@ -242,11 +242,19 @@ def selftest(pkg):
     for cmd in (["k25_change_story.py"], ["tests/test_text_claims.py"]):
         p = run(cmd); runs.append({"cmd": cmd[0], "rc": p.returncode, "tail": (p.stdout + p.stderr).strip()[-200:]})
     R["실행"] = runs
-    diffs = []
-    for f in ("t02_gu_metrics_long.csv", "t03_gu_change.csv", "t04_decomposition.csv", "t05_null_summary.csv"):
-        a = pd.read_csv(C.TAB / f, encoding="utf-8-sig"); b = pd.read_csv(pkg / "output" / "tables" / f, encoding="utf-8-sig")
+    # k01이 만드는 표 전부(t01~t10, IoU–D·G 회귀 t10_iou_regression 포함)와 results.json(만든 시각·걸린 시간 제외)을 저장소 결과와 대조한다
+    # (2026-10-02 감사 S3-7: 이전에는 표 4종만 비교해 t01·t09·t10과 IoU–D R²가 시험 범위 밖이었다).
+    diffs, compared = [], []
+    for fp in sorted(C.TAB.glob("t*.csv")):
+        q = pkg / "output" / "tables" / fp.name
+        if not q.exists(): diffs.append(float("inf")); compared.append(fp.name + "(없음)"); continue
+        a = pd.read_csv(fp, encoding="utf-8-sig"); b = pd.read_csv(q, encoding="utf-8-sig")
         num = a.select_dtypes("number").columns
-        diffs.append(float((a[num] - b[num]).abs().max().max()) if a.shape == b.shape else float("inf"))
+        same = a.shape == b.shape and list(a.columns) == list(b.columns) and a.drop(columns=num).equals(b.drop(columns=num))
+        diffs.append(float((a[num] - b[num]).abs().max().max()) if same and len(num) else (0.0 if same else float("inf"))); compared.append(fp.name)
+    strip = lambda d: {k: (strip(v) if isinstance(v, dict) else v) for k, v in d.items() if k not in ("created", "seconds")}
+    rj0 = strip(json.loads((C.TAB / "results.json").read_text(encoding="utf-8"))); rj1 = strip(json.loads((pkg / "output" / "tables" / "results.json").read_text(encoding="utf-8")))
+    if rj0 != rj1: diffs.append(float("inf")); compared.append("results.json(다름)")
     j0 = json.loads((B / "b9_change_story.json").read_text(encoding="utf-8")); j1 = json.loads((ob / "b9_change_story.json").read_text(encoding="utf-8"))
     def flat(d, p=""):
         out = {}
@@ -258,7 +266,7 @@ def selftest(pkg):
     dk = max((abs(f0[k] - f1[k]) for k in f0 if isinstance(f0[k], (int, float)) and not isinstance(f0[k], bool)), default=0.0)
     same_str = all(f0[k] == f1[k] for k in f0 if isinstance(f0[k], str))
     ok = all(r["rc"] == 0 for r in runs) and max(diffs) < 1e-9 and dk < 1e-9 and same_str
-    R["패키지_자체재현"] = ("통과" if ok else "실패") + f" (k01 표 4종 최대차 {max(diffs):.1e}, k25 최대차 {dk:.1e}, 원고 수치 대조 {'통과' if runs[-1]['rc'] == 0 else '실패'})"
+    R["패키지_자체재현"] = ("통과" if ok else "실패") + f" (k01 표 {len(compared)}종과 results.json 최대차 {max(diffs):.1e}, k25 최대차 {dk:.1e}, 원고 수치 대조 {'통과' if runs[-1]['rc'] == 0 else '실패'})"
     shutil.rmtree(pkg / "output", ignore_errors=True)                     # 시험 산출물은 패키지에 남기지 않는다
     for pyc in pkg.rglob("__pycache__"): shutil.rmtree(pyc, ignore_errors=True)
     (C.PKG / "package_selfcheck.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")

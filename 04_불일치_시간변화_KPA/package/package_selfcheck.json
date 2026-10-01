@@ -14,7 +14,7 @@
   {
    "cmd": "k01_compute.py",
    "rc": 0,
-   "tail": "25,\n  \"quadrant\": {\n   \"I (+,+)\": 14,\n   \"III (-,-)\": 8,\n   \"II (-,+)\": 2,\n   \"IV (+,-)\": 1\n  }\n }\n}\n완료 7.3s → D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\package\\package_kpa_final_20261002\\output\\tables"
+   "tail": "25,\n  \"quadrant\": {\n   \"I (+,+)\": 14,\n   \"III (-,-)\": 8,\n   \"II (-,+)\": 2,\n   \"IV (+,-)\": 1\n  }\n }\n}\n완료 5.3s → D:\\Research\\00_박사논문_연구체계\\04_불일치_시간변화_KPA\\package\\package_kpa_final_20261002\\output\\tables"
   },
   {
    "cmd": "k25_change_story.py",
@@ -27,5 +27,5 @@
    "tail": "ok test_current_manuscript_passes\nok test_changed_number_fails\nok test_every_claim_detects_mutation_and_deletion\nok test_claim_is_context_bound\n4/4 통과"
   }
  ],
- "패키지_자체재현": "통과 (k01 표 4종 최대차 0.0e+00, k25 최대차 0.0e+00, 원고 수치 대조 통과)"
+ "패키지_자체재현": "통과 (k01 표 14종과 results.json 최대차 0.0e+00, k25 최대차 0.0e+00, 원고 수치 대조 통과)"
 }

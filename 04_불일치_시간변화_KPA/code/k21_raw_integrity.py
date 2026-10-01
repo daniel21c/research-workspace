@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config as C  # noqa: E402
 
 RAW = Path(os.environ.get("SEOUL_FLOW_RAW_DIR", r"D:\Research\0_RAW\2401-2406_SEOUL_MOVING_CSV"))
-OUT = C.ROOT / "output" / "tables" / "integrity"
+OUT = C.TAB / "integrity"                # 저장소: results/integrity, 패키지: output/tables/integrity (k20·문서가 읽는 위치와 같음; 2026-10-02 감사 S3-14)
 OUT.mkdir(parents=True, exist_ok=True)
 H0, H1 = 9, 20                      # 도착시간 09~20시(=09:00~20:59), 코어 config FLOW_ARRIVAL_HOURS
 EXCL = ("HW", "WH")                 # 코어 config FLOW_EXCLUDE_TYPES

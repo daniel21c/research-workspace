@@ -185,7 +185,9 @@ def _null_note():
     n2_small = lz[lz.N2_n < 1000].sort_values("N2_n")
     relax = mt[mt.N2_tol > 0.05]
     ken = lambda ku: {"금천구": "Geumcheon-gu", "영등포구": "Yeongdeungpo-gu", "강남구": "Gangnam-gu"}.get(ku, ku)
+    from k13_benchmark import SEED as K13_SEED
     txt = ("N0 and N1 are drawn 1,000 times per district with replacement (1,000 is the number of draws, not of dongs). "
+           f"N0 was drawn twice: the sample for the rise in IFR (Figure A1) uses seed {C.NULL_SEED}, and the sample for percentiles and the size effect (Figure 2, Table A2) uses seed {K13_SEED}. "
            f"Distinct N1 partitions for the existing zones: {int(lz.N1_distinct.min())}~{int(lz.N1_distinct.max())} (small districts allow few partitions). "
            f"N2 keeps up to 1,000 N1 draws that meet the share condition; for the existing zones {len(n2_small)} districts have fewer than 1,000"
            + (f" (minimum {ken(n2_small.ku_name.iat[0])}, {int(n2_small.N2_n.iat[0])})" if len(n2_small) else "") + ", all with tolerance 0.05. "
@@ -194,16 +196,23 @@ def _null_note():
     return txt
 
 
+def _min_overlap() -> float:
+    """행정동→공식 생활권 대응의 겹침 비율 최솟값(코어 배포본 매핑 파일에서 읽음; 원고 본문의 0.51과 k24가 대조)."""
+    return float(pd.read_csv(C.LZ_MAP, encoding="utf-8-sig").overlap_ratio.min())
+
+
 def build_tables_v2():
     t01 = pd.read_csv(C.TAB / "t01_data_summary.csv", encoding="utf-8-sig", dtype={"year": str}).set_index("year")
     g = pd.read_csv(B / "b1_gu.csv", encoding="utf-8-sig"); s = json.loads((B / "b4_summary.json").read_text(encoding="utf-8"))
     gs = pd.read_csv(B / "b4_gu_summary.csv", encoding="utf-8-sig"); gm = pd.read_csv(B / "b4_greedy_moves.csv", encoding="utf-8-sig")
     S9 = json.loads((B / "b9_change_story.json").read_text(encoding="utf-8")); t9 = pd.read_csv(B / "b9_type_decomp.csv", encoding="utf-8-sig")
+    S1 = json.loads((B / "b_summary.json").read_text(encoding="utf-8"))
+    nb20, nb25 = (S1[f"동_LZ_{y}"]["이웃권역이_더_담는_동수"] for y in (C.Y0, C.Y1))      # 표 5 집단에서 옮길 수 없는 동을 빼기 전의 수(원고 Ⅳ.4 2))
     T = {}
     T["T1"] = dict(ko="1. 분석 자료", en="1. Data", headers=["자료", "시점·범위", "처리", "역할"], widths=[3.2, 3.6, 6.4, 3.0],
                    rows=[["서울 생활이동 OD", "2020년 1월, 2025년 1월", "도착 09:00~20:59, 통근(HW·WH) 제외, 요일 전체, 서울 내부, 비공개 행 0", "IFR·모듈러리티 계산"],
-                         ["행정동 경계·인접", "424개(두 해 공통 정본)", "2021년 코드표 기준 통일, 경계를 공유하면 이웃으로 봄", "집계·재배정 단위"],
-                         ["기존 지역생활권", "116개(2030 서울생활권계획)", "행정동→생활권 면적 최대 중첩(최솟값 0.51)", "평가 대상"],
+                         ["행정동 경계·인접", "424개(두 해 공통 정본)", "2021년 코드표 코드, 통계청 2023년 7월 경계 형상, 경계나 꼭짓점을 공유하면 이웃으로 봄", "집계·재배정 단위"],
+                         ["기존 지역생활권", "116개(2030 서울생활권계획)", f"행정동→생활권 면적 최대 중첩(최솟값 {_min_overlap():.2f})", "평가 대상"],
                          ["데이터 기반 커뮤니티", "연도별 116개", "자치구 내 Leiden 합의(3,000회, τ = 0.5), 개수 = 기존 생활권", "이동 기반 비교 기준"],
                          ["필터 후 통행량", f"{t01.loc['2020','flow_daily_seoul']/1e6:,.1f}백만 / {t01.loc['2025','flow_daily_seoul']/1e6:,.1f}백만", f"비공개 행 {t01.loc['2020','masked_row_share_daily']*100:.1f}% / {t01.loc['2025','masked_row_share_daily']*100:.1f}%", "—"]],
                    note="Seoul living-movement data are travel estimates by the Seoul Metropolitan Government and KT; cells with fewer than three persons are not released and were set to zero.")
@@ -230,7 +239,7 @@ def build_tables_v2():
     T["T5"] = dict(ko="5. 경계 동을 한 개씩 옮겨 본 결과", en="5. Results of Moving One Boundary Dong at a Time", headers=["집단", "연도", "동 수", "IFR 개선", "모듈러리티 개선", "둘 다 개선", "IFR만 개선(크기 효과)"], widths=[4.4, 1.3, 1.5, 1.8, 2.0, 1.9, 2.8],
                    rows=[["옆 생활권 지향 동", y, k(y, "옆생활권지향동")["n"], k(y, "옆생활권지향동")["ΔIFR>0"], k(y, "옆생활권지향동")["ΔQ>0"], k(y, "옆생활권지향동")["둘다>0"], k(y, "옆생활권지향동")["ΔIFR>0_ΔQ≤0(크기효과)"]] for y in (C.Y0, C.Y1)] +
                         [["그 밖의 경계 동", y, k(y, "그밖의_경계동")["n"], k(y, "그밖의_경계동")["ΔIFR>0"], k(y, "그밖의_경계동")["ΔQ>0"], k(y, "그밖의_경계동")["둘다>0"], k(y, "그밖의_경계동")["ΔIFR>0_ΔQ≤0(크기효과)"]] for y in (C.Y0, C.Y1)],
-                   note=f"Dongs oriented to a neighbouring zone send more trips to it than to their own zone, excluding trips within the dong. Each dong is counted by its single move with the largest modularity gain (the same rule as the reassignment). Counting any move that raises both measures gives {k(C.Y0, '옆생활권지향동')['둘다>0_아무이동']} and {k(C.Y1, '옆생활권지향동')['둘다>0_아무이동']} neighbour-oriented dongs and {k(C.Y0, '그밖의_경계동')['둘다>0_아무이동']} and {k(C.Y1, '그밖의_경계동')['둘다>0_아무이동']} other boundary dongs (2020, 2025). Zone counts and spatial contiguity are kept after each move.")
+                   note=f"Dongs oriented to a neighbouring zone send more trips to it than to their own zone, excluding trips within the dong. Each dong is counted by its single move with the largest modularity gain (the same rule as the reassignment). Counting any move that raises both measures gives {k(C.Y0, '옆생활권지향동')['둘다>0_아무이동']} and {k(C.Y1, '옆생활권지향동')['둘다>0_아무이동']} neighbour-oriented dongs and {k(C.Y0, '그밖의_경계동')['둘다>0_아무이동']} and {k(C.Y1, '그밖의_경계동')['둘다>0_아무이동']} other boundary dongs (2020, 2025). Zone counts and spatial contiguity are kept after each move, so dongs whose move would empty or split their zone are not in these groups (the counts in the text before this exclusion are {nb20} and {nb25}).")
     rows = []
     for y in (C.Y0, C.Y1):
         q = k(y, "탐욕재배정"); rows.append([y, q["옮긴_동"], q["옮긴_구"], f"{q['서울IFR_전']:.1f}", f"{q['서울IFR_후']:.1f}", f"{q['서울IFR_가상경계']:.1f}", f"{q['서울D_전']:.1f}", f"{q['서울D_후']:.1f}", f"{q['Q_전_중앙']:.3f}", f"{q['Q_후_중앙']:.3f}", f"{q['Q_가상경계_중앙']:.3f}"])
@@ -247,7 +256,7 @@ def build_tables_v2():
                    headers=["이동 유형", "비중 2020(%)", "비중 2025(%)", "IFR 2020(%)", "IFR 2025(%)", "ΔIFR(%p)", "유형 내 기여(%p)", "구성 기여(%p)"],
                    widths=[2.6, 1.8, 1.8, 1.8, 1.8, 1.8, 2.2, 2.0], rows=rows, bold_last=True,
                    note=(f"Seoul totals (sum of numerators over sum of denominators). Within-type contribution = mean share of the two years × change in IFR by type; composition contribution = change in share × mean IFR of the two years (symmetric decomposition). "
-                         f"The within-type effect is {U['유형내_비중'] * 100:.0f}% of the change in IFR. Districts where the weekend rise exceeded the weekday rise: {W['구수_주말>평일']}/{W['n']} (sign test p {'< 0.001' if W['p_양측'] < 0.001 else '= ' + format(W['p_양측'], '.3f')}). Home-to-work and work-to-home trips (HW·WH) are excluded."))
+                         f"The within-type effect is {U['유형내_비중'] * 100:.0f}% of the change in IFR. Districts where the weekend rise exceeded the weekday rise: {W['구수_주말>평일']}/{W['n']} (sign test p {'< 0.001' if W['p_양측'] < 0.001 else '= ' + format(W['p_양측'], '.3f')}). Home-to-work and work-to-home trips (HW·WH) are excluded. Weekend = Saturday and Sunday; public holidays cannot be identified in the data and are counted as weekdays."))
 
     Dv, Gv = S9["D변화"], S9["G확대"]; Sd = json.loads((C.TAB / "results.json").read_text(encoding="utf-8"))["seoul"]
     T["T4"] = dict(ko="4. 기존 생활권과 커뮤니티의 불일치 변화", en="4. Change in Mismatch between Existing Living Zones and Mobility Communities",
