@@ -36,12 +36,17 @@ TYPES_KO = {'교육': '유치원, 학교, 청소년수련시설', '보육·복�
             '생활서비스': '일반음식점, 휴게음식점, 미용업, 이용업, 세탁업, 목욕장업'}
 
 
+def _grp(v):
+    """Elsevier 숫자 표기: 네 자리는 쉼표 없음(1000), 다섯 자리부터 쉼표(10,000). AG 게재 논문 10편 대조."""
+    return f'{v:,}' if v >= 10000 else str(v)
+
+
 def n0(x):
-    return f'{int(round(float(x))):,}'
+    v = int(round(float(x))); return ('−' if v < 0 else '') + _grp(abs(v))
 
 
 def sgn(x):
-    x = int(round(float(x))); return ('+' if x > 0 else '−' if x < 0 else '') + f'{abs(x):,}'
+    x = int(round(float(x))); return ('+' if x > 0 else '−' if x < 0 else '') + _grp(abs(x))
 
 
 def f2(x):
@@ -123,21 +128,21 @@ def tables(V, T, lang='en'):
     r.append([k('Flow-guided: ΔL (new / resolved)', '통행 기준: ΔL(신규 / 해소)')] + [f"{V['fe' + str(y)[2:]]} ({V['fn' + str(y)[2:]]} / {V['fr' + str(y)[2:]]})" for y in Y])
     r.append([k('Flow-guided: IFR (%)', '통행 기준: IFR(%)')] + [V['fifr' + str(y)[2:]] for y in Y])
     r.append([k('Random, median of 100: residents in moved dongs', '무작위 100경로 중앙값: 옮긴 동의 인구')] + [V['rp' + str(y)[2:]] for y in Y])
-    r.append([k('Random: ΔL [central 95%]', '무작위: ΔL [중앙 95%]')] + [f"{V['rm' + str(y)[2:]]} [{V['rlo' + str(y)[2:]]}, {V['rhi' + str(y)[2:]]}]" for y in Y])
+    r.append([k('Random: ΔL [middle 95%]', '무작위: ΔL [가운데 95%]')] + [f"{V['rm' + str(y)[2:]]} [{V['rlo' + str(y)[2:]]}, {V['rhi' + str(y)[2:]]}]" for y in Y])
     r.append([k('Random: new / resolved (medians)', '무작위: 신규 / 해소(중앙값)')] + [f"{V['rn' + str(y)[2:]]} / {V['rr' + str(y)[2:]]}" for y in Y])
     r.append([k('Random: IFR (%, median)', '무작위: IFR(%, 중앙값)')] + [V['rifr' + str(y)[2:]] for y in Y])
     r.append([k('Flow-guided below all random paths from k =', '통행 기준이 모든 무작위 경로보다 낮아지는 k')] + [V['k' + str(y)[2:]] for y in Y])
     out['T2'] = (k('Table 2. Official plan and the end of the reassignment paths.', '표 2. 공식 생활권과 재배정 경로의 끝.'), r,
                  k('ΔL is the change in excluded residents relative to the official plan; ΔL = new − resolved. Random figures are medians over 100 paths.', 'ΔL은 공식 생활권 대비 누락 인구 변화이며 ΔL = 신규 − 해소. 무작위 값은 100개 경로의 중앙값.'))
-    r = [[k('Year / chain', '연도 / 연쇄'), k('Maps (unique)', '지도(고유)'), k('Share with L above official', 'L이 공식보다 큰 비율'), k('Median L [2.5%, 97.5%]', 'L 중앙값 [2.5%, 97.5%]'), k('Minimum L', 'L 최솟값'), k('ESS', '유효표본수')]]
+    r = [[k('Year / chain', '연도 / 연쇄'), k('Maps (unique)', '지도(고유)'), k('Share with L above official', 'L이 공식보다 큰 비율'), k('Median L [2.5%, 97.5%]', 'L 중앙값 [2.5%, 97.5%]'), k('Minimum L', 'L 최솟값'), k('Effective sample size', '유효표본수')]]
     for y in Y:
         e = T[y]['e']; P = T[y]['P']
         for j, (s, v) in enumerate(e['seeds'].items(), 1):
             Es = P[(P.seed == int(s)) & P.plan.str.startswith('E')]
             r.append([f'{y} / {j}', f"{len(Es)} ({Es.hash.nunique()})", f"{v['r_greater']:.3f}", f"{n0(v['L_median'])} [{n0(v['L_p2.5'])}, {n0(v['L_p97.5'])}]", n0(v['L_min']), f"{v['L_ESS']:.0f}"])
     out['T3'] = (k('Table 3. The official plan among alternative maps.', '표 3. 대안 지도 속의 공식 생활권.'), r,
-                 k(f"Official L: {V['L20']} (2020), {V['L25']} (2025). Maps are ReCom samples under the SIZE20 and compactness rules; they are not a uniform sample. ESS: effective sample size of L (Geyer, 1992).",
-                   f"공식 L: 2020년 {V['L20']}, 2025년 {V['L25']}. ReCom 표본(±20% 인구·형상 조밀도 규칙)이며 균등 표본이 아님. 유효표본수는 Geyer(1992)."))
+                 k(f"Official L: {V['L20']} (2020), {V['L25']} (2025). Maps are ReCom samples under the ±20% population and compactness rules; they are not a uniform sample. Effective sample size of L adjusts for the similarity of successive maps (Geyer, 1992).",
+                   f"공식 L: 2020년 {V['L20']}, 2025년 {V['L25']}. ReCom 표본(인구 ±20%·모양 규칙)이며 균등 표본이 아님. 유효표본수는 앞뒤 지도가 비슷한 정도를 감안한 실질 표본 수(Geyer, 1992)."))
     mm = {y: T[y]['m'] for y in Y}
     r = [[k('Estimate', '추정'), '2020', '2025'],
          [k('Pairs (boundary dongs)', '쌍(경계 동)')] + [f"{mm[y]['n_pairs']} ({mm[y]['n_dongs']})" for y in Y],
@@ -195,21 +200,21 @@ def appendix_tables(V, T, lang='en'):
     r = [[k('Category', '범주'), k('Facility types', '시설 유형'), k('Cells 2020', '격자 2020'), k('Cells 2025', '격자 2025')]]
     for c in CAT:
         r.append([k(CAT_EN[c], c), k(TYPES_EN[c], TYPES_KO[c])] + [n0(T[y]['a']['facility_info']['facility_cells_by_category'][c]) for y in Y])
-    out['A1'] = (k('Table A1. Facility categories and types.', '표 A1. 시설 범주와 유형.'), r, k('Cells: 100 m cells containing at least one facility of the category.', '격자: 해당 범주 시설이 하나 이상 있는 100 m 격자 수.'))
+    out['A1'] = (k('Table A.1. Facility categories and types.', '표 A.1. 시설 범주와 유형.'), r, k('Cells: 100 m cells containing at least one facility of the category.', '격자: 해당 범주 시설이 하나 이상 있는 100 m 격자 수.'))
     r = [[k('Category', '범주'), k('Walkable at all, share of residents 2020', '보행 도달 주민 비율 2020'), k('2025', '2025'), k('Excluded under official plan 2020', '공식 생활권 누락 2020'), k('2025', '2025')]]
     for c in CAT:
         r.append([k(CAT_EN[c], c)] + [pct(T[y]['a']['no_boundary_reach_share'][c]) + '%' for y in Y] + [n0(T[y]['a']['category_omission_LZ'][c]) for y in Y])
     r.append([k('Any category (unique residents)', '어느 범주든(고유 주민)'), '', ''] + [V['L20'], V['L25']])
-    out['A2'] = (k('Table A2. Walkable reach and exclusion by category under the official plan.', '표 A2. 공식 생활권의 범주별 보행 도달과 누락.'), r, k('A resident is excluded for a category if it is reachable within 15 minutes but not within the resident’s own zone.', '범주가 15분 안에 닿지만 자기 생활권 안에서는 닿지 않으면 그 범주에서 누락.'))
+    out['A2'] = (k('Table A.2. Walkable reach and exclusion by category under the official plan.', '표 A.2. 공식 생활권의 범주별 보행 도달과 누락.'), r, k('A resident is excluded for a category if it is reachable within 15 minutes but not within the resident’s own zone.', '범주가 15분 안에 닿지만 자기 생활권 안에서는 닿지 않으면 그 범주에서 누락.'))
     od = {y: T[y]['od'] for y in Y}; pla = json.load(open(RES / 'appendix' / 'plan_level_association.json', encoding='utf-8'))
     r = [[k('Analysis', '분석'), '2020', '2025', k('Condition tested and reading', '시험 조건과 해석')],
-         [k('Modularity reassignment under the ±20% population and compactness rules (end of path)', '±20% 인구·형상 조밀도 규칙 아래 모듈성 재배정(경로 끝)')] +
+         [k('Modularity reassignment under the ±20% population and compactness rules (end of path)', '인구 ±20%·모양 규칙 아래 모듈성 재배정(경로 끝)')] +
          [f"k = {od[y]['MOD_end']['k']}; ΔL {sgn(od[y]['MOD_end']['dL_unique'])} ({n0(od[y]['MOD_end']['new_excl'])} / {n0(od[y]['MOD_end']['resolved'])})" for y in Y] +
-         [k('Population and compactness rules of Section 3.3 applied to each move; summarised in Section 4.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '3.3절의 인구·형상 조밀도 규칙을 매 이동에 적용. 4.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
-         [k('Greedy reassignment maximising IFR (dong moved at most once)', 'IFR 최대화 탐욕 재배정(동당 1회)')] +
+         [k('Population and compactness rules of Section 3.3 applied to each move; summarised in Section 4.2. The rules block most flow-guided moves after the first, so the path is short and its sign differs between years.', '3.3절의 인구·모양 규칙을 매 이동에 적용. 4.2절에 요약. 규칙이 첫 이동 이후 대부분의 통행 기준 이동을 막아 경로가 짧고 부호가 해마다 다름.')],
+         [k('Reassignment choosing the move that raises the IFR most (each dong moved at most once)', 'IFR을 가장 많이 올리는 이동부터 고르는 재배정(동당 1회)')] +
          [f"k = {od[y]['IFR_end']['k']}; ΔL {sgn(od[y]['IFR_end']['dL_unique'])}" for y in Y] + [k('Same rules as above, objective IFR instead of modularity, each dong moved at most once. Raising IFR directly raised exclusion in both years.', '위와 같은 규칙, 목적함수는 모듈성 대신 IFR, 동당 최대 1회 이동. IFR을 직접 올리면 두 해 모두 누락 증가.')],
          [k('Plan-level Spearman ρ(IFR, L) across alternative maps, controlling for shape', '대안 지도 전체의 계획 단위 Spearman ρ(IFR, L), 모양 통제')] +
-         [f"{f2(pla[str(y)]['L7|shape']['rho'])} {ci(*pla[str(y)]['L7|shape']['ci95'], f=f2)}" for y in Y] + [k('Rank correlation over the 1,000 alternative maps of Section 3.3, controlling for shape. Small; reported for completeness.', '3.3절 대안 지도 1,000장에 대한 순위상관, 모양 통제. 작음. 기록용.')],
+         [f"{f2(pla[str(y)]['L7|shape']['rho'])} {ci(*pla[str(y)]['L7|shape']['ci95'], f=f2)}" for y in Y] + [k('Rank correlation over the 1000 alternative maps of Section 3.3, controlling for shape. Small; reported for completeness.', '3.3절 대안 지도 1000장에 대한 순위상관, 모양 통제. 작음. 기록용.')],
          [k('Paired differences ΔIFR ~ Δaccess between official and flow-based boundaries', '공식–통행 기반 경계의 쌍 차분 ΔIFR ~ Δ접근성')] + ['—', '—'] +
          [k('Earlier design, not pursued: almost all random plans produced the same sign, so the test could not discriminate between plans.', '초기 설계, 미채택: 무작위 계획 거의 전부가 같은 부호를 내어 계획 간 판별력이 없음.')]]
     from study import TYPES
@@ -217,10 +222,10 @@ def appendix_tables(V, T, lang='en'):
     for c in CAT:
         for tname in TYPES[c]:
             src, dates, meth = SOURCES[tname]; r4.append([k(CAT_EN[c], c), k(TYPE_EN[tname], tname), src, dates, meth])
-    out['A4'] = (k('Table A4. Facility sources and reconstruction of the 2020 and 2025 inventories.', '표 A4. 시설 원천 자료와 2020·2025 목록 재구축.'), r4,
+    out['A4'] = (k('Table A.4. Facility sources and reconstruction of the 2020 and 2025 inventories.', '표 A.4. 시설 원천 자료와 2020·2025 목록 재구축.'), r4,
                  k('Method: A, snapshot or edition dated at or near the reference date (end of 2019 / end of 2024); B, current licensing history with open and close dates used to reconstruct the stock at the reference date; C, nearest annual or nominal edition. All facilities were assigned to 100 m cells by coordinates; records outside the grid (39 per year) were dropped. Sports businesses were excluded. Source files and retrieval dates are listed in the data package.',
                    '방법: A 기준 시점(2019년 말 / 2024년 말) 근처의 스냅숏·판본, B 현재 인허가 이력의 개폐업일로 기준 시점 재고를 역산, C 가장 가까운 연간·명목 판본. 좌표로 100 m 격자에 배정, 격자 밖 기록(연 39건) 제외, 체육시설업 제외. 원파일·취득일은 자료 패키지에 기록.'))
-    out['A3'] = (k('Table A3. Sensitivity and earlier analyses not reported in full in the main text.', '표 A3. 본문에 전부 싣지 않은 민감도·초기 분석.'), r,
+    out['A3'] = (k('Table A.3. Sensitivity and earlier analyses not reported in full in the main text.', '표 A.3. 본문에 전부 싣지 않은 민감도·초기 분석.'), r,
                  k('All analyses are post hoc. ΔL values give new / resolved in parentheses.', '모든 분석은 사후 분석. 괄호는 신규 / 해소.'))
     return out
 
@@ -255,6 +260,29 @@ def para(d, text, bold=False, italic=False, align=None, size=None, indent=True, 
     return p
 
 
+def caption_para(d, cap, size=None, space_before=0):
+    """AG 게재본(Kang & Eom 2026 등) 관례.
+    표: 'Table 1'(굵게, 마침표 없음) 줄바꿈 후 제목(보통 글씨, 문장형, 마침표). 그림: 'Fig. 1.'(굵게) 뒤에 같은 줄로 제목."""
+    m = re.match(r'^((?:Table|Fig\.|표|그림) \S+?)\.\s', cap)
+    p = d.add_paragraph(); p.paragraph_format.space_before = Pt(space_before)
+    if not m:
+        r = p.add_run(cap)
+        if size:
+            r.font.size = Pt(size)
+        return p
+    is_table = cap.startswith(('Table', '표'))
+    label = m.group(1) if is_table else m.group(1) + '.'
+    r = p.add_run(label); r.bold = True
+    if size:
+        r.font.size = Pt(size)
+    if is_table:
+        r.add_break()
+    r2 = p.add_run(cap[m.end():] if is_table else ' ' + cap[m.end():])
+    if size:
+        r2.font.size = Pt(size)
+    return p
+
+
 def heading(d, text, level):
     p = d.add_paragraph(); p.paragraph_format.space_before = Pt(12 if level == 1 else 6); p.paragraph_format.keep_with_next = True
     r = p.add_run(text); r.bold = True; r.italic = level == 2
@@ -266,32 +294,35 @@ def _cell_border(cell, **kw):
     if b is None:
         b = OxmlElement('w:tcBorders'); tcPr.append(b)
     for edge, val in kw.items():
-        el = OxmlElement(f'w:{edge}'); el.set(qn('w:val'), val); el.set(qn('w:sz'), '6'); el.set(qn('w:color'), '000000'); b.append(el)
+        el = OxmlElement(f'w:{edge}'); el.set(qn('w:val'), val); el.set(qn('w:sz'), '4'); el.set(qn('w:color'), '000000'); b.append(el)
 
 
 def table(d, cap, rows, note, size=9):
-    p = para(d, cap, bold=True, indent=False, space_before=6); p.paragraph_format.keep_with_next = True
+    p = caption_para(d, cap, space_before=6); p.paragraph_format.keep_with_next = True; p.paragraph_format.line_spacing = 1.0
     t = d.add_table(rows=len(rows), cols=len(rows[0])); t.alignment = WD_TABLE_ALIGNMENT.CENTER; t.autofit = False
-    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A1' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A4' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
+    tb = OxmlElement('w:tblBorders')  # 표 단위 선은 모두 없앰(세로선·안쪽선 없음); 가로선 3개는 셀 단위로만 그림
+    for e in ('top', 'left', 'bottom', 'right', 'insideH', 'insideV'):
+        el = OxmlElement(f'w:{e}'); el.set(qn('w:val'), 'nil'); tb.append(el)
+    t._tbl.tblPr.append(tb)
+    W = {3: [7.0, 4.5, 4.5], 4: ([3.3, 8.3, 2.2, 2.2] if 'A.1' in cap else [5.2, 3.2, 3.2, 4.4]), 5: ([1.9, 2.5, 5.0, 4.9, 1.7] if 'A.4' in cap else [4.0, 3.0, 3.0, 3.0, 3.0]), 6: [2.0, 2.2, 2.3, 4.7, 2.4, 2.4]}[len(rows[0])]
     for i, row in enumerate(rows):
         for j, v in enumerate(row):
-            c = t.cell(i, j); c.width = Cm(W[j]); c.text = ''; pp = c.paragraphs[0]; pp.paragraph_format.line_spacing = 1.0; rr = pp.add_run(str(v)); rr.font.size = Pt(size); rr.bold = i == 0
+            c = t.cell(i, j); c.width = Cm(W[j]); c.text = ''; pp = c.paragraphs[0]; pp.paragraph_format.line_spacing = 1.0; rr = pp.add_run(str(v)); rr.font.size = Pt(size)  # 머리행도 보통 글씨(AG 게재본)
             if i == 0:
                 pp.paragraph_format.keep_with_next = True
-            if j > 0:
-                pp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            pp.alignment = WD_ALIGN_PARAGRAPH.LEFT  # AG 게재본: 숫자 열 포함 모든 칸 왼쪽 정렬
             _cell_border(c, top='single' if i == 0 else 'nil', bottom='single' if i in (0, len(rows) - 1) else 'nil', left='nil', right='nil')
         trPr = t.rows[i]._tr.get_or_add_trPr(); cs = OxmlElement('w:cantSplit'); trPr.append(cs)
         if i == 0:
             th = OxmlElement('w:tblHeader'); trPr.append(th)
-    if note:
-        q = para(d, note, indent=False, size=9); q.paragraph_format.line_spacing = 1.0
+    if note:  # AG 관례: 표 아래 'Note:'로 시작(한국어판 '주:')
+        q = para(d, ('주: ' if cap.startswith('표') else 'Note: ') + note, indent=False, size=9); q.paragraph_format.line_spacing = 1.0
     d.add_paragraph()
 
 
 def figure(d, key, cap, width=15.5):
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.line_spacing = 1.0; p.add_run().add_picture(str(FIG / f'{key}.png'), width=Cm(width))
-    q = para(d, cap, indent=False, size=10); q.paragraph_format.line_spacing = 1.0; d.add_paragraph()
+    q = caption_para(d, cap, size=10); q.paragraph_format.line_spacing = 1.0; d.add_paragraph()
 
 
 def math_para(d, text, lang='en', indent=True):
@@ -458,7 +489,7 @@ def main():
     heading(d, '초록', 1); para(d, KO.ABSTRACT, indent=False); para(d, '주제어: ' + ', '.join(KO.KEYWORDS), indent=False, space_before=6)
     heading(d, '연구 하이라이트(영문 원고용 번역)', 1)
     for h in ['경계 동을 통행을 따라 재배정하면 걸어서 닿는 서비스가 서울 생활권 안에 남았다', '같은 규모의 무작위 재배정은 모의 경로 전부에서 서비스를 밖으로 밀어냈다',
-              '자족성과 경계 내 서비스 포착이 함께 좋아졌다', '서울 공식 생활권은 규모·형상을 맞춘 대안 지도 거의 전부보다 낫다', '경계 동의 통행은 걸어서 닿는 의료·소매·생활서비스가 있는 곳으로 간다']:
+              '자족성과 생활권 안 시설 포착이 함께 좋아졌다', '서울 공식 생활권은 규모·모양을 맞춘 대안 지도 거의 전부보다 낫다', '경계 동의 통행은 걸어서 닿는 의료·소매·생활서비스가 있는 곳으로 간다']:
         para(d, '• ' + h, indent=False)
     d.add_page_break(); render(KO.BODY, V, TBk, KO.CAPTIONS, d, lang='ko')
     heading(d, '부록 A', 1)

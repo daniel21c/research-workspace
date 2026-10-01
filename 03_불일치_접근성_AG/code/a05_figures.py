@@ -38,7 +38,7 @@ def fig1():
     from matplotlib.patches import Patch
     from matplotlib.lines import Line2D
     ax.legend(handles=[Line2D([], [], color='black', lw=1.0, label='District (gu) boundary'), Line2D([], [], color='#555555', lw=.45, label='Official living zone'),
-                       Patch(facecolor='#e08a3c', edgecolor='#c8c8c8', label='Dong moved by flow-guided revision (2025)'), Patch(facecolor='#f2f2f2', edgecolor='#c8c8c8', label='Other dongs')],
+                       Patch(facecolor='#e08a3c', edgecolor='#c8c8c8', label='Boundary dong moved by flow-guided reassignment (2025)'), Patch(facecolor='#f2f2f2', edgecolor='#c8c8c8', label='Other dongs')],
               loc='upper center', bbox_to_anchor=(0.5, 0.0), ncol=2, frameon=False, fontsize=7)
     x0, x1 = ax.get_xlim(); y0, y1 = ax.get_ylim(); L = 5000
     ax.plot([x1 - L - 1500, x1 - 1500], [y0 + 1500] * 2, color='black', lw=1.5); ax.text(x1 - L / 2 - 1500, y0 + 2100, '5 km', ha='center', fontsize=7)
@@ -53,7 +53,7 @@ def fig2():
         rd = R[R.strategy == 'RAND']; k0 = pd.DataFrame({'k': [0], 'flow_dL': [0.0], 'rand_median': [0.0], 'rand_p2.5': [0.0], 'rand_p97.5': [0.0]}); C = pd.concat([k0, C], ignore_index=True)
         for _, g in rd.groupby('rep'):
             ax.plot(g.k, g.dL / 1e3, color='#9bb7d4', lw=.3, alpha=.35, zorder=1)
-        ax.fill_between(C.k, C['rand_p2.5'] / 1e3, C['rand_p97.5'] / 1e3, color='#4f7cac', alpha=.18, lw=0, zorder=2, label='Random, central 95%')
+        ax.fill_between(C.k, C['rand_p2.5'] / 1e3, C['rand_p97.5'] / 1e3, color='#4f7cac', alpha=.18, lw=0, zorder=2, label='Random, middle 95%')
         ax.plot(C.k, C.rand_median / 1e3, color='#1f4e79', lw=1.2, zorder=3, label='Random, median')
         ax.plot(C.k, C.flow_dL / 1e3, color='#c0392b', lw=1.6, zorder=4, label='Flow-guided')
         ax.axhline(0, color='black', lw=.5); ax.set_title(f'({"a" if y == 2020 else "b"}) {y}', loc='left', fontsize=8.5)
@@ -100,15 +100,15 @@ def fig_ga():
     ax.plot(C.k, C.rand_median / 1e3, color='#1f4e79', lw=1.4, label='Random reassignment (100 paths)')
     ax.plot(C.k, C.flow_dL / 1e3, color='#c0392b', lw=1.8, label='Flow-guided reassignment')
     ax.axhline(0, color='black', lw=.5); ax.set_xlim(0, C.k.max()); ax.set_xlabel('Boundary dongs reassigned (Seoul, 2025)', fontsize=8)
-    ax.set_ylabel('Residents newly excluded from\nwithin-zone walkable services (thousand)', fontsize=8); ax.legend(frameon=False, fontsize=7, loc='upper left'); ax.tick_params(labelsize=7)
+    ax.set_ylabel('Change in residents excluded from\nwithin-zone walkable services (thousand)', fontsize=8); ax.legend(frameon=False, fontsize=7, loc='upper left'); ax.tick_params(labelsize=7)
     tx = fig.add_subplot(gs[1]); tx.set_axis_off()
-    lines = [('Following trips, keeping services?', 10.5, 'bold'),
-             ('Do walkable facilities stay inside planning zones when zone boundaries are revised with mobility data?', 8, 'normal'),
-             ('\u2022 Random moves of boundary dongs pushed services out of residents\u2019 zones.', 8, 'normal'),
-             ('\u2022 The same number of flow-guided moves ended with fewer residents excluded (no population or shape bounds).', 8, 'normal'),
+    lines = [('Following trips, keeping services', 10.5, 'bold'),
+             ('Do walkable facilities stay inside living zones when boundary dongs are moved to follow trips?', 8, 'normal'),
+             ('\u2022 Moving boundary dongs along trips kept walkable services inside the zones.', 8, 'normal'),
+             ('\u2022 Random moves of the same number pushed services out in every one of 100 paths.', 8, 'normal'),
              ('\u2022 Seoul\u2019s official zones beat almost all of 1,000 size- and shape-matched alternative maps.', 8, 'normal'),
-             ('\u2022 Trips from boundary dongs lean towards neighbouring zones holding more of their walkable facilities.', 8, 'normal'),
-             ('Check flow containment and within-zone service coverage together whenever zones are revised.', 8, 'italic')]
+             ('\u2022 Trips from boundary dongs go to adjacent zones that hold more of their walkable facilities.', 8, 'normal'),
+             ('Check self-containment and within-zone service coverage together whenever zones are revised.', 8, 'italic')]
     yy = 0.98
     for t, fs, w in lines:
         tx.text(0, yy, '\n'.join(_wrap(t, 52)), fontsize=fs, fontweight='bold' if w == 'bold' else 'normal', fontstyle='italic' if w == 'italic' else 'normal', va='top', ha='left', transform=tx.transAxes)
