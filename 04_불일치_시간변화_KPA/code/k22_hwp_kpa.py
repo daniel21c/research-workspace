@@ -28,7 +28,7 @@ WORK = C.WORK                                             # 중간 파일(HWPML)
 DATE = "20260930"
 TEXT_W_MM = 210 - 20 - 18                # 편집규정 제20조: 좌 20, 우 18 → 본문 폭 172 mm
 PAGEDEF = {"위쪽": 19.0, "아래쪽": 11.0, "왼쪽": 20.0, "오른쪽": 18.0, "머리말": 7.8, "꼬리말": 7.0, "제본여백": 0}
-ALIGN = {"Left": "ParagraphShapeAlignLeft", "Center": "ParagraphShapeAlignCenter", "Justify": "ParagraphShapeAlignJustify"}
+ALIGN = {"Left": "ParagraphShapeAlignLeft", "Center": "ParagraphShapeAlignCenter", "Right": "ParagraphShapeAlignRight", "Justify": "ParagraphShapeAlignJustify"}
 # 정렬은 단순 액션으로 바꾼다. (멈춤의 원인은 스타일 적용 시 뜨는 "덮어쓸까요?" 대화상자였고 MSGBOX_AUTO로 해결됨)
 # 스타일별 글자 크기(학회 샘플 값). 앞 문단의 글자 모양이 이어지지 않도록 문단마다 명시한다.
 STYLE_PT = {"본문": 9.5, "개요1": 13.5, "개요2": 11.0, "표주석": 7.0, "표본문": 9.0, "인용제목": 13.0, "인용본문": 9.0}
@@ -195,6 +195,25 @@ def make_front(meta: dict, mode: str, out_hml: Path, sample_hml: Path):
 
 
 # ------------------------------------------------------------------ 본문(한글 자동화)
+# 수식: 원고의 한 줄 식("G = (a − b) / T")을 한글 수식 개체의 스크립트로 바꾼다. 본문 글자 크기와 같은 기준 크기(EQ_PT)로 모든 식을 넣어
+# 식마다 크기가 달라지지 않게 한다(2026-10-02 저자 지적). 형식이 다르면 조용히 넘어가지 않고 오류를 낸다.
+EQ_PT = STYLE_PT["본문"]
+EQ_COL_MM = (TEXT_W_MM - 6.0) / 2          # 2단 본문의 한 단 폭(단 사이 6 mm)
+EQ_NUM_MM = 12.0                           # 식 번호 칸 폭
+EQ_CELL_PAD_MM = 3.6                       # 한글 표 셀의 안쪽 좌우 여백 합(열 너비 지정값에 더해짐)
+
+
+def eq_script(expr: str) -> str:
+    m = re.match(r"^(\S+) = \((.+)\) / (\S+)$", expr.strip())
+    if not m: raise ValueError(f"수식 형식을 변환할 수 없음: {expr!r}")
+    lhs, num, den = m.groups()
+    def term(t):
+        t = t.replace("\u2212", "-").strip()
+        return '"%s"' % t if re.search(r"[\uac00-\ud7a3]", t) else t        # 한글 설명은 따옴표 안 글자 그대로
+    lhs_s = "rm %s it" % lhs if len(lhs) > 1 else lhs                          # IFR 같은 약어는 곧은 글자
+    return f"{lhs_s} = {{{term(num)}}} over {term(den)}"
+
+
 class Writer:
     def __init__(self, hml: Path):
         self.h = new_hwp()
@@ -290,6 +309,43 @@ class Writer:
         h.cell_fill((230, 230, 230))
         hw.HAction.Run("Cancel")
 
+    def equation(self, expr: str, num: str):
+        """가운데 식 + 오른쪽 끝 번호. 선 없는 1행 3열 표(빈칸 | 식 | (n))에 한글 수식 개체를 넣는다.
+        기준 글자 크기는 본문과 같은 EQ_PT. 탭 정지는 한글 자동화에서 위치·유형이 맞지 않아 표로 정렬한다.
+        열 너비는 WidthType=2(임의 값) + CreateItemArray 로만 적용되고, 지정값에 셀 안쪽 여백(좌우 합 EQ_CELL_PAD_MM)이 더해진다."""
+        h = self.h; hw = h.hwp
+        outer = [EQ_NUM_MM, EQ_COL_MM - 1.0 - 2 * EQ_NUM_MM, EQ_NUM_MM]                # 칸 바깥 폭(합 = 한 단 폭 − 1 mm)
+        h.set_style(ST["표본문"]); h.set_para(PrevSpacing=0, NextSpacing=0)
+        pset = h.HParameterSet.HTableCreation; h.HAction.GetDefault("TableCreate", pset.HSet)
+        pset.Rows = 1; pset.Cols = 3; pset.HeightType = 0; pset.WidthType = 2
+        pset.WidthValue = h.MiliToHwpUnit(sum(outer) - 3 * EQ_CELL_PAD_MM)
+        pset.CreateItemArray("ColWidth", 3)
+        for j, w in enumerate(outer): pset.ColWidth.SetItem(j, h.MiliToHwpUnit(w - EQ_CELL_PAD_MM))
+        h.HAction.Execute("TableCreate", pset.HSet)
+        tc = h.ParentCtrl
+        if tc is not None and tc.CtrlID == "tbl":
+            tp = tc.Properties; tp.SetItem("TreatAsChar", 1); tp.SetItem("TextWrap", 0)
+            tp.SetItem("OutsideMarginTop", 283); tp.SetItem("OutsideMarginBottom", 283)               # 바깥 아래 여백이 22 mm로 이어받아져 식 아래가 벌어지던 문제(2026-10-02)
+            tc.Properties = tp
+        # 모든 칸 테두리 없음
+        hw.HAction.Run("TableCellBlock"); hw.HAction.Run("TableCellBlockExtend"); hw.HAction.Run("TableCellBlockExtend")
+        ps = hw.HParameterSet.HCellBorderFill; hw.HAction.GetDefault("CellBorderFill", ps.HSet)
+        none = hw.HwpLineType("None")
+        ps.BorderTypeLeft = none; ps.BorderTypeRight = none; ps.BorderTypeTop = none; ps.BorderTypeBottom = none
+        ps.TypeVert = none; ps.TypeHorz = none
+        hw.HAction.Execute("CellBorderFill", ps.HSet); hw.HAction.Run("Cancel")
+        hw.HAction.Run("TableColPageUp"); hw.HAction.Run("TableColBegin")                                   # 첫 칸으로
+        h.TableRightCell()                                                                                    # 둘째 칸: 식
+        h.set_style(ST["표본문"]); h.HAction.Run(ALIGN["Center"]); hw.HAction.Run("TableCellAlignCenterCenter")
+        ep = hw.HParameterSet.HEqEdit; hw.HAction.GetDefault("EquationCreate", ep.HSet)
+        ep.string = eq_script(expr); ep.BaseUnit = hw.PointToHwpUnit(EQ_PT)
+        ep.Version = "Equation Version 60"; ep.EqFontName = "HancomEQN"; ep.TreatAsChar = 1; ep.LineMode = 0
+        if not hw.HAction.Execute("EquationCreate", ep.HSet): raise RuntimeError(f"수식 삽입 실패: {expr!r}")
+        h.TableRightCell()                                                                                    # 셋째 칸: 번호
+        h.set_style(ST["표본문"]); h.HAction.Run(ALIGN["Right"]); hw.HAction.Run("TableCellAlignRightCenter")
+        h.set_font(Height=EQ_PT, Bold=False); h.insert_text("(%s)" % num.strip("() "))
+        h.MoveDocEnd()                                                                                        # 표 뒤 빈 문단에서 이어 씀(BreakPara를 더하면 빈 문단이 하나 더 생겨 간격이 벌어짐)
+
     def picture(self, path: Path, width_cm: float):
         h = self.h
         w_mm = min(width_cm * 10.0, TEXT_W_MM)
@@ -314,7 +370,8 @@ def layout_check(pdf: Path, h2s=()) -> dict:
     h2n = {norm(h): h for h in h2s}
     loc = {}
     for i, pg in enumerate(d):
-        rects = [fitz.Rect(l["bbox"]) for b in pg.get_text("dict")["blocks"] for l in b.get("lines", []) if "".join(s["text"] for s in l["spans"]).strip()]
+        rects = [fitz.Rect(l["bbox"]) for b in pg.get_text("dict")["blocks"] for l in b.get("lines", [])
+                 if "".join(s["text"] for s in l["spans"]).strip() and not re.search(r"[-]", "".join(s["text"] for s in l["spans"]))]   # 수식 개체 글줄(사용자 정의 영역 문자)은 상자가 커서 제외
         if any((not (rects[a] & rects[c]).is_empty) and (rects[a] & rects[c]).height > 2 and (rects[a] & rects[c]).width > 5 for a in range(len(rects)) for c in range(a + 1, len(rects))): over.append(i + 1)
         t = pg.get_text()
         for k, m in re.findall(r"(표|그림) (A?\d+)\. ", t): loc.setdefault(("ko", k + m), i + 1)        # 표 A1·그림 A1을 따로 센다
@@ -404,7 +461,7 @@ def build(md: Path, mode: str, breaks: dict | None = None):
         elif kind == "h2":
             h2(v)
         elif kind == "eq":
-            W.para(f"{v[0]}\u2003\u2003{v[1]}", "본문", align="Center")
+            W.equation(v[0], v[1])
         elif kind == "h3":
             W.para(v, "본문", bold_all=True, keep=True)
         elif kind == "ref":

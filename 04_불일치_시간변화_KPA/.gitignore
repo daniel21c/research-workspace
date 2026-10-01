@@ -6,4 +6,4 @@ package/제출본_final_*/
 code/__pycache__/
 code/tests/__pycache__/
 # 2026-09-30 사용자 결정(AG와 동일): 공동연구자 패키지 zip은 연구 연계용으로 저장소에 포함
-!package/KPA_확정본_공동연구자패키지_20260930.zip
+!package/KPA_확정본_공동연구자패키지.zip
